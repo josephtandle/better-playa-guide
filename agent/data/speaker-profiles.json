@@ -1,0 +1,104 @@
+{
+ "note": "Credibility briefs on named 2026 presenters. 'flag' is a plain-language credibility warning; absence of a flag is not endorsement. Verified 2026-08-25 against primary sources.",
+ "year": 2026,
+ "speakers": [
+  {
+   "name": "Henk Rogers",
+   "tier": "genuinely famous",
+   "camp": "Mystic",
+   "what": "Secured console rights to Tetris (dramatized in the 2023 Apple film); runs The Tetris Company; founded Blue Planet Foundation + Blue Planet Energy",
+   "note": "Drove Hawaii's 100%-renewable law (2015). Most verifiably accomplished name on the roster.",
+   "flag": null
+  },
+  {
+   "name": "Emily Fletcher",
+   "tier": "legitimately well-known",
+   "camp": "Mystic",
+   "what": "Founder of Ziva Meditation; author 'Stress Less, Accomplish More' (HarperOne 2019, bestseller); ex-Broadway",
+   "note": "Taught at Google and Harvard Business School.",
+   "flag": "Ziva is a repackaged Vedic/TM-style mantra practice sold at a premium; the 'manifesting' component is not evidence-based and performance claims run ahead of the research."
+  },
+  {
+   "name": "Murray Hidary",
+   "tier": "real, mid-profile",
+   "camp": "Mystic",
+   "what": "Co-founded EarthWeb/Dice (~$200M exit); composer behind MindTravel silent-disco piano in 100+ cities",
+   "note": "Both the exit and the music career check out. Two slots in 2026.",
+   "flag": null
+  },
+  {
+   "name": "Peter Crone",
+   "tier": "well-known inside the wellness/podcast world only",
+   "camp": "Mystic",
+   "what": "'The Mind Architect' - mindset coach to pro athletes; regular on Aubrey Marcus, Impact Theory, Commune",
+   "flag": "Degrees are Loughborough sport/exercise science, not psychology or clinical practice. Not a licensed therapist; no peer-reviewed work behind 'redesigning the subconscious'. Reputation rests on client testimony. No scandal."
+  },
+  {
+   "name": "Eben Pagan",
+   "tier": "well-known in marketing circles",
+   "camp": "Mystic",
+   "what": "As 'David DeAngelo' wrote Double Your Dating (2001), built a ~$20M/yr info-product business; now sells business/marketing courses",
+   "flag": "Origin is the pickup-artist industry; current business is the same high-ticket funnel aimed at entrepreneurs. Has NO domain credential for his 2026 topic 'AI, Art, and the Future'."
+  },
+  {
+   "name": "Robert Edward Grant",
+   "tier": "SERIOUS RED FLAG",
+   "camp": "Mystic",
+   "what": "Ex-President of Allergan Medical, ex-CEO Bausch + Lomb Surgical; founder/CEO Crown Sterling; self-described polymath",
+   "flag": "His 2019 Black Hat talk on 'quasi-prime numbers'/'Time AI' was denounced from the floor by Trail of Bits CEO Dan Guido ('should be ashamed'). Black Hat pulled the video; Crown Sterling sued. Cryptographer Jean-Philippe Aumasson: 'all the signs of snake-oil crypto'. Bruce Schneier filed it under 'The Doghouse'. Business career is real; the mathematical claims are rejected by mainstream cryptography.",
+   "sources": [
+    "https://www.schneier.com/blog/archives/2019/09/the_doghouse_cr_1.html",
+    "https://cyberscoop.com/crown-sterling-black-hat-lawsuit/"
+   ]
+  },
+  {
+   "name": "Dr. Robert Love",
+   "tier": "social-media famous, not scientifically credentialed",
+   "camp": "Mystic",
+   "what": "TikTok Alzheimer's-prevention personality (~1M+ followers); sells supplements",
+   "flag": "WEAKEST name on the roster. 'Neuroscientist' title widely disputed - background is psychology, not neuroscience, and he used 'Dr.' before holding a doctorate. Sustained criticism for supplement promotion. NOT the Linux kernel author of the same name."
+  },
+  {
+   "name": "Jackie Rotman",
+   "tier": "real advocate, off-topic talk",
+   "camp": "Mystic",
+   "what": "Founder/CEO Center for Intimacy Justice; her investigation into Meta rejecting women's-health ads ran in the NYT and changed Meta policy; Obama Foundation Leader",
+   "flag": "Genuine credentials - but her 2026 slot is 'Telepathy Demonstration', outside anything she is credentialed for."
+  },
+  {
+   "name": "Aneel Paulus",
+   "tier": "strong formal credential, off-topic talk",
+   "camp": "Mystic",
+   "what": "Translational oncologist, adjunct assoc. professor at Mayo Clinic, 55+ peer-reviewed papers",
+   "flag": "Entirely outside his field on 'How to Die Before You Die'."
+  },
+  {
+   "name": "Mareesa Stertz",
+   "tier": "niche",
+   "camp": "Mystic",
+   "what": "Filmmaker, co-founder of Lucid News; documentaries for Gaia/Viceland",
+   "flag": null
+  },
+  {
+   "name": "Alexis Quiterio",
+   "tier": "niche",
+   "camp": "Mystic",
+   "what": "Daybreaker producer (Austin) and self-mastery coach",
+   "flag": "Real Daybreaker link; personally low-profile."
+  },
+  {
+   "name": "Chad Olin",
+   "tier": "niche practitioner",
+   "camp": "Mystic",
+   "what": "Founder of Supermind (brain health), Miami",
+   "flag": "Small public footprint."
+  },
+  {
+   "name": "Dena Rubanawitz",
+   "tier": "UNVERIFIED",
+   "camp": "Mystic",
+   "what": null,
+   "flag": "No public profile at this spelling. The 'Dena Rubanowitz' hits are a NY attorney, likely a different person."
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Better Playa Guide",
+  "short_name": "Playa Guide",
+  "description": "Every Burning Man 2026 event, searchable by where you're standing. Works offline.",
+  "start_url": "/guide/",
+  "scope": "/guide/",
+  "display": "standalone",
+  "background_color": "#fff3e5",
+  "theme_color": "#260407",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

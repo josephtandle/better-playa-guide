@@ -1,0 +1,10 @@
+{
+  "name": "burning-man-events",
+  "version": "1.0.0",
+  "description": "Burning Man events agent: know the city, know your taste, tell you where to go next.",
+  "main": "src/index.js",
+  "bin": { "bme": "src/index.js" },
+  "scripts": { "test": "node test/run.js" },
+  "dependencies": { "better-sqlite3": "^11.0.0", "node-telegram-bot-api": "^0.66.0", "yaml": "^2.4.0" },
+  "license": "MIT"
+}

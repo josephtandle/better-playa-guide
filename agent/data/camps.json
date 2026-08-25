@@ -1,0 +1,4774 @@
+{
+ "source": "https://playamap.org/api/camps/",
+ "year": 2026,
+ "camps": {
+  "snuggles": {
+   "name": "Snuggles",
+   "address": "9:15 & G"
+  },
+  "airship": {
+   "name": "The Airship",
+   "address": "4:30 & D"
+  },
+  "downlowclub": {
+   "name": "Down Low Club",
+   "address": "7:15 & D"
+  },
+  "gotalotgoinon": {
+   "name": "Camp Gotalotgoinon",
+   "address": "5:15 & F"
+  },
+  "juicy": {
+   "name": "Camp Juicy",
+   "address": "4:45 & A"
+  },
+  "pullmyfinger": {
+   "name": "Camp Pull My Finger",
+   "address": "6:45 & E"
+  },
+  "feedtheartists": {
+   "name": "Feed tHE ARTists",
+   "address": "10:00 & D"
+  },
+  "shuttlehome": {
+   "name": "The Shuttle Home",
+   "address": "9:15 & F"
+  },
+  "bikegods": {
+   "name": "Bike Gods",
+   "address": "9:00 & D"
+  },
+  "felangy": {
+   "name": "Felangy",
+   "address": "7:45 & B"
+  },
+  "zetazone": {
+   "name": "Zeta zone",
+   "address": "7:45 & D"
+  },
+  "hellomom": {
+   "name": "Hello Mom!",
+   "address": "3:15 & E"
+  },
+  "kuker": {
+   "name": "Kuker Camp",
+   "address": "6:15 & G"
+  },
+  "squeezetheday": {
+   "name": "Squeeze the Day",
+   "address": "3:45 & B"
+  },
+  "blackrockcitypickleballclub": {
+   "name": "Black Rock City Pickleball Club",
+   "address": "8:00 & B"
+  },
+  "tabernacle": {
+   "name": "Tabernacle",
+   "address": "10:00 & E"
+  },
+  "balagan": {
+   "name": "Camp Balagan",
+   "address": "9:30 & E"
+  },
+  "dustyspeakeasyandsanctuary": {
+   "name": "Dusty Speakeasy and Sanctuary",
+   "address": "5:00 & C"
+  },
+  "chicagohandshake": {
+   "name": "Chicago Handshake",
+   "address": "2:45 & D"
+  },
+  "pendant": {
+   "name": "Camp Pendant",
+   "address": "7:15 & C"
+  },
+  "norsecode": {
+   "name": "Norse Code",
+   "address": "8:45 & E"
+  },
+  "bluecaterpillar": {
+   "name": "Blue CATerpillar",
+   "address": "9:30 & C"
+  },
+  "wildfreespirit": {
+   "name": "Wild Free Spirit",
+   "address": "8:45 & A"
+  },
+  "knotsure": {
+   "name": "Knot Sure",
+   "address": "6:00 & D"
+  },
+  "joyismmvsc": {
+   "name": "Joyism MVSC",
+   "address": "4:15 & E"
+  },
+  "gloriouswetspot": {
+   "name": "The Glorious Wet Spot",
+   "address": "3:15 & F"
+  },
+  "westlandia": {
+   "name": "Westlandia",
+   "address": "9:15 & F"
+  },
+  "whyismymouthtingling": {
+   "name": "Camp Why is My Mouth Tingling",
+   "address": "4:15 & G"
+  },
+  "nomadart": {
+   "name": "noMADart",
+   "address": "8:15 & C"
+  },
+  "elephanttoe": {
+   "name": "Camp Elephant Toe",
+   "address": "6:30 & G"
+  },
+  "fokaround": {
+   "name": "Fokaround",
+   "address": "9:15 & F"
+  },
+  "pussydayspa": {
+   "name": "Pussy Day Spa",
+   "address": "8:30 & A"
+  },
+  "guanolocolounge": {
+   "name": "Guano Loco Lounge",
+   "address": "2:15 & B"
+  },
+  "khaleeya": {
+   "name": "Khaleeya",
+   "address": "9:15 & E"
+  },
+  "badidea": {
+   "name": "Bad Idea",
+   "address": "4:15 & E"
+  },
+  "wallyscowboykitchen": {
+   "name": "Wally's Cowboy Kitchen",
+   "address": "6:15 & A"
+  },
+  "pussyavalanche": {
+   "name": "Pussy Avalanche",
+   "address": "4:00 & G"
+  },
+  "tiny": {
+   "name": "tiny camp",
+   "address": "9:15 & J"
+  },
+  "youniversalteahouse": {
+   "name": "YOUniversal Teahouse",
+   "address": "4:45 & D"
+  },
+  "blackkarma": {
+   "name": "Black Karma",
+   "address": "6:15 & D"
+  },
+  "hugcabana": {
+   "name": "Hug cabana camp",
+   "address": "4:45 & C"
+  },
+  "sendnoods": {
+   "name": "Send Noods",
+   "address": "4:45 & C"
+  },
+  "bagodicks": {
+   "name": "Bag o' Dicks",
+   "address": "2:45 & B"
+  },
+  "zoombox": {
+   "name": "Camp Zoombox",
+   "address": "2:15 & F"
+  },
+  "foreskin": {
+   "name": "Foreskin",
+   "address": "2:45 & C"
+  },
+  "wrongowrongo": {
+   "name": "WrongoWrongo",
+   "address": "4:15 & G"
+  },
+  "astroshackjavajoint": {
+   "name": "ASTRO SHACK JaVa JoINt",
+   "address": "8:30 & A"
+  },
+  "crepiphany": {
+   "name": "Crepiphany",
+   "address": "6:00 & C"
+  },
+  "crustyswan": {
+   "name": "The Crusty Swan",
+   "address": "6:00 & F"
+  },
+  "scorpionwalks": {
+   "name": "Scorpion Walks",
+   "address": "2:45 & E"
+  },
+  "frenchfruits": {
+   "name": "French Fruits",
+   "address": "8:00 & D"
+  },
+  "cosmo": {
+   "name": "Camp Cosmo",
+   "address": "7:15 & D"
+  },
+  "silvercity": {
+   "name": "Silver City",
+   "address": "4:30 & F"
+  },
+  "playachoir": {
+   "name": "Playa Choir",
+   "address": "6:00 & D"
+  },
+  "cheshirealley": {
+   "name": "Cheshire Alley",
+   "address": "4:30 & G"
+  },
+  "vamp": {
+   "name": "Vamp Camp",
+   "address": "9:45 & C"
+  },
+  "elektra": {
+   "name": "Camp Elektra",
+   "address": "9:15 & J"
+  },
+  "alterego": {
+   "name": "Alter Ego",
+   "address": "4:00 & A"
+  },
+  "dacha": {
+   "name": "Dacha",
+   "address": "9:30 & D"
+  },
+  "chariotproject": {
+   "name": "Chariot Project",
+   "address": "6:30 & A"
+  },
+  "dustytaint": {
+   "name": "Dusty Taint",
+   "address": "3:00 & B"
+  },
+  "deepplayasimulator": {
+   "name": "Deep Playa Simulator",
+   "address": "9:45 & D"
+  },
+  "popsanddrops": {
+   "name": "Pops and Drops",
+   "address": "3:45 & C"
+  },
+  "snowchance": {
+   "name": "Snow Chance",
+   "address": "8:30 & B"
+  },
+  "templeoasis": {
+   "name": "Temple Oasis",
+   "address": "5:15 & A"
+  },
+  "prettypickle": {
+   "name": "Pretty Pickle",
+   "address": "7:30 & ESP"
+  },
+  "gypsymonkeycarnival": {
+   "name": "Gypsy Monkey Carnival",
+   "address": "3:00 & F"
+  },
+  "mystikalmisfits": {
+   "name": "Mystikal Misfits",
+   "address": "8:30 & ESP"
+  },
+  "groundhaus": {
+   "name": "Groundhaus",
+   "address": "5:00 & E"
+  },
+  "shantytown": {
+   "name": "Shanty Town",
+   "address": "5:45 & D"
+  },
+  "machinedomtheexperience": {
+   "name": "machinedom - the experience",
+   "address": "5:45 & H"
+  },
+  "lostandsound": {
+   "name": "Lost and Sound",
+   "address": "2:45 & F"
+  },
+  "jittersandbitters": {
+   "name": "Jitters & Bitters",
+   "address": "2:45 & E"
+  },
+  "sideboob": {
+   "name": "Side Boob",
+   "address": "4:15 & F"
+  },
+  "mistconnections": {
+   "name": "Mist Connections",
+   "address": "3:45 & B"
+  },
+  "somedayisle": {
+   "name": "SomeDay Isle ...",
+   "address": "8:00 & B"
+  },
+  "symbio": {
+   "name": "Symbio",
+   "address": "2:30 & F"
+  },
+  "avantgarden": {
+   "name": "Avant Garden",
+   "address": "5:45 & G"
+  },
+  "elixaidusttribe": {
+   "name": "Elixai Dust Tribe",
+   "address": "10:00 & G"
+  },
+  "landsbeyond": {
+   "name": "Lands Beyond",
+   "address": "8:45 & F"
+  },
+  "cheezyoasis": {
+   "name": "Cheezy Oasis",
+   "address": "7:00 & E"
+  },
+  "antiix": {
+   "name": "Antiix",
+   "address": "7:45 & E"
+  },
+  "threeofcups": {
+   "name": "Three of Cups",
+   "address": "7:45 & B"
+  },
+  "cultofthemagiclady": {
+   "name": "Cult of the Magic Lady",
+   "address": "7:15 & A"
+  },
+  "unicorner": {
+   "name": "Unicorner",
+   "address": "3:30 & B"
+  },
+  "infinitea": {
+   "name": "InfiniTea",
+   "address": "6:45 & F"
+  },
+  "axisofstillness": {
+   "name": "Axis of Stillness",
+   "address": "4:45 & F"
+  },
+  "patsyshangout": {
+   "name": "Patsy's Hangout",
+   "address": "7:30 & D"
+  },
+  "offthedome": {
+   "name": "Off the Dome",
+   "address": "7:15 & ESP"
+  },
+  "gratefulburners": {
+   "name": "Grateful Burners",
+   "address": "3:30 & B"
+  },
+  "fantasticsams": {
+   "name": "Fantastic Sams",
+   "address": "6:45 & E"
+  },
+  "apresski": {
+   "name": "Apr\u00e8s-Ski",
+   "address": "8:15 & B"
+  },
+  "lilypadlounge": {
+   "name": "Lily Pad Lounge",
+   "address": "4:15 & F"
+  },
+  "airstreameriandwhatnot": {
+   "name": "Airstreameri and What Not",
+   "address": "3:45 & C"
+  },
+  "elpulpomagnifico": {
+   "name": "El Pulpo Magnifico",
+   "address": "9:30 & K"
+  },
+  "noholesbarredcomedyclub": {
+   "name": "No Holes Barred Comedy Club",
+   "address": "7:30 & G"
+  },
+  "moreismore": {
+   "name": "More Is More",
+   "address": "8:45 & F"
+  },
+  "knottypeckers": {
+   "name": "Knotty Peckers",
+   "address": "4:45 & C"
+  },
+  "stoop": {
+   "name": "Stoop",
+   "address": "4:30 & E"
+  },
+  "sizedoesntmatter": {
+   "name": "Size Doesn't Matter",
+   "address": "3:15 & E"
+  },
+  "redroosterranch": {
+   "name": "Red Rooster Ranch",
+   "address": "3:45 & F"
+  },
+  "codename": {
+   "name": "Camp Codename",
+   "address": "4:15 & E"
+  },
+  "blackrockadventuresbusstop": {
+   "name": "Black Rock Adventures Bus Stop!",
+   "address": "3:45 & C"
+  },
+  "djuniversity": {
+   "name": "DJ University",
+   "address": "8:45 & E"
+  },
+  "handloverslounge": {
+   "name": "The Hand Lovers Lounge",
+   "address": "6:30 & E"
+  },
+  "aurora": {
+   "name": "Aurora",
+   "address": "4:15 & D"
+  },
+  "irrelephantbird": {
+   "name": "Irrelephant Bird Camp",
+   "address": "6:30 & D"
+  },
+  "phantasmagoria": {
+   "name": "Phantasmagoria Camp",
+   "address": "4:00 & ESP"
+  },
+  "simianakademy": {
+   "name": "Simian Akademy",
+   "address": "7:45 & D"
+  },
+  "joyism": {
+   "name": "Joyism",
+   "address": "4:15 & E"
+  },
+  "drakasha": {
+   "name": "DraKasha",
+   "address": "9:45 & I"
+  },
+  "7sirenscove": {
+   "name": "7 Sirens Cove",
+   "address": "7:00 & A"
+  },
+  "synapseconduit": {
+   "name": "Synapse Conduit",
+   "address": "5:15 & B"
+  },
+  "duaneswhirld": {
+   "name": "Duane's Whirld",
+   "address": "9:15 & J"
+  },
+  "blackholeliterarysociety": {
+   "name": "Black Hole Literary Society",
+   "address": "8:30 & B"
+  },
+  "metaldetected": {
+   "name": "Metal Detected",
+   "address": "5:30 & C"
+  },
+  "donothing": {
+   "name": "Camp Do Nothing",
+   "address": "3:00 & D"
+  },
+  "starsandbikes": {
+   "name": "Stars And Bikes",
+   "address": "2:30 & C"
+  },
+  "tbc": {
+   "name": "T.b.c.",
+   "address": "2:15 & F"
+  },
+  "dragoncamparmory": {
+   "name": "DragonCamp Armory",
+   "address": "7:30 & F"
+  },
+  "saharaa": {
+   "name": "Saharaa Camp",
+   "address": "9:15 & J"
+  },
+  "polyparadise": {
+   "name": "PolyParadise",
+   "address": "8:30 & F"
+  },
+  "snacklandia": {
+   "name": "Snacklandia",
+   "address": "5:45 & B"
+  },
+  "slayer": {
+   "name": "Slayer!",
+   "address": "6:00 & C"
+  },
+  "barfallover": {
+   "name": "Bar Fallover",
+   "address": "4:15 & E"
+  },
+  "awesomesauce": {
+   "name": "Awesomesauce",
+   "address": "7:30 & B"
+  },
+  "costcosoulmatetradingoutlet": {
+   "name": "Costco Soulmate Trading Outlet",
+   "address": "7:30 & G"
+  },
+  "sharkeysbarandlounge": {
+   "name": "Sharkey's Bar and Lounge",
+   "address": "7:00 & A"
+  },
+  "strangerthings": {
+   "name": "Camp Stranger Things",
+   "address": "2:45 & B"
+  },
+  "diy": {
+   "name": "Camp DIY",
+   "address": "6:15 & G"
+  },
+  "icyhandschillzone": {
+   "name": "IcyHands Chillzone",
+   "address": "3:30 & B"
+  },
+  "puttputtpalace": {
+   "name": "Putt Putt Palace",
+   "address": "8:45 & E"
+  },
+  "futureturtles": {
+   "name": "Future Turtles",
+   "address": "7:00 & E"
+  },
+  "p3": {
+   "name": "Camp P3",
+   "address": "7:45 & E"
+  },
+  "badboysdiscoveryourkinks": {
+   "name": "Bad Boy's Discover Your Kinks",
+   "address": "4:15 & D"
+  },
+  "vortexxx": {
+   "name": "VorteXXX",
+   "address": "6:00 & G"
+  },
+  "foamhomepresentsfoamadelic": {
+   "name": "Foam Home presents FOAMADELIC",
+   "address": "9:30 & E"
+  },
+  "spacedout": {
+   "name": "Spaced Out",
+   "address": "9:45 & D"
+  },
+  "spherevision": {
+   "name": "Sphere Vision",
+   "address": "3:15 & E"
+  },
+  "hotline": {
+   "name": "Hotline Camp",
+   "address": "8:15 & A"
+  },
+  "tower69": {
+   "name": "TOWER69",
+   "address": "9:45 & G"
+  },
+  "swanforest": {
+   "name": "Swan Forest",
+   "address": "2:30 & F"
+  },
+  "blackrockobservatorytheme": {
+   "name": "Black Rock Observatory Theme Camp",
+   "address": "3:00 & G"
+  },
+  "dk50trashfence": {
+   "name": "DK50 Trash Fence Camp",
+   "address": "9:15 & J"
+  },
+  "catland": {
+   "name": "CatLand",
+   "address": "3:45 & D"
+  },
+  "xmarksthespot": {
+   "name": "X marks the spot",
+   "address": "4:30 & H"
+  },
+  "bumpbed": {
+   "name": "Bumpbed",
+   "address": "9:45 & H"
+  },
+  "aliceinslumberland": {
+   "name": "Alice in Slumberland",
+   "address": "5:30 & C"
+  },
+  "burningsensation": {
+   "name": "Burning Sensation",
+   "address": "5:45 & G"
+  },
+  "alternativeenergyzone": {
+   "name": "Alternative Energy Zone",
+   "address": "3:30 & E"
+  },
+  "helsdiner": {
+   "name": "Hel's Diner",
+   "address": "6:45 & F"
+  },
+  "hookersandpeggersnaughtycafe": {
+   "name": "Hookers & Peggers Naughty Cafe",
+   "address": "5:15 & C"
+  },
+  "dustymulesaloonandplayground": {
+   "name": "Dusty Mule Saloon and Playground",
+   "address": "4:45 & E"
+  },
+  "duststarscollective": {
+   "name": "Dust Stars Collective",
+   "address": "8:30 & E"
+  },
+  "fusionvalley": {
+   "name": "Fusion Valley",
+   "address": "2:30 & B"
+  },
+  "aaaastroaccessiblearcade": {
+   "name": "AAA Astro Accessible Arcade",
+   "address": "9:00 & B"
+  },
+  "lotusdomeandcafe": {
+   "name": "Lotus Dome & Caf\u00e9",
+   "address": "4:30 & E"
+  },
+  "tarwater": {
+   "name": "Tarwater",
+   "address": "5:30 & B"
+  },
+  "fireflysolar": {
+   "name": "Firefly Solar",
+   "address": "7:15 & F"
+  },
+  "kaif": {
+   "name": "Kaif",
+   "address": "9:45 & C"
+  },
+  "amazone": {
+   "name": "Amazone",
+   "address": "4:00 & C"
+  },
+  "prismaticamp": {
+   "name": "Prismaticamp",
+   "address": "4:45 & G"
+  },
+  "atmosbhear": {
+   "name": "Atmosbhear",
+   "address": "4:15 & B"
+  },
+  "treblemakers": {
+   "name": "Treble Makers",
+   "address": "2:30 & ESP"
+  },
+  "funkytown": {
+   "name": "Funky Town",
+   "address": "10:00 & D"
+  },
+  "burningmanstudios": {
+   "name": "Burning Man Studios",
+   "address": "6:45 & B"
+  },
+  "houseofskin": {
+   "name": "House Of Skin",
+   "address": "9:45 & C"
+  },
+  "celestialalchemy": {
+   "name": "Celestial Alchemy",
+   "address": "7:30 & ESP"
+  },
+  "bikinibottomless": {
+   "name": "Bikini Bottom(less)",
+   "address": "6:45 & F"
+  },
+  "castraursi": {
+   "name": "Castra Ursi",
+   "address": "4:00 & F"
+  },
+  "ohfonehumanfamily": {
+   "name": "OHF- One Human Family",
+   "address": "7:15 & C"
+  },
+  "donotconfusehere": {
+   "name": "Do not confuse here",
+   "address": "8:45 & A"
+  },
+  "aerialknotics": {
+   "name": "AerialKnotics",
+   "address": "4:00 & A"
+  },
+  "frybreadandfriends": {
+   "name": "Frybread and Friends",
+   "address": "7:15 & A"
+  },
+  "twolanterns": {
+   "name": "Two Lanterns",
+   "address": "2:45 & A"
+  },
+  "wafflesandhouse": {
+   "name": "Waffles & House",
+   "address": "8:30 & C"
+  },
+  "darkwadpatrol": {
+   "name": "Darkwad Patrol",
+   "address": "8:15 & C"
+  },
+  "nafas": {
+   "name": "Camp Nafas",
+   "address": "8:15 & E"
+  },
+  "saketome": {
+   "name": "Sake To Me",
+   "address": "4:30 & F"
+  },
+  "diptown": {
+   "name": "Diptown",
+   "address": "7:45 & C"
+  },
+  "kumaya": {
+   "name": "Kumaya",
+   "address": "4:15 & F"
+  },
+  "cuttlefishhomebase": {
+   "name": "Cuttlefish Homebase",
+   "address": "3:15 & E"
+  },
+  "apotheneum": {
+   "name": "Apotheneum",
+   "address": "6:45 & D"
+  },
+  "shittest": {
+   "name": "The Shittest Camp",
+   "address": "5:15 & F"
+  },
+  "adramanation": {
+   "name": "AdramaNation",
+   "address": "7:15 & C"
+  },
+  "dontstop": {
+   "name": "Don't STOP",
+   "address": "7:15 & E"
+  },
+  "kombuchachacha": {
+   "name": "Kombuchachacha",
+   "address": "2:45 & D"
+  },
+  "cuddleoasis": {
+   "name": "Cuddle Oasis",
+   "address": "2:30 & ESP"
+  },
+  "unstable": {
+   "name": "UnStable",
+   "address": "6:45 & D"
+  },
+  "wonder": {
+   "name": "Wonder Camp",
+   "address": "4:30 & G"
+  },
+  "surge": {
+   "name": "The Surge",
+   "address": "3:00 & G"
+  },
+  "naacb": {
+   "name": "Naacb",
+   "address": "3:45 & D"
+  },
+  "powderpalace": {
+   "name": "Powder Palace",
+   "address": "8:15 & B"
+  },
+  "blackrocksocks": {
+   "name": "Black Rock Socks",
+   "address": "8:15 & C"
+  },
+  "karmalove": {
+   "name": "Karma Love Camp",
+   "address": "8:00 & D"
+  },
+  "dunedwellers": {
+   "name": "Dune Dwellers",
+   "address": "2:45 & E"
+  },
+  "dilatedpeoples": {
+   "name": "Dilated Peoples",
+   "address": "6:45 & C"
+  },
+  "altitudelounge": {
+   "name": "Altitude Lounge",
+   "address": "8:15 & B"
+  },
+  "bearwhalea": {
+   "name": "Bearwhalea",
+   "address": "4:00 & C"
+  },
+  "revolution": {
+   "name": "rEVOLUTION",
+   "address": "3:15 & B"
+  },
+  "studioandspa": {
+   "name": "Studio and Spa",
+   "address": "3:45 & C"
+  },
+  "xpatalien": {
+   "name": "Xpat Alien",
+   "address": "6:30 & C"
+  },
+  "hakunamatata": {
+   "name": "Hakuna Matata",
+   "address": "9:45 & G"
+  },
+  "servantsofthesecretfire": {
+   "name": "Servants of the Secret Fire",
+   "address": "8:45 & F"
+  },
+  "bonevoyage": {
+   "name": "Bone Voyage",
+   "address": "7:45 & F"
+  },
+  "hellobrooklyn": {
+   "name": "Hello, Brooklyn",
+   "address": "4:15 & C"
+  },
+  "wetspot": {
+   "name": "Wetspot",
+   "address": "4:30 & B"
+  },
+  "sunrisetavern": {
+   "name": "Sunrise Tavern",
+   "address": "2:30 & E"
+  },
+  "starjelly": {
+   "name": "Star Jelly",
+   "address": "6:15 & F"
+  },
+  "picklebackoasis": {
+   "name": "Pickleback Oasis",
+   "address": "6:15 & B"
+  },
+  "renohousewives": {
+   "name": "Reno Housewives",
+   "address": "7:15 & C"
+  },
+  "vwbus": {
+   "name": "VW Bus Camp",
+   "address": "3:30 & D"
+  },
+  "gloriousgildedalchemy": {
+   "name": "Glorious Gilded Alchemy",
+   "address": "4:15 & C"
+  },
+  "embers": {
+   "name": "Embers",
+   "address": "4:30 & ESP"
+  },
+  "bloodandsugar": {
+   "name": "Blood & Sugar",
+   "address": "2:45 & F"
+  },
+  "kinkypizza": {
+   "name": "Kinky Pizza",
+   "address": "2:30 & D"
+  },
+  "dustybeavers": {
+   "name": "Dusty Beavers",
+   "address": "5:15 & F"
+  },
+  "pinholeproject": {
+   "name": "Pinhole Project",
+   "address": "3:00 & B"
+  },
+  "endstation": {
+   "name": "Endstation",
+   "address": "9:15 & J"
+  },
+  "atomicoctopus": {
+   "name": "Atomic Octopus",
+   "address": "3:15 & B"
+  },
+  "ashramgalactica": {
+   "name": "Ashram Galactica",
+   "address": "9:00 & J"
+  },
+  "honeypotteahouse": {
+   "name": "Honey Pot Tea House",
+   "address": "4:30 & G"
+  },
+  "itastepurple": {
+   "name": "I Taste Purple",
+   "address": "7:15 & E"
+  },
+  "apokalyptika": {
+   "name": "Apokalyptika",
+   "address": "8:15 & A"
+  },
+  "badasstronauts": {
+   "name": "Bad Asstronauts",
+   "address": "7:30 & B"
+  },
+  "comefindusccfu": {
+   "name": "Camp Come Find Us CCFU",
+   "address": "3:15 & B"
+  },
+  "kampkit": {
+   "name": "Kamp Kit",
+   "address": "3:30 & B"
+  },
+  "teddies": {
+   "name": "Teddies",
+   "address": "4:30 & B"
+  },
+  "cognitiveresearchinstitute": {
+   "name": "Cognitive Research Institute",
+   "address": "7:15 & C"
+  },
+  "somecamp": {
+   "name": "Some Camp!",
+   "address": "6:30 & A"
+  },
+  "shenanigans": {
+   "name": "Shenanigans",
+   "address": "4:15 & E"
+  },
+  "stoopcity": {
+   "name": "Stoop City",
+   "address": "4:30 & D"
+  },
+  "parliamentartcrew": {
+   "name": "Parliament Art Crew",
+   "address": "6:45 & B"
+  },
+  "orange": {
+   "name": "Camp Orange",
+   "address": "5:30 & B"
+  },
+  "cosplaycentral": {
+   "name": "Cosplay Central",
+   "address": "6:15 & F"
+  },
+  "home": {
+   "name": "Camp Home",
+   "address": "7:30 & ESP"
+  },
+  "dustynutstavern": {
+   "name": "The Dusty Nuts Tavern",
+   "address": "2:30 & A"
+  },
+  "takeelyaortahealya": {
+   "name": "ta-keel-ya or ta-heal-ya",
+   "address": "8:15 & C"
+  },
+  "slowthefuckdown": {
+   "name": "Slow the Fuck Down",
+   "address": "6:45 & D"
+  },
+  "yabbadabbadome": {
+   "name": "Yabba Dabba Do Me",
+   "address": "3:15 & B"
+  },
+  "whompwagon": {
+   "name": "Whomp Wagon",
+   "address": "9:45 & I"
+  },
+  "hiburnia": {
+   "name": "Hiburnia",
+   "address": "8:45 & J"
+  },
+  "phocureburn": {
+   "name": "PhoCureBurn",
+   "address": "4:45 & C"
+  },
+  "diceysidequests": {
+   "name": "Dicey Side Quests",
+   "address": "7:15 & D"
+  },
+  "maybeyoushouldtalktosomeone": {
+   "name": "Maybe You Should Talk To Someone",
+   "address": "4:45 & D"
+  },
+  "skinnykittyteahouse": {
+   "name": "Skinny Kitty Teahouse",
+   "address": "3:00 & E"
+  },
+  "galacticcruzaders": {
+   "name": "Galactic Cruzaders",
+   "address": "6:30 & F"
+  },
+  "mudskippers": {
+   "name": "Mudskippers",
+   "address": "6:45 & C"
+  },
+  "mechanicalgarden": {
+   "name": "Mechanical Garden",
+   "address": "4:45 & F"
+  },
+  "yummyruminations": {
+   "name": "Yummy RUMInations",
+   "address": "4:30 & G"
+  },
+  "onlymembers": {
+   "name": "Only mEmbers",
+   "address": "6:15 & G"
+  },
+  "childrenofchaos": {
+   "name": "Children of Chaos",
+   "address": "6:45 & C"
+  },
+  "interactioncafe": {
+   "name": "Interaction Caf\u00e9",
+   "address": "3:30 & B"
+  },
+  "youlightupmyride": {
+   "name": "You Light Up My Ride",
+   "address": "8:15 & E"
+  },
+  "jellydance": {
+   "name": "Jelly Dance",
+   "address": "4:30 & E"
+  },
+  "nope": {
+   "name": "Camp Nope",
+   "address": "5:45 & B"
+  },
+  "spectaters": {
+   "name": "Spec-Taters",
+   "address": "8:45 & B"
+  },
+  "totally80sdiscoaerobicinferno": {
+   "name": "Totally 80s Disco Aerobic Inferno",
+   "address": "7:45 & C"
+  },
+  "emergency": {
+   "name": "Camp Emergency",
+   "address": "8:00 & B"
+  },
+  "sunsetlounge": {
+   "name": "Sunset Lounge",
+   "address": "9:30 & C"
+  },
+  "shutterbuggy": {
+   "name": "Camp Shutterbuggy",
+   "address": "7:15 & E"
+  },
+  "birthday": {
+   "name": "Birthday Camp",
+   "address": "6:15 & C"
+  },
+  "misfitsmenagerie": {
+   "name": "Misfits Menagerie",
+   "address": "6:30 & E"
+  },
+  "lostpenguins": {
+   "name": "The Lost Penguins",
+   "address": "8:00 & ESP"
+  },
+  "rootpile": {
+   "name": "Rootpile",
+   "address": "8:15 & D"
+  },
+  "notacult": {
+   "name": "Camp NOT a Cult!",
+   "address": "3:45 & B"
+  },
+  "nodrama": {
+   "name": "No Drama Camp",
+   "address": "4:15 & D"
+  },
+  "gravity": {
+   "name": "Gravity",
+   "address": "3:30 & F"
+  },
+  "peaceofass": {
+   "name": "Camp Peace of Ass",
+   "address": "2:45 & C"
+  },
+  "unnecessarilyhighfive": {
+   "name": "Unnecessarily High Five",
+   "address": "4:00 & B"
+  },
+  "insomnophilia": {
+   "name": "Insomnophilia",
+   "address": "8:45 & C"
+  },
+  "soundcloud": {
+   "name": "SoundCloud",
+   "address": "9:30 & D"
+  },
+  "orangeheart": {
+   "name": "Camp Orange Heart",
+   "address": "6:00 & E"
+  },
+  "acornoasis": {
+   "name": "Acorn Oasis",
+   "address": "6:30 & F"
+  },
+  "fuegostagebarandlounge": {
+   "name": "F.U.Ego Stage Bar & Lounge",
+   "address": "7:30 & B"
+  },
+  "eroticinclinationphotostudio": {
+   "name": "Erotic Inclination Photo Studio",
+   "address": "3:00 & I"
+  },
+  "astrocats": {
+   "name": "Astro Cats",
+   "address": "8:00 & A"
+  },
+  "secondwindpiratecafe": {
+   "name": "Second Wind Pirate Cafe",
+   "address": "6:00 & G"
+  },
+  "blackrocksaunasociety": {
+   "name": "Black Rock Sauna Society",
+   "address": "6:00 & G"
+  },
+  "leopardmartinilounge": {
+   "name": "Leopard Martini Lounge",
+   "address": "5:30 & A"
+  },
+  "laststarfighters": {
+   "name": "The Last Starfighters",
+   "address": "3:15 & D"
+  },
+  "fafa": {
+   "name": "FAFA Camp",
+   "address": "5:15 & D"
+  },
+  "g": {
+   "name": "G",
+   "address": "9:45 & F"
+  },
+  "brandurassnmore": {
+   "name": "Brand-Ur-Ass N More",
+   "address": "4:30 & B"
+  },
+  "eyeris": {
+   "name": "Eyeris",
+   "address": "4:45 & F"
+  },
+  "hotshots": {
+   "name": "Hot Shots",
+   "address": "8:15 & A"
+  },
+  "ofosho": {
+   "name": "Ofosho",
+   "address": "5:00 & D"
+  },
+  "soulshakers": {
+   "name": "Soulshakers",
+   "address": "2:30 & B"
+  },
+  "kidskamp": {
+   "name": "Kids Kamp",
+   "address": "6:15 & F"
+  },
+  "ogpit": {
+   "name": "The OG Pit",
+   "address": "6:15 & C"
+  },
+  "arthaus": {
+   "name": "Art Haus",
+   "address": "4:00 & E"
+  },
+  "flattirecafe": {
+   "name": "Flat Tire Cafe",
+   "address": "4:30 & B"
+  },
+  "frozenoasis": {
+   "name": "Frozen Oasis",
+   "address": "4:45 & D"
+  },
+  "impromptutomato": {
+   "name": "Impromptu Tomato",
+   "address": "5:15 & C"
+  },
+  "yummm": {
+   "name": "Yummm",
+   "address": "4:45 & A"
+  },
+  "bettysbikeshop": {
+   "name": "Betty's Bike Shop",
+   "address": "7:45 & C"
+  },
+  "lovinoven": {
+   "name": "Lovin' Oven",
+   "address": "3:00 & B"
+  },
+  "weirdsteel": {
+   "name": "Weird Steel",
+   "address": "9:00 & ESP"
+  },
+  "vomitingsparrows": {
+   "name": "Vomiting Sparrows",
+   "address": "8:30 & B"
+  },
+  "organization": {
+   "name": "The Organization",
+   "address": "8:15 & A"
+  },
+  "ohmigatoratcafe": {
+   "name": "Oh mi Gato Rat Cafe!",
+   "address": "7:15 & D"
+  },
+  "piper": {
+   "name": "Camp Piper",
+   "address": "7:45 & B"
+  },
+  "apresskiinjury": {
+   "name": "Apr\u00e8s Ski Injury",
+   "address": "2:00 & B"
+  },
+  "underthebigtop": {
+   "name": "Under the Big Top",
+   "address": "3:00 & I"
+  },
+  "shitaintright": {
+   "name": "Camp Shit Ain't Right",
+   "address": "5:45 & A"
+  },
+  "tacocat": {
+   "name": "Tac-O-Cat",
+   "address": "3:00 & D"
+  },
+  "hibernaculum": {
+   "name": "Hibernaculum",
+   "address": "3:45 & B"
+  },
+  "706tribe": {
+   "name": "706 Tribe",
+   "address": "6:15 & G"
+  },
+  "signingwanderers": {
+   "name": "Signing Wanderers",
+   "address": "6:15 & D"
+  },
+  "blowjob": {
+   "name": "Camp Blowjob",
+   "address": "2:45 & F"
+  },
+  "loadie": {
+   "name": "Loadie Camp",
+   "address": "2:15 & A"
+  },
+  "atomicpussyphotolounge": {
+   "name": "Atomic Pussy Photo Lounge",
+   "address": "5:45 & B"
+  },
+  "heebeegeebeehealers": {
+   "name": "HeeBeeGeeBee Healers",
+   "address": "8:15 & F"
+  },
+  "wastedsunshine": {
+   "name": "Wasted Sunshine",
+   "address": "8:15 & E"
+  },
+  "summer": {
+   "name": "Camp Summer Camp",
+   "address": "2:45 & E"
+  },
+  "blackrockcityweldingandrepair": {
+   "name": "Black Rock City Welding & Repair",
+   "address": "3:30 & A"
+  },
+  "ataraxia": {
+   "name": "Ataraxia",
+   "address": "2:15 & ESP"
+  },
+  "mosminimartinierotica": {
+   "name": "Mo's Mini Martini + Erotica Camp",
+   "address": "9:00 & ESP"
+  },
+  "burningship": {
+   "name": "BurningShip",
+   "address": "8:00 & C"
+  },
+  "pinklightning": {
+   "name": "Pink Lightning",
+   "address": "7:45 & D"
+  },
+  "metalmorphosis": {
+   "name": "Metal-Morphosis",
+   "address": "5:15 & C"
+  },
+  "candyland": {
+   "name": "Candyland",
+   "address": "4:30 & G"
+  },
+  "sharkcage": {
+   "name": "Camp Shark Cage",
+   "address": "5:45 & C"
+  },
+  "combatzone": {
+   "name": "Combat Zone",
+   "address": "9:30 & A"
+  },
+  "rednosedistrict": {
+   "name": "Red Nose District",
+   "address": "5:00 & ESP"
+  },
+  "nostairwaytoheaven": {
+   "name": "No Stairway To Heaven",
+   "address": "9:15 & E"
+  },
+  "indigosspeakeasy": {
+   "name": "Indigo's Speakeasy",
+   "address": "3:45 & C"
+  },
+  "mementomori": {
+   "name": "Memento Mori",
+   "address": "4:45 & G"
+  },
+  "siankamp": {
+   "name": "Sian Kamp",
+   "address": "3:45 & A"
+  },
+  "ohnoyoudidnt": {
+   "name": "Oh No You Didn't!",
+   "address": "9:30 & B"
+  },
+  "amateurhourplayapub": {
+   "name": "Amateur Hour Playa Pub",
+   "address": "2:00 & B"
+  },
+  "healaf": {
+   "name": "HealAF",
+   "address": "6:15 & E"
+  },
+  "beanwater": {
+   "name": "Camp Bean Water",
+   "address": "6:15 & C"
+  },
+  "inappropirates": {
+   "name": "Inappropirates",
+   "address": "7:30 & B"
+  },
+  "intergalactic": {
+   "name": "Intergalactic",
+   "address": "2:15 & F"
+  },
+  "whatwouldyoudoforapickle": {
+   "name": "What Would You Do For A Pickle?",
+   "address": "5:15 & F"
+  },
+  "enclave": {
+   "name": "The Enclave",
+   "address": "6:30 & D"
+  },
+  "barbiedeath": {
+   "name": "Barbie Death Village",
+   "address": "5:30 & C"
+  },
+  "twatsyourgender": {
+   "name": "Twats Your Gender?",
+   "address": "9:45 & C"
+  },
+  "afterglow": {
+   "name": "Afterglow",
+   "address": "4:45 & D"
+  },
+  "mash4207th": {
+   "name": "M*A*S*H 4207th",
+   "address": "3:15 & B"
+  },
+  "pookahloungesnafubar": {
+   "name": "Pookah Lounge/SNAFUBAR",
+   "address": "7:15 & E"
+  },
+  "horny": {
+   "name": "Horny Camp",
+   "address": "8:30 & B"
+  },
+  "burningband": {
+   "name": "Burning Band Camp",
+   "address": "7:00 & ESP"
+  },
+  "hydrationstation": {
+   "name": "Hydration Station",
+   "address": "4:30 & D"
+  },
+  "oralfixation": {
+   "name": "Oral Fixation",
+   "address": "2:15 & I"
+  },
+  "popsiclebahrrr": {
+   "name": "Popsicle Bahrrr",
+   "address": "2:00 & B"
+  },
+  "nakedheart": {
+   "name": "Naked Heart",
+   "address": "6:00 & F"
+  },
+  "bitchinbraid": {
+   "name": "Bitchin' Braid Camp",
+   "address": "3:00 & G"
+  },
+  "mousehouse": {
+   "name": "Mouse House",
+   "address": "7:15 & C"
+  },
+  "dementha": {
+   "name": "DeMentha",
+   "address": "3:00 & ESP"
+  },
+  "latica": {
+   "name": "Latica",
+   "address": "3:45 & C"
+  },
+  "unitopia": {
+   "name": "Unitopia",
+   "address": "9:30 & C"
+  },
+  "habitatforinsanity": {
+   "name": "Habitat for Insanity",
+   "address": "5:00 & D"
+  },
+  "midnightroast": {
+   "name": "Midnight Roast",
+   "address": "2:00 & C"
+  },
+  "bettertogether": {
+   "name": "Better Together",
+   "address": "9:15 & E"
+  },
+  "alphabetcookout": {
+   "name": "The Alphabet Cookout",
+   "address": "6:15 & D"
+  },
+  "vagabondsandtagalongs": {
+   "name": "Vagabonds & Tagalongs",
+   "address": "6:45 & D"
+  },
+  "bestyearyet": {
+   "name": "Best Year Yet",
+   "address": "9:00 & ESP"
+  },
+  "ufo": {
+   "name": "U.f.o.",
+   "address": "7:45 & E"
+  },
+  "snowconezone": {
+   "name": "Snow Cone Zone",
+   "address": "6:15 & C"
+  },
+  "brandingandbooze": {
+   "name": "Branding & Booze",
+   "address": "7:00 & B"
+  },
+  "stag": {
+   "name": "Stag Camp",
+   "address": "9:15 & C"
+  },
+  "litaf": {
+   "name": "Lit AF",
+   "address": "2:45 & A"
+  },
+  "brc3pobrc300postoffice": {
+   "name": "BRC3PO (BRC 3:00 Post Office)",
+   "address": "3:00 & B"
+  },
+  "pinkspot": {
+   "name": "The Pink Spot",
+   "address": "3:45 & E"
+  },
+  "here": {
+   "name": "Here",
+   "address": "9:15 & C"
+  },
+  "noname": {
+   "name": "Camp [No Name]",
+   "address": "7:15 & E"
+  },
+  "kerosene": {
+   "name": "Camp Kerosene",
+   "address": "5:45 & B"
+  },
+  "key": {
+   "name": "The Key Camp",
+   "address": "3:15 & D"
+  },
+  "ihottafterdark": {
+   "name": "IHOTT: After Dark",
+   "address": "8:45 & B"
+  },
+  "quarksandrecreation": {
+   "name": "Quarks and Recreation",
+   "address": "7:15 & B"
+  },
+  "17virgins": {
+   "name": "17 Virgins",
+   "address": "9:15 & A"
+  },
+  "celestialteagarden": {
+   "name": "Celestial Tea Garden",
+   "address": "8:45 & E"
+  },
+  "steep": {
+   "name": "Steep?",
+   "address": "8:15 & B"
+  },
+  "fatwatt": {
+   "name": "Fatwatt",
+   "address": "3:45 & B"
+  },
+  "badlands": {
+   "name": "badlands",
+   "address": "9:30 & F"
+  },
+  "fluffycloud": {
+   "name": "The Fluffy Cloud",
+   "address": "10:00 & H"
+  },
+  "brainiac": {
+   "name": "Brainiac Camp",
+   "address": "6:15 & F"
+  },
+  "iloveelephants": {
+   "name": "I Love Elephants",
+   "address": "3:00 & ESP"
+  },
+  "bloom": {
+   "name": "Bloom Camp",
+   "address": "9:45 & ESP"
+  },
+  "northwestmist": {
+   "name": "Northwest Mist",
+   "address": "8:15 & ESP"
+  },
+  "imagimorphia": {
+   "name": "ImagiMorphia",
+   "address": "4:45 & G"
+  },
+  "bioluminatibikemutation": {
+   "name": "Bioluminati (Bike Mutation)",
+   "address": "7:45 & D"
+  },
+  "dustfish": {
+   "name": "Dustfish",
+   "address": "3:45 & ESP"
+  },
+  "johnnytacomasatthelastresort": {
+   "name": "Johnny Tacomas at The Last Resort",
+   "address": "2:30 & K"
+  },
+  "fingerbang": {
+   "name": "Fingerbang",
+   "address": "4:15 & F"
+  },
+  "xoxo": {
+   "name": "Xoxo",
+   "address": "9:00 & B"
+  },
+  "duckbutt": {
+   "name": "Duckbutt",
+   "address": "6:45 & B"
+  },
+  "pirate": {
+   "name": "Pirate Camp",
+   "address": "5:15 & D"
+  },
+  "sobremesa": {
+   "name": "Sobremesa",
+   "address": "3:30 & C"
+  },
+  "lobe": {
+   "name": "Lobe",
+   "address": "4:15 & B"
+  },
+  "sluttputt": {
+   "name": "Slutt Putt",
+   "address": "4:30 & C"
+  },
+  "barbotsbabyneedsabreak": {
+   "name": "Barbots: Baby Needs A Break",
+   "address": "8:45 & D"
+  },
+  "chickendragon": {
+   "name": "Chicken Dragon",
+   "address": "5:15 & D"
+  },
+  "burntown": {
+   "name": "Burntown",
+   "address": "7:30 & G"
+  },
+  "randompants": {
+   "name": "Camp Random Pants",
+   "address": "2:30 & E"
+  },
+  "blackrockdiscgolfclub": {
+   "name": "Black Rock Disc Golf Club",
+   "address": "2:00 & B"
+  },
+  "barmactropolis": {
+   "name": "Bar Mactropolis",
+   "address": "3:00 & I"
+  },
+  "icuimpromptucraftersunion": {
+   "name": "ICU:  Impromptu Crafters Union",
+   "address": "5:45 & B"
+  },
+  "deserthealers": {
+   "name": "Desert Healers",
+   "address": "5:45 & H"
+  },
+  "amma": {
+   "name": "Amma",
+   "address": "2:00 & I"
+  },
+  "hairofthedoghotd": {
+   "name": "Hair of the Dog (HOTD)",
+   "address": "5:30 & A"
+  },
+  "tossedandsauced": {
+   "name": "Tossed and Sauced",
+   "address": "7:15 & B"
+  },
+  "equilibrium": {
+   "name": "Camp Equilibrium",
+   "address": "8:45 & C"
+  },
+  "lollypopolus": {
+   "name": "Lollypopolus",
+   "address": "6:15 & F"
+  },
+  "yesplease": {
+   "name": "Yes Please",
+   "address": "7:00 & F"
+  },
+  "artcar": {
+   "name": "Art Car Camp",
+   "address": "2:45 & A"
+  },
+  "twilightlanguage": {
+   "name": "Twilight language",
+   "address": "10:00 & I"
+  },
+  "whynauts": {
+   "name": "Whynauts",
+   "address": "4:30 & F"
+  },
+  "astraloutpost": {
+   "name": "Astral Outpost",
+   "address": "3:00 & C"
+  },
+  "baretentacles": {
+   "name": "Camp Bare Tentacles",
+   "address": "8:15 & C"
+  },
+  "abstininthe": {
+   "name": "Abstininthe",
+   "address": "6:45 & D"
+  },
+  "amulet": {
+   "name": "Amulet",
+   "address": "6:45 & C"
+  },
+  "domeontherange": {
+   "name": "Dome on the Range",
+   "address": "7:30 & B"
+  },
+  "castaway": {
+   "name": "Camp Castaway",
+   "address": "8:00 & E"
+  },
+  "butter": {
+   "name": "Camp Butter",
+   "address": "4:15 & D"
+  },
+  "giraffecaffe": {
+   "name": "Giraff\u00e8 Caff\u00e8",
+   "address": "7:30 & G"
+  },
+  "netsah": {
+   "name": "NetsaH",
+   "address": "7:45 & F"
+  },
+  "dustcircus": {
+   "name": "Dust Circus",
+   "address": "7:45 & C"
+  },
+  "aplayamask": {
+   "name": "A-playa-mask",
+   "address": "4:45 & F"
+  },
+  "chillvilleontheesplanade": {
+   "name": "ChillVille on the Esplanade",
+   "address": "4:30 & ESP"
+  },
+  "powerhouse": {
+   "name": "Powerhouse",
+   "address": "5:15 & F"
+  },
+  "bungalow": {
+   "name": "Bungalow",
+   "address": "7:45 & F"
+  },
+  "throughthelookingglass": {
+   "name": "Through the Looking Gl.ass",
+   "address": "7:00 & E"
+  },
+  "gearsandbeers": {
+   "name": "Gears & Beers",
+   "address": "7:45 & B"
+  },
+  "juicyrootz": {
+   "name": "Juicy Rootz",
+   "address": "7:45 & D"
+  },
+  "sparklelove": {
+   "name": "Sparkle Love",
+   "address": "7:45 & C"
+  },
+  "celestialbodies": {
+   "name": "Celestial Bodies",
+   "address": "7:30 & G"
+  },
+  "cozydinosaur": {
+   "name": "Cozy Dinosaur",
+   "address": "9:15 & C"
+  },
+  "redneckregaltheatre": {
+   "name": "RedNeck Regal Theatre",
+   "address": "4:15 & G"
+  },
+  "playapology": {
+   "name": "Camp PlayApology",
+   "address": "6:30 & F"
+  },
+  "terribleturtle": {
+   "name": "Terrible Turtle",
+   "address": "6:15 & E"
+  },
+  "roastedbreauxsandcoffeeheauxs": {
+   "name": "Roasted Breauxs & Coffee Heauxs",
+   "address": "4:15 & A"
+  },
+  "kaleidoscopecollective": {
+   "name": "Kaleidoscope Collective",
+   "address": "4:00 & B"
+  },
+  "practice": {
+   "name": "Practice Camp",
+   "address": "7:30 & H"
+  },
+  "whiskeyanddust": {
+   "name": "Whiskey and Dust",
+   "address": "7:45 & E"
+  },
+  "chickencootersoup": {
+   "name": "Chicken Cooter Soup",
+   "address": "8:15 & F"
+  },
+  "endoftheline": {
+   "name": "End of the Line",
+   "address": "4:15 & F"
+  },
+  "sonicboomsaloon": {
+   "name": "SonicBoom Saloon",
+   "address": "3:00 & ESP"
+  },
+  "soulsound": {
+   "name": "SoulSound",
+   "address": "2:15 & C"
+  },
+  "pinkyswears": {
+   "name": "Pinky Swears",
+   "address": "4:15 & C"
+  },
+  "kurenivka": {
+   "name": "Kurenivka",
+   "address": "9:45 & F"
+  },
+  "cheatcodes": {
+   "name": "Cheat Codes",
+   "address": "9:15 & A"
+  },
+  "worstbar": {
+   "name": "Worst Bar",
+   "address": "8:45 & B"
+  },
+  "oceyolotlsanctuary": {
+   "name": "Oceyolotl Sanctuary",
+   "address": "4:45 & D"
+  },
+  "contraptionists": {
+   "name": "Contraptionists",
+   "address": "7:00 & B"
+  },
+  "pennysmashingpoint": {
+   "name": "Penny Smashing Point",
+   "address": "5:45 & G"
+  },
+  "baochickawowwow": {
+   "name": "Bao Chicka Wow Wow",
+   "address": "4:00 & B"
+  },
+  "rhythmwave": {
+   "name": "RhythmWave",
+   "address": "6:00 & E"
+  },
+  "heartfusion": {
+   "name": "Heart Fusion",
+   "address": "4:45 & A"
+  },
+  "blackrockyearbook": {
+   "name": "Black Rock Yearbook",
+   "address": "3:45 & B"
+  },
+  "astralsocialclub": {
+   "name": "The Astral Social Club",
+   "address": "6:45 & B"
+  },
+  "soontobeinfamous": {
+   "name": "Soon to be Infamous",
+   "address": "8:15 & C"
+  },
+  "discosmos": {
+   "name": "Discosmos",
+   "address": "2:00 & K"
+  },
+  "teamhumanbase": {
+   "name": "Team Human Base Camp",
+   "address": "9:45 & D"
+  },
+  "bestbutt": {
+   "name": "Best Butt",
+   "address": "8:45 & B"
+  },
+  "lituanicabirds": {
+   "name": "Lituanica Birds",
+   "address": "4:30 & G"
+  },
+  "lovana": {
+   "name": "Lovana",
+   "address": "6:15 & E"
+  },
+  "nyccommunitycontainer": {
+   "name": "NYC Community Container",
+   "address": "5:15 & F"
+  },
+  "sundowners": {
+   "name": "Sundowners",
+   "address": "7:45 & B"
+  },
+  "carrotclub": {
+   "name": "The Carrot Club",
+   "address": "7:00 & C"
+  },
+  "dogsnrecreation": {
+   "name": "Dogs N Recreation",
+   "address": "4:30 & H"
+  },
+  "fur": {
+   "name": "Fur",
+   "address": "7:15 & B"
+  },
+  "coolsville": {
+   "name": "Coolsville",
+   "address": "2:15 & A"
+  },
+  "backfire": {
+   "name": "Backfire",
+   "address": "7:00 & B"
+  },
+  "interzone": {
+   "name": "Interzone",
+   "address": "6:30 & B"
+  },
+  "morningwood": {
+   "name": "Camp Morning Wood",
+   "address": "7:45 & E"
+  },
+  "justdandy": {
+   "name": "Just Dandy",
+   "address": "9:45 & C"
+  },
+  "ednasoasis": {
+   "name": "Edna's Oasis",
+   "address": "2:15 & E"
+  },
+  "andthentheresonlylove": {
+   "name": "And Then There's Only Love",
+   "address": "7:30 & F"
+  },
+  "twisted": {
+   "name": "Twisted",
+   "address": "5:00 & C"
+  },
+  "shifttheatmosphere": {
+   "name": "Shift the atmosphere",
+   "address": "4:45 & F"
+  },
+  "nocinos": {
+   "name": "Nocino's",
+   "address": "9:15 & B"
+  },
+  "wordplaycafe": {
+   "name": "Word Play Cafe",
+   "address": "6:00 & G"
+  },
+  "industwetrust": {
+   "name": "In Dust We Trust",
+   "address": "3:15 & D"
+  },
+  "congeecentral": {
+   "name": "Congee Central",
+   "address": "4:15 & G"
+  },
+  "spankyswinebar": {
+   "name": "Spanky's Wine Bar",
+   "address": "7:30 & E"
+  },
+  "steambathproject": {
+   "name": "Steam Bath Project",
+   "address": "9:00 & F"
+  },
+  "mellowmountain": {
+   "name": "Mellow Mountain",
+   "address": "8:30 & C"
+  },
+  "gyst": {
+   "name": "Gyst",
+   "address": "7:00 & A"
+  },
+  "mightymisfits": {
+   "name": "Mighty Misfits",
+   "address": "2:30 & D"
+  },
+  "hangoutthe": {
+   "name": "Hang-Out, the",
+   "address": "6:00 & C"
+  },
+  "societyofsupremeexcellence": {
+   "name": "The Society of Supreme Excellence",
+   "address": "2:30 & C"
+  },
+  "saltyjacks": {
+   "name": "Salty Jacks",
+   "address": "9:00 & F"
+  },
+  "burningsky": {
+   "name": "Burning Sky",
+   "address": "5:00 & F"
+  },
+  "burningmycrepe": {
+   "name": "Burning My Cr\u00eape",
+   "address": "4:15 & G"
+  },
+  "hotstuff": {
+   "name": "Hot Stuff",
+   "address": "2:00 & F"
+  },
+  "tot": {
+   "name": "Tot",
+   "address": "9:00 & B"
+  },
+  "playaground": {
+   "name": "PlayAground",
+   "address": "2:30 & A"
+  },
+  "gnometopia": {
+   "name": "Gnometopia",
+   "address": "6:00 & C"
+  },
+  "shittyglitter": {
+   "name": "Shitty Glitter",
+   "address": "8:30 & D"
+  },
+  "chicourbanarea": {
+   "name": "Chico Urban Area",
+   "address": "4:15 & G"
+  },
+  "nowandthenartistcollective": {
+   "name": "Now and Then Artist Collective",
+   "address": "9:15 & A"
+  },
+  "spacebar": {
+   "name": "Space Bar",
+   "address": "5:15 & C"
+  },
+  "pottyproject": {
+   "name": "Potty Project",
+   "address": "3:15 & B"
+  },
+  "snarkbar": {
+   "name": "Snark Bar",
+   "address": "9:00 & B"
+  },
+  "mostlyintune": {
+   "name": "Mostly in Tune",
+   "address": "7:30 & F"
+  },
+  "campoline": {
+   "name": "Campoline",
+   "address": "9:00 & E"
+  },
+  "bui": {
+   "name": "Camp BUI",
+   "address": "2:45 & B"
+  },
+  "mooncheese": {
+   "name": "Moon Cheese",
+   "address": "8:30 & A"
+  },
+  "tailgate": {
+   "name": "Tailgate",
+   "address": "7:45 & C"
+  },
+  "aboveandbelow": {
+   "name": "Above & Below",
+   "address": "4:45 & D"
+  },
+  "drplayasentclinic": {
+   "name": "Dr. Playa's ENT Clinic",
+   "address": "6:15 & ESP"
+  },
+  "greatvibrations": {
+   "name": "Great Vibrations",
+   "address": "9:00 & G"
+  },
+  "glowskullasylumintl": {
+   "name": "Glowskull Asylum Int'l",
+   "address": "3:00 & ESP"
+  },
+  "base": {
+   "name": "Base Camp",
+   "address": "8:45 & G"
+  },
+  "po9": {
+   "name": "PO9",
+   "address": "8:30 & A"
+  },
+  "macgyversunion": {
+   "name": "MacGyvers' Union",
+   "address": "7:15 & B"
+  },
+  "halfbaked": {
+   "name": "Half Baked",
+   "address": "4:45 & A"
+  },
+  "soulforge": {
+   "name": "Soul Forge",
+   "address": "5:45 & C"
+  },
+  "criticalconnections": {
+   "name": "Critical Connections",
+   "address": "4:30 & ESP"
+  },
+  "plannedplayahood": {
+   "name": "Planned Playahood",
+   "address": "7:00 & E"
+  },
+  "giannisfellas": {
+   "name": "Gianni's Fellas",
+   "address": "2:15 & C"
+  },
+  "hippocampus": {
+   "name": "Hippocampus",
+   "address": "5:00 & F"
+  },
+  "redhanded": {
+   "name": "Redhanded",
+   "address": "8:45 & B"
+  },
+  "we3campink": {
+   "name": "We < 3 CamPINK!",
+   "address": "3:15 & E"
+  },
+  "giraffelot": {
+   "name": "Giraffelot",
+   "address": "7:30 & G"
+  },
+  "playapinupsandfineartfatales": {
+   "name": "Playa Pinups and Fine Art Fatales",
+   "address": "3:45 & E"
+  },
+  "discrace": {
+   "name": "Discrace",
+   "address": "4:00 & E"
+  },
+  "armageddonbike": {
+   "name": "Armageddon Bike Camp",
+   "address": "3:00 & ESP"
+  },
+  "champagnelounge": {
+   "name": "Champagne Lounge",
+   "address": "5:45 & C"
+  },
+  "battlebornburners": {
+   "name": "Battle Born Burners",
+   "address": "6:15 & G"
+  },
+  "tourdechance": {
+   "name": "Tour de Chance",
+   "address": "4:00 & C"
+  },
+  "deepeat": {
+   "name": "Deep Eat",
+   "address": "4:15 & C"
+  },
+  "cloudyaf": {
+   "name": "Cloudy AF",
+   "address": "4:30 & D"
+  },
+  "papercranes": {
+   "name": "Paper Cranes",
+   "address": "8:15 & B"
+  },
+  "abominablebase": {
+   "name": "Abominable Base Camp",
+   "address": "8:30 & C"
+  },
+  "shangrilounge": {
+   "name": "Shangri-Lounge",
+   "address": "6:45 & A"
+  },
+  "atouchysubject": {
+   "name": "A Touchy Subject",
+   "address": "4:45 & G"
+  },
+  "molotovcocktail": {
+   "name": "Molotov Cocktail",
+   "address": "3:00 & B"
+  },
+  "happyhour": {
+   "name": "Happy Hour",
+   "address": "3:30 & A"
+  },
+  "chatterbox": {
+   "name": "Chatterbox Camp",
+   "address": "3:15 & A"
+  },
+  "burnstreamcourt": {
+   "name": "Burnstream Court",
+   "address": "3:30 & E"
+  },
+  "emergencewithbuddhalounge": {
+   "name": "Emergence with  Buddha Lounge",
+   "address": "10:00 & G"
+  },
+  "2girls1": {
+   "name": "2 girls 1 camp",
+   "address": "6:00 & D"
+  },
+  "newbarbarians": {
+   "name": "The New Barbarians",
+   "address": "7:15 & D"
+  },
+  "ignitedstates": {
+   "name": "Ignited States",
+   "address": "4:15 & E"
+  },
+  "deepc": {
+   "name": "Deep C",
+   "address": "7:30 & ESP"
+  },
+  "orgybus": {
+   "name": "Orgy Bus Camp",
+   "address": "7:30 & H"
+  },
+  "blackrockcitymunicipalpool": {
+   "name": "Black Rock City Municipal Pool",
+   "address": "7:00 & C"
+  },
+  "neversleepagain": {
+   "name": "Never Sleep Again",
+   "address": "8:30 & F"
+  },
+  "sophistapiratecove": {
+   "name": "SophistaPirate Cove",
+   "address": "3:15 & ESP"
+  },
+  "stardustlounge": {
+   "name": "Stardust Lounge",
+   "address": "8:30 & B"
+  },
+  "halloween": {
+   "name": "Halloween Camp",
+   "address": "9:15 & C"
+  },
+  "cinderbox": {
+   "name": "Cinderbox",
+   "address": "4:15 & F"
+  },
+  "societyfortemporalpreservation": {
+   "name": "Society for Temporal Preservation",
+   "address": "6:00 & F"
+  },
+  "snugglefunk": {
+   "name": "Camp SnuggleFunk",
+   "address": "4:15 & C"
+  },
+  "frenchmanila": {
+   "name": "French Manila",
+   "address": "4:45 & B"
+  },
+  "goodquestion": {
+   "name": "Good Question",
+   "address": "4:15 & E"
+  },
+  "coffeeandpasties": {
+   "name": "Coffee and Pasties",
+   "address": "3:45 & B"
+  },
+  "snowkoansolar": {
+   "name": "SnowKoanSolar",
+   "address": "9:00 & E"
+  },
+  "secondrodeo": {
+   "name": "Second Rodeo",
+   "address": "8:30 & E"
+  },
+  "tidy": {
+   "name": "Camp Tidy",
+   "address": "4:15 & F"
+  },
+  "almaborekas": {
+   "name": "Alma Borekas",
+   "address": "6:30 & D"
+  },
+  "flyingpegasus": {
+   "name": "Flying Pegasus",
+   "address": "8:45 & A"
+  },
+  "chainreaction": {
+   "name": "Chain Reaction",
+   "address": "5:45 & A"
+  },
+  "island": {
+   "name": "The Island",
+   "address": "7:45 & C"
+  },
+  "hotnoodz": {
+   "name": "Hot Noodz",
+   "address": "8:30 & B"
+  },
+  "solarplus": {
+   "name": "SolarPlus",
+   "address": "8:00 & F"
+  },
+  "healingfootwashlifetruthlove": {
+   "name": "Healing Foot Wash Life Truth Love",
+   "address": "5:00 & G"
+  },
+  "illumination": {
+   "name": "Illumination Village",
+   "address": "4:30 & ESP"
+  },
+  "phonicbloom": {
+   "name": "Phonic Bloom",
+   "address": "3:45 & D"
+  },
+  "burnerbuddies": {
+   "name": "Burner Buddies",
+   "address": "6:45 & B"
+  },
+  "monkeyking": {
+   "name": "Monkey King Camp",
+   "address": "2:15 & H"
+  },
+  "synthesis": {
+   "name": "Camp Synthesis",
+   "address": "5:45 & B"
+  },
+  "blackrockcityshipyard": {
+   "name": "Black Rock City Shipyard",
+   "address": "9:45 & D"
+  },
+  "club": {
+   "name": "The Club",
+   "address": "3:45 & D"
+  },
+  "unclelarrysmisguidedburners": {
+   "name": "Uncle Larry's Misguided Burners",
+   "address": "4:00 & F"
+  },
+  "sconefucker": {
+   "name": "Camp Scone Fucker",
+   "address": "6:00 & E"
+  },
+  "teapunk": {
+   "name": "Camp TeaPunk",
+   "address": "6:30 & E"
+  },
+  "vivarium": {
+   "name": "Vivarium",
+   "address": "6:15 & D"
+  },
+  "sweatybetty": {
+   "name": "Camp Sweaty Betty",
+   "address": "7:15 & C"
+  },
+  "blackrockyachtclub": {
+   "name": "Black Rock Yacht Club",
+   "address": "8:45 & K"
+  },
+  "starfist": {
+   "name": "StarFist",
+   "address": "3:30 & C"
+  },
+  "honkersharbor": {
+   "name": "Honkers Harbor",
+   "address": "8:15 & D"
+  },
+  "deliciosoandcreperie": {
+   "name": "Camp Delicioso & Creperie",
+   "address": "2:15 & C"
+  },
+  "bytethis": {
+   "name": "Camp Byte This",
+   "address": "10:00 & C"
+  },
+  "wwit": {
+   "name": "Camp Wwit",
+   "address": "6:30 & C"
+  },
+  "brcskiresort": {
+   "name": "BRC Ski Resort",
+   "address": "9:00 & ESP"
+  },
+  "scotchandhop": {
+   "name": "Scotch & Hop",
+   "address": "8:45 & E"
+  },
+  "blazingdeathship": {
+   "name": "Blazing Death Ship",
+   "address": "4:15 & B"
+  },
+  "someplacecozy": {
+   "name": "Someplace Cozy",
+   "address": "6:15 & D"
+  },
+  "gutter": {
+   "name": "The Gutter",
+   "address": "5:15 & C"
+  },
+  "metalmimi": {
+   "name": "METAL MIMI Camp",
+   "address": "2:30 & A"
+  },
+  "deathguildthunderdont": {
+   "name": "Death Guild Thunderdon't",
+   "address": "8:30 & A"
+  },
+  "kampkaos": {
+   "name": "Kamp Kaos",
+   "address": "4:00 & A"
+  },
+  "parlourroom": {
+   "name": "The Parlour Room",
+   "address": "9:45 & B"
+  },
+  "elementum": {
+   "name": "Elementum",
+   "address": "9:30 & B"
+  },
+  "happyhairsalon": {
+   "name": "Happy Hair Salon",
+   "address": "10:00 & A"
+  },
+  "wanderlust": {
+   "name": "Wanderlust",
+   "address": "4:45 & B"
+  },
+  "gallavant": {
+   "name": "Gallavant",
+   "address": "3:00 & G"
+  },
+  "spacecowboys": {
+   "name": "Space Cowboys",
+   "address": "2:45 & D"
+  },
+  "playground": {
+   "name": "Playground",
+   "address": "2:00 & C"
+  },
+  "hashhouse": {
+   "name": "The Hash House",
+   "address": "8:45 & C"
+  },
+  "retrofrolic": {
+   "name": "Retrofrolic",
+   "address": "7:30 & E"
+  },
+  "paralunatics": {
+   "name": "Paralunatics",
+   "address": "7:15 & C"
+  },
+  "gaudiumgenusaureus": {
+   "name": "Gaudium Genus Aureus",
+   "address": "7:45 & D"
+  },
+  "livelaughlovelounge": {
+   "name": "Live Laugh Love Lounge",
+   "address": "2:15 & K"
+  },
+  "artsupportforbasssnail": {
+   "name": "Art Support for Bass Snail",
+   "address": "4:15 & G"
+  },
+  "sluttymicrophone": {
+   "name": "Slutty Microphone",
+   "address": "8:30 & A"
+  },
+  "musecafe": {
+   "name": "MUSE Caf\u00e9",
+   "address": "8:15 & E"
+  },
+  "templeoflyingspaghettimonster": {
+   "name": "Temple O'Flying Spaghetti Monster",
+   "address": "3:30 & C"
+  },
+  "rumisteahouse": {
+   "name": "Rumi's Tea House",
+   "address": "8:00 & C"
+  },
+  "sultrylodge": {
+   "name": "The Sultry Lodge",
+   "address": "4:45 & B"
+  },
+  "preservationsociety": {
+   "name": "Preservation Society",
+   "address": "3:30 & A"
+  },
+  "glamcocks": {
+   "name": "Glamcocks",
+   "address": "7:00 & D"
+  },
+  "brcsnowclub": {
+   "name": "BRC Snow Club",
+   "address": "9:00 & ESP"
+  },
+  "omskillet": {
+   "name": "Om Skillet",
+   "address": "4:15 & F"
+  },
+  "petaledportal": {
+   "name": "Petaled Portal",
+   "address": "9:15 & D"
+  },
+  "luciddreamhideout": {
+   "name": "Lucid Dream Hideout",
+   "address": "8:45 & G"
+  },
+  "vault21": {
+   "name": "Vault 21+",
+   "address": "9:00 & B"
+  },
+  "sofarsogood": {
+   "name": "So Far So Good",
+   "address": "4:00 & A"
+  },
+  "olympvs": {
+   "name": "Olympvs",
+   "address": "4:00 & E"
+  },
+  "firelightandlemonade": {
+   "name": "Firelight & Lemonade",
+   "address": "2:45 & D"
+  },
+  "blackrockuniversity": {
+   "name": "Black Rock University",
+   "address": "8:30 & A"
+  },
+  "barbiedayspa": {
+   "name": "Barbie Day Spa",
+   "address": "5:30 & D"
+  },
+  "playaalterations": {
+   "name": "Playa Alterations",
+   "address": "8:45 & B"
+  },
+  "coldyogis": {
+   "name": "Cold Yogis",
+   "address": "6:15 & E"
+  },
+  "playa54": {
+   "name": "PLAYA 54",
+   "address": "8:15 & C"
+  },
+  "lakesontheplaya": {
+   "name": "Lakes on the Playa Village",
+   "address": "3:30 & ESP"
+  },
+  "dustyscoutsofcampcampy": {
+   "name": "Dusty Scouts of Camp Campy Camp",
+   "address": "4:00 & A"
+  },
+  "shortbuscoffee": {
+   "name": "Short Bus Coffee Camp",
+   "address": "8:00 & A"
+  },
+  "sparklecamelscostumebazaar": {
+   "name": "Sparkle Camels Costume Bazaar",
+   "address": "8:30 & A"
+  },
+  "friendlandia": {
+   "name": "Friendlandia",
+   "address": "8:45 & A"
+  },
+  "comfortandjoy": {
+   "name": "Comfort & Joy",
+   "address": "7:00 & E"
+  },
+  "solarpunks": {
+   "name": "Solarpunks",
+   "address": "2:00 & K"
+  },
+  "happinessandjoytourmassage": {
+   "name": "Happiness And Joy Tour Massage",
+   "address": "4:30 & C"
+  },
+  "cameltopia": {
+   "name": "Cameltopia",
+   "address": "4:00 & D"
+  },
+  "kashyyyk": {
+   "name": "KashyyyK",
+   "address": "8:15 & D"
+  },
+  "gigsville": {
+   "name": "Gigsville",
+   "address": "5:00 & E"
+  },
+  "wastelanders": {
+   "name": "The Wastelanders",
+   "address": "6:00 & ESP"
+  },
+  "synaesthesia": {
+   "name": "Synaesthesia",
+   "address": "8:00 & D"
+  },
+  "suburbia": {
+   "name": "Suburbia",
+   "address": "8:30 & ESP"
+  },
+  "roca": {
+   "name": "Roca",
+   "address": "3:45 & D"
+  },
+  "cohere": {
+   "name": "Camp Cohere",
+   "address": "2:15 & D"
+  },
+  "desertdragon": {
+   "name": "Desert Dragon",
+   "address": "2:00 & G"
+  },
+  "pilovshouse": {
+   "name": "Pilov's House",
+   "address": "2:30 & D"
+  },
+  "royalhoney": {
+   "name": "Royal Honey",
+   "address": "8:15 & B"
+  },
+  "bedbureauoferoticdiscourse": {
+   "name": "B.E.D Bureau of Erotic Discourse",
+   "address": "6:15 & E"
+  },
+  "lostart": {
+   "name": "Lost Art",
+   "address": "8:45 & A"
+  },
+  "softlanding": {
+   "name": "Soft Landing",
+   "address": "6:30 & F"
+  },
+  "pearlygate": {
+   "name": "The Pearly Gate",
+   "address": "8:00 & B"
+  },
+  "suspendedanimation": {
+   "name": "Suspended Animation",
+   "address": "7:00 & B"
+  },
+  "canadianderthal": {
+   "name": "Camp Canadianderthal",
+   "address": "9:15 & D"
+  },
+  "waywaysupergood": {
+   "name": "Way Way SuperGood",
+   "address": "4:30 & B"
+  },
+  "secretpassage": {
+   "name": "Secret Passage",
+   "address": "5:45 & C"
+  },
+  "fermentedreality": {
+   "name": "Fermented Reality",
+   "address": "7:00 & B"
+  },
+  "mistersandsisters": {
+   "name": "Misters & Sisters",
+   "address": "2:45 & E"
+  },
+  "cinematicregrets": {
+   "name": "Cinematic Regrets",
+   "address": "6:15 & E"
+  },
+  "freeloaderpizzakitchen": {
+   "name": "Freeloader Pizza Kitchen",
+   "address": "7:15 & D"
+  },
+  "madteaseparty": {
+   "name": "Mad Tea(se) Party",
+   "address": "7:15 & ESP"
+  },
+  "mobility": {
+   "name": "Mobility Camp",
+   "address": "6:30 & A"
+  },
+  "justahead": {
+   "name": "Camp Just Ahead",
+   "address": "6:00 & E"
+  },
+  "luminos": {
+   "name": "Luminos",
+   "address": "3:45 & C"
+  },
+  "titicaca": {
+   "name": "Titicaca",
+   "address": "3:00 & G"
+  },
+  "gassco": {
+   "name": "The GASS Co.",
+   "address": "9:15 & D"
+  },
+  "daycare": {
+   "name": "DayCare",
+   "address": "8:45 & A"
+  },
+  "rippersrow": {
+   "name": "Rippers Row",
+   "address": "3:00 & ESP"
+  },
+  "kosmikdust": {
+   "name": "Kosmik Dust",
+   "address": "6:00 & ESP"
+  },
+  "kinseywalhbergfieldlab": {
+   "name": "Kinsey Walhberg Field Lab",
+   "address": "9:15 & D"
+  },
+  "hyperspace": {
+   "name": "Hyperspace",
+   "address": "7:15 & B"
+  },
+  "swirlsupport": {
+   "name": "Swirl Support",
+   "address": "4:15 & C"
+  },
+  "enchantedbootyforest": {
+   "name": "Enchanted Booty Forest",
+   "address": "5:30 & B"
+  },
+  "kaleidoscope": {
+   "name": "Kaleidoscope",
+   "address": "9:00 & B"
+  },
+  "dustydillas": {
+   "name": "Dusty Dillas",
+   "address": "5:15 & F"
+  },
+  "pepperland": {
+   "name": "Pepperland",
+   "address": "6:15 & G"
+  },
+  "playaglass": {
+   "name": "Playa Glass",
+   "address": "8:45 & C"
+  },
+  "homeslice": {
+   "name": "Homeslice",
+   "address": "4:15 & F"
+  },
+  "zazen": {
+   "name": "Zazen",
+   "address": "4:00 & E"
+  },
+  "skrambles": {
+   "name": "Skrambles**!*",
+   "address": "9:00 & G"
+  },
+  "awkwardandtawdrylounge": {
+   "name": "Awkward & Tawdry Lounge",
+   "address": "7:15 & ESP"
+  },
+  "plop": {
+   "name": "plop!",
+   "address": "9:45 & B"
+  },
+  "grooveoasis": {
+   "name": "Groove Oasis",
+   "address": "8:15 & C"
+  },
+  "sirenscove": {
+   "name": "Siren's Cove",
+   "address": "3:15 & C"
+  },
+  "mutantninjaburners": {
+   "name": "Mutant Ninja Burners",
+   "address": "3:45 & C"
+  },
+  "zeniza": {
+   "name": "Zeniza",
+   "address": "9:00 & D"
+  },
+  "matchamama": {
+   "name": "Matcha Mama",
+   "address": "2:30 & E"
+  },
+  "legendaryplaygroundofthegods": {
+   "name": "LEGENDARY Playground of the Gods",
+   "address": "4:30 & E"
+  },
+  "astrallab": {
+   "name": "Astral Lab",
+   "address": "10:00 & F"
+  },
+  "sakenoma": {
+   "name": "Sakenoma",
+   "address": "4:45 & ESP"
+  },
+  "nycdeli": {
+   "name": "NYC Deli",
+   "address": "8:45 & D"
+  },
+  "jankybarge": {
+   "name": "Janky Barge",
+   "address": "4:15 & D"
+  },
+  "fuckingmagical": {
+   "name": "Camp Fucking Magical",
+   "address": "4:45 & F"
+  },
+  "bookclub": {
+   "name": "Book Club",
+   "address": "9:30 & A"
+  },
+  "hodgepodge": {
+   "name": "Hodge Podge",
+   "address": "8:45 & C"
+  },
+  "darling": {
+   "name": "Camp Darling",
+   "address": "7:15 & C"
+  },
+  "joiedevivre": {
+   "name": "Joie de Vivre",
+   "address": "3:45 & D"
+  },
+  "cosmicllama": {
+   "name": "Cosmic Llama",
+   "address": "4:00 & E"
+  },
+  "ulibabaandthehornythieves": {
+   "name": "Uli Baba & the Horny Thieves",
+   "address": "4:15 & A"
+  },
+  "fruitpop": {
+   "name": "fruitPOP",
+   "address": "6:45 & E"
+  },
+  "shittywood": {
+   "name": "Shitty Wood",
+   "address": "7:15 & A"
+  },
+  "nextyearonluna": {
+   "name": "Next Year on Luna",
+   "address": "7:30 & D"
+  },
+  "snackshack": {
+   "name": "Snack Shack",
+   "address": "2:45 & B"
+  },
+  "plovkraft": {
+   "name": "PlovKraft",
+   "address": "7:30 & ESP"
+  },
+  "nudibranch": {
+   "name": "Nudibranch",
+   "address": "7:15 & E"
+  },
+  "pinkheart": {
+   "name": "Pink Heart",
+   "address": "9:00 & ESP"
+  },
+  "harmonicconvergence": {
+   "name": "Harmonic Convergence Camp",
+   "address": "4:15 & G"
+  },
+  "mindshark": {
+   "name": "MindShark",
+   "address": "3:00 & ESP"
+  },
+  "atlantis": {
+   "name": "Atlantis",
+   "address": "4:30 & B"
+  },
+  "dobasketsdream": {
+   "name": "Do Baskets Dream",
+   "address": "9:15 & C"
+  },
+  "pleasuredairy": {
+   "name": "The Pleasure Dairy",
+   "address": "4:15 & F"
+  },
+  "seemtoleave": {
+   "name": "Camp Seem to Leave",
+   "address": "6:15 & D"
+  },
+  "myfavoritethings": {
+   "name": "My Favorite Things",
+   "address": "9:15 & C"
+  },
+  "drinkanddrivein": {
+   "name": "Drink and Drive-In",
+   "address": "6:00 & F"
+  },
+  "nipplecrime": {
+   "name": "Nipple Crime",
+   "address": "8:00 & F"
+  },
+  "shuttlecocks": {
+   "name": "Shuttlecocks",
+   "address": "8:15 & D"
+  },
+  "jailofhedone": {
+   "name": "Jail of Hedone",
+   "address": "6:30 & E"
+  },
+  "kidsville": {
+   "name": "Kidsville",
+   "address": "5:00 & E"
+  },
+  "vietnameseicedcoffeeexperience": {
+   "name": "Vietnamese Iced Coffee Experience",
+   "address": "7:00 & E"
+  },
+  "numbskulls": {
+   "name": "NumbSkulls",
+   "address": "8:45 & J"
+  },
+  "drawninn": {
+   "name": "Drawn Inn",
+   "address": "7:30 & G"
+  },
+  "rabbithole": {
+   "name": "Rabbit Hole",
+   "address": "9:00 & B"
+  },
+  "dustandstars": {
+   "name": "dust & stars",
+   "address": "7:30 & ESP"
+  },
+  "maisonphi": {
+   "name": "Maison Phi",
+   "address": "10:00 & B"
+  },
+  "mystopia": {
+   "name": "Mystopia",
+   "address": "6:30 & E"
+  },
+  "hotellobby": {
+   "name": "Hotel Lobby",
+   "address": "9:00 & E"
+  },
+  "uddernonsense": {
+   "name": "Udder Nonsense",
+   "address": "3:00 & B"
+  },
+  "den": {
+   "name": "The Den",
+   "address": "8:45 & C"
+  },
+  "religiousasfuck": {
+   "name": "Religious As Fuck",
+   "address": "3:15 & B"
+  },
+  "8bitbunny": {
+   "name": "8-bit Bunny",
+   "address": "7:00 & E"
+  },
+  "musemaenaduniversity": {
+   "name": "MUSE (Maenad University)",
+   "address": "4:15 & E"
+  },
+  "illuminaughty": {
+   "name": "Illuminaughty",
+   "address": "9:00 & G"
+  },
+  "blackrockacademy": {
+   "name": "Black Rock Academy",
+   "address": "5:45 & C"
+  },
+  "itsonlynatural": {
+   "name": "It's Only Natural",
+   "address": "7:15 & C"
+  },
+  "gspotandslothsinema": {
+   "name": "The G-Spot & Sloth Sinema",
+   "address": "6:45 & D"
+  },
+  "nativetongues": {
+   "name": "Native Tongues",
+   "address": "6:00 & D"
+  },
+  "owlandthepussycat": {
+   "name": "Owl and the Pussycat",
+   "address": "4:45 & F"
+  },
+  "lastcampsitting": {
+   "name": "Last Camp Sitting",
+   "address": "9:15 & A"
+  },
+  "temple": {
+   "name": "Temple Camp",
+   "address": "2:45 & E"
+  },
+  "ashackofsit": {
+   "name": "A Shack of Sit",
+   "address": "6:45 & ESP"
+  },
+  "picklebackmountain": {
+   "name": "PickleBack Mountain",
+   "address": "8:45 & D"
+  },
+  "playapianobarandlounge": {
+   "name": "Playa Piano Bar and Lounge",
+   "address": "7:30 & B"
+  },
+  "newdesertoutpost": {
+   "name": "New Desert Outpost",
+   "address": "4:15 & F"
+  },
+  "stimulationstation": {
+   "name": "Stimulation Station",
+   "address": "2:45 & B"
+  },
+  "aandmpersand": {
+   "name": "A&mpersand",
+   "address": "7:15 & D"
+  },
+  "wokpaperscissors": {
+   "name": "Wok Paper Scissors",
+   "address": "10:00 & I"
+  },
+  "moonlightcollective": {
+   "name": "Moonlight Collective",
+   "address": "2:45 & E"
+  },
+  "parley": {
+   "name": "Parley",
+   "address": "3:45 & E"
+  },
+  "picklejoint": {
+   "name": "Pickle Joint",
+   "address": "6:00 & E"
+  },
+  "squareone": {
+   "name": "Square One",
+   "address": "4:00 & D"
+  },
+  "playacircuitboogie": {
+   "name": "Playa Circuit Boogie",
+   "address": "4:45 & C"
+  },
+  "hookahdome": {
+   "name": "Hookahdome",
+   "address": "4:15 & ESP"
+  },
+  "aahwonder": {
+   "name": "Aah Wonder",
+   "address": "4:45 & C"
+  },
+  "safari": {
+   "name": "Camp Safari",
+   "address": "4:45 & C"
+  },
+  "atransformationstation": {
+   "name": "A Transformation Station",
+   "address": "3:15 & D"
+  },
+  "shoturanga": {
+   "name": "Shoturanga",
+   "address": "7:45 & D"
+  },
+  "mystic": {
+   "name": "Mystic",
+   "address": "2:00 & F"
+  },
+  "cave": {
+   "name": "The Cave",
+   "address": "4:30 & C"
+  },
+  "institute": {
+   "name": "The Institute",
+   "address": "4:30 & E"
+  },
+  "lunardisco": {
+   "name": "Lunar Disco",
+   "address": "8:15 & F"
+  },
+  "havananights": {
+   "name": "Havana Nights",
+   "address": "9:15 & B"
+  },
+  "fauxliage": {
+   "name": "Fauxliage",
+   "address": "10:00 & B"
+  },
+  "readyplayaone": {
+   "name": "Ready Playa One",
+   "address": "9:45 & I"
+  },
+  "fountainofyouth": {
+   "name": "The Fountain (of youth)",
+   "address": "6:15 & E"
+  },
+  "yellowballoon": {
+   "name": "Yellow Balloon",
+   "address": "7:00 & A"
+  },
+  "drcarlscollectionofdepts": {
+   "name": "Dr. Carl's Collection of Depts.",
+   "address": "6:00 & ESP"
+  },
+  "fundobar": {
+   "name": "Fun-do Bar",
+   "address": "2:45 & D"
+  },
+  "helioz": {
+   "name": "Helioz",
+   "address": "3:00 & G"
+  },
+  "dreamery": {
+   "name": "Dreamery",
+   "address": "6:00 & G"
+  },
+  "serenitynow": {
+   "name": "Serenity Now",
+   "address": "5:30 & B"
+  },
+  "giantsworkshopsaloon": {
+   "name": "Giants Workshop Saloon",
+   "address": "8:30 & E"
+  },
+  "liquidspankuary": {
+   "name": "Liquid Spankuary",
+   "address": "5:45 & F"
+  },
+  "hardasarock": {
+   "name": "Hard as a Rock",
+   "address": "6:15 & C"
+  },
+  "cocoonsociety": {
+   "name": "Cocoon Society",
+   "address": "4:45 & G"
+  },
+  "beatsndeets": {
+   "name": "Beats 'n Deets",
+   "address": "6:30 & B"
+  },
+  "baggagecheck": {
+   "name": "Baggage Check",
+   "address": "3:00 & E"
+  },
+  "argonauts": {
+   "name": "Argonauts",
+   "address": "5:15 & B"
+  },
+  "bumblepuss": {
+   "name": "Bumblepuss",
+   "address": "9:00 & F"
+  },
+  "longfeng": {
+   "name": "Long Feng Camp",
+   "address": "10:00 & K"
+  },
+  "roadsidedistraction": {
+   "name": "Roadside Distraction",
+   "address": "7:15 & B"
+  },
+  "stampede": {
+   "name": "Stampede!",
+   "address": "2:45 & E"
+  },
+  "fomoplayalounge": {
+   "name": "Fomo Playalounge",
+   "address": "9:00 & ESP"
+  },
+  "adhz": {
+   "name": "ADHz",
+   "address": "2:00 & H"
+  },
+  "opulenttemple": {
+   "name": "Opulent Temple",
+   "address": "10:00 & ESP"
+  },
+  "entheoscommunity": {
+   "name": "Entheos Community Village",
+   "address": "9:15 & ESP"
+  },
+  "peopleofcolor": {
+   "name": "People of Color Camp",
+   "address": "4:30 & G"
+  },
+  "bistromanonio": {
+   "name": "Bistro Manonio",
+   "address": "4:15 & A"
+  },
+  "solaris": {
+   "name": "Solaris",
+   "address": "2:15 & K"
+  },
+  "twistedswancelticpub": {
+   "name": "Twisted Swan Celtic pub",
+   "address": "8:30 & E"
+  },
+  "renonation": {
+   "name": "Camp Reno Nation",
+   "address": "2:15 & C"
+  },
+  "rubberarmstrong": {
+   "name": "Rubber Armstrong",
+   "address": "9:30 & E"
+  },
+  "playadelicaciescookingschool": {
+   "name": "Playa Delicacies Cooking School",
+   "address": "7:15 & C"
+  },
+  "disfunktion": {
+   "name": "Disfunktion",
+   "address": "9:00 & E"
+  },
+  "saintsandsinners": {
+   "name": "Saints and Sinners",
+   "address": "4:15 & D"
+  },
+  "discospaceshuttle": {
+   "name": "Disco Space Shuttle",
+   "address": "8:15 & E"
+  },
+  "global": {
+   "name": "Global Camp",
+   "address": "6:15 & F"
+  },
+  "soundgarden": {
+   "name": "The Sound Garden",
+   "address": "2:00 & E"
+  },
+  "tetrixstargazer": {
+   "name": "Tetrix Stargazer",
+   "address": "9:30 & F"
+  },
+  "t33m0": {
+   "name": "T33M0",
+   "address": "10:00 & B"
+  },
+  "vibecheck": {
+   "name": "Vibe Check",
+   "address": "3:45 & D"
+  },
+  "midnightcaffcove": {
+   "name": "MidNight Caff Cove",
+   "address": "5:45 & G"
+  },
+  "owow": {
+   "name": "Camp O-Wow",
+   "address": "7:45 & C"
+  },
+  "bld": {
+   "name": "Bld",
+   "address": "6:00 & G"
+  },
+  "discotiquepancakeboutique": {
+   "name": "Discotique Pancake Boutique",
+   "address": "2:00 & G"
+  },
+  "mara": {
+   "name": "Mara",
+   "address": "9:30 & F"
+  },
+  "dragonaxisdisco": {
+   "name": "Dragon Axis Disco",
+   "address": "2:45 & D"
+  },
+  "afterglowloungeandspa": {
+   "name": "Afterglow Lounge & Spa",
+   "address": "5:00 & B"
+  },
+  "yknotsaloon": {
+   "name": "Y Knot Saloon",
+   "address": "3:30 & E"
+  },
+  "rumpus": {
+   "name": "Rumpus",
+   "address": "3:00 & C"
+  },
+  "oceanbeach": {
+   "name": "Ocean Beach",
+   "address": "4:00 & A"
+  },
+  "muralmazesupport": {
+   "name": "Mural Maze Support Camp",
+   "address": "7:15 & B"
+  },
+  "cloud9": {
+   "name": "Cloud 9",
+   "address": "8:00 & C"
+  },
+  "fastandbicurious": {
+   "name": "Fast & Bi-Curious",
+   "address": "3:45 & B"
+  },
+  "neodebauchery": {
+   "name": "Neodebauchery",
+   "address": "3:15 & F"
+  },
+  "bigunicornenergy": {
+   "name": "Big Unicorn Energy",
+   "address": "9:30 & K"
+  },
+  "caravandlight": {
+   "name": "Caravan D'Light",
+   "address": "8:15 & E"
+  },
+  "freshsqueezed": {
+   "name": "Fresh Squeezed!",
+   "address": "5:00 & B"
+  },
+  "3907": {
+   "name": "3907",
+   "address": "5:00 & A"
+  },
+  "mountainmayhem": {
+   "name": "Mountain Mayhem",
+   "address": "8:45 & C"
+  },
+  "truthordare": {
+   "name": "Camp Truth or Dare",
+   "address": "5:45 & C"
+  },
+  "lavenderlounge": {
+   "name": "The Lavender Lounge",
+   "address": "6:15 & E"
+  },
+  "pinksquirrel": {
+   "name": "Pink Squirrel",
+   "address": "4:45 & F"
+  },
+  "marthalove": {
+   "name": "Martha Love",
+   "address": "2:45 & D"
+  },
+  "contact": {
+   "name": "Camp Contact",
+   "address": "3:45 & C"
+  },
+  "videogasm": {
+   "name": "Videogasm",
+   "address": "6:45 & ESP"
+  },
+  "titanic": {
+   "name": "Titanic",
+   "address": "9:45 & E"
+  },
+  "cozycat": {
+   "name": "Cozy Cat Camp",
+   "address": "4:15 & E"
+  },
+  "cleviancircularity": {
+   "name": "Clevian Circularity",
+   "address": "6:45 & ESP"
+  },
+  "ing": {
+   "name": "Ing",
+   "address": "8:30 & D"
+  },
+  "shamandome": {
+   "name": "Shamandome",
+   "address": "6:45 & F"
+  },
+  "accult": {
+   "name": "Accult",
+   "address": "9:30 & A"
+  },
+  "cabanaclub": {
+   "name": "Cabana Club",
+   "address": "4:00 & B"
+  },
+  "melonmotel": {
+   "name": "The Melon Motel",
+   "address": "2:00 & I"
+  },
+  "hotcheeks": {
+   "name": "Camp Hot Cheeks",
+   "address": "8:15 & B"
+  },
+  "blackrockpubliclibrary": {
+   "name": "Black Rock Public Library",
+   "address": "6:15 & D"
+  },
+  "pinkponies": {
+   "name": "Pink Ponies",
+   "address": "7:00 & F"
+  },
+  "hardly": {
+   "name": "Hardly",
+   "address": "2:45 & ESP"
+  },
+  "shantitownsoundmovement": {
+   "name": "Shanti Town Sound Movement",
+   "address": "2:30 & E"
+  },
+  "casadelarumba": {
+   "name": "Casa de la Rumba",
+   "address": "7:30 & E"
+  },
+  "beverlygrillz": {
+   "name": "Beverly Grillz",
+   "address": "7:30 & B"
+  },
+  "popoville": {
+   "name": "PopoVille",
+   "address": "4:30 & G"
+  },
+  "captainpumpsraiders": {
+   "name": "Captain Pump's Raiders",
+   "address": "6:15 & F"
+  },
+  "orphanendorphin": {
+   "name": "Orphan Endorphin",
+   "address": "7:45 & E"
+  },
+  "decofish": {
+   "name": "Deco Fish",
+   "address": "9:45 & K"
+  },
+  "gauchosdelfuego": {
+   "name": "Gauchos del Fuego",
+   "address": "6:30 & C"
+  },
+  "atomcult": {
+   "name": "Atom Cult",
+   "address": "7:45 & E"
+  },
+  "horizon": {
+   "name": "Horizon",
+   "address": "8:45 & ESP"
+  },
+  "peoplesartcongress": {
+   "name": "People's Art Congress",
+   "address": "6:00 & G"
+  },
+  "dickhead": {
+   "name": "Dickhead Camp",
+   "address": "4:15 & E"
+  },
+  "glowmeup": {
+   "name": "GlowMeUp",
+   "address": "4:15 & D"
+  },
+  "cockpit": {
+   "name": "Cockpit",
+   "address": "6:45 & B"
+  },
+  "disorient": {
+   "name": "Disorient",
+   "address": "8:00 & ESP"
+  },
+  "planetwoodcollective": {
+   "name": "planet wood collective",
+   "address": "4:15 & A"
+  },
+  "ayathetiger": {
+   "name": "Aya The Tiger",
+   "address": "9:15 & D"
+  },
+  "slowyourroll": {
+   "name": "Camp Slow Your Roll",
+   "address": "8:15 & B"
+  },
+  "legendsofthehiddenplaya": {
+   "name": "Legends of the Hidden Playa",
+   "address": "4:30 & B"
+  },
+  "slutplatz": {
+   "name": "Slutplatz",
+   "address": "7:45 & C"
+  },
+  "vcampvibrationsinthedesert": {
+   "name": "VCamp - Vibrations in the Desert",
+   "address": "2:00 & B"
+  },
+  "brcvrpresentsburnersphere": {
+   "name": "BRCvr presents BurnerSphere",
+   "address": "3:45 & B"
+  },
+  "mansonianinstitute4urbanstudy": {
+   "name": "Mansonian Institute 4 Urban Study",
+   "address": "6:30 & B"
+  },
+  "tazii": {
+   "name": "Tazii",
+   "address": "3:00 & D"
+  },
+  "witchesbrew": {
+   "name": "Witches Brew",
+   "address": "2:30 & A"
+  },
+  "bangersonly": {
+   "name": "Camp Bangers Only",
+   "address": "10:00 & E"
+  },
+  "vinetgare": {
+   "name": "Vin Et Gare",
+   "address": "7:15 & D"
+  },
+  "catmandu": {
+   "name": "Catmandu",
+   "address": "4:15 & D"
+  },
+  "noadultsdetected": {
+   "name": "No Adults Detected",
+   "address": "9:15 & F"
+  },
+  "baconeers": {
+   "name": "Baconeers",
+   "address": "3:00 & D"
+  },
+  "moseisley": {
+   "name": "Mos Eisley Village",
+   "address": "6:45 & E"
+  },
+  "cosmicgiggle": {
+   "name": "Cosmic Giggle",
+   "address": "3:00 & E"
+  },
+  "content": {
+   "name": "ConTent",
+   "address": "9:30 & E"
+  },
+  "ebbandglow": {
+   "name": "EBB & Glow Village",
+   "address": "4:30 & ESP"
+  },
+  "veryinappropriatepeople": {
+   "name": "Very Inappropriate People",
+   "address": "4:45 & ESP"
+  },
+  "astropups": {
+   "name": "Astropups",
+   "address": "6:45 & C"
+  },
+  "mikibeach": {
+   "name": "Miki Beach",
+   "address": "10:00 & F"
+  },
+  "bootyworship": {
+   "name": "Booty Worship",
+   "address": "7:30 & C"
+  },
+  "shrimpranch": {
+   "name": "The Shrimp Ranch",
+   "address": "4:15 & F"
+  },
+  "alchemystop": {
+   "name": "Alchemy Stop",
+   "address": "5:00 & F"
+  },
+  "burningmantshirtfactory": {
+   "name": "Burning Man T-Shirt Factory",
+   "address": "6:45 & B"
+  },
+  "mathcampgroupw": {
+   "name": "Math Camp @ Group W",
+   "address": "3:15 & E"
+  },
+  "watertemple": {
+   "name": "Water Temple",
+   "address": "7:30 & F"
+  },
+  "missioncountryclub": {
+   "name": "Mission Country Club",
+   "address": "7:00 & D"
+  },
+  "nosefish": {
+   "name": "Nose Fish",
+   "address": "6:15 & D"
+  },
+  "jungleoddity": {
+   "name": "Jungle Oddity",
+   "address": "7:30 & D"
+  },
+  "bigfrankenergy": {
+   "name": "BigFrankEnergy",
+   "address": "4:15 & C"
+  },
+  "backstage": {
+   "name": "Backstage",
+   "address": "9:30 & E"
+  },
+  "crazycameraandchristmaseveryday": {
+   "name": "CrazyCamera & Christmas Every Day",
+   "address": "8:15 & F"
+  },
+  "normsgarage": {
+   "name": "Norms Garage",
+   "address": "5:15 & F"
+  },
+  "frenchmaidbrigade": {
+   "name": "French Maid Brigade",
+   "address": "2:45 & A"
+  },
+  "gaianairship": {
+   "name": "Gaian Airship",
+   "address": "3:15 & D"
+  },
+  "highku": {
+   "name": "Highku",
+   "address": "5:45 & C"
+  },
+  "reverbia": {
+   "name": "Reverbia",
+   "address": "7:45 & ESP"
+  },
+  "cicadia": {
+   "name": "Cicadia",
+   "address": "7:15 & E"
+  },
+  "toxicdiscoclam": {
+   "name": "Toxic Disco Clam",
+   "address": "4:15 & F"
+  },
+  "kentuckyfried": {
+   "name": "Kentucky Fried Camp",
+   "address": "6:00 & C"
+  },
+  "laflazyassfuckers": {
+   "name": "LAF Lazy-Ass Fuckers",
+   "address": "6:30 & B"
+  },
+  "reentrystation": {
+   "name": "ReEntry Station",
+   "address": "4:45 & G"
+  },
+  "dustybottoms": {
+   "name": "Dusty Bottoms",
+   "address": "7:45 & E"
+  },
+  "dustydelight": {
+   "name": "Dusty Delight",
+   "address": "7:00 & D"
+  },
+  "vrc": {
+   "name": "Camp VRC",
+   "address": "6:15 & F"
+  },
+  "gdisgawddamnindependents": {
+   "name": "GDI's - Gawd Damn Independents",
+   "address": "8:15 & G"
+  },
+  "mimosa": {
+   "name": "Mimosa",
+   "address": "3:45 & B"
+  },
+  "maryeslavenderhandwash": {
+   "name": "Mary E's Lavender Hand Wash",
+   "address": "5:15 & E"
+  },
+  "fuckingjoe": {
+   "name": "Fucking Joe Camp",
+   "address": "8:00 & B"
+  },
+  "clusterfckunited": {
+   "name": "ClusterF*ck United",
+   "address": "4:15 & B"
+  },
+  "daydream": {
+   "name": "Daydream",
+   "address": "2:15 & E"
+  },
+  "spoonfuloffriends": {
+   "name": "Spoonful of Friends",
+   "address": "7:15 & C"
+  },
+  "adultplayground": {
+   "name": "adult playground",
+   "address": "9:45 & E"
+  },
+  "fantasticamusichealing": {
+   "name": "Fantastica Music Healing Camp",
+   "address": "7:45 & D"
+  },
+  "xuza": {
+   "name": "Camp XUZA",
+   "address": "9:15 & J"
+  },
+  "fjorgynslair": {
+   "name": "Fj\u00f6rgyn's Lair",
+   "address": "3:15 & F"
+  },
+  "questionmark": {
+   "name": "Camp Questionmark",
+   "address": "2:00 & ESP"
+  },
+  "inflatablewildlife": {
+   "name": "Inflatable Wildlife",
+   "address": "7:30 & ESP"
+  },
+  "garagemahal": {
+   "name": "Garage Mahal",
+   "address": "9:15 & G"
+  },
+  "blackrockrollerdisco": {
+   "name": "Black Rock Roller Disco",
+   "address": "7:00 & ESP"
+  },
+  "pacific": {
+   "name": "Pacific",
+   "address": "3:45 & A"
+  },
+  "dillasden": {
+   "name": "Dilla's Den",
+   "address": "3:15 & F"
+  },
+  "cirkusfreaks": {
+   "name": "Cirkus Freaks",
+   "address": "8:15 & D"
+  },
+  "chivoloco": {
+   "name": "Chivo Loco",
+   "address": "2:15 & D"
+  },
+  "sozoexperience": {
+   "name": "Sozo Experience",
+   "address": "5:45 & C"
+  },
+  "rebel": {
+   "name": "Rebel Camp",
+   "address": "5:15 & F"
+  },
+  "rocketnroll": {
+   "name": "Rocket 'n Roll",
+   "address": "6:15 & E"
+  },
+  "ripple": {
+   "name": "Ripple",
+   "address": "5:15 & B"
+  },
+  "skytinghq": {
+   "name": "Skyting Hq",
+   "address": "3:45 & E"
+  },
+  "happyhanuman": {
+   "name": "Happy Hanuman",
+   "address": "7:15 & F"
+  },
+  "raysfixit": {
+   "name": "Ray's Fix It",
+   "address": "6:15 & D"
+  },
+  "rooftopfrose": {
+   "name": "Rooftop Frose",
+   "address": "4:45 & F"
+  },
+  "freqzoflove": {
+   "name": "Freqz of Love",
+   "address": "8:00 & E"
+  },
+  "anonymous": {
+   "name": "Anonymous Village",
+   "address": "5:30 & F"
+  },
+  "turbazachayka": {
+   "name": "Turbaza Chayka",
+   "address": "6:45 & C"
+  },
+  "tellyou": {
+   "name": "Camp Tell You",
+   "address": "5:45 & C"
+  },
+  "universecity": {
+   "name": "UniverseCity",
+   "address": "7:15 & A"
+  },
+  "pleasant": {
+   "name": "Pleasant Camp",
+   "address": "4:45 & G"
+  },
+  "starpups": {
+   "name": "StarPups",
+   "address": "4:15 & F"
+  },
+  "landho": {
+   "name": "Camp LandHO!",
+   "address": "2:00 & E"
+  },
+  "artforartssake": {
+   "name": "Art for Art's Sake",
+   "address": "4:45 & C"
+  },
+  "zerofucks": {
+   "name": "Zero Fucks",
+   "address": "9:30 & B"
+  },
+  "hammeredandsickled": {
+   "name": "Hammered and Sickled",
+   "address": "9:15 & E"
+  },
+  "baaahsstation": {
+   "name": "BAAAHS Station",
+   "address": "7:00 & F"
+  },
+  "ballsdepot": {
+   "name": "The Balls Depot",
+   "address": "2:30 & C"
+  },
+  "playaartparksupport": {
+   "name": "Playa Art Park Support",
+   "address": "6:30 & D"
+  },
+  "bunnymethlab": {
+   "name": "Bunny Meth Lab",
+   "address": "9:30 & ESP"
+  },
+  "mesa": {
+   "name": "Mesa",
+   "address": "9:30 & ESP"
+  },
+  "dustydreamers": {
+   "name": "Dusty Dreamers",
+   "address": "7:30 & E"
+  },
+  "raditude": {
+   "name": "Raditude",
+   "address": "6:00 & ESP"
+  },
+  "bebothered": {
+   "name": "Camp Be Bothered",
+   "address": "7:15 & D"
+  },
+  "nipplepie": {
+   "name": "Nipple Pie",
+   "address": "3:00 & E"
+  },
+  "cats": {
+   "name": "...cats",
+   "address": "4:00 & ESP"
+  },
+  "raccoons": {
+   "name": "Raccoons",
+   "address": "6:00 & F"
+  },
+  "deepohm": {
+   "name": "Deep Ohm",
+   "address": "4:30 & B"
+  },
+  "chopshop": {
+   "name": "Chop Shop",
+   "address": "8:00 & E"
+  },
+  "slomoth": {
+   "name": "Sl\u00f6M\u00f3th",
+   "address": "9:00 & G"
+  },
+  "solfamily": {
+   "name": "Sol Family",
+   "address": "2:30 & B"
+  },
+  "bubblesandbass": {
+   "name": "Bubbles and Bass",
+   "address": "8:15 & ESP"
+  },
+  "favelaculture": {
+   "name": "Favela Culture",
+   "address": "9:45 & I"
+  },
+  "alchemistbazaar": {
+   "name": "Alchemist Bazaar",
+   "address": "3:30 & D"
+  },
+  "goldengateproject": {
+   "name": "Golden Gate Project",
+   "address": "10:00 & H"
+  },
+  "rusticwerqranch": {
+   "name": "Rustic WerQ Ranch",
+   "address": "6:45 & D"
+  },
+  "node": {
+   "name": "Node",
+   "address": "9:00 & G"
+  },
+  "burningquestions": {
+   "name": "Burning Questions",
+   "address": "4:00 & B"
+  },
+  "lunars": {
+   "name": "Lunars Camp",
+   "address": "3:30 & ESP"
+  },
+  "fire": {
+   "name": "Fire Camp",
+   "address": "7:30 & ESP"
+  },
+  "kinetic": {
+   "name": "Camp Kinetic",
+   "address": "3:00 & E"
+  },
+  "snarket": {
+   "name": "Snarket",
+   "address": "3:00 & B"
+  },
+  "cornhub": {
+   "name": "CornHub",
+   "address": "5:00 & A"
+  },
+  "magicparadise": {
+   "name": "Magic Paradise",
+   "address": "5:00 & B"
+  },
+  "darkheart": {
+   "name": "Dark Heart",
+   "address": "3:30 & D"
+  },
+  "rootistlounge": {
+   "name": "Rootist Lounge",
+   "address": "3:15 & C"
+  },
+  "brainfreeze": {
+   "name": "Brain Freeze Camp",
+   "address": "5:00 & B"
+  },
+  "swingcity": {
+   "name": "Swing City",
+   "address": "9:00 & D"
+  },
+  "storytimefriends": {
+   "name": "Storytime Friends",
+   "address": "2:45 & C"
+  },
+  "wildhorsessupport": {
+   "name": "Wild Horses support camp",
+   "address": "4:45 & F"
+  },
+  "nobohouse": {
+   "name": "Nobo House",
+   "address": "4:45 & D"
+  },
+  "bisous": {
+   "name": "Bisous",
+   "address": "8:45 & E"
+  },
+  "hushhushponybarn": {
+   "name": "Hush Hush Pony Barn",
+   "address": "3:45 & C"
+  },
+  "beaverton": {
+   "name": "Beaverton",
+   "address": "6:45 & E"
+  },
+  "roguenationseaweed": {
+   "name": "Rogue Nation (SEAWeed)",
+   "address": "6:15 & E"
+  },
+  "mindwerk": {
+   "name": "Mindwerk",
+   "address": "4:15 & D"
+  },
+  "frommarswithlove": {
+   "name": "From Mars With Love",
+   "address": "9:15 & E"
+  },
+  "nordicparadise": {
+   "name": "Nordic Paradise",
+   "address": "7:30 & ESP"
+  },
+  "humblebeartcars": {
+   "name": "Humble Be Art cars",
+   "address": "9:45 & A"
+  },
+  "transcend": {
+   "name": "Transcend",
+   "address": "9:45 & C"
+  },
+  "imaginenationartlounge": {
+   "name": "Imagine Nation Art Lounge",
+   "address": "2:00 & B"
+  },
+  "organicfruitandveggie": {
+   "name": "Organic Fruit & Veggie Camp",
+   "address": "3:00 & J"
+  },
+  "blackrockpianolounge": {
+   "name": "Black Rock Piano Lounge",
+   "address": "9:00 & B"
+  },
+  "novaheaven": {
+   "name": "Nova Heaven",
+   "address": "9:45 & C"
+  },
+  "playaagora": {
+   "name": "Playa Agora",
+   "address": "8:45 & F"
+  },
+  "wrongtown": {
+   "name": "Wrongtown",
+   "address": "6:45 & E"
+  },
+  "rumamok": {
+   "name": "Rum Amok",
+   "address": "7:45 & C"
+  },
+  "genderblender": {
+   "name": "Gender Blender",
+   "address": "6:45 & F"
+  },
+  "heartofparkness": {
+   "name": "Heart of Parkness",
+   "address": "7:45 & A"
+  },
+  "moonlanding": {
+   "name": "Moon Landing",
+   "address": "7:45 & A"
+  },
+  "ptppapillioovum": {
+   "name": "Camp PtP - Papillio Ovum",
+   "address": "4:45 & C"
+  },
+  "veil": {
+   "name": "The Veil",
+   "address": "7:00 & C"
+  },
+  "prairiekids": {
+   "name": "Prairie Kids",
+   "address": "6:45 & B"
+  },
+  "vineswithoutborders": {
+   "name": "Vines Without Borders",
+   "address": "4:30 & ESP"
+  },
+  "youlookamazing": {
+   "name": "You Look Amazing",
+   "address": "7:15 & C"
+  },
+  "threat": {
+   "name": "Camp THREAT",
+   "address": "5:30 & A"
+  },
+  "lostfound": {
+   "name": "Lost + Found",
+   "address": "9:30 & D"
+  },
+  "bubblelounge": {
+   "name": "Bubble Lounge",
+   "address": "7:30 & B"
+  },
+  "garage": {
+   "name": "the Garage",
+   "address": "8:45 & D"
+  },
+  "xxxmas": {
+   "name": "Xxx-mas",
+   "address": "9:00 & D"
+  },
+  "culdesac": {
+   "name": "Camp Cul-de-Sac",
+   "address": "3:15 & C"
+  },
+  "bubble": {
+   "name": "Bubble Camp",
+   "address": "5:45 & G"
+  },
+  "alborz": {
+   "name": "Alborz",
+   "address": "9:45 & E"
+  },
+  "queertirement": {
+   "name": "Queertirement",
+   "address": "7:00 & F"
+  },
+  "burningglobe": {
+   "name": "Burning Globe",
+   "address": "8:45 & C"
+  },
+  "kwalq": {
+   "name": "Kwalq Camp",
+   "address": "3:30 & A"
+  },
+  "blackrockbrewery": {
+   "name": "Black Rock Brewery",
+   "address": "3:30 & A"
+  },
+  "babe": {
+   "name": "Camp Babe",
+   "address": "7:30 & H"
+  },
+  "arcticaicesalesicecubed": {
+   "name": "Arctica Ice Sales - Ice Cubed",
+   "address": "3:00 & G"
+  },
+  "arcticaicesalesicenine": {
+   "name": "Arctica Ice Sales - Ice Nine",
+   "address": "9:00 & G"
+  },
+  "arcticaoutpost": {
+   "name": "Arctica Outpost",
+   "address": "6:15 & J"
+  },
+  "arterypavilion": {
+   "name": "ARTery Pavilion",
+   "address": "6:15 & ESP"
+  },
+  "blmfnwinterpretive": {
+   "name": "BLM/FNW Interpretive Camp",
+   "address": "5:15 & ESP"
+  },
+  "bmir": {
+   "name": "Bmir",
+   "address": "5:45 & ESP"
+  },
+  "burnerexpressbusdepot": {
+   "name": "Burner Express Bus Depot",
+   "address": "6:00 & I"
+  },
+  "census": {
+   "name": "Census",
+   "address": "6:30 & ESP"
+  },
+  "earthguardians": {
+   "name": "Earth Guardians",
+   "address": "5:00 & ESP"
+  },
+  "esdrampart": {
+   "name": "ESD Rampart",
+   "address": "5:15 & ESP"
+  },
+  "esdstation300": {
+   "name": "ESD Station 3:00",
+   "address": "3:00 & C"
+  },
+  "esdstation900": {
+   "name": "ESD Station 9:00",
+   "address": "9:00 & C"
+  },
+  "fireconclaveconvergence": {
+   "name": "Fire Conclave Convergence",
+   "address": "6:00 & ESP"
+  },
+  "felismundi": {
+   "name": "Felis Mundi",
+   "address": "6:00 & ESP"
+  },
+  "hoverlandia": {
+   "name": "HOVerlandia",
+   "address": "6:15 & I"
+  },
+  "lamplighters": {
+   "name": "Lamplighters",
+   "address": "6:45 & ESP"
+  },
+  "mediamecca": {
+   "name": "Media Mecca",
+   "address": "6:15 & ESP"
+  },
+  "moopmaphq": {
+   "name": "Moop Map Hq",
+   "address": "5:30 & ESP"
+  },
+  "placementhq": {
+   "name": "Placement HQ",
+   "address": "5:45 & ESP"
+  },
+  "playainfovrt": {
+   "name": "Playa Info/VRT",
+   "address": "5:45 & ESP"
+  },
+  "rangerheadquarters": {
+   "name": "Ranger Headquarters",
+   "address": "6:30 & ESP"
+  },
+  "rangeroutpostberlin": {
+   "name": "Ranger Outpost Berlin",
+   "address": "3:00 & C"
+  },
+  "rangeroutposttokyo": {
+   "name": "Ranger Outpost Tokyo",
+   "address": "9:00 & C"
+  },
+  "recycle": {
+   "name": "Recycle Camp",
+   "address": "5:45 & ESP"
+  },
+  "templeguardians": {
+   "name": "Temple Guardians",
+   "address": "5:45 & ESP"
+  },
+  "blackhole": {
+   "name": "the black hole",
+   "address": "5:45 & E"
+  },
+  "waterworks": {
+   "name": "Waterworks",
+   "address": "5:15 & ESP"
+  },
+  "yellowbikeproject": {
+   "name": "Yellow Bike Project",
+   "address": "5:30 & D"
+  },
+  "pinkmammoth": {
+   "name": "Pink Mammoth",
+   "address": "9:00 & G"
+  },
+  "breakawayrepublic": {
+   "name": "Breakaway Republic",
+   "address": "6:15 & ESP"
+  },
+  "dustybunnies": {
+   "name": "Dusty Bunnies",
+   "address": "3:15 & B"
+  },
+  "thisisit": {
+   "name": "This Is It",
+   "address": "6:45 & A"
+  },
+  "oftherisingbuns": {
+   "name": "Camp of the Rising Buns",
+   "address": "10:00 & B"
+  },
+  "market": {
+   "name": "The Market",
+   "address": "3:00 & F"
+  },
+  "sidequestsideshow": {
+   "name": "Sidequest Sideshow",
+   "address": "6:45 & D"
+  },
+  "plurpups": {
+   "name": "PLUR Pups",
+   "address": "7:45 & B"
+  },
+  "deoxidized": {
+   "name": "Deoxidized",
+   "address": "2:00 & D"
+  },
+  "hungrygames": {
+   "name": "Hungry Games",
+   "address": "6:45 & B"
+  },
+  "ourowndevices": {
+   "name": "Our Own Devices",
+   "address": "4:15 & A"
+  },
+  "churchofchill": {
+   "name": "Church of Chill",
+   "address": "7:45 & D"
+  },
+  "houseofsammich": {
+   "name": "House of Sammich",
+   "address": "7:15 & D"
+  },
+  "yournewfriend": {
+   "name": "Your New Friend",
+   "address": "2:45 & A"
+  },
+  "joeygloweybar": {
+   "name": "Joey Glowey Bar",
+   "address": "7:15 & B"
+  },
+  "fatpanda": {
+   "name": "Fat Panda",
+   "address": "7:15 & F"
+  },
+  "ironmonkeys": {
+   "name": "Iron Monkeys",
+   "address": "5:15 & C"
+  },
+  "solidcity": {
+   "name": "Solid City",
+   "address": "6:15 & D"
+  },
+  "bathaus": {
+   "name": "Bat Haus",
+   "address": "7:45 & D"
+  },
+  "abraxas": {
+   "name": "Abraxas Camp",
+   "address": "2:15 & H"
+  },
+  "empireofdirt": {
+   "name": "Empire of Dirt",
+   "address": "3:45 & A"
+  },
+  "highmaintenanceentertainment": {
+   "name": "High Maintenance Entertainment",
+   "address": "9:15 & H"
+  },
+  "colitaderana": {
+   "name": "Colita de Rana",
+   "address": "9:15 & F"
+  },
+  "playadough": {
+   "name": "PlayaDough",
+   "address": "5:45 & G"
+  },
+  "artsled": {
+   "name": "ArtSled",
+   "address": "7:45 & D"
+  },
+  "yaassdaddy": {
+   "name": "Yaass Daddy!",
+   "address": "7:45 & B"
+  },
+  "snarkymarquee": {
+   "name": "Snarky Marquee",
+   "address": "5:30 & F"
+  },
+  "lacalaca": {
+   "name": "La Calaca Village",
+   "address": "4:00 & F"
+  },
+  "cantstop": {
+   "name": "Camp (Can't) Stop",
+   "address": "8:00 & A"
+  },
+  "counterculture": {
+   "name": "Counter Culture",
+   "address": "6:45 & C"
+  },
+  "choochoo": {
+   "name": "Choo Choo",
+   "address": "9:45 & F"
+  },
+  "frizz": {
+   "name": "Frizz",
+   "address": "4:45 & D"
+  },
+  "happyseats": {
+   "name": "Happy Seats",
+   "address": "3:45 & E"
+  },
+  "readwritedraw": {
+   "name": "Read Write Draw Camp",
+   "address": "4:45 & F"
+  },
+  "fly": {
+   "name": "Camp Fly",
+   "address": "2:45 & C"
+  },
+  "mousetrap": {
+   "name": "Mouse Trap",
+   "address": "5:45 & F"
+  },
+  "thiccvibez": {
+   "name": "Thicc Vibez",
+   "address": "9:45 & D"
+  },
+  "starbuds": {
+   "name": "Star Buds",
+   "address": "3:45 & B"
+  },
+  "struggletownstation": {
+   "name": "Struggletown Station",
+   "address": "2:45 & E"
+  },
+  "discomushroom": {
+   "name": "Disco Mushroom",
+   "address": "9:15 & A"
+  },
+  "prankstersinthepines": {
+   "name": "Pranksters in the Pines",
+   "address": "9:30 & A"
+  },
+  "lizard": {
+   "name": "Lizard",
+   "address": "3:15 & A"
+  },
+  "arcticcourt": {
+   "name": "Arctic Court",
+   "address": "4:15 & D"
+  },
+  "flockofdonkeys": {
+   "name": "Flock of Donkeys",
+   "address": "3:15 & F"
+  },
+  "chair": {
+   "name": "Chair Camp",
+   "address": "9:45 & E"
+  },
+  "fdafoodanddanceadministration": {
+   "name": "FDA: Food & Dance Administration",
+   "address": "7:30 & E"
+  },
+  "domesweetdome": {
+   "name": "Dome Sweet Dome",
+   "address": "3:45 & D"
+  },
+  "chartingtheuncharted": {
+   "name": "Charting the Uncharted",
+   "address": "2:45 & A"
+  },
+  "blackrocklabstheexpanse": {
+   "name": "Black Rock Labs The Expanse",
+   "address": "2:15 & H"
+  },
+  "extinctoasis": {
+   "name": "Extinct Oasis",
+   "address": "8:45 & B"
+  },
+  "pandemonium": {
+   "name": "pandemonium",
+   "address": "3:00 & F"
+  },
+  "lightningbuglounge": {
+   "name": "Lightning Bug Lounge",
+   "address": "4:15 & D"
+  },
+  "lovetripping": {
+   "name": "Love Tripping",
+   "address": "8:45 & F"
+  },
+  "acidonice": {
+   "name": "Acid On Ice",
+   "address": "8:45 & C"
+  },
+  "playacuda": {
+   "name": "Playacuda",
+   "address": "9:15 & F"
+  },
+  "metamorphosisenergylab": {
+   "name": "Metamorphosis Energy Lab",
+   "address": "7:45 & E"
+  },
+  "lookoutthe": {
+   "name": "Lookout! The Camp",
+   "address": "2:45 & D"
+  },
+  "blinkingmancamp97": {
+   "name": "BlinkingManCamp97",
+   "address": "5:15 & C"
+  },
+  "luminary": {
+   "name": "Luminary Camp",
+   "address": "9:45 & E"
+  },
+  "eitherlight": {
+   "name": "Eitherlight",
+   "address": "3:15 & E"
+  },
+  "mona": {
+   "name": "Mona Camp",
+   "address": "6:15 & G"
+  },
+  "helioshideout": {
+   "name": "Helios Hideout",
+   "address": "9:15 & F"
+  },
+  "grittygarden": {
+   "name": "Gritty Garden",
+   "address": "5:15 & B"
+  },
+  "treeoflove": {
+   "name": "Tree of Love",
+   "address": "8:00 & E"
+  },
+  "bubblegasm": {
+   "name": "Bubblegasm",
+   "address": "7:15 & F"
+  },
+  "strangelove": {
+   "name": "Strangelove",
+   "address": "4:15 & B"
+  },
+  "mindseyebonsai": {
+   "name": "Mindseye Bonsai",
+   "address": "6:15 & E"
+  },
+  "tengri": {
+   "name": "Tengri Camp",
+   "address": "3:45 & E"
+  },
+  "touchglass": {
+   "name": "Touch Glass",
+   "address": "7:15 & D"
+  },
+  "renewablesforartistsrathq": {
+   "name": "Renewables For Artists RAT HQ",
+   "address": "2:45 & F"
+  },
+  "condundrum": {
+   "name": "Camp Condundrum",
+   "address": "5:15 & B"
+  },
+  "watersuckers": {
+   "name": "Water Suckers",
+   "address": "4:15 & C"
+  },
+  "soundcabin": {
+   "name": "Sound Cabin",
+   "address": "9:45 & G"
+  },
+  "centralcafe": {
+   "name": "Central Cafe",
+   "address": "4:30 & ESP"
+  },
+  "enrichmentinstitute": {
+   "name": "Enrichment.Institute",
+   "address": "6:15 & F"
+  },
+  "dustmight": {
+   "name": "Dustmight",
+   "address": "3:15 & C"
+  },
+  "dinosaurking": {
+   "name": "Dinosaur King",
+   "address": "5:45 & C"
+  },
+  "sanmarcosquare": {
+   "name": "San Marco Square",
+   "address": "9:15 & F"
+  },
+  "maxa": {
+   "name": "Maxa",
+   "address": "8:30 & J"
+  },
+  "kosmickorner": {
+   "name": "Kosmic Korner",
+   "address": "2:30 & A"
+  },
+  "elsewhereinstitute": {
+   "name": "Elsewhere Institute",
+   "address": "8:45 & A"
+  },
+  "kuhloff": {
+   "name": "Camp K\u00fchloff",
+   "address": "3:15 & F"
+  },
+  "ohmhome": {
+   "name": "Ohm Home",
+   "address": "9:30 & I"
+  },
+  "playapeaceproject": {
+   "name": "Playa Peace Project",
+   "address": "9:15 & F"
+  },
+  "tba": {
+   "name": "Tba",
+   "address": "2:30 & I"
+  },
+  "connection": {
+   "name": "Camp Connection",
+   "address": "7:45 & C"
+  },
+  "cominghome": {
+   "name": "Coming Home",
+   "address": "2:45 & D"
+  },
+  "brcspcaantihumansociety": {
+   "name": "BRCSPCA (anti-human society)",
+   "address": "3:45 & E"
+  },
+  "draftpunk": {
+   "name": "Draft Punk",
+   "address": "9:00 & E"
+  },
+  "asabovesoat": {
+   "name": "As Above So At Camp",
+   "address": "5:15 & D"
+  },
+  "pinkhole": {
+   "name": "The Pink Hole",
+   "address": "6:15 & C"
+  },
+  "navigatetoyes": {
+   "name": "Navigate to YES",
+   "address": "2:15 & I"
+  },
+  "seashellcartel": {
+   "name": "Seashell Cartel",
+   "address": "9:30 & J"
+  },
+  "ragnarokk": {
+   "name": "Ragnarokk",
+   "address": "9:15 & J"
+  },
+  "moonraker": {
+   "name": "Moonraker",
+   "address": "4:45 & C"
+  },
+  "makersspace": {
+   "name": "The Makers Space",
+   "address": "2:45 & D"
+  },
+  "konazonacoffeeandtikibar": {
+   "name": "KonaZona Coffee & Tiki Bar",
+   "address": "6:15 & E"
+  },
+  "byus": {
+   "name": "Camp BYUS",
+   "address": "7:15 & E"
+  },
+  "airpushercollective": {
+   "name": "Airpusher Collective",
+   "address": "9:15 & E"
+  },
+  "kaya": {
+   "name": "Kaya",
+   "address": "9:45 & A"
+  },
+  "whiteelephantexchange": {
+   "name": "White Elephant Exchange",
+   "address": "3:45 & D"
+  },
+  "backhole": {
+   "name": "The Back Hole",
+   "address": "5:45 & F"
+  },
+  "terrapinstation": {
+   "name": "Terrapin Station",
+   "address": "9:45 & G"
+  },
+  "hootertooterville": {
+   "name": "Hooter Tooterville",
+   "address": "4:15 & G"
+  },
+  "gspot": {
+   "name": "The G Spot",
+   "address": "2:15 & H"
+  },
+  "42ramen": {
+   "name": "42 Ramen",
+   "address": "6:45 & D"
+  },
+  "forthegloryofthecship": {
+   "name": "For the Glory of The C Ship",
+   "address": "2:15 & G"
+  },
+  "fortressofsolitude": {
+   "name": "Camp Fortress of Solitude",
+   "address": "5:15 & F"
+  },
+  "analog": {
+   "name": "Analog",
+   "address": "8:15 & F"
+  },
+  "sunnysideup": {
+   "name": "sunny side up",
+   "address": "8:15 & C"
+  },
+  "shalala": {
+   "name": "Sha La La",
+   "address": "9:30 & G"
+  },
+  "wildtribe": {
+   "name": "Wild Tribe",
+   "address": "9:15 & G"
+  },
+  "amberdust": {
+   "name": "AmberDust",
+   "address": "8:00 & F"
+  },
+  "holybabel": {
+   "name": "Holy Babel",
+   "address": "5:15 & C"
+  },
+  "mysticalgrill": {
+   "name": "The Mystical Grill",
+   "address": "5:15 & F"
+  },
+  "harmonicdrift": {
+   "name": "Harmonic Drift",
+   "address": "6:15 & D"
+  },
+  "aslsupportserviceshub": {
+   "name": "Camp ASL Support Services HUB",
+   "address": "5:45 & G"
+  },
+  "dfcbdontfckncarebear": {
+   "name": "D.F.C.B.(Don't Fckn' Care Bear)",
+   "address": "9:45 & H"
+  },
+  "daveyjoneslockerpiratecove": {
+   "name": "Davey Jones Locker Pirate Cove",
+   "address": "6:45 & E"
+  },
+  "resonance": {
+   "name": "Resonance",
+   "address": "2:45 & F"
+  },
+  "icarus": {
+   "name": "Icarus Camp",
+   "address": "9:45 & G"
+  },
+  "tequilabees": {
+   "name": "Tequila Bees",
+   "address": "4:45 & G"
+  },
+  "booboosgaagoos": {
+   "name": "Booboos Gaagoos",
+   "address": "6:45 & D"
+  },
+  "midastearcollective": {
+   "name": "Midas Tear Collective",
+   "address": "6:15 & E"
+  },
+  "playapetesplaza": {
+   "name": "Playa Pete's Plaza",
+   "address": "9:30 & H"
+  },
+  "halloweentownbrc": {
+   "name": "Halloween Town BRC",
+   "address": "2:15 & H"
+  },
+  "hushville": {
+   "name": "Hushville",
+   "address": "4:45 & F"
+  }
+ },
+ "center_camp_camps": {
+  "glouglouart": {
+   "name": "GlouGlou Art",
+   "address": "Center Camp @ 4:00"
+  },
+  "homebrew4ahomebrew": {
+   "name": "Homebrew 4A Homebrew",
+   "address": "Center Camp @ 6:30"
+  },
+  "hobo": {
+   "name": "Hobo Camp",
+   "address": "Center Camp @ 9:15"
+  },
+  "playajazzcafe": {
+   "name": "Playa Jazz Cafe",
+   "address": "Center Camp @ 7:15"
+  },
+  "magiclanternsociety": {
+   "name": "Magic Lantern Society",
+   "address": "Center Camp @ 11:30"
+  },
+  "cerealthrillers": {
+   "name": "Cereal Thrillers",
+   "address": "Center Camp @ 10:15"
+  },
+  "plycurious": {
+   "name": "Camp Ply Curious",
+   "address": "Center Camp @ 11:00"
+  },
+  "pandorasloungeandfixitshoppe": {
+   "name": "Pandora's Lounge & Fix-it Shoppe",
+   "address": "Center Camp @ 9:45"
+  },
+  "wildchild": {
+   "name": "Wild Child",
+   "address": "Center Camp @ 12:45"
+  },
+  "skyhorsecarousel": {
+   "name": "Skyhorse Carousel",
+   "address": "Center Camp @ 2:15"
+  },
+  "honeypuddle": {
+   "name": "Honey Puddle",
+   "address": "Center Camp @ 1:15"
+  },
+  "palinkalounge": {
+   "name": "Palinka Lounge",
+   "address": "Center Camp @ 3:30"
+  },
+  "lustychanterellekombuchabar": {
+   "name": "Lusty Chanterelle Kombucha Bar",
+   "address": "Center Camp @ 10:45"
+  },
+  "blackrockcitypassportoffice": {
+   "name": "Black Rock City Passport Office",
+   "address": "Center Camp @ 4:30"
+  },
+  "hackacola": {
+   "name": "Hack-a-Cola",
+   "address": "Center Camp @ 3:00"
+  },
+  "shakeshakeshake": {
+   "name": "Shake, Shake, Shake",
+   "address": "Center Camp @ 10:00"
+  },
+  "partnerdanceadventures": {
+   "name": "Partner Dance Adventures",
+   "address": "Center Camp @ 5:15"
+  },
+  "vitruvian": {
+   "name": "Vitruvian",
+   "address": "Center Camp @ 1:45"
+  },
+  "arcticaicesales": {
+   "name": "Arctica Ice Sales",
+   "address": "Center Camp @ 8:00"
+  }
+ },
+ "landmark_aliases": {
+  "centercampcanopy": "Center Camp",
+  "center": "Center Camp",
+  "centercampplaza": "Center Camp",
+  "man": "The Man",
+  "temple": "The Temple",
+  "playainfo": "Playa Info",
+  "greeters": "Greeters",
+  "artery": "Artery",
+  "rampart": "Rampart",
+  "mediamecca": "Media Mecca",
+  "rangerhq": "Ranger HQ",
+  "airport": "Airport",
+  "recycle": "Recycle Camp",
+  "yellowbikeproject": "Yellow Bike Project",
+  "arcticacenter": "Arctica Center Camp",
+  "walkin": "Walk-In Camp",
+  "departmentofmutantvehiclesdmv": "Department of Mutant Vehicles (DMV)",
+  "1200promenade": "1200 Promenade",
+  "3andbplaza": "3 & B Plaza",
+  "300portal": "300 Portal",
+  "300promenade": "300 Promenade",
+  "430andgplaza": "430 & G Plaza",
+  "430portal": "430 Portal",
+  "600portal": "600 Portal",
+  "600promenade": "600 Promenade",
+  "730andgplaza": "730 & G Plaza",
+  "730portal": "730 Portal",
+  "9andbplaza": "9 & B Plaza",
+  "900portal": "900 Portal",
+  "900promenade": "900 Promenade",
+  "heat": "HEaT",
+  "esdstation3": "ESD Station 3",
+  "esdstation9": "ESD Station 9",
+  "point2": "Point 2",
+  "point3": "Point 3",
+  "point4": "Point 4",
+  "point5": "Point 5",
+  "3andgplaza": "3 & G Plaza",
+  "9andgplaza": "9 & G Plaza",
+  "6andgplaza": "6 & G Plaza",
+  "esdstation6": "ESD Station 6",
+  "rangerstationberlin": "Ranger Station Berlin",
+  "rangerstationtokyo": "Ranger Station Tokyo",
+  "hellstation": "Hell Station",
+  "iceninearctica": "Ice Nine Arctica",
+  "icecubedarctica3": "Ice Cubed Arctica 3",
+  "deepplayamusiczonedmz": "Deep-Playa Music Zone (DMZ)",
+  "point1": "Point 1",
+  "430andbplaza": "430 & B Plaza",
+  "730andbplaza": "730 & B Plaza",
+  "blmlesubstation": "BLM LE Substation",
+  "burnerexpressbusdepot": "Burner Express Bus Depot",
+  "boxoffice": "Box Office",
+  "gateactual": "Gate Actual",
+  "willcalllot": "Will Call Lot",
+  "dlot": "D Lot",
+  "censuscheckpoint": "Census Checkpoint",
+  "arcticaoutpost": "Arctica Outpost",
+  "10andbplaza": "10 & B Plaza",
+  "2andbplaza": "2 & B Plaza",
+  "deepplayamusiczone2dmz2": "Deep-Playa Music Zone 2 (DMZ2)",
+  "300andgplaza": "3:00 & G Plaza",
+  "600andgplaza": "6:00 & G Plaza",
+  "900andgplaza": "9:00 & G Plaza",
+  "900andbplaza": "9:00 & B Plaza",
+  "300andbplaza": "3:00 & B Plaza",
+  "200andbplaza": "2:00 & B Plaza",
+  "1000andbplaza": "10:00 & B Plaza"
+ }
+}

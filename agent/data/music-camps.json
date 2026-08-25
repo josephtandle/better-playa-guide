@@ -1,0 +1,332 @@
+{
+ "note": "Verified music/art-car camps and where their lineups actually get published. Handles cross-checked against the camp's own site AND a live profile fetch. Traps flagged. Compiled 2026-08-25.",
+ "year": 2026,
+ "camps": [
+  {
+   "name": "Titanic's End / Big Arts Organization",
+   "status_2026": "NO ART CAR in 2026 - instead a burnable Titanic installation, ignites Fri 4 Sep. Second-largest art burn after the Man.",
+   "address_2026": "9:45 & E",
+   "website": "https://bigbigbig.org",
+   "instagram": "titanicsend",
+   "instagram_confidence": "handle from their Venmo (account.venmo.com/u/titanicsend) + YouTube @TitanicsEnd; not confirmed on-platform",
+   "youtube": "@TitanicsEnd",
+   "email": "redacted@example.invalid",
+   "publishes_lineup": "NOT on their website (bigbigbig.org has no /events or /schedule - both 404). Lineup is IG-only, as images.",
+   "genre": "house, afro house, global \u2014 they launched Titanic's End Records",
+   "known_for": "65ft iceberg art car (2022-2025) with Danley rig, 12 Kvant lasers, ice lounge. 2026 = walk-through sinking-ship burn with 30ft flame cannons.",
+   "past_artists": {
+    "various": [
+     "Diplo",
+     "TOKiMONSTA",
+     "LP Giobbi",
+     "Francis Mercier",
+     "ACRAZE",
+     "VNSSA"
+    ]
+   },
+   "events_2026_official": [
+    "Thu 3 Sep 18:00 Black Rock Philharmonic @TITANIC",
+    "Fri 4 Sep 18:45 TITANIC Ship Burn + Party"
+   ],
+   "note": "3 min ebike from Muse \u2014 same street."
+  },
+  {
+   "name": "Mayan Warrior",
+   "status_2026": "NOT AT BURNING MAN 2026 - crew reportedly at new camp 'Discosmos' (2:00 & J, unverified on official vehicle list)",
+   "website": "https://mayanwarrior.com",
+   "instagram": "_mayanwarrior_",
+   "soundcloud": "mayanwarriorofficial",
+   "youtube": "@mayanwarrior_",
+   "publishes_lineup": "YES - best of any camp. Full sets on YouTube, mixes on SoundCloud, announcements on IG/Linktree",
+   "traps": [
+    "SoundCloud is /mayanwarriorofficial NOT /mayanwarrior",
+    "IG has leading AND trailing underscores"
+   ],
+   "genre": "house, melodic/deep techno, organic electronic",
+   "past_artists": {
+    "2025": [
+     "Black Coffee",
+     "John Summit",
+     "Vintage Culture",
+     "Damian Lazarus",
+     "ANOTR",
+     "Rebolledo b2b Dubfire",
+     "Rampue",
+     "Rex The Dog",
+     "Ahmed Spins",
+     "Julya Karma",
+     "Rigopolar",
+     "Polaroit",
+     "Yamagucci"
+    ],
+    "2024": [
+     "Carl Cox",
+     "WhoMadeWho"
+    ]
+   }
+  },
+  {
+   "name": "Camp Question Mark",
+   "status_2026": "active",
+   "website": "https://campquestionmark.com",
+   "instagram": "campquestionmark",
+   "publishes_lineup": "YES - formal lineup announcement + day-by-day schedule graphic on IG",
+   "genre": "bass music",
+   "past_artists": {
+    "2019": [
+     "Flume",
+     "Diplo",
+     "Mr. Carmack",
+     "Minnesota",
+     "Hippie Sabotage",
+     "Dials",
+     "Dimond Saints"
+    ],
+    "2016": [
+     "Skrillex",
+     "Diplo",
+     "GRiZ",
+     "The Glitch Mob",
+     "Rusko",
+     "Mr. Carmack",
+     "Tokimonsta",
+     "Beats Antique"
+    ],
+    "2014": [
+     "Jack U (Skrillex + Diplo)"
+    ]
+   }
+  },
+  {
+   "name": "Opulent Temple",
+   "status_2026": "active",
+   "website": "https://opulenttemple.org",
+   "instagram": "opulenttemple",
+   "publishes_lineup": "YES - in advance, website + IG",
+   "genre": "big-room house/techno",
+   "past_artists": {
+    "various": [
+     "Tiesto",
+     "Carl Cox",
+     "Skrillex",
+     "Diplo",
+     "Paul Oakenfold",
+     "Bassnectar"
+    ]
+   }
+  },
+  {
+   "name": "Disorient",
+   "status_2026": "active",
+   "address_2026": "Esplanade & 2:15",
+   "website": "https://wiki.disorient.info",
+   "instagram": "dis.ori.ent",
+   "publishes_lineup": "YES - public wiki with named set-time grids back to 2006. Best public archive.",
+   "traps": [
+    "IG is @dis.ori.ent WITH dots - @disorient is their X/Twitter"
+   ],
+   "genre": "downtempo, GlamTech"
+  },
+  {
+   "name": "Pink Mammoth",
+   "status_2026": "active",
+   "address_2026": "9:00 & G Plaza",
+   "website": "https://www.pinkmammoth.org",
+   "instagram": "pinkmammothsf",
+   "soundcloud": "pink-mammoth-official",
+   "publishes_lineup": "partial - IG primary",
+   "genre": "deep/funky/disco/Latin house",
+   "known_for": "Saturday sunset set",
+   "past_artists": {
+    "2025": [
+     "Marques Wyatt"
+    ]
+   }
+  },
+  {
+   "name": "Bubbles and Bass",
+   "status_2026": "active",
+   "address_2026": "Esplanade & 9:00",
+   "website": "https://www.bubblesandbass.com",
+   "instagram": "bubbles.and.bass",
+   "soundcloud": "bubbles-and-bass",
+   "publishes_lineup": "partial - time slots official, DJ names on IG",
+   "genre": "house/melodic/progressive",
+   "known_for": "sunrise sets since 2011, champagne + bubbles",
+   "past_artists": {
+    "2025": [
+     "david hohme"
+    ],
+    "2024": [
+     "MoBama"
+    ],
+    "2023": [
+     "N2N"
+    ],
+    "2022": [
+     "david hohme"
+    ]
+   }
+  },
+  {
+   "name": "Abraxas Dragon",
+   "status_2026": "active",
+   "address_2026": "2:15 & H (per IG; directory says 2:15 & F - trust IG)",
+   "website": null,
+   "instagram": "abraxasdragon",
+   "publishes_lineup": "NO formal lineup - IG only; DJs self-publish sets",
+   "traps": [
+    "abraxasdragon.com is an EXPIRED domain despite still being linked from burningman.org"
+   ],
+   "known_for": "giant gold dragon art car since 2006",
+   "past_artists": {
+    "2025": [
+     "TedDrops"
+    ]
+   }
+  },
+  {
+   "name": "Airpusher Collective",
+   "status_2026": "active",
+   "website": "https://airpusher.org",
+   "instagram": "airpushercollective",
+   "soundcloud": "airpusher",
+   "publishes_lineup": "residents named on /music page; no dated set times",
+   "genre": "house, funk, techno, progressive, world",
+   "residents": [
+    "Cptn Jay",
+    "J-KIND",
+    "Top Shelf",
+    "DJ Cue",
+    "Black Velveteen",
+    "Deadbeats"
+   ]
+  },
+  {
+   "name": "PlayAlchemist / Alchemist Bazaar",
+   "status_2026": "active",
+   "address_2026": "3:30 & D",
+   "website": "https://www.playalchemist.com",
+   "instagram": "playalchemist",
+   "soundcloud": "playalchemist",
+   "publishes_lineup": "defers to IG; SoundCloud archives past sets WITH artist in track title",
+   "past_artists": {
+    "2025": [
+     "Sebastien Leger",
+     "CRSTO",
+     "Alex Cruz"
+    ],
+    "2023": [
+     "Guy Laliberte",
+     "IZHEVSKI",
+     "Save The Robot"
+    ],
+    "2022": [
+     "Seth Schwarz",
+     "Ahmed Spins",
+     "unders"
+    ],
+    "2017": [
+     "Be Svendsen & Unders ft. Seth Schwarz"
+    ]
+   }
+  },
+  {
+   "name": "Robot Heart",
+   "status_2026": "active",
+   "website": "https://robotheart.org",
+   "instagram": "robotheartfoundation",
+   "publishes_lineup": "sometimes, IG/FB",
+   "known_for": "sunrise sets",
+   "past_artists": {
+    "2025": [
+     "Lee Burridge"
+    ],
+    "various": [
+     "Bonobo"
+    ]
+   }
+  },
+  {
+   "name": "Kostume Kult",
+   "status_2026": "active",
+   "address_2026": "Esplanade & 7:00",
+   "website": "https://kostumekult.com",
+   "instagram": "kostumekult",
+   "publishes_lineup": "NO - private channels only",
+   "note": "NOT a sound camp - costume/street-theatre collective. Miss Black Rock City Pageant, Brooklyn Block Party."
+  },
+  {
+   "name": "DISTRIKT",
+   "status_2026": "active",
+   "website": "https://distrikt.org",
+   "instagram": "DISTRIKT_org",
+   "genre": "daytime house/techno"
+  },
+  {
+   "name": "Space Cowboys",
+   "status_2026": "active",
+   "website": "https://spacecowboys.org",
+   "instagram": "spacecowboyssf",
+   "note": "RIPEcast podcast"
+  },
+  {
+   "name": "Incendia",
+   "status_2026": "active (hosted installation, not standalone camp)",
+   "website": "http://www.experienceincendia.com",
+   "instagram": "experience_incendia",
+   "traps": [
+    "IG has an UNDERSCORE: @experience_incendia. @experienceincendia (no underscore) is their Facebook.",
+    "incendia.net is unrelated fractal software"
+   ],
+   "known_for": "50ft fire dome"
+  },
+  {
+   "name": "Comfort & Joy",
+   "status_2026": "active",
+   "website": "https://www.cnj.world",
+   "instagram": "playajoy",
+   "note": "longest-running queer camp"
+  },
+  {
+   "name": "Dusty Rhino",
+   "status_2026": "active",
+   "website": "https://dustyrhino.org",
+   "instagram": "dustyrhinoartcar"
+  },
+  {
+   "name": "White Ocean",
+   "status_2026": "LIKELY INACTIVE - DNS dead, absent from directory",
+   "website": null,
+   "instagram": "whiteocean_bm",
+   "traps": [
+    "@whiteoceancamp is a 55-follower decoy - do NOT use",
+    "whiteocean.co DNS is dead"
+   ],
+   "past_artists": {
+    "various": [
+     "Paul Oakenfold",
+     "Carl Cox",
+     "Hernan Cattaneo",
+     "Above & Beyond"
+    ]
+   }
+  },
+  {
+   "name": "Root Society",
+   "status_2026": "DEFUNCT since ~2019",
+   "website": null,
+   "instagram": null,
+   "traps": [
+    "instagram.com/rootsociety is an UNRELATED environmental group"
+   ]
+  }
+ ],
+ "master_source": {
+  "name": "Rock Star Librarian",
+  "url": "https://www.rockstarlibrarian.com/",
+  "what": "Master sound-camp / art-car music guide for the whole playa",
+  "published": "the Tuesday before gate opens",
+  "why": "single highest-value monitor target for DJ lineups"
+ }
+}

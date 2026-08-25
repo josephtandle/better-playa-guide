@@ -1,0 +1,303 @@
+{
+ "source": "WhatsApp Burning Man groups (Bali Burn 2026, MUSE 2026, MUSE Cafe Menage, MUSE Programming)",
+ "harvested": "2026-08-25",
+ "messages_scanned": 1083,
+ "unique_links": 56,
+ "note": "Links shared by actual burners in Joe's groups. This is the \"discovery\" lane \u2014 it surfaces tools and events the official listings never carry.",
+ "curated": {
+  "https://apps.apple.com/us/app/constellation-at-axis-mundi/id6797762667": {
+   "kind": "app",
+   "note": "Constellation at Axis Mundi \u2014 official-looking 2026 theme app. iOS. Worth installing before you go.",
+   "group": "MUSE 2026 \ud83c\udf52"
+  },
+  "https://apps.apple.com/ca/app/iburn-2026/id388169740": {
+   "kind": "app",
+   "note": "iBurn 2026 \u2014 the classic offline BRC map/events app. Works with no signal on playa.",
+   "group": "Bali Burn 2026"
+  },
+  "https://brcforecast.corbett.vc/outlook": {
+   "kind": "weather",
+   "note": "BRC dust/weather outlook. Built by Peter Corbett (PlayAlchemist camp lead).",
+   "group": "MUSE 2026 \ud83c\udf52"
+  },
+  "https://brc-weather.pages.dev": {
+   "kind": "weather",
+   "note": "Second BRC weather board.",
+   "group": "MUSE 2026 \ud83c\udf52"
+  },
+  "https://api.whatsapp.com/send/?phone=13323204545&text=Give+me+dusty+weather+updates+for+BRC&type=phone_number&app_absent=0": {
+   "kind": "weather",
+   "note": "WhatsApp weather bot \u2014 text it for dusty weather updates on playa.",
+   "group": "MUSE 2026 \ud83c\udf52"
+  },
+  "https://share.watchduty.org/i/116444?ts=1787549047000": {
+   "kind": "safety",
+   "note": "Watch Duty fire/incident alert shared in Muse Cafe.",
+   "group": "\u2764\ufe0f\u200d\ud83d\udd25 MUSE Cafe M\u00e9nage"
+  },
+  "https://survival.burningman.org/wp-content/uploads/2026/06/BMSG-2026-fin.pdf": {
+   "kind": "official",
+   "note": "THE 2026 Survival Guide PDF \u2014 the actual downloadable guide.",
+   "group": "Bali Burn 2026"
+  },
+  "https://www.burnermap.com/rayco": {
+   "kind": "map",
+   "note": "Burner map \u2014 find friends' camps.",
+   "group": "Bali Burn 2026"
+  },
+  "https://www.loveandbeats.xyz": {
+   "kind": "music",
+   "note": "Robot Heart's 'Love & Beats'. EMAIL-GATED \u2014 no lineup without signing up. Joe's call.",
+   "group": "Bali Burn 2026"
+  },
+  "https://myvessel.co/products/playa": {
+   "kind": "gear",
+   "note": "Playa vessel/hydration gear.",
+   "group": "MUSE 2026 \ud83c\udf52"
+  },
+  "https://playaevents.burningman.org/playa_event/58392/": {
+   "kind": "event",
+   "note": "Specific playa event shared in Bali Burn 2026.",
+   "group": "Bali Burn 2026"
+  }
+ },
+ "all": {
+  "https://www.instagram.com/p/DcZtKhDOXfr/?igsi=eWpycjFwZHY0Z3Rk": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://www.instagram.com/p/DcUGRJWID5U/?igsi=MTJzYms1eDRlbmFqaQ==": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://www.instagram.com/p/Dcaedcpm0kZ/?igsi=cnd3aTFhMHJhMzQ2": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://www.instagram.com/p/DcbaltXFNDl/?igsi=NjFhOGMzYTE3ZQ==": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://apps.apple.com/us/app/constellation-at-axis-mundi/id6797762667": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.instagram.com/reel/DcbqMUFsISy/?igsi=eGxxOTZlZ3p2eHNn": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://www.loveandbeats.xyz": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://www.instagram.com/p/DcLHBYeEtRL/?igsi=MTlzNHo5bGI2YWRr": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://share.watchduty.org/i/116444?ts=1787549047000": {
+   "group": "\u2764\ufe0f\u200d\ud83d\udd25 MUSE Cafe M\u00e9nage",
+   "kind": "web"
+  },
+  "https://brcforecast.corbett.vc/outlook": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://two-crowns-claude-code.vercel.app/": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://a.co/d/08CzFH2Y": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://apps.apple.com/ca/app/iburn-2026/id388169740": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://www.instagram.com/p/DcUGRJWID5U/?igsi=a2Iya29wajg4am1o": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://api.whatsapp.com/send/?phone=13323204545&text=Give+me+dusty+weather+updates+for+BRC&type=phone_number&app_absent=0": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://brc-weather.pages.dev": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.amazon.com/Vocalzone-Throat-Pastilles-Helps-Clear/dp/B00AFA6IZQ/": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.amazon.com/gp/product/B0BX7C6H99/": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://a.co/d/09fvBMmG": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.amazon.com/HotHands-Body-Hand-Super-Warmers/dp/B00KDHJBAK/ref": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.instagram.com/reel/DcSo-kahwH2/?igsi=cGR2bG1hZzk5ODh1": {
+   "group": "Bali Burn 2026",
+   "kind": "IG"
+  },
+  "https://www.burnermap.com/rayco": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://playaevents.burningman.org/playa_event/58392/": {
+   "group": "Bali Burn 2026",
+   "kind": "BM-official"
+  },
+  "https://myvessel.co/products/playa": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://docs.google.com/document/d/1MARVUkYt5Exi4ISdAMD3rUaJjBtihZkPTbgc4zSXNds/edit?usp=sharing": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://www.wholesalebolts.com/product_details_3814HLSZ-1.aspx": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://a.co/d/0beskCey": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.instagram.com/weararks?utm_source=qr": {
+   "group": "\u2764\ufe0f\u200d\ud83d\udd25 MUSE Cafe M\u00e9nage",
+   "kind": "IG"
+  },
+  "https://www.airbnb.co.uk/rooms/1613228259119286774?unique_share_id=e4acf3dc-6ebd-40ca-847e-30abbae4c788&viralityEntryPoint=1&s=76": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://docs.google.com/document/u/0/d/14_SetHM0mANaxH0MNlXP97brsDYsYUtO0MrXZPrPqR4/mobilebasic": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://drive.google.com/file/d/1Jox91Pr6_u8e4TGDsSL1pIhtokpje0Ll/view?usp=sharing": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://a.co/d/04buvJKc": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://docs.google.com/document/d/1m6GCQL_UC3UDMR0nyQBOY3G7dcPrdc9rURZ5kPGTcEg/edit?usp=sharing": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://forms.gle/VticDPcV1rWmGmBL6": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.youtube.com/watch?v=qj7VG818zn0": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://drive.google.com/file/d/1doZ1NxDwwIMnrg3yVSXmPVAXT8-9jjrn/view": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://drive.google.com/drive/u/1/folders/18KGpYYEWBIAZNh88McLaME_yAW81fCz2": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://a.co/d/0aOD1JRD": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://meet.google.com/gaz-amsr-vpb": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://forms.gle/CiG4L1khPd6b17gU6": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  },
+  "https://www.airbnb.com/rooms/1246835258865180867?unique_share_id=005fd8df-732b-4add-be1b-72339b7b7271&viralityEntryPoint=1&s=76": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://musecafe.vip/container": {
+   "group": "Muse Besties",
+   "kind": "web"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLScv1qIvmRF05BMilj6ejMTASpWrvV30rRnr93LMCzTqzi2ZIw/viewform?usp=send_form": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://www.amazon.fr/-/en/PICTRON-VIJIM-Lighting-2500K-9000K-Connectivity/dp/B09K7785NL/ref=sr_1_5?crid=2KH10G9SCJIO2&dib=eyJ2IjoiMSJ9.AwhQl0Qb13VXXaMs3T1cuylA0ZCh09icJLDgr0jJiIhWpBgZqLOyMpexl6ygIw0R0E6H9dzBHO6MyHgpToL3O0JW8YX2RB_oDZmmnRmkWi0fhVlaftfsY4X9eKRdLE0LXcV-0oLMQYUkPjS95VY031OKfAOdFg8IHntz3sFKeMtlJZogHqpQ0cCBIA4UU0Hvdy7SLGpxjYVZsQpnFn3IGUoUQufEuY0QzcL4AloIYccf7mB9tJI4J93V24bq3MIOLYVDnmr-lCyeV3_ivCGtCddb2qk1gmxOSgxEqksQKfU.51aLb76IeDbUsfXVvUzChjetsrcaL8XIyjvdYnnkklU&dib_tag=se&keywords=ulanzi%2Bvl110&qid=1786469260&sprefix=ulanzivl110%2Caps%2C160&sr=8-5&th=1": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://docs.google.com/document/d/1m6GCQL_UC3UDMR0nyQBOY3G7dcPrdc9rURZ5kPGTcEg/edit?usp=drivesdk": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://docs.google.com/spreadsheets/d/1t2KvCRFsTvoLiFeo9ewsCgPUFzfgo0Re3AgDq05AdlU/htmlview": {
+   "group": "Bali Burn 2026",
+   "kind": "web"
+  },
+  "https://survival.burningman.org/wp-content/uploads/2026/06/BMSG-2026-fin.pdf": {
+   "group": "Bali Burn 2026",
+   "kind": "FILE"
+  },
+  "https://on.soundcloud.com/i0TqHHLuVoWYcuSLUu": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://www.instagram.com/reel/DW4J6nmATeO/?igsh=Zjc3aGMzYnplazE2": {
+   "group": "MUSE Programming 2026",
+   "kind": "IG"
+  },
+  "https://www.instagram.com/eiffela.brokendream?igsh=cmU5andiOTkydzJh": {
+   "group": "MUSE Programming 2026",
+   "kind": "IG"
+  },
+  "https://meet.google.com/qjp-wheu-urw": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://tel.meet/qjp-wheu-urw?pin=6642107140869": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSfX_WJ9D6veOOxGrrwJs7ArsDsijBydIsEYc4qOqdRtNfPC0A/viewform?usp=header": {
+   "group": "\u2764\ufe0f\u200d\ud83d\udd25 MUSE Cafe M\u00e9nage",
+   "kind": "web"
+  },
+  "https://wise.com/en/track/d627ef97c8744f3c9bba030942c3499c?utm_medium=copy&utm_source=mobileAppIOS&utm_content=moneyTracker": {
+   "group": "Shiftpod Rental MUSE '26",
+   "kind": "web"
+  },
+  "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N2dwYnNpOTRwcXBrazVqcjVkbTI0Z2poYmUgYjMzMTU2OGEzZWNiNGU4ZDFjMDIyNTEyZWY4ZTgyNjdiZjU0OWJkMzViZjA2MDIzYzIyMjhjYmZlMjM3M2IzZUBn&tmsrc=b331568a3ecb4e8d1c022512ef8e8267bf549bd35bf06023c2228cbfe2373b3e%40group.calendar.google.com": {
+   "group": "MUSE Programming 2026",
+   "kind": "web"
+  },
+  "https://docs.google.com/spreadsheets/d/1TngAudqHerT9UdfDVEhTrig9BuJCktsdcgRET4jzcck/edit?gid=0#gid=0": {
+   "group": "MUSE 2026 \ud83c\udf52",
+   "kind": "web"
+  }
+ },
+ "instagram_posts_to_read": [
+  "https://www.instagram.com/p/DcZtKhDOXfr/?igsi=eWpycjFwZHY0Z3Rk",
+  "https://www.instagram.com/p/DcUGRJWID5U/?igsi=MTJzYms1eDRlbmFqaQ==",
+  "https://www.instagram.com/p/Dcaedcpm0kZ/?igsi=cnd3aTFhMHJhMzQ2",
+  "https://www.instagram.com/p/DcbaltXFNDl/?igsi=NjFhOGMzYTE3ZQ==",
+  "https://www.instagram.com/reel/DcbqMUFsISy/?igsi=eGxxOTZlZ3p2eHNn",
+  "https://www.instagram.com/p/DcLHBYeEtRL/?igsi=MTlzNHo5bGI2YWRr",
+  "https://www.instagram.com/p/DcUGRJWID5U/?igsi=a2Iya29wajg4am1o",
+  "https://www.instagram.com/reel/DcSo-kahwH2/?igsi=cGR2bG1hZzk5ODh1",
+  "https://www.instagram.com/weararks?utm_source=qr",
+  "https://www.instagram.com/reel/DW4J6nmATeO/?igsh=Zjc3aGMzYnplazE2",
+  "https://www.instagram.com/eiffela.brokendream?igsh=cmU5andiOTkydzJh"
+ ]
+}

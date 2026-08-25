@@ -1,0 +1,466 @@
+{
+ "source": "https://campmystic.org/events",
+ "camp": "Mystic",
+ "address": "2:00 & F",
+ "series": "Mystic Visionary Speaker Series",
+ "year": 2026,
+ "fetched": "2026-08-25",
+ "sessions": [
+  {
+   "day": null,
+   "time": "11am \u2013 1pm",
+   "title": "Open Healing Space",
+   "presenter": "Tuesday \u2013 Friday",
+   "blurb": "1:1 healing sessions offered by Mystics. All are welcome",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": null,
+   "time": "1pm \u2013 3pm",
+   "title": "Mystic Only Relaxation Space",
+   "presenter": "Tuesday \u2013 Friday",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Monday 8/31",
+   "time": "Sunset",
+   "title": "Fire Circle Opening Ceremony",
+   "presenter": "Oso\u2019li Kawi Provencio \u00b7 Music by Little Wolf",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Monday 8/31",
+   "time": "7:30pm \u2013 8pm",
+   "title": "Auspicious Invocation Kirtan",
+   "presenter": "Burning Mantra",
+   "blurb": "An auspicious invocation Kirtan of sacred chanting to begin your burn",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Monday 8/31",
+   "time": "8pm \u2013 9pm",
+   "title": "MYSTIC ONLY OPENING CEREMONY",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Monday 8/31",
+   "time": "10pm",
+   "title": "Burn Launch Party",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "Sunrise",
+   "title": "AA Meeting",
+   "presenter": "Tommy Kay",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "1pm \u2013 1:50pm",
+   "title": "A Flow to Remembrance",
+   "presenter": "Lily Lee",
+   "blurb": "A slow Vinyasa flow and somatic practice designed to bring us home to our divine bodies",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "2pm \u2013 2:50pm",
+   "title": "Questions for Infinite Intelligence",
+   "presenter": "Cosmic Cowboy",
+   "blurb": "What would you ask infinite intelligence?",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "3pm \u2013 3:50pm",
+   "title": "Siddha Energy Healing",
+   "presenter": "Seth Monk",
+   "blurb": "A powerful meditative healing journey where Seth Monk channels Siddha energy into the space for your personal transformation",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "3pm \u2013 3:50pm",
+   "title": "The Way of Value-Based Leadership",
+   "presenter": "Jerry Howe",
+   "blurb": "An alternative style of leadership that leads to better outcomes and more fulfilled leaders",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "4pm \u2013 4:50pm",
+   "title": "Frequency Alignment",
+   "presenter": "Erin Eber",
+   "blurb": "Vocal frequency transmission. The real deal of aligning your vibration to source",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "5pm \u2013 5:50pm",
+   "title": "Creative Vinyasa Yoga (Agni Asana)",
+   "presenter": "Kehana Rose",
+   "blurb": "Find your fire with a strong, dynamic, heat-building practice.",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "Sunset",
+   "title": "Fire Circle x Mystic Takeover",
+   "presenter": "Mystic Flyer Experience departs Mystic 7:00 PM sharp, arrives at Fire Circle ~7:30pm. Blessing led by Oso\u2019li and the Pachahunai. Sound journey by Little Wolf, Sunny Z, Selva, Santi Bartolome, Avi Snow and more. Ends at 10:30 PM",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "9pm \u2013 5am",
+   "title": "Classical Music Night",
+   "presenter": "Dr. Robert Love",
+   "blurb": "Enjoy classical music while gazing upon Mystic Theatre art",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Tuesday 9/1",
+   "time": "11pm",
+   "title": "MindTravel with Murray Hidary",
+   "presenter": "Murray Hidary",
+   "blurb": "Live piano experience",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "12:30pm \u2013 1:50pm",
+   "title": "Ziva Magic Activation",
+   "presenter": "Emily Fletcher",
+   "blurb": "An embodied manifestation training designed to become an energetic match for the life you desire",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "2pm \u2013 2:50pm",
+   "title": "The Emotional Architecture of Fire",
+   "presenter": "Miguel Arraiz Garcia",
+   "blurb": "From Valencia to Burning Man: Fire, Ritual, and Collective Art",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "3pm \u2013 4:50pm",
+   "title": "Lose Your Mind. Find Your Body",
+   "presenter": "Jkali & Dumi",
+   "blurb": "Breath. Bass. Lose Your Mind. Find Your Body. (Breathwork & Ecstatic Dance)",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "3pm \u2013 3:50pm",
+   "title": "From Strangers to Community",
+   "presenter": "Alexis Quiterio",
+   "blurb": "Daybreakers Alexis Quitero has become fascinated with one question: what transforms a room full of strangers to a place that feels like home?",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "4pm \u2013 4:50pm",
+   "title": "Beyond Hierarchy: A New Operating System for Human Organization",
+   "presenter": "Chris Krywulak",
+   "blurb": "What if how we organize people is holding back the very intelligence, creativity, and consciousness we need?",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "5pm \u2013 5:50pm",
+   "title": "Loving The Shadow Self",
+   "presenter": "Chad Olin",
+   "blurb": "Learn to embrace parts of ourselves that have been suppressed, protected or overlooked",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "5pm \u2013 5:50pm",
+   "title": "Finding Freedom",
+   "presenter": "Peter Crone",
+   "blurb": "Break free from mental limitations and discover true freedom in their health, relationships, and performance.",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "Sunset",
+   "title": "Women\u2019s Circle",
+   "presenter": "Maya Victoria Perez and all female Fire Tenders",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "7:15pm \u2013 8pm",
+   "title": "Men's Circle & Ceremony",
+   "presenter": "Cosmic Cowboy",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "8pm \u2013 4am",
+   "title": "Mystic's Famous Truth and Beauty Party",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Wednesday 9/2",
+   "time": "9pm \u2013 10pm",
+   "title": "Global Rhythms & Sound Scapes",
+   "presenter": "Sunny Z",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "Sunrise",
+   "title": "Sunrise Set",
+   "presenter": "Eduardo Castillo \u00b7 Fire tended by the Pachahunai",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "12pm \u2013 12:50pm",
+   "title": "How to Die Before You Die",
+   "presenter": "Aneel Paulus",
+   "blurb": "Explore what the dying actually fear, and how ego death and psychedelics may help us rehearse letting go before the end",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "1pm \u2013 1:50pm",
+   "title": "Pyschedelic Healing & Transformation with MDMA",
+   "presenter": "Rick Doblin",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "2pm \u2013 2:50pm",
+   "title": "Somatic & Psychedelic Integration",
+   "presenter": "Alexandra Reyf",
+   "blurb": "The Fire Within: From survival to presence through somatics, music, and deep embodiment.",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "3pm \u2013 3:50pm",
+   "title": "From Insight to Embodiment",
+   "presenter": "Gregarious",
+   "blurb": "Lasting Transformation: Invoking psychedelics in community for sustainable life transformation",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "3pm \u2013 3:50pm",
+   "title": "Preventing Alzheimer\u2019s & Dementia",
+   "presenter": "Dr. Robert Love",
+   "blurb": "Current science on preventing and reversing Alzheimer's disease",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "4pm \u2013 4:50pm",
+   "title": "Cosmic Shamanic Sound Healing",
+   "presenter": "Humo Maya",
+   "blurb": "A magical sound journey that will take you deep within your multidimensional being to the mysterious infinite cosmos",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "4pm \u2013 4:50pm",
+   "title": "Neuroscience, Creativity and AI",
+   "presenter": "Dr. David Rock",
+   "blurb": "Technology changes fast. Humans don't. Expore how AI can truly make you smarter",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "5pm \u2013 6:30pm",
+   "title": "Know Thyself? A Sphinx Gate Immersive Ritual",
+   "presenter": "Mareesa Stertz",
+   "blurb": "Unlock the riddle within through movement, sound, presence, and connection.",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "5pm \u2013 5:50pm",
+   "title": "Psychedelics & Medicine Panel",
+   "presenter": "Dr. David Rock",
+   "blurb": "David Rock, Laura Dunn, Aneel Paulus, Anna Martirosyan, Valentin Somma, Jordanna Quinn, Tom Aarts, Andrea Aguilar + MC: Dr Love",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "Sunset",
+   "title": "Sharing of the Pachamama Prophecy",
+   "presenter": "The Pachahunai",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "8pm \u2013 9pm",
+   "title": "MindTravel Silent Disco Piano",
+   "presenter": "Murray Hidary",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Thursday 9/3",
+   "time": "9:30pm \u2013 10:30pm",
+   "title": "Burning Mantras",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "Sunrise",
+   "title": "Sound Bath and Cuddle Puddle",
+   "presenter": "Ivy Pike and Sarah Fearon",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "12pm \u2013 12:50pm",
+   "title": "Conscious Relationship Design: Beyond Polyamory & Monogamy",
+   "presenter": "Dena Rubanawitz",
+   "blurb": "A provocative exploration of how we can consciously design relationships around our authentic desires, boundaries, and values",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "1pm \u2013 1:50pm",
+   "title": "Beyond Small Talk: Authentic Relating Speed Dating",
+   "presenter": "Veronica Kaulinis",
+   "blurb": "Skip surface-level chatter and connect through curiosity, vulnerability, and presence. Guided prompts and one-on-one encounters",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "2pm \u2013 2:50pm",
+   "title": "Love, Fear & Power",
+   "presenter": "Annie Lalla",
+   "blurb": "Cutting edge skills to advance your humanity",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "3pm \u2013 3:50pm",
+   "title": "Mythical Movement",
+   "presenter": "IshStar",
+   "blurb": "Core conditioning and muscular isolation techniques for geometric activation and deeper musical embodiment.",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "3pm \u2013 3:50pm",
+   "title": "Crazy Love & Mature Relationships",
+   "presenter": "Adam Roa",
+   "blurb": "A poetic exploration of what crazy love teaches us and the pitfalls it hides along the way",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "4pm \u2013 4:50pm",
+   "title": "Soul Retrieval: Restore Your Life Force",
+   "presenter": "Don Sebastian Pauccar",
+   "blurb": "Restore wholeness, vitality, presence, and connection to your spirit with a powerful ancestral energy healing from a renowned Indigenous Q\u2019ero Shaman",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "4pm \u2013 4:50pm",
+   "title": "You Are The Architect",
+   "presenter": "Robert Edward Grant",
+   "blurb": "Remember who you are and why you are here",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "5pm \u2013 5:50pm",
+   "title": "Reiki Bondage",
+   "presenter": "Rev.Rue",
+   "blurb": "Exploring the somatic healing experience of surrender",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "5pm \u2013 5:50pm",
+   "title": "Telepathy Demonstration",
+   "presenter": "Jackie Rotman",
+   "blurb": "After 2 years of training, see adults demonstrate their telepathic powers. Yes, this is real...",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Friday 9/4",
+   "time": "Sunset",
+   "title": "Surprise Artist",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "11am \u2013 1pm",
+   "title": "Mystic Only Relaxation Space",
+   "venue": "MYSTIC TEMPLE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "12pm \u2013 12:50pm",
+   "title": "It Is Time: The Grand Playa Burner Call",
+   "presenter": "Cyberius Rex / Timothy Johnson - a digital being in an analog world",
+   "blurb": "A call to carry the 10 Principles beyond the Playa - and live them every day.",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "1pm \u2013 1:50pm",
+   "title": "Mother Nature is Pregnant. We are her it",
+   "presenter": "Henk Rogers",
+   "blurb": "Why are we here? We must make a backup of life, by settling on other planets.",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "2pm \u2013 2:50pm",
+   "title": "AI, Art, and the Future",
+   "presenter": "Eben Pagan",
+   "blurb": "Come explore the future of intelligence, creativity, and evolution",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "3pm \u2013 3:50pm",
+   "title": "Access Your Own Quantum Consciousness",
+   "presenter": "Wizard",
+   "blurb": "Learn to create rapid life-changing breakthroughs with extraordinary techniques.",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "4pm \u2013 4:30pm",
+   "title": "Closing Ceremony Kirtan",
+   "presenter": "Burning Mantra",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "4:30pm \u2013 5:30pm",
+   "title": "MYSTIC ONLY CLOSING CEREMONY",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Saturday 9/5",
+   "time": "7:30pm",
+   "title": "Mystic Flyer Experience departs for the Man Burn",
+   "venue": "THEATRE"
+  },
+  {
+   "day": "Sunday 9/6",
+   "time": "Sunrise",
+   "title": "Closing Ceremony + Fire Release",
+   "presenter": "Led by Oso Oso\u2019li Kawi Provencio & the Pachahunai",
+   "venue": "FIRE CIRCLE"
+  },
+  {
+   "day": "Sunday 9/6",
+   "time": "7pm",
+   "title": "Mystic Flyer Experience departs for the Temple Burn",
+   "venue": "THEATRE"
+  }
+ ]
+}

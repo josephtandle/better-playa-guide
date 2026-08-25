@@ -1,0 +1,13 @@
+{
+  "year": 2026,
+  "profile_dir": "./profile",
+  "_comment_profile_dir": "Directory holding your personal YAML profile. Keep it OUTSIDE this package if you plan to share the package.",
+  "whatsapp_db": null,
+  "_comment_whatsapp_db": "Optional absolute path to a WhatsApp message SQLite DB, read-only. Leave null if unused.",
+  "timezone": "America/Los_Angeles",
+  "default_window_minutes": 180,
+  "default_limit": 8,
+  "walk_ft_per_sec": 3.0,
+  "bike_ft_per_sec": 8.0,
+  "event_dates": ["2026-08-30","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06"]
+}

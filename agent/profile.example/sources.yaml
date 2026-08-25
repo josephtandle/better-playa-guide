@@ -1,0 +1,6 @@
+# Intelligence & Discovery Sources
+sources:
+  - id: "redacted@example.invalid"
+    type: "whatsapp_group"
+    label: "Example Playa Chat"
+    enabled: true

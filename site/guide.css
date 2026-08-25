@@ -1,0 +1,96 @@
+/* Better Playa Guide — Muse Cafe palette (from ../styles.css) */
+:root{
+  --rouge:#6d0813; --rouge-deep:#260407; --rouge-bright:#8f0e1b; --rose:#f2b9b6;
+  --paper:#fff3e5; --cream:#f8dfc7; --ink:#190d0b; --brass:#d8a54b; --smoke:#3a2b28;
+  --line:rgba(25,13,11,.14); --card:#fffaf2;
+  --sp-section:3.5rem; --sp-block:1.25rem; --sp-tight:.5rem;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 16px/1.55 Montserrat,system-ui,-apple-system,sans-serif;
+  padding:0 0 5rem;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:0 1.1rem}
+a{color:var(--rouge-bright);overflow-wrap:anywhere}
+code{overflow-wrap:anywhere;word-break:break-word}
+
+/* --- masthead --- */
+.top{background:var(--rouge-deep);color:var(--cream);padding:1.6rem 0 1.4rem}
+.top .wrap{display:flex;flex-direction:column;gap:.5rem}
+.kicker{font:400 .68rem/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)}
+h1{font:400 2.3rem/1 Italiana,Georgia,serif;margin:0;letter-spacing:.01em}
+.gift{font:600 italic 1.02rem/1.4 "Cormorant Garamond",Georgia,serif;color:var(--rose);margin:0}
+.mvp{font-size:.8rem;color:rgba(248,223,199,.72);margin:.2rem 0 0}
+nav.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.7rem}
+nav.tabs a{font:600 .7rem/1 Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--cream);text-decoration:none;border:1px solid rgba(216,165,75,.45);
+  border-radius:999px;padding:.5rem .8rem}
+nav.tabs a[aria-current]{background:var(--brass);border-color:var(--brass);color:var(--rouge-deep)}
+nav.tabs a:hover{border-color:var(--brass)}
+
+section{margin-top:var(--sp-section)}
+#results{margin-top:var(--sp-block)}
+section > * + *{margin-top:var(--sp-block)}
+section > h2 + *{margin-top:var(--sp-tight)}
+section:first-of-type{margin-top:var(--sp-block)}
+.doc section > h2{padding-top:var(--sp-block);border-top:1px solid var(--line)}
+h2{font:400 1.35rem/1.15 Italiana,Georgia,serif;margin:0;color:var(--rouge)}
+h3{font:600 .74rem/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--smoke);margin:0 0 .5rem}
+p{margin:0}
+.lede{font:600 italic 1.05rem/1.5 "Cormorant Garamond",Georgia,serif;color:var(--smoke)}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem}
+.steps{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.8rem}
+.step b{display:block;font:400 1.5rem/1 Italiana,serif;color:var(--brass);margin-bottom:.2rem}
+
+/* --- controls --- */
+.controls{position:sticky;top:0;z-index:9;background:var(--paper);
+  margin-top:var(--sp-block);border-top:1px solid var(--line);
+  padding:var(--sp-block) 0 .7rem;border-bottom:1px solid var(--line)}
+.row{display:flex;gap:.5rem;flex-wrap:wrap}
+input,select,button{font:400 1rem Montserrat,sans-serif;padding:.7rem .75rem;
+  border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);min-height:44px}
+input,select{flex:1;min-width:140px}
+input:focus,select:focus,button:focus-visible{outline:2px solid var(--brass);outline-offset:1px}
+.chips{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.5rem}
+.chip{font:600 .66rem/1 Montserrat,sans-serif;letter-spacing:.07em;text-transform:uppercase;
+  padding:.5rem .6rem;border-radius:999px;border:1px solid var(--line);background:#fff;
+  color:var(--smoke);cursor:pointer;min-height:34px}
+.chip[aria-pressed="true"]{background:var(--rouge);border-color:var(--rouge);color:var(--cream)}
+.count{font:600 .72rem/1 Montserrat,sans-serif;letter-spacing:.06em;color:var(--smoke);margin-top:.5rem}
+
+/* --- lists --- */
+ul.ev{list-style:none;margin:.8rem 0 0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+ul.ev li{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+  border-radius:0 8px 8px 0;padding:.75rem .85rem;display:flex;flex-direction:column;gap:.15rem}
+li.near{border-left-color:var(--rouge)}
+li.pin{border-left-color:var(--brass);background:#fff8ec}
+.ti{font:600 1.02rem/1.3 Montserrat,sans-serif}
+.meta{font:600 .76rem/1.4 Montserrat,sans-serif;color:var(--rouge-bright);font-variant-numeric:tabular-nums}
+.who{font:600 .86rem/1.3 Montserrat,sans-serif;color:var(--rouge)}
+.de{font-size:.86rem;color:var(--smoke)}
+.tagline{font:600 .6rem/1 Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  padding:.2rem .38rem;border-radius:3px;background:var(--cream);color:var(--smoke);margin-left:.35rem}
+.tagline.src{background:var(--brass);color:var(--rouge-deep)}
+
+/* --- buttons --- */
+.btn{display:inline-block;font:600 .72rem/1 Montserrat,sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;border-radius:999px;padding:.75rem 1.1rem;
+  border:1px solid var(--brass);color:var(--rouge);background:transparent;cursor:pointer;
+  transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--rouge);border-color:var(--rouge);color:var(--cream)}
+.btnrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem}
+
+footer{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.2rem;
+  font-size:.84rem;color:var(--smoke)}
+footer a{color:var(--rouge)}
+kbd{font:600 .8rem Montserrat,monospace;background:var(--cream);border:1px solid var(--line);
+  border-radius:3px;padding:.1rem .35rem}
+.toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);background:var(--rouge-deep);
+  color:var(--cream);padding:.7rem 1.1rem;border-radius:999px;font-size:.85rem;opacity:0;
+  pointer-events:none;transition:opacity .25s ease;z-index:50}
+.toast.on{opacity:1}
+@media(max-width:520px){:root{--sp-section:2.5rem;--sp-block:1rem}h1{font-size:1.95rem}.wrap{padding:0 .9rem}}

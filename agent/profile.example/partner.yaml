@@ -1,0 +1,13 @@
+# Partner Profile Configuration
+name: Playa Partner
+weight: 0.5
+
+tag_weights:
+  workshop: 5
+  wellness: 5
+  art: 4
+  food: 3
+
+genre_weights:
+  ambient: 5
+  downtempo: 4

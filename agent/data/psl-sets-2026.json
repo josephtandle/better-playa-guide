@@ -1,0 +1,2825 @@
+[
+  {
+    "id": "psl-1",
+    "title": "The Arrival",
+    "type": "Music/Party",
+    "camp": "Playground",
+    "location": "2 & C",
+    "address": "2:00 & C",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "The Arrival",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Calussa"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Doozie"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Beltran"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Carlita"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "ANNA"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Vintage Culture"
+      }
+    ],
+    "camp_matched": "Playground",
+    "camp_uid": "a1XVI00000FM7qD2AT",
+    "presenter": "Calussa, Doozie, Beltran, Carlita, ANNA, Vintage Culture",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-2",
+    "title": "Halo Dust",
+    "type": "Music/Party",
+    "camp": "Playground",
+    "location": "2 & C",
+    "address": "2:00 & C",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Halo Dust",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Darco"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Rafael"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "OMRI."
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Ahmed Spins"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Deer Jade"
+      }
+    ],
+    "camp_matched": "Playground",
+    "camp_uid": "a1XVI00000FM7qD2AT",
+    "presenter": "Darco, Rafael, OMRI., Ahmed Spins, Deer Jade",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-3",
+    "title": "Afrika",
+    "type": "Music/Party",
+    "camp": "Playground",
+    "location": "2 & C",
+    "address": "2:00 & C",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Afrika",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Sparrow",
+          "Arymé"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Gordo",
+          "Marten Lou"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Maxi Meraki"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Arodes"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Mahmut Orhan",
+          "Francis Mercier"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Goldfish"
+      }
+    ],
+    "camp_matched": "Playground",
+    "camp_uid": "a1XVI00000FM7qD2AT",
+    "presenter": "Sparrow, Arymé, Gordo, Marten Lou, Maxi Meraki, Arodes, Mahmut Orhan, Francis Mercier, Goldfish",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-4",
+    "title": "We Are Live",
+    "type": "Music/Party",
+    "camp": "Playground",
+    "location": "2 & C",
+    "address": "2:00 & C",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "We Are Live",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Double Touch"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Orbit"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Natascha Polké"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Jan Blomqvist"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Santiago Garcia"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Xinobi"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Parra for Cuva"
+      }
+    ],
+    "camp_matched": "Playground",
+    "camp_uid": "a1XVI00000FM7qD2AT",
+    "presenter": "Double Touch, Orbit, Natascha Polké, Jan Blomqvist, Santiago Garcia, Xinobi, Parra for Cuva",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-5",
+    "title": "Man Burns",
+    "type": "Music/Party",
+    "camp": "Playground",
+    "location": "2 & C",
+    "address": "2:00 & C",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Man Burns",
+    "occurrences": [
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Igor Marijuan"
+      },
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Lee Burridge"
+      },
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Rampue"
+      },
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Enamour"
+      },
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Bender"
+      }
+    ],
+    "camp_matched": "Playground",
+    "camp_uid": "a1XVI00000FM7qD2AT",
+    "presenter": "Igor Marijuan, Lee Burridge, Rampue, Enamour, Bender",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-6",
+    "title": "First Favela artcar outing",
+    "type": "Music/Party",
+    "camp": "Favela",
+    "location": "Roaming art car",
+    "address": "9:45 & I",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "First Favela artcar outing",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Mary Mesk",
+          "Du Serena"
+        ]
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Ines Rau"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Ruback"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Gabe"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Greggio"
+      }
+    ],
+    "camp_matched": "Favela Culture",
+    "camp_uid": "a1XVI00000FP9M12AL",
+    "presenter": "Mary Mesk, Du Serena, Ines Rau, Ruback, Gabe, Greggio",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "camp_match_confidence": "medium",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-7",
+    "title": "Favela Artcar + Nova Heaven + Bipolar Express",
+    "type": "Music/Party",
+    "camp": "Favela",
+    "location": "Roaming art car",
+    "address": "9:45 & I",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Favela Artcar + Nova Heaven + Bipolar Express",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Mary Mesk",
+          "Du Serena"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Doozie"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Vintage Culture",
+          "OMRI."
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "ANNA"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Infected Mushroom"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Wrecked Machines",
+          "Vermont"
+        ]
+      }
+    ],
+    "camp_matched": "Favela Culture",
+    "camp_uid": "a1XVI00000FP9M12AL",
+    "presenter": "Mary Mesk, Du Serena, Doozie, Vintage Culture, OMRI., ANNA, Infected Mushroom, Wrecked Machines, Vermont",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "camp_match_confidence": "medium",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-8",
+    "title": "Favela Baile",
+    "type": "Music/Party",
+    "camp": "Favela",
+    "location": "Roaming art car",
+    "address": "9:45 & I",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Favela Baile",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Xinobi"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Parra for Cuva"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Jackson",
+          "ANNA"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Joezi"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Rod Brito"
+      }
+    ],
+    "camp_matched": "Favela Culture",
+    "camp_uid": "a1XVI00000FP9M12AL",
+    "presenter": "Xinobi, Parra for Cuva, Jackson, ANNA, Joezi, Rod Brito",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "camp_match_confidence": "medium",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-9",
+    "title": "Ascension — 6:29 Memorian Celebration (Nova Heaven)",
+    "type": "Music/Party",
+    "camp": "Favela",
+    "location": "Roaming art car",
+    "address": "9:45 & I",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Ascension — 6:29 Memorian Celebration (Nova Heaven)",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "YØU&I"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Nevos"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Clüb de Combat"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Kimonos"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Rafael"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "06:29 Ceremony"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Sasi",
+          "Captain Hook"
+        ]
+      }
+    ],
+    "camp_matched": "Favela Culture",
+    "camp_uid": "a1XVI00000FP9M12AL",
+    "presenter": "YØU&I, Nevos, Clüb de Combat, Kimonos, Rafael, 06:29 Ceremony, Sasi, Captain Hook",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "camp_match_confidence": "medium",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-10",
+    "title": "Man Burn",
+    "type": "Music/Party",
+    "camp": "Favela",
+    "location": "Roaming art car",
+    "address": "9:45 & I",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Man Burn",
+    "occurrences": [
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Orbit"
+      }
+    ],
+    "camp_matched": "Favela Culture",
+    "camp_uid": "a1XVI00000FP9M12AL",
+    "presenter": "Orbit",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "camp_match_confidence": "medium",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-11",
+    "title": "Axis of Opulence",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Axis of Opulence",
+    "occurrences": [
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Opening Ceremony"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T21:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "ENMI"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T22:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Syd Gris"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T23:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Artemistique"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T00:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Maddy O'Neal"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T01:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Slander"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T02:45:00-07:00",
+        "end": "2026-09-01T03:45:00-07:00",
+        "dur_min": 60,
+        "who": "Casmalia"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Opening Ceremony, ENMI, Syd Gris, Artemistique, Maddy O'Neal, Slander, Casmalia",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-12",
+    "title": "Energy Mundi",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Energy Mundi",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Thiccboi Drewski"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T22:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Just B"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T23:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Infected Mushroom"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T01:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Infected Mushroom"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T02:45:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Speaker Honey"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T04:00:00-07:00",
+        "end": "2026-09-02T05:00:00-07:00",
+        "dur_min": 60,
+        "who": "DJ Icon"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Thiccboi Drewski, Just B, Infected Mushroom, Speaker Honey, DJ Icon",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-13",
+    "title": "Sacred Dance — The White Party",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Sacred Dance — The White Party",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T20:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Lyss"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Offskee"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T22:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Syd Gris"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T23:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Doozie"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T00:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Vintage Culture"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T02:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Beltran"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T04:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Grammar"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T05:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Crispy"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T06:00:00-07:00",
+        "end": "2026-09-03T07:30:00-07:00",
+        "dur_min": 90,
+        "who": "Madison Orange"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Lyss, Offskee, Syd Gris, Doozie, Vintage Culture, Beltran, Grammar, Crispy, Madison Orange",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-14",
+    "title": "Golden Hour — sunset party",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Golden Hour — sunset party",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T17:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Mr Bounceman"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T18:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Fleetmac Wood"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T20:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Don Gentry"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Mr Bounceman, Fleetmac Wood, Don Gentry",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-15",
+    "title": "Playa Pure",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Playa Pure",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Zenti"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T22:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Kazami"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T23:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Spencer Brown"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T00:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Nora En Pure"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T02:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Marten Lou"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T04:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Admiral"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T05:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Fiers"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T06:00:00-07:00",
+        "end": "2026-09-04T07:30:00-07:00",
+        "dur_min": 90,
+        "who": "Obie Fernandez"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Zenti, Kazami, Spencer Brown, Nora En Pure, Marten Lou, Admiral, Fiers, Obie Fernandez",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-16",
+    "title": "Golden Hour — sunset party",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Golden Hour — sunset party",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T16:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Nadav Vee"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T17:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Clüb de Combat"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T18:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Rafael"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T20:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Sage Ferris"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Nadav Vee, Clüb de Combat, Rafael, Sage Ferris",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-17",
+    "title": "Cosmic Dance",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Cosmic Dance",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Josh Forster"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T22:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Mobâd"
+      },
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T23:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Sebastian Konrad"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T00:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Maxi Meraki"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T01:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Mahmut Orhan",
+          "Arodes"
+        ]
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T03:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "DJ Icon"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T04:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Ashley Ames"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T05:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Azriel"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T06:00:00-07:00",
+        "end": "2026-09-05T07:30:00-07:00",
+        "dur_min": 90,
+        "who": [
+          "Major Trouble",
+          "Nisene"
+        ]
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Josh Forster, Mobâd, Sebastian Konrad, Maxi Meraki, Mahmut Orhan, Arodes, DJ Icon, Ashley Ames, Azriel, Major Trouble, Nisene",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-18",
+    "title": "Still Burning",
+    "type": "Music/Party",
+    "camp": "Opulent Temple",
+    "location": "10 & Esplanade",
+    "address": "10:00 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Still Burning",
+    "occurrences": [
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T22:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Emanate"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T23:45:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Vanjee"
+      },
+      {
+        "date": "2026-09-06",
+        "start": "2026-09-06T01:15:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Alex Amaro"
+      },
+      {
+        "date": "2026-09-06",
+        "start": "2026-09-06T02:15:00-07:00",
+        "end": "2026-09-06T03:15:00-07:00",
+        "dur_min": 60,
+        "who": "Richard Mixon"
+      }
+    ],
+    "camp_matched": "Opulent Temple",
+    "camp_uid": "a1XVI00000FMSoD2AX",
+    "presenter": "Emanate, Vanjee, Alex Amaro, Richard Mixon",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-19",
+    "title": "Dusi Bubbly Rosé · French Brie",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Dusi Bubbly Rosé · French Brie",
+    "occurrences": [
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Johan"
+      },
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Kalypso"
+      },
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Icarus Kid"
+      },
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Jerzy del mar"
+      },
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Kirill"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "Johan, Kalypso, Icarus Kid, Jerzy del mar, Kirill",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-20",
+    "title": "Ser Chardonnay · Comté",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Ser Chardonnay · Comté",
+    "occurrences": [
+      {
+        "date": "2026-08-31",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "MoonLust"
+      },
+      {
+        "date": "2026-08-31",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "7cy"
+      },
+      {
+        "date": "2026-08-31",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Neon Dots!"
+      },
+      {
+        "date": "2026-08-31",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Douich"
+      },
+      {
+        "date": "2026-08-31",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Brian Overkill"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "MoonLust, 7cy, Neon Dots!, Douich, Brian Overkill",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-21",
+    "title": "Dusi Bubbly Rosé · Kunik Triple Crème",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Dusi Bubbly Rosé · Kunik Triple Crème",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Talmirage",
+          "Boussa Boussa"
+        ]
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Oliver Koletzki",
+          "Frida Darko"
+        ]
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "blue Dietrich"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Seth Schwarz & Tribe"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "Talmirage, Boussa Boussa, Oliver Koletzki, Frida Darko, blue Dietrich, Seth Schwarz & Tribe",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-22",
+    "title": "Bubbly Red · Gorgonzola Dolce",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Bubbly Red · Gorgonzola Dolce",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Magisus",
+          "EMILIO"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Grand Love"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Jiri Joa"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "DJ Strangelove"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "Magisus, EMILIO, Grand Love, Jiri Joa, DJ Strangelove",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-23",
+    "title": "Lepe White Blend · MitiCana de Cabra Goat",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Lepe White Blend · MitiCana de Cabra Goat",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Diego Palomar"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Carmel"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Horizon"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "LeCrew"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "YØU&I"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "Diego Palomar, Carmel, Horizon, LeCrew, YØU&I",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-24",
+    "title": "Alta Orsa Pinot Noir · Tête de Moine",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Alta Orsa Pinot Noir · Tête de Moine",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Gucci Jaggers"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Eduardo Castillo"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Shalman"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Reza and friends"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "Gucci Jaggers, Eduardo Castillo, Shalman, Reza and friends",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-25",
+    "title": "Surprise Wine · Cheese Farandole",
+    "type": "Music/Party",
+    "camp": "Treble Makers",
+    "location": "2:30 & Esplanade",
+    "address": "2:30 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Surprise Wine · Cheese Farandole",
+    "occurrences": [
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "H only"
+      },
+      {
+        "date": "2026-09-05",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Nickie Sol"
+      }
+    ],
+    "camp_matched": "Treble Makers",
+    "camp_uid": "a1XVI00000FI8w92AD",
+    "presenter": "H only, Nickie Sol",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-26",
+    "title": "Archila, Andrea Castells, Avi Snow, Igor Marijuan, Kike Roldan, Lcore, Natipitch, Peter Guzman, Shushu",
+    "type": "Music/Party",
+    "camp": "Horizon",
+    "location": "8:45 & Esplanade",
+    "address": "8:45 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Archila"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Andrea Castells"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Avi Snow"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Igor Marijuan"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Kike Roldan"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Lcore"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Natipitch"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Peter Guzman"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Shushu"
+      }
+    ],
+    "camp_matched": "Horizon",
+    "camp_uid": "a1XVI00000FMhAX2A1",
+    "presenter": "Archila, Andrea Castells, Avi Snow, Igor Marijuan, Kike Roldan, Lcore, Natipitch, Peter Guzman, Shushu",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-27",
+    "title": "Ariel Zadok, Benjamin, Darco, Joezi, Mishell, Mosko & Oi, Nevos, Rafael, Tom & Collins",
+    "type": "Music/Party",
+    "camp": "Horizon",
+    "location": "8:45 & Esplanade",
+    "address": "8:45 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Ariel Zadok"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Benjamin"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Darco"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Joezi"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Mishell"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Mosko & Oi"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Nevos"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Rafael"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Tom & Collins"
+      }
+    ],
+    "camp_matched": "Horizon",
+    "camp_uid": "a1XVI00000FMhAX2A1",
+    "presenter": "Ariel Zadok, Benjamin, Darco, Joezi, Mishell, Mosko & Oi, Nevos, Rafael, Tom & Collins",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-28",
+    "title": "Calussa, Deiv Schon, Diego Terran, Gaeb, Jason Rault, Matony, Melissa Dust, Nadav Vee, Sagmo, Sam Baroni, Vivi Santana",
+    "type": "Music/Party",
+    "camp": "Horizon",
+    "location": "8:45 & Esplanade",
+    "address": "8:45 & Esp",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Calussa"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Deiv Schon"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Diego Terran"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Gaeb"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Jason Rault"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Matony"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Melissa Dust"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Nadav Vee"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Sagmo"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Sam Baroni"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Vivi Santana"
+      }
+    ],
+    "camp_matched": "Horizon",
+    "camp_uid": "a1XVI00000FMhAX2A1",
+    "presenter": "Calussa, Deiv Schon, Diego Terran, Gaeb, Jason Rault, Matony, Melissa Dust, Nadav Vee, Sagmo, Sam Baroni, Vivi Santana",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-29",
+    "title": "Let There Be Light",
+    "type": "Music/Party",
+    "camp": "Nova Heaven",
+    "location": "Deep playa (the DMZ)",
+    "address": "9:45 & C",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Let There Be Light",
+    "occurrences": [
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Opening Ceremony"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T21:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Let There Be Light"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T22:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Sasi"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T23:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Ashley Fitelson"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T01:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Gabe"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T02:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Enamour"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T04:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Max Styler",
+          "Mishell"
+        ]
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T06:30:00-07:00",
+        "end": "2026-09-01T08:00:00-07:00",
+        "dur_min": 90,
+        "who": [
+          "Darco",
+          "Luch"
+        ]
+      }
+    ],
+    "camp_matched": "Nova Heaven",
+    "camp_uid": "a1XVI00000FQOin2AH",
+    "presenter": "Opening Ceremony, Let There Be Light, Sasi, Ashley Fitelson, Gabe, Enamour, Max Styler, Mishell, Darco, Luch",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-30",
+    "title": "Philou, Roy Rosenfeld, Vanjee, LP Giobbi, Rafael",
+    "type": "Music/Party",
+    "camp": "Nova Heaven",
+    "location": "Deep playa (the DMZ)",
+    "address": "9:45 & C",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T23:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Philou"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T00:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Roy Rosenfeld",
+          "Vanjee"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T02:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "LP Giobbi"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T04:00:00-07:00",
+        "end": "2026-09-02T08:00:00-07:00",
+        "dur_min": 240,
+        "who": "Rafael"
+      }
+    ],
+    "camp_matched": "Nova Heaven",
+    "camp_uid": "a1XVI00000FQOin2AH",
+    "presenter": "Philou, Roy Rosenfeld, Vanjee, LP Giobbi, Rafael",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-31",
+    "title": "Mary Mesk, Du Serena, Doozie, Vintage Culture, Omri., Anna, Infected Mushroom, Wrecked Machine, Vermont",
+    "type": "Music/Party",
+    "camp": "Nova Heaven",
+    "location": "Deep playa (the DMZ)",
+    "address": "9:45 & C",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T23:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Mary Mesk",
+          "Du Serena"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T01:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Doozie"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T02:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Vintage Culture",
+          "Omri."
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T04:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Anna"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T05:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Infected Mushroom"
+      },
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T07:00:00-07:00",
+        "end": "2026-09-03T08:30:00-07:00",
+        "dur_min": 90,
+        "who": [
+          "Wrecked Machine",
+          "Vermont"
+        ]
+      }
+    ],
+    "camp_matched": "Nova Heaven",
+    "camp_uid": "a1XVI00000FQOin2AH",
+    "presenter": "Mary Mesk, Du Serena, Doozie, Vintage Culture, Omri., Anna, Infected Mushroom, Wrecked Machine, Vermont",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-32",
+    "title": "YØU&I, Nevos, Club de Combat, Kimonos, Rafael, 6:29 Ceremony, Sasi, Captain Hook",
+    "type": "Music/Party",
+    "camp": "Nova Heaven",
+    "location": "Deep playa (the DMZ)",
+    "address": "9:45 & C",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T23:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "YØU&I"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T00:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Nevos"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T01:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Club de Combat"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T03:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Kimonos"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T04:30:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "Rafael"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T06:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "6:29 Ceremony"
+      },
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T06:29:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Sasi",
+          "Captain Hook"
+        ]
+      }
+    ],
+    "camp_matched": "Nova Heaven",
+    "camp_uid": "a1XVI00000FQOin2AH",
+    "presenter": "YØU&I, Nevos, Club de Combat, Kimonos, Rafael, 6:29 Ceremony, Sasi, Captain Hook",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-33",
+    "title": "Sunrise — Robot Heart x Solar Punks, at 2 & K in the solar fields",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Sunrise — Robot Heart x Solar Punks, at 2 & K in the solar fields",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Miluhska"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Madota"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Aline Brooklyn"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Jan Blomqvist"
+      },
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "OMRI."
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Miluhska, Madota, Aline Brooklyn, Jan Blomqvist, OMRI.",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-34",
+    "title": "Sunset — Temple Procession, in memory of Nico Stojan and Phillip Jung",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Sunset — Temple Procession, in memory of Nico Stojan and Phillip Jung",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Holmar",
+          "Gunita"
+        ]
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Holmar, Gunita",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-35",
+    "title": "Into sunrise — Maxa Tie-Up, in front of “Eiffela Broken Dreams”",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Into sunrise — Maxa Tie-Up, in front of “Eiffela Broken Dreams”",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Alok"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Max Styler"
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Deer Jade",
+          "LP Giobbi"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Michael Bibi",
+          "Franky Rizardo"
+        ]
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Alok, Max Styler, Deer Jade, LP Giobbi, Michael Bibi, Franky Rizardo",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-36",
+    "title": "Evening — Apotheneum x Robot Heart, live music and visual art",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Evening — Apotheneum x Robot Heart, live music and visual art",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T19:30:00-07:00",
+        "end": "2026-09-02T21:00:00-07:00",
+        "dur_min": 90,
+        "who": [
+          "Parra for Cuva",
+          "Orbit"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T21:00:00-07:00",
+        "end": "2026-09-02T22:30:00-07:00",
+        "dur_min": 90,
+        "who": "Jo.Ke"
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Parra for Cuva, Orbit, Jo.Ke",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-37",
+    "title": "Day into sunset — Art Day and the art tour",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Day into sunset — Art Day and the art tour",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "June Robbins"
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": [
+          "Bilal",
+          "Rebolledo"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Major Lazer"
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "June Robbins, Bilal, Rebolledo, Major Lazer",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-38",
+    "title": "Morning — the Danny T Marathon, with Gothic Folly",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Morning — the Danny T Marathon, with Gothic Folly",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Danny Tenaglia"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "John Summit"
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Danny Tenaglia, John Summit",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-39",
+    "title": "Evening into night — the Titanic Burn",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music"
+    ],
+    "description": "Evening into night — the Titanic Burn",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Monolink"
+      },
+      {
+        "date": "2026-09-04",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Miguelle & Tons"
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Monolink, Miguelle & Tons",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-40",
+    "title": "Amine K, Bilaliwood, David Triana, Double Touch, Eduardo Castillo, Jolie, Juni Rios & G, Lee Burridge, Lost Desert, Milliheika, Natascha Polké, OVRFLW, Piff Gigi, Rodriguez Jr., Shaun Reeves, Tomas Station, Topper",
+    "type": "Music/Party",
+    "camp": "Robot Heart",
+    "location": "Roaming bus, deep playa",
+    "address": null,
+    "address_source": "psl-unlocated",
+    "tags": [
+      "music",
+      "running-order-only"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Amine K",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Bilaliwood",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "David Triana",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Double Touch",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Eduardo Castillo",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Jolie",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Juni Rios & G",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Lee Burridge",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Lost Desert",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Milliheika",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Natascha Polké",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "OVRFLW",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Piff Gigi",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Rodriguez Jr.",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Shaun Reeves",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Tomas Station",
+        "tags": [
+          "running-order-only"
+        ]
+      },
+      {
+        "date": null,
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Topper",
+        "tags": [
+          "running-order-only"
+        ]
+      }
+    ],
+    "camp_matched": null,
+    "camp_uid": null,
+    "presenter": "Amine K, Bilaliwood, David Triana, Double Touch, Eduardo Castillo, Jolie, Juni Rios & G, Lee Burridge, Lost Desert, Milliheika, Natascha Polké, OVRFLW, Piff Gigi, Rodriguez Jr., Shaun Reeves, Tomas Station, Topper",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers",
+    "presentation": "running-order"
+  },
+  {
+    "id": "psl-41",
+    "title": "Ouroboros",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Ouroboros",
+    "occurrences": [
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Glo & Tash"
+      },
+      {
+        "date": "2026-08-30",
+        "start": null,
+        "end": null,
+        "dur_min": null,
+        "who": "Tantra + Sound"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "Glo & Tash, Tantra + Sound",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-42",
+    "title": "Immersive music experience",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Immersive music experience",
+    "occurrences": [
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T19:30:00-07:00",
+        "end": "2026-08-31T21:00:00-07:00",
+        "dur_min": 90,
+        "who": "Syrcles"
+      },
+      {
+        "date": "2026-08-31",
+        "start": "2026-08-31T22:00:00-07:00",
+        "end": "2026-08-31T23:30:00-07:00",
+        "dur_min": 90,
+        "who": "Syrcles"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "Syrcles",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-43",
+    "title": "BiPolar Express",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "BiPolar Express",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T19:30:00-07:00",
+        "end": "2026-09-01T21:00:00-07:00",
+        "dur_min": 90,
+        "who": "Double Touch"
+      },
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T21:30:00-07:00",
+        "end": "2026-09-01T23:00:00-07:00",
+        "dur_min": 90,
+        "who": "Natipitch"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "Double Touch, Natipitch",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-44",
+    "title": "Robot Heart Collab",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Robot Heart Collab",
+    "occurrences": [
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T19:30:00-07:00",
+        "end": "2026-09-02T21:00:00-07:00",
+        "dur_min": 90,
+        "who": "Parra for Cuva"
+      },
+      {
+        "date": "2026-09-02",
+        "start": "2026-09-02T21:00:00-07:00",
+        "end": "2026-09-02T22:30:00-07:00",
+        "dur_min": 90,
+        "who": "Jo.Ke"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "Parra for Cuva, Jo.Ke",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-45",
+    "title": "FOSS Residency",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "FOSS Residency",
+    "occurrences": [
+      {
+        "date": "2026-09-03",
+        "start": "2026-09-03T22:00:00-07:00",
+        "end": "2026-09-04T06:00:00-07:00",
+        "dur_min": 480,
+        "who": "FOSS"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "FOSS",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-46",
+    "title": "Midnight Sun",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "Midnight Sun",
+    "occurrences": [
+      {
+        "date": "2026-09-04",
+        "start": "2026-09-04T23:00:00-07:00",
+        "end": "2026-09-05T00:30:00-07:00",
+        "dur_min": 90,
+        "who": "Häana feat. Metamorphosis Ballet"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "Häana feat. Metamorphosis Ballet",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-47",
+    "title": "Alex Cruz, Santiago Garcia, Natipitch",
+    "type": "Music/Party",
+    "camp": "Apotheneum",
+    "location": "The cube",
+    "address": "6:45 & D",
+    "address_source": "camp-directory",
+    "tags": [
+      "music"
+    ],
+    "description": "",
+    "occurrences": [
+      {
+        "date": "2026-09-05",
+        "start": "2026-09-05T23:30:00-07:00",
+        "end": "2026-09-06T00:30:00-07:00",
+        "dur_min": 60,
+        "who": "Alex Cruz"
+      },
+      {
+        "date": "2026-09-06",
+        "start": "2026-09-06T00:30:00-07:00",
+        "end": "2026-09-06T01:30:00-07:00",
+        "dur_min": 60,
+        "who": "Santiago Garcia"
+      },
+      {
+        "date": "2026-09-06",
+        "start": "2026-09-06T01:30:00-07:00",
+        "end": "2026-09-06T02:30:00-07:00",
+        "dur_min": 60,
+        "who": "Natipitch"
+      }
+    ],
+    "camp_matched": "Apotheneum",
+    "camp_uid": "a1XVI00000FIZjR2AX",
+    "presenter": "Alex Cruz, Santiago Garcia, Natipitch",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  },
+  {
+    "id": "psl-48",
+    "title": "Dust on with the CTO",
+    "type": "Music/Party",
+    "camp": "HOTD",
+    "location": "5:30 & A",
+    "address": "5:30 & A",
+    "address_source": "psl",
+    "tags": [
+      "music"
+    ],
+    "description": "Dust on with the CTO",
+    "occurrences": [
+      {
+        "date": "2026-09-01",
+        "start": "2026-09-01T21:00:00-07:00",
+        "end": null,
+        "dur_min": null,
+        "who": "DJ CTO"
+      }
+    ],
+    "camp_matched": "Hair of the Dog (HOTD)",
+    "camp_uid": "a1XVI00000FLE492AH",
+    "presenter": "DJ CTO",
+    "source": "playa-set-library",
+    "source_url": "https://playasetlibrary.com/",
+    "source_credit": "Playa Set Library, hand-maintained by its author from Instagram flyers"
+  }
+]

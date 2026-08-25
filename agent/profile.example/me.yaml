@@ -1,0 +1,24 @@
+# Personal Profile Configuration
+name: Dust Stumper
+home:
+  camp: Camp Curiosity
+  address: 7:30 & E
+  note: Look for the glowing flamingo sign
+
+tag_weights:
+  food: 4
+  drink: 3
+  party: 5
+  music: 5
+  workshop: 3
+  art: 4
+
+genre_weights:
+  house: 5
+  techno: 4
+  ambient: 3
+
+avoid_tags:
+  - adult
+
+max_walk_minutes: 30

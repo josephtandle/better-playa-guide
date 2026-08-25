@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Map: Better Playa Guide</title>
+<meta name="description" content="Every Burning Man 2026 event, searchable by where you're standing. Works with no signal. A playa gift from Joe Che at Muse Cafe.">
+<meta property="og:title" content="Better Playa Guide">
+<meta property="og:description" content="3,875 Burning Man 2026 events. Type where you are, see what's near. Works offline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guide.musecafe.vip">
+<meta name="theme-color" content="#260407">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/guide/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <p class="kicker">Black Rock City · 30 Aug – 7 Sep 2026</p>
+  <h1>Better Playa Guide</h1>
+  <p class="gift">A playa gift from Joe Che at Muse Cafe · 8:15 &amp; Eternal</p>
+  <p class="mvp">A quick, experimental MVP. Built in a few days, given away. Improve it: it's open source.</p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find something</a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/how-it-was-made" data-tab="made">How it was made</a>
+    <a href="/guide/contribute" data-tab="contribute">Contribute</a>
+  </nav>
+</div></header>
+<main class="wrap">
+<section>
+  <h2>The city</h2>
+  <p class="lede">Black Rock City drawn from Burning Man's own 2026 survey data. Pinch to zoom, drag to pan.</p>
+  <div class="panel" style="padding:.6rem">
+    <div class="row" style="margin-bottom:.5rem">
+      <input id="loc" type="text" placeholder="where you are, e.g. 7:30 &amp; E" autocomplete="off">
+      <select id="mode">
+        <option value="3">walking</option><option value="8">bike</option>
+        <option value="12" selected>ebike</option>
+      </select>
+    </div>
+    <div id="mapbox" style="width:100%;aspect-ratio:1/1;background:#fffaf2;border-radius:8px;overflow:hidden;touch-action:none"></div>
+    <p style="font-size:.8rem;color:var(--smoke);margin:.5rem 0 0">
+      <span style="color:var(--rouge);font-weight:600">●</span> you ·
+      <span style="color:var(--brass);font-weight:600">●</span> landmarks ·
+      the ring roads are Esplanade through Kundalini (A–K), the spokes are clock positions.
+    </p>
+  </div>
+</section>
+<section>
+  <h2>Reading a playa address</h2>
+  <p><kbd>7:30 &amp; E</kbd> means the spoke at 7:30 on the clock, out at the fifth ring road. The Man sits at the
+  centre. 12:00 points to the top of the map, 6:00 is Center Camp. Rings go <strong>Esplanade, Ararat, Bodhi,
+  Ceiba, Delphi, Eternal, Fulcrum, Great Oak, Heiau, Iroko, Jiba, Kundalini</strong>: so "E" is Eternal.</p>
+  <p>Camps often write the street's <em>name</em> rather than its letter: "9:30 &amp; Bodhi" is 9:30 &amp; B.</p>
+</section>
+</main>
+<footer class="wrap">
+  <p><strong>Made by Joe Che</strong> at MUSE Café (8:15 &amp; Eternal) · say hi on Instagram
+     <a href="https://instagram.com/joe.che.official" rel="noopener">@joe.che.official</a></p>
+  <p>Open source, MIT. Fork it, fix it, make it better:
+     <a href="https://github.com/josephtandle/better-playa-guide" rel="noopener">github.com/josephtandle/better-playa-guide</a></p>
+  <p>Event data from Burning Man's public listings, plus camp websites and Instagram posts the official
+     listings leave out. Camp-authored times change on playa: verify on the day. Not affiliated with
+     Burning Man Project.</p>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="/guide/data.js"></script>
+<script src="/guide/guide.js"></script>
+<script src="/guide/map.js"></script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){
+  navigator.serviceWorker.register('/guide/sw.js',{scope:'/guide/'}).catch(function(){});
+});}
+</script>
+</body></html>

@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contribute: Better Playa Guide</title>
+<meta name="description" content="Every Burning Man 2026 event, searchable by where you're standing. Works with no signal. A playa gift from Joe Che at Muse Cafe.">
+<meta property="og:title" content="Better Playa Guide">
+<meta property="og:description" content="3,875 Burning Man 2026 events. Type where you are, see what's near. Works offline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guide.musecafe.vip">
+<meta name="theme-color" content="#260407">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/guide/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <p class="kicker">Black Rock City · 30 Aug – 7 Sep 2026</p>
+  <h1>Better Playa Guide</h1>
+  <p class="gift">A playa gift from Joe Che at Muse Cafe · 8:15 &amp; Eternal</p>
+  <p class="mvp">A quick, experimental MVP. Built in a few days, given away. Improve it: it's open source.</p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find something</a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/how-it-was-made" data-tab="made">How it was made</a>
+    <a href="/guide/contribute" data-tab="contribute">Contribute</a>
+  </nav>
+</div></header>
+<main class="wrap doc">
+<section>
+  <h2>Make it better</h2>
+  <p class="lede">This is open source and deliberately unfinished. The most useful thing you can give it is a schedule or correction the official guide lacks.</p>
+
+  <div class="panel">
+    <h3>How a submission works</h3>
+    <p>When you click any option below, it creates a pre-filled GitHub issue. Someone folds the submission into the dataset, and the page updates for everyone on the next build.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Ways to contribute</h2>
+
+  <div class="panel" style="margin-bottom:.7rem">
+    <h3>Submit your camp's official schedule or guide</h3>
+    <p>Screenshot, PDF, photo of the whiteboard: whatever you have. Drag it into the issue so it gets read and added, credited to your camp. This is the single highest-value thing anyone can contribute.</p>
+    <div class="btnrow">
+      <a class="btn solid" id="b-schedule" href="#" rel="noopener">Submit our camp's schedule</a>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:.7rem">
+    <h3>Submit a camp's Instagram</h3>
+    <p>Most camps publish their real programme on Instagram and nowhere else. Share the handle so it goes on the watch list to be scraped next time.</p>
+    <div class="btnrow">
+      <a class="btn" id="b-ig" href="#" rel="noopener">Add a camp Instagram</a>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:.7rem">
+    <h3>Report a wrong time or address</h3>
+    <p>Spotted a wrong time, a wrong address, or a camp that moved? Report the fix so we can update it.</p>
+    <div class="btnrow">
+      <a class="btn" id="b-fix" href="#" rel="noopener">Report wrong time or address</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Share a link or a screenshot</h3>
+    <p>Found an off-book party, an art car schedule, or a tool other burners should know about? Pass it along.</p>
+    <div class="btnrow">
+      <a class="btn" id="b-link" href="#" rel="noopener">Share a link or screenshot</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Run it yourself</h2>
+  <p>The guide is the friendly face of a recommendation engine that knows your taste. Point it at your own preferences: your camp, how you get around, what you're into, who you want to see, and it ranks the whole programme for you instead of everyone.</p>
+  <div class="panel" style="font-family:Montserrat,monospace;font-size:.85rem;overflow-x:auto">
+    <code>git clone https://github.com/josephtandle/better-playa-guide<br>
+    cd better-playa-guide &amp;&amp; npm install<br>
+    cp -r profile.example profile&nbsp;&nbsp;<span style="color:var(--smoke)"># then edit it</span><br>
+    node src/index.js now --from "7:30 &amp; E"</code>
+  </div>
+  <p style="font-size:.86rem;color:var(--smoke);margin-top:.5rem">It also drops into an AI assistant as an agent: ask it "what's on near me in the next two hours" and it answers from your own preferences. There's a Telegram bot in there too, so you can text it from the playa. Bring your own keys: nothing phones home to us.</p>
+  <div class="btnrow">
+    <a class="btn solid" href="https://github.com/josephtandle/better-playa-guide" rel="noopener">Get it on GitHub</a>
+  </div>
+</section>
+
+<section>
+  <h2>What we'd love most</h2>
+  <ul>
+    <li><strong>Camp schedule images</strong>: the single biggest gap. The official listings simply don't have them.</li>
+    <li><strong>Camp Instagram handles</strong>: we have 211, there are 1,217 camps.</li>
+    <li><strong>Speaker names</strong>: if you know who's actually talking, the official guide usually doesn't say.</li>
+    <li><strong>Corrections</strong>: especially addresses. A wrong address sends someone across the city.</li>
+  </ul>
+</section>
+</main>
+<footer class="wrap">
+  <p><strong>Made by Joe Che</strong> at MUSE Café (8:15 &amp; Eternal) · say hi on Instagram
+     <a href="https://instagram.com/joe.che.official" rel="noopener">@joe.che.official</a></p>
+  <p>Open source, MIT. Fork it, fix it, make it better:
+     <a href="https://github.com/josephtandle/better-playa-guide" rel="noopener">github.com/josephtandle/better-playa-guide</a></p>
+  <p>Event data from Burning Man's public listings, plus camp websites and Instagram posts the official
+     listings leave out. Camp-authored times change on playa: verify on the day. Not affiliated with
+     Burning Man Project.</p>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="/guide/data.js"></script>
+<script src="/guide/guide.js"></script>
+<script>
+(function(){
+  var R='https://github.com/josephtandle/better-playa-guide/issues/new';
+  function url(labels,title,body){
+    return R+'?labels='+encodeURIComponent(labels)+'&title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body);
+  }
+  var L={
+   'b-schedule':['camp-schedule','[Schedule] <your camp name>',
+     "Camp name:\n\nBRC address (e.g. 7:30 & E):\n\nInstagram (optional):\n\n**Attach your schedule below**: drag an image, PDF or screenshot straight into this box.\n\nAnything we should know (times that change, ticketed things, 18+):\n"],
+   'b-ig':['camp-instagram','[Instagram] <camp name> (@<handle>)',
+     "Camp name:\n\nInstagram handle (with the @):\n\nBRC address if you know it:\n\nDo they post their schedule there? (yes / no / not sure):\n"],
+   'b-fix':['correction','[Fix] <what is wrong>',
+     "Event or camp name:\n\nWhat the guide currently says:\n\nWhat it should say:\n\nHow you know (saw it, camp told me, their site):\n"],
+   'b-link':['discovery','[Found] <what you found>',
+     "What is it:\n\nLink or where you saw it:\n\nWhy other burners would want it:\n"]
+  };
+  Object.keys(L).forEach(function(id){
+    var a=document.getElementById(id); if(!a) return;
+    a.href=url(L[id][0],L[id][1],L[id][2]);
+    a.target='_blank';
+  });
+})();
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){
+  navigator.serviceWorker.register('/guide/sw.js',{scope:'/guide/'}).catch(function(){});
+});}
+</script>
+</body></html>

@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+data/session.json
+
+# Crawl caches — large, regenerable via bin/refresh-data.sh
+data/crawl/
+data/crawl2/
+data/raw/
+
+# Personal profile must never be committed to a shareable repo
+profile/

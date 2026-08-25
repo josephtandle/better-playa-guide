@@ -1,0 +1,383 @@
+{
+ "year": 2026,
+ "theme": "Axis Mundi",
+ "source": "https://github.com/burningmantech/innovate-GIS-data (2026/GeoJSON) + BRC Measurements 2026",
+ "man": {
+  "lat": 40.783247448000054,
+  "lon": -119.20788409599999
+ },
+ "ft_per_deg_lat": 364000.0,
+ "ft_per_deg_lon": 275615.7313,
+ "bearing_formula": "compass_bearing_deg = ((clock_hours - 10.5) * 30) mod 360   # 10:30 = true North, 4:30 = true South",
+ "rings": [
+  {
+   "letter": "ESP",
+   "name": "Esplanade",
+   "radius_ft": 2492.7
+  },
+  {
+   "letter": "A",
+   "name": "Ararat",
+   "radius_ft": 2926.0
+  },
+  {
+   "letter": "B",
+   "name": "Bodhi",
+   "radius_ft": 3205.4
+  },
+  {
+   "letter": "C",
+   "name": "Ceiba",
+   "radius_ft": 3484.6
+  },
+  {
+   "letter": "D",
+   "name": "Delphi",
+   "radius_ft": 3763.8
+  },
+  {
+   "letter": "E",
+   "name": "Eternal",
+   "radius_ft": 4048.0
+  },
+  {
+   "letter": "F",
+   "name": "Fulcrum",
+   "radius_ft": 4531.7
+  },
+  {
+   "letter": "G",
+   "name": "Great Oak",
+   "radius_ft": 4810.9
+  },
+  {
+   "letter": "H",
+   "name": "Heiau",
+   "radius_ft": 5090.1
+  },
+  {
+   "letter": "I",
+   "name": "Iroko",
+   "radius_ft": 5369.5
+  },
+  {
+   "letter": "J",
+   "name": "Jiba",
+   "radius_ft": 5549.1
+  },
+  {
+   "letter": "K",
+   "name": "Kundalini",
+   "radius_ft": 5738.5
+  }
+ ],
+ "radial_range": {
+  "min_clock": "2:00",
+  "max_clock": "10:00",
+  "step_minutes": 15
+ },
+ "landmarks": {
+  "1200 Promenade": {
+   "lat": 40.7856732,
+   "lon": -119.2046917
+  },
+  "3 & B Plaza": {
+   "lat": 40.7770078,
+   "lon": -119.1996754
+  },
+  "300 Portal": {
+   "lat": 40.7783955,
+   "lon": -119.2015009
+  },
+  "300 Promenade": {
+   "lat": 40.7808407,
+   "lon": -119.2047176
+  },
+  "430 & G Plaza": {
+   "lat": 40.7700035,
+   "lon": -119.2078831
+  },
+  "430 Portal": {
+   "lat": 40.7763858,
+   "lon": -119.2078836
+  },
+  "600 Portal": {
+   "lat": 40.7788931,
+   "lon": -119.2136114
+  },
+  "600 Promenade": {
+   "lat": 40.78107,
+   "lon": -119.2107477
+  },
+  "730 & G Plaza": {
+   "lat": 40.7832454,
+   "lon": -119.2253077
+  },
+  "730 Portal": {
+   "lat": 40.7832467,
+   "lon": -119.2169112
+  },
+  "9 & B Plaza": {
+   "lat": 40.7894865,
+   "lon": -119.2160943
+  },
+  "900 Portal": {
+   "lat": 40.7880989,
+   "lon": -119.214268
+  },
+  "900 Promenade": {
+   "lat": 40.785673,
+   "lon": -119.2110756
+  },
+  "Airport": {
+   "lat": 40.7605453,
+   "lon": -119.2101021
+  },
+  "Center Camp Plaza": {
+   "lat": 40.7773723,
+   "lon": -119.2156116
+  },
+  "HEaT": {
+   "lat": 40.7765732,
+   "lon": -119.2122856
+  },
+  "Media Mecca": {
+   "lat": 40.7793039,
+   "lon": -119.2163165
+  },
+  "Rampart": {
+   "lat": 40.7763497,
+   "lon": -119.211642
+  },
+  "ESD Station 3": {
+   "lat": 40.7761978,
+   "lon": -119.1989813
+  },
+  "ESD Station 9": {
+   "lat": 40.7902956,
+   "lon": -119.2167879
+  },
+  "Playa Info": {
+   "lat": 40.7778641,
+   "lon": -119.2130452
+  },
+  "Greeters": {
+   "lat": 40.769913,
+   "lon": -119.2254033
+  },
+  "Point 2": {
+   "lat": 40.803521,
+   "lon": -119.2214076
+  },
+  "Point 3": {
+   "lat": 40.7993267,
+   "lon": -119.1867226
+  },
+  "Point 4": {
+   "lat": 40.772884,
+   "lon": -119.1812397
+  },
+  "Point 5": {
+   "lat": 40.7607882,
+   "lon": -119.2125815
+  },
+  "3 & G Plaza": {
+   "lat": 40.7738826,
+   "lon": -119.195565
+  },
+  "9 & G Plaza": {
+   "lat": 40.792611,
+   "lon": -119.2202067
+  },
+  "6 & G Plaza": {
+   "lat": 40.7738809,
+   "lon": -119.2202027
+  },
+  "ESD Station 6": {
+   "lat": 40.7767935,
+   "lon": -119.2114002
+  },
+  "Center Camp": {
+   "lat": 40.7773723,
+   "lon": -119.2156116
+  },
+  "The Man": {
+   "lat": 40.7832474,
+   "lon": -119.2078841
+  },
+  "The Temple": {
+   "lat": 40.7880994,
+   "lon": -119.2014996
+  },
+  "Ranger Station Berlin": {
+   "lat": 40.7764827,
+   "lon": -119.1986123
+  },
+  "Ranger Station Tokyo": {
+   "lat": 40.790062,
+   "lon": -119.2172228
+  },
+  "Ranger HQ": {
+   "lat": 40.7799249,
+   "lon": -119.2163799
+  },
+  "Hell Station": {
+   "lat": 40.7981065,
+   "lon": -119.2192173
+  },
+  "Ice Nine Arctica": {
+   "lat": 40.792717,
+   "lon": -119.2208314
+  },
+  "Arctica Center Camp": {
+   "lat": 40.7782779,
+   "lon": -119.216763
+  },
+  "Ice Cubed Arctica 3": {
+   "lat": 40.7737637,
+   "lon": -119.1949101
+  },
+  "Department of Mutant Vehicles (DMV)": {
+   "lat": 40.7789614,
+   "lon": -119.2124627
+  },
+  "Deep-Playa Music Zone (DMZ)": {
+   "lat": 40.7992038,
+   "lon": -119.2037669
+  },
+  "Point 1": {
+   "lat": 40.7797104,
+   "lon": -119.237418
+  },
+  "430 & B Plaza": {
+   "lat": 40.7744225,
+   "lon": -119.2078834
+  },
+  "730 & B Plaza": {
+   "lat": 40.7832464,
+   "lon": -119.2194941
+  },
+  "BLM LE Substation": {
+   "lat": 40.7766646,
+   "lon": -119.2109608
+  },
+  "Burner Express Bus Depot": {
+   "lat": 40.7733549,
+   "lon": -119.2227195
+  },
+  "Walk-In Camp": {
+   "lat": 40.7660514,
+   "lon": -119.2016597
+  },
+  "Box Office": {
+   "lat": 40.7682269,
+   "lon": -119.2356701
+  },
+  "Gate Actual": {
+   "lat": 40.7687253,
+   "lon": -119.2340881
+  },
+  "Will Call Lot": {
+   "lat": 40.7684061,
+   "lon": -119.2370464
+  },
+  "D Lot": {
+   "lat": 40.7681783,
+   "lon": -119.2338248
+  },
+  "Census Checkpoint": {
+   "lat": 40.7675669,
+   "lon": -119.227938
+  },
+  "Artery": {
+   "lat": 40.7793809,
+   "lon": -119.2148607
+  },
+  "Yellow Bike Project": {
+   "lat": 40.7739274,
+   "lon": -119.2145451
+  },
+  "Recycle Camp": {
+   "lat": 40.7769507,
+   "lon": -119.21303
+  },
+  "Arctica Outpost": {
+   "lat": 40.7736956,
+   "lon": -119.2239782
+  },
+  "10 & B Plaza": {
+   "lat": 40.7916762,
+   "lon": -119.2113301
+  },
+  "2 & B Plaza": {
+   "lat": 40.7806279,
+   "lon": -119.1967956
+  },
+  "Deep-Playa Music Zone 2 (DMZ2)": {
+   "lat": 40.7784502,
+   "lon": -119.1843398
+  }
+ },
+ "plazas": [
+  {
+   "name": "3:00 & G Plaza",
+   "lat": 40.7738875,
+   "lon": -119.1955673
+  },
+  {
+   "name": "4:30 & G Plaza",
+   "lat": 40.7700097,
+   "lon": -119.2078841
+  },
+  {
+   "name": "6:00 & G Plaza",
+   "lat": 40.7738875,
+   "lon": -119.2202009
+  },
+  {
+   "name": "7:30 & G Plaza",
+   "lat": 40.7832504,
+   "lon": -119.2253051
+  },
+  {
+   "name": "9:00 & G Plaza",
+   "lat": 40.7926145,
+   "lon": -119.2202044
+  },
+  {
+   "name": "9:00 & B Plaza",
+   "lat": 40.7894899,
+   "lon": -119.2160922
+  },
+  {
+   "name": "7:30 & B Plaza",
+   "lat": 40.7832511,
+   "lon": -119.2194918
+  },
+  {
+   "name": "4:30 & B Plaza",
+   "lat": 40.7744285,
+   "lon": -119.2078841
+  },
+  {
+   "name": "3:00 & B Plaza",
+   "lat": 40.7770129,
+   "lon": -119.1996775
+  },
+  {
+   "name": "Center Camp Plaza",
+   "lat": 40.7774341,
+   "lon": -119.2155397
+  },
+  {
+   "name": "2:00 & B Plaza",
+   "lat": 40.7806062,
+   "lon": -119.1967781
+  },
+  {
+   "name": "10:00 & B Plaza",
+   "lat": 40.7916403,
+   "lon": -119.2113517
+  }
+ ]
+}

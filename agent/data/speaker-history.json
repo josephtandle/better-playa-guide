@@ -1,0 +1,3816 @@
+{
+ "Black Rock Labs": [
+  {
+   "year": 2025,
+   "camp": "Black Rock Labs The Expanse",
+   "title": "BM Co-Founder Talks Planetary Future",
+   "cred": true
+  },
+  {
+   "year": 2024,
+   "camp": "Black Rock Labs The Expanse",
+   "title": "BMP Co-Founder Talks Sustainability",
+   "cred": true
+  }
+ ],
+ "Author Patrick Houser": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Parents, Architects of the Future,  fatherhood",
+   "cred": true
+  }
+ ],
+ "Rick Doblin": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Psychedelic Frontiers with Rick Doblin of MAPS",
+   "cred": true
+  }
+ ],
+ "Burn Perimeter Support": [
+  {
+   "year": 2024,
+   "camp": "Temple Guardians 5:30 & Esplanade",
+   "title": "Burn Perimeter Training",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Temple Guardians at 5:30 & Esplanade",
+   "title": "Burn Perimeter Training",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Temple Guardians at 5:30 & Esplanade",
+   "title": "Burn Perimeter Training",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Temple Guardians at 5:30 & Esplanade",
+   "title": "Burn Perimeter Training",
+   "cred": false
+  }
+ ],
+ "Earth Guardians": [
+  {
+   "year": 2025,
+   "camp": "The Man",
+   "title": "Coffee on the Coals of the Man",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Earth Guardians",
+   "title": "Coffee on the Coals of the Man",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "The Man",
+   "title": "Coffee on the Coals of the Man",
+   "cred": false
+  }
+ ],
+ "Slay Bunny Make": [
+  {
+   "year": 2025,
+   "camp": "Elemental Studios",
+   "title": "Leather Accessories Crafting w/ Slay Bunny",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Elemental Studios",
+   "title": "Leather Accessories Crafting w/ Slay Bunny",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Elemental Studios",
+   "title": "Leather Accessories Crafting w/ Slay Bunny",
+   "cred": false
+  }
+ ],
+ "Hungarian Black Rock": [
+  {
+   "year": 2025,
+   "camp": "PALINKA LOUNGE",
+   "title": "Hungarian Playa Meet & Greet",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "PALINKA LOUNGE",
+   "title": "Hungarian Playa Meet & Greet",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "PALINKA LOUNGE",
+   "title": "Hungarian Playa Meet & Greet",
+   "cred": false
+  }
+ ],
+ "Ram Dass": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Be Here Now with Ram Dass (Becoming Nobody Movie)",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Be Here Now with Ram Dass (Becoming Nobody Movie)",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "The Sound Garden",
+   "title": "Alchemy of The Heart Meditation",
+   "cred": false
+  }
+ ],
+ "Bloody Marys": [
+  {
+   "year": 2024,
+   "camp": "Gigsville",
+   "title": "Chill and Bloody Mary",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Kaleidoscope Collective",
+   "title": "Bloody Beats",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "I Miss My Dog Cafe",
+   "title": "Grilled Cheese & Bloody Marys",
+   "cred": false
+  }
+ ],
+ "Live Band": [
+  {
+   "year": 2025,
+   "camp": "Jelly Dance",
+   "title": "cake + CAKE with Live Band & \"Mini-Bar\"",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "Reverbia",
+   "title": "Dancing Before Noon (Live Music)",
+   "cred": false
+  }
+ ],
+ "Razorback Mnt": [
+  {
+   "year": 2025,
+   "camp": "Erotic Inclination Photo Studio",
+   "title": "Erotic Photo Session with Razorback Mnt. views",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Erotic Inclination Photo Studio",
+   "title": "Erotic Photo Session with Razorback Mnt. views!",
+   "cred": false
+  }
+ ],
+ "Skippy Grab": [
+  {
+   "year": 2025,
+   "camp": "Sharkey's Bar and Lounge",
+   "title": "Foot Bath with Skippy",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Sharkey's Bar and Lounge",
+   "title": "Foot Bath with Skippy",
+   "cred": false
+  }
+ ],
+ "Mother Ocean": [
+  {
+   "year": 2025,
+   "camp": "A Transformation Station",
+   "title": "Sacred Cacao Ceremony with Mother Ocean",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Sacred Cacao Ceremony Opening Inner Sacred Soul",
+   "cred": false
+  }
+ ],
+ "Sari Sacred Cacao": [
+  {
+   "year": 2025,
+   "camp": "Cold Yogis",
+   "title": "Cacao Ceremony Singing Prayer with Sari",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "Cold Yogis",
+   "title": "Cacao Ceremony Singing Prayer with Sari",
+   "cred": false
+  }
+ ],
+ "The Assless Chaplain": [
+  {
+   "year": 2025,
+   "camp": "The Assless Chapel",
+   "title": "Playa Weddings with The Assless Chaplain",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "The Assless Chapel",
+   "title": "Playa Weddings with The Assless Chaplain",
+   "cred": false
+  }
+ ],
+ "The Rusty Iris": [
+  {
+   "year": 2025,
+   "camp": "Camp As-Is",
+   "title": "Rust or Bust in the Dust - Dance Party and Fire",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "Camp As-Is",
+   "title": "Rust or Bust in the Dust - Dance Party and Fire",
+   "cred": false
+  }
+ ],
+ "Galactica Unlock": [
+  {
+   "year": 2025,
+   "camp": "Off the Dome",
+   "title": "Yoga with Galactica",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Off the Dome",
+   "title": "Yoga with Galactica",
+   "cred": false
+  }
+ ],
+ "Krystal Dragonwagon Cosmic": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Cosmic Yoga & Dance with Krystal Dragonwagon",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Cosmic Yoga & Dance with Krystal Dragonwagon",
+   "cred": false
+  }
+ ],
+ "Sinatra Martini Bar": [
+  {
+   "year": 2025,
+   "camp": "AdramaNation",
+   "title": "Sing Along with Sinatra Martini Bar",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "AdramaNation",
+   "title": "Sing Along with Sinatra Martini Bar",
+   "cred": false
+  }
+ ],
+ "Afro House": [
+  {
+   "year": 2025,
+   "camp": "AYA",
+   "title": "Afro Tech Ritual at AYA OASIS",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Rumi's Tea House",
+   "title": "Starlight Dance and Chai Party",
+   "cred": false
+  }
+ ],
+ "Danyel Nourish": [
+  {
+   "year": 2025,
+   "camp": "EBB & Glow Village",
+   "title": "Yoga into the setting sun on Skydeck with Danyel",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "EBB & Glow Village",
+   "title": "Yoga into the setting sun on Skydeck with Danyel",
+   "cred": false
+  }
+ ],
+ "Miss Madeline Pryor": [
+  {
+   "year": 2025,
+   "camp": "Cosmica",
+   "title": "Electric Feels",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Cosmica",
+   "title": "Electric Feels",
+   "cred": false
+  }
+ ],
+ "Vedic Monk": [
+  {
+   "year": 2025,
+   "camp": "Cosmica",
+   "title": "Chanting and the Chakras: The Oldest Yoga",
+   "cred": false
+  },
+  {
+   "year": 2025,
+   "camp": "Cosmica",
+   "title": "Dharma in the Dust: Where the Gita Meets the Playa",
+   "cred": false
+  }
+ ],
+ "Live Music": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Live Music Yoga in the Morning",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Reverbia",
+   "title": "Live Music Yoga in the Morning",
+   "cred": false
+  }
+ ],
+ "Creature Comforts Get": [
+  {
+   "year": 2024,
+   "camp": "Camp Home",
+   "title": "Pimps Cup Cooldown with Creature Comforts",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Camp Home",
+   "title": "Pimps Cup Cooldown with Creature Comforts",
+   "cred": false
+  }
+ ],
+ "Suspended Animation Bring": [
+  {
+   "year": 2024,
+   "camp": "Suspended Animation",
+   "title": "Date Night with Suspended Animation",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Suspended Animation",
+   "title": "Date Night with Suspended Animation",
+   "cred": false
+  }
+ ],
+ "Water Truck Bill": [
+  {
+   "year": 2024,
+   "camp": "Celestial Bodies",
+   "title": "Celestial Scope",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Celestial Bodies",
+   "title": "Celestial Scope",
+   "cred": false
+  }
+ ],
+ "Acoustic Music": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Jam and Teahouse",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Reverbia",
+   "title": "Jam and Teahouse",
+   "cred": false
+  }
+ ],
+ "Best Butt": [
+  {
+   "year": 2024,
+   "camp": "Best Butt",
+   "title": "Best Butt Booty Hour",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Best Butt",
+   "title": "Booty Hour",
+   "cred": false
+  }
+ ],
+ "Ice Cube Croutons": [
+  {
+   "year": 2024,
+   "camp": "BLD",
+   "title": "Daily Special- Margarita Soup w/ Ice Cube Croutons",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "BLD",
+   "title": "Daily Special- Margarita Soup w/ Ice Cube Croutons",
+   "cred": false
+  }
+ ],
+ "North Carolina Pork": [
+  {
+   "year": 2024,
+   "camp": "Rootpile Dustopia",
+   "title": "NC BBQ, Pinto Beans, Moonshine, & Live Bluegrass",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Rootpile Dustopia",
+   "title": "NC BBQ, Pinto Beans, Moonshine, & Live Bluegrass",
+   "cred": false
+  }
+ ],
+ "Bollywood Professionals": [
+  {
+   "year": 2024,
+   "camp": "Rogue Nation Camps",
+   "title": "Bollywood Dance Class",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "Rogue Nation Camps",
+   "title": "Bollywood LIVE!",
+   "cred": false
+  }
+ ],
+ "Sonya Sophia": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Sonya Sophia EFT: SEXUAL SIGNATURE",
+   "cred": false
+  },
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Sonya Sophia EFT: INVINCIBLE HEART of LOVE",
+   "cred": false
+  }
+ ],
+ "Camp Codename": [
+  {
+   "year": 2023,
+   "camp": "Camp Codename",
+   "title": "Pizza Party! Get hot and cheesy with Camp Codename",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "No Drama Bar - Silicon Village",
+   "title": "Pizza Party with Camp Codename - No Drama!",
+   "cred": false
+  }
+ ],
+ "Your Inner Child": [
+  {
+   "year": 2023,
+   "camp": "Nordic Paradise",
+   "title": "Discover and Connect with Your Inner Child",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Sticky's Playground",
+   "title": "Connecting with Your Inner Child Workshop",
+   "cred": false
+  }
+ ],
+ "Nonsense Man Come": [
+  {
+   "year": 2023,
+   "camp": "Speak Easy Stage at Center Camp",
+   "title": "Open Mic with Nonsense Man",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Speak Easy Stage at Center Camp",
+   "title": "Open Mic with Nonsense Man",
+   "cred": false
+  }
+ ],
+ "Nonsense Man": [
+  {
+   "year": 2023,
+   "camp": "Speak Easy Stage at Center Camp",
+   "title": "Open Mic with Nonsense Man",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Speak Easy Stage at Center Camp",
+   "title": "Open Mic with Nonsense Man",
+   "cred": false
+  }
+ ],
+ "Camp Counselor Rory": [
+  {
+   "year": 2023,
+   "camp": "Duckbutt",
+   "title": "Stretchy Fun Time Yoga with Camp Counselor Rory",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Duckbutt",
+   "title": "Stretchy Fun Time Yoga with Camp Counselor Rory",
+   "cred": false
+  }
+ ],
+ "Opposing Force": [
+  {
+   "year": 2023,
+   "camp": "Naked Heart",
+   "title": "Imbalance as a Source of Motion",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "Naked Heart",
+   "title": "Imbalance as a Source of Motion",
+   "cred": false
+  }
+ ],
+ "Teatime Come": [
+  {
+   "year": 2023,
+   "camp": "AdramaNation",
+   "title": "Creating Creative Space with Teatime",
+   "cred": false
+  },
+  {
+   "year": 2023,
+   "camp": "AdramaNation",
+   "title": "Creating Creative Space with Teatime",
+   "cred": false
+  }
+ ],
+ "Dancy Pants": [
+  {
+   "year": 2025,
+   "camp": "Creation Nation BRC",
+   "title": "Playa Pilates with Dancy Pants!",
+   "cred": false
+  }
+ ],
+ "Art Dept": [
+  {
+   "year": 2025,
+   "camp": "Pink ADT sign across from the ARTery. 6:30 and Esplanade.",
+   "title": "Recorrido Art\u00edstico en Bici",
+   "cred": false
+  }
+ ],
+ "Cosmic Expansion Pineal": [
+  {
+   "year": 2025,
+   "camp": "HeeBeeGeeBee Healers",
+   "title": "Headache Release with Cosmic Expansion",
+   "cred": false
+  }
+ ],
+ "Aztec Burner Intro": [
+  {
+   "year": 2025,
+   "camp": "Earth Guardians",
+   "title": "Morning Prayers with Aztec Burner",
+   "cred": false
+  }
+ ],
+ "Silly Sound Somatics": [
+  {
+   "year": 2025,
+   "camp": "The Lotus Dome & Caf\u00e9",
+   "title": "Midweek Reset with Silly Sound Somatics",
+   "cred": false
+  }
+ ],
+ "Diabetes Diet": [
+  {
+   "year": 2025,
+   "camp": "IPOW-Indigenous People of World",
+   "title": "Indigenous People Living with Diabetes",
+   "cred": false
+  }
+ ],
+ "Aztec Burner": [
+  {
+   "year": 2025,
+   "camp": "Earth Guardians",
+   "title": "Evening Prayers with Aztec Burner, Xico",
+   "cred": false
+  }
+ ],
+ "Cosmic Expansion Advanced": [
+  {
+   "year": 2025,
+   "camp": "Camp Contact",
+   "title": "Headache Release with Cosmic Expansion",
+   "cred": false
+  }
+ ],
+ "Diamond Healing": [
+  {
+   "year": 2025,
+   "camp": "HeeBeeGeeBee Healers",
+   "title": "Time Travel with Diamond",
+   "cred": false
+  }
+ ],
+ "Soul Reboot": [
+  {
+   "year": 2025,
+   "camp": "Duck Pond",
+   "title": "Soul Reboot",
+   "cred": false
+  }
+ ],
+ "Chocolate Milk": [
+  {
+   "year": 2025,
+   "camp": "Kelly's",
+   "title": "Late Night Chocolate Attack",
+   "cred": false
+  }
+ ],
+ "Yoga Celtica Bring": [
+  {
+   "year": 2025,
+   "camp": "Yellow Balloon",
+   "title": "Guided Yoga Nidra by Yoga Celtica",
+   "cred": false
+  }
+ ],
+ "Camp Babe Immediacy": [
+  {
+   "year": 2025,
+   "camp": "Camp Babe",
+   "title": "Group Games with Camp Babe",
+   "cred": false
+  }
+ ],
+ "Cinematic Visuals": [
+  {
+   "year": 2025,
+   "camp": "Camp Cul-de-Sac",
+   "title": "Welcome Home House Party",
+   "cred": false
+  }
+ ],
+ "Playa Comedy": [
+  {
+   "year": 2025,
+   "camp": "The Sound Garden",
+   "title": "Playa Comedy w/special guest",
+   "cred": false
+  }
+ ],
+ "Dr Chubonius Spleen Imbalanced": [
+  {
+   "year": 2025,
+   "camp": "LOBE",
+   "title": "Phrenology Clinic by Dr Chubonius Spleen",
+   "cred": false
+  }
+ ],
+ "Premium Gin": [
+  {
+   "year": 2025,
+   "camp": "rEVOLUTION",
+   "title": "Famous Playa Chili Cheese Dog and Veggie Dog Feast",
+   "cred": false
+  }
+ ],
+ "Playa Zero": [
+  {
+   "year": 2025,
+   "camp": "Pour Choices",
+   "title": "Baptism by Playa",
+   "cred": false
+  }
+ ],
+ "Danger Ranger": [
+  {
+   "year": 2025,
+   "camp": "Center Camp Cafe",
+   "title": "Cacophony Cocktail Party",
+   "cred": false
+  }
+ ],
+ "Jana Roemer Astro": [
+  {
+   "year": 2025,
+   "camp": "Native Tongues",
+   "title": "A Psychonaut\u2019s Dream: Astro Nidra w/ Jana Roemer",
+   "cred": false
+  }
+ ],
+ "Ignited States": [
+  {
+   "year": 2025,
+   "camp": "IGNITED STATES",
+   "title": "Let's Get This Party Started",
+   "cred": false
+  }
+ ],
+ "Black Rock Philharmonic": [
+  {
+   "year": 2025,
+   "camp": "?",
+   "title": "Playa Choir w/ Black Rock Philharmonic",
+   "cred": false
+  }
+ ],
+ "Tori Spark": [
+  {
+   "year": 2025,
+   "camp": "Burning Globe",
+   "title": "Movement Invention with Tori",
+   "cred": false
+  }
+ ],
+ "Balls Fun": [
+  {
+   "year": 2025,
+   "camp": "You Look Amazing",
+   "title": "Roll With It | Yoga with Balls",
+   "cred": false
+  }
+ ],
+ "Sparkle Pants What": [
+  {
+   "year": 2025,
+   "camp": "Fucking Joe Camp",
+   "title": "Mystery Event Hosted by Sparkle Pants",
+   "cred": false
+  }
+ ],
+ "Ananda Tune": [
+  {
+   "year": 2025,
+   "camp": "StarFist",
+   "title": "BODY LANGUAGE with Ananda",
+   "cred": false
+  }
+ ],
+ "Gaby Learn": [
+  {
+   "year": 2025,
+   "camp": "StarFist",
+   "title": "Shuffle Dancing 101 with Gaby",
+   "cred": false
+  }
+ ],
+ "Violet Deeply": [
+  {
+   "year": 2025,
+   "camp": "StarFist",
+   "title": "Hatha Yoga with Violet",
+   "cred": false
+  }
+ ],
+ "Little Dick": [
+  {
+   "year": 2025,
+   "camp": "UnExPecTed SexEd Talks",
+   "title": "Kink 101",
+   "cred": false
+  }
+ ],
+ "Oral Sex": [
+  {
+   "year": 2025,
+   "camp": "UnExPecTed SexEd Talks",
+   "title": "Genitalia Dentata",
+   "cred": false
+  }
+ ],
+ "Kombucha Includes": [
+  {
+   "year": 2025,
+   "camp": "Acrobatica Galactica",
+   "title": "Acro Mixer with Kombucha",
+   "cred": false
+  }
+ ],
+ "Cancer Survivors": [
+  {
+   "year": 2025,
+   "camp": "The Man",
+   "title": "Burning Survivors Cancer Walk",
+   "cred": false
+  }
+ ],
+ "Drunken Hacks Want": [
+  {
+   "year": 2025,
+   "camp": "Strong Tonic Center for Vitality",
+   "title": "Tarot Card Readings by Drunken Hacks",
+   "cred": false
+  }
+ ],
+ "Starlit Glam Artists": [
+  {
+   "year": 2025,
+   "camp": "Celestial Tea Garden",
+   "title": "Get Pampered with Starlit Glam",
+   "cred": false
+  }
+ ],
+ "Saucy Sow": [
+  {
+   "year": 2025,
+   "camp": "Pig Nest",
+   "title": "Pizza Par-Tay",
+   "cred": false
+  }
+ ],
+ "Camp Delicioso": [
+  {
+   "year": 2025,
+   "camp": "Camp Delicioso & Creperie",
+   "title": "Best damn OG French cr\u00eapes in Black Rock City",
+   "cred": false
+  }
+ ],
+ "Chez Mirage Rock": [
+  {
+   "year": 2025,
+   "camp": "Center Camp- Grand Central Bar",
+   "title": "Nickelback & Picklebacks w/ Chez Mirage",
+   "cred": false
+  }
+ ],
+ "Black Rock Observatory": [
+  {
+   "year": 2025,
+   "camp": "Center Camp Canopy",
+   "title": "Ask an Astronomer, with Black Rock Observatory",
+   "cred": false
+  }
+ ],
+ "Shit Talk Fiberless": [
+  {
+   "year": 2025,
+   "camp": "Azteca",
+   "title": "Shit talk",
+   "cred": false
+  }
+ ],
+ "Mother Ocean Powerful": [
+  {
+   "year": 2025,
+   "camp": "A Transformation Station",
+   "title": "Sacred Cacao Ceremony with Mother Ocean",
+   "cred": false
+  }
+ ],
+ "Burnie Float": [
+  {
+   "year": 2025,
+   "camp": "ClusterF*ck United",
+   "title": "Minimal Dubs & Hookah Vibes w/ Burnie",
+   "cred": false
+  }
+ ],
+ "Rover Introduction": [
+  {
+   "year": 2025,
+   "camp": "pandemonium",
+   "title": "Fire Play with Rover",
+   "cred": false
+  }
+ ],
+ "The Dust": [
+  {
+   "year": 2025,
+   "camp": "DUSTFISH",
+   "title": "Ride The Cosmos Night Session",
+   "cred": false
+  }
+ ],
+ "Organic Ethno Beats": [
+  {
+   "year": 2025,
+   "camp": "Kurenivka",
+   "title": "Tea Ceremony with Organic Ethno Beats",
+   "cred": false
+  }
+ ],
+ "Andy Weir": [
+  {
+   "year": 2025,
+   "camp": "Empire of Dirt",
+   "title": "Project EMPIRE book club: The Martian",
+   "cred": false
+  }
+ ],
+ "Real Guillotine": [
+  {
+   "year": 2025,
+   "camp": "Center Camp",
+   "title": "The Clown's Rebellion with Real Guillotine!",
+   "cred": false
+  }
+ ],
+ "High Desert Hand": [
+  {
+   "year": 2025,
+   "camp": "The Hand Lovers Lounge",
+   "title": "The Hand Lovers Lounge Hand Spa",
+   "cred": false
+  }
+ ],
+ "The Pink Secretary": [
+  {
+   "year": 2025,
+   "camp": "WeHaul",
+   "title": "Christmas Brunch with The Pink Secretary",
+   "cred": false
+  }
+ ],
+ "Chocolatito Mid-week": [
+  {
+   "year": 2025,
+   "camp": "Hot Chocolatito",
+   "title": "Pause with Chocolatito",
+   "cred": false
+  }
+ ],
+ "The Wish Game": [
+  {
+   "year": 2025,
+   "camp": "Twilight language",
+   "title": "Wishes of the Heart",
+   "cred": false
+  }
+ ],
+ "Chocolatito After-sunset": [
+  {
+   "year": 2025,
+   "camp": "Hot Chocolatito",
+   "title": "Embrace the sunset with Chocolatito",
+   "cred": false
+  }
+ ],
+ "Fire Use": [
+  {
+   "year": 2025,
+   "camp": "New York Dangerous",
+   "title": "New York Dangerous: Playing with Fire",
+   "cred": false
+  }
+ ],
+ "Creature Comforts Come": [
+  {
+   "year": 2025,
+   "camp": "Camp Home",
+   "title": "Pimps Cup with Creature Comforts",
+   "cred": false
+  }
+ ],
+ "Essence Conclave": [
+  {
+   "year": 2025,
+   "camp": "Camp Kinetic",
+   "title": "Firejam!",
+   "cred": false
+  }
+ ],
+ "Fluffy Art Car": [
+  {
+   "year": 2025,
+   "camp": "Camp Kinetic",
+   "title": "Firejam!",
+   "cred": false
+  }
+ ],
+ "Gloria Tong": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "Opulent Yoga",
+   "cred": false
+  }
+ ],
+ "Chinese Tui": [
+  {
+   "year": 2025,
+   "camp": "706 Tribe",
+   "title": "Hands-On Chinese Tui Na massage",
+   "cred": false
+  }
+ ],
+ "Shaman Dominique Butterfly": [
+  {
+   "year": 2025,
+   "camp": "?",
+   "title": "Love Alchemy: Sacred Elemental Unions",
+   "cred": false
+  }
+ ],
+ "Venice Red Light": [
+  {
+   "year": 2025,
+   "camp": "Venice Red Light",
+   "title": "DJ Basics with VRL DJs",
+   "cred": false
+  }
+ ],
+ "Artist Carles Garcia": [
+  {
+   "year": 2025,
+   "camp": "METAL MIMI",
+   "title": "Art Dome - Cupola Mater Aeterna",
+   "cred": false
+  }
+ ],
+ "Great Vibrations": [
+  {
+   "year": 2025,
+   "camp": "Great Vibrations",
+   "title": "Great Vibrations Sunset Dance Party",
+   "cred": false
+  }
+ ],
+ "Live Band Karaoke": [
+  {
+   "year": 2025,
+   "camp": "Hair of the Dog (HOTD)",
+   "title": "Live Band Karaoke with the BRPL irregulars",
+   "cred": false
+  }
+ ],
+ "Fire Performers": [
+  {
+   "year": 2025,
+   "camp": "Celtic Chaos",
+   "title": "Mega Fire Show with performers, pyro and music",
+   "cred": false
+  }
+ ],
+ "World Famous Crab": [
+  {
+   "year": 2025,
+   "camp": "Cuddle Oasis",
+   "title": "Annual DreamMaker Playa Gathering",
+   "cred": false
+  }
+ ],
+ "Tonya Papanikolov": [
+  {
+   "year": 2025,
+   "camp": "Bungalow",
+   "title": "Kundalini Yoga",
+   "cred": false
+  }
+ ],
+ "Sierra Madre": [
+  {
+   "year": 2025,
+   "camp": "Bungalow",
+   "title": "Transcendental Yoga",
+   "cred": false
+  }
+ ],
+ "Fireball Learn": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "Intro to Off Body Hooping with Fireball",
+   "cred": false
+  }
+ ],
+ "Stephanie Black Get": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "Sound Bath with Stephanie Black",
+   "cred": false
+  }
+ ],
+ "Gary Liu Move": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "Yoga with Gary Liu",
+   "cred": false
+  }
+ ],
+ "Jessica Airlines": [
+  {
+   "year": 2025,
+   "camp": "Stag Camp",
+   "title": "Cringy Rhubarb-a-Ritas",
+   "cred": false
+  }
+ ],
+ "Vee Here": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "DJ Set - Vee Here Now",
+   "cred": false
+  }
+ ],
+ "Liquid Love Drops": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "Opulent Klub",
+   "cred": false
+  }
+ ],
+ "Vintage Sci-": [
+  {
+   "year": 2025,
+   "camp": "VW Bus Camp",
+   "title": "Altered Book Making with Vintage Sci-Fi",
+   "cred": false
+  }
+ ],
+ "Pink Diesel": [
+  {
+   "year": 2025,
+   "camp": "Hair of the Dog (HOTD)",
+   "title": "The Carttractions, Goth night with Pink Diesel",
+   "cred": false
+  }
+ ],
+ "Open Mic": [
+  {
+   "year": 2025,
+   "camp": "Black Rock Piano Lounge",
+   "title": "Sunday, Kickoff Party with Open Mic and Live Music",
+   "cred": false
+  }
+ ],
+ "Enigma Beats": [
+  {
+   "year": 2025,
+   "camp": "?",
+   "title": "Fire Ritual & Enigma Beats",
+   "cred": false
+  }
+ ],
+ "Turks Traditionally Cooked": [
+  {
+   "year": 2025,
+   "camp": "Plaisance",
+   "title": "Turkish Coffee with Turks",
+   "cred": false
+  }
+ ],
+ "Friends Come": [
+  {
+   "year": 2025,
+   "camp": "Serenity Now",
+   "title": "Morning Coffee with Friends",
+   "cred": false
+  }
+ ],
+ "New Orleans Rose": [
+  {
+   "year": 2025,
+   "camp": "AdramaNation",
+   "title": "Make Me Go Tea Tea Hydration Station",
+   "cred": false
+  }
+ ],
+ "Opulent Chill": [
+  {
+   "year": 2025,
+   "camp": "Opulent Temple /Chill",
+   "title": "Opulent Not So Chill Night",
+   "cred": false
+  }
+ ],
+ "Spiritual Interactive Games": [
+  {
+   "year": 2025,
+   "camp": "?",
+   "title": "May the Eastern Divine Force be with you",
+   "cred": false
+  }
+ ],
+ "Uncomfort Interactive": [
+  {
+   "year": 2025,
+   "camp": "Astro Cats",
+   "title": "The art of Being Comfortable with Uncomfort",
+   "cred": false
+  }
+ ],
+ "Crystal Singing Bowls": [
+  {
+   "year": 2025,
+   "camp": "Salon Soleil",
+   "title": "Sound Temple with Crystal Singing Bowls",
+   "cred": false
+  }
+ ],
+ "Jack Listens": [
+  {
+   "year": 2025,
+   "camp": "SoundCloud",
+   "title": "Anchovy Affair: Tinned Delights & Salty Vibes",
+   "cred": false
+  }
+ ],
+ "Toxic Disco Clam": [
+  {
+   "year": 2025,
+   "camp": "Toxic Disco Clam",
+   "title": "Clams Jam \u2013 Disco Inferno",
+   "cred": false
+  }
+ ],
+ "Ryan Heffington": [
+  {
+   "year": 2025,
+   "camp": "Disorient",
+   "title": "Full Body SWEAT",
+   "cred": false
+  }
+ ],
+ "Alien Brains Talk": [
+  {
+   "year": 2025,
+   "camp": "DECENTRAL",
+   "title": "Interacting with Alien Brains Talk",
+   "cred": false
+  }
+ ],
+ "Alien Brains": [
+  {
+   "year": 2025,
+   "camp": "DECENTRAL",
+   "title": "Interacting with Alien Brains Talk",
+   "cred": false
+  }
+ ],
+ "Center Camp Plaza": [
+  {
+   "year": 2025,
+   "camp": "Kaleidoscope",
+   "title": "Meshtastic, Coffee, Cold Brew! LoRa Playa Nerds!",
+   "cred": false
+  }
+ ],
+ "Vikings Join": [
+  {
+   "year": 2025,
+   "camp": "Valhalla On The Playa",
+   "title": "Monday Mead with Vikings",
+   "cred": false
+  }
+ ],
+ "Your Shadow Explore": [
+  {
+   "year": 2025,
+   "camp": "Naked Heart",
+   "title": "Dancing with Your Shadow",
+   "cred": false
+  }
+ ],
+ "Sophia Christos": [
+  {
+   "year": 2025,
+   "camp": "Naked Heart",
+   "title": "Divine Feminine Healing  and Empowerment",
+   "cred": false
+  }
+ ],
+ "Your Future Self": [
+  {
+   "year": 2025,
+   "camp": "Naked Heart",
+   "title": "Dust Rising: Flirt w/ Your Future Self",
+   "cred": false
+  }
+ ],
+ "Vedic Kirtan Master": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Bhakti Yoga: Immersion Into Devotion",
+   "cred": false
+  }
+ ],
+ "Heros Dance": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "DJ Vibes by Heros",
+   "cred": false
+  }
+ ],
+ "Tibetan Bowls": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Sound Bath Therapy  for the Soul",
+   "cred": false
+  }
+ ],
+ "Lady Gabby": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Vino e Vibes - slip slow, by Lady Gabby",
+   "cred": false
+  }
+ ],
+ "Polar Dynamic": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Arctic Vibes: Dynamic Techno Set by Polar",
+   "cred": false
+  }
+ ],
+ "Frank Drumming": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Drum Circle, led by Frank",
+   "cred": false
+  }
+ ],
+ "Rammayan The": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Enter the Dharma of Ram Dass, by Rammayan",
+   "cred": false
+  }
+ ],
+ "Rammayan Held": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Enter the Dharma of Ram Dass, by Rammayan",
+   "cred": false
+  }
+ ],
+ "Fire Former Air": [
+  {
+   "year": 2025,
+   "camp": "Airport",
+   "title": "Fighting Fire with Fire",
+   "cred": false
+  }
+ ],
+ "Krisha Prem": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Mindful Mornings: Aarti & Loving Awareness",
+   "cred": false
+  }
+ ],
+ "Ram Dass World": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Be Here Now with Ram Dass World Village Playshop",
+   "cred": false
+  }
+ ],
+ "Kazuo Ishiguro": [
+  {
+   "year": 2025,
+   "camp": "Black Rock Public Library",
+   "title": "Tomorrow Today Book Club: Klara and the Sun",
+   "cred": false
+  }
+ ],
+ "Sound Bath": [
+  {
+   "year": 2025,
+   "camp": "EBB & Glow Village",
+   "title": "Vinyasa/Yin Yoga with Sound Bath on the Skydeck",
+   "cred": false
+  }
+ ],
+ "Raamayan Get": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "Kirtranica by Raamayan",
+   "cred": false
+  }
+ ],
+ "Lounge Lizards Sip": [
+  {
+   "year": 2025,
+   "camp": "Twisted",
+   "title": "Sip Twisted G&T's w/ Lounge Lizards",
+   "cred": false
+  }
+ ],
+ "Black Rock Academy": [
+  {
+   "year": 2025,
+   "camp": "Black Rock Academy",
+   "title": "Black Rock Academy Neighborhood Mixer",
+   "cred": false
+  }
+ ],
+ "Bao Chicka Wow": [
+  {
+   "year": 2025,
+   "camp": "SOLARPUNKS",
+   "title": "Solar Station Kick-Off Mixer",
+   "cred": false
+  }
+ ],
+ "Playa Paul Start": [
+  {
+   "year": 2025,
+   "camp": "Black Rock Migratory Bird Refuge",
+   "title": "Crystal Bowl Sound Bath with Playa Paul",
+   "cred": false
+  }
+ ],
+ "Captain America The": [
+  {
+   "year": 2025,
+   "camp": "Gaian Airship",
+   "title": "The 120 Life with Captain America",
+   "cred": false
+  }
+ ],
+ "Gaian Airship Join": [
+  {
+   "year": 2025,
+   "camp": "?",
+   "title": "Sunrise with Gaian Airship",
+   "cred": false
+  }
+ ],
+ "Design The": [
+  {
+   "year": 2025,
+   "camp": "IDEATE",
+   "title": "Salon: Community by Design",
+   "cred": false
+  }
+ ],
+ "Hypnosis Step": [
+  {
+   "year": 2025,
+   "camp": "IDEATE",
+   "title": "Manifesting Your Tomorrow with Hypnosis",
+   "cred": false
+  }
+ ],
+ "Nathalie Explaining": [
+  {
+   "year": 2025,
+   "camp": "A Transformation Station",
+   "title": "Manifestation Atelier with Nathalie",
+   "cred": false
+  }
+ ],
+ "Zan Sensual": [
+  {
+   "year": 2025,
+   "camp": "A Transformation Station",
+   "title": "Semi-sensual Desert Dance with Zan",
+   "cred": false
+  }
+ ],
+ "Gaian Airship": [
+  {
+   "year": 2025,
+   "camp": "?",
+   "title": "Special Guest Sunrise with Gaian Airship & Polaris",
+   "cred": false
+  }
+ ],
+ "Gaia Meet": [
+  {
+   "year": 2025,
+   "camp": "Gaian Airship",
+   "title": "Remember the Future: Conversations with Gaia",
+   "cred": false
+  }
+ ],
+ "Stan Join": [
+  {
+   "year": 2025,
+   "camp": "A Transformation Station",
+   "title": "Introduction to Reiki by Stan",
+   "cred": false
+  }
+ ],
+ "Alan Watts Listen": [
+  {
+   "year": 2025,
+   "camp": "IDEATE",
+   "title": "A Quiet Session with Alan Watts",
+   "cred": false
+  }
+ ],
+ "Krishna Prem": [
+  {
+   "year": 2025,
+   "camp": "I Love Elephants",
+   "title": "TELYSIA COM PRESENT: 0.paL TECH - Listening party",
+   "cred": false
+  }
+ ],
+ "Emily Claire": [
+  {
+   "year": 2024,
+   "camp": "Yeah Man!",
+   "title": "Tequila Tuesday",
+   "cred": false
+  }
+ ],
+ "Vijay Krsna": [
+  {
+   "year": 2024,
+   "camp": "The Temple of Together",
+   "title": "Sunset Kirtan at The Temple of Together",
+   "cred": false
+  }
+ ],
+ "Frozen Margaritas": [
+  {
+   "year": 2024,
+   "camp": "Brain Freeze Camp",
+   "title": "Mutant Vehicle Regatta 4:20 and Outer Man Circle",
+   "cred": false
+  }
+ ],
+ "Apollo Join": [
+  {
+   "year": 2024,
+   "camp": "Olympus",
+   "title": "Olympus Oms: Godly Qi Gong with Apollo",
+   "cred": false
+  }
+ ],
+ "Katrina Breathe": [
+  {
+   "year": 2024,
+   "camp": "Ataraxia",
+   "title": "Restorative Yoga + Reiki with Katrina",
+   "cred": false
+  }
+ ],
+ "Marlena Shine Brighter": [
+  {
+   "year": 2024,
+   "camp": "Creation Nation BRC",
+   "title": "Light My Night! w/ Marlena",
+   "cred": false
+  }
+ ],
+ "Health Issues Our": [
+  {
+   "year": 2024,
+   "camp": "The Love Collective",
+   "title": "TLC for Caregivers & Loved Ones with Health Issues",
+   "cred": false
+  }
+ ],
+ "Knotty Guy": [
+  {
+   "year": 2024,
+   "camp": "AerialKnotics",
+   "title": "Very Knotty Bubbles",
+   "cred": false
+  }
+ ],
+ "Vegan Options Are": [
+  {
+   "year": 2024,
+   "camp": "Camp Desert of Eden",
+   "title": "Saucy Sausage Weiner Wonderland w/ Vegan Options",
+   "cred": false
+  }
+ ],
+ "Fire Performance Defy": [
+  {
+   "year": 2024,
+   "camp": "Gravity",
+   "title": "\"Head in the Clouds\" - Party with Fire Performance",
+   "cred": false
+  }
+ ],
+ "Nick Day Filmmaker": [
+  {
+   "year": 2024,
+   "camp": "Ataraxia",
+   "title": "A Brief History of Consciousness with Nick Day",
+   "cred": false
+  }
+ ],
+ "The Man Spread": [
+  {
+   "year": 2024,
+   "camp": "Camp Come Find Us CCFU",
+   "title": "Tarot with The Man Spread",
+   "cred": false
+  }
+ ],
+ "Wendy Join": [
+  {
+   "year": 2024,
+   "camp": "Womxn Sex-positive&Pleasure Sluts",
+   "title": "Sexy Nervous System Reset with Wendy",
+   "cred": false
+  }
+ ],
+ "Pan Yoga": [
+  {
+   "year": 2024,
+   "camp": "Olympus",
+   "title": "Olympus Oms: GOAT Yoga with Pan",
+   "cred": false
+  }
+ ],
+ "Native Americans": [
+  {
+   "year": 2024,
+   "camp": "Earth Guardians",
+   "title": "The Cultural History of the Black Rock Desert",
+   "cred": false
+  }
+ ],
+ "Tea Service Sip": [
+  {
+   "year": 2024,
+   "camp": "Raised by Wolves",
+   "title": "Live Indie Folk Rock w/ Tea Service",
+   "cred": false
+  }
+ ],
+ "Ice Sculpture Pilates": [
+  {
+   "year": 2024,
+   "camp": "BRC Ski Resort",
+   "title": "Ice Sculpture Pilates",
+   "cred": false
+  }
+ ],
+ "Biofield Tuning-": [
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Bio-Field Tuning & Chakra Alignment",
+   "cred": false
+  }
+ ],
+ "Mojito Molly": [
+  {
+   "year": 2024,
+   "camp": "The Assless Chapel",
+   "title": "Mojito Monday",
+   "cred": false
+  }
+ ],
+ "Celebrative Music": [
+  {
+   "year": 2024,
+   "camp": "Lituanica Birds",
+   "title": "Potato Pancakes and TuTu Dance",
+   "cred": false
+  }
+ ],
+ "Suspended Animation Our": [
+  {
+   "year": 2024,
+   "camp": "Suspended Animation",
+   "title": "Night Flight with Suspended Animation",
+   "cred": false
+  }
+ ],
+ "Yannick Haux Haux": [
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Hape Ceremony with Yannick",
+   "cred": false
+  }
+ ],
+ "Sexy Mounties": [
+  {
+   "year": 2024,
+   "camp": "Camp Caribou",
+   "title": "Canadian Breakfast - Bacon on a Bun",
+   "cred": false
+  }
+ ],
+ "Meditation This": [
+  {
+   "year": 2024,
+   "camp": "Camp [No Name]",
+   "title": "Soft Somatic Flow with Meditation",
+   "cred": false
+  }
+ ],
+ "French Virgins": [
+  {
+   "year": 2024,
+   "camp": "Burning My Cr\u00eape",
+   "title": "Pole Dancing & Flamb\u00e9ed (boozy) cr\u00eapes",
+   "cred": false
+  }
+ ],
+ "Stan This": [
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Learning Reiki with Stan",
+   "cred": false
+  }
+ ],
+ "Camera Obscura Tribe": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Underwater Photography on the Playa",
+   "cred": false
+  }
+ ],
+ "Mama Tzo Vinyasa": [
+  {
+   "year": 2024,
+   "camp": "Ataraxia",
+   "title": "Vinyasa Flow Yoga + Meditation with Mama Tzo",
+   "cred": false
+  }
+ ],
+ "Tony Demonstration": [
+  {
+   "year": 2024,
+   "camp": "Center Camp",
+   "title": "Leather Fix with Tony",
+   "cred": false
+  }
+ ],
+ "Synthesis Servings": [
+  {
+   "year": 2024,
+   "camp": "PALINKA LOUNGE",
+   "title": "Sushi and Sake Bar by Synthesis",
+   "cred": false
+  }
+ ],
+ "Bohemian Charm": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "24-hour Coffee Corner",
+   "cred": false
+  }
+ ],
+ "Synthesis Sake Bar": [
+  {
+   "year": 2024,
+   "camp": "PALINKA LOUNGE",
+   "title": "Sake Bar by Synthesis",
+   "cred": false
+  }
+ ],
+ "Sexy Clowns Artemis": [
+  {
+   "year": 2024,
+   "camp": "Rogue Nation Camps",
+   "title": "Burlesque Show: Clownesque featuring Sexy Clowns",
+   "cred": false
+  }
+ ],
+ "Amazian Curiouser": [
+  {
+   "year": 2024,
+   "camp": "Ludus Symposium",
+   "title": "Trivia with Amazian",
+   "cred": false
+  }
+ ],
+ "Cinder Our": [
+  {
+   "year": 2024,
+   "camp": "Ludus Symposium",
+   "title": "Belly Dancing with Cinder",
+   "cred": false
+  }
+ ],
+ "The Black Rock": [
+  {
+   "year": 2024,
+   "camp": "Playa Art Piece TBD",
+   "title": "Playa Choir Performance",
+   "cred": false
+  }
+ ],
+ "Drum Circles": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Fire Salon, Fire Spin Jam and Drum Circle",
+   "cred": false
+  }
+ ],
+ "Dr. Joey Mattina Sort": [
+  {
+   "year": 2024,
+   "camp": "Buddha Lounge",
+   "title": "Osteopathic Body Work with Dr. Joey Mattina",
+   "cred": false
+  }
+ ],
+ "Shock Collar": [
+  {
+   "year": 2024,
+   "camp": "CouchBurners",
+   "title": "Shock Collar Karaoke",
+   "cred": false
+  }
+ ],
+ "Tender Learn": [
+  {
+   "year": 2024,
+   "camp": "Ataraxia",
+   "title": "Belly Dance Basics with Tender",
+   "cred": false
+  }
+ ],
+ "Drunk Lady Bring": [
+  {
+   "year": 2024,
+   "camp": "Camp Tidy",
+   "title": "Old School Aerobics by Drunk Lady",
+   "cred": false
+  }
+ ],
+ "Kissy Fish": [
+  {
+   "year": 2024,
+   "camp": "Mellow Mountain",
+   "title": "Espresso martinis & cold-brew coffee",
+   "cred": false
+  }
+ ],
+ "Pono Create": [
+  {
+   "year": 2024,
+   "camp": "Creation Nation BRC",
+   "title": "Amulet Necklaces w/ Pono",
+   "cred": false
+  }
+ ],
+ "Dusty Taint": [
+  {
+   "year": 2024,
+   "camp": "Dusty Taint",
+   "title": "The Game!",
+   "cred": false
+  }
+ ],
+ "Freia Choose": [
+  {
+   "year": 2024,
+   "camp": "Creation Nation BRC",
+   "title": "Curious Creatures w/ Freia",
+   "cred": false
+  }
+ ],
+ "Jess Learn": [
+  {
+   "year": 2024,
+   "camp": "Womxn Sex-positive&Pleasure Sluts",
+   "title": "DIY non-toxic sun and self care workshop with Jess",
+   "cred": false
+  }
+ ],
+ "Curiouser Cocktails Come": [
+  {
+   "year": 2024,
+   "camp": "Mission Country Club",
+   "title": "Sloshy Poetry Reading with Curiouser Cocktails",
+   "cred": false
+  }
+ ],
+ "Quest Infuse": [
+  {
+   "year": 2024,
+   "camp": "Creation Nation BRC",
+   "title": "A-making Wishes! w/ Quest",
+   "cred": false
+  }
+ ],
+ "Guy Worden": [
+  {
+   "year": 2024,
+   "camp": "Box of Wonders",
+   "title": "Block Party Mutant & Booze !",
+   "cred": false
+  }
+ ],
+ "Mystical Wheel": [
+  {
+   "year": 2024,
+   "camp": "Lucid Dream Hideout",
+   "title": "Iced Coffee Bar with Mystical Wheel of Misfortune",
+   "cred": false
+  }
+ ],
+ "Windham Treat": [
+  {
+   "year": 2024,
+   "camp": "Yummm",
+   "title": "Yummhole Oasis Resort and Spa by Windham",
+   "cred": false
+  }
+ ],
+ "Psilocybin Agent": [
+  {
+   "year": 2024,
+   "camp": "UnExPecTed SexEd Talks",
+   "title": "Deeper Intimacy with Psilocybin",
+   "cred": false
+  }
+ ],
+ "Open Cowboy Bar": [
+  {
+   "year": 2024,
+   "camp": "There Ain't No Virgin Mary",
+   "title": "Burlesque Variety Show with Open Cowboy Bar",
+   "cred": false
+  }
+ ],
+ "Rey Perez": [
+  {
+   "year": 2024,
+   "camp": "LEGENDARY Playground of the Gods",
+   "title": "Master Manifestation at la Playa",
+   "cred": false
+  }
+ ],
+ "Big Soda": [
+  {
+   "year": 2024,
+   "camp": "Native Tongues",
+   "title": "\u201cBusting Our Biases\u201d with Big Soda and Clara",
+   "cred": false
+  }
+ ],
+ "Immoral Support Did": [
+  {
+   "year": 2024,
+   "camp": "UnExPecTed SexEd Talks",
+   "title": "Pre-Game Sex Conversations with Immoral Support",
+   "cred": false
+  }
+ ],
+ "Immoral Support Come": [
+  {
+   "year": 2024,
+   "camp": "UnExPecTed SexEd Talks",
+   "title": "Butt Stuff 101 with Immoral Support",
+   "cred": false
+  }
+ ],
+ "Jana Roemer": [
+  {
+   "year": 2024,
+   "camp": "Native Tongues",
+   "title": "A Psychonauts Dream ~ Astro Nidra with Jana Roemer",
+   "cred": false
+  }
+ ],
+ "Micah Cranman": [
+  {
+   "year": 2024,
+   "camp": "LEGENDARY Playground of the Gods",
+   "title": "The Art of Oneness",
+   "cred": false
+  }
+ ],
+ "Harry Nilsson": [
+  {
+   "year": 2024,
+   "camp": "My Dad's House",
+   "title": "Lime in Da Coco",
+   "cred": false
+  }
+ ],
+ "The King": [
+  {
+   "year": 2024,
+   "camp": "Kaleidoscope Collective",
+   "title": "Annual Rockabilly Hoedown",
+   "cred": false
+  }
+ ],
+ "Vikings Allow": [
+  {
+   "year": 2024,
+   "camp": "Camp Obelix",
+   "title": "Toe Sucking and Tickling by Vikings",
+   "cred": false
+  }
+ ],
+ "Transcendental Meditation Practice": [
+  {
+   "year": 2024,
+   "camp": "Pepperland",
+   "title": "Beatles Yoga with Transcendental Meditation",
+   "cred": false
+  }
+ ],
+ "Reverend Morpheus": [
+  {
+   "year": 2024,
+   "camp": "Brain Freeze Camp",
+   "title": "Matrix Wedding Wednesday",
+   "cred": false
+  }
+ ],
+ "Morning Mimosas": [
+  {
+   "year": 2024,
+   "camp": "Happy Hour",
+   "title": "Wet Down Wednesday",
+   "cred": false
+  }
+ ],
+ "Rock Star Teachers": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Yoga & Movement Meditation with Rock Star Teachers",
+   "cred": false
+  }
+ ],
+ "Burning Nerds Science-loving": [
+  {
+   "year": 2024,
+   "camp": "Center Camp Dining Table",
+   "title": "Future, Science & Coffee with Burning Nerds",
+   "cred": false
+  }
+ ],
+ "Burning Man Project": [
+  {
+   "year": 2024,
+   "camp": "Center Camp Stage",
+   "title": "Visions Toward Net Zero",
+   "cred": false
+  }
+ ],
+ "Tarot Using": [
+  {
+   "year": 2024,
+   "camp": "Dragons Nest",
+   "title": "Demystify Trees of Life and Knowledge with Tarot",
+   "cred": false
+  }
+ ],
+ "Ukrainian Borsch": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Warm Up with Ukrainian Borsch!",
+   "cred": false
+  }
+ ],
+ "Opening Performances": [
+  {
+   "year": 2024,
+   "camp": "Camp Kinetic",
+   "title": "BRC Burn Club with Opening Performances",
+   "cred": false
+  }
+ ],
+ "Tantric Kundalini Unveil": [
+  {
+   "year": 2024,
+   "camp": "KAIF",
+   "title": "Radiant Awakening with Tantric Kundalini",
+   "cred": false
+  }
+ ],
+ "Hamid Find": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Embodied Alchemy with Hamid",
+   "cred": false
+  }
+ ],
+ "Humo Maya Allow": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Cosmic Shamanic Sound Healing Journey by Humo Maya",
+   "cred": false
+  }
+ ],
+ "Temple Guardians Black": [
+  {
+   "year": 2024,
+   "camp": "Kidsville to Temple",
+   "title": "Temple and Trek: A Visit with Temple Guardians",
+   "cred": false
+  }
+ ],
+ "Eye Gazing Still": [
+  {
+   "year": 2024,
+   "camp": "Mystopia",
+   "title": "Grounding on the Playa: Meditation with Eye Gazing",
+   "cred": false
+  }
+ ],
+ "Lamplighters Come": [
+  {
+   "year": 2024,
+   "camp": "Lamplighter Chapel/Village",
+   "title": "Volunteer with Lamplighters",
+   "cred": false
+  }
+ ],
+ "Gravity Ambient Set": [
+  {
+   "year": 2024,
+   "camp": "Gravity",
+   "title": "Rising with Gravity Ambient Set",
+   "cred": false
+  }
+ ],
+ "Susie Participate": [
+  {
+   "year": 2024,
+   "camp": "Camp Come Find Us CCFU",
+   "title": "Grounding Morning Yoga Flow with Susie",
+   "cred": false
+  }
+ ],
+ "Yaari This": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Black Light Elephant Mural by Yaari",
+   "cred": false
+  }
+ ],
+ "Consciousness Expansion Fundamental": [
+  {
+   "year": 2024,
+   "camp": "Camp Contact",
+   "title": "Cranio-base release with Consciousness Expansion",
+   "cred": false
+  }
+ ],
+ "Non Violent Communication": [
+  {
+   "year": 2024,
+   "camp": "Camp Contact",
+   "title": "NVC for Sex and Intimacy: A Workshop for Couples",
+   "cred": false
+  }
+ ],
+ "Melter Come": [
+  {
+   "year": 2024,
+   "camp": "Camp Contact",
+   "title": "Ecstaturday on Playa with Melter",
+   "cred": false
+  }
+ ],
+ "Olga Emotions": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Discover E-motional Freedom with Olga",
+   "cred": false
+  }
+ ],
+ "Vintage Culture": [
+  {
+   "year": 2024,
+   "camp": "Playground",
+   "title": "AfterBurner",
+   "cred": false
+  }
+ ],
+ "Carl Cox": [
+  {
+   "year": 2024,
+   "camp": "Playground",
+   "title": "Slappin' Sunset",
+   "cred": false
+  }
+ ],
+ "Brazilian Babe All": [
+  {
+   "year": 2024,
+   "camp": "Retrofrolic",
+   "title": "Morning Stretch with Brazilian Babe",
+   "cred": false
+  }
+ ],
+ "Korseted How": [
+  {
+   "year": 2024,
+   "camp": "Retrofrolic",
+   "title": "Kinky Conversation & Negotiation with Korseted",
+   "cred": false
+  }
+ ],
+ "Tania Have": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Elephantine Hatha Yoga by Tania",
+   "cred": false
+  }
+ ],
+ "Dr. Meat The Doctor": [
+  {
+   "year": 2024,
+   "camp": "Mos Eisley Village",
+   "title": "Vermouth Tasting with Dr. Meat",
+   "cred": false
+  }
+ ],
+ "Indian Roots Our": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Masala Chai - Eclectic beats with Indian Roots",
+   "cred": false
+  }
+ ],
+ "Funky Monkey Get": [
+  {
+   "year": 2024,
+   "camp": "GYST - Get Your Shit Together",
+   "title": "Ladies Night featuring Funky Monkey",
+   "cred": false
+  }
+ ],
+ "Chetan Navigate": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Space Disco Rocketship - Tech EDM  by Chetan",
+   "cred": false
+  }
+ ],
+ "Katt Grant Human": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Understanding Human Design Types, by Katt Grant",
+   "cred": false
+  }
+ ],
+ "Mathias Novovesky": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Ecstatic EDM by Mathias Novovesky",
+   "cred": false
+  }
+ ],
+ "Rachel Jordana": [
+  {
+   "year": 2024,
+   "camp": "I Love Elephants",
+   "title": "Ecstatic Dance with Rachel Jordana -join the herd!",
+   "cred": false
+  }
+ ],
+ "Dr. Chubbonius Spleen Imbalanced": [
+  {
+   "year": 2024,
+   "camp": "Campus Callosum",
+   "title": "Phrenology Clinic by Dr. Chubbonius Spleen",
+   "cred": false
+  }
+ ],
+ "Raccoons Disco": [
+  {
+   "year": 2024,
+   "camp": "Raccoons",
+   "title": "Shake your Trash!",
+   "cred": false
+  }
+ ],
+ "Temple Priestesses": [
+  {
+   "year": 2024,
+   "camp": "Naked Heart",
+   "title": "Temple Procession",
+   "cred": false
+  }
+ ],
+ "Bandha Play Bandhas": [
+  {
+   "year": 2024,
+   "camp": "qt pies",
+   "title": "Hands-on Yoga with Bandha Play",
+   "cred": false
+  }
+ ],
+ "Live Deep House": [
+  {
+   "year": 2024,
+   "camp": "Possible Muertos",
+   "title": "Yoga Flow with Live Deep House Beats",
+   "cred": false
+  }
+ ],
+ "Stefania Exclusive Burner": [
+  {
+   "year": 2024,
+   "camp": "Ataraxia",
+   "title": "Burner Makeup Session with Stefania",
+   "cred": false
+  }
+ ],
+ "Stef Those": [
+  {
+   "year": 2024,
+   "camp": "Monkey Business",
+   "title": "Buff Stuff with Stef",
+   "cred": false
+  }
+ ],
+ "Nassim Haramein World": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Technology & Consciousness with Nassim Haramein",
+   "cred": false
+  }
+ ],
+ "Nassim Haramein Participate": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "The Time Travel Experience - with Nassim Haramein",
+   "cred": false
+  }
+ ],
+ "Therapeutic Acroyoga You": [
+  {
+   "year": 2024,
+   "camp": "Camp Contact",
+   "title": "Playing with Therapeutic Acroyoga",
+   "cred": false
+  }
+ ],
+ "Soya Sophia": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Sonya Sophia EFT: Mystic Metamorphosis",
+   "cred": false
+  }
+ ],
+ "Henna Active": [
+  {
+   "year": 2024,
+   "camp": "?",
+   "title": "Healing with Henna",
+   "cred": false
+  }
+ ],
+ "Tallulah Stop": [
+  {
+   "year": 2024,
+   "camp": "Cool Cat Cafe",
+   "title": "Teatime with Tallulah",
+   "cred": false
+  }
+ ],
+ "Authentic Turks": [
+  {
+   "year": 2024,
+   "camp": "Plaisance",
+   "title": "Turkish Coffee and Culture",
+   "cred": false
+  }
+ ],
+ "Your Ancestors Establish": [
+  {
+   "year": 2024,
+   "camp": "Love Plumbers",
+   "title": "How to Connect with Your Ancestors",
+   "cred": false
+  }
+ ],
+ "Dr Mike Explore": [
+  {
+   "year": 2024,
+   "camp": "EBB & Glow Village",
+   "title": "How Do Psychedelics Work with Dr Mike",
+   "cred": false
+  }
+ ],
+ "Yakara Breathwork": [
+  {
+   "year": 2024,
+   "camp": "BuddhaCamp @ the Lotus Dome",
+   "title": "Emotive Breathwork and Discussion with Yakara",
+   "cred": false
+  }
+ ],
+ "Miiime Exploration": [
+  {
+   "year": 2024,
+   "camp": "EBB & Glow Village",
+   "title": "Core Flow: Meditation in Movement with Miiime",
+   "cred": false
+  }
+ ],
+ "Kabbalistic Tarot Cards": [
+  {
+   "year": 2024,
+   "camp": "EBB & Glow Village",
+   "title": "An Oracle Reading with Kabbalistic Tarot Cards",
+   "cred": false
+  }
+ ],
+ "Mas Mike Awaken": [
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Energy Awakening with Mas Mike",
+   "cred": false
+  }
+ ],
+ "Extinct Oasis": [
+  {
+   "year": 2024,
+   "camp": "Extinct Oasis",
+   "title": "Dead Bird Cookout",
+   "cred": false
+  }
+ ],
+ "Mother Ocean Come": [
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Sacred Mantra Chanting with Mother Ocean",
+   "cred": false
+  }
+ ],
+ "Dr. Heath Schechinger": [
+  {
+   "year": 2024,
+   "camp": "PolyParadise",
+   "title": "Q&A on Advances in Legal Rights for Diverse Family",
+   "cred": false
+  }
+ ],
+ "Shane Thunder": [
+  {
+   "year": 2024,
+   "camp": "KeyHaus",
+   "title": "Soundgasm Experience",
+   "cred": false
+  }
+ ],
+ "Love Hosted": [
+  {
+   "year": 2024,
+   "camp": "Pookah Lounge/SNAFUBAR",
+   "title": "From Macedonia with Love",
+   "cred": false
+  }
+ ],
+ "Stan Quantum": [
+  {
+   "year": 2024,
+   "camp": "A Transformation Station",
+   "title": "Timeline Jumping Breathwork with Stan",
+   "cred": false
+  }
+ ],
+ "Phoenix Mei": [
+  {
+   "year": 2024,
+   "camp": "KeyHaus",
+   "title": "Embodied Sovereignty with Phoenix Mei",
+   "cred": false
+  }
+ ],
+ "Brunchy Cocktails Bring": [
+  {
+   "year": 2024,
+   "camp": "Lakes on the Playa Village",
+   "title": "Body Painting with Brunchy Cocktails",
+   "cred": false
+  }
+ ],
+ "Rat Camp": [
+  {
+   "year": 2023,
+   "camp": "Cornstars",
+   "title": "GBHH",
+   "cred": false
+  }
+ ],
+ "Camp Codename Follow": [
+  {
+   "year": 2023,
+   "camp": "on playa",
+   "title": "Pizza Party on-playa with Camp Codename",
+   "cred": false
+  }
+ ],
+ "Suspended Animation Join": [
+  {
+   "year": 2023,
+   "camp": "Suspended Animation",
+   "title": "Night Flight with Suspended Animation",
+   "cred": false
+  }
+ ],
+ "Barbie Death Village": [
+  {
+   "year": 2023,
+   "camp": "Barbie Death Village",
+   "title": "Critical Tits Body Painting",
+   "cred": false
+  }
+ ],
+ "Day Breakers Booze": [
+  {
+   "year": 2023,
+   "camp": "Crossroads",
+   "title": "Crossroads presents Day Breakers Booze & Games",
+   "cred": false
+  }
+ ],
+ "Pumaccinos Note": [
+  {
+   "year": 2023,
+   "camp": "Harmonic Convergence Camp",
+   "title": "The Night Starts with Pumaccinos",
+   "cred": false
+  }
+ ],
+ "Pink Floyd": [
+  {
+   "year": 2023,
+   "camp": "Reverbia",
+   "title": "The 50th Anniversary of Dark Side of the Moon",
+   "cred": false
+  }
+ ],
+ "Carolyn Just": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Ecstatic Dance: Photosynthesis with Carolyn",
+   "cred": false
+  }
+ ],
+ "Theo Tap": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Ecstatic Dance Vibrations of LOVE with Theo",
+   "cred": false
+  }
+ ],
+ "Stewart Harvey": [
+  {
+   "year": 2023,
+   "camp": "Children of Chaos",
+   "title": "Personal selections, long-time playa photographers",
+   "cred": false
+  }
+ ],
+ "Karen Temple's": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Ecstatic Dance Bass Temple Bass by Karen",
+   "cred": false
+  }
+ ],
+ "Camp Threat": [
+  {
+   "year": 2023,
+   "camp": "Black Rock Boutique",
+   "title": "Badboys's Vape Trick Contest!",
+   "cred": false
+  }
+ ],
+ "Chris Discover": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Beginning in Stillness-Intro to Improv with Chris",
+   "cred": false
+  }
+ ],
+ "Cosmic Twist": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Giggle",
+   "title": "HIIT with Cosmic Twist",
+   "cred": false
+  }
+ ],
+ "Fish Fishing": [
+  {
+   "year": 2023,
+   "camp": "Flaming Ugly Cowboy Saloon",
+   "title": "Tuesdays with Fish",
+   "cred": false
+  }
+ ],
+ "Nightly Time-": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Giggle",
+   "title": "24/7 Giggle Oasis with Nightly Time-Lapse",
+   "cred": false
+  }
+ ],
+ "Friends Start": [
+  {
+   "year": 2023,
+   "camp": "Serenity Now",
+   "title": "Morning Coffee with Friends",
+   "cred": false
+  }
+ ],
+ "Tucker The Unfolding": [
+  {
+   "year": 2023,
+   "camp": "Metamodern Magicians",
+   "title": "The Unfolding Now (Emergent Dialogue) with Tucker",
+   "cred": false
+  }
+ ],
+ "Tucker How": [
+  {
+   "year": 2023,
+   "camp": "Metamodern Magicians",
+   "title": "Gathering in Wholeness with Tucker",
+   "cred": false
+  }
+ ],
+ "Layman When": [
+  {
+   "year": 2023,
+   "camp": "Metamodern Magicians",
+   "title": "Prana and Consent with Layman",
+   "cred": false
+  }
+ ],
+ "Dr. Joey Need": [
+  {
+   "year": 2023,
+   "camp": "Buddha Lounge",
+   "title": "Osteopathic Work with Dr. Joey",
+   "cred": false
+  }
+ ],
+ "Cosmic Jukebox The": [
+  {
+   "year": 2023,
+   "camp": "Crossroads & Moon Cheese Village",
+   "title": "Crossroads presents Cosmic Jukebox",
+   "cred": false
+  }
+ ],
+ "Freeze Pops": [
+  {
+   "year": 2023,
+   "camp": "Mystopia",
+   "title": "Penguins, Popsicles & Padam",
+   "cred": false
+  }
+ ],
+ "Iced Coffee": [
+  {
+   "year": 2023,
+   "camp": "Alter Ego",
+   "title": "Coffee, Chai & Chill",
+   "cred": false
+  }
+ ],
+ "Cold Water": [
+  {
+   "year": 2023,
+   "camp": "Apokalyptika",
+   "title": "Hydration Bar & Margarita Bar",
+   "cred": false
+  }
+ ],
+ "Miss Kim": [
+  {
+   "year": 2023,
+   "camp": "Clock Suckers",
+   "title": "Rainbow Tea Ceremony Throwdown",
+   "cred": false
+  }
+ ],
+ "Stef Kneading": [
+  {
+   "year": 2023,
+   "camp": "Monkey Business",
+   "title": "Buff Stuff with Stef",
+   "cred": false
+  }
+ ],
+ "Tricky Bring": [
+  {
+   "year": 2023,
+   "camp": "Ludus Symposium",
+   "title": "Acoustic Jam with Tricky",
+   "cred": false
+  }
+ ],
+ "Fuckin Stellar Bloody": [
+  {
+   "year": 2023,
+   "camp": "Soulshakers",
+   "title": "Blood Was Never Mary\u2019s",
+   "cred": false
+  }
+ ],
+ "Charlie Buckets Welcome": [
+  {
+   "year": 2023,
+   "camp": "Monkey Business",
+   "title": "A Willy Wonka sunrise with Charlie Buckets",
+   "cred": false
+  }
+ ],
+ "The Space Champs": [
+  {
+   "year": 2023,
+   "camp": "Red Nose District",
+   "title": "Space Safari featuring The Space Champs",
+   "cred": false
+  }
+ ],
+ "Heavy Petting Zoo": [
+  {
+   "year": 2023,
+   "camp": "Kidsville",
+   "title": "Unicorn Tea Party with Heavy Petting Zoo",
+   "cred": false
+  }
+ ],
+ "Artificial Intelligence": [
+  {
+   "year": 2023,
+   "camp": "Mystic",
+   "title": "Creativity in the Age of AI",
+   "cred": false
+  }
+ ],
+ "Maddie Contact Beyond": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Contact Beyond Contact Dance with Maddie",
+   "cred": false
+  }
+ ],
+ "Algae Join Data": [
+  {
+   "year": 2023,
+   "camp": "Earth Guardians",
+   "title": "Changing the World with Algae",
+   "cred": false
+  }
+ ],
+ "Tilly Tassels Learn": [
+  {
+   "year": 2023,
+   "camp": "TechnoGecko Grotto",
+   "title": "Twerkin' and Tassels Twirlin' w/ Tilly Tassels",
+   "cred": false
+  }
+ ],
+ "Cinder Learn": [
+  {
+   "year": 2023,
+   "camp": "Ludus Symposium",
+   "title": "Bellydancing with Cinder",
+   "cred": false
+  }
+ ],
+ "Live Entertainment Indulge": [
+  {
+   "year": 2023,
+   "camp": "Raised by Wolves",
+   "title": "Cold-Brew Cafe w/ Live Entertainment",
+   "cred": false
+  }
+ ],
+ "Bachan Transcendental Breath": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "7D somatic breathwork activation with Bachan",
+   "cred": false
+  }
+ ],
+ "Anatolii Join": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Breathwork with Anatolii",
+   "cred": false
+  }
+ ],
+ "Amelia Tired": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "How to Destroy Whiteness 2.0 with Amelia",
+   "cred": false
+  }
+ ],
+ "Maddie Feed": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Body Paint Contact Dance with Maddie",
+   "cred": false
+  }
+ ],
+ "Bachan Stretch": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Vinyasa or Yin Yoga with Bachan",
+   "cred": false
+  }
+ ],
+ "Captain Hammer Come": [
+  {
+   "year": 2023,
+   "camp": "Ludus Symposium",
+   "title": "Nickleback and Picklebacks with Captain Hammer",
+   "cred": false
+  }
+ ],
+ "Animalia Music The": [
+  {
+   "year": 2023,
+   "camp": "Crossroads & Moon Cheese Village",
+   "title": "Crossroads presents Animalia Music",
+   "cred": false
+  }
+ ],
+ "Tigrr Life": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Ecstatic Dance - Release with Tigrr",
+   "cred": false
+  }
+ ],
+ "Funky Town Soul": [
+  {
+   "year": 2023,
+   "camp": "Crossroads & Moon Cheese Village",
+   "title": "Crossroads presents Funky Town",
+   "cred": false
+  }
+ ],
+ "Drunken Hacks Not": [
+  {
+   "year": 2023,
+   "camp": "Strong Tonic Center for Vitality",
+   "title": "Tarot Card Readings by Drunken Hacks",
+   "cred": false
+  }
+ ],
+ "Luis Gallardo": [
+  {
+   "year": 2023,
+   "camp": "Iron Monkeys",
+   "title": "Find your b\u0113 with cosmic pets. Deconstructing Self",
+   "cred": false
+  }
+ ],
+ "Gary Underpants Tantra": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Romance Dance with Gary Underpants",
+   "cred": false
+  }
+ ],
+ "Gamma Breathwork": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Full Moon Gamma Ecstatic Dance",
+   "cred": false
+  }
+ ],
+ "Ela Come": [
+  {
+   "year": 2023,
+   "camp": "Rootist Lounge",
+   "title": "Yoga flow with Ela",
+   "cred": false
+  }
+ ],
+ "Lana Let": [
+  {
+   "year": 2023,
+   "camp": "Rootist Lounge",
+   "title": "Animal Flow Yoga with Lana",
+   "cred": false
+  }
+ ],
+ "Watermelon Find": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Laughter Meditation with Watermelon",
+   "cred": false
+  }
+ ],
+ "Tuning Forks Learn": [
+  {
+   "year": 2023,
+   "camp": "High Vibe Tribe!",
+   "title": "Sound Healing with Tuning Forks",
+   "cred": false
+  }
+ ],
+ "Admiral Painjoy": [
+  {
+   "year": 2023,
+   "camp": "Spanky's Village (and Wine Bar)",
+   "title": "MPR -- Morning Painjoy Radio",
+   "cred": false
+  }
+ ],
+ "Gary Ecstatic Yoga": [
+  {
+   "year": 2023,
+   "camp": "RhythmWave",
+   "title": "Ecstatic Yoga with Gary",
+   "cred": false
+  }
+ ],
+ "Solfeggio Tuning Fork": [
+  {
+   "year": 2023,
+   "camp": "High Vibe Tribe!",
+   "title": "Cosmic Alignment of 3,6,9",
+   "cred": false
+  }
+ ],
+ "Nowhere Portal Contemplate": [
+  {
+   "year": 2023,
+   "camp": "(The Elusive) Golden Guy Alley",
+   "title": "Sake in Purgatory with Nowhere Portal",
+   "cred": false
+  }
+ ],
+ "Contact Improv Introductory": [
+  {
+   "year": 2023,
+   "camp": "Camp Contact",
+   "title": "Getting Started with Contact Improv",
+   "cred": false
+  }
+ ],
+ "Ampersand Pick": [
+  {
+   "year": 2023,
+   "camp": "Black Rock City Tea Company",
+   "title": "Human Karaoke with Ampersand",
+   "cred": false
+  }
+ ],
+ "Participation Look": [
+  {
+   "year": 2023,
+   "camp": "Inspiration Oasis",
+   "title": "Oasis Hub, Fueled by Participation",
+   "cred": false
+  }
+ ],
+ "Cool Cats": [
+  {
+   "year": 2023,
+   "camp": "Cool Cat Cafe",
+   "title": "Paws & Reflect Meditation",
+   "cred": false
+  }
+ ],
+ "Jen Awaken The": [
+  {
+   "year": 2023,
+   "camp": "RhythmWave",
+   "title": "Movement Medicine w/ Jen",
+   "cred": false
+  }
+ ],
+ "Stager Lee": [
+  {
+   "year": 2023,
+   "camp": "Approximately 5:15 & E",
+   "title": "Tiki Bar Happy Hour",
+   "cred": false
+  }
+ ],
+ "The Simpsons": [
+  {
+   "year": 2023,
+   "camp": "Astral Lab",
+   "title": "Movie Showing - Village of the Damned",
+   "cred": false
+  }
+ ],
+ "Melina Partner": [
+  {
+   "year": 2023,
+   "camp": "SpiritWild",
+   "title": "New Style Hustle and Dance Cypher with Melina",
+   "cred": false
+  }
+ ],
+ "Words Nostalgia": [
+  {
+   "year": 2023,
+   "camp": "Black Hole Literary Society",
+   "title": "Music with Words",
+   "cred": false
+  }
+ ],
+ "Cuddle Puddle": [
+  {
+   "year": 2023,
+   "camp": "People of Color Camp",
+   "title": "Cuddle and Consent",
+   "cred": false
+  }
+ ],
+ "Sake Bomb Sunday": [
+  {
+   "year": 2023,
+   "camp": "Camp Hot Cheeks",
+   "title": "Sake Bomb Sunday",
+   "cred": false
+  }
+ ],
+ "Great Music": [
+  {
+   "year": 2023,
+   "camp": "TRANCEylvania",
+   "title": "Palinca Shots and TRANCEylvania Sushi",
+   "cred": false
+  }
+ ],
+ "Nestinari Firedancers": [
+  {
+   "year": 2023,
+   "camp": "?",
+   "title": "Bulgarian Kuker Wedding with Nestinari Firedancers",
+   "cred": false
+  }
+ ],
+ "Big Bunny": [
+  {
+   "year": 2023,
+   "camp": "TBD inner playa art project along with Heavy Petting Zoo art car",
+   "title": "Ramen Sunrise with Big Bunny",
+   "cred": false
+  }
+ ],
+ "Cannon Blast Get": [
+  {
+   "year": 2023,
+   "camp": "HHC",
+   "title": "Neon Body Paint by Cannon Blast",
+   "cred": false
+  }
+ ],
+ "Buddha Bass": [
+  {
+   "year": 2023,
+   "camp": "Buddha Lounge",
+   "title": "Yoga",
+   "cred": false
+  }
+ ],
+ "Team Fingerbang Pep": [
+  {
+   "year": 2023,
+   "camp": "Camp Fingerbang",
+   "title": "Pep Rally with Team Fingerbang",
+   "cred": false
+  }
+ ],
+ "Frogma Team Fingerbang": [
+  {
+   "year": 2023,
+   "camp": "Camp Fingerbang",
+   "title": "Homecoming Hoppy Hour with Frogma Team Fingerbang",
+   "cred": false
+  }
+ ],
+ "Cold Frogaritas": [
+  {
+   "year": 2023,
+   "camp": "Camp Fingerbang",
+   "title": "Homecoming Hoppy Hour with Frogma Team Fingerbang",
+   "cred": false
+  }
+ ],
+ "Telescope Viewing Dance": [
+  {
+   "year": 2023,
+   "camp": "Space Jr",
+   "title": "Space Jr's Lunar Tour Party w/ Telescope Viewing",
+   "cred": false
+  }
+ ],
+ "Tanory Flow": [
+  {
+   "year": 2023,
+   "camp": "Anahasana Village",
+   "title": "Morning Elemental Yoga with Tanory",
+   "cred": false
+  }
+ ],
+ "Tanory Learn": [
+  {
+   "year": 2023,
+   "camp": "Anahasana Village",
+   "title": "Somatic Experiencing with Tanory",
+   "cred": false
+  }
+ ],
+ "Myofascial Space": [
+  {
+   "year": 2023,
+   "camp": "Space Jr",
+   "title": "Self Massage Class with Myofascial SpaceBalls",
+   "cred": false
+  }
+ ],
+ "Mycodelic Forest Offering": [
+  {
+   "year": 2023,
+   "camp": "Mycodelic Forest",
+   "title": "Dusty Bean Cafe by Mycodelic Forest",
+   "cred": false
+  }
+ ],
+ "Dave Come": [
+  {
+   "year": 2023,
+   "camp": "Hushville",
+   "title": "Eating oranges with Dave",
+   "cred": false
+  }
+ ],
+ "Kiwi Dave": [
+  {
+   "year": 2023,
+   "camp": "Hushville",
+   "title": "Eating oranges with Dave",
+   "cred": false
+  }
+ ],
+ "Mada \r\nTue": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Llama",
+   "title": "Llama petting zoo & vulnerability Lounge",
+   "cred": false
+  }
+ ],
+ "Cindy \r\nWed": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Llama",
+   "title": "Llama petting zoo & vulnerability Lounge",
+   "cred": false
+  }
+ ],
+ "Erica\r\nThu": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Llama",
+   "title": "Llama petting zoo & vulnerability Lounge",
+   "cred": false
+  }
+ ],
+ "Andrea\r\nFri": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Llama",
+   "title": "Llama petting zoo & vulnerability Lounge",
+   "cred": false
+  }
+ ],
+ "Cindy\r\nSat": [
+  {
+   "year": 2023,
+   "camp": "Cosmic Llama",
+   "title": "Llama petting zoo & vulnerability Lounge",
+   "cred": false
+  }
+ ],
+ "Yee Haw's Bong": [
+  {
+   "year": 2023,
+   "camp": "Wufkat Village",
+   "title": "Glass Blowing: How to Blow a Dick",
+   "cred": false
+  }
+ ],
+ "Lunar Snacks Let": [
+  {
+   "year": 2023,
+   "camp": "Vibe Check",
+   "title": "Moon and Planet gazing with Lunar Snacks",
+   "cred": false
+  }
+ ],
+ "Bat Out": [
+  {
+   "year": 2023,
+   "camp": "SomeDay Isle ...",
+   "title": "Greet and Meatloaf Welcome Home Singalong",
+   "cred": false
+  }
+ ],
+ "Black Rock City": [
+  {
+   "year": 2023,
+   "camp": "Black Rock City Community College",
+   "title": "College Bar Night with CO Beer!",
+   "cred": false
+  }
+ ],
+ "Sound Immersion Excursion": [
+  {
+   "year": 2023,
+   "camp": "Raditude",
+   "title": "Slow Yogamalia Flow with Sound Immersion Excursion",
+   "cred": false
+  }
+ ],
+ "Parlor Tricks": [
+  {
+   "year": 2023,
+   "camp": "Retire-Bees",
+   "title": "Parlor Tricks Industrial Ragtime Band",
+   "cred": false
+  }
+ ],
+ "Love Gothic Rocktails": [
+  {
+   "year": 2023,
+   "camp": "Pookah Lounge/SNAFUBAR",
+   "title": "From Macedonia, with Love",
+   "cred": false
+  }
+ ],
+ "Holocracy Learn": [
+  {
+   "year": 2023,
+   "camp": "Black Rock City Community College",
+   "title": "Empowering Self-Governance with Holocracy",
+   "cred": false
+  }
+ ],
+ "Terrapin Cocktails": [
+  {
+   "year": 2023,
+   "camp": "Pookah Lounge/SNAFUBAR",
+   "title": "Grateful Sky Safari Lounge and Spinning Contest",
+   "cred": false
+  }
+ ],
+ "Amazian Dave Looking": [
+  {
+   "year": 2023,
+   "camp": "Ludus Symposium",
+   "title": "Trivia with Amazian Dave",
+   "cred": false
+  }
+ ],
+ "Mud Stop": [
+  {
+   "year": 2023,
+   "camp": "Cheezy Oasis",
+   "title": "Mornings with Mud",
+   "cred": false
+  }
+ ],
+ "Burning Man's": [
+  {
+   "year": 2023,
+   "camp": "CouchBurners",
+   "title": "Trap/Neuter Release",
+   "cred": false
+  }
+ ],
+ "Booze Nervous": [
+  {
+   "year": 2023,
+   "camp": "Bad Education",
+   "title": "Parent-Teacher Conference with Booze",
+   "cred": false
+  }
+ ],
+ "Moloch Game Theory": [
+  {
+   "year": 2023,
+   "camp": "Metamodern Magicians",
+   "title": "A Frolic with Moloch",
+   "cred": false
+  }
+ ],
+ "Nsync Nspired": [
+  {
+   "year": 2023,
+   "camp": "Champagne Lounge",
+   "title": "Boy Band Fanatics Friday",
+   "cred": false
+  }
+ ],
+ "Master Steam Bind": [
+  {
+   "year": 2023,
+   "camp": "Astral Lab",
+   "title": "Knot Tying Seminar with Master Steam",
+   "cred": false
+  }
+ ],
+ "Master Steam": [
+  {
+   "year": 2023,
+   "camp": "Astral Lab",
+   "title": "Knot Tying Seminar with Master Steam",
+   "cred": false
+  }
+ ],
+ "Tulpa Art Car": [
+  {
+   "year": 2023,
+   "camp": "Hot Mess Camp",
+   "title": "Radical day disco and mezcal mule bar",
+   "cred": false
+  }
+ ],
+ "Car Keys": [
+  {
+   "year": 2023,
+   "camp": "Camp Exclamation Mark!",
+   "title": "Monkeys with Car Keys!",
+   "cred": false
+  }
+ ],
+ "Austin Mao": [
+  {
+   "year": 2023,
+   "camp": "Hot Mess Camp",
+   "title": "Psychedelics Neuroscience",
+   "cred": false
+  }
+ ],
+ "Fun Sway Gain": [
+  {
+   "year": 2023,
+   "camp": "Playfully Yours Village",
+   "title": "The Art of Spanking with Fun Sway",
+   "cred": false
+  }
+ ],
+ "Gnome Sloth Gnome": [
+  {
+   "year": 2023,
+   "camp": "Illumination Village",
+   "title": "Fire Flower Garden",
+   "cred": false
+  }
+ ],
+ "Real Life": [
+  {
+   "year": 2023,
+   "camp": "Camp Exclamation Mark!",
+   "title": "CPN with Real Life NPC's",
+   "cred": false
+  }
+ ],
+ "Pia Clear": [
+  {
+   "year": 2023,
+   "camp": "HeeBeeGeeBee Healers",
+   "title": "Meditate with Pia",
+   "cred": false
+  }
+ ],
+ "Disco Flow Yoga": [
+  {
+   "year": 2023,
+   "camp": "Found It",
+   "title": "Disco Yoga",
+   "cred": false
+  }
+ ],
+ "Jeff Goldblum": [
+  {
+   "year": 2023,
+   "camp": "Metric Duck Ton",
+   "title": "Nude Life Drawing with Jeff Goldblum",
+   "cred": false
+  }
+ ],
+ "Human Marshmallow Firepit": [
+  {
+   "year": 2023,
+   "camp": "The Royals",
+   "title": "The Great Firepit of London with Human Marshmallow",
+   "cred": false
+  }
+ ],
+ "Rose Water Delicacy": [
+  {
+   "year": 2023,
+   "camp": "The Royals",
+   "title": "Henna Inspired Facial Art and Temporary Tattoos",
+   "cred": false
+  }
+ ],
+ "Dean Barlese Discover": [
+  {
+   "year": 2023,
+   "camp": "Temple Guardians",
+   "title": "Temple Talk: Paiute Echoes with Dean Barlese",
+   "cred": false
+  }
+ ],
+ "Dean Barlese": [
+  {
+   "year": 2023,
+   "camp": "Temple Guardians",
+   "title": "Temple Talk: Paiute Echoes with Dean Barlese",
+   "cred": false
+  }
+ ],
+ "Little Elle's Costume": [
+  {
+   "year": 2023,
+   "camp": "Stag Camp",
+   "title": "Little Elle's Costume Tent",
+   "cred": false
+  }
+ ],
+ "Astra Need": [
+  {
+   "year": 2023,
+   "camp": "Stag Camp",
+   "title": "Misting with Astra",
+   "cred": false
+  }
+ ],
+ "Mini Kilts": [
+  {
+   "year": 2023,
+   "camp": "Spaghetti Taco Camp",
+   "title": "Mini Kilt Monday",
+   "cred": false
+  }
+ ],
+ "Maple Whiskey": [
+  {
+   "year": 2023,
+   "camp": "Dusty Beavers",
+   "title": "Maple Taffy & Maple Whiskey - DIY",
+   "cred": false
+  }
+ ],
+ "Camp Counselor Bear": [
+  {
+   "year": 2023,
+   "camp": "Duckbutt",
+   "title": "Patch Up Mash Up with Camp Counselor Bear Claw",
+   "cred": false
+  }
+ ],
+ "Camp Counselor Pebbles": [
+  {
+   "year": 2023,
+   "camp": "Duckbutt",
+   "title": "Black Rock Nature Walk with Camp Counselor Pebbles",
+   "cred": false
+  }
+ ],
+ "Couchburners Yin": [
+  {
+   "year": 2023,
+   "camp": "CouchBurners",
+   "title": "Yoga with Couchburners",
+   "cred": false
+  }
+ ],
+ "Words Party": [
+  {
+   "year": 2023,
+   "camp": "Champagne Campaign",
+   "title": "Music with Words Party!",
+   "cred": false
+  }
+ ],
+ "Projections Need": [
+  {
+   "year": 2023,
+   "camp": "Lucid Dreams",
+   "title": "Lucid Dreaming Tea Party with Projections",
+   "cred": false
+  }
+ ],
+ "Custom Burning Man": [
+  {
+   "year": 2023,
+   "camp": "Camp Sand Mandala",
+   "title": "Tarot Card Readings with Custom Burning Man Deck",
+   "cred": false
+  }
+ ],
+ "Cacophony Society Alums": [
+  {
+   "year": 2023,
+   "camp": "Center Camp",
+   "title": "Cacophony Society Cocktail Party",
+   "cred": false
+  }
+ ],
+ "Camp Morning Wood's": [
+  {
+   "year": 2023,
+   "camp": "Camp Morning Wood",
+   "title": "DJ Dance Party at Sunset",
+   "cred": false
+  }
+ ],
+ "Paiute Elder Unearth": [
+  {
+   "year": 2023,
+   "camp": "Center Camp",
+   "title": "Understanding our Playa Home with Paiute Elder",
+   "cred": false
+  }
+ ],
+ "Paiute Elder": [
+  {
+   "year": 2023,
+   "camp": "Center Camp",
+   "title": "Understanding our Playa Home with Paiute Elder",
+   "cred": false
+  }
+ ],
+ "The Playa Improvides": [
+  {
+   "year": 2023,
+   "camp": "The Lost Penguins",
+   "title": "Improv Comedy Show",
+   "cred": false
+  }
+ ],
+ "Christmas Karaoke": [
+  {
+   "year": 2023,
+   "camp": "Insomnophilia",
+   "title": "InsomnoNic\u2019s Caf\u00e9 for Very Naughty Nocturnes",
+   "cred": false
+  }
+ ],
+ "Wonky Colors Camp": [
+  {
+   "year": 2023,
+   "camp": "Priscilla",
+   "title": "Wonky Imperfection",
+   "cred": false
+  }
+ ],
+ "The Human Library": [
+  {
+   "year": 2023,
+   "camp": "Hour Kava",
+   "title": "Homecoming Human Library",
+   "cred": false
+  }
+ ],
+ "Starfish Starfish": [
+  {
+   "year": 2023,
+   "camp": "Contraptionists",
+   "title": "Psychic Readings with Starfish",
+   "cred": false
+  }
+ ],
+ "Professional Artists Face": [
+  {
+   "year": 2023,
+   "camp": "I Love Elephants",
+   "title": "Body Painting by Professional Artists",
+   "cred": false
+  }
+ ],
+ "Double Props Learn": [
+  {
+   "year": 2023,
+   "camp": "Minimal Chaos",
+   "title": "Developing Fire Flow Combos with Double Props",
+   "cred": false
+  }
+ ],
+ "Scents Stretch": [
+  {
+   "year": 2023,
+   "camp": "Square Zer|o|",
+   "title": "Stretch Slab with Scents",
+   "cred": false
+  }
+ ],
+ "Marcie Learn": [
+  {
+   "year": 2023,
+   "camp": "Square Zer|o|",
+   "title": "Watercolor with Marcie",
+   "cred": false
+  }
+ ],
+ "Matthew You": [
+  {
+   "year": 2023,
+   "camp": "Booty Hunters",
+   "title": "Bird Facts with Matthew",
+   "cred": false
+  }
+ ],
+ "Soulful Beats Everyday": [
+  {
+   "year": 2023,
+   "camp": "I Love Elephants",
+   "title": "DJ - Ethnic Sounds. Come Flow with Soulful Beats",
+   "cred": false
+  }
+ ],
+ "Nick Guided": [
+  {
+   "year": 2023,
+   "camp": "Soft Landing",
+   "title": "Breath-work with Nick",
+   "cred": false
+  }
+ ],
+ "International Artist": [
+  {
+   "year": 2023,
+   "camp": "I Love Elephants",
+   "title": "Body Painting by International Artist",
+   "cred": false
+  }
+ ],
+ "Morse Code Make": [
+  {
+   "year": 2023,
+   "camp": "AdramaNation",
+   "title": "Manifest with Morse Code",
+   "cred": false
+  }
+ ],
+ "Triple Trouble Wake": [
+  {
+   "year": 2023,
+   "camp": "Happy Hour",
+   "title": "Coffee Talk with Triple Trouble",
+   "cred": false
+  }
+ ],
+ "Strings Join": [
+  {
+   "year": 2023,
+   "camp": "AdramaNation",
+   "title": "Sexy Stretching with Strings",
+   "cred": false
+  }
+ ],
+ "Pyrokitten Fire Jam": [
+  {
+   "year": 2023,
+   "camp": "Camp Kinetic",
+   "title": "BRC Burn Club w/Opening Ceremony by Pyrokitten",
+   "cred": false
+  }
+ ],
+ "Peter Join Peter": [
+  {
+   "year": 2023,
+   "camp": "KISS",
+   "title": "Yoga w/ Peter",
+   "cred": false
+  }
+ ],
+ "Alex Join Alex": [
+  {
+   "year": 2023,
+   "camp": "KISS",
+   "title": "Breathwork w/ Alex",
+   "cred": false
+  }
+ ],
+ "Movement Artist Jon": [
+  {
+   "year": 2023,
+   "camp": "Foam Home as Foamier & Homier",
+   "title": "Lessons from Asian Internal Martial Arts",
+   "cred": false
+  }
+ ],
+ "Puerto Rican": [
+  {
+   "year": 2023,
+   "camp": "The Shrimp Ranch",
+   "title": "Coquito 4 All!",
+   "cred": false
+  }
+ ],
+ "Chai Tea": [
+  {
+   "year": 2023,
+   "camp": "Spice N Vice",
+   "title": "Learn To Write Your Name in Arabic & Hookah Lounge",
+   "cred": false
+  }
+ ],
+ "Your Shadow Feel": [
+  {
+   "year": 2023,
+   "camp": "Naked Heart",
+   "title": "Get Intimate with Your Shadow",
+   "cred": false
+  }
+ ]
+}

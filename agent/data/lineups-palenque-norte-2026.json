@@ -1,0 +1,156 @@
+{
+ "source": "https://palenquenorte.vercel.app/data.js",
+ "camp": "Camp Soft Landing",
+ "address": "6:30 & F",
+ "series": "Palenque Norte Speaker Series",
+ "year": 2026,
+ "dates": "2026-08-31 to 2026-09-04",
+ "fetched": "2026-08-25",
+ "speakers": [
+  {
+   "name": "Anastasia Miron",
+   "title": "Epigenetics and Stem Cells reprogramming / evidence based longevity",
+   "blurb": "Aging is not a destiny. It is a program. And programs can be rewritten. Epigenetic clocks are now precise enough to measure biological age down to the tissue level; stem cell engineering is restoring function in systems once thought irreversible. This chamber convenes the researchers doing the hard, exacting work of understanding what drives cellular aging \u2014 and what can slow it, reverse it, or render it beside the point."
+  },
+  {
+   "name": "Bryan Watson",
+   "title": "Off the Grid, On the Network: Your Guide to Mesh",
+   "blurb": "What's a mesh network? How does it work? How do you set up your first device? No tech background required. Learn why mesh matters \u2014 decentralized, resilient, community-owned \u2014 how the daisy-chain concept actually works, and walk out ready to join one. Bring questions."
+  },
+  {
+   "name": "David Hua (Chairman Bao)",
+   "title": "Solar Without the Overwhelm: Your Camp's Guide to Energy Independence",
+   "blurb": "Want your camp \u2014 or your personal setup \u2014 to run on pure solar? Real-world steps to go green: what equipment actually works, how to size your system without drowning in math, common mistakes to avoid, and how to get your whole camp on board. Practical, no-bullshit guidance for Playa energy independence."
+  },
+  {
+   "name": "Marcus De Paula (Next Level)",
+   "title": "Solar Without the Overwhelm: Your Camp's Guide to Energy Independence",
+   "blurb": "Want your camp \u2014 or your personal setup \u2014 to run on pure solar? Real-world steps to go green: what equipment actually works, how to size your system without drowning in math, common mistakes to avoid, and how to get your whole camp on board. Practical, no-bullshit guidance for Playa energy independence."
+  },
+  {
+   "name": "David Hua (Chairman Bao) & Marcus De Paula (Next Level)",
+   "title": "Solar Without the Overwhelm: Your Camp's Guide to Energy Independence",
+   "blurb": "Want your camp \u2014 or your personal setup \u2014 to run on pure solar? Real-world steps to go green: what equipment actually works, how to size your system without drowning in math, common mistakes to avoid, and how to get your whole camp on board. Practical, no-bullshit guidance for Playa energy independence."
+  },
+  {
+   "name": "Lei Ling (Ling)",
+   "title": "Sound Bowls",
+   "blurb": null
+  },
+  {
+   "name": "Mani (trytab)",
+   "title": "DJ *trytab*",
+   "blurb": "Through intricate textures, unexpected rhythms, and moments of euphoric self-awareness, trytab hopes to recreate the feeling of being young in a bedroom with your best friends, melting into each other until the music says enough on its own. He hopes you leave a little softer than when you arrived."
+  },
+  {
+   "name": "Matthew Sundquist",
+   "title": "Fly Ranch \u00d7 Burners Without Borders",
+   "blurb": null
+  },
+  {
+   "name": "Zac Cirivello",
+   "title": "Fly Ranch \u00d7 Burners Without Borders",
+   "blurb": null
+  },
+  {
+   "name": "Jaymie Braun",
+   "title": "Fly Ranch \u00d7 Burners Without Borders",
+   "blurb": null
+  },
+  {
+   "name": "Christopher Breedlove",
+   "title": "Fly Ranch \u00d7 Burners Without Borders",
+   "blurb": null
+  },
+  {
+   "name": "Matt, Zac, Jaymie & Breedlove",
+   "title": "Fly Ranch \u00d7 Burners Without Borders",
+   "blurb": null
+  },
+  {
+   "name": "Micah Baylor (Bolognese)",
+   "title": "Nobody's Coming to Save You (And They're Billing You For It)",
+   "blurb": "Knowing how to read who's ripping you off in your health insurance plan. Micah Baylor \u2014 Health Insurance Angel, serving the good people of Playa."
+  },
+  {
+   "name": "Eva Frye",
+   "title": "Whale Meditation",
+   "blurb": "A ~30-minute spatial audio journey built from humpback whale bubble-net feeding recordings from Gitga'at territory, BC. A whale group spirals upward through its own curtain of bubbles, coordinating with feeding calls and surfacing as one. Spatial audio places listeners inside the pod's acoustic world \u2014 from first call to final breach."
+  },
+  {
+   "name": "Adam Alloy",
+   "title": "The Non-Binary State Solution",
+   "blurb": "Black Rock City is one of the most ambitious temporary cities ever created \u2014 yet beyond art, energy and mobility lies an overlooked system: food. From regenerative sourcing and collaborative kitchens to compost, waste reduction, and shared resources between camps, Charles proposes food as critical civic infrastructure, and introduces the emerging BRC Food Systems initiative."
+  },
+  {
+   "name": "Maryzelle Ungo",
+   "title": "DJ set",
+   "blurb": null
+  },
+  {
+   "name": "Grover Norquist",
+   "title": "DJ Nikki Fiji",
+   "blurb": null
+  },
+  {
+   "name": "Taylor Andrews (Tay)",
+   "title": "Rising Sparks, Igniting the Next Generation",
+   "blurb": "Rising Sparks, Igniting the Next Generation"
+  },
+  {
+   "name": "Seek Healing",
+   "title": "Healing workshop",
+   "blurb": "Is the brain a wax tablet, an iceberg, a theater or a computer? It may be none of these, but a whirlpool instead. Brains, like whirlpools, are in continuous flux. They settle into states that remain stable for a while (like whirls), but rearrange constantly in response to external input. Without the right kind of input, both brains and whirlpools would cease to be. A major challenge in neuroscience is figuring out how to capture these dynamics: what kind of flux makes the healthy brain? What happens when our brains stop flowing as they should? How can we keep them moving? Music and psychedelics, two quintessentially human healing activities, may help us answer these questions. Join us for two research case studies and a lot of speculation!"
+  },
+  {
+   "name": "Mario Stepanik",
+   "title": "Time & space of whole-brain dynamics: how music and psychedelics move our minds",
+   "blurb": "Is the brain a wax tablet, an iceberg, a theater or a computer? It may be none of these, but a whirlpool instead. Brains, like whirlpools, are in continuous flux. They settle into states that remain stable for a while (like whirls), but rearrange constantly in response to external input. Without the right kind of input, both brains and whirlpools would cease to be. A major challenge in neuroscience is figuring out how to capture these dynamics: what kind of flux makes the healthy brain? What happens when our brains stop flowing as they should? How can we keep them moving? Music and psychedelics, two quintessentially human healing activities, may help us answer these questions. Join us for two research case studies and a lot of speculation!"
+  },
+  {
+   "name": "Mario Stepanik & Auri",
+   "title": "Time & space of whole-brain dynamics: how music and psychedelics move our minds",
+   "blurb": "Is the brain a wax tablet, an iceberg, a theater or a computer? It may be none of these, but a whirlpool instead. Brains, like whirlpools, are in continuous flux. They settle into states that remain stable for a while (like whirls), but rearrange constantly in response to external input. Without the right kind of input, both brains and whirlpools would cease to be. A major challenge in neuroscience is figuring out how to capture these dynamics: what kind of flux makes the healthy brain? What happens when our brains stop flowing as they should? How can we keep them moving? Music and psychedelics, two quintessentially human healing activities, may help us answer these questions. Join us for two research case studies and a lot of speculation!"
+  },
+  {
+   "name": "Green Dot Ranger Twilight",
+   "title": "One Brain Per Customer",
+   "blurb": "A humorously serious workshop on creating psychedelic journeys while minimizing risks, plus Q&A."
+  },
+  {
+   "name": "Youtian (Splinter) Duan",
+   "title": "Building for Burning: The Artist's Reality",
+   "blurb": null
+  },
+  {
+   "name": "Trevor Getsla",
+   "title": "The Journey of Touch: Skilled Bodywork in Psychedelic Guiding",
+   "blurb": "A lively conversation on the role bodywork and movement therapy play within the evolving models of psychedelic guiding. Trevor is a Structural Integration Practitioner from Santa Cruz, California."
+  },
+  {
+   "name": "Chelsea Borruano",
+   "title": "The Emotional Trip",
+   "blurb": "Emotions constantly alter our consciousness. Fear changes what we see. Desire changes what we seek. Grief bends time. Awe changes our sense of scale.  The Emotional Trip is a playful, participatory exploration of the realities our emotions create. Through movement, reflection, and connection, we'll get curious about the emotions we seek, the ones we avoid, and what might happen when we stop treating difficult feelings as problems to solve and start treating them as portals worth exploring."
+  },
+  {
+   "name": "Rick Doblin",
+   "title": "MAPS",
+   "blurb": null
+  },
+  {
+   "name": "Pastor Dave",
+   "title": "Lessons from 30g & the Psychedelic Church",
+   "blurb": "What if one of the most powerful technologies for changing consciousness isn't a drug at all\u2014but a story?  Filmmaker, author and psychedelic historian Lindsay Kent traces the strange history of how stories about altered states have been used to shape American reality, from Harry Anslinger and the war on drugs to MKUltra, psychedelic prohibition and today's renaissance. But Burning Man offers a very different experiment: tens of thousands of people collectively agreeing, for one week, to create a reality that didn't exist before.  Drawing from years of research into psychedelic history as well as her own experiences inside psychedelic culture, Kent explores propaganda, synchronicity, cognitive liberty and the strange feedback loop between imagination and experience. If human beings can be taught to fear certain states of consciousness, can we also consciously create new stories about what's possible?"
+  },
+  {
+   "name": "Annie Oak",
+   "title": "More Than Just OG: The History of Camp Soft Landing",
+   "blurb": "Annie Oak, the founder of Camp Soft Landing, will talk about the history of the camp and its unique social structures that can help efficiently organize other camps and communities outside the Burn."
+  },
+  {
+   "name": "Da Palenque Norte Presents: Nectarpalooza",
+   "title": "",
+   "blurb": ""
+  }
+ ]
+}
