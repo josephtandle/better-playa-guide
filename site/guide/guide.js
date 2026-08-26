@@ -3881,6 +3881,30 @@
     window.addEventListener('hashchange', checkShareHash);
     window.addEventListener('hashchange', applyHashMode);
 
+    /* Anonymous daily usage ping: a random token and today's date, nothing
+       else (no IP kept, no account, no location). Fires once per day, only
+       when online; the guide never depends on it. */
+    (function usagePing(){
+      try {
+        if (typeof fetch !== 'function') return;
+        if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+        var day = new Date(Date.now() - 7 * 3600 * 1000).toISOString().slice(0, 10);
+        if (localStorage.getItem('bpg.pinged') === day) return;
+        var cid = localStorage.getItem('bpg.cid');
+        if (!cid) {
+          cid = Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 8);
+          localStorage.setItem('bpg.cid', cid);
+        }
+        fetch('/api/ping', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: cid }),
+          keepalive: true
+        }).then(function(){ try { localStorage.setItem('bpg.pinged', day); } catch(e){} })
+          .catch(function(){});
+      } catch(e){}
+    })();
+
     /* Find tab: on the finder page itself it exits My Events instead of reloading */
     document.addEventListener('click', function(e){
       if (!e.target || !e.target.closest) return;
