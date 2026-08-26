@@ -17,6 +17,9 @@ Format: date logged | source (handle/site/person) | how it surfaced | what it yi
 - 2026-08-27 | @black.rock.philharmonic (reel, July 31) | Joe's IG screenshots | richer detail than the poster: Wed PULSE Preview at Gothic Folly, Thu Dies Irae w/ Playa Choir, Meir Briskman on PULSE | YES: check the account's REELS as well as posts; details differ between formats
 - 2026-08-27 | @talulahmusic (via @sydneycampos) | Joe's IG feed screenshot | Talulah sets: Amma Mon, Disorient Express Wed, Camp Bloom Fri | YES: artist set-time cards
 - 2026-08-27 | @crspymusic (via @karawang) | Joe's IG feed screenshot (7-slide carousel) | Crspy sets: Cum to Prom midnight Wed, Opulent Temple White Party sunrise Thu | YES: artist carousels; slide 1 is the schedule, rest are photos
+- 2026-08-27 | @kohbain_ | Joe's IG feed screenshot (5-slide) | Kohbain sets: DeMentha x3, Axolotl takeover, Ataraxia, Janky Barge | YES: artist set-time posters
+- 2026-08-27 | @wafflesandhouse | Joe's IG feed screenshot | Corporate Waffle Retreat art car details (depart 1pm Wed from 8:30 & C) | YES: camp save-the-date cards carry logistics official listings lack
+- 2026-08-27 | @dustmelissa (via @sydneycampos) | Joe's IG feed screenshot | Melissa sets at BYTE, Horizon, Shitty Glitter, MindShark (no times yet) | YES but posters can carry stale street names (listed old Chomolungma + wrong Shitty Glitter address); always cross-check camp placement
 - 2026-08-26 | word of mouth (Joe) | direct tip | Shalman & Sheila Demoura at Gaian Airship Fri 12am before Mel Semé & OVEOUS | YES: Joe's own network beats every scraper for late additions
 - 2026-08-25 | heebeegeebeehealers.org | Joe link | 2026 page live but schedule image still 2024 ("stay tuned") | YES but verify year on the image itself before ingesting (2024 poster shows old F-street address)
 

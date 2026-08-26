@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3973,
+  "count": 3982,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -92541,7 +92541,7 @@
     10
    ],
    "presenter": "OGAN, Yaz, Bobby Lyte, Kohbain, Feen",
-   "description": null,
+   "description": "DeMentha takeover on the Axolotl art car in the inner playa. Kohbain on the decks.",
    "schedule": [
     {
      "start": "09-02 21:00",
@@ -101853,7 +101853,7 @@
     10
    ],
    "presenter": "Fabio, Ryan Das, Ivo Naries, illich Mujica b2b Hedda Stenberg",
-   "description": null,
+   "description": "Company-sponsored wellness retreat on an art car: corporate waffles, groovy house music (no touching), drinks at the water cooler, team building. Group up 12:45pm, art car departs 1pm from 8:30 & C under the giant Waffles & House sign. Dress code: suits, corporate polos, khakis, visors, resort wear. Let your outie out on playa.",
    "schedule": [
     {
      "start": "09-02 13:00",
@@ -108948,6 +108948,195 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Kohbain at DeMentha",
+   "camp": "DeMentha",
+   "address": "3:00 & A",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Kohbain",
+   "description": "Kohbain afternoon set at DeMentha.",
+   "schedule": [
+    {
+     "start": "09-01 14:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp DeMentha dementhaofficial",
+   "grounded_score": null
+  },
+  {
+   "title": "Kohbain at DeMentha (Wednesday)",
+   "camp": "DeMentha",
+   "address": "3:00 & A",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Kohbain",
+   "description": "Kohbain early-evening set at DeMentha.",
+   "schedule": [
+    {
+     "start": "09-02 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp DeMentha dementhaofficial",
+   "grounded_score": null
+  },
+  {
+   "title": "Kohbain at Ataraxia",
+   "camp": "Ataraxia",
+   "address": "2:15 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Kohbain",
+   "description": "Kohbain evening set at Ataraxia.",
+   "schedule": [
+    {
+     "start": "09-03 20:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Ataraxia campataraxia",
+   "grounded_score": null
+  },
+  {
+   "title": "Kohbain on the Janky Barge",
+   "camp": "Janky Barge",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Kohbain",
+   "description": "Kohbain afternoon set on the Janky Barge in deep playa.",
+   "schedule": [
+    {
+     "start": "09-04 15:45",
+     "end": "17:15"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Janky Barge",
+   "grounded_score": null
+  },
+  {
+   "title": "Kohbain at DeMentha (Friday)",
+   "camp": "DeMentha",
+   "address": "3:00 & A",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Kohbain",
+   "description": "Kohbain Friday afternoon set at DeMentha.",
+   "schedule": [
+    {
+     "start": "09-04 16:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp DeMentha dementhaofficial",
+   "grounded_score": null
+  },
+  {
+   "title": "Melissa at BYTE Camp",
+   "camp": "BYTE Camp",
+   "address": "10:00 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Melissa",
+   "description": "Melissa (DustMelissa) set at BYTE Camp. Day and time TBA, follow @dustmelissa.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Melissa at Horizon",
+   "camp": "Horizon",
+   "address": "8:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Melissa",
+   "description": "Melissa (DustMelissa) set at Horizon. Day and time TBA.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Horizon horizoncamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Melissa at Shitty Glitter",
+   "camp": "Shitty Glitter",
+   "address": "8:30 & D",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Melissa",
+   "description": "Melissa (DustMelissa) set at Shitty Glitter. Day and time TBA. (Poster listed 2:00 & Great Oak; official placement is 8:30 & D.)",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Shitty Glitter shttyglitter",
+   "grounded_score": null
+  },
+  {
+   "title": "Melissa at MindShark",
+   "camp": "MindShark",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Melissa",
+   "description": "Melissa (DustMelissa) set at MindShark. Day and time TBA.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp MindShark",
    "grounded_score": null
   }
  ]
