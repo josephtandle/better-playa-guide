@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3968,
+  "count": 3973,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -108843,6 +108843,111 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Talulah at Amma",
+   "camp": "Amma",
+   "address": "2:00 & I",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Talulah",
+   "description": "Talulah live set at Amma Camp.",
+   "schedule": [
+    {
+     "start": "08-31 14:00",
+     "end": "15:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Amma",
+   "grounded_score": null
+  },
+  {
+   "title": "Talulah on the Disorient Express",
+   "camp": "Endstation",
+   "address": "9:15 & J",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Talulah",
+   "description": "Talulah set during the Disorient Express art car party at Camp Endstation.",
+   "schedule": [
+    {
+     "start": "09-02 22:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Endstation endstationcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Talulah at Camp Bloom",
+   "camp": "Camp Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Talulah",
+   "description": "Talulah sunset set at Camp Bloom.",
+   "schedule": [
+    {
+     "start": "09-04 19:00",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Crspy at Cum to Prom",
+   "camp": "Spanky's Wine Bar",
+   "address": "7:30 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Crspy",
+   "description": "Crspy set during the Cum to Prom party at Spanky's Wine Bar, midnight to 2am.",
+   "schedule": [
+    {
+     "start": "09-02 00:00",
+     "end": "02:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Spanky's Wine Bar SWB",
+   "grounded_score": null
+  },
+  {
+   "title": "Crspy sunrise at the White Party",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Crspy",
+   "description": "Crspy Thursday-sunrise set closing Opulent Temple's White Party, 5 to 6am.",
+   "schedule": [
+    {
+     "start": "09-03 05:00",
+     "end": "06:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
    "grounded_score": null
   }
  ]
