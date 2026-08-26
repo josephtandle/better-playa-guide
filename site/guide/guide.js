@@ -1197,7 +1197,7 @@
         var nrow = occRow(day.noTime[j]);
         var dayMs = dayStartMs(day.day);
         lines.push('BEGIN:VEVENT');
-        lines.push('UID:bpg-' + hashId(nrow.id) + '-' + icsDateOnly(dayMs) + 'redacted@example.invalid');
+        lines.push('UID:bpg-' + hashId(nrow.id) + '-' + icsDateOnly(dayMs) + '-allday@musecafe.vip');
         lines.push('DTSTAMP:' + stamp);
         lines.push('DTSTART;VALUE=DATE:' + icsDateOnly(dayMs));
         lines.push('DTEND;VALUE=DATE:' + icsDateOnly(dayMs + 24 * 3600 * 1000));

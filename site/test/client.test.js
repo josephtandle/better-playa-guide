@@ -363,6 +363,56 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
   ok(modal1.style.display === 'none', 'Start closes the onboarding');
   ok(e1.window.localStorage.getItem('bpg.seen.intro') === '1', 'bpg.seen.intro set after onboarding');
 
+  /* Typeahead tests: "Muse" -> MUSE Cafe, "Orgy Dome" -> And Then There's Only Love */
+  const suggMuse = e1.BPG.campSuggest('Muse');
+  ok(suggMuse.some(s => s.camp.indexOf('MUSE') !== -1), 'campSuggest("Muse") returns suggestion for MUSE Cafe');
+  const suggOrgy = e1.BPG.campSuggest('Orgy Dome');
+  ok(suggOrgy.some(s => s.camp.indexOf("And Then There's Only Love") !== -1), 'campSuggest("Orgy Dome") returns And Then There\'s Only Love');
+
+  /* Next-without-tap resolves and saves camp + address + location, updates location button label */
+  const eNext = boot();
+  const dNext = eNext.document;
+  dNext.getElementById('ob-name').value = 'Joe';
+  dNext.getElementById('ob-next-1').click();
+  dNext.getElementById('ob-camp').value = 'Muse';
+  dNext.getElementById('ob-next-2').click();
+  const profNext = JSON.parse(eNext.window.localStorage.getItem('bpg.profile') || '{}');
+  ok(profNext.name === 'Joe' && profNext.camp === 'MUSE Café' && profNext.campAddress === '8:15 & E',
+    'Next-without-tap resolves and saves camp + address (got ' + JSON.stringify(profNext) + ')');
+  ok(dNext.getElementById('loc').value === '8:15 & E', 'location store set to resolved address');
+  const locBtn = dNext.getElementById('loc-open-btn');
+  ok(locBtn && locBtn.textContent.indexOf('8:15 & E') !== -1, 'location button label shows the address after onboarding (got ' + (locBtn && locBtn.textContent) + ')');
+
+  /* Reopen prefills both fields and changing them updates storage */
+  dNext.getElementById('show-intro').click();
+  ok(dNext.getElementById('ob-name').value === 'Joe', 'reopen prefills name');
+  ok(dNext.getElementById('ob-camp').value === 'MUSE Café', 'reopen prefills camp');
+  dNext.getElementById('ob-name').value = 'Joseph';
+  dNext.getElementById('ob-next-1').click();
+  const profUpdated = JSON.parse(eNext.window.localStorage.getItem('bpg.profile') || '{}');
+  ok(profUpdated.name === 'Joseph', 'changing prefilled fields updates storage');
+
+  /* Re-run does not clobber a manually set location */
+  const eManual = boot({ localStorage: {
+    'bpg.seen.intro': '1',
+    'bpg.prefs': JSON.stringify({ loc: '9:15 & D', mode: '12', tags: [] }),
+    'bpg.profile': JSON.stringify({ name: 'Joe', camp: 'MUSE Café', campAddress: '8:15 & E', _locFromOnboarding: '8:15 & E' })
+  }});
+  const dManual = eManual.document;
+  dManual.getElementById('loc').value = '9:15 & D';
+  dManual.getElementById('show-intro').click();
+  dManual.getElementById('ob-next-1').click();
+  dManual.getElementById('ob-camp').value = 'Best Butt';
+  dManual.getElementById('ob-next-2').click();
+  ok(dManual.getElementById('loc').value === '9:15 & D', 're-run does not clobber a manually set location');
+  const profManual = JSON.parse(eManual.window.localStorage.getItem('bpg.profile') || '{}');
+  ok(profManual.camp === 'Best Butt', 'profile camp updated to Best Butt');
+
+  /* Email prefill in Move-to-another-device */
+  const eEmail = boot({ localStorage: { 'bpg.email': 'burner@example.com' } });
+  const emailInput = eEmail.document.getElementById('move-device-email');
+  ok(emailInput && emailInput.value === 'burner@example.com', 'email field in move-device prefills from bpg.email');
+
   /* skip path: a fresh user can skip both questions and still land in a working app */
   const e2 = boot();
   const d2 = e2.document;
@@ -668,6 +718,39 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
 })();
 
 /* =====================================================================
+ * 11b. My Events regression: SAME-DAY multi-set collapse (twice-reported).
+ *      One star on The Sound Garden's Sunday lineup (8 DJ sets on 08-30)
+ *      must render ONE row spanning the day with the set count, never a
+ *      row per set, and must serialise to exactly ONE calendar VEVENT.
+ * ===================================================================== */
+(function () {
+  const sgId = 'DJ sets|The Sound Garden|08-30 12:00';
+  const sg = EV.find(ev => ev.id === sgId);
+  ok(!!sg, 'payload carries the Sound Garden 08-30 DJ sets event (' + sgId + ')');
+  if (!sg) return;
+  const sameDay = (sg.s || []).filter(s => String(s[0]).indexOf('08-30') === 0).length;
+  ok(sameDay === 8, 'the event has 8 same-day slots on 08-30 (got ' + sameDay + ')');
+  const e = boot({ url: 'https://musecafe.vip/guide/#myevents',
+    localStorage: { 'bpg.stars': JSON.stringify([sgId]), 'bpg.seen.intro': '1' } });
+  const d = e.document;
+  const rows = Array.from(d.querySelectorAll('#list > li'))
+    .filter(li => !/itin-day/.test(li.className))
+    .filter(li => {
+      const ti = li.querySelector('.ti');
+      return ti && /DJ sets/i.test(ti.textContent);
+    });
+  ok(rows.length === 1, 'one starred 8-set day renders EXACTLY ONE My Events row (got ' + rows.length + ')');
+  ok(rows.length === 1 && /\(8 sets\)/.test(rows[0].textContent),
+    'the single row time text carries the set count "(8 sets)" (got ' +
+    (rows[0] ? JSON.stringify(rows[0].textContent.slice(0, 120)) : 'no row') + ')');
+  ok(d.getElementById('star-count').textContent === '1',
+    'count badge says 1 for one starred event (got ' + d.getElementById('star-count').textContent + ')');
+  const ics = e.BPG.buildIcs();
+  const vevents = (ics.match(/BEGIN:VEVENT/g) || []).length;
+  ok(vevents === 1, '.ics carries exactly ONE VEVENT for the 8-set star (got ' + vevents + ')');
+})();
+
+/* =====================================================================
  * 12. Move to another device: email-my-list flow (client side)
  * ===================================================================== */
 (function () {
@@ -696,11 +779,11 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
     captured = { url: url, body: JSON.parse(init.body) };
     return Promise.resolve({ status: 200, json: () => Promise.resolve({ ok: true }) });
   };
-  d.getElementById('move-device-email').value = 'redacted@example.invalid';
+  d.getElementById('move-device-email').value = 'dusty@example.com';
   form.dispatchEvent(new e.window.Event('submit', { bubbles: true, cancelable: true }));
   ok(!!captured && captured.url === '/api/list-sync', 'submit POSTs to /api/list-sync');
   if (captured) {
-    ok(captured.body.email === 'redacted@example.invalid', 'payload carries the email');
+    ok(captured.body.email === 'dusty@example.com', 'payload carries the email');
     ok(Array.isArray(captured.body.hashes) && captured.body.hashes.length === 1 &&
       /^[0-9a-f]{8}$/.test(captured.body.hashes[0]), 'payload carries 8-hex hashes per EVENT');
     ok(captured.body.hashes[0] === e.BPG.hashId(target.id), 'the hash matches the starred event');
@@ -771,6 +854,41 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
     'About page: Mystic names credited to the camp site');
   ok(/Opulent Temple's DJ sets, Syd Gris and all, reached us through the Rock Star Librarian guide and the Playa Set Library/.test(about),
     'About page: Opulent Temple lineups credited to RSL + Playa Set Library');
+  ok(/<h2[^>]*>Two ways to use it<\/h2>/.test(about),
+    'About page contains "Two ways to use it" heading sized per h2 scale');
+  ok(about.indexOf('https://github.com/josephtandle/better-playa-guide') !== -1,
+    'About page contains the GitHub link');
+  ok(/personal itinerary/.test(about),
+    'About page contains the phrase "personal itinerary"');
+  ok(about.indexOf('—') === -1,
+    'About page contains no em dashes');
+
+  /* redesigned About: card sections, source grid, mobile-safe layout */
+  for (const heading of ['Two ways to use it', 'Why this exists', 'Where the data comes from', 'How it works']) {
+    ok(about.indexOf('>' + heading + '</h2>') !== -1, 'About page has section heading: ' + heading);
+  }
+  const { JSDOM } = require('jsdom');
+  const adoc = new JSDOM(about).window.document;
+  ok(!!adoc.querySelector('.about-hero'), 'About page opens with a hero card');
+  const ways = adoc.querySelectorAll('.about-ways .about-card.about-way');
+  ok(ways.length === 2, 'the two ways render as two distinct cards (' + ways.length + ')');
+  ok(!!adoc.querySelector('.about-way-alt'), 'the install-your-own-AI path is a smaller third card');
+  const srcCards = adoc.querySelectorAll('.src-grid .src-card');
+  ok(srcCards.length >= 7, 'source grid has at least 7 source cards (' + srcCards.length + ')');
+  const tiers = adoc.querySelectorAll('.src-grid .src-tier-confirmed, .src-grid .src-tier-reported');
+  ok(tiers.length === srcCards.length, 'every source card carries a confidence tier badge');
+  /* credits survive the redesign */
+  for (const name of ['Kate Houston', 'Damian Tarnawsky', 'Avi Flombaum', 'Playa Set Library']) {
+    ok(about.indexOf(name) !== -1, 'About page credits ' + name);
+  }
+  /* no horizontal scroll at 390px: about layout is mobile-first, so every
+     about/src grid must be declared multi-column ONLY inside min-width
+     media queries, and the page carries no inline width styles */
+  const cssAll = fs.readFileSync(path.join(repoRoot, 'guide', 'guide.css'), 'utf8');
+  const aboutBase = cssAll.split('@media (min-width:640px)')[0];
+  ok(!/\.about-ways\{[^}]*grid-template-columns:[^}]*1fr 1fr/.test(aboutBase.replace(/\n\s*/g, '')),
+    'two-ways cards stack in the mobile base layout (side-by-side only >=640px)');
+  ok(!/width:\s*\d{3,}px/.test(about), 'About page has no fixed pixel widths in inline styles');
 })();
 
 /* =====================================================================

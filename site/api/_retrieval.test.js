@@ -195,28 +195,28 @@ test('14. Where is Opulent Temple', () => {
 });
 
 // 15. When is Shalman's set times?
+// 2026-08-26 re-harvest: Shalman's own flyer (WhatsApp) added Bisous Wed, Gaian
+// Airship Fri night, and Alchemist Bazaar Sun morning to his existing 3 sets.
 test("15. When is Shalman's set times?", () => {
   const r = G.retrieve("When is Shalman's set times?");
   assert.strictEqual(r.parsed.intent, 'person');
-  assert.strictEqual(r.candidates.length, 3);
-  assert.strictEqual(dayOf(r.candidates[0]), '09-04');
-  assert.strictEqual(dayOf(r.candidates[1]), '09-05');
-  assert.strictEqual(dayOf(r.candidates[2]), '09-06');
+  assert.strictEqual(r.candidates.length, 6);
+  const days = r.candidates.map(dayOf).sort();
+  assert.deepStrictEqual(days, ['09-02', '09-04', '09-05', '09-05', '09-06', '09-06']);
 });
 
 // 16. What are Shalman's set times?
 test("16. What are Shalman's set times?", () => {
   const r = G.retrieve("What are Shalman's set times?");
-  assert.strictEqual(r.candidates.length, 3);
-  assert.strictEqual(dayOf(r.candidates[0]), '09-04');
-  assert.strictEqual(dayOf(r.candidates[1]), '09-05');
-  assert.strictEqual(dayOf(r.candidates[2]), '09-06');
+  assert.strictEqual(r.candidates.length, 6);
+  const days = r.candidates.map(dayOf).sort();
+  assert.deepStrictEqual(days, ['09-02', '09-04', '09-05', '09-05', '09-06', '09-06']);
 });
 
 // 17. shalman
 test('17. shalman', () => {
   const r = G.retrieve('shalman');
-  assert.strictEqual(r.candidates.length, 3);
+  assert.strictEqual(r.candidates.length, 6);
 });
 
 // 18. When is illg?

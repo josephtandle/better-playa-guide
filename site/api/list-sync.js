@@ -18,7 +18,7 @@ const crypto = require('crypto');
 const store = require('./_store.js');
 
 const GUIDE_URL = 'https://musecafe.vip/guide/';
-const FROM = process.env.LIST_SYNC_FROM || 'Playa Guide <redacted@example.invalid>';
+const FROM = process.env.LIST_SYNC_FROM || 'Playa Guide <guide@musecafe.vip>';
 const PER_EMAIL_CAP = Number(process.env.LIST_SYNC_EMAIL_CAP || 3);    /* sends per email per day */
 const PER_IP_CAP = Number(process.env.LIST_SYNC_IP_CAP || 10);         /* sends per IP per day */
 const DAY = 86400;
