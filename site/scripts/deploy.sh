@@ -57,8 +57,13 @@ fi
 
 # 4. Ship it.
 echo "-- deploying to production"
-vercel --prod --yes --token "$VERCEL_TOKEN"
+vercel --prod --yes --token "$VERCEL_TOKEN" 2>&1 | sed "s/${VERCEL_TOKEN}/[token]/g"
 
 echo ""
 echo "Deployed. sw cache is bpg-v${NEXT}. Commit the sw.js bump:"
 echo "  git add guide/sw.js && git commit -m 'chore: bump sw cache to bpg-v${NEXT} (deploy)'"
+
+# 5. Mark this tree as the last known-green deploy (self-heal rollback target).
+git tag -f "guide-green-$(date -u +%Y%m%d-%H%M%S)" >/dev/null 2>&1 || true
+# keep only the 10 newest green tags
+git tag -l 'guide-green-*' --sort=-creatordate | tail -n +11 | xargs -I{} git tag -d {} >/dev/null 2>&1 || true

@@ -3881,6 +3881,39 @@
     window.addEventListener('hashchange', checkShareHash);
     window.addEventListener('hashchange', applyHashMode);
 
+    /* Error beacon: if the guide breaks on someone's phone mid-burn, the
+       error reaches home so it can be fixed while everyone is offline.
+       At most 3 reports per device per day; sends nothing personal. */
+    (function errorBeacon(){
+      var sent = 0;
+      function report(msg, src, line){
+        try {
+          if (sent >= 3 || typeof fetch !== 'function') return;
+          if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+          sent++;
+          fetch('/api/error', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: localStorage.getItem('bpg.cid') || null,
+              msg: String(msg).slice(0, 300),
+              src: String(src || '').slice(0, 200),
+              line: line || null,
+              ua: (navigator.userAgent || '').slice(0, 120)
+            }),
+            keepalive: true
+          }).catch(function(){});
+        } catch(e){}
+      }
+      window.addEventListener('error', function(ev){
+        report(ev.message || 'script error', ev.filename, ev.lineno);
+      });
+      window.addEventListener('unhandledrejection', function(ev){
+        var r = ev.reason;
+        report('unhandledrejection: ' + (r && (r.message || String(r)) || 'unknown'), '', null);
+      });
+    })();
+
     /* Anonymous daily usage ping: a random token and today's date, nothing
        else (no IP kept, no account, no location). Fires once per day, only
        when online; the guide never depends on it. */
