@@ -167,6 +167,16 @@ li.pin{border-left-color:var(--brass);background:#fff8ec}
 .meta{font:600 .78rem/1.4 Montserrat,sans-serif;color:var(--rouge-bright);font-variant-numeric:tabular-nums;margin-top:.1rem}
 .addr{font:700 .82rem/1.4 Montserrat,sans-serif;color:var(--smoke);letter-spacing:.02em;font-variant-numeric:tabular-nums}
 .card-foot{margin-top:.55rem;flex-wrap:wrap}
+.prov-badge.tier-own{background:rgba(216,165,75,.25);color:var(--rouge);border:1px solid var(--brass)}
+.own-del-btn{background:rgba(109,8,19,.06);border:1px solid rgba(109,8,19,.25);
+  font-size:1.05rem;cursor:pointer;min-width:44px;min-height:44px;display:inline-flex;
+  align-items:center;justify-content:center;padding:0;border-radius:8px;color:var(--rouge);
+  flex-shrink:0;transition:background .15s ease}
+.own-del-btn:hover{background:rgba(109,8,19,.14)}
+#own-event-form .row{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.45rem}
+#own-event-form input,#own-event-form select{flex:1;min-width:0;min-height:44px;border:1px solid var(--line);
+  border-radius:8px;padding:.4rem .6rem;font:500 .9rem/1.3 Montserrat,sans-serif;background:#fff;color:var(--ink)}
+#own-event-form input[type="time"]{flex:0 1 8.5rem}
 .who{font:600 .86rem/1.3 Montserrat,sans-serif;color:var(--rouge);margin-top:.15rem}
 .de{font-size:.86rem;color:var(--smoke);margin-top:.15rem;line-height:1.4}
 .card-actions{display:flex;align-items:center;gap:.35rem;flex-shrink:0}

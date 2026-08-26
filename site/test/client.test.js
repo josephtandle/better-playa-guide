@@ -1007,7 +1007,7 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   const actionBtns = d.querySelectorAll('.myevents-action-btn');
   const panels = d.querySelectorAll('.myevents-panel');
   ok(!!actionRow, 'action row element present in My Events');
-  ok(actionBtns.length === 4, 'row renders with exactly 4 buttons: calendar, PDF, move, install (' + actionBtns.length + ')');
+  ok(actionBtns.length === 5, 'row renders with exactly 5 buttons: calendar, PDF, own, move, install (' + actionBtns.length + ')');
   ok(Array.from(panels).every(p => p.style.display === 'none'), 'all panels hidden at rest');
 
   /* tapping opens one and closes others, aria-expanded updates, Escape closes */
@@ -1161,10 +1161,12 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
 
   /* 6. Exactly ONE text input rendered outside modals, live-filter on type still works, Enter asks */
   const mainInputs = Array.from(d.querySelectorAll('input')).filter(inp => {
-    return (inp.type === 'text' || inp.type === 'search') && !inp.closest('.modal-backdrop');
+    return (inp.type === 'text' || inp.type === 'search')
+      && !inp.closest('.modal-backdrop')
+      && !inp.closest('.myevents-panel');   /* accordion panels are collapsed at rest */
   });
   ok(mainInputs.length === 1 && mainInputs[0].id === 'ask-q',
-    'exactly ONE text input rendered outside modals (ask-q) (got ' + mainInputs.length + ')');
+    'exactly ONE text input rendered outside modals/panels (ask-q) (got ' + mainInputs.length + ')');
 
   /* live-filter still works on ask-q: input is debounced (200ms) so a full
      3.6k-event render does not run per keystroke; change flushes immediately */
@@ -1368,6 +1370,66 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   const ics = HOSTILE.BPG.buildIcs();
   ok(ics.indexOf('BEGIN:VCALENDAR') === 0, 'ics still builds with hostile title starred');
   ok(/SUMMARY:/.test(ics), 'ics has a SUMMARY line for the hostile event');
+})();
+
+/* =====================================================================
+ * Your own private events: add, render, persist, delete, stay private
+ * ===================================================================== */
+(function () {
+  const e = boot({ url: 'https://musecafe.vip/guide/#myevents' });
+  const d = e.document;
+
+  /* add via the form */
+  d.getElementById('own-title').value = 'Kitchen shift';
+  d.getElementById('own-day').value = '09-03';
+  d.getElementById('own-start').value = '10:00';
+  d.getElementById('own-end').value = '12:00';
+  d.getElementById('own-addr').value = '8:15 & E';
+  d.getElementById('own-note').value = 'Bring gloves';
+  d.getElementById('own-event-form').dispatchEvent(new e.window.Event('submit', { bubbles: true, cancelable: true }));
+
+  const stored = JSON.parse(e.window.localStorage.getItem('bpg.ownevents') || '[]');
+  ok(stored.length === 1 && stored[0].t === 'Kitchen shift' && stored[0].day === '09-03' && stored[0].hm === '10:00',
+    'own event persists to bpg.ownevents');
+  const listHtml = d.getElementById('list').innerHTML;
+  ok(listHtml.indexOf('Kitchen shift') !== -1, 'own event renders in My Events');
+  ok(/tier-own/.test(listHtml) && /Yours/.test(listHtml), 'own event carries the Yours badge');
+  ok(/own-del-btn/.test(listHtml), 'own event gets a delete button, not a star');
+  ok(listHtml.indexOf('Bring gloves') !== -1, 'own note renders on the card');
+
+  /* private: never leaves the phone */
+  const link = e.BPG.getShareableLink();
+  ok(link.indexOf('own-') === -1 && !/Kitchen/.test(link), 'own events never enter the share link');
+
+  /* it lands in the calendar download though */
+  const ics = e.BPG.buildIcs();
+  ok(/SUMMARY:Kitchen shift/.test(ics), 'own event exports in the .ics download');
+  ok(/Added by you in the Better Playa Guide/.test(ics.replace(/\r\n /g, '')), 'own event ics says it was added by you');
+
+  /* survives a reload */
+  const e2 = boot({
+    url: 'https://musecafe.vip/guide/#myevents',
+    localStorage: { 'bpg.ownevents': JSON.stringify(stored) }
+  });
+  ok(e2.document.getElementById('list').innerHTML.indexOf('Kitchen shift') !== -1,
+    'own event survives a full reload');
+
+  /* delete */
+  const delBtn = e2.document.querySelector('.own-del-btn');
+  delBtn.click();
+  const stored2 = JSON.parse(e2.window.localStorage.getItem('bpg.ownevents') || '[]');
+  ok(stored2.length === 0, 'delete removes the own event from storage');
+  ok(e2.document.getElementById('list').innerHTML.indexOf('Kitchen shift') === -1,
+    'deleted own event leaves the list');
+
+  /* validation: no day -> refused with a plain note */
+  const e3 = boot({ url: 'https://musecafe.vip/guide/#myevents' });
+  e3.document.getElementById('own-title').value = 'No day thing';
+  e3.document.getElementById('own-event-form').dispatchEvent(new e3.window.Event('submit', { bubbles: true, cancelable: true }));
+  ok((JSON.parse(e3.window.localStorage.getItem('bpg.ownevents') || '[]')).length === 0,
+    'own event without a day is refused');
+  ok(/Pick a day/.test(e3.document.getElementById('own-note-msg').textContent),
+    'refusal explains itself');
 })();
 
 /* ---- report ---- */

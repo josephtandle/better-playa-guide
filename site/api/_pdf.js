@@ -179,17 +179,18 @@ function buildListPdf(rows, opts) {
 
   /* ---- closing block on the last page (own page if it does not fit) ---- */
   var closing = [
-    ['F1', 'This guide was built by Joe Che of Muse Cafe (8:15 & E) in one day, on the plane to Burning Man,'],
-    ['F1', 'from the official listings plus hundreds of lineups pulled from camp Instagram, Telegram and WhatsApp.'],
-    ['F1', 'Times change on playa: trust the board at the camp over any schedule, including this one.'],
+    ['F1', 'I built this in one day, on the plane to Burning Man, from the official listings plus hundreds of'],
+    ['F1', 'lineups pulled straight from camp Instagram, Telegram and WhatsApp channels. Times change out'],
+    ['F1', 'there. Trust the board at the camp over any schedule, including this one.'],
     ['F1', ''],
-    ['F1', 'Latest listings, searchable and offline: musecafe.vip/guide'],
+    ['F1', 'The latest listings, searchable and offline: musecafe.vip/guide'],
     ['F1', ''],
-    ['F2', 'Happy Burn. Get lost on purpose. Push the buttons.'],
-    ['F2', 'Talk to strangers: out there, they are your best friends waiting to happen.'],
+    ['F2', 'Happy Burn. Get lost on purpose. Push the buttons you are not sure about.'],
+    ['F2', 'Talk to strangers. Some of the people I love most started as one.'],
     ['F2', 'Take risks inside your window of tolerance. Then take one more.'],
     ['F1', ''],
-    ['F2', 'With love, Joe Che, Muse Cafe. You are the muse.']
+    ['F1', 'Come say hi Thursday night at A Muse Us, Muse Cafe, 8:15 & E.'],
+    ['F2', 'With love, Joe Che. You are the muse.']
   ];
   var closeH = closing.length * (BODY_SIZE + 4) + 30;
   if (y - closeH < MARGIN) newPage(false);

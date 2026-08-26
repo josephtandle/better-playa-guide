@@ -25,15 +25,15 @@ function loadGuide() {
 }
 
 const SOURCES = {
-  0: { label: 'Official',      who: 'Burning Man official listings',                     tier: 'confirmed' },
-  1: { label: 'Camp site',     who: "the camp's own website",                            tier: 'confirmed' },
-  2: { label: 'Instagram',     who: 'a camp Instagram post',                             tier: 'reported'  },
-  3: { label: 'RSL',           who: 'Rock Star Librarian',                               tier: 'confirmed' },
-  4: { label: 'Set Library',   who: 'Playa Set Library, transcribed from flyers by hand', tier: 'reported' },
+  0: { label: 'WWW Guide',     who: 'the official Who What Where guide from Burning Man', tier: 'confirmed' },
+  1: { label: 'Camp Website',  who: "the camp's own official website",                   tier: 'confirmed' },
+  2: { label: 'Camp IG',       who: "the camp's own Instagram",                          tier: 'reported'  },
+  3: { label: 'RSL',           who: 'Rock Star Librarian, the long-running DJ set list', tier: 'confirmed' },
+  4: { label: 'Flyer',         who: 'Playa Set Library, transcribed from set-time flyers by hand', tier: 'reported' },
   5: { label: 'Telegram',      who: 'a post in the BM 2026 community Telegram groups',   tier: 'reported'  },
-  6: { label: 'Camp notice',   who: "a camp's own announcement posted to Telegram",      tier: 'confirmed' },
-  7: { label: 'Community cal', who: 'the crowd-sourced BM community Google Calendar',    tier: 'reported'  },
-  8: { label: 'IG flyer',      who: "read by OCR from a camp's own schedule image on Instagram", tier: 'reported' }
+  6: { label: 'Camp Official', who: "the camp's own announcement in its Telegram or WhatsApp channel", tier: 'confirmed' },
+  7: { label: 'Community Cal', who: 'the crowd-sourced BM community Google Calendar',    tier: 'reported'  },
+  8: { label: 'IG Flyer',      who: "read from the camp's own schedule flyer posted to Instagram", tier: 'reported' }
 };
 
 const TAGS = ['workshop','talk','party','music','food','drink','adult','wellness','art','ritual','game','kids','accessible','lineup','other'];
@@ -214,7 +214,7 @@ function scopeCheck(q) {
   for (const re of BLOCK_PATTERNS) if (re.test(raw)) return { ok: false, reason: 'blocked_pattern' };
   const low = raw.toLowerCase();
   if (/(\d{1,2})(:\d{2})?\s*(?:&|and|@|,)\s*(esp|esplanade|[a-k])\b/i.test(low)) return { ok: true, reason: 'address' };
-  if (/\b(?:when is|who is|who's|where is|where's|set ?times?|lineup|playing|spinning)\b/i.test(low)) {
+  if (/\b(?:when is|who is|who's|where is|where's|set ?times?|lineup|playing|spinning|speaking|talking|teaching|leading|performing)\b/i.test(low)) {
     return { ok: true, reason: 'person_query' };
   }
   const V = vocab();
@@ -246,7 +246,7 @@ const STOP = STOPWORDS;
 
 const STRUCTURAL_WORDS = new Set([
   'served', 'serving', 'when', 'set', 'sets', 'times', 'time',
-  'playing', 'spinning', 'lineup', 'b2b', 'dj'
+  'playing', 'spinning', 'lineup', 'b2b', 'dj', 'speaking', 'talking', 'teaching', 'leading', 'performing'
 ]);
 
 let FV_CACHE = null;

@@ -76,6 +76,13 @@
         <div><span class="tagline src prov-badge tier-confirmed"><span aria-hidden="true">●</span> Confirmed</span> Published by the source that runs the event.</div>
         <div><span class="tagline src prov-badge tier-reported"><span aria-hidden="true">○</span> Reported</span> Someone saw it and passed it on.</div>
         <div><span class="tagline src prov-badge tier-unverified"><span aria-hidden="true">◌</span> Unverified</span> No source recorded or running order with no clock time.</div>
+        <p class="prov-legend-sources"><strong>Where an event comes from:</strong>
+          <strong>WWW Guide</strong> is the official Who What Where guide from Burning Man.
+          <strong>Camp Official</strong> is the camp's own announcement channel, and <strong>Camp Website</strong> / <strong>Camp IG</strong> are the camp's own site and Instagram.
+          <strong>RSL</strong> is Rock Star Librarian, the long-running DJ set list.
+          <strong>Flyer</strong> / <strong>IG Flyer</strong> are set-time flyers, transcribed or read from the camp's own posts.
+          <strong>Telegram</strong> and <strong>Community Cal</strong> are community-shared.
+          <strong>Yours</strong> is an event you added yourself, private to this phone.</p>
       </div>
     </details>
   </div>
@@ -113,9 +120,13 @@
         <span class="myevents-action-icon" aria-hidden="true">📱</span>
         <span class="myevents-action-label">Move to another device</span>
       </button>
+      <button type="button" class="myevents-action-btn" id="myevents-btn-own" aria-expanded="false" aria-controls="myevents-panel-own">
+        <span class="myevents-action-icon" aria-hidden="true">✎</span>
+        <span class="myevents-action-label">Add your own event</span>
+      </button>
       <button type="button" class="myevents-action-btn" id="myevents-btn-install" aria-expanded="false" aria-controls="myevents-panel-install">
         <span class="myevents-action-icon" aria-hidden="true">⌂</span>
-        <span class="myevents-action-label">Add to home screen</span>
+        <span class="myevents-action-label">Add to Home Screen</span>
       </button>
     </div>
 
@@ -167,6 +178,33 @@
         </div>
       </div>
 
+      <div class="myevents-panel" id="myevents-panel-own" style="display:none">
+        <p class="myevents-panel-desc">A camp shift, a private wedding, a sunrise date. It lands in your list next to everything else, marked Yours. Private: it lives only on this phone and never leaves it.</p>
+        <form id="own-event-form" autocomplete="off">
+          <div class="row"><input id="own-title" type="text" maxlength="80" placeholder="What is it? e.g. Kitchen shift"></div>
+          <div class="row">
+            <select id="own-day" aria-label="Day">
+              <option value="">Pick a day</option>
+              <option value="08-30">Sunday Opening Day 30 Aug</option>
+              <option value="08-31">Monday 31 Aug</option>
+              <option value="09-01">Tuesday 1 Sep</option>
+              <option value="09-02">Wednesday 2 Sep</option>
+              <option value="09-03">Thursday 3 Sep</option>
+              <option value="09-04">Friday 4 Sep</option>
+              <option value="09-05">Saturday 5 Sep</option>
+              <option value="09-06">Sunday Temple Burn 6 Sep</option>
+              <option value="09-07">Monday 7 Sep</option>
+            </select>
+            <input id="own-start" type="time" aria-label="Start time">
+            <input id="own-end" type="time" aria-label="End time (optional)">
+          </div>
+          <div class="row"><input id="own-addr" type="text" maxlength="40" placeholder="Where? e.g. 8:15 &amp; E (optional)"></div>
+          <div class="row"><input id="own-note" type="text" maxlength="140" placeholder="Note to self (optional)"></div>
+          <div class="btnrow"><button type="submit" id="own-save" class="btn solid">Add to My Events</button></div>
+          <p id="own-note-msg" class="move-device-note"></p>
+        </form>
+      </div>
+
       <div class="myevents-panel" id="myevents-panel-install" style="display:none">
         <div id="install-block-itin" class="install-block" style="display:none">
           <button type="button" id="install-btn-itin" class="btn install-btn" style="display:none">Add to Home Screen</button>
@@ -191,7 +229,7 @@
   <h2>Take it with you</h2>
   <div class="panel">
     <p style="margin:0;font-size:.9rem">There is <strong>no signal on playa</strong>. All the data lives inside this page, so from your home screen it works with no bars, no wifi, no battery drain.</p>
-    <p style="margin:.5rem 0 0;font-size:.85rem;color:var(--smoke)"><strong>iPhone:</strong> Share icon, then <em>Add to Home Screen</em>. <strong>Android:</strong> the <strong>⋮</strong> menu, then <em>Add to Home screen</em>.</p>
+    <p style="margin:.5rem 0 0;font-size:.85rem;color:var(--smoke)"><strong>iPhone:</strong> Share icon, then <em>Add to Home Screen</em>. <strong>Android:</strong> the <strong>⋮</strong> menu, then <em>Add to Home Screen</em>.</p>
     <div id="install-block-save" class="install-block" style="display:none">
       <button type="button" id="install-btn-save" class="btn solid install-btn" style="display:none">Add to Home Screen</button>
       <p class="install-hint" id="install-hint-save" style="display:none"></p>

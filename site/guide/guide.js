@@ -21,6 +21,19 @@
 
   var mylistOnly = false;
 
+  /* ---- Your own private events (camp shifts, weddings). localStorage only:
+     never sent to any server, never in share links, PDFs or subscribe feeds.
+     They live and die on this phone, and the UI says so. ---- */
+  var OWN_PREF = 'bpg.ownevents';
+  var ownEvents = [];
+  try {
+    var rawOwn = JSON.parse(localStorage.getItem(OWN_PREF) || '[]');
+    if (Array.isArray(rawOwn)) ownEvents = rawOwn.filter(function(o){ return o && o.t; });
+  } catch(e){}
+  function saveOwnEvents(){
+    try { localStorage.setItem(OWN_PREF, JSON.stringify(ownEvents)); } catch(e){}
+  }
+
   /* ---- Repair doubled descriptions from the payload ("X X" -> "X").
      data.js ships ~3,400 records whose description is the same text twice.
      The payload is generated elsewhere, so undouble at load time. ---- */
@@ -752,15 +765,15 @@
 
   /* ---- Provenance & Trust Tiers ---- */
   var SRC = {
-    0: {label:'Official',    who:'Burning Man official listings', tier:'confirmed'},
-    1: {label:'Camp site',   who:"the camp's own website",        tier:'confirmed'},
-    2: {label:'Instagram',   who:'a camp Instagram post',         tier:'reported'},
-    3: {label:'RSL',         who:'Rock Star Librarian',           tier:'confirmed'},
-    4: {label:'Set Library', who:'Playa Set Library, transcribed from flyers by hand', tier:'reported'},
-    5: {label:'Telegram',    who:'a post in the BM 2026 community Telegram groups', tier:'reported'},
-    6: {label:'Camp notice', who:"a camp's own announcement posted to Telegram",    tier:'confirmed'},
-    7: {label:'Community cal', who:'the crowd-sourced BM community Google Calendar', tier:'reported'},
-    8: {label:'IG flyer',    who:"read by OCR from a camp's own schedule image on Instagram", tier:'reported'}
+    0: {label:'WWW Guide',    who:'the official Who What Where guide from Burning Man', tier:'confirmed'},
+    1: {label:'Camp Website', who:"the camp's own official website",   tier:'confirmed'},
+    2: {label:'Camp IG',      who:"the camp's own Instagram",          tier:'reported'},
+    3: {label:'RSL',          who:'Rock Star Librarian, the long-running DJ set list', tier:'confirmed'},
+    4: {label:'Flyer',        who:'Playa Set Library, transcribed from set-time flyers by hand', tier:'reported'},
+    5: {label:'Telegram',     who:'a post in the BM 2026 community Telegram groups', tier:'reported'},
+    6: {label:'Camp Official', who:"the camp's own announcement in its Telegram or WhatsApp channel", tier:'confirmed'},
+    7: {label:'Community Cal', who:'the crowd-sourced BM community Google Calendar', tier:'reported'},
+    8: {label:'IG Flyer',     who:"read from the camp's own schedule flyer posted to Instagram", tier:'reported'}
   };
 
   function getConfirmsMap(){
@@ -1000,6 +1013,32 @@
       }
     }
 
+    /* Your own private events slot into the same day buckets. */
+    for (i = 0; i < ownEvents.length; i++) {
+      var oe = ownEvents[i];
+      if (!oe || !oe.t) continue;
+      var obase = {
+        starId: oe.id, t: oe.t, c: oe.c || 'Your own event', a: oe.a || '',
+        p: '', desc: oe.n || '', src: undefined, g: [], pin: false, own: true
+      };
+      var placed = false;
+      if (oe.day && oe.hm) {
+        var slotO = [oe.day + ' ' + oe.hm, oe.end || null];
+        var stO = parseSlotTimes(slotO);
+        if (stO) {
+          timed.push({ e: obase, day: stO.dayStr, startMs: stO.start, endMs: stO.end, slot: slotO, earliestSlot: slotO, latestEndSlot: slotO, slotCount: 1, clash: [] });
+          placed = true;
+        }
+      }
+      if (!placed && oe.day) {
+        dateOnly.push({ e: obase, day: oe.day, startMs: null, endMs: null, slot: [oe.day, null], slotCount: 1, clash: [] });
+        placed = true;
+      }
+      if (!placed) {
+        undated.push({ e: obase, day: null, startMs: null, endMs: null, slot: null, slotCount: 0, clash: [] });
+      }
+    }
+
     timed.sort(function(a, b){ return a.startMs - b.startMs; });
 
     var days = [], dayMap = {};
@@ -1076,7 +1115,7 @@
     }
     return {
       id: e.starId, t: e.t, c: e.c, a: e.a, p: e.p, desc: e.desc,
-      src: e.src, g: e.g, pin: e.pin, slot: occ.earliestSlot || occ.slot, w: w,
+      src: e.src, g: e.g, pin: e.pin, own: !!e.own, slot: occ.earliestSlot || occ.slot, w: w,
       note: note, d: minsTo(e.a)
     };
   }
@@ -1239,6 +1278,12 @@
     function describe(row, extraLine){
       var parts = [];
       if (row.p) parts.push('Lineup: ' + row.p);
+      if (row.own) {
+        if (row.desc) parts.push(row.desc);
+        parts.push('Added by you in the Better Playa Guide.');
+        if (extraLine) parts.push(extraLine);
+        return parts.join('\n');
+      }
       var prov = provenance(row);
       parts.push(tierWords(prov.tier));
       if (extraLine) parts.push(extraLine);
@@ -1407,17 +1452,24 @@
     var dist = (o.d === null || o.d === undefined)
       ? (o.a ? '' : ' · location unknown')
       : ' · ' + o.d + ' min';
-    var prov = provenance(o);
-    var icon = prov.tier === 'confirmed' ? '●' : (prov.tier === 'reported' ? '○' : '◌');
-    var badge = '<span class="tagline src prov-badge tier-' + esc(prov.tier)
-      + '" title="' + esc(prov.who) + '"><span aria-hidden="true">'
-      + icon + '</span> ' + esc(prov.label) + '</span>';
-    var starBtn = o.id
-      ? '<button type="button" class="star-btn" data-id="' + esc(o.id)
-        + '" aria-pressed="' + (isStarred ? 'true' : 'false')
-        + '" aria-label="' + (isStarred ? 'Unstar ' : 'Star ') + esc(o.t)
-        + '"><span aria-hidden="true">' + (isStarred ? '★' : '☆') + '</span></button>'
-      : '';
+    var badge, starBtn;
+    if (o.own) {
+      badge = '<span class="tagline src prov-badge tier-own" title="Added by you. Lives only on this phone."><span aria-hidden="true">✎</span> Yours</span>';
+      starBtn = '<button type="button" class="own-del-btn" data-own-id="' + esc(o.id)
+        + '" aria-label="Delete ' + esc(o.t) + '"><span aria-hidden="true">🗑</span></button>';
+    } else {
+      var prov = provenance(o);
+      var icon = prov.tier === 'confirmed' ? '●' : (prov.tier === 'reported' ? '○' : '◌');
+      badge = '<span class="tagline src prov-badge tier-' + esc(prov.tier)
+        + '" title="' + esc(prov.who) + '"><span aria-hidden="true">'
+        + icon + '</span> ' + esc(prov.label) + '</span>';
+      starBtn = o.id
+        ? '<button type="button" class="star-btn" data-id="' + esc(o.id)
+          + '" aria-pressed="' + (isStarred ? 'true' : 'false')
+          + '" aria-label="' + (isStarred ? 'Unstar ' : 'Star ') + esc(o.t)
+          + '"><span aria-hidden="true">' + (isStarred ? '★' : '☆') + '</span></button>'
+        : '';
+    }
     var navBtn = o.a
       ? '<button type="button" class="nav-btn" data-addr="' + esc(o.a) + '" data-title="' + esc(o.t) + '"'
         + (o.slot && o.slot[0] ? ' data-start="' + esc(o.slot[0]) + '"' : (o.w ? ' data-start="' + esc(o.w) + '"' : ''))
@@ -3004,6 +3056,7 @@
     var items = [
       { btn: $('myevents-btn-cal'), panel: $('myevents-panel-cal') },
       { btn: $('myevents-btn-pdf'), panel: $('myevents-panel-pdf') },
+      { btn: $('myevents-btn-own'), panel: $('myevents-panel-own') },
       { btn: $('myevents-btn-move'), panel: $('myevents-panel-move') },
       { btn: $('myevents-btn-install'), panel: $('myevents-panel-install') }
     ];
@@ -3199,6 +3252,40 @@
         if (sendBtn) sendBtn.disabled = false;
         say('Could not send right now. Use Open the PDF instead.');
       });
+    });
+  }
+
+  /* ---- Add your own private event (camp shift, wedding). Stays on-device. ---- */
+  function initOwnEvents(){
+    var form = $('own-event-form');
+    if (!form) return;
+    var msg = $('own-note-msg');
+    function say(t){ if (msg) msg.textContent = t; }
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var t = ($('own-title') && $('own-title').value || '').trim();
+      var day = $('own-day') ? $('own-day').value : '';
+      var hm = ($('own-start') && $('own-start').value || '').trim();
+      var end = ($('own-end') && $('own-end').value || '').trim();
+      var aRaw = ($('own-addr') && $('own-addr').value || '').trim();
+      var n = ($('own-note') && $('own-note').value || '').trim();
+      if (!t) { say('Give it a name first.'); return; }
+      if (!day) { say('Pick a day. During the burn "some day" means never.'); return; }
+      var a = '';
+      if (aRaw) {
+        var parsed = parseWhere ? parseWhere(aRaw) : null;
+        a = (parsed && parsed.label) ? parsed.label : aRaw;
+      }
+      ownEvents.push({
+        id: 'own-' + Date.now() + '-' + Math.floor(Math.random() * 1e6),
+        t: t, day: day, hm: hm || null, end: end || null, a: a, n: n
+      });
+      saveOwnEvents();
+      form.reset();
+      say('');
+      toast('Added to My Events, marked Yours.');
+      window.location.hash = '#myevents';
+      render();
     });
   }
 
@@ -3559,6 +3646,17 @@
       openNav(currentLoc, toAddr, startStr);
     });
 
+    /* delete one of your own private events */
+    document.addEventListener('click', function(e){
+      var del = e.target.closest('.own-del-btn');
+      if (!del) return;
+      var oid = del.getAttribute('data-own-id');
+      ownEvents = ownEvents.filter(function(o){ return o && o.id !== oid; });
+      saveOwnEvents();
+      toast('Removed from your list.');
+      render();
+    });
+
     var getDirBtn = $('map-get-directions');
     if (getDirBtn) {
       getDirBtn.addEventListener('click', function(){
@@ -3672,6 +3770,7 @@
     initMoveDevice();
     initCalendarButtons();
     initPdfPanel();
+    initOwnEvents();
     initFilterModal();
     initLocModal();
     initNavModal();
