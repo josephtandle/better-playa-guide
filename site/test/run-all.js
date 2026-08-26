@@ -14,7 +14,8 @@ const repoRoot = path.resolve(__dirname, '..');
 const suites = [
   path.join(repoRoot, 'test', 'client.test.js'),
   path.join(repoRoot, 'test', 'api-contract.test.js'),
-  path.join(repoRoot, 'test', 'list-sync.test.js')
+  path.join(repoRoot, 'test', 'list-sync.test.js'),
+  path.join(repoRoot, 'test', 'pdf-ics.test.js')
 ];
 const retrieval = path.join(repoRoot, 'api', '_retrieval.test.js');
 if (fs.existsSync(retrieval)) suites.push(retrieval);

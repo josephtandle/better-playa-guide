@@ -103,25 +103,26 @@ const GOOD = { email: 'test@example.com', hashes: ['0a1b2c3d', 'deadbeef'], name
   ok(mail.to && mail.to[0] === GOOD.email, 'mail goes to the submitted address');
   ok(mail.text.indexOf('https://musecafe.vip/guide/#l=0a1b2c3d,deadbeef') !== -1,
     'the email carries the #l= share link: the EMAIL IS THE TRANSPORT');
-  ok(mail.text.indexOf('tap Merge') !== -1, 'the email tells them to tap Merge');
+  ok(/comes across on its own/.test(mail.text), 'the email says the list merges on its own (auto-merge)');
   ok(mail.text.indexOf('—') === -1, 'email body has no em dash');
 
   /* the endpoint never returns a stored list for an email (no lookup mode) */
   ok(r.res.body.indexOf('0a1b2c3d') === -1, 'response never echoes the list');
 
-  /* per-email rate limit: 3/day (2 more sends after the one above, 4th refused) */
-  await run(GOOD, '203.0.113.4');
-  await run(GOOD, '203.0.113.5');
-  r = await run(GOOD, '203.0.113.6');
-  ok(r.res.statusCode === 429 && r.json.error === 'rate_limited', '4th send for one email in a day -> 429');
+  /* per-email rate limit: 10/day (9 more sends after the one above, 11th refused) */
+  for (let i = 0; i < 9; i++) {
+    await run(GOOD, '203.0.113.' + (4 + i));
+  }
+  r = await run(GOOD, '203.0.113.13');
+  ok(r.res.statusCode === 429 && r.json.error === 'rate_limited', '11th send for one email in a day -> 429');
 
-  /* per-IP rate limit: 10/day across emails */
+  /* per-IP rate limit: 30/day across emails */
   const ip = '198.51.100.9';
   let last = null;
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 31; i++) {
     last = await run({ email: 'user' + i + '@example.com', hashes: ['0a1b2c3d'] }, ip);
   }
-  ok(last.res.statusCode === 429 && last.json.error === 'rate_limited', '11th send from one IP in a day -> 429');
+  ok(last.res.statusCode === 429 && last.json.error === 'rate_limited', '31st send from one IP in a day -> 429');
 
   /* mail failure surfaces as an error, not a fake success */
   failResend = true;

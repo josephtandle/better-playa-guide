@@ -105,6 +105,10 @@
         <span class="myevents-action-icon" aria-hidden="true">📅</span>
         <span class="myevents-action-label">Add to calendar</span>
       </button>
+      <button type="button" class="myevents-action-btn" id="myevents-btn-pdf" aria-expanded="false" aria-controls="myevents-panel-pdf">
+        <span class="myevents-action-icon" aria-hidden="true">🖨</span>
+        <span class="myevents-action-label">Printable PDF</span>
+      </button>
       <button type="button" class="myevents-action-btn" id="myevents-btn-move" aria-expanded="false" aria-controls="myevents-panel-move">
         <span class="myevents-action-icon" aria-hidden="true">📱</span>
         <span class="myevents-action-label">Move to another device</span>
@@ -117,10 +121,30 @@
 
     <div class="myevents-panels">
       <div class="myevents-panel" id="myevents-panel-cal" style="display:none">
-        <p class="myevents-panel-desc">Downloads a calendar file. Open it and your starred events land in your phone's calendar with reminders.</p>
-        <p class="myevents-panel-empty-hint" id="myevents-cal-empty-hint" style="display:none">Your list is empty right now. Star events in the guide first, then download your calendar file.</p>
-        <button type="button" id="ics-btn" class="btn solid">Download .ics calendar file</button>
+        <p class="myevents-panel-desc">One tap adds a "My Playa Guide" calendar with all your starred events and 30-minute reminders.</p>
+        <p class="myevents-panel-empty-hint" id="myevents-cal-empty-hint" style="display:none">Your list is empty right now. Star events in the guide first, then add them to your calendar.</p>
+        <div class="btnrow">
+          <button type="button" id="gcal-btn" class="btn solid">Google Calendar</button>
+          <button type="button" id="iphone-cal-btn" class="btn solid">iPhone Calendar</button>
+        </div>
+        <p class="myevents-panel-desc" style="margin-top:.6rem">Something else? <button type="button" id="ics-btn" class="btn-inline">Download the .ics file</button> and open it in any calendar app.</p>
         <p class="itin-cal-note" id="itin-cal-note" style="display:none"></p>
+      </div>
+
+      <div class="myevents-panel" id="myevents-panel-pdf" style="display:none">
+        <p class="myevents-panel-desc">Your starred events as a clean printable PDF, day by day: for the paper crowd.</p>
+        <p class="myevents-panel-empty-hint" id="myevents-pdf-empty-hint" style="display:none">Your list is empty right now. Star events in the guide first.</p>
+        <div class="btnrow">
+          <button type="button" id="pdf-open-btn" class="btn solid">Open the PDF</button>
+        </div>
+        <form id="pdf-email-form" autocomplete="off" style="margin-top:.6rem">
+          <p class="move-device-why">Or email it to yourself to print later:</p>
+          <div class="row">
+            <input id="pdf-email-input" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+            <button type="submit" id="pdf-email-send" class="btn solid">Email me the PDF</button>
+          </div>
+          <p id="pdf-email-note" class="move-device-note"></p>
+        </form>
       </div>
 
       <div class="myevents-panel" id="myevents-panel-move" style="display:none">

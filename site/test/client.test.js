@@ -884,7 +884,9 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
     ok(captured.body.email === 'dusty@example.com', 'payload carries the email');
     ok(Array.isArray(captured.body.hashes) && captured.body.hashes.length === 1 &&
       /^[0-9a-f]{8}$/.test(captured.body.hashes[0]), 'payload carries 8-hex hashes per EVENT');
-    ok(captured.body.hashes[0] === e.BPG.hashId(target.id), 'the hash matches the starred event');
+    ok(captured.body.hashes[0] === e.BPG.hashId(target.id) ||
+      captured.body.hashes[0] === e.BPG.hashId(target.t + '|' + target.c),
+      'the hash matches the starred event (full-id or title|camp alias)');
     ok(captured.body.name === 'Dusty' && captured.body.camp === 'Muse Cafe', 'payload carries profile name + camp');
   }
 
@@ -1000,12 +1002,12 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   const e = boot({ url: 'https://musecafe.vip/guide/#myevents' });
   const d = e.document;
 
-  /* 1. My Events action row & panels (3 buttons, hidden at rest, accordion, ics path, install branching) */
+  /* 1. My Events action row & panels (4 buttons, hidden at rest, accordion, ics path, install branching) */
   const actionRow = d.getElementById('myevents-action-row');
   const actionBtns = d.querySelectorAll('.myevents-action-btn');
   const panels = d.querySelectorAll('.myevents-panel');
   ok(!!actionRow, 'action row element present in My Events');
-  ok(actionBtns.length === 3, 'row renders with exactly 3 buttons (' + actionBtns.length + ')');
+  ok(actionBtns.length === 4, 'row renders with exactly 4 buttons: calendar, PDF, move, install (' + actionBtns.length + ')');
   ok(Array.from(panels).every(p => p.style.display === 'none'), 'all panels hidden at rest');
 
   /* tapping opens one and closes others, aria-expanded updates, Escape closes */

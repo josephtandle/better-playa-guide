@@ -19,8 +19,8 @@ const store = require('./_store.js');
 
 const GUIDE_URL = 'https://musecafe.vip/guide/';
 const FROM = process.env.LIST_SYNC_FROM || 'Playa Guide <guide@musecafe.vip>';
-const PER_EMAIL_CAP = Number(process.env.LIST_SYNC_EMAIL_CAP || 3);    /* sends per email per day */
-const PER_IP_CAP = Number(process.env.LIST_SYNC_IP_CAP || 10);         /* sends per IP per day */
+const PER_EMAIL_CAP = Number(process.env.LIST_SYNC_EMAIL_CAP || 10);   /* sends per email per day */
+const PER_IP_CAP = Number(process.env.LIST_SYNC_IP_CAP || 30);         /* sends per IP per day (several people share camp wifi) */
 const DAY = 86400;
 
 function sha(s) { return crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 24); }
@@ -59,16 +59,32 @@ function cleanText(s, max) {
   return t || null;
 }
 
-function emailBody(link, name) {
+function emailBody(link, name, mode) {
   const hi = name ? 'Hey ' + name + ',' : 'Hey,';
+  if (mode === 'pdf') {
+    return [
+      hi,
+      '',
+      'Your printable Playa Guide is attached as a PDF: your starred events, day by day, ready to print.',
+      '',
+      'Want it on another phone instead? Open this link there and your list comes across:',
+      '',
+      link,
+      '',
+      'See you out there.',
+      'Joe, Muse Cafe, 8:15 & E'
+    ].join('\n');
+  }
   return [
     hi,
     '',
     'Here is your Playa Guide list.',
     '',
-    'Open this link on your other phone and tap Merge. Everything you starred comes across:',
+    'Open this link on your other phone. Everything you starred comes across on its own:',
     '',
     link,
+    '',
+    'A printable PDF of your list is attached too, for the paper crowd.',
     '',
     'Once the page has loaded it works with no signal at all.',
     '',
@@ -109,22 +125,26 @@ async function saveRow(email, name, camp, hashes) {
   }
 }
 
-async function sendMail(email, link, name) {
+async function sendMail(email, link, name, mode, pdfBuf) {
   const key = process.env.RESEND_API_KEY;
   if (!key) return { ok: false, reason: 'not_configured' };
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 8000);
   try {
+    const payload = {
+      from: FROM,
+      to: [email],
+      subject: mode === 'pdf' ? 'Your printable Playa Guide (PDF)' : 'Your Playa Guide list',
+      text: emailBody(link, name, mode)
+    };
+    if (pdfBuf && pdfBuf.length < 3.5 * 1024 * 1024) {
+      payload.attachments = [{ filename: 'playa-guide-list.pdf', content: pdfBuf.toString('base64') }];
+    }
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       signal: ac.signal,
       headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        from: FROM,
-        to: [email],
-        subject: 'Your Playa Guide list',
-        text: emailBody(link, name)
-      })
+      body: JSON.stringify(payload)
     });
     if (!r.ok) {
       console.error('list-sync: resend send failed ' + r.status);
@@ -180,8 +200,27 @@ module.exports = async function handler(req, res) {
   }
 
   const link = GUIDE_URL + '#l=' + body.hashes.join(',');
+  const mode = body.mode === 'pdf' ? 'pdf' : 'move';
 
-  const sent = await sendMail(email, link, name);
+  /* Attach the printable PDF in both modes; a PDF that fails to build must
+     never block the email itself. */
+  let pdfBuf = null;
+  try {
+    const { loadGuide } = require('./_guide.js');
+    const { buildListPdf, buildHashIndex, eventsToRows } = require('./_pdf.js');
+    const byHash = buildHashIndex(loadGuide().ev.e);
+    const seenIds = new Set();
+    const events = [];
+    for (const h of body.hashes) {
+      const e = byHash[h];
+      if (e && !seenIds.has(e.id)) { seenIds.add(e.id); events.push(e); }
+    }
+    if (events.length > 0) pdfBuf = buildListPdf(eventsToRows(events), { name: name });
+  } catch (e) {
+    console.error('list-sync: pdf build failed ' + (e && e.message));
+  }
+
+  const sent = await sendMail(email, link, name, mode, pdfBuf);
   if (!sent.ok) {
     res.statusCode = sent.reason === 'not_configured' ? 503 : 502;
     return res.end(JSON.stringify({ error: sent.reason }));

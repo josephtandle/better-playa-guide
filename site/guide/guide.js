@@ -189,10 +189,12 @@
     unique = dated;
 
     if (unique.length === 1) {
+      /* Friendly, day-first wording: never show a raw MM-DD to a human. */
+      var sp = unique[0][0].split(' ');
       if (unique[0][0].indexOf(' ') === -1) {
-        return unique[0][0] + ', no set time';
+        return dayLabel(sp[0]) + ', no set time';
       }
-      return unique[0][0] + (unique[0][1] ? '-' + unique[0][1] : '');
+      return dayLabel(sp[0]) + ' · ' + sp[1] + (unique[0][1] ? '-' + unique[0][1] : '');
     }
     var firstTime = null;
     var allSameTime = true;
@@ -612,13 +614,14 @@
   var URL_ = 'https://musecafe.vip/guide/';
   var SHARE_TEXT = 'Better Playa Guide: every Burning Man 2026 event, searchable by where you\'re standing. Works with no signal. A gift from Muse Cafe.';
 
-  function getShareableLink(){
+  /* The one place star ids become share hashes. Prefer the durable
+     title|camp hash (survives slot churn); fall back to the full-id hash.
+     Never hash a stale id the receiver can't resolve: that produced dead
+     links that merged zero events. */
+  function shareHashes(){
     var arr = Array.from(starred);
     var hashes = [];
     for (var k = 0; k < arr.length; k++) {
-      /* Prefer the durable title|camp hash (survives slot churn); fall back
-         to the full-id hash. Never hash a stale id the receiver can't
-         resolve: that produced dead links that merged zero events. */
       var id = arr[k];
       if (!ID_TO_HASH[id]) continue;
       var parts = String(id).split('|');
@@ -626,6 +629,11 @@
       var h = (!tcCollisions[tc] && TC_TO_ID[tc] === id) ? hashId(tc) : ID_TO_HASH[id];
       if (h && hashes.indexOf(h) === -1) hashes.push(h);
     }
+    return hashes;
+  }
+
+  function getShareableLink(){
+    var hashes = shareHashes();
     var loc = window.location || {};
     var base = loc.origin ? (loc.origin + loc.pathname) : URL_;
     if (hashes.length === 0) return base;
@@ -851,6 +859,9 @@
   function dayLabel(dayStr){
     var bits, dnum, wd, mo;
     if (!dayStr) return 'No date';
+    /* The two Sundays are landmarks, not dates: name them what burners call them. */
+    if (dayStr === '08-30') return 'Sunday Opening Day · 30 Aug';
+    if (dayStr === '09-06') return 'Sunday Temple Burn · 6 Sep';
     bits = dayStr.split('-');
     dnum = parseInt(bits[1], 10);
     wd = WEEKDAY_FULL[dayStr];
@@ -1414,15 +1425,18 @@
       : '';
     var schedStr = o.s ? formatMergedSchedule(o.s, dayFilter) : (o.w || '');
 
+    /* Mobile-first card: title spans the full width, time on its own line,
+       address always on its own line (its own colour), buttons at the bottom.
+       Never let action buttons share a row with the title: on a 360px phone
+       they squeezed the title and fell off the card. */
     return '<li class="' + cls + '"' + (o.id ? ' data-id="' + esc(o.id) + '"' : '') + '>'
-      + '<div class="card-top">'
       + '<div class="ti">' + esc(o.t) + ' ' + badge + '</div>'
-      + '<div class="card-actions">' + navBtn + starBtn + '</div>'
-      + '</div>'
-      + '<div class="meta">' + esc(schedStr) + dist + ' · ' + esc(o.a || '?') + '</div>'
+      + '<div class="meta">' + esc(schedStr) + dist + '</div>'
+      + '<div class="addr">' + esc(o.a || 'Address TBA: ask at camp') + '</div>'
       + (o.p ? '<div class="who">' + esc(o.p) + '</div>' : '')
       + '<div class="de"><strong>' + esc(o.c) + '</strong>' + (o.desc ? ': ' + esc(o.desc) : (o.n ? ': ' + esc(o.n) : '')) + '</div>'
       + (o.note ? '<div class="itin-note">' + esc(o.note) + '</div>' : '')
+      + '<div class="card-actions card-foot">' + navBtn + starBtn + '</div>'
       + '</li>';
   }
 
@@ -1491,6 +1505,8 @@
       if (itinPanel) itinPanel.style.display = '';
       var emptyCalHint = $('myevents-cal-empty-hint');
       if (emptyCalHint) emptyCalHint.style.display = starred.size ? 'none' : '';
+      var emptyPdfHint = $('myevents-pdf-empty-hint');
+      if (emptyPdfHint) emptyPdfHint.style.display = starred.size ? 'none' : '';
     } else {
       html += rows.slice(0, shown).map(function(item){ return card(item, day); }).join('');
       if (itinPanel) itinPanel.style.display = 'none';
@@ -2987,6 +3003,7 @@
   function initMyEventsAccordion(){
     var items = [
       { btn: $('myevents-btn-cal'), panel: $('myevents-panel-cal') },
+      { btn: $('myevents-btn-pdf'), panel: $('myevents-panel-pdf') },
       { btn: $('myevents-btn-move'), panel: $('myevents-panel-move') },
       { btn: $('myevents-btn-install'), panel: $('myevents-panel-install') }
     ];
@@ -3047,11 +3064,8 @@
         return;
       }
       if (typeof fetch !== 'function') { say('Could not send from this browser. Use Share this guide instead.'); return; }
-      var hashes = [];
-      Array.from(starred).forEach(function(id){
-        var h = ID_TO_HASH[id] || hashId(id);
-        if (h && hashes.indexOf(h) === -1) hashes.push(h);
-      });
+      var hashes = shareHashes();
+      if (hashes.length === 0) { say('Star something first, then send the list.'); return; }
       var prof = getProfile();
       var sendBtn = $('move-device-send');
       if (sendBtn) sendBtn.disabled = true;
@@ -3083,6 +3097,107 @@
         if (mySeq !== moveSeq) return;
         if (sendBtn) sendBtn.disabled = false;
         say('Could not send right now. Use Share this guide instead.');
+      });
+    });
+  }
+
+  /* ---- Calendar buttons: subscribe, don't download. Google Calendar adds
+     the hosted feed via "from URL"; iPhone opens the native subscribe sheet
+     through webcal://. Both stay in sync with the hosted list. ---- */
+  var ICS_HOST = 'musecafe.vip';
+  function listIcsUrl(scheme){
+    return scheme + '://' + ICS_HOST + '/api/list-ics?l=' + shareHashes().join(',');
+  }
+  function initCalendarButtons(){
+    var g = $('gcal-btn'), ip = $('iphone-cal-btn');
+    function guard(){
+      if (starred.size === 0 || shareHashes().length === 0) {
+        toast('Star events first, then add them to your calendar.');
+        return false;
+      }
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+        toast('Adding to a calendar needs signal. The .ics download works offline.');
+        return false;
+      }
+      return true;
+    }
+    if (g) g.addEventListener('click', function(){
+      if (!guard()) return;
+      var url = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(listIcsUrl('webcal'));
+      window.open(url, '_blank', 'noopener');
+    });
+    if (ip) ip.addEventListener('click', function(){
+      if (!guard()) return;
+      window.location.href = listIcsUrl('webcal');
+    });
+  }
+
+  /* ---- Printable PDF: open it, or email it (same list-sync endpoint,
+     mode:'pdf', which also stores the backup row). ---- */
+  function initPdfPanel(){
+    var openBtn = $('pdf-open-btn');
+    var form = $('pdf-email-form');
+    var emailEl = $('pdf-email-input'), note = $('pdf-email-note');
+    function say(msg){ if (note) note.textContent = msg; }
+    if (emailEl) {
+      try {
+        var savedEmail = localStorage.getItem('bpg.email') || '';
+        if (savedEmail) emailEl.value = savedEmail;
+      } catch(e){}
+    }
+    if (openBtn) openBtn.addEventListener('click', function(){
+      var hashes = shareHashes();
+      if (hashes.length === 0) { toast('Star events first, then get the PDF.'); return; }
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+        toast('The PDF needs signal to build. Your list itself works offline.');
+        return;
+      }
+      var prof = getProfile();
+      var url = '/api/list-pdf?l=' + hashes.join(',') + (prof.name ? '&name=' + encodeURIComponent(prof.name) : '');
+      window.open(url, '_blank', 'noopener');
+    });
+    if (!form) return;
+    var pdfSeq = 0;
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var mySeq = ++pdfSeq;
+      var email = ((emailEl && emailEl.value) || '').trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { say('That does not look like an email address.'); return; }
+      var hashes = shareHashes();
+      if (hashes.length === 0) { say('Star something first, then send the PDF.'); return; }
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) { say('This needs signal.'); return; }
+      var prof = getProfile();
+      var sendBtn = $('pdf-email-send');
+      if (sendBtn) sendBtn.disabled = true;
+      say('Sending.');
+      fetch('/api/list-sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          hashes: hashes,
+          name: prof.name || null,
+          camp: prof.camp || null,
+          mode: 'pdf'
+        })
+      }).then(function(r){
+        return r.json().then(function(j){ j.__status = r.status; return j; });
+      }).then(function(j){
+        if (mySeq !== pdfSeq) return;
+        if (sendBtn) sendBtn.disabled = false;
+        if (j && j.ok) {
+          try { localStorage.setItem('bpg.email', email); } catch(e){}
+          say('Sent. The PDF is in your inbox.');
+          toast('PDF sent. Check your inbox.');
+        } else if (j && j.__status === 429) {
+          say('Limit reached for today. Use Open the PDF instead.');
+        } else {
+          say('Could not send right now. Use Open the PDF instead.');
+        }
+      }).catch(function(){
+        if (mySeq !== pdfSeq) return;
+        if (sendBtn) sendBtn.disabled = false;
+        say('Could not send right now. Use Open the PDF instead.');
       });
     });
   }
@@ -3555,6 +3670,8 @@
     initInstall();
     initMyEventsAccordion();
     initMoveDevice();
+    initCalendarButtons();
+    initPdfPanel();
     initFilterModal();
     initLocModal();
     initNavModal();
