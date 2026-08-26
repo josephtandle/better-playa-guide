@@ -63,6 +63,28 @@ Format: date logged | source (handle/site/person) | how it surfaced | what it yi
 - 2026-08-27 | @itsdrchaii set card | Joe's IG screenshot | 4 of 5 sets already in via Swerge/Sakenoma/Tommy lineups = strong cross-confirm; new Bloom Friday | YES
 - 2026-08-27 | @irizky | Joe's IG screenshot | Disorient Sun, Kimono Disco Mon, Cosmic Giggles Tue; Twilight Thu already in | YES
 - 2026-08-27 | @champagneloungebrc | Joe's IG screenshot | full 2026 FM radio dial list -> added as an offline reference entry | YES: practical non-event info worth one entry
+- 2026-08-27 | @riche | Joe's IG feed screenshot | 3 sets incl. Carlita b2b Riche at Long Feng dragon 3:30am Fri | YES: verified artist accounts
+- 2026-08-27 | @sparrowandtortuga (via @the.shalman) | Joe's IG screenshot | Sparrow first-burn card: 5 new sets + Tower69 Friday cross-confirms; Whomp Wagon address differs across artist cards (9:30 vs 9:45 & I) | YES
+- 2026-08-27 | @humanexperiencecreations (David Block) | Joe's IG screenshot | 4 sets incl. Disco Space Shuttle at 8:15 & E (Muse corner!) + Rhye ambient sunrise at Mundara | YES
+- 2026-08-27 | @brdtreblemakers | Joe's IG screenshot | full week wine/cheese/DJ grid already 100% in from earlier harvest = pure cross-confirmation | YES for cross-check
+- 2026-08-27 | Symbio via @nicobernardiniofficial | Joe's IG screenshot | 9AM morning-club lineups Tue/Thu/Sat (Kaz James, LP Giobbi, Oliver Koletzki-tier names) | YES
+- 2026-08-27 | @campalborz (via @thrivewithnaomi) | Joe's IG screenshot | full Alborz program at 9:45 & E incl. Koletzki b2b Frida Darko Wed + after-burn tea party; camp had ZERO events in any source | YES
+- 2026-08-27 | @catorimusica | Joe's IG screenshot | 6 sets incl. Caravan of Light at 8:15 & E (Muse corner) + new venue Bubbles & Bass | YES
+- 2026-08-27 | @louisthechild | Joe's IG screenshot | 5 sets (Funkadelephant, NODE hip hop, Camp Question Mark, Axolotl x2): biggest mainstream name so far | YES
+- 2026-08-27 | @bipolarexpress.artcar | Joe's IG screenshot | Ritual of Eternal Return Wed 7:30pm at the Singularity Tree | YES: art cars announce rituals not just sets
+- 2026-08-27 | @zentimusic | Joe's IG screenshot | 7 sets; FIRST source giving the Gaian Airship a street address (3:15 & D) + Caravan of Light late slot | YES
+- 2026-08-27 | @discotique.bm | Joe's IG screenshot | Discotique (2 & G) Wed/Thu/Fri morning lineups incl. Calussa + Roy Rosenfeld | YES
+- 2026-08-27 | @wearelolajak | Joe's IG screenshot | Lola Jak 6 sets; new venues Kuker art car, Bone Voyage, Fermented Reality (7 & B); Pink Mammoth home = 9 & G Plaza (Lost Desert card said 9:30 & G: unresolved) | YES
+- 2026-08-27 | @djicon (via @sahartcamp) | Joe's IG screenshot | DJ Icon 30-year week: 8 sets incl. Entheos White Party + Heavy Petting Zoo burn night | YES
+- 2026-08-27 | @thisishaana | Joe's IG screenshot | Midnight Sun immersive ballet concert at Apotheneum Fri 11pm | YES: art-installation shows only announced on artist accounts
+- 2026-08-27 | @syrcles | Joe's IG screenshot | 4 sets: Apotheneum x2, Playground cacao ceremony, Daydream sunset | YES
+- 2026-08-27 | @tokimonsta (via Sumanah Camp) | Joe's IG screenshot | 4 sets incl. Secular Sabbath ambient + Titanic 11:45pm: another headline name | YES
+- 2026-08-27 | @kimonos.music | Joe's IG screenshot | 7 sets incl. new venues Tabernacle (10 & E), Daydream (2 & E), NOVA | YES
+- 2026-08-27 | @huofeng | Joe's IG screenshot | Phoenix Rising teaser at 10 & K = Long Feng's Huo Feng stage, already in = cross-confirm | YES for cross-check
+- 2026-08-27 | @tomandcollins (via @elementumcamp) | Joe's IG screenshot | 6 new sets (Sahar Tue already in via chapter lineup); Forest House listed at 2:30 & F vs Golden's card (Titanic's End): unresolved | YES
+- 2026-08-27 | @nataschapolke.ch | Joe's IG screenshot | 4 sets incl. Robot Heart at TEMPLE BURN Sunday 9pm (first Sunday-night event) | YES
+- 2026-08-27 | Playground Arrival Stage poster (via @goldfishlive, 19-slide carousel) | Joe's IG screenshot | FULL week: Carlita, Vintage Culture, Ahmed Spins, Gordo, Mahmut Orhan, Lee Burridge, Jan Blomqvist live | YES: stage-poster carousels are the richest single source
+- 2026-08-27 | @goldfishlive | Joe's IG screenshot | Goldfish acoustic at Above the Noise Wed + Playground slots covered by stage poster | YES
 - 2026-08-26 | word of mouth (Joe) | direct tip | Shalman & Sheila Demoura at Gaian Airship Fri 12am before Mel Semé & OVEOUS | YES: Joe's own network beats every scraper for late additions
 - 2026-08-25 | heebeegeebeehealers.org | Joe link | 2026 page live but schedule image still 2024 ("stay tuned") | YES but verify year on the image itself before ingesting (2024 poster shows old F-street address)
 
