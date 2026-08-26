@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 4091,
+  "count": 4102,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -111666,6 +111666,237 @@
     {
      "start": "09-05 04:00",
      "end": "05:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Tower 69: Tuesday sunset",
+   "camp": "Tower 69 (open playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Andrea Castells, SAGA, PEAKED",
+   "description": "Tuesday sunset session at Tower 69 in open playa.",
+   "schedule": [
+    {
+     "start": "09-01 19:00",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Tower 69: Wednesday sunset",
+   "camp": "Tower 69 (open playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Dubdogz, SAGMO, Tropic Bomba",
+   "description": "Wednesday sunset session at Tower 69.",
+   "schedule": [
+    {
+     "start": "09-02 19:00",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Tower 69: Thursday sunrise",
+   "camp": "Tower 69 (open playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lobomassio, Pomboklap",
+   "description": "Thursday sunrise at Tower 69.",
+   "schedule": [
+    {
+     "start": "09-03 05:30",
+     "end": "08:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Tower 69 x Elementum: Inferno Party",
+   "camp": "Elementum",
+   "address": "9:30 & B",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii, ELVN:22, Griffin Maxwell Brooks, Loboman",
+   "description": "Tower 69 links up with Elementum Camp for the Inferno Party.",
+   "schedule": [
+    {
+     "start": "09-03 21:00",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Elementum elementumcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Tower 69: Friday sunrise",
+   "camp": "Tower 69 (open playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Sparrow, Toucanplay",
+   "description": "Friday sunrise at Tower 69.",
+   "schedule": [
+    {
+     "start": "09-04 06:00",
+     "end": "09:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Tower 69: Burn night sunset",
+   "camp": "Tower 69 (open playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "NATIVO, Jean Jacque, Gru.Di",
+   "description": "Saturday sunset at Tower 69 before the Man burns.",
+   "schedule": [
+    {
+     "start": "09-05 18:00",
+     "end": "22:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Dr. Chaii at Camp Bloom",
+   "camp": "Camp Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii",
+   "description": "Dr. Chaii Friday night set at Camp Bloom.",
+   "schedule": [
+    {
+     "start": "09-04 21:30",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Iman Rizky at Disorient",
+   "camp": "Disorient",
+   "address": "8:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Iman Rizky",
+   "description": "Iman Rizky opening Sunday set at Disorient.",
+   "schedule": [
+    {
+     "start": "08-30 20:00",
+     "end": "22:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Disorient",
+   "grounded_score": null
+  },
+  {
+   "title": "Iman Rizky at Kimono Disco",
+   "camp": "Miki Beach",
+   "address": "10:00 & F",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Iman Rizky",
+   "description": "Iman Rizky at the Kimono Disco, Miki Beach.",
+   "schedule": [
+    {
+     "start": "08-31 16:00",
+     "end": "18:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Miki Beach mikibeachcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Iman Rizky at Cosmic Giggles",
+   "camp": "Cosmic Giggles",
+   "address": "3:00 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Iman Rizky",
+   "description": "Iman Rizky at Cosmic Giggles, Tuesday, time TBA.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Black Rock City Radio Stations 2026",
+   "camp": "Black Rock City",
+   "address": null,
+   "tags": [
+    "other"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "FM dial for the week: 88.3 K-A-R-T, 92.5 KBRU, 94.5 BMIR (Burning Man Information Radio: official info and emergencies), 95.1 GARS Gate Radio, 95.7 Fusion Valley, 96.3 K-A-E-Z, 97.7 Radio Dionysus, 99.3 Kool Kyle's Disco Den, 99.5 Shouting Fire / Radio Equinox, 102.3 K-HOLE, 107.3 F.A.R.T Radio. Works on any car stereo or battery radio, zero signal needed.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
     }
    ],
    "source": "instagram-flyer-ocr",

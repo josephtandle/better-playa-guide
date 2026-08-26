@@ -59,6 +59,10 @@ Format: date logged | source (handle/site/person) | how it surfaced | what it yi
 - 2026-08-27 | @elanschnider | Joe's IG screenshot | 4 sets: Cuddle Oasis, Melon Hotel all-nighter w/ OMRI., Smile High art car, PULSE Orchestra on Bipolar Express at Titanic's End | YES: cross-links three other flyers
 - 2026-08-27 | @johnwoodsmusic | Joe's IG screenshot | 3 new sets (Whomp Wagon, Lucy Escargot art car, Axolotl sunrise); his Sahar Monday slot cross-confirms the Chafic b2b from the Sahar carousel | YES
 - 2026-08-27 | @itsdrchaii (Tommy grid slide) | Joe's IG screenshot | identical Tommy art car grid to @koray.ozsoy = second full cross-confirmation of all 36 sets | YES for cross-check
+- 2026-08-27 | Tower 69 (via @itsdrchaii carousel) | Joe's IG screenshot | new open-playa tower venue: 6 sessions incl. Elementum Inferno link up | YES: new venue
+- 2026-08-27 | @itsdrchaii set card | Joe's IG screenshot | 4 of 5 sets already in via Swerge/Sakenoma/Tommy lineups = strong cross-confirm; new Bloom Friday | YES
+- 2026-08-27 | @irizky | Joe's IG screenshot | Disorient Sun, Kimono Disco Mon, Cosmic Giggles Tue; Twilight Thu already in | YES
+- 2026-08-27 | @champagneloungebrc | Joe's IG screenshot | full 2026 FM radio dial list -> added as an offline reference entry | YES: practical non-event info worth one entry
 - 2026-08-26 | word of mouth (Joe) | direct tip | Shalman & Sheila Demoura at Gaian Airship Fri 12am before Mel Semé & OVEOUS | YES: Joe's own network beats every scraper for late additions
 - 2026-08-25 | heebeegeebeehealers.org | Joe link | 2026 page live but schedule image still 2024 ("stay tuned") | YES but verify year on the image itself before ingesting (2024 poster shows old F-street address)
 
