@@ -289,6 +289,64 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
 })();
 
 /* =====================================================================
+ * 6b. answer(): offline parser parity with the API pipeline
+ * ===================================================================== */
+(function () {
+  /* weekday words are time filters, never search terms */
+  const r = BPG.answer('tacos monday');
+  ok(r.results.length > 0, 'answer("tacos monday") finds results offline');
+  ok(r.results.every(x => (x.key || '').indexOf('08-31') === 0),
+    'answer("tacos monday") stays on Monday (got ' + JSON.stringify(r.results.map(x => x.key).slice(0, 3)) + ')');
+  ok(r.results.some(x => /taco/i.test(x.t)), 'a taco event is in the Monday rows');
+})();
+
+(function () {
+  /* burn night and day N work offline */
+  const bn = BPG.answer('what is on burn night');
+  ok(bn.results.length > 0 && bn.results.every(x => (x.key || '').indexOf('09-05') === 0),
+    'answer("burn night") returns Saturday 09-05 rows only');
+  const d3 = BPG.answer('grilled cheese day 3');
+  ok(d3.results.length > 0 && d3.results.every(x => (x.key || '').indexOf('09-01') === 0),
+    'answer("grilled cheese day 3") returns 09-01 rows only');
+})();
+
+(function () {
+  /* sunrise means dawn, not the small hours of the wrong day */
+  const r = BPG.answer('sunrise set tuesday');
+  ok(r.results.length > 0, 'answer("sunrise set tuesday") finds dawn sets');
+  ok(r.results.every(x => (x.key || '').indexOf('09-01') === 0),
+    'sunrise Tuesday rows are all on 09-01');
+})();
+
+(function () {
+  /* fine-tag routing offline: gay -> queer/lgbtq tagged events */
+  const r = BPG.answer('gay party');
+  ok(r.results.length >= 3, 'answer("gay party") finds queer events offline (' + r.results.length + ')');
+  const top = r.results.slice(0, 6);
+  const hit = top.filter(x => /gay|queer|lgbt|homo/i.test((x.t || '') + ' ' + (x.c || '') + ' ' + (x.d || ''))).length;
+  ok(hit >= 2, 'top gay-party rows are actually queer events (' + hit + ')');
+})();
+
+(function () {
+  /* fine-tag routing offline: techno via the tag when the word is absent */
+  const r = BPG.answer('techno tonight');
+  ok(r.results.length >= 3, 'answer("techno tonight") finds techno via fine tags (' + r.results.length + ')');
+})();
+
+(function () {
+  /* stem matching both ways: parties <-> party, no "sunset" hits for "set" */
+  const r = BPG.answer('parties tonight');
+  ok(r.results.length > 0, 'answer("parties tonight") maps to party');
+  ok(/parties|party/.test(r.reply), 'reply speaks in party terms (got ' + JSON.stringify(r.reply.slice(0, 60)) + ')');
+})();
+
+(function () {
+  /* structural words never become search terms offline */
+  const r = BPG.answer('dj sets tonight');
+  ok(r.results.length > 0, 'answer("dj sets tonight") is not sunk by the word "sets"');
+})();
+
+/* =====================================================================
  * 7. No literal "null" anywhere in rendered cards
  * ===================================================================== */
 (function () {
@@ -1066,10 +1124,12 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
   ok(mainInputs.length === 1 && mainInputs[0].id === 'ask-q',
     'exactly ONE text input rendered outside modals (ask-q) (got ' + mainInputs.length + ')');
 
-  /* live-filter on type still works on ask-q */
+  /* live-filter still works on ask-q: input is debounced (200ms) so a full
+     3.6k-event render does not run per keystroke; change flushes immediately */
   const askInput = d.getElementById('ask-q');
   askInput.value = 'pizza';
   askInput.dispatchEvent(new e.window.Event('input', { bubbles: true }));
+  askInput.dispatchEvent(new e.window.Event('change', { bubbles: true }));
   const listText = d.getElementById('list').textContent;
   ok(listText.indexOf('pizza') !== -1 || listText.indexOf('Pizza') !== -1,
     'typing into ask-q live-filters the event list');
@@ -1174,6 +1234,98 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
       ok(nodeCount > 1, 'route polyline node count > 1 after navigation (got ' + nodeCount + ' coordinates)');
     }
   }
+})();
+
+/* =====================================================================
+ * P0 regressions: My Events share buttons and cross-vintage star ids
+ * ===================================================================== */
+(function () {
+  /* the My Events share/copy buttons must not reference undefined functions */
+  const e = boot({ url: 'https://musecafe.vip/guide/#myevents',
+    localStorage: { 'bpg.seen.intro': '1' } });
+  const d = e.document;
+  let threw = null;
+  const origOnError = e.window.onerror;
+  e.window.onerror = function (msg) { threw = msg; };
+  const sBtn = d.getElementById('myevents-share-btn');
+  const cBtn = d.getElementById('myevents-copy-btn');
+  ok(!!sBtn && !!cBtn, 'My Events share and copy buttons exist');
+  if (sBtn) sBtn.click();
+  if (cBtn) cBtn.click();
+  e.window.onerror = origOnError;
+  ok(threw === null, 'share/copy buttons do not throw (was: ' + threw + ')');
+  /* with no navigator.share/clipboard, copy falls back to a toast of the URL */
+  const toastText = (d.getElementById('toast') || {}).textContent || '';
+  ok(toastText.indexOf('musecafe.vip') !== -1, 'copy fallback shows the link in the toast');
+})();
+
+(function () {
+  /* a star saved under the pick-style id (t|c|w) must render as starred on the
+     GROUPS card for the same event (id ends in the slot start instead) */
+  const target = EV.find(ev => ev.id && ev.t && ev.s && ev.s[0] && ev.s[0][0] && ev.s[0][1]);
+  const pickStyleId = target.t + '|' + target.c + '|' + (target.s[0][0] + '-' + target.s[0][1]);
+  const e = boot({ localStorage: {
+    'bpg.seen.intro': '1',
+    'bpg.stars': JSON.stringify([pickStyleId])
+  } });
+  const d = e.document;
+  const qEl = d.getElementById('ask-q');
+  if (qEl) {
+    qEl.value = target.t.slice(0, 20).toLowerCase();
+    qEl.dispatchEvent(new e.window.Event('change', { bubbles: true }));
+  }
+  const pressed = Array.from(d.querySelectorAll('.star-btn[aria-pressed="true"]'));
+  ok(pressed.length > 0, 'a pick-style starred id still lights the star on the grouped card');
+})();
+
+/* =====================================================================
+ * XSS: hostile fixture event flows through the real render pipeline.
+ * Titles, descriptions, presenters and camp names are scraped external
+ * text; every one must reach the DOM inert.
+ * ===================================================================== */
+(function () {
+  const HOSTILE_T = '<img src=x onerror="window.__PWNED_T=1"> \'quote\' "dq"';
+  const HOSTILE = boot({
+    localStorage: { 'bpg.seen.intro': '1' },
+    mutateData: function (g) {
+      g.ev.e.push({
+        t: HOSTILE_T,
+        c: 'Evil<script>window.__PWNED_C=1<\/script>Camp',
+        k: 'alias "onmouseover="window.__PWNED_K=1',
+        a: '7:30 & E',
+        p: '<svg onload="window.__PWNED_P=1">DJ Hostile</svg>',
+        d: 'desc <b>bold</b> "quoted" \'single\' & amp',
+        g: ['food'],
+        s: [['09-02 12:00', '14:00']],
+        src: 2
+      });
+    }
+  });
+  const hw = HOSTILE.window, hd = HOSTILE.document;
+
+  /* main list render narrowed to the hostile event (search hits its lineup) */
+  const dayEl = hd.getElementById('day');
+  if (dayEl) dayEl.value = '09-02';
+  const qEl2 = hd.getElementById('ask-q') || hd.getElementById('q');
+  if (qEl2) qEl2.value = 'hostile';
+  HOSTILE.BPG.render();
+  const list = hd.getElementById('list');
+  ok(!hw.__PWNED_T && !hw.__PWNED_C && !hw.__PWNED_K && !hw.__PWNED_P,
+    'hostile fixture executed no script through the list render');
+  ok(!list.querySelector('img[src="x"]') && !list.querySelector('svg') && !list.querySelector('script'),
+    'hostile markup did not become elements in the list');
+  ok(list.textContent.indexOf('<img src=x') !== -1,
+    'hostile title renders as visible text, not markup');
+
+  /* offline answer() card path */
+  const r = HOSTILE.BPG.answer('hostile wednesday');
+  ok(r.results.length > 0, 'hostile fixture is findable via answer()');
+
+  /* ics export path: raw text, must stay a valid escaped ICS line */
+  HOSTILE.BPG.stars.add(HOSTILE.GUIDE.ev.e[HOSTILE.GUIDE.ev.e.length - 1].id);
+  const ics = HOSTILE.BPG.buildIcs();
+  ok(ics.indexOf('BEGIN:VCALENDAR') === 0, 'ics still builds with hostile title starred');
+  ok(/SUMMARY:/.test(ics), 'ics has a SUMMARY line for the hostile event');
 })();
 
 /* ---- report ---- */

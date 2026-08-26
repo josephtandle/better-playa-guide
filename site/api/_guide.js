@@ -257,14 +257,30 @@ function getFvIndex() {
   return FV_CACHE;
 }
 
+/* Query words that should route through a fine tag they do not literally match. */
+const FV_SYN = {
+  gay: ['queer', 'lgbtq'], lesbian: ['sapphic', 'queer'], lgbt: ['lgbtq', 'queer'],
+  rap: ['hip-hop'], hiphop: ['hip-hop'],
+  edm: ['techno', 'dubstep', 'trance', 'tribal-house'], psytrance: ['trance'],
+  bondage: ['bdsm', 'kink'], shibari: ['bdsm', 'kink'], rope: ['bdsm'],
+  meditate: ['meditation', 'guided-meditation'], meditating: ['meditation'],
+  sexy: ['erotic', 'burlesque'], astrology: ['divination', 'oracle', 'tarot'],
+  psychic: ['divination', 'oracle', 'tarot'], fortune: ['divination', 'oracle', 'tarot']
+};
+
 function matchFvIndices(term) {
   const fv = getFvIndex();
   const indices = [];
   const tLow = term.toLowerCase();
   const tStem = tLow.endsWith('s') ? tLow.slice(0, -1) : tLow;
+  const synNames = FV_SYN[tLow] || FV_SYN[tStem] || null;
   for (let i = 0; i < fv.length; i++) {
     const entry = (fv[i] || '').toLowerCase();
     if (entry === tLow || entry === tStem || entry === tLow + 's' || entry === tLow + 'es') {
+      indices.push(i);
+      continue;
+    }
+    if (synNames && synNames.indexOf(entry) !== -1) {
       indices.push(i);
       continue;
     }
@@ -331,7 +347,12 @@ function findDidYouMean(term) {
 
 function applySynonyms(str) {
   let s = str.toLowerCase();
-  s = s.replace(/\blive music\b/g, 'music');
+  /* "sound camp" means a music camp, not the words sound+camp */
+  s = s.replace(/\bsound\s+camps?\b/g, 'dj');
+  /* plural forms that the category matcher only knows singular */
+  s = s.replace(/\bsets\b/g, 'set');
+  s = s.replace(/\bparties\b/g, 'party');
+  s = s.replace(/\braves\b/g, 'rave');
   s = s.replace(/\bveggie\b/g, 'vegetarian').replace(/\bveg\b/g, 'vegetarian');
   s = s.replace(/\bpizzas\b/g, 'pizza');
   s = s.replace(/\bdjs\b/g, 'dj');
@@ -415,7 +436,8 @@ function parseQuery(qRaw, opts) {
       if (/\bmorning\b/.test(q))        { wStart = base + 6 * 3600e3;  wEnd = base + 12 * 3600e3; timeDesc = (timeDesc ? timeDesc + ' morning' : 'this morning'); hasTime = true; }
       else if (/\bafternoon\b/.test(q)) { wStart = base + 12 * 3600e3; wEnd = base + 18 * 3600e3; timeDesc = (timeDesc ? timeDesc + ' afternoon' : 'this afternoon'); hasTime = true; }
       else if (/\bevening\b/.test(q))   { wStart = base + 18 * 3600e3; wEnd = base + 23 * 3600e3; timeDesc = (timeDesc ? timeDesc + ' evening' : 'this evening'); hasTime = true; }
-      else if (/\b(?:late|sunrise|night)\b/.test(q)) { wStart = base + 23 * 3600e3; wEnd = base + 30 * 3600e3; timeDesc = (timeDesc ? timeDesc + ' late night' : 'late night'); hasTime = true; }
+      else if (/\bsunrise\b/.test(q))   { wStart = base + 4 * 3600e3;  wEnd = base + 10 * 3600e3; timeDesc = (timeDesc ? timeDesc + ' around sunrise' : 'around sunrise'); hasTime = true; }
+      else if (/\b(?:late|night)\b/.test(q)) { wStart = base + 23 * 3600e3; wEnd = base + 30 * 3600e3; timeDesc = (timeDesc ? timeDesc + ' late night' : 'late night'); hasTime = true; }
       else if (targetDay) { wStart = base; wEnd = base + 864e5; }
     }
   }
@@ -439,7 +461,7 @@ function parseQuery(qRaw, opts) {
 
   let clean = q
     .replace(/^(?:whats?\s+on|what\s+is\s+on|show|find|is\s+there|are\s+there|any|where\s+is|where\s+are|who\s+is|who\s+are|how\s+do\s+i\s+get|how\s+to\s+get|how\s+can\s+i\s+get|i\s+need|i\s+want|looking\s+for|im\s+looking\s+for)\b/g, '')
-    .replace(/\b(?:near\s+me|nearby|close|closest|walking\s+distance|right\s+now|now|tonight|today|tomorrow|morning|afternoon|evening|late|sunrise|in\s+\d+\s*(?:hours?|hrs?|h))\b/g, '')
+    .replace(/\b(?:near\s+me|nearby|close|closest|walking\s+distance|right\s+now|now|tonight|today|tomorrow|morning|afternoon|evening|late|night|sunrise|in\s+\d+\s*(?:hours?|hrs?|h))\b/g, '')
     .replace(/(\d{1,2}(?::\d{2})?)\s*(?:&|and|@|,)?\s*(esp|esplanade|[a-k])\b/g, '')
     .replace(/\bburn\s+night\b/g, '')
     .replace(/\bday\s*[1-9]\b(?:\s*of\s*the\s*burn)?/g, '')
@@ -566,8 +588,11 @@ function makeStemRe(term) {
   if (!tLow.endsWith('s')) {
     stems.push(tLow + 's');
     stems.push(tLow + 'es');
+    if (tLow.length > 3 && tLow.endsWith('y')) stems.push(tLow.slice(0, -1) + 'ies');
   } else {
     stems.push(tLow.slice(0, -1));
+    if (tLow.length > 4 && tLow.endsWith('ies')) stems.push(tLow.slice(0, -3) + 'y');
+    if (tLow.length > 3 && tLow.endsWith('es')) stems.push(tLow.slice(0, -2));
   }
   const esc = stems.map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
   return new RegExp('\\b(?:' + esc + ')\\b', 'i');
@@ -758,26 +783,44 @@ function retrieve(qRaw, opts) {
     return { parsed: P, hits: collapsedPerson.length, weakMatch: false, candidates: topPerson };
   }
 
+  /* Evaluate one event against a term list.
+   * Multi-term queries elevate a coarse-tag hit (L0) to L1 so one generic word
+   * ("food" in "vegan food") cannot sink an event the other words clearly match.
+   * allTitle marks every term hitting the title, for a ranking nudge that keeps
+   * "Burgers and Bass" above a radio show that merely mentions burgers. */
+  function evalEvent(e, terms) {
+    let minLayer = 3;
+    let l3Count = 0;
+    let titleCount = 0;
+    for (const term of terms) {
+      let layer = getTermMatchLayer(e, term);
+      if (layer === 0 && terms.length >= 2) layer = 1;
+      if (layer < minLayer) minLayer = layer;
+      if (layer === 3) l3Count++;
+      if (makeStemRe(term).test(e.t || '')) titleCount++;
+    }
+    return {
+      e,
+      matchLayer: minLayer,
+      allL3: (l3Count === terms.length && terms.length > 1),
+      allTitle: (terms.length > 0 && titleCount === terms.length)
+    };
+  }
+
   const evaluated = [];
   for (let i = 0; i < EV.length; i++) {
     const e = EV[i];
-    let matchLayer = -1;
-    let allL3 = false;
-
     if (P.isBroad || P.matchTerms.length === 0) {
-      matchLayer = 3;
-    } else {
-      let minLayer = 3;
-      let l3Count = 0;
-      for (const term of P.matchTerms) {
-        const layer = getTermMatchLayer(e, term);
-        if (layer < minLayer) minLayer = layer;
-        if (layer === 3) l3Count++;
+      /* No usable words. If a category word was recognised ("dj sets tonight"),
+         the coarse tags are the filter; without one, everything matches. */
+      let matchLayer = 3;
+      if (!P.isBroad && P.tags) {
+        matchLayer = (e.g && e.g.some(g => P.tags.includes(g))) ? 3 : -1;
       }
-      matchLayer = minLayer;
-      allL3 = (l3Count === P.matchTerms.length && P.matchTerms.length > 1);
+      evaluated.push({ e, matchLayer, allL3: false, allTitle: false });
+    } else {
+      evaluated.push(evalEvent(e, P.matchTerms));
     }
-    evaluated.push({ e, matchLayer, allL3 });
   }
 
   let selected = [];
@@ -788,6 +831,14 @@ function retrieve(qRaw, opts) {
     for (const item of evaluated) {
       if (item.matchLayer < minLayerThreshold) continue;
       const e = item.e;
+      /* An entry whose slots blanket 14+ hours of one day is an always-on
+         ambient thing (the radio station), not a start a person shows up for. */
+      let coveredMs = 0;
+      for (const s2 of (e.s || [])) {
+        const st2 = slotTimes(s2);
+        if (st2) coveredMs += (st2.end - st2.start);
+      }
+      const isAmbient = coveredMs >= 14 * 3600e3;
       for (const sl of (e.s || [])) {
         if (!sl || !sl[0]) continue;
         const slDay = sl[0].slice(0, 5);
@@ -808,12 +859,13 @@ function retrieve(qRaw, opts) {
           else if (overlapsWindow) score += 150;
         }
 
-        if (P.hasTime || window) {
-          if (slotDuration !== null) {
-            if (slotDuration <= 4) score += 50;
-            else if (slotDuration > 6 || !sl[0].includes(' ')) score -= 60;
-          }
+        /* All-day blobs and running orders rank below real timed starts,
+           whether or not the query named a time. */
+        if (slotDuration !== null) {
+          if (slotDuration <= 4) score += 50;
+          else if (slotDuration > 6 || !sl[0].includes(' ')) score -= 60;
         }
+        if (isAmbient) score -= 80;
 
         if (src.tier === 'confirmed') score += 100;
 
@@ -829,6 +881,7 @@ function retrieve(qRaw, opts) {
         }
 
         if (item.allL3) score += 100;
+        if (item.allTitle) score += 60;
 
         const isLiveNow = !!(st && st.start <= P.nowMs && st.end > P.nowMs);
         const isRunningOrder = !sl[0].includes(' ') || !st;
@@ -907,22 +960,13 @@ function retrieve(qRaw, opts) {
 
           evaluated.length = 0;
           for (let i = 0; i < EV.length; i++) {
-            const e = EV[i];
-            let minLayer = 3;
-            let l3Count = 0;
-            for (const term of survivingTerms) {
-              const layer = getTermMatchLayer(e, term);
-              if (layer < minLayer) minLayer = layer;
-              if (layer === 3) l3Count++;
-            }
-            if (deadCoarseTags.length > 0 && minLayer < 0) {
-              if (e.g && e.g.some(g => deadCoarseTags.includes(g))) {
-                minLayer = 0;
+            const item = evalEvent(EV[i], survivingTerms);
+            if (deadCoarseTags.length > 0 && item.matchLayer < 0) {
+              if (item.e.g && item.e.g.some(g => deadCoarseTags.includes(g))) {
+                item.matchLayer = 0;
               }
             }
-            const matchLayer = minLayer;
-            const allL3 = (l3Count === survivingTerms.length && survivingTerms.length > 1);
-            evaluated.push({ e, matchLayer, allL3 });
+            evaluated.push(item);
           }
 
           const rerunCand = getCandidatesForFilter(targetDayCheck, windowCheck, 1);
@@ -972,7 +1016,7 @@ function retrieve(qRaw, opts) {
             for (let i = 0; i < EV.length; i++) {
               const e = EV[i];
               const matchLayer = (e.g && e.g.some(g => deadCoarseTags.includes(g))) ? 0 : -1;
-              evaluated.push({ e, matchLayer, allL3: false });
+              evaluated.push({ e, matchLayer, allL3: false, allTitle: false });
             }
             const candD = getCandidatesForFilter(targetDayCheck, windowCheck, 0);
             if (candD.length > 0) {

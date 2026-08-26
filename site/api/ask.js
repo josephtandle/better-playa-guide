@@ -267,6 +267,7 @@ module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Max-Age', '86400');
   res.setHeader('Cache-Control', 'no-store');
   if (req.method === 'OPTIONS') { res.status(204).end(); return; }
   if (req.method !== 'POST') { res.status(405).json({ ok: false, error: 'method_not_allowed', fallback: true }); return; }
@@ -279,7 +280,11 @@ module.exports = async function handler(req, res) {
   const loc = body.loc ? String(body.loc).slice(0, 60).trim() : null;
   const speed = Number(body.speed) || 12;
 
-  const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||
+  /* x-real-ip is set by the platform and not client-forgeable; the LEFTMOST
+     x-forwarded-for entry is attacker-controlled, so fall back to the RIGHTMOST. */
+  const xff = String(req.headers['x-forwarded-for'] || '').split(',');
+  const ip = String(req.headers['x-real-ip'] || '').trim() ||
+             xff[xff.length - 1].trim() ||
              (req.socket && req.socket.remoteAddress) || 'unknown';
   const ipHash = sha(ip).slice(0, 12);
   const dayKey = new Date(G.playaNow().ms).toISOString().slice(0, 10);
@@ -300,17 +305,8 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  /* 1. Scope lock. Runs before anything is assembled, so abuse costs zero tokens. */
-  const scope = G.scopeCheck(q);
-  if (!scope.ok) {
-    await store.incrBy('refusals:' + dayKey, 1, 172800);
-    log({ outcome: 'refused', reason: scope.reason, prompt_tokens: 0, completion_tokens: 0, cost_usd: 0 });
-    res.status(200).json({ ok: true, refused: true, fallback: false, reply: G.REFUSAL, results: [],
-      usage: { prompt_tokens: 0, completion_tokens: 0, total_tokens: 0, cost_usd: 0 } });
-    return;
-  }
-
-  /* 2. Rate limit. Read BEFORE incrementing. Counting a rejected request against
+  /* 1. Rate limit. Runs before everything else so refusal probes and abuse
+     burn quota too. Read BEFORE incrementing. Counting a rejected request against
      the caller means their own retries keep the counter climbing and the window
      never drains, which locks out a real user who simply tapped twice. */
   const bucket = Math.floor(Date.now() / (RATE_WINDOW * 1000));
@@ -326,6 +322,16 @@ module.exports = async function handler(req, res) {
     return;
   }
   await store.incrBy(rlKey, 1, RATE_WINDOW + 60);
+
+  /* 2. Scope lock. Runs before anything is assembled, so abuse costs zero tokens. */
+  const scope = G.scopeCheck(q);
+  if (!scope.ok) {
+    await store.incrBy('refusals:' + dayKey, 1, 172800);
+    log({ outcome: 'refused', reason: scope.reason, prompt_tokens: 0, completion_tokens: 0, cost_usd: 0 });
+    res.status(200).json({ ok: true, refused: true, fallback: false, reply: G.REFUSAL, results: [],
+      usage: { prompt_tokens: 0, completion_tokens: 0, total_tokens: 0, cost_usd: 0 } });
+    return;
+  }
 
   /* 3. History, at most the last 3 turns, each clipped. */
   const history = Array.isArray(body.history) ? body.history.slice(-3).map(h => ({
@@ -375,9 +381,13 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  /* 5. Cache. */
+  /* 5. Cache. Keyed on a 30-minute playa-clock bucket as well: "what is on
+     right now" must not serve yesterday's half-hour verbatim for 24 hours
+     while the cards recompute fresh. Speed changes distances, so it keys too. */
   const norm = q.toLowerCase().replace(/\s+/g, ' ').replace(/[?!.\s]+$/, '');
-  const cacheKey = 'ans:v2:' + sha(norm + '|' + (loc || '') + '|' + history.map(h => h.role + ':' + h.content).join('~')).slice(0, 40);
+  const timeBucket = Math.floor(G.playaNow().ms / (30 * 60e3));
+  const cacheKey = 'ans:v3:' + sha(norm + '|' + (loc || '') + '|' + speed + '|' + timeBucket + '|' +
+    history.map(h => h.role + ':' + h.content).join('~')).slice(0, 40);
   const cached = await store.get(cacheKey);
   if (cached) {
     log({ outcome: 'cache_hit', prompt_tokens: 0, completion_tokens: 0, cost_usd: 0, candidates: results.length });
@@ -386,8 +396,8 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  /* 6. Budget cap. */
-  const spent = Number(await store.get(spendKey) || 0);
+  /* 6. Budget cap. NaN or garbage in the store must never disable the cap. */
+  const spent = Number(await store.get(spendKey)) || 0;
   if (spent >= DAILY_CAP) {
     log({ outcome: 'budget_exhausted', spent_usd: spent, cap_usd: DAILY_CAP, candidates: results.length });
     res.status(200).json({ ok: true, fallback: true, budget_exhausted: true, reply: '', results: results, parsed: parsedOut,
@@ -401,22 +411,31 @@ module.exports = async function handler(req, res) {
   const messages = [{ role: 'system', content: PROMPT.SYSTEM_PROMPT }].concat(history, [{ role: 'user', content: userBlock }]);
   const deadline = Date.now() + TIMEOUT_MS;
 
+  /* Reserve a conservative estimate BEFORE the model call so a burst of
+     concurrent requests cannot sail past the cap during the 12s flight.
+     Trued up to the real cost after the call. */
+  const EST_COST = 0.002;
+  await store.incrBy(spendKey, EST_COST, 172800);
+
   const fbResult = await callWithFallback(messages, deadline);
   const resOut = fbResult.out;
 
   if (!fbResult.provider || resOut.error) {
+    await store.incrBy(spendKey, -EST_COST, 172800);
     log({ outcome: 'model_failed', fallback_path: fbResult.fallbackPath, reason: resOut.error, detail: resOut.detail, candidates: results.length });
     res.status(200).json({ ok: true, fallback: true, error: resOut.error || 'model_failed', reply: '', results: results, parsed: parsedOut });
     return;
   }
 
   const provider = fbResult.provider;
+  if (!PRICES[provider]) console.error('[ask] no price table for provider ' + provider + ', billing at groq rate');
   const price = PRICES[provider] || PRICES.groq;
   let promptTok = resOut.usage.prompt_tokens || 0;
   let compTok = resOut.usage.completion_tokens || 0;
   let retried = false;
 
   let reply = sanitise(resOut.text);
+  let usedLocalReply = false;
   const looksRefused = !reply || reply.replace(/[^a-z ]/gi, '').toLowerCase().indexOf('i only know what is on at burning man') !== -1;
   if (looksRefused && results.length > 0) {
     retried = true;
@@ -436,19 +455,22 @@ module.exports = async function handler(req, res) {
         compTok += out2.usage.completion_tokens || 0;
         const r2 = sanitise(out2.text);
         const stillRefused = !r2 || r2.replace(/[^a-z ]/gi, '').toLowerCase().indexOf('i only know what is on at burning man') !== -1;
-        reply = stillRefused ? localReply(r) : r2;
+        if (stillRefused) { reply = localReply(r); usedLocalReply = true; } else { reply = r2; }
       } else {
-        reply = localReply(r);
+        reply = localReply(r); usedLocalReply = true;
       }
     } else {
-      reply = localReply(r);
+      reply = localReply(r); usedLocalReply = true;
     }
   }
-  if (!reply) reply = localReply(r);
+  if (!reply) { reply = localReply(r); usedLocalReply = true; }
 
   const cost = promptTok * price.in + compTok * price.out;
-  const newSpent = await store.incrBy(spendKey, cost, 172800);
-  await store.set(cacheKey, reply, CACHE_TTL);
+  /* true-up: the estimate was already charged */
+  const newSpent = await store.incrBy(spendKey, cost - EST_COST, 172800);
+  /* Never cache a deterministic fallback: a degraded answer must not outlive
+     the outage that produced it. */
+  if (!usedLocalReply) await store.set(cacheKey, reply, CACHE_TTL);
 
   log({ outcome: 'answered', provider: provider, fallback_path: fbResult.fallbackPath, retried: retried, candidates: results.length, hits: r.hits,
         prompt_tokens: promptTok, completion_tokens: compTok, cost_usd: +cost.toFixed(6),

@@ -26,9 +26,14 @@ const DAY = 86400;
 function sha(s) { return crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 24); }
 
 function clientIp(req) {
+  /* x-real-ip is platform-set; the leftmost x-forwarded-for entry is
+     client-forgeable, so fall back to the rightmost hop instead. */
+  const real = (req.headers && req.headers['x-real-ip']) || '';
+  if (String(real).trim()) return String(real).trim();
   const xf = (req.headers && (req.headers['x-forwarded-for'] || req.headers['X-Forwarded-For'])) || '';
-  const first = String(xf).split(',')[0].trim();
-  return first || (req.socket && req.socket.remoteAddress) || 'unknown';
+  const parts = String(xf).split(',');
+  const last = parts[parts.length - 1].trim();
+  return last || (req.socket && req.socket.remoteAddress) || 'unknown';
 }
 
 function validEmail(e) {
@@ -76,48 +81,70 @@ async function saveRow(email, name, camp, hashes) {
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) return { ok: false, reason: 'not_configured' };
-  const r = await fetch(url.replace(/\/$/, '') + '/rest/v1/guide_list_backups?on_conflict=email', {
-    method: 'POST',
-    headers: {
-      apikey: key,
-      Authorization: 'Bearer ' + key,
-      'Content-Type': 'application/json',
-      Prefer: 'resolution=merge-duplicates,return=minimal'
-    },
-    body: JSON.stringify([{ email: email, name: name, camp: camp, list: hashes }])
-  });
-  if (!r.ok) {
-    /* log status only; never log the email address */
-    console.error('list-sync: supabase write failed ' + r.status);
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 6000);
+  try {
+    const r = await fetch(url.replace(/\/$/, '') + '/rest/v1/guide_list_backups?on_conflict=email', {
+      method: 'POST',
+      signal: ac.signal,
+      headers: {
+        apikey: key,
+        Authorization: 'Bearer ' + key,
+        'Content-Type': 'application/json',
+        Prefer: 'resolution=merge-duplicates,return=minimal'
+      },
+      body: JSON.stringify([{ email: email, name: name, camp: camp, list: hashes }])
+    });
+    if (!r.ok) {
+      /* log status only; never log the email address */
+      console.error('list-sync: supabase write failed ' + r.status);
+      return { ok: false, reason: 'store_failed' };
+    }
+    return { ok: true };
+  } catch (e) {
+    console.error('list-sync: supabase write threw ' + (e && e.name));
     return { ok: false, reason: 'store_failed' };
+  } finally {
+    clearTimeout(timer);
   }
-  return { ok: true };
 }
 
 async function sendMail(email, link, name) {
   const key = process.env.RESEND_API_KEY;
   if (!key) return { ok: false, reason: 'not_configured' };
-  const r = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: FROM,
-      to: [email],
-      subject: 'Your Playa Guide list',
-      text: emailBody(link, name)
-    })
-  });
-  if (!r.ok) {
-    console.error('list-sync: resend send failed ' + r.status);
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 8000);
+  try {
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      signal: ac.signal,
+      headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: FROM,
+        to: [email],
+        subject: 'Your Playa Guide list',
+        text: emailBody(link, name)
+      })
+    });
+    if (!r.ok) {
+      console.error('list-sync: resend send failed ' + r.status);
+      return { ok: false, reason: 'send_failed' };
+    }
+    return { ok: true };
+  } catch (e) {
+    console.error('list-sync: resend send threw ' + (e && e.name));
     return { ok: false, reason: 'send_failed' };
+  } finally {
+    clearTimeout(timer);
   }
-  return { ok: true };
 }
 
 module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
   if (req.method !== 'POST') {
     res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
     return res.end(JSON.stringify({ error: 'method_not_allowed' }));
   }
 
@@ -140,23 +167,28 @@ module.exports = async function handler(req, res) {
   const name = cleanText(body.name, 40);
   const camp = cleanText(body.camp, 60);
 
-  /* rate limits: 3 per email per day, 10 per IP per day */
+  /* rate limits: 3 per email per day, 10 per IP per day. Read first, count a
+     send only after it succeeds: a failed send must not consume quota. */
   const ip = clientIp(req);
-  const nEmail = await store.incrBy('ls:e:' + sha(email), 1, DAY);
-  const nIp = await store.incrBy('ls:ip:' + sha(ip), 1, DAY);
-  if (nEmail > PER_EMAIL_CAP || nIp > PER_IP_CAP) {
+  const emailKey = 'ls:e:' + sha(email);
+  const ipKey = 'ls:ip:' + sha(ip);
+  const nEmail = Number(await store.get(emailKey)) || 0;
+  const nIp = Number(await store.get(ipKey)) || 0;
+  if (nEmail >= PER_EMAIL_CAP || nIp >= PER_IP_CAP) {
     res.statusCode = 429;
     return res.end(JSON.stringify({ error: 'rate_limited' }));
   }
 
   const link = GUIDE_URL + '#l=' + body.hashes.join(',');
 
-  const saved = await saveRow(email, name, camp, body.hashes);
   const sent = await sendMail(email, link, name);
   if (!sent.ok) {
     res.statusCode = sent.reason === 'not_configured' ? 503 : 502;
     return res.end(JSON.stringify({ error: sent.reason }));
   }
+  await store.incrBy(emailKey, 1, DAY);
+  await store.incrBy(ipKey, 1, DAY);
+  const saved = await saveRow(email, name, camp, body.hashes);
   /* a failed store with a successful send is still a success for the user;
      log it (status only) and move on. */
   if (!saved.ok) console.error('list-sync: row not stored (' + saved.reason + ')');

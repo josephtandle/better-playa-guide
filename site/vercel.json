@@ -38,15 +38,84 @@
     "api/ask.js": {
       "includeFiles": "guide/data.js",
       "maxDuration": 20
+    },
+    "api/list-sync.js": {
+      "maxDuration": 15
     }
   },
   "redirects": [
+    {
+      "source": "/api/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterplayaguideai.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/api/$1",
+      "permanent": false
+    },
+    {
+      "source": "/guide",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterplayaguideai.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/",
+      "permanent": false
+    },
+    {
+      "source": "/guide/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterplayaguideai.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
     {
       "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "betterplayaguideai.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
+      "source": "/api/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterguide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/api/$1",
+      "permanent": false
+    },
+    {
+      "source": "/guide",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterguide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/",
+      "permanent": false
+    },
+    {
+      "source": "/guide/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterguide.musecafe.vip"
         }
       ],
       "destination": "https://musecafe.vip/guide/$1",
@@ -64,11 +133,77 @@
       "permanent": false
     },
     {
+      "source": "/api/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "guide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/api/$1",
+      "permanent": false
+    },
+    {
+      "source": "/guide",
+      "has": [
+        {
+          "type": "host",
+          "value": "guide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/",
+      "permanent": false
+    },
+    {
+      "source": "/guide/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "guide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "guide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
+      "source": "/api/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "playaguide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/api/$1",
+      "permanent": false
+    },
+    {
+      "source": "/guide",
+      "has": [
+        {
+          "type": "host",
+          "value": "playaguide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/",
+      "permanent": false
+    },
+    {
+      "source": "/guide/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "playaguide.musecafe.vip"
         }
       ],
       "destination": "https://musecafe.vip/guide/$1",
@@ -120,6 +255,33 @@
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
+        }
+      ]
+    },
+    {
+      "source": "/guide/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/guide/data.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/guide/(guide|map)\\.(js|css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, stale-while-revalidate=86400"
         }
       ]
     }

@@ -363,9 +363,125 @@ test('33. regression: temple burn', () => {
   }
 });
 
+// 34. sunrise window: "sunrise" means dawn (04:00-10:00), not late night
+test('34. sunrise window is dawn, not 23:00', () => {
+  const p = G.parseQuery('sunrise set tuesday');
+  assert.strictEqual(p.targetDay, '09-01');
+  assert.strictEqual(p.wStart, Date.UTC(2026, 8, 1, 4, 0));
+  assert.strictEqual(p.wEnd, Date.UTC(2026, 8, 1, 10, 0));
+});
+
+// 35. "wednesday night" consumes the word night; it is not a search term
+test('35. night is a time word, not a search term', () => {
+  const p = G.parseQuery('open bar wednesday night');
+  assert(!p.matchTerms.includes('night'));
+  assert.strictEqual(p.targetDay, '09-02');
+  assert.strictEqual(p.wStart, Date.UTC(2026, 8, 2, 23, 0));
+});
+
+// 36. open bar wednesday night finds literal open-bar listings on Wednesday
+test('36. open bar wednesday night', () => {
+  const r = G.retrieve('open bar wednesday night', { nowMs: at(8, 31, 12) });
+  assert(r.candidates.length > 0);
+  const titles = r.candidates.map(x => x.e.t);
+  assert(titles.some(t => /bar is open/i.test(t)));
+  assert(r.candidates.every(x => dayOf(x) === '09-02'));
+});
+
+// 37. category word with no other usable words filters by tag ("dj sets tonight")
+test('37. dj sets tonight filters to music-tagged events', () => {
+  const r = G.retrieve('dj sets tonight', { nowMs: at(8, 30, 19) });
+  assert(r.candidates.length > 0);
+  for (const c of r.candidates) {
+    assert(c.e.g && c.e.g.includes('music'), 'non-music event leaked: ' + c.e.t);
+  }
+});
+
+// 38. sound camp routes to music camps, not the literal words sound+camp
+test('38. sound camp means music', () => {
+  const r = G.retrieve('sound camp');
+  assert.strictEqual(r.parsed.catWord, 'dj');
+  assert(r.hits > 100);
+  for (const c of r.candidates.slice(0, 10)) {
+    assert(c.e.g && c.e.g.includes('music'));
+  }
+});
+
+// 39. multi-term: a generic category word must not sink a literal match
+test('39. vegan food keeps the literal vegan listing, no relax note', () => {
+  const r = G.retrieve('vegan food');
+  assert(r.candidates.length > 0);
+  assert.strictEqual(r.parsed.relaxed.length, 0);
+  const titles = r.candidates.map(x => x.e.t);
+  assert(titles.some(t => /vegan/i.test(t)));
+});
+
+// 40. title matches outrank an all-day ambient entry that merely mentions the word
+test('40. burgers ranks titled burger events above the radio station', () => {
+  const r = G.retrieve('burgers');
+  assert(r.candidates.length > 0);
+  assert(/burgers/i.test(r.candidates[0].e.t), 'top hit was: ' + r.candidates[0].e.t);
+  const bmirIdx = r.candidates.findIndex(x => /94\.5 FM/.test(x.e.t));
+  const titledIdx = r.candidates.findIndex(x => /burgers/i.test(x.e.t));
+  if (bmirIdx !== -1) assert(titledIdx < bmirIdx);
+});
+
+// 41. fine-tag synonym routing: gay -> queer/lgbtq tags
+test('41. gay party routes through queer fine tags', () => {
+  const r = G.retrieve('gay party');
+  assert(r.candidates.length >= 3);
+  assert.strictEqual(r.parsed.relaxed.length, 0);
+  const fv = G.loadGuide().ev.fv;
+  const top = r.candidates.slice(0, 5);
+  const tagged = top.filter(c =>
+    /gay|queer|lgbt/i.test(c.e.t + ' ' + (c.e.c || '') + ' ' + c.e.d) ||
+    (c.e.f && c.e.f.some(idx => /queer|lgbtq|sapphic/.test(fv[idx] || ''))));
+  assert(tagged.length >= 3);
+});
+
+// 42. plural stemming: parties -> party
+test('42. parties tonight matches party events', () => {
+  const r = G.retrieve('parties tonight', { nowMs: at(8, 30, 19) });
+  assert.strictEqual(r.parsed.catWord, 'party');
+  assert(r.candidates.length > 0);
+  for (const c of r.candidates.slice(0, 10)) {
+    assert(/part(y|ies)/i.test(c.e.t + ' ' + c.e.d) || (c.e.g && c.e.g.includes('party')));
+  }
+});
+
+// 43. live music means live music, not every DJ set
+test('43. live music finds literal live music', () => {
+  const r = G.retrieve('live music');
+  assert(r.candidates.length >= 5);
+  for (const c of r.candidates.slice(0, 5)) {
+    assert(/live/i.test(c.e.t + ' ' + c.e.d), 'not live: ' + c.e.t);
+  }
+});
+
+// 44. techno routes through the fine tag when the word is not in the text
+test('44. techno tonight uses the fine tag layer', () => {
+  const r = G.retrieve('techno tonight', { nowMs: at(8, 30, 19) });
+  assert(r.candidates.length >= 5);
+  const fv = G.loadGuide().ev.fv;
+  const viaTag = r.candidates.filter(c =>
+    !(/techno/i.test(c.e.t + ' ' + (c.e.p || '') + ' ' + c.e.d)) &&
+    c.e.f && c.e.f.some(idx => (fv[idx] || '') === 'techno'));
+  assert(viaTag.length > 0, 'no candidate arrived purely via the techno fine tag');
+});
+
+// 45. ies plural stemming in the matcher itself
+test('45. makeStemRe style plurals: query "cocktail parties"', () => {
+  const r = G.retrieve('cocktail parties');
+  assert(r.candidates.length > 0);
+  for (const c of r.candidates.slice(0, 5)) {
+    assert(/cocktail/i.test(c.e.t + ' ' + (c.e.c || '') + ' ' + c.e.d + ' ' + (c.e.k || '')));
+  }
+});
+
+const TOTAL = 45;
 console.log('\n--- TEST SUMMARY ---');
-console.log(`Passed: ${passed} / 33`);
-console.log(`Failed: ${failed} / 33`);
+console.log(`Passed: ${passed} / ${TOTAL}`);
+console.log(`Failed: ${failed} / ${TOTAL}`);
 
 if (failed > 0) {
   process.exit(1);

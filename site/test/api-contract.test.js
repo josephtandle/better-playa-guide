@@ -205,6 +205,44 @@ const sha = s => crypto.createHash('sha256').update(String(s)).digest('hex');
     ok(blom.candidates.length === 2, 'Blomqvist query still returns 2 candidates');
   })();
 
+  /* ---- vercel.json routing invariants (the vanity-host 404 regression) ---- */
+  (function () {
+    const fs = require('fs');
+    const cfg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'vercel.json'), 'utf8'));
+    const hosts = ['betterplayaguideai.musecafe.vip', 'betterguide.musecafe.vip', 'guide.musecafe.vip', 'playaguide.musecafe.vip'];
+    for (const h of hosts) {
+      const rules = cfg.redirects.filter(r => r.has && r.has[0] && r.has[0].value === h);
+      ok(rules.length >= 3, h + ' has specific redirect rules');
+      const apiRule = rules.find(r => r.source === '/api/(.*)');
+      ok(!!apiRule && apiRule.destination === 'https://musecafe.vip/api/$1',
+        h + ' passes /api through, never under /guide/');
+      const guideRule = rules.find(r => r.source === '/guide/(.*)');
+      ok(!!guideRule && guideRule.destination === 'https://musecafe.vip/guide/$1',
+        h + ' does not double-prefix /guide paths');
+      const catchAll = rules.find(r => r.source === '/(.*)');
+      ok(!!catchAll && catchAll.destination === 'https://musecafe.vip/guide/$1',
+        h + ' catch-all lands in the guide');
+      ok(rules.indexOf(apiRule) < rules.indexOf(catchAll) && rules.indexOf(guideRule) < rules.indexOf(catchAll),
+        h + ' specific rules come before the catch-all');
+    }
+    const swHdr = (cfg.headers || []).find(x => x.source === '/guide/sw.js');
+    ok(!!swHdr && /no-cache/.test(swHdr.headers[0].value), 'sw.js is served no-cache so updates propagate');
+  })();
+
+  /* ---- ask.js source invariants: cache key carries time, fallbacks not cached ---- */
+  (function () {
+    const fs = require('fs');
+    const src = fs.readFileSync(path.join(repoRoot, 'api', 'ask.js'), 'utf8');
+    ok(src.indexOf('timeBucket') !== -1 && /timeBucket/.test(src.slice(src.indexOf('cacheKey'), src.indexOf('cacheKey') + 300)),
+      'answer cache key includes a time bucket');
+    ok(src.indexOf('if (!usedLocalReply) await store.set(cacheKey') !== -1,
+      'deterministic fallback replies are never cached');
+    ok(src.indexOf("x-real-ip") !== -1, 'rate limiter keys on x-real-ip, not forgeable XFF');
+    const rateIdx = src.indexOf('1. Rate limit');
+    const scopeIdx = src.indexOf('2. Scope lock');
+    ok(rateIdx !== -1 && scopeIdx !== -1 && rateIdx < scopeIdx, 'rate limiter runs before the scope lock');
+  })();
+
   /* ---- report ---- */
   console.log = realLog;
   console.log('api-contract: ' + pass + ' passed, ' + fail + ' failed');

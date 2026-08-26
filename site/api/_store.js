@@ -33,7 +33,12 @@ function flush() {
     const obj = {};
     const now = Date.now();
     mem.forEach((v, k) => { if (!v || v.exp > now) obj[k] = v; });
-    fs.writeFile(FILE, JSON.stringify(obj), () => {});
+    /* write-then-rename: a crash mid-write must not truncate the live file */
+    const tmp = FILE + '.tmp';
+    fs.writeFile(tmp, JSON.stringify(obj), err => {
+      if (err) return;
+      fs.rename(tmp, FILE, () => {});
+    });
   } catch (e) {}
 }
 
@@ -52,6 +57,13 @@ function localSet(key, val, ttl) {
   flush();
 }
 
+let upFailLogged = false;
+function logUpFail(e) {
+  if (upFailLogged) return;
+  upFailLogged = true;
+  console.error('[store] upstash unreachable, falling back to per-instance memory: ' + String(e && e.message).slice(0, 120));
+}
+
 async function up(pathPart, init) {
   const r = await fetch(UP_URL.replace(/\/$/, '') + pathPart, Object.assign({
     headers: { Authorization: 'Bearer ' + UP_TOK }
@@ -64,7 +76,7 @@ async function up(pathPart, init) {
 async function get(key) {
   if (backendName === 'upstash') {
     try { const v = await up('/get/' + encodeURIComponent(key)); return v === null || v === undefined ? null : String(v); }
-    catch (e) {}
+    catch (e) { logUpFail(e); }
   }
   return localGet(key);
 }
@@ -75,21 +87,27 @@ async function set(key, value, ttlSec) {
       await up('/set/' + encodeURIComponent(key) + '?EX=' + (ttlSec || 3600),
         { method: 'POST', body: String(value) });
       return;
-    } catch (e) {}
+    } catch (e) { logUpFail(e); }
   }
   localSet(key, value, ttlSec);
 }
 
 async function incrBy(key, delta, ttlSec) {
+  /* Redis rejects exponential notation ("1e-7"), which is exactly what tiny
+     token costs stringify to. Always send a plain decimal. */
+  const d = Number(delta) || 0;
+  const deltaStr = d.toFixed(12).replace(/0+$/, '').replace(/\.$/, '') || '0';
   if (backendName === 'upstash') {
     try {
-      const n = await up('/incrbyfloat/' + encodeURIComponent(key) + '/' + delta, { method: 'POST' });
-      try { await up('/expire/' + encodeURIComponent(key) + '/' + (ttlSec || 3600), { method: 'POST' }); } catch (e) {}
+      const n = await up('/incrbyfloat/' + encodeURIComponent(key) + '/' + deltaStr, { method: 'POST' });
+      /* NX: set the TTL only when the key has none, so a busy counter is not
+         kept alive forever by its own increments */
+      try { await up('/expire/' + encodeURIComponent(key) + '/' + (ttlSec || 3600) + '/NX', { method: 'POST' }); } catch (e) {}
       return Number(n);
-    } catch (e) {}
+    } catch (e) { logUpFail(e); }
   }
-  const cur = Number(localGet(key) || 0);
-  const next = cur + Number(delta);
+  const cur = Number(localGet(key)) || 0;
+  const next = cur + d;
   localSet(key, next, ttlSec);
   return next;
 }

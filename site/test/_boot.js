@@ -32,6 +32,9 @@ function boot(opts) {
     Object.keys(opts.localStorage).forEach(k => w.localStorage.setItem(k, opts.localStorage[k]));
   }
   w.eval(DATA_SRC);
+  /* opts.mutateData(guideData): edit the payload BEFORE guide.js boots, e.g.
+   * to inject a hostile fixture event and prove the render layer escapes it. */
+  if (typeof opts.mutateData === 'function') opts.mutateData(w.__GUIDE__);
   w.eval(GUIDE_SRC);
   /* jsdom keeps readyState at "loading" here, so guide.js deferred init() to
    * DOMContentLoaded. Fire it now so the page is fully initialised. */

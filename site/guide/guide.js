@@ -86,6 +86,7 @@
         k: item.k,
         src: item.src,
         g: item.g ? item.g.slice() : [],
+        f: item.f ? item.f.slice() : [],
         s: [],
         allIds: []
       };
@@ -106,6 +107,13 @@
       for (var tg = 0; tg < item.g.length; tg++) {
         if (targetGroup.g.indexOf(item.g[tg]) === -1) {
           targetGroup.g.push(item.g[tg]);
+        }
+      }
+    }
+    if (item.f) {
+      for (var tf = 0; tf < item.f.length; tf++) {
+        if (targetGroup.f.indexOf(item.f[tf]) === -1) {
+          targetGroup.f.push(item.f[tf]);
         }
       }
     }
@@ -520,8 +528,10 @@
     var dn = (q.lat-p.lat)*FLAT, de = (q.lon-p.lon)*FLON;
     return Math.round(Math.hypot(dn, de) / speed / 60);
   }
-  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){
-    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  /* Every generated attribute in this file is double-quoted, but escape the
+     single quote too so one future data-x='...' cannot become an XSS hole. */
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 
   /* ---- preferences: local only ---- */
   var PREF = 'bpg.prefs';
@@ -531,6 +541,7 @@
       if (p.loc && $('loc')) $('loc').value = p.loc;
       if (p.mode && $('mode')) $('mode').value = p.mode;
       if (p.tags) p.tags.forEach(function(t){ active.add(t); });
+      if ($('confirmed-only')) $('confirmed-only').checked = localStorage.getItem('bpg.confirmedOnly') === 'true';
     } catch(e){}
   }
   function savePrefs(){
@@ -544,6 +555,7 @@
   }
 
   function saveStars(){
+    invalidateStarCache();
     try {
       localStorage.setItem(STAR_PREF, JSON.stringify(Array.from(starred)));
     } catch(e){}
@@ -647,26 +659,27 @@
     }
   }
 
+  /* One share implementation for every share/copy button on the page.
+     #share/#copylink (header) and #myevents-share-btn/#myevents-copy-btn
+     (My Events) all land here. */
+  function copyShareLink(targetUrl){
+    var urlToCopy = targetUrl || ((starred.size > 0 || mylistOnly) ? getShareableLink() : URL_);
+    var txt = SHARE_TEXT + ' ' + urlToCopy;
+    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(
+      function(){ toast('Link copied to clipboard'); },
+      function(){ toast(urlToCopy); });
+    else toast(urlToCopy);
+  }
+  function doShare(){
+    var shareUrl = (starred.size > 0 || mylistOnly) ? getShareableLink() : URL_;
+    if (navigator.share) {
+      navigator.share({ title:'Better Playa Guide', text:SHARE_TEXT, url:shareUrl }).catch(function(){});
+    } else { copyShareLink(shareUrl); }
+  }
   function wireShare(){
     var s = $('share'), c = $('copylink');
-    if (s) s.addEventListener('click', function(){
-      var shareUrl = (starred.size > 0 || mylistOnly) ? getShareableLink() : URL_;
-      if (navigator.share) {
-        navigator.share({ title:'Better Playa Guide', text:SHARE_TEXT, url:shareUrl }).catch(function(){});
-      } else { copy(shareUrl); }
-    });
-    if (c) c.addEventListener('click', function(){
-      var shareUrl = (starred.size > 0 || mylistOnly) ? getShareableLink() : URL_;
-      copy(shareUrl);
-    });
-    function copy(targetUrl){
-      var urlToCopy = targetUrl || ((starred.size > 0 || mylistOnly) ? getShareableLink() : URL_);
-      var txt = SHARE_TEXT + ' ' + urlToCopy;
-      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(
-        function(){ toast('Link copied to clipboard'); },
-        function(){ toast(urlToCopy); });
-      else toast(urlToCopy);
-    }
+    if (s) s.addEventListener('click', doShare);
+    if (c) c.addEventListener('click', function(){ copyShareLink(); });
   }
 
   /* ---- Provenance & Trust Tiers ---- */
@@ -1280,13 +1293,34 @@
     }
     toast(msg);
   }
+  /* Starred lookup that survives the two id vintages: EV ids end in the slot
+     start (t|c|s[0][0]) while PIN/PICKS ids end in the w string (t|c|w). The
+     title|camp fallback makes a star set on either render as starred on both. */
+  var STARRED_TC_CACHE = null;
+  function starredTitleCamps(){
+    if (STARRED_TC_CACHE) return STARRED_TC_CACHE;
+    var out = {};
+    starred.forEach(function(id){
+      var bar = String(id).lastIndexOf('|');
+      if (bar > 0) out[String(id).slice(0, bar)] = true;
+    });
+    STARRED_TC_CACHE = out;
+    return out;
+  }
+  function invalidateStarCache(){ STARRED_TC_CACHE = null; }
+  function isStarredRow(o){
+    if (o.id && starred.has(o.id)) return true;
+    if (o.allIds && o.allIds.some(function(sid){ return starred.has(sid); })) return true;
+    return !!starredTitleCamps()[(o.t || '') + '|' + (o.c || '')];
+  }
   function syncStarButtons(){
     var btns = document.querySelectorAll('.star-btn');
     for (var i = 0; i < btns.length; i++) {
       var b = btns[i];
       var sid = b.getAttribute('data-id');
       if (!sid) continue;
-      var on = starred.has(sid);
+      var on = starred.has(sid) ||
+        !!starredTitleCamps()[sid.slice(0, sid.lastIndexOf('|'))];
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
       var glyph = b.querySelector('span');
       if (glyph) glyph.textContent = on ? '★' : '☆';
@@ -1295,9 +1329,7 @@
 
   /* ---- card render ---- */
   function card(o, dayFilter){
-    var isStarred = false;
-    if (o.id && starred.has(o.id)) isStarred = true;
-    else if (o.allIds && o.allIds.some(function(sid){ return starred.has(sid); })) isStarred = true;
+    var isStarred = isStarredRow(o);
 
     var near = o.d !== null && o.d !== undefined && o.d <= 8;
     var cls = o.pin ? 'pin' : (near ? 'near' : '');
@@ -1320,7 +1352,7 @@
         + (o.slot && o.slot[0] ? ' data-start="' + esc(o.slot[0]) + '"' : (o.w ? ' data-start="' + esc(o.w) + '"' : ''))
         + ' aria-label="Navigate to ' + esc(o.t) + '"><span aria-hidden="true">🧭</span> Navigate</button>'
       : '';
-    var schedStr = o.s ? formatMergedSchedule(o.s, dayFilter) : esc(o.w || '');
+    var schedStr = o.s ? formatMergedSchedule(o.s, dayFilter) : (o.w || '');
 
     return '<li class="' + cls + '"' + (o.id ? ' data-id="' + esc(o.id) + '"' : '') + '>'
       + '<div class="card-top">'
@@ -1347,7 +1379,7 @@
 
     for (var i = 0; i < GROUPS.length; i++){
       var e = GROUPS[i];
-      var isStarred = starred.has(e.id) || (e.allIds && e.allIds.some(function(sid){ return starred.has(sid); }));
+      var isStarred = isStarredRow(e);
       if (mylistOnly && !isStarred) continue;
       if (confirmedOnly && provenance(e).tier !== 'confirmed') continue;
       if (active.size && !e.g.some(function(t){ return active.has(t); })) continue;
@@ -1421,7 +1453,7 @@
   /* ---- FEATURE 3: LOCAL Parser ---- */
   var CAT_MAP = {
     coffee: ['drink'], tea: ['drink'], bar: ['drink'], booze: ['drink'], cocktail: ['drink'], cocktails: ['drink'],
-    eat: ['food'], food: ['food'], snack: ['food'], breakfast: ['food'], pizza: ['food'],
+    eat: ['food'], food: ['food'], snack: ['food'], breakfast: ['food'], pizza: ['food'], burger: ['food'], tacos: ['food'], taco: ['food'],
     dj: ['music'], set: ['music'], dance: ['music'], sound: ['music'], beats: ['music'],
     party: ['party'], rave: ['party'],
     yoga: ['wellness'], massage: ['wellness'], sauna: ['wellness'], healing: ['wellness'], spa: ['wellness'],
@@ -1431,6 +1463,81 @@
     kids: ['kids'], family: ['kids'],
     accessible: ['accessible'], wheelchair: ['accessible']
   };
+
+  /* Fine-tag vocabulary from the payload, plus query words that should route
+     through a fine tag they do not literally contain. Mirrors api/_guide.js. */
+  var FV = (D.ev && D.ev.fv) || [];
+  var FV_SYN = {
+    gay: ['queer', 'lgbtq'], lesbian: ['sapphic', 'queer'], lgbt: ['lgbtq', 'queer'],
+    rap: ['hip-hop'], hiphop: ['hip-hop'],
+    edm: ['techno', 'dubstep', 'trance', 'tribal-house'], psytrance: ['trance'],
+    bondage: ['bdsm', 'kink'], shibari: ['bdsm', 'kink'], rope: ['bdsm'],
+    meditate: ['meditation', 'guided-meditation'], meditating: ['meditation'],
+    sexy: ['erotic', 'burlesque'], astrology: ['divination', 'oracle', 'tarot'],
+    psychic: ['divination', 'oracle', 'tarot'], fortune: ['divination', 'oracle', 'tarot']
+  };
+  var FV_TERM_CACHE = {};
+  function fvIndicesFor(term) {
+    if (FV_TERM_CACHE[term]) return FV_TERM_CACHE[term];
+    var out = [];
+    var tLow = term.toLowerCase();
+    var tStem = tLow.charAt(tLow.length - 1) === 's' ? tLow.slice(0, -1) : tLow;
+    var syn = FV_SYN[tLow] || FV_SYN[tStem] || null;
+    for (var i = 0; i < FV.length; i++) {
+      var entry = (FV[i] || '').toLowerCase();
+      if (entry === tLow || entry === tStem || entry === tLow + 's' || entry === tLow + 'es') { out.push(i); continue; }
+      if (syn && syn.indexOf(entry) !== -1) { out.push(i); continue; }
+      var segs = entry.split('-');
+      var hit = false;
+      for (var sgi = 0; sgi < segs.length; sgi++) {
+        var sg = segs[sgi];
+        if (sg === tLow || sg === tStem || sg === tLow + 's' || sg === tLow + 'es') { hit = true; break; }
+      }
+      if (hit) out.push(i);
+    }
+    FV_TERM_CACHE[term] = out;
+    return out;
+  }
+
+  /* Word-boundary stem matcher: "party" hits "parties", "taco" hits "tacos",
+     but "set" no longer hits "sunset". Mirrors makeStemRe in api/_guide.js. */
+  var STEM_RE_CACHE = {};
+  function stemRe(term) {
+    if (STEM_RE_CACHE[term]) return STEM_RE_CACHE[term];
+    var tLow = term.toLowerCase();
+    var stems = [tLow];
+    if (tLow === 'film') stems.push('movie', 'movies');
+    if (tLow === 'movie') stems.push('film', 'films');
+    if (tLow.charAt(tLow.length - 1) !== 's') {
+      stems.push(tLow + 's');
+      stems.push(tLow + 'es');
+      if (tLow.length > 3 && tLow.charAt(tLow.length - 1) === 'y') stems.push(tLow.slice(0, -1) + 'ies');
+    } else {
+      stems.push(tLow.slice(0, -1));
+      if (tLow.length > 4 && tLow.slice(-3) === 'ies') stems.push(tLow.slice(0, -3) + 'y');
+      if (tLow.length > 3 && tLow.slice(-2) === 'es') stems.push(tLow.slice(0, -2));
+    }
+    var pat = [];
+    for (var si = 0; si < stems.length; si++) {
+      pat.push(stems[si].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    }
+    var re = new RegExp('\\b(?:' + pat.join('|') + ')\\b', 'i');
+    STEM_RE_CACHE[term] = re;
+    return re;
+  }
+
+  function applyAskSynonyms(s) {
+    s = s.replace(/\bsound\s+camps?\b/g, 'dj');
+    s = s.replace(/\bsets\b/g, 'set');
+    s = s.replace(/\bparties\b/g, 'party');
+    s = s.replace(/\braves\b/g, 'rave');
+    s = s.replace(/\bveggie\b/g, 'vegetarian').replace(/\bveg\b/g, 'vegetarian');
+    s = s.replace(/\bpizzas\b/g, 'pizza');
+    s = s.replace(/\bdjs\b/g, 'dj');
+    s = s.replace(/\bsaunas\b/g, 'sauna').replace(/\bsteam\b/g, 'sauna');
+    s = s.replace(/\bmassages\b/g, 'massage');
+    return s;
+  }
 
   function getPlayaNow(){
     var now = new Date();
@@ -1494,7 +1601,7 @@
     if (!raw) {
       return { reply: "Try asking something like 'whats on near me now' or 'coffee tomorrow morning'.", results: [] };
     }
-    var qLower = raw.toLowerCase();
+    var qLower = applyAskSynonyms(raw.toLowerCase());
 
     var isConvLoc = /^(?:i['’]?m\s+at|we\s+are\s+at|located\s+at|currently\s+at|at)\s+/i.test(raw);
     var pLocDirect = parseWhere(raw);
@@ -1503,7 +1610,8 @@
       /esplanade|eternal|ararat|bodhi|ceiba|delphi|fulcrum|great|oak|heiau|iroko|jiba|kundalini|center|camp|temple|greeters|airport|playa|info|man|the/gi,
       '')))) {
       var setVal = pLocDirect.landmark ? pLocDirect.label : pLocDirect.label;
-      if ($('loc')) { $('loc').value = setVal; savePrefs(); }
+      var locFresh = (ANSWER_LOC_GUARD === null) || ($('loc') && $('loc').value === ANSWER_LOC_GUARD);
+      if ($('loc') && locFresh) { $('loc').value = setVal; savePrefs(); }
       here = { lat: pLocDirect.lat, lon: pLocDirect.lon };
       speed = +($('mode') ? $('mode').value : 12) || 12;
       if (typeof updateLocConfirm === 'function') updateLocConfirm(setVal);
@@ -1617,6 +1725,29 @@
       hasExplicitTimeFilter = true;
     } else {
       var targetDayStr = null;
+      var BURN_DAYS_MAP = { '1':'08-30', '2':'08-31', '3':'09-01', '4':'09-02', '5':'09-03', '6':'09-04', '7':'09-05', '8':'09-06', '9':'09-07' };
+      var burnNightM = /\bburn\s+night\b/i.exec(qLower);
+      var burnDayM = /\bday\s*([1-9])\b(?:\s*of\s*the\s*burn)?/i.exec(qLower);
+      if (burnNightM) {
+        targetDayStr = '09-05';
+        timeDesc = 'on burn night';
+        hasExplicitTimeFilter = true;
+        var bnBase = Date.UTC(2026, 8, 5, 0, 0, 0);
+        wStart = bnBase + 18 * 3600 * 1000;
+        wEnd = bnBase + 30 * 3600 * 1000;
+      } else if (burnDayM) {
+        targetDayStr = BURN_DAYS_MAP[burnDayM[1]];
+        timeDesc = 'on day ' + burnDayM[1];
+        hasExplicitTimeFilter = true;
+      } else if (/\bfirst\s+day\b(?:\s*of\s*the\s*burn)?/i.test(qLower)) {
+        targetDayStr = '08-30';
+        timeDesc = 'on day 1';
+        hasExplicitTimeFilter = true;
+      } else if (/\blast\s+day\b(?:\s*of\s*the\s*burn)?/i.test(qLower)) {
+        targetDayStr = '09-07';
+        timeDesc = 'on day 9';
+        hasExplicitTimeFilter = true;
+      }
       var weekdaysMap = {
         mon: '08-31', monday: '08-31',
         tue: '09-01', tuesday: '09-01',
@@ -1626,14 +1757,16 @@
         sat: '09-05', saturday: '09-05',
         sun: '08-30', sunday: '08-30'
       };
-      var wkKeys = Object.keys(weekdaysMap);
-      for (var k = 0; k < wkKeys.length; k++) {
-        var pattern = new RegExp('\\b' + wkKeys[k] + '\\b', 'i');
-        if (pattern.test(qLower)) {
-          targetDayStr = weekdaysMap[wkKeys[k]];
-          timeDesc = 'on ' + wkKeys[k].charAt(0).toUpperCase() + wkKeys[k].slice(1);
-          hasExplicitTimeFilter = true;
-          break;
+      if (!targetDayStr) {
+        var wkKeys = Object.keys(weekdaysMap);
+        for (var k = 0; k < wkKeys.length; k++) {
+          var pattern = new RegExp('\\b' + wkKeys[k] + '\\b', 'i');
+          if (pattern.test(qLower)) {
+            targetDayStr = weekdaysMap[wkKeys[k]];
+            timeDesc = 'on ' + wkKeys[k].charAt(0).toUpperCase() + wkKeys[k].slice(1);
+            hasExplicitTimeFilter = true;
+            break;
+          }
         }
       }
 
@@ -1647,26 +1780,35 @@
         hasExplicitTimeFilter = true;
       }
 
-      if (targetDayStr) {
-        var dParts = targetDayStr.split('-');
-        var dayStartMs = Date.UTC(2026, parseInt(dParts[0], 10) - 1, parseInt(dParts[1], 10), 0, 0, 0);
-        if (/\bmorning\b/i.test(qLower)) {
-          wStart = dayStartMs + 6 * 3600 * 1000; wEnd = dayStartMs + 12 * 3600 * 1000; timeDesc += ' morning';
-        } else if (/\bafternoon\b/i.test(qLower)) {
-          wStart = dayStartMs + 12 * 3600 * 1000; wEnd = dayStartMs + 18 * 3600 * 1000; timeDesc += ' afternoon';
-        } else if (/\b(?:late|sunrise)\b/i.test(qLower)) {
-          wStart = dayStartMs; wEnd = dayStartMs + 6 * 3600 * 1000; timeDesc += ' late/sunrise';
+      if (wStart === null) {
+        var winBase, winLabelPrefix;
+        if (targetDayStr) {
+          var dParts = targetDayStr.split('-');
+          winBase = Date.UTC(2026, parseInt(dParts[0], 10) - 1, parseInt(dParts[1], 10), 0, 0, 0);
+          winLabelPrefix = timeDesc;
         } else {
-          wStart = dayStartMs; wEnd = dayStartMs + 24 * 3600 * 1000;
+          winBase = Date.UTC(nowObj.getUTCFullYear(), nowObj.getUTCMonth(), nowObj.getUTCDate(), 0, 0, 0);
+          winLabelPrefix = '';
         }
-      } else {
-        var todayStart = Date.UTC(nowObj.getUTCFullYear(), nowObj.getUTCMonth(), nowObj.getUTCDate(), 0, 0, 0);
         if (/\bmorning\b/i.test(qLower)) {
-          wStart = todayStart + 6 * 3600 * 1000; wEnd = todayStart + 12 * 3600 * 1000; timeDesc = 'this morning'; hasExplicitTimeFilter = true;
+          wStart = winBase + 6 * 3600 * 1000; wEnd = winBase + 12 * 3600 * 1000;
+          timeDesc = winLabelPrefix ? winLabelPrefix + ' morning' : 'this morning'; hasExplicitTimeFilter = true;
         } else if (/\bafternoon\b/i.test(qLower)) {
-          wStart = todayStart + 12 * 3600 * 1000; wEnd = todayStart + 18 * 3600 * 1000; timeDesc = 'this afternoon'; hasExplicitTimeFilter = true;
-        } else if (/\b(?:late|sunrise)\b/i.test(qLower)) {
-          wStart = todayStart; wEnd = todayStart + 6 * 3600 * 1000; timeDesc = 'late/sunrise'; hasExplicitTimeFilter = true;
+          wStart = winBase + 12 * 3600 * 1000; wEnd = winBase + 18 * 3600 * 1000;
+          timeDesc = winLabelPrefix ? winLabelPrefix + ' afternoon' : 'this afternoon'; hasExplicitTimeFilter = true;
+        } else if (/\bevening\b/i.test(qLower)) {
+          wStart = winBase + 18 * 3600 * 1000; wEnd = winBase + 23 * 3600 * 1000;
+          timeDesc = winLabelPrefix ? winLabelPrefix + ' evening' : 'this evening'; hasExplicitTimeFilter = true;
+        } else if (/\bsunrise\b/i.test(qLower)) {
+          /* sunrise means dawn of that day: 04:00-10:00 */
+          wStart = winBase + 4 * 3600 * 1000; wEnd = winBase + 10 * 3600 * 1000;
+          timeDesc = winLabelPrefix ? winLabelPrefix + ' around sunrise' : 'around sunrise'; hasExplicitTimeFilter = true;
+        } else if (/\b(?:late|night)\b/i.test(qLower)) {
+          /* late night runs from 23:00 into the next morning */
+          wStart = winBase + 23 * 3600 * 1000; wEnd = winBase + 30 * 3600 * 1000;
+          timeDesc = winLabelPrefix ? winLabelPrefix + ' late night' : 'late night'; hasExplicitTimeFilter = true;
+        } else if (targetDayStr) {
+          wStart = winBase; wEnd = winBase + 24 * 3600 * 1000;
         }
       }
     }
@@ -1680,7 +1822,8 @@
       else addrStr = addrMatch[1] + ' & ' + addrMatch[2];
       refAddr = addrStr;
       placeDesc = 'near ' + addrStr;
-      if ($('loc')) { $('loc').value = addrStr; savePrefs(); }
+      var locFresh2 = (ANSWER_LOC_GUARD === null) || ($('loc') && $('loc').value === ANSWER_LOC_GUARD);
+      if ($('loc') && locFresh2) { $('loc').value = addrStr; savePrefs(); }
     } else if (/\b(?:near\s+me|close|nearby|walking\s+distance)\b/i.test(qLower)) {
       isNearMeRequested = true;
       var currentLoc = $('loc') ? $('loc').value.trim() : '';
@@ -1721,16 +1864,27 @@
     var cleanStr = qLower
       .replace(/[?!.,;:]+/g, ' ')
       .replace(/^(?:whats?\s+on|show\b|find\b|is\s+there|any\b|where\s+is|how\s+to\s+get\s+to)/g, '')
-      .replace(/\b(?:near\s+me|close|nearby|walking\s+distance|now|right\s+now|tonight|tomorrow|morning|afternoon|late|sunrise|in\s+\d+\s*(?:hours?|hrs?|h))\b/g, '')
+      .replace(/\b(?:near\s+me|close|nearby|walking\s+distance|now|right\s+now|tonight|today|tomorrow|morning|afternoon|evening|late|night|sunrise|in\s+\d+\s*(?:hours?|hrs?|h))\b/g, '')
+      .replace(/\bburn\s+night\b/g, '')
+      .replace(/\bday\s*[1-9]\b(?:\s*of\s*the\s*burn)?/g, '')
+      .replace(/\b(?:first|last)\s+day\b(?:\s*of\s*the\s*burn)?/g, '')
+      .replace(/\b(?:mon|monday|tue|tuesday|wed|wednesday|thu|thursday|fri|friday|sat|saturday|sun|sunday)\b/g, '')
       .replace(/(\d{1,2}(?::\d{2})?)\s*(?:&|and|@|,)?\s*(ESP|Esplanade|[A-Ka-k])\b/g, '');
 
     if (matchedCatWord) {
       cleanStr = cleanStr.replace(new RegExp('\\b' + matchedCatWord + '\\b', 'gi'), '');
     }
+    /* Stopwords and structural words, kept in sync with api/_guide.js */
+    var ASK_STOP = ['the','and','for','you','can','what','whats',"what's",'your','with',
+      'who','when','where','how','why','does','are','any','there','get','got','being',
+      'giving','serving','served','playing','offering','hosting','running','doing','having',
+      'should','could','would','was','were','will','did','going','want','need','like',
+      'find','show','tell','thing','things','stuff','something','anything','good','best',
+      'cool','fun','please','thanks','this','that','from','about','have','getting','right',
+      "there's",'theres','play','plays','set','sets','lineup','happening','event','events',
+      'times','time','spinning','b2b','activities','activity'];
     var searchTokens = cleanStr.split(/\s+/).filter(function(w){
-      return w.length > 2 && ['the','and','for','you','can','what','whats','your','with',
-        'who','when','where','how','why','does','are','any','there','get','being',
-        'giving','serving','served','playing','offering','hosting','running','doing','having'].indexOf(w) === -1;
+      return w.length > 2 && ASK_STOP.indexOf(w) === -1;
     });
 
     here = parseAddr(refAddr || ($('loc') ? $('loc').value : ''));
@@ -1750,7 +1904,8 @@
 
         if (catType === 'literal') {
           var evText = (evItem.t + ' ' + evItem.c + ' ' + (evItem.k ? evItem.k + ' ' : '') + evItem.p + ' ' + evItem.d).toLowerCase();
-          if (evText.indexOf(catVal.toLowerCase()) === -1) continue;
+          /* word-boundary stem match so "set" stops hitting "sunset" */
+          if (!stemRe(catVal).test(evText)) continue;
         } else if (catType === 'tag') {
           var tagsArr = Array.isArray(catVal) ? catVal : [catVal];
           var hasTag = evItem.g.some(function(gt){ return tagsArr.indexOf(gt) !== -1; });
@@ -1760,9 +1915,18 @@
         if (searchTokens.length > 0) {
           var fullText = (evItem.t + ' ' + evItem.c + ' ' + (evItem.k ? evItem.k + ' ' : '') + evItem.p + ' ' + evItem.d).toLowerCase();
           var matchesText = searchTokens.every(function(st){
-            if (fullText.indexOf(st) !== -1) return true;
-            /* light plural fallback: "martinis" still hits "martini" */
-            if (st.length > 3 && st.charAt(st.length - 1) === 's' && fullText.indexOf(st.slice(0, -1)) !== -1) return true;
+            /* word-boundary stem match: plurals both ways, parties<->party */
+            if (stemRe(st).test(fullText)) return true;
+            /* longer tokens keep the old substring recall (partial names) */
+            if (st.length >= 5 && fullText.indexOf(st) !== -1) return true;
+            /* fine-tag layer: "techno" hits events tagged techno, "gay" hits
+               queer/lgbtq tagged events, even when the word is not in the text */
+            var fvIdx = fvIndicesFor(st);
+            if (fvIdx.length && evItem.f && evItem.f.length) {
+              for (var fj = 0; fj < evItem.f.length; fj++) {
+                if (fvIdx.indexOf(evItem.f[fj]) !== -1) return true;
+              }
+            }
             return false;
           });
           if (!matchesText) continue;
@@ -1773,6 +1937,9 @@
           for (var sidx = 0; sidx < evItem.s.length; sidx++) {
             var stime = parseSlotTimes(evItem.s[sidx]);
             if (stime && stime.start < timeRange.end && stime.end > timeRange.start) {
+              /* a named day is a hard filter: yesterday's late set that spills
+                 past midnight does not count as "on Tuesday" */
+              if (timeRange.day && stime.dayStr !== timeRange.day) continue;
               matchingSlot = evItem.s[sidx];
               break;
             }
@@ -1800,7 +1967,9 @@
 
     var endOfTodayMs = Date.UTC(nowObj.getUTCFullYear(), nowObj.getUTCMonth(), nowObj.getUTCDate(), 23, 59, 59);
 
-    var initialTimeRange = (wStart !== null && wEnd !== null) ? { start: wStart, end: wEnd } : null;
+    var initialTimeRange = (wStart !== null && wEnd !== null)
+      ? { start: wStart, end: wEnd, day: (typeof targetDayStr !== 'undefined' && targetDayStr) || null }
+      : null;
     var initialDistLimit = (refAddr || isNearMeRequested) ? '10min' : 'any';
 
     var matchedEvs = [];
@@ -2041,16 +2210,26 @@
       || '<li>Nothing matches.</li>';
     if ($('more')) $('more').style.display = 'none';
   }
+  var ANSWER_LOC_GUARD = null;
   function askLocally(queryText, note) {
-    var res = answer(queryText);
+    /* Late fallbacks must not overwrite a location the user changed while the
+       network attempt was in flight. */
+    ANSWER_LOC_GUARD = askLocAtStart;
+    var res;
+    try { res = answer(queryText); }
+    finally { ANSWER_LOC_GUARD = null; }
     askHeadline = res.reply;
     askShow(askBubbles(queryText, askProse(res.reply), note || 'Answered offline from the guide.', askCards(res.results)));
     syncStarButtons();
   }
 
+  var askLocAtStart = null;
+  var askPending = null;
   function runAsk(queryText) {
     queryText = String(queryText == null ? '' : queryText).trim();
-    if (!queryText || askBusy) return;
+    if (!queryText) return;
+    if (askBusy) { askPending = queryText; return; }   /* run after the flight */
+    askLocAtStart = $('loc') ? $('loc').value : null;
     if (queryText.length > 300) queryText = queryText.slice(0, 300);
     var askInput = $('ask-q');
     if (askInput) askInput.value = queryText;
@@ -2073,6 +2252,11 @@
       clearTimeout(slowTimer);
       askBusy = false;
       if (askBtn) askBtn.disabled = false;
+      if (askPending) {
+        var nextQ = askPending;
+        askPending = null;
+        setTimeout(function(){ runAsk(nextQ); }, 0);
+      }
     }
 
     if (typeof navigator !== 'undefined' && navigator.onLine === false) {
@@ -2620,7 +2804,7 @@
     if (/^#ask=/i.test(hash)) {
       var q = '';
       try { q = decodeURIComponent(hash.slice(5)).replace(/\+/g, ' '); } catch(e){ q = hash.slice(5); }
-      if ($('q')) $('q').value = '';
+      if ($('ask-q')) $('ask-q').value = '';
       if ($('day')) $('day').value = '';
       if (q) {
         try { runAsk(q); } catch(e){}
@@ -2639,11 +2823,13 @@
   /* ---- New-build toast: the sw serves the previous build first, so tell the
      user a fresh one is ready and let one tap load it. ---- */
   var swUpdateShown = false;
+  var swToastRetries = 0;
   function showUpdateToast(reg){
     if (swUpdateShown || $('update-toast')) return;
-    /* never fight the onboarding modal for the screen: wait until it closes */
+    /* never fight the onboarding modal for the screen: wait until it closes
+       (bounded: give up after ~1 minute rather than polling forever) */
     if (document.body && document.body.classList && document.body.classList.contains('modal-open')) {
-      setTimeout(function(){ showUpdateToast(reg); }, 3000);
+      if (swToastRetries++ < 20) setTimeout(function(){ showUpdateToast(reg); }, 3000);
       return;
     }
     swUpdateShown = true;
@@ -2653,10 +2839,25 @@
     b.className = 'update-toast';
     b.textContent = 'Updated. Tap to refresh';
     b.addEventListener('click', function(){
+      /* skipWaiting is async: reload only after the new worker takes control,
+         or the reload re-serves the OLD cache and the toast comes right back.
+         The timeout covers the no-waiting-worker case. */
+      var reloaded = false;
+      function goReload(){
+        if (reloaded) return;
+        reloaded = true;
+        try { window.location.reload(); } catch(e){}
+      }
       try {
-        if (reg && reg.waiting && reg.waiting.postMessage) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+        if (reg && reg.waiting && reg.waiting.postMessage) {
+          var sw = navigator.serviceWorker;
+          if (sw && sw.addEventListener) sw.addEventListener('controllerchange', goReload);
+          reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+          setTimeout(goReload, 1200);
+          return;
+        }
       } catch(e){}
-      try { window.location.reload(); } catch(e){}
+      goReload();
     });
     if (document.body) document.body.appendChild(b);
   }
@@ -2774,8 +2975,10 @@
       } catch(e){}
     }
     function say(msg){ if (note) note.textContent = msg; }
+    var moveSeq = 0;
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
+      var mySeq = ++moveSeq;
       var email = ((emailEl && emailEl.value) || '').trim();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { say('That does not look like an email address.'); return; }
       if (starred.size === 0) { say('Star something first, then send the list.'); return; }
@@ -2805,6 +3008,7 @@
       }).then(function(r){
         return r.json().then(function(j){ j.__status = r.status; return j; });
       }).then(function(j){
+        if (mySeq !== moveSeq) return;   /* a newer submit owns the UI now */
         if (sendBtn) sendBtn.disabled = false;
         if (j && j.ok) {
           try { localStorage.setItem('bpg.email', email); } catch(e){}
@@ -2816,6 +3020,7 @@
           say('Could not send right now. Use Share this guide instead.');
         }
       }).catch(function(){
+        if (mySeq !== moveSeq) return;
         if (sendBtn) sendBtn.disabled = false;
         say('Could not send right now. Use Share this guide instead.');
       });
@@ -2928,6 +3133,10 @@
         if (targetLoc && $('loc')) {
           $('loc').value = targetLoc;
           updateLocConfirm(targetLoc);
+          savePrefs();
+          shown = 60;
+          render();
+          renderPicks();
           closeLoc();
         }
       });
@@ -3211,11 +3420,13 @@
           return;
         }
 
+        /* Backstop only: the geolocation call has its own timeout:8000, so
+           this fires strictly after it, never racing a near-8s fix. */
         var timedOut = false;
         var timer = setTimeout(function(){
           timedOut = true;
           if (gpsMsg) { gpsMsg.textContent = 'Location services not available'; gpsMsg.className = 'loc-confirm invalid'; }
-        }, 8000);
+        }, 12000);
 
         navigator.geolocation.getCurrentPosition(function(pos){
           if (timedOut) return;
@@ -3363,27 +3574,30 @@
       updateLocConfirm(locEl.value);
     }
 
-    var qpContainer = $('loc-quick-picks');
-    if (qpContainer) {
-      qpContainer.addEventListener('click', function(e){
-        var chip = e.target.closest('.loc-chip');
-        if (!chip) return;
-        var targetLoc = chip.getAttribute('data-loc');
-        if (targetLoc && $('loc')) {
-          $('loc').value = targetLoc;
-          updateLocConfirm(targetLoc);
-          shown = 60;
-          render();
-          renderPicks();
-        }
+    /* loc quick picks are wired once, inside initLocModal (it also closes
+       the modal); a second registration here double-fired every chip tap. */
+
+    /* Selects re-render on change; the search box is debounced (a full render
+       walks 3.6k events, far too heavy per keystroke); #loc has its own
+       debounced handler above. */
+    function filterRerender(){ shown = 60; render(); renderPicks(); updateLocButton(); }
+    ['day','sort','mode'].forEach(function(id){
+      var el = $(id); if (!el) return;
+      el.addEventListener('change', filterRerender);
+    });
+    var askQFilterEl = $('ask-q');
+    if (askQFilterEl) {
+      var askQFilterTimer = null;
+      askQFilterEl.addEventListener('input', function(){
+        if (askQFilterTimer) clearTimeout(askQFilterTimer);
+        askQFilterTimer = setTimeout(filterRerender, 200);
+      });
+      /* blur/Enter (change) filters immediately, no debounce wait */
+      askQFilterEl.addEventListener('change', function(){
+        if (askQFilterTimer) clearTimeout(askQFilterTimer);
+        filterRerender();
       });
     }
-
-    ['ask-q','q','loc','day','sort','mode'].forEach(function(id){
-      var el = $(id); if (!el) return;
-      el.addEventListener('input', function(){ shown = 60; render(); renderPicks(); updateLocButton(); });
-      el.addEventListener('change', function(){ shown = 60; render(); renderPicks(); updateLocButton(); });
-    });
     var m = $('more');
     if (m) m.addEventListener('click', function(){ shown += 60; render(); });
     wireShare();

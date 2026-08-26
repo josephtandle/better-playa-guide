@@ -129,6 +129,34 @@ const GOOD = { email: 'test@example.com', hashes: ['0a1b2c3d', 'deadbeef'], name
   ok(r.res.statusCode === 502 && r.json.error === 'send_failed', 'Resend failure -> 502 send_failed, never ok:true');
   failResend = false;
 
+  /* a failed send must NOT consume quota: after 3 failed attempts, a working
+     send for the same email still goes through */
+  failResend = true;
+  for (let i = 0; i < 3; i++) await run({ email: 'quota@example.com', hashes: ['0a1b2c3d'] }, '203.0.113.40');
+  failResend = false;
+  r = await run({ email: 'quota@example.com', hashes: ['0a1b2c3d'] }, '203.0.113.41');
+  ok(r.res.statusCode === 200 && r.json && r.json.ok === true,
+    'failed sends burn no quota: a later good send still works');
+
+  /* x-real-ip wins over a client-forged leftmost x-forwarded-for */
+  {
+    const res = fakeRes();
+    const req = fakeReq({ email: 'ipcheck@example.com', hashes: ['0a1b2c3d'] }, '203.0.113.50');
+    req.headers['x-forwarded-for'] = 'evil-spoof, 203.0.113.50';
+    req.headers['x-real-ip'] = '203.0.113.50';
+    await handler(req, res);
+    ok(res.statusCode === 200, 'x-real-ip based limiting accepts a normal request');
+  }
+
+  /* every response is JSON-typed */
+  {
+    const res = fakeRes();
+    await handler(fakeReq(null, '203.0.113.60', 'GET'), res);
+    ok(res.headers['Content-Type'] && res.headers['Content-Type'].indexOf('application/json') === 0,
+      'responses carry a JSON Content-Type');
+    ok(res.headers['Allow'] === 'POST', '405 carries an Allow header');
+  }
+
   /* missing config -> 503, so the client can fall back to Share */
   const savedKey = process.env.RESEND_API_KEY;
   delete process.env.RESEND_API_KEY;
