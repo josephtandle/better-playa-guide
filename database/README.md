@@ -4,7 +4,7 @@
 JSON any language can read. MIT licensed. Take it, build on it, improve it.
 
 ## What is in it
-3,998 events. It starts from the official Who What Where listings and merges in what
+3,962 events. It starts from the official Who What Where listings and merges in what
 camps actually published: DJ and speaker lineups from the Rock Star Librarian guide,
 the Playa Set Library, camp websites, and camp Instagram (some read by OCR from
 schedule images). The official listings strip performer names; this puts them back.

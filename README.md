@@ -15,7 +15,7 @@ Instagram and their own websites.
 
 This guide carries:
 
-- **3,998 events**, against 3,467 in the official listings
+- **3,962 events**, against 3,467 in the official listings
 - **1,477 named performers**. The official listings name almost none of them
 - **3,714 events** resolved to a real BRC address
 - Distances computed from the official 2026 city geometry
@@ -92,4 +92,4 @@ Reach Joe at [@joe.che.official](https://instagram.com/joe.che.official).
 
 ## The whole database
 
-Every event as clean JSON: [`database/events.json`](database/events.json) (3,998 events, MIT). Schema and how to rebuild it from source: [`database/README.md`](database/README.md).
+Every event as clean JSON: [`database/events.json`](database/events.json) (3,962 events, MIT). Schema and how to rebuild it from source: [`database/README.md`](database/README.md).

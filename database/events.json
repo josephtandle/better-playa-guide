@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3998,
+  "count": 3962,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -4373,11 +4373,15 @@
    ],
    "fine_tags": [],
    "presenter": null,
-   "description": "Morning concert! Morning concert!",
+   "description": "Our moving final performance for 2026. Our moving final performance for 2026. Morning concert! Morning concert!",
    "schedule": [
     {
      "start": "09-04 09:00",
      "end": "10:00"
+    },
+    {
+     "start": "09-04 09:00",
+     "end": "10:15"
     }
    ],
    "source": "official",
@@ -15873,7 +15877,7 @@
     32
    ],
    "presenter": null,
-   "description": "Nonreligious safe space for parents and grandparents that have lost a child Nonreligious safe space for parents and grandparents that have lost a child",
+   "description": "Nonreligious safe space for parents and grandparents that have lost a child Nonreligious safe space for parents and grandparents that have lost a child Nonreligious safe space for parents + Grandparents that have lost a child Nonreligious safe space for parents + Grandparents that have lost a child",
    "schedule": [
     {
      "start": "08-31 13:00",
@@ -17301,9 +17305,13 @@
    "tags": [
     "workshop"
    ],
-   "fine_tags": [],
+   "fine_tags": [
+    12,
+    84,
+    73
+   ],
    "presenter": "Cosmic Cowboy",
-   "description": "What would you ask infinite intelligence? Meet O.N.E. What would you ask infinite intelligence? Meet O.N.E.",
+   "description": "What would you ask infinite intelligence? Meet O.N.E. What would you ask infinite intelligence? Meet O.N.E. What would you ask infinite intelligence? What would you ask infinite intelligence?",
    "schedule": [
     {
      "start": "09-01 14:00",
@@ -20992,46 +21000,6 @@
    "grounded_score": 3
   },
   {
-   "title": "The Empty Chair",
-   "camp": "SnowKoanSolar",
-   "address": "9:00 & E",
-   "tags": [
-    "kids",
-    "service"
-   ],
-   "fine_tags": [
-    32
-   ],
-   "presenter": null,
-   "description": "Nonreligious safe space for parents + Grandparents that have lost a child Nonreligious safe space for parents + Grandparents that have lost a child",
-   "schedule": [
-    {
-     "start": "08-31 13:00",
-     "end": "16:00"
-    },
-    {
-     "start": "09-01 13:00",
-     "end": "16:00"
-    },
-    {
-     "start": "09-02 13:00",
-     "end": "16:00"
-    },
-    {
-     "start": "09-03 13:00",
-     "end": "16:00"
-    },
-    {
-     "start": "09-04 13:00",
-     "end": "16:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp SnowKoanSolar",
-   "grounded_score": 3
-  },
-  {
    "title": "Darkwad Wednesday",
    "camp": "El Diabla",
    "address": null,
@@ -21462,38 +21430,21 @@
    "address": null,
    "tags": [
     "art",
-    "service"
+    "service",
+    "music",
+    "party"
    ],
    "fine_tags": [],
    "presenter": null,
-   "description": "Epic location for our 2026 opening performance, sound support by Airpusher Epic location for our 2026 opening performance, sound support by Airpusher",
+   "description": "Epic location for our 2026 opening performance, sound support by Airpusher Epic location for our 2026 opening performance, sound support by Airpusher Classical orchestra evolves into an original electronic score at sunset. Classical orchestra evolves into an original electronic score at sunset.",
    "schedule": [
     {
      "start": "09-02 17:00",
      "end": "18:15"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": null,
-   "grounded_score": 3
-  },
-  {
-   "title": "Black Rock Philharmonic at the Temple",
-   "camp": "Temple of the Moon",
-   "address": null,
-   "tags": [
-    "music",
-    "party",
-    "ritual"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Our moving final performance for 2026. Our moving final performance for 2026.",
-   "schedule": [
+    },
     {
-     "start": "09-04 09:00",
-     "end": "10:15"
+     "start": "09-02 17:00",
+     "end": "19:30"
     }
    ],
    "source": "official",
@@ -24641,11 +24592,12 @@
    "tags": [
     "art",
     "food",
-    "music"
+    "music",
+    "party"
    ],
    "fine_tags": [],
-   "presenter": null,
-   "description": "Immersive Chinatown village : music, art, food, characters & surprise nightly. Immersive Chinatown village : music, art, food, characters & surprise nightly.",
+   "presenter": "Manu Seve, Reynaldo Davis Carter, Emmanuel Pimentel, Jessica Anderson-Gwin, Jessica Brugnon, Vince Bruneau, Molly",
+   "description": "Immersive Chinatown village : music, art, food, characters & surprise nightly. Immersive Chinatown village : music, art, food, characters & surprise nightly. Chinatown comes alive nightly: bamboo scaffold entrance, 11 self-guided zones, nightly performer lineup and roaming characters 9-11PM.",
    "schedule": [
     {
      "start": "08-31 19:00",
@@ -24682,15 +24634,40 @@
    "camp": "Wok Paper Scissors",
    "address": "10:00 & I",
    "tags": [
-    "food"
+    "food",
+    "game"
    ],
    "fine_tags": [],
-   "presenter": null,
-   "description": "Battle for noodle bowls served hot in the heart of Chinatown. Come hungry. Battle for noodle bowls served hot in the heart of Chinatown. Come hungry.",
+   "presenter": "Anthony",
+   "description": "Battle for noodle bowls served hot in the heart of Chinatown. Come hungry. Battle for noodle bowls served hot in the heart of Chinatown. Come hungry. Battle the WPS robot in rock-paper-scissors in the Dim Sum tent. Win, and it serves you a bowl of noodles on the spot. Bring your own bowl.",
    "schedule": [
+    {
+     "start": "08-31 21:00",
+     "end": "00:00"
+    },
     {
      "start": "09-01 21:00",
      "end": "23:45"
+    },
+    {
+     "start": "09-01 21:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-02 21:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-03 21:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-04 21:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-05 21:00",
+     "end": "00:00"
     }
    ],
    "source": "official",
@@ -33977,27 +33954,6 @@
     {
      "start": "09-04 09:00",
      "end": "12:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Enchanted Booty Forest EBF enchantedbootyforest",
-   "grounded_score": 3
-  },
-  {
-   "title": "Gibberish Game Show",
-   "camp": "Enchanted Booty Forest",
-   "address": "5:30 & B",
-   "tags": [
-    "game"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Vie for bragging rights in an absurd test of intuition, dexterity & grit! Vie for bragging rights in an absurd test of intuition, dexterity & grit!",
-   "schedule": [
-    {
-     "start": "09-01 15:30",
-     "end": "16:30"
     }
    ],
    "source": "official",
@@ -45542,9 +45498,11 @@
     "ritual",
     "workshop"
    ],
-   "fine_tags": [],
+   "fine_tags": [
+    31
+   ],
    "presenter": "Miguel Arraiz Garcia",
-   "description": "Burning Man 2025 Temple Artist Presents Fire, Ritual, and Collective Art Burning Man 2025 Temple Artist Presents Fire, Ritual, and Collective Art",
+   "description": "Burning Man 2025 Temple Artist Presents Fire, Ritual, and Collective Art Burning Man 2025 Temple Artist Presents Fire, Ritual, and Collective Art From Valencia to Burning Man: Fire, Ritual, and Collective Art From Valencia to Burning Man: Fire, Ritual, and Collective Art",
    "schedule": [
     {
      "start": "09-02 14:00",
@@ -45869,9 +45827,12 @@
    "tags": [
     "workshop"
    ],
-   "fine_tags": [],
+   "fine_tags": [
+    96,
+    12
+   ],
    "presenter": "Dr. Robert Love",
-   "description": "Current science on preventing and reversing Alzheimer’s disease Current science on preventing and reversing Alzheimer’s disease",
+   "description": "Current science on preventing and reversing Alzheimer’s disease Current science on preventing and reversing Alzheimer’s disease Current science on preventing and reversing Alzheimer's disease Current science on preventing and reversing Alzheimer's disease",
    "schedule": [
     {
      "start": "09-03 15:00",
@@ -46346,28 +46307,6 @@
    "source": "official",
    "confidence": "confirmed",
    "aliases": "Camp Solarpunks solarpunksclub",
-   "grounded_score": 3
-  },
-  {
-   "title": "Black Rock Philharmonic",
-   "camp": "The Gothic Folly",
-   "address": null,
-   "tags": [
-    "music",
-    "party"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Classical orchestra evolves into an original electronic score at sunset. Classical orchestra evolves into an original electronic score at sunset.",
-   "schedule": [
-    {
-     "start": "09-02 17:00",
-     "end": "19:30"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": null,
    "grounded_score": 3
   },
   {
@@ -58343,10 +58282,13 @@
    ],
    "fine_tags": [
     0,
-    5
+    5,
+    35,
+    10,
+    44
    ],
    "presenter": null,
-   "description": "Detox, dance & dive inward. This is the most unique yoga/DJ experience on playa Detox, dance & dive inward. This is the most unique yoga/DJ experience on playa",
+   "description": "Detox, dance & dive inward. This is the most unique yoga/DJ experience on playa Detox, dance & dive inward. This is the most unique yoga/DJ experience on playa DJ Driven Kundalini amplification now famous on the playa. Not to be missed! DJ Driven Kundalini amplification now famous on the playa. Not to be missed!",
    "schedule": [
     {
      "start": "08-31 13:00",
@@ -60103,49 +60045,6 @@
    "source": "official",
    "confidence": "confirmed",
    "aliases": "Camp DragonCamp Armory",
-   "grounded_score": 3
-  },
-  {
-   "title": "AMP'D YOGA",
-   "camp": "Disorient",
-   "address": "8:00 & Esp",
-   "tags": [
-    "party",
-    "wellness",
-    "workshop"
-   ],
-   "fine_tags": [
-    35,
-    10,
-    44
-   ],
-   "presenter": null,
-   "description": "DJ Driven Kundalini amplification now famous on the playa. Not to be missed! DJ Driven Kundalini amplification now famous on the playa. Not to be missed!",
-   "schedule": [
-    {
-     "start": "08-31 13:00",
-     "end": "14:00"
-    },
-    {
-     "start": "09-01 13:00",
-     "end": "14:00"
-    },
-    {
-     "start": "09-02 13:00",
-     "end": "14:00"
-    },
-    {
-     "start": "09-03 13:00",
-     "end": "14:00"
-    },
-    {
-     "start": "09-04 13:00",
-     "end": "14:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Disorient",
    "grounded_score": 3
   },
   {
@@ -64700,10 +64599,11 @@
     "workshop"
    ],
    "fine_tags": [
-    27
+    27,
+    32
    ],
    "presenter": null,
-   "description": "Celebrate your body as wild, wise, and enough. Celebrate your body as wild, wise, and enough.",
+   "description": "Ready to release shame about your body? Come join us! AFAB only. Ready to release shame about your body? Come join us! AFAB only. Celebrate your body as wild, wise, and enough. Celebrate your body as wild, wise, and enough.",
    "schedule": [
     {
      "start": "09-01 09:30",
@@ -70556,29 +70456,6 @@
     {
      "start": "09-03 08:00",
      "end": "09:30"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Naked Heart",
-   "grounded_score": 3
-  },
-  {
-   "title": "Unburden your body story",
-   "camp": "Naked Heart",
-   "address": "6:00 & F",
-   "tags": [
-    "workshop"
-   ],
-   "fine_tags": [
-    32
-   ],
-   "presenter": null,
-   "description": "Ready to release shame about your body? Come join us! AFAB only. Ready to release shame about your body? Come join us! AFAB only.",
-   "schedule": [
-    {
-     "start": "09-01 09:30",
-     "end": "11:00"
     }
    ],
    "source": "official",
@@ -82654,31 +82531,6 @@
    "grounded_score": 3
   },
   {
-   "title": "Questions for Infinite Intelligence",
-   "camp": "Mystic",
-   "address": "2:00 & F",
-   "tags": [
-    "workshop"
-   ],
-   "fine_tags": [
-    12,
-    84,
-    73
-   ],
-   "presenter": null,
-   "description": "What would you ask infinite intelligence? What would you ask infinite intelligence?",
-   "schedule": [
-    {
-     "start": "09-01 14:00",
-     "end": "15:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Mystic",
-   "grounded_score": 2
-  },
-  {
    "title": "The Way of Value-Based Leadership",
    "camp": "Mystic",
    "address": "2:00 & F",
@@ -82752,31 +82604,6 @@
    "confidence": "confirmed",
    "aliases": "Camp Mystic",
    "grounded_score": 2
-  },
-  {
-   "title": "The Emotional Architecture of Fire",
-   "camp": "Mystic",
-   "address": "2:00 & F",
-   "tags": [
-    "art",
-    "ritual",
-    "workshop"
-   ],
-   "fine_tags": [
-    31
-   ],
-   "presenter": null,
-   "description": "From Valencia to Burning Man: Fire, Ritual, and Collective Art From Valencia to Burning Man: Fire, Ritual, and Collective Art",
-   "schedule": [
-    {
-     "start": "09-02 14:00",
-     "end": "15:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Mystic",
-   "grounded_score": 3
   },
   {
    "title": "From Strangers to Community",
@@ -82929,30 +82756,6 @@
    "confidence": "confirmed",
    "aliases": "Camp Mystic",
    "grounded_score": 4
-  },
-  {
-   "title": "Preventing Alzheimer’s & Dementia",
-   "camp": "Mystic",
-   "address": "2:00 & F",
-   "tags": [
-    "workshop"
-   ],
-   "fine_tags": [
-    96,
-    12
-   ],
-   "presenter": null,
-   "description": "Current science on preventing and reversing Alzheimer's disease Current science on preventing and reversing Alzheimer's disease",
-   "schedule": [
-    {
-     "start": "09-03 15:00",
-     "end": "16:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Mystic",
-   "grounded_score": 5
   },
   {
    "title": "Conscious Relationship Design: Beyond",
@@ -87757,13 +87560,14 @@
    "camp": "A Transformation Station",
    "address": "3:15 & D",
    "tags": [
-    "workshop"
+    "workshop",
+    "ritual"
    ],
    "fine_tags": [
     62
    ],
    "presenter": null,
-   "description": "Journey through dream waters, caves & stardust. Slow down, listen Journey through dream waters, caves & stardust. Slow down, listen",
+   "description": "Part listening, ritual part in our journey. Slowdown and enter landscapes within Part listening, ritual part in our journey. Slowdown and enter landscapes within Journey through dream waters, caves & stardust. Slow down, listen Journey through dream waters, caves & stardust. Slow down, listen",
    "schedule": [
     {
      "start": "09-03 14:00",
@@ -89207,28 +89011,6 @@
    "grounded_score": 3
   },
   {
-   "title": "Transmissions from the otherland",
-   "camp": "A Transformation Station",
-   "address": "3:15 & D",
-   "tags": [
-    "ritual",
-    "workshop"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Part listening, ritual part in our journey. Slowdown and enter landscapes within Part listening, ritual part in our journey. Slowdown and enter landscapes within",
-   "schedule": [
-    {
-     "start": "09-03 14:00",
-     "end": "15:30"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp A Transformation Station",
-   "grounded_score": 3
-  },
-  {
    "title": "The Groovy Cosmo",
    "camp": "Celestial Bodies",
    "address": "7:30 & G",
@@ -89528,28 +89310,6 @@
    "grounded_score": 3
   },
   {
-   "title": "HALO Dust",
-   "camp": "PLAYGROUND",
-   "address": "2:00 & C",
-   "tags": [
-    "music",
-    "party"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Incredible DJs play all night Incredible DJs play all night",
-   "schedule": [
-    {
-     "start": "09-02 21:00",
-     "end": "04:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Playground playgroundfoundation",
-   "grounded_score": 3
-  },
-  {
    "title": "Kazoo Making",
    "camp": "Center Camp Canopy",
    "address": "Center Camp",
@@ -89819,31 +89579,6 @@
    "schedule": [
     {
      "start": "08-30 22:00",
-     "end": "07:00"
-    }
-   ],
-   "source": "official",
-   "confidence": "confirmed",
-   "aliases": "Camp Playground playgroundfoundation",
-   "grounded_score": 3
-  },
-  {
-   "title": "THE MAN BURNS",
-   "camp": "PLAYGROUND",
-   "address": "2:00 & C",
-   "tags": [
-    "music",
-    "party"
-   ],
-   "fine_tags": [
-    10,
-    11
-   ],
-   "presenter": null,
-   "description": "Incredible DJs play all night Incredible DJs play all night",
-   "schedule": [
-    {
-     "start": "09-05 22:30",
      "end": "07:00"
     }
    ],
@@ -92545,29 +92280,6 @@
    "fine_tags": [
     10
    ],
-   "presenter": "LP Giobbi",
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-01 05:00",
-     "end": "06:30"
-    }
-   ],
-   "source": "rock-star-librarian",
-   "confidence": "confirmed",
-   "aliases": null,
-   "grounded_score": 3
-  },
-  {
-   "title": "DJ sets",
-   "camp": "¡AXOLOTL! The Earth Guardian",
-   "address": null,
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [
-    10
-   ],
    "presenter": "LALA Land",
    "description": null,
    "schedule": [
@@ -92699,30 +92411,7 @@
    "fine_tags": [
     10
    ],
-   "presenter": "Doin’ Us",
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-02 05:00",
-     "end": "07:00"
-    }
-   ],
-   "source": "rock-star-librarian",
-   "confidence": "confirmed",
-   "aliases": null,
-   "grounded_score": 3
-  },
-  {
-   "title": "Disorient Takeover",
-   "camp": "¡AXOLOTL! The Earth Guardian",
-   "address": null,
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [
-    10
-   ],
-   "presenter": "Doin' Us",
+   "presenter": "Doin’ Us, Doin' Us",
    "description": null,
    "schedule": [
     {
@@ -92872,29 +92561,6 @@
     {
      "start": "09-03 01:00",
      "end": "02:00"
-    }
-   ],
-   "source": "rock-star-librarian",
-   "confidence": "confirmed",
-   "aliases": null,
-   "grounded_score": 3
-  },
-  {
-   "title": "Wild Animal Party",
-   "camp": "¡AXOLOTL! The Earth Guardian",
-   "address": "10:00 & E",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [
-    10
-   ],
-   "presenter": "Maxxe b2b Von Davis",
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-03 02:00",
-     "end": "04:00"
     }
    ],
    "source": "rock-star-librarian",
@@ -93671,14 +93337,14 @@
   {
    "title": "DJ sets",
    "camp": "Apotheneum",
-   "address": null,
+   "address": "6:45 & D",
    "tags": [
     "music"
    ],
    "fine_tags": [
     10
    ],
-   "presenter": "Alex Cruz x Theresa Silver, Santiago Garcia x Theresa Silver, Natipitch x Theresa Silver",
+   "presenter": "Alex Cruz x Theresa Silver, Santiago Garcia x Theresa Silver, Natipitch x Theresa Silver, Alex Cruz, Santiago Garcia, Natipitch",
    "description": null,
    "schedule": [
     {
@@ -98385,11 +98051,15 @@
     10
    ],
    "presenter": "Gonze, Jungle Jess, Brandoh, Jean Jacque, Baby Cakes, Tropic Bomba, Miko Franconi",
-   "description": null,
+   "description": "ALOHA GET DOWN",
    "schedule": [
     {
      "start": "09-01 16:00",
      "end": "17:00"
+    },
+    {
+     "start": "09-01 16:00",
+     "end": "00:00"
     },
     {
      "start": "09-01 17:00",
@@ -100869,32 +100539,56 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "Thiccboi Drewski, Just B, Infected Mushroom (Live), Infected Mushroom (DJ Set), Speaker Honey, DJ Icon",
-   "description": null,
+   "presenter": "Thiccboi Drewski, Just B, Infected Mushroom (Live), Infected Mushroom (DJ Set), Speaker Honey, DJ Icon, Infected Mushroom",
+   "description": "Energy Mundi",
    "schedule": [
     {
      "start": "09-01 21:00",
      "end": "22:15"
     },
     {
+     "start": "09-01 21:00",
+     "end": null
+    },
+    {
      "start": "09-01 22:15",
      "end": "23:30"
+    },
+    {
+     "start": "09-01 22:15",
+     "end": null
     },
     {
      "start": "09-01 23:30",
      "end": "01:15"
     },
     {
+     "start": "09-01 23:30",
+     "end": null
+    },
+    {
      "start": "09-02 01:15",
      "end": "02:15"
+    },
+    {
+     "start": "09-02 01:15",
+     "end": null
     },
     {
      "start": "09-02 02:45",
      "end": "04:00"
     },
     {
+     "start": "09-02 02:45",
+     "end": null
+    },
+    {
      "start": "09-02 04:00",
      "end": "05:30"
+    },
+    {
+     "start": "09-02 04:00",
+     "end": "05:00"
     }
    ],
    "source": "rock-star-librarian",
@@ -100992,36 +100686,64 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "ZENTI, Kazami, Spencer Brown, Nora en Pure, Marten Lou, Admiral, FIERS, Obie Fernandez (Sunrise Set)",
-   "description": null,
+   "presenter": "ZENTI, Kazami, Spencer Brown, Nora en Pure, Marten Lou, Admiral, FIERS, Obie Fernandez (Sunrise Set), Zenti, Nora En Pure, Fiers, Obie Fernandez",
+   "description": "Playa Pure",
    "schedule": [
     {
      "start": "09-03 21:00",
      "end": "22:00"
     },
     {
+     "start": "09-03 21:00",
+     "end": null
+    },
+    {
      "start": "09-03 22:00",
      "end": "23:00"
+    },
+    {
+     "start": "09-03 22:00",
+     "end": null
     },
     {
      "start": "09-03 23:00",
      "end": "00:30"
     },
     {
+     "start": "09-03 23:00",
+     "end": null
+    },
+    {
      "start": "09-04 00:30",
      "end": "02:30"
+    },
+    {
+     "start": "09-04 00:30",
+     "end": null
     },
     {
      "start": "09-04 02:30",
      "end": "04:00"
     },
     {
+     "start": "09-04 02:30",
+     "end": null
+    },
+    {
      "start": "09-04 04:00",
      "end": "05:00"
     },
     {
+     "start": "09-04 04:00",
+     "end": null
+    },
+    {
      "start": "09-04 05:00",
      "end": "06:00"
+    },
+    {
+     "start": "09-04 05:00",
+     "end": null
     },
     {
      "start": "09-04 06:00",
@@ -101074,40 +100796,72 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "Josh Forster, Mobad, Sebastian Konrad, Maxi Meraki, Mahmut Orhan b2b Arodes, DJ Icon, Ashley Ames, Azriel, Major Trouble & Nisene (Sunrise Set)",
-   "description": null,
+   "presenter": "Josh Forster, Mobad, Sebastian Konrad, Maxi Meraki, Mahmut Orhan b2b Arodes, DJ Icon, Ashley Ames, Azriel, Major Trouble & Nisene (Sunrise Set), Mobâd, Mahmut Orhan, Arodes, Major Trouble, Nisene",
+   "description": "Cosmic Dance",
    "schedule": [
     {
      "start": "09-04 21:00",
      "end": "22:00"
     },
     {
+     "start": "09-04 21:00",
+     "end": null
+    },
+    {
      "start": "09-04 22:00",
      "end": "23:00"
+    },
+    {
+     "start": "09-04 22:00",
+     "end": null
     },
     {
      "start": "09-04 23:00",
      "end": "00:00"
     },
     {
+     "start": "09-04 23:00",
+     "end": null
+    },
+    {
      "start": "09-05 00:00",
      "end": "01:30"
+    },
+    {
+     "start": "09-05 00:00",
+     "end": null
     },
     {
      "start": "09-05 01:30",
      "end": "03:15"
     },
     {
+     "start": "09-05 01:30",
+     "end": null
+    },
+    {
      "start": "09-05 03:15",
      "end": "04:15"
+    },
+    {
+     "start": "09-05 03:15",
+     "end": null
     },
     {
      "start": "09-05 04:15",
      "end": "05:15"
     },
     {
+     "start": "09-05 04:15",
+     "end": null
+    },
+    {
      "start": "09-05 05:15",
      "end": "06:00"
+    },
+    {
+     "start": "09-05 05:15",
+     "end": null
     },
     {
      "start": "09-05 06:00",
@@ -105229,47 +104983,6 @@
    "grounded_score": 3
   },
   {
-   "title": "Energy Mundi",
-   "camp": "Opulent Temple",
-   "address": "10:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "Thiccboi Drewski, Just B, Infected Mushroom, Speaker Honey, DJ Icon",
-   "description": "Energy Mundi",
-   "schedule": [
-    {
-     "start": "09-01 21:00",
-     "end": null
-    },
-    {
-     "start": "09-01 22:15",
-     "end": null
-    },
-    {
-     "start": "09-01 23:30",
-     "end": null
-    },
-    {
-     "start": "09-02 01:15",
-     "end": null
-    },
-    {
-     "start": "09-02 02:45",
-     "end": null
-    },
-    {
-     "start": "09-02 04:00",
-     "end": "05:00"
-    }
-   ],
-   "source": "playa-set-library",
-   "confidence": "reported",
-   "aliases": "Camp Opulent Temple opulenttemple",
-   "grounded_score": 3
-  },
-  {
    "title": "Sacred Dance — The White Party",
    "camp": "Opulent Temple",
    "address": "10:00 & Esp",
@@ -105352,55 +105065,6 @@
    "grounded_score": 3
   },
   {
-   "title": "Playa Pure",
-   "camp": "Opulent Temple",
-   "address": "10:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "Zenti, Kazami, Spencer Brown, Nora En Pure, Marten Lou, Admiral, Fiers, Obie Fernandez",
-   "description": "Playa Pure",
-   "schedule": [
-    {
-     "start": "09-03 21:00",
-     "end": null
-    },
-    {
-     "start": "09-03 22:00",
-     "end": null
-    },
-    {
-     "start": "09-03 23:00",
-     "end": null
-    },
-    {
-     "start": "09-04 00:30",
-     "end": null
-    },
-    {
-     "start": "09-04 02:30",
-     "end": null
-    },
-    {
-     "start": "09-04 04:00",
-     "end": null
-    },
-    {
-     "start": "09-04 05:00",
-     "end": null
-    },
-    {
-     "start": "09-04 06:00",
-     "end": "07:30"
-    }
-   ],
-   "source": "playa-set-library",
-   "confidence": "reported",
-   "aliases": "Camp Opulent Temple opulenttemple",
-   "grounded_score": 3
-  },
-  {
    "title": "Golden Hour — sunset party",
    "camp": "Opulent Temple",
    "address": "10:00 & Esp",
@@ -105426,59 +105090,6 @@
     {
      "start": "09-04 20:00",
      "end": null
-    }
-   ],
-   "source": "playa-set-library",
-   "confidence": "reported",
-   "aliases": "Camp Opulent Temple opulenttemple",
-   "grounded_score": 3
-  },
-  {
-   "title": "Cosmic Dance",
-   "camp": "Opulent Temple",
-   "address": "10:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "Josh Forster, Mobâd, Sebastian Konrad, Maxi Meraki, Mahmut Orhan, Arodes, DJ Icon, Ashley Ames, Azriel, Major Trouble, Nisene",
-   "description": "Cosmic Dance",
-   "schedule": [
-    {
-     "start": "09-04 21:00",
-     "end": null
-    },
-    {
-     "start": "09-04 22:00",
-     "end": null
-    },
-    {
-     "start": "09-04 23:00",
-     "end": null
-    },
-    {
-     "start": "09-05 00:00",
-     "end": null
-    },
-    {
-     "start": "09-05 01:30",
-     "end": null
-    },
-    {
-     "start": "09-05 03:15",
-     "end": null
-    },
-    {
-     "start": "09-05 04:15",
-     "end": null
-    },
-    {
-     "start": "09-05 05:15",
-     "end": null
-    },
-    {
-     "start": "09-05 06:00",
-     "end": "07:30"
     }
    ],
    "source": "playa-set-library",
@@ -106503,35 +106114,6 @@
    "grounded_score": 3
   },
   {
-   "title": "DJ sets",
-   "camp": "Apotheneum",
-   "address": "6:45 & D",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "Alex Cruz, Santiago Garcia, Natipitch",
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-05 23:30",
-     "end": "00:30"
-    },
-    {
-     "start": "09-06 00:30",
-     "end": "01:30"
-    },
-    {
-     "start": "09-06 01:30",
-     "end": "02:30"
-    }
-   ],
-   "source": "playa-set-library",
-   "confidence": "reported",
-   "aliases": "Camp Apotheneum",
-   "grounded_score": 3
-  },
-  {
    "title": "Dust on with the CTO",
    "camp": "HOTD",
    "address": "5:30 & A",
@@ -106607,51 +106189,6 @@
    "grounded_score": null
   },
   {
-   "title": "ALOHA GET DOWN",
-   "camp": "Funky Town",
-   "address": "10:00 & D",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "Miko Franconi, Tropic Bomba, Baby Cakes, Jean Jacque, Brandoh, Jungle Jess, Gonze",
-   "description": "ALOHA GET DOWN",
-   "schedule": [
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    },
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    },
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    },
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    },
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    },
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    },
-    {
-     "start": "09-01 16:00",
-     "end": "00:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Funky Town funkytownbrc",
-   "grounded_score": null
-  },
-  {
    "title": "Best Worst Happy Hour Cocktail Lounge & Slowest Bike Races",
    "camp": "Camp Slow Your Roll",
    "address": "8:15 & B",
@@ -106694,27 +106231,6 @@
    "grounded_score": null
   },
   {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-01 22:00",
-     "end": "02:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
-   "grounded_score": null
-  },
-  {
    "title": "Lunars celestial Lounge Theater performances",
    "camp": "Lunars Camp",
    "address": "3:30 & Esp",
@@ -106724,27 +106240,6 @@
    "fine_tags": [],
    "presenter": null,
    "description": "Lunars celestial Lounge Theater performances",
-   "schedule": [
-    {
-     "start": "09-01 22:00",
-     "end": "02:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
-   "grounded_score": null
-  },
-  {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
    "schedule": [
     {
      "start": "09-01 22:00",
@@ -106797,365 +106292,7 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "battlebjornphoto, grantpalmerphotography, vimalafaithphoto, espressobuzz, kevin_levezu",
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "@battlebjornphoto, @grantpalmerphotography, @vimalafaithphoto, @espressobuzz, @kevin_levezu",
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "@battlebjornphoto, @grantpalmerphotography, @vimalafaithphoto, @espressobuzz, @kevin_levezu",
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": "battlebjornphoto, grantpalmerphotography, vimalafaithphoto, espressobuzz, kevin_levezu",
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    },
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "Tuesday Night Shoot",
-   "schedule": [
-    {
-     "start": "09-01",
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Fire Conclave Convergence FCC fireconclave",
-   "grounded_score": null
-  },
-  {
-   "title": "Tuesday Night Shoot",
-   "camp": "Fire Conclave Convergence",
-   "address": "6:00 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
+   "presenter": "battlebjornphoto, grantpalmerphotography, vimalafaithphoto, espressobuzz, kevin_levezu, @battlebjornphoto, @grantpalmerphotography, @vimalafaithphoto, @espressobuzz, @kevin_levezu",
    "description": "Tuesday Night Shoot",
    "schedule": [
     {
@@ -107364,27 +106501,6 @@
    "grounded_score": null
   },
   {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-02 22:00",
-     "end": "02:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
-   "grounded_score": null
-  },
-  {
    "title": "Lunars celestial Lounge Theater performances",
    "camp": "Lunars Camp",
    "address": "3:30 & Esp",
@@ -107394,27 +106510,6 @@
    "fine_tags": [],
    "presenter": null,
    "description": "Lunars celestial Lounge Theater performances",
-   "schedule": [
-    {
-     "start": "09-02 22:00",
-     "end": "02:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
-   "grounded_score": null
-  },
-  {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
    "schedule": [
     {
      "start": "09-02 22:00",
@@ -107644,27 +106739,6 @@
    "grounded_score": null
   },
   {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
-   "schedule": [
-    {
-     "start": "09-03 22:00",
-     "end": "02:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
-   "grounded_score": null
-  },
-  {
    "title": "Lunars celestial Lounge Theater performances",
    "camp": "Lunars Camp",
    "address": "3:30 & Esp",
@@ -107674,27 +106748,6 @@
    "fine_tags": [],
    "presenter": null,
    "description": "Lunars celestial Lounge Theater performances",
-   "schedule": [
-    {
-     "start": "09-03 22:00",
-     "end": "02:00"
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
-   "grounded_score": null
-  },
-  {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
    "schedule": [
     {
      "start": "09-03 22:00",
@@ -107942,7 +106995,7 @@
    ],
    "fine_tags": [],
    "presenter": null,
-   "description": "BLASST OFF! COLORADO MEETUP",
+   "description": "BL-ASS-T OFF COLORADO MEETUP BLASST OFF! COLORADO MEETUP",
    "schedule": [
     {
      "start": null,
@@ -107964,27 +107017,6 @@
    "fine_tags": [],
    "presenter": null,
    "description": null,
-   "schedule": [
-    {
-     "start": null,
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Camp Bad Asstronauts thebadasstronauts",
-   "grounded_score": null
-  },
-  {
-   "title": "BL-ASS-T OFF COLORADO MEETUP",
-   "camp": "Bad Asstronauts",
-   "address": "7:30 & B",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": "BL-ASS-T OFF COLORADO MEETUP",
    "schedule": [
     {
      "start": null,
@@ -108168,27 +107200,6 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": "Camp Funky Town funkytownbrc",
-   "grounded_score": null
-  },
-  {
-   "title": "Lunars Camp schedule",
-   "camp": "Lunars Camp",
-   "address": "3:30 & Esp",
-   "tags": [
-    "music"
-   ],
-   "fine_tags": [],
-   "presenter": null,
-   "description": null,
-   "schedule": [
-    {
-     "start": null,
-     "end": null
-    }
-   ],
-   "source": "instagram-flyer-ocr",
-   "confidence": "reported",
-   "aliases": "Lunars thelunarscamp",
    "grounded_score": null
   },
   {
@@ -109547,6 +108558,144 @@
     {
      "start": "09-06 03:30",
      "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Dream Steam Espresso Machine",
+   "camp": "Wok Paper Scissors",
+   "address": "10:00 & I",
+   "tags": [
+    "drink",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Scotty Hsieh, TADAA COFFEE, Fins of Fortune",
+   "description": "Coffee and tunes: daytime espresso bar with DJ sets in the central plaza, served by TADAA COFFEE on the Fins of Fortune art car.",
+   "schedule": [
+    {
+     "start": "09-01 12:00",
+     "end": "15:00"
+    },
+    {
+     "start": "09-02 12:00",
+     "end": "15:00"
+    },
+    {
+     "start": "09-05 12:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Wok Paper Scissors WPS",
+   "grounded_score": null
+  },
+  {
+   "title": "Wok Paper Scissors: Grand Opening",
+   "camp": "Wok Paper Scissors",
+   "address": "10:00 & I",
+   "tags": [
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": "Reynaldo Davis Carter, Emmanuel Pimentel",
+   "description": "Chinatown comes fully alive for the first time: all 11 zones open and the WPS robot makes its debut.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Wok Paper Scissors WPS",
+   "grounded_score": null
+  },
+  {
+   "title": "Dr Wu's Herb Shop & Tearoom",
+   "camp": "Wok Paper Scissors",
+   "address": "10:00 & I",
+   "tags": [
+    "drink",
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Reynaldo Davis Carter, Emmanuel Pimentel",
+   "description": "Ancient herbs, tinctures, and Chinese teas in Chinatown's mystical herb corner. Tuesday.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Wok Paper Scissors WPS",
+   "grounded_score": null
+  },
+  {
+   "title": "Dim Sum & Bowl of Noodles",
+   "camp": "Wok Paper Scissors",
+   "address": "10:00 & I",
+   "tags": [
+    "food"
+   ],
+   "fine_tags": [],
+   "presenter": "Reynaldo Davis Carter, Emmanuel Pimentel",
+   "description": "Handcrafted dim sum and authentic noodles in the heart of Chinatown. Trang a Lang's Celestial Mirror Nail Salon (Hello Kitty themed) also open. Wednesday.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Wok Paper Scissors WPS",
+   "grounded_score": null
+  },
+  {
+   "title": "Hidden Dragon Speakeasy (Opium Den)",
+   "camp": "Wok Paper Scissors",
+   "address": "10:00 & I",
+   "tags": [
+    "party",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": "Camila Zenu, Nicole Olney",
+   "description": "Come visit the Hidden Dragon, the Chinatown speakeasy: surprise performances, ceremonies and wanderlust. Surprise times, all week.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Wok Paper Scissors WPS",
+   "grounded_score": null
+  },
+  {
+   "title": "PULSE: Sunset Set",
+   "camp": "TITANIC",
+   "address": "9:45 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "PULSE, Mosko, OI",
+   "description": "Sunset DJ set right after the Black Rock Philharmonic classical concert at the Titanic in deep playa. Bipolar Express art car on site.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": "21:00"
     }
    ],
    "source": "instagram-flyer-ocr",
