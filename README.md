@@ -15,9 +15,9 @@ Instagram and their own websites.
 
 This guide carries:
 
-- **3,943 events**, against 3,465 in the official listings
-- **1,406 named performers**. The official listings name almost none of them
-- **3,620 events** resolved to a real BRC address
+- **3,980 events**, against 3,467 in the official listings
+- **1,477 named performers**. The official listings name almost none of them
+- **3,714 events** resolved to a real BRC address
 - Distances computed from the official 2026 city geometry
 - The whole thing in one page, so it works with no signal
 
@@ -55,7 +55,7 @@ This is other people's work, gathered and cross referenced. Credit where it is d
 
 | Source | What it gave |
 |---|---|
-| Burning Man official 2026 listings and camp data | the base 3,465 events |
+| Burning Man official 2026 listings and camp data | the base 3,467 events |
 | [Burning Man official GIS](https://github.com/burningmantech/innovate-GIS-data) | the city geometry every distance is computed from |
 | [PlayaMap](https://playamap.org) | current 2026 camp addresses |
 | [Rock Star Librarian Music Guide 2026](http://rslmusicguide.com/), by Kate Houston | 400 events and 1,604 DJ sets with real set times |
@@ -92,4 +92,4 @@ Reach Joe at [@joe.che.official](https://instagram.com/joe.che.official).
 
 ## The whole database
 
-Every event as clean JSON: [`database/events.json`](database/events.json) (3,943 events, MIT). Schema and how to rebuild it from source: [`database/README.md`](database/README.md).
+Every event as clean JSON: [`database/events.json`](database/events.json) (3,980 events, MIT). Schema and how to rebuild it from source: [`database/README.md`](database/README.md).

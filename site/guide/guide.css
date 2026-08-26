@@ -411,3 +411,99 @@ ul.ev li.itin-subhead:active{transform:none;background:transparent}
 .save-story-note .save-story-title{font:600 .68rem/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--rouge);margin:0 0 .3rem}
 .install-status-installed{font-size:.84rem;font-weight:600;color:var(--rouge);margin:0;padding:.5rem 0}
 
+.map-back{position:sticky;top:0;z-index:20;display:block;background:var(--rouge-deep);color:var(--cream);
+  font:600 .95rem/1 Montserrat,sans-serif;padding:.85rem 1.1rem;text-decoration:none;
+  border-bottom:1px solid var(--line);min-height:44px;box-sizing:border-box}
+.map-back:active{background:var(--rouge)}
+
+footer.wrap{margin-top:var(--sp-section);padding-top:var(--sp-block);border-top:1px solid var(--line)}
+
+/* === About page (how-it-was-made): card system. ADDITIVE ONLY, scoped under
+   .about / .about-* / .src-* so no other page's rules change. Mobile-first:
+   base = 390px phone; desktop widens via min-width queries. === */
+.about section{margin-top:var(--sp-section)}
+.about section:first-of-type{margin-top:var(--sp-block)}
+.about section > h2{border-top:none;padding-top:0}
+
+/* section kickers: tiny uppercase label above each h2 */
+.about-kicker{font:600 .64rem/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 .35rem}
+.about h2{font-size:1.7rem}
+
+/* --- hero card: dark rouge, matches the app chrome --- */
+.about-hero{background:linear-gradient(155deg,var(--rouge-deep) 0%,var(--rouge) 100%);
+  color:var(--cream);border:1px solid var(--brass);border-radius:14px;
+  padding:1.4rem 1.1rem 1.2rem;box-shadow:0 6px 18px rgba(38,4,7,.25)}
+.about-hero-kicker{font:600 .66rem/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 .5rem}
+.about-hero h2{font:400 2.1rem/1.1 Italiana,Georgia,serif;color:var(--cream);margin:0}
+.about-hero-lede{font:600 italic 1.05rem/1.45 "Cormorant Garamond",Georgia,serif;
+  color:var(--rose);margin-top:.55rem}
+.about-hero-body{font-size:.92rem;line-height:1.55;margin-top:.6rem;color:rgba(248,223,199,.92)}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1rem}
+.about-stat{background:rgba(248,223,199,.08);border:1px solid rgba(216,165,75,.45);
+  border-radius:10px;padding:.6rem .65rem;display:flex;flex-direction:column;gap:.15rem}
+.about-stat b{font:400 1.45rem/1 Italiana,Georgia,serif;color:var(--brass)}
+.about-stat span{font:600 .58rem/1.3 Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(248,223,199,.85)}
+
+/* --- generic about card --- */
+.about-card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:1.05rem 1rem;box-shadow:0 2px 8px rgba(25,13,11,.05)}
+.about-card > * + *{margin-top:var(--sp-tight)}
+.about-card p + p{margin-top:.65rem}
+.about-card h3{margin:0}
+
+/* --- two ways: stacked cards on mobile, side by side from 640px --- */
+.about-ways{display:grid;gap:.7rem;margin-top:var(--sp-block)}
+.about-way-kicker{font:600 .62rem/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--rouge);margin:0 0 .4rem}
+.about-way h3{font:400 1.25rem/1.2 Italiana,Georgia,serif;color:var(--rouge);
+  letter-spacing:0;text-transform:none;margin:0 0 .45rem}
+.about-way{border-top:3px solid var(--brass)}
+.about-way-alt{margin-top:.7rem;background:var(--cream);font-size:.88rem;line-height:1.55}
+.about-minilist{margin:.6rem 0 0;padding-left:1.1rem;font-size:.86rem;line-height:1.5;color:var(--smoke)}
+.about-minilist li + li{margin-top:.45rem}
+
+/* --- number grid inside "why this exists" --- */
+.about-numbers{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.8rem}
+.about-num{background:var(--paper);border:1px solid var(--line);border-radius:8px;
+  padding:.55rem .6rem;display:flex;flex-direction:column;gap:.15rem}
+.about-num b{font:400 1.35rem/1 Italiana,Georgia,serif;color:var(--rouge)}
+.about-num span{font:500 .68rem/1.35 Montserrat,sans-serif;color:var(--smoke)}
+.about-fine{font-size:.8rem;line-height:1.55;color:var(--smoke);margin-top:.8rem}
+
+/* --- source grid --- */
+.src-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-top:var(--sp-block)}
+.src-card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:.65rem .7rem;display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.src-name{font:600 .8rem/1.3 Montserrat,sans-serif;color:var(--ink)}
+.src-desc{font-size:.7rem;line-height:1.45;color:var(--smoke);margin:0}
+.src-desc a{font-weight:600}
+/* tier badges: same color language as the app's .prov-badge tiers,
+   confirmed = solid dot, reported = hollow dot */
+.src-tier{display:inline-flex;align-items:center;gap:.3rem;align-self:flex-start;
+  font:600 .56rem/1 Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  padding:.22rem .45rem;border-radius:3px;white-space:nowrap}
+.src-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.src-tier-confirmed{background:var(--brass);color:var(--rouge-deep);border:1px solid var(--brass)}
+.src-tier-confirmed .src-dot{background:var(--rouge-deep)}
+.src-tier-reported{background:var(--cream);color:var(--smoke);border:1px solid var(--brass)}
+.src-tier-reported .src-dot{background:transparent;border:2px solid var(--smoke);width:5px;height:5px}
+.src-tier-unverified{background:transparent;color:var(--smoke);border:1px dashed var(--smoke)}
+.about-tiers{margin-top:.7rem}
+.about-tiers .about-minilist{list-style:none;padding-left:0}
+.about-tiers .about-minilist .src-tier{margin-right:.35rem;vertical-align:middle}
+.about-credits{margin-top:.8rem}
+.about-limits{margin-top:.7rem;background:var(--paper)}
+.about-limits h3{font-size:.95rem}
+
+/* --- desktop widening --- */
+@media (min-width:640px){
+  .about-ways{grid-template-columns:1fr 1fr}
+  .src-grid{grid-template-columns:repeat(3,1fr)}
+  .about-stats{grid-template-columns:repeat(4,1fr)}
+  .about-numbers{grid-template-columns:repeat(3,1fr)}
+  .about-hero{padding:1.8rem 1.6rem 1.5rem}
+  .about-hero h2{font-size:2.6rem}
+}

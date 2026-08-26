@@ -696,11 +696,11 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
     captured = { url: url, body: JSON.parse(init.body) };
     return Promise.resolve({ status: 200, json: () => Promise.resolve({ ok: true }) });
   };
-  d.getElementById('move-device-email').value = 'dusty@example.com';
+  d.getElementById('move-device-email').value = 'redacted@example.invalid';
   form.dispatchEvent(new e.window.Event('submit', { bubbles: true, cancelable: true }));
   ok(!!captured && captured.url === '/api/list-sync', 'submit POSTs to /api/list-sync');
   if (captured) {
-    ok(captured.body.email === 'dusty@example.com', 'payload carries the email');
+    ok(captured.body.email === 'redacted@example.invalid', 'payload carries the email');
     ok(Array.isArray(captured.body.hashes) && captured.body.hashes.length === 1 &&
       /^[0-9a-f]{8}$/.test(captured.body.hashes[0]), 'payload carries 8-hex hashes per EVENT');
     ok(captured.body.hashes[0] === e.BPG.hashId(target.id), 'the hash matches the starred event');

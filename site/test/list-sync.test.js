@@ -59,7 +59,7 @@ async function run(body, ip, method) {
   return { res, json };
 }
 
-const GOOD = { email: 'test@example.com', hashes: ['0a1b2c3d', 'deadbeef'], name: 'Dusty', camp: 'Muse Cafe' };
+const GOOD = { email: 'redacted@example.invalid', hashes: ['0a1b2c3d', 'deadbeef'], name: 'Dusty', camp: 'Muse Cafe' };
 
 (async function main() {
   /* method + validation */
@@ -125,14 +125,14 @@ const GOOD = { email: 'test@example.com', hashes: ['0a1b2c3d', 'deadbeef'], name
 
   /* mail failure surfaces as an error, not a fake success */
   failResend = true;
-  r = await run({ email: 'failcase@example.com', hashes: ['0a1b2c3d'] }, '203.0.113.8');
+  r = await run({ email: 'redacted@example.invalid', hashes: ['0a1b2c3d'] }, '203.0.113.8');
   ok(r.res.statusCode === 502 && r.json.error === 'send_failed', 'Resend failure -> 502 send_failed, never ok:true');
   failResend = false;
 
   /* missing config -> 503, so the client can fall back to Share */
   const savedKey = process.env.RESEND_API_KEY;
   delete process.env.RESEND_API_KEY;
-  r = await run({ email: 'noconf@example.com', hashes: ['0a1b2c3d'] }, '203.0.113.9');
+  r = await run({ email: 'redacted@example.invalid', hashes: ['0a1b2c3d'] }, '203.0.113.9');
   ok(r.res.statusCode === 503 && r.json.error === 'not_configured', 'missing mail config -> 503 not_configured');
   process.env.RESEND_API_KEY = savedKey;
 

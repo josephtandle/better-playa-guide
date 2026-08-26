@@ -791,12 +791,16 @@
     idx = {};
     for (i = 0; i < GROUPS.length; i++) {
       var g = GROUPS[i];
-      idx[g.id] = g;
+      if (!idx[g.id]) idx[g.id] = g;
       if (g.allIds) {
         for (k = 0; k < g.allIds.length; k++) {
           if (!idx[g.allIds[k]]) idx[g.allIds[k]] = g;
         }
       }
+    }
+    for (i = 0; i < EV.length; i++) {
+      var evItem = EV[i];
+      if (evItem && evItem.id) idx[evItem.id] = evItem;
     }
     byTitleCamp = {};
     for (i = 0; i < GROUPS.length; i++) {
@@ -847,19 +851,45 @@
 
       /* ONE entry per event per day. A daily event legitimately appears under
          several day headers, once each, with that day's (earliest) time. It
-         must never explode into a row per occurrence slot (the 94.5 FM bug:
-         one starred daily radio stream rendered 113 rows). */
+         must never explode into a row per occurrence slot. */
       var timedByDay = {}, dateOnlyByDay = {};
       for (j = 0; j < slots.length; j++) {
         var slot = slots[j];
         var st = parseSlotTimes(slot);
         if (st) {
-          if (!timedByDay[st.dayStr] || st.start < timedByDay[st.dayStr].startMs) {
-            timedByDay[st.dayStr] = { e: base, day: st.dayStr, startMs: st.start, endMs: st.end, slot: slot, clash: [] };
+          var dk = st.dayStr;
+          if (!timedByDay[dk]) {
+            timedByDay[dk] = {
+              e: base,
+              day: dk,
+              startMs: st.start,
+              endMs: st.end,
+              slot: slot,
+              earliestSlot: slot,
+              latestEndSlot: slot,
+              slotCount: 1,
+              clash: []
+            };
+          } else {
+            var cur = timedByDay[dk];
+            cur.slotCount++;
+            if (st.start < cur.startMs) {
+              cur.startMs = st.start;
+              cur.earliestSlot = slot;
+            }
+            if (st.end > cur.endMs) {
+              cur.endMs = st.end;
+              cur.latestEndSlot = slot;
+            }
           }
           pushed = true;
         } else if (slotIsDateOnly(slot)) {
-          dateOnlyByDay[slotDayOf(slot)] = { e: base, day: slotDayOf(slot), startMs: null, endMs: null, slot: slot, clash: [] };
+          var dk2 = slotDayOf(slot);
+          if (!dateOnlyByDay[dk2]) {
+            dateOnlyByDay[dk2] = { e: base, day: dk2, startMs: null, endMs: null, slot: slot, slotCount: 1, clash: [] };
+          } else {
+            dateOnlyByDay[dk2].slotCount++;
+          }
           pushed = true;
         }
       }
@@ -875,14 +905,14 @@
         if (wStart) {
           var st2 = parseSlotTimes([wStart, null]);
           if (st2) {
-            timed.push({ e: base, day: st2.dayStr, startMs: st2.start, endMs: st2.end, slot: [wStart, null], clash: [] });
+            timed.push({ e: base, day: st2.dayStr, startMs: st2.start, endMs: st2.end, slot: [wStart, null], earliestSlot: [wStart, null], latestEndSlot: [wStart, null], slotCount: 1, clash: [] });
             pushed = true;
           }
         }
       }
 
       if (!pushed) {
-        undated.push({ e: base, day: null, startMs: null, endMs: null, slot: null, clash: [] });
+        undated.push({ e: base, day: null, startMs: null, endMs: null, slot: null, slotCount: 0, clash: [] });
       }
     }
 
@@ -914,6 +944,7 @@
         var clash = [];
         for (y = 0; y < items.length; y++) {
           if (y === j) continue;
+          if (items[j].e.t === items[y].e.t || items[j].e.starId === items[y].e.starId) continue;
           if (items[j].startMs < items[y].endMs && items[j].endMs > items[y].startMs) {
             if (clash.indexOf(items[y].e.t) === -1) clash.push(items[y].e.t);
           }
@@ -933,9 +964,20 @@
   function occRow(occ){
     var e = occ.e;
     var w, note = '';
-    if (occ.slot && !slotIsDateOnly(occ.slot)) {
-      var tparts = String(occ.slot[0]).split(' ');
-      w = (tparts[1] || '') + (occ.slot[1] ? '-' + occ.slot[1] : '');
+    if (occ.slotCount && occ.slotCount > 1 && occ.earliestSlot) {
+      var eSlot = occ.earliestSlot;
+      var lSlot = occ.latestEndSlot || eSlot;
+      var tparts = String(eSlot[0]).split(' ');
+      var startStr = tparts[1] || '';
+      var endStr = lSlot[1] || '';
+      if (!endStr && occ.endMs) {
+        var dEnd = new Date(occ.endMs);
+        endStr = p2(dEnd.getUTCHours()) + ':' + p2(dEnd.getUTCMinutes());
+      }
+      w = startStr + (endStr ? '-' + endStr : '') + ' (' + occ.slotCount + ' sets)';
+    } else if (occ.slot && !slotIsDateOnly(occ.slot)) {
+      var tparts2 = String(occ.slot[0]).split(' ');
+      w = (tparts2[1] || '') + (occ.slot[1] ? '-' + occ.slot[1] : '');
     } else if (occ.slot) {
       w = 'no set time';
     } else {
@@ -950,7 +992,7 @@
     }
     return {
       id: e.starId, t: e.t, c: e.c, a: e.a, p: e.p, desc: e.desc,
-      src: e.src, g: e.g, pin: e.pin, slot: occ.slot, w: w,
+      src: e.src, g: e.g, pin: e.pin, slot: occ.earliestSlot || occ.slot, w: w,
       note: note, d: minsTo(e.a)
     };
   }
@@ -1133,8 +1175,14 @@
         lines.push('DTEND;TZID=' + ICS_TZID + ':' + icsLocalStamp(occ.endMs));
         lines.push('SUMMARY:' + icsEscape(row.t));
         lines.push('LOCATION:' + icsEscape((row.a || 'location unknown') + ', ' + row.c));
-        lines.push('DESCRIPTION:' + icsEscape(describe(row,
-          occ.clash && occ.clash.length ? 'Heads up, this overlaps with: ' + occ.clash.join(', ') : '')));
+        var icsExtra = [];
+        if (occ.slotCount && occ.slotCount > 1) {
+          icsExtra.push(occ.slotCount + ' sets scheduled on this day.');
+        }
+        if (occ.clash && occ.clash.length) {
+          icsExtra.push('Heads up, this overlaps with: ' + occ.clash.join(', '));
+        }
+        lines.push('DESCRIPTION:' + icsEscape(describe(row, icsExtra.join('\n'))));
         lines.push('BEGIN:VALARM');
         lines.push('ACTION:DISPLAY');
         lines.push('DESCRIPTION:' + icsEscape(row.t + ' starts in 30 minutes'));
@@ -1149,7 +1197,7 @@
         var nrow = occRow(day.noTime[j]);
         var dayMs = dayStartMs(day.day);
         lines.push('BEGIN:VEVENT');
-        lines.push('UID:bpg-' + hashId(nrow.id) + '-' + icsDateOnly(dayMs) + '-allday@musecafe.vip');
+        lines.push('UID:bpg-' + hashId(nrow.id) + '-' + icsDateOnly(dayMs) + 'redacted@example.invalid');
         lines.push('DTSTAMP:' + stamp);
         lines.push('DTSTART;VALUE=DATE:' + icsDateOnly(dayMs));
         lines.push('DTEND;VALUE=DATE:' + icsDateOnly(dayMs + 24 * 3600 * 1000));
@@ -2215,6 +2263,19 @@
     }
   }
 
+  function normStr(s) {
+    if (!s) return '';
+    var str = String(s).toLowerCase();
+    if (str.normalize) {
+      try {
+        str = str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      } catch(e){}
+    } else {
+      str = str.replace(/[éèêë]/g, 'e').replace(/[áàâä]/g, 'a').replace(/[óòôö]/g, 'o').replace(/[úùûü]/g, 'u').replace(/ñ/g, 'n');
+    }
+    return str;
+  }
+
   /* ---- Camp directory for the onboarding typeahead. The list is UI sugar;
      resolution always goes through parseWhere, the one existing matcher. ---- */
   var CAMP_DIR = null;
@@ -2224,42 +2285,106 @@
     for (var i = 0; i < EV.length; i++) {
       var e = EV[i];
       if (!e.c || !e.a) continue;
-      var key = e.c.toLowerCase();
+      var key = normStr(e.c);
       if (!seen[key]) {
         seen[key] = true;
-        out.push({ label: e.c, camp: e.c, a: e.a });
-      }
-      if (e.k) {
-        var kk = e.k.toLowerCase();
-        if (!seen[kk]) {
-          seen[kk] = true;
-          out.push({ label: e.k, camp: e.c, a: e.a });
-        }
+        out.push({ label: e.c, camp: e.c, a: e.a, k: e.k || '' });
       }
     }
     CAMP_DIR = out;
     return out;
   }
+
   function campSuggest(q){
     /* Matches names AND aliases, but always shows one row per camp under its
        canonical name (alias strings in the payload can be raw multi-alias dumps). */
-    q = (q || '').trim().toLowerCase();
-    if (q.length < 2) return [];
+    var nq = normStr(q).trim();
+    if (nq.length < 2) return [];
     var dir = campDirectory(), best = {}, order = [], i, key;
     for (i = 0; i < dir.length; i++) {
-      var l = dir[i].label.toLowerCase();
-      var score = l.indexOf(q) === 0 ? 2 : (l.indexOf(q) !== -1 ? 1 : 0);
+      var entry = dir[i];
+      var campNorm = normStr(entry.camp);
+      var aliasNorm = normStr(entry.k);
+      var score = 0;
+
+      if (campNorm.indexOf(nq) === 0) {
+        score = 3;
+      } else if (campNorm.indexOf(nq) !== -1) {
+        score = 2;
+      } else if (aliasNorm.indexOf(nq) !== -1) {
+        score = 1;
+      }
+
       if (!score) continue;
-      key = dir[i].camp.toLowerCase();
+      key = campNorm;
       if (!best[key]) {
-        best[key] = { label: dir[i].camp, camp: dir[i].camp, a: dir[i].a, score: score };
+        best[key] = { label: entry.camp, camp: entry.camp, a: entry.a, score: score };
         order.push(key);
-      } else if (score > best[key].score) best[key].score = score;
+      } else if (score > best[key].score) {
+        best[key].score = score;
+      }
     }
     var out = [];
     for (i = 0; i < order.length; i++) out.push(best[order[i]]);
-    out.sort(function(x, y){ return y.score - x.score; });
+    out.sort(function(x, y){
+      if (y.score !== x.score) return y.score - x.score;
+      var xParen = x.label.indexOf('(') !== -1 ? 1 : 0;
+      var yParen = y.label.indexOf('(') !== -1 ? 1 : 0;
+      if (xParen !== yParen) return xParen - yParen;
+      return x.label.localeCompare(y.label);
+    });
     return out.slice(0, 6);
+  }
+
+  function resolveCamp(val){
+    if (!val || typeof val !== 'string') return null;
+    var nq = normStr(val).trim();
+    if (!nq) return null;
+    var dir = campDirectory();
+    for (var i = 0; i < dir.length; i++) {
+      var cNorm = normStr(dir[i].camp);
+      var cNoThe = cNorm.replace(/^the\s+/, '');
+      var nqNoThe = nq.replace(/^the\s+/, '');
+      if (cNorm === nq || cNoThe === nqNoThe) {
+        return { camp: dir[i].camp, addr: dir[i].a };
+      }
+    }
+    var p = parseWhere(val);
+    if (p && !p.error) {
+      if (p.camp) {
+        for (var j = 0; j < dir.length; j++) {
+          if (normStr(dir[j].camp) === normStr(p.camp)) {
+            return { camp: p.camp, addr: dir[j].a };
+          }
+        }
+        return { camp: p.camp, addr: p.label || val };
+      }
+      if (p.label) {
+        return { camp: val, addr: p.label };
+      }
+    }
+    var suggestions = campSuggest(val);
+    if (suggestions && suggestions.length > 0) {
+      return { camp: suggestions[0].camp, addr: suggestions[0].a };
+    }
+    return null;
+  }
+
+  function applyCampLocation(addr, force){
+    if (!addr) return;
+    var locEl = $('loc');
+    var curLoc = locEl ? locEl.value.trim() : '';
+    var prof = getProfile();
+    var setByOnboarding = prof._locFromOnboarding;
+    if (!curLoc || force || setByOnboarding === curLoc) {
+      if (locEl) locEl.value = addr;
+      savePrefs();
+      updateLocConfirm(addr);
+      saveProfile({ _locFromOnboarding: addr });
+    } else {
+      updateLocButton();
+    }
+    shown = 60; render(); renderPicks();
   }
 
   /* ---- FEATURE B: FIRST-RUN ONBOARDING (3 steps, skippable, never blocks) ---- */
@@ -2387,13 +2512,17 @@
       var offer = $('ob-camp-offer');
       if ($('ob-camp')) $('ob-camp').value = campName;
       if ($('ob-camp-list')) $('ob-camp-list').innerHTML = '';
-      var res = parseWhere(campName);
-      if (res && !res.error && res.label && res.lat !== null && res.lat !== undefined) {
-        pickedCamp = { camp: campName, addr: res.label };
+      var res = resolveCamp(campName) || parseWhere(campName);
+      var addrLabel = (res && res.addr) || (res && res.label);
+      if (res && addrLabel) {
+        pickedCamp = { camp: res.camp || campName, addr: addrLabel };
         if (offer) {
           if ($('ob-camp-offer-text')) $('ob-camp-offer-text').textContent =
-            campName + ' is at ' + res.label + '. Use that as your starting point?';
-          if ($('ob-camp-use')) $('ob-camp-use').textContent = 'Use ' + res.label;
+            (res.camp || campName) + ' is at ' + addrLabel + '. Use that as your starting point?';
+          if ($('ob-camp-use')) {
+            $('ob-camp-use').textContent = 'Use ' + addrLabel;
+            $('ob-camp-use').style.display = '';
+          }
           offer.style.display = '';
         }
       } else if (offer) offer.style.display = 'none';
@@ -2413,20 +2542,37 @@
     if ($('ob-camp-use')) $('ob-camp-use').addEventListener('click', function(){
       if (!pickedCamp) return;
       saveProfile({ camp: pickedCamp.camp, campAddress: pickedCamp.addr });
-      if ($('loc')) {
-        $('loc').value = pickedCamp.addr;
-        updateLocConfirm(pickedCamp.addr);
-      }
-      shown = 60; render(); renderPicks();
+      applyCampLocation(pickedCamp.addr, true);
       if ($('ob-camp-offer')) $('ob-camp-offer').style.display = 'none';
       showStep(3);
     });
-    function commitCamp(){
+    function commitCamp(onSuccess){
       var val = obCampEl ? obCampEl.value.trim() : '';
-      if (pickedCamp) saveProfile({ camp: pickedCamp.camp, campAddress: pickedCamp.addr });
-      else if (val) saveProfile({ camp: val });
+      if (!val) {
+        if (onSuccess) onSuccess();
+        return true;
+      }
+      var res = pickedCamp ? { camp: pickedCamp.camp, addr: pickedCamp.addr } : resolveCamp(val);
+      if (res && res.camp) {
+        saveProfile({ camp: res.camp, campAddress: res.addr || '' });
+        if (res.addr) {
+          applyCampLocation(res.addr);
+        }
+        if (onSuccess) onSuccess();
+        return true;
+      } else {
+        var offer = $('ob-camp-offer');
+        if (offer) {
+          if ($('ob-camp-offer-text')) $('ob-camp-offer-text').textContent = 'I do not know that camp, you can set it later';
+          if ($('ob-camp-use')) $('ob-camp-use').style.display = 'none';
+          offer.style.display = '';
+        }
+        return false;
+      }
     }
-    if ($('ob-next-2')) $('ob-next-2').addEventListener('click', function(){ commitCamp(); showStep(3); });
+    if ($('ob-next-2')) $('ob-next-2').addEventListener('click', function(){
+      commitCamp(function(){ showStep(3); });
+    });
     if ($('ob-skip-2')) $('ob-skip-2').addEventListener('click', function(){ showStep(3); });
 
     /* step 3: how to use it, then Start */
@@ -2621,6 +2767,12 @@
     var form = $('move-device-form');
     var emailEl = $('move-device-email'), note = $('move-device-note');
     if (!form) return;
+    if (emailEl) {
+      try {
+        var savedEmail = localStorage.getItem('bpg.email') || '';
+        if (savedEmail) emailEl.value = savedEmail;
+      } catch(e){}
+    }
     function say(msg){ if (note) note.textContent = msg; }
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
@@ -2655,6 +2807,7 @@
       }).then(function(j){
         if (sendBtn) sendBtn.disabled = false;
         if (j && j.ok) {
+          try { localStorage.setItem('bpg.email', email); } catch(e){}
           say('Sent. Open the email on your other phone and tap Merge.');
           toast('Sent. Check your inbox.');
         } else if (j && j.__status === 429) {
@@ -3296,6 +3449,7 @@
     saveProfile: saveProfile,
     renderGreet: renderGreet,
     campSuggest: campSuggest,
+    resolveCamp: resolveCamp,
     calcRoute: calcRoute,
     applyHashMode: applyHashMode,
     syncTabBar: syncTabBar,
