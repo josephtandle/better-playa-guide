@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3982,
+  "count": 3992,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -16851,12 +16851,14 @@
    "address": "2:30 & Esp",
    "tags": [
     "wellness",
-    "workshop"
+    "workshop",
+    "ritual",
+    "lineup"
    ],
    "fine_tags": [
     1
    ],
-   "presenter": null,
+   "presenter": "Kalden Kho",
    "description": "a deep meditative and immersive listening experience of Himalayan sounds a deep meditative and immersive listening experience of Himalayan sounds",
    "schedule": [
     {
@@ -109137,6 +109139,216 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": "Camp MindShark",
+   "grounded_score": null
+  },
+  {
+   "title": "Axolotl Takeover",
+   "camp": "Node",
+   "address": "9:00 & G",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "NODE takes over the Axolotl art car: open playa all night, starting at Eiffela Broken Dream, 7pm to 7am.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": "07:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Node",
+   "grounded_score": null
+  },
+  {
+   "title": "Lost Desert at Deoxidized",
+   "camp": "Deoxidized",
+   "address": "2:00 & D",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lost Desert",
+   "description": "Lost Desert set at Deoxidized. (Poster listed 2 & H; official placement is 2:00 & D.)",
+   "schedule": [
+    {
+     "start": "09-01 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Deoxidized",
+   "grounded_score": null
+  },
+  {
+   "title": "Lost Desert at The Sound Garden",
+   "camp": "The Sound Garden",
+   "address": "2:00 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lost Desert",
+   "description": "Lost Desert afternoon set at The Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-02 15:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp The Sound Garden thesoundgardenevents",
+   "grounded_score": null
+  },
+  {
+   "title": "Lost Desert at Pink Mammoth",
+   "camp": "Pink Mammoth",
+   "address": "9:30 & G",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lost Desert",
+   "description": "Lost Desert sunset set at Pink Mammoth.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Pink Mammoth pinkmammothsf",
+   "grounded_score": null
+  },
+  {
+   "title": "Lost Desert at Playground (Dune)",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lost Desert",
+   "description": "Lost Desert afternoon set at Playground, on the Dune stage.",
+   "schedule": [
+    {
+     "start": "09-04 14:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "Lost Desert at Miki Beach",
+   "camp": "Miki Beach",
+   "address": "10:00 & F",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lost Desert",
+   "description": "Lost Desert night set at Miki Beach.",
+   "schedule": [
+    {
+     "start": "09-04 21:00",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Miki Beach mikibeachcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Lost Desert at Robot Heart",
+   "camp": "Robot Heart",
+   "address": "9:45 & K",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Lost Desert",
+   "description": "Lost Desert on Robot Heart, Friday night into Saturday morning, 3:15 to 4:30am.",
+   "schedule": [
+    {
+     "start": "09-05 03:15",
+     "end": "04:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ Kalamari at Ashram Galactica",
+   "camp": "Ashram Galactica",
+   "address": "9:00 & J",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "DJ Kalamari",
+   "description": "DJ Kalamari Monday night set at Ashram Galactica.",
+   "schedule": [
+    {
+     "start": "08-31 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Ashram Galactica ashramgalactica",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ Kalamari at Illuminaughty",
+   "camp": "Illuminaughty",
+   "address": "9:00 & G",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "DJ Kalamari",
+   "description": "DJ Kalamari at Illuminaughty, Tuesday midnight (into Wednesday).",
+   "schedule": [
+    {
+     "start": "09-02 00:00",
+     "end": "01:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Illuminaughty",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ Kalamari at Camp Bloom",
+   "camp": "Camp Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "DJ Kalamari",
+   "description": "DJ Kalamari Thursday night set at Camp Bloom.",
+   "schedule": [
+    {
+     "start": "09-03 22:00",
+     "end": "23:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
    "grounded_score": null
   }
  ]
