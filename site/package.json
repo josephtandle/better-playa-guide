@@ -1,0 +1,12 @@
+{
+  "name": "muse-cafe-website",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node test/run-all.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

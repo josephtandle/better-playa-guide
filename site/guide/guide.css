@@ -1,0 +1,413 @@
+/* Better Playa Guide - Muse Cafe palette (from ../styles.css)
+ *
+ * DESIGN BRIEF (2026-08-26 v3, intentional, do not "restore" a masthead):
+ * MOBILE FIRST: the base CSS IS the 390px phone layout. Desktop is the
+ * exception, added via min-width queries. There is NO header on ANY viewport.
+ * 1. The ask box is the first element on Find. Below it the location control,
+ *    below that the compact sticky filter row, then results. Nothing else.
+ * 2. While scrolling, ONLY the .controls bar sticks at top:0: interactive
+ *    controls only, solid paper background, hairline bottom edge.
+ * 3. Navigation is a fixed bottom tab bar everywhere with FOUR tabs:
+ *    Find / My Events (star + count badge) / Map / About. My Events is a
+ *    first-class screen state driven by the #myevents URL hash.
+ * 4. Identity lives in the About tab and the onboarding modal. The "?" help
+ *    control sits inside the ask region, 44px.
+ * 5. App feel: press states on every tap target, overscroll contained,
+ *    hidden scrollbars on chip rows, 44px targets, theme-color matches the
+ *    page top so the status bar blends (no banner edge).
+ */
+:root{
+  --rouge:#6d0813; --rouge-deep:#260407; --rouge-bright:#8f0e1b; --rose:#f2b9b6;
+  --paper:#fff3e5; --cream:#f8dfc7; --ink:#190d0b; --brass:#d8a54b; --smoke:#3a2b28;
+  --line:rgba(25,13,11,.14); --card:#fffaf2;
+  --sp-section:2rem; --sp-block:1rem; --sp-tight:.5rem;
+}
+*{box-sizing:border-box}
+/* overflow-x:clip (not hidden): hidden turns html/body into scroll containers,
+   which silently kills position:sticky on the filter bar */
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip;overscroll-behavior-y:none}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 16px/1.55 Montserrat,system-ui,-apple-system,sans-serif;
+  padding:0 0 calc(4.5rem + env(safe-area-inset-bottom));
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;
+  overscroll-behavior-y:contain}
+.wrap{max-width:780px;margin:0 auto;padding:0 .85rem}
+a{color:var(--rouge-bright);overflow-wrap:anywhere}
+code{overflow-wrap:anywhere;word-break:break-word}
+
+/* --- chrome: NO masthead on any viewport. Identity lives in About + the
+   onboarding modal. The header element only hosts the fixed bottom nav. --- */
+.top{padding:0;background:transparent}
+.top .wrap{display:flex;flex-direction:column;gap:0}
+.top .top-row,.top .kicker,.top .gift,.top .mvp{display:none}
+/* "?" lives in the ask region now (light card background), always >= 44px */
+.masthead-help-btn{background:rgba(216,165,75,.15);border:1px solid var(--brass);color:var(--rouge);
+  min-width:44px;min-height:44px;width:44px;height:44px;border-radius:50%;font:700 1.05rem Montserrat,sans-serif;
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex-shrink:0;
+  transition:background .15s ease,transform .15s ease}
+.masthead-help-btn:hover{background:var(--brass);color:var(--rouge-deep);transform:scale(1.05)}
+/* --- bottom tab bar: the app chrome, every viewport --- */
+nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:1000;margin:0;
+  background:var(--rouge-deep);border-top:1px solid var(--brass);
+  padding:.35rem .4rem calc(.35rem + env(safe-area-inset-bottom));
+  display:flex;justify-content:space-around;gap:.25rem;
+  box-shadow:0 -3px 12px rgba(0,0,0,.45)}
+nav.tabs a{flex:1;font:600 .62rem/1 Montserrat,sans-serif;letter-spacing:.03em;text-transform:uppercase;
+  color:rgba(248,223,199,.78);text-decoration:none;text-align:center;white-space:nowrap;
+  border:1px solid transparent;border-radius:8px;padding:.5rem .15rem;min-height:44px;
+  display:flex;align-items:center;justify-content:center}
+nav.tabs a[aria-current]{background:var(--brass);border-color:var(--brass);color:var(--rouge-deep);font-weight:700}
+nav.tabs a:active{transform:scale(.96)}
+.tab-star{color:var(--brass);margin-right:.25rem}
+nav.tabs a[aria-current] .tab-star{color:var(--rouge-deep)}
+.tab-badge{display:inline-flex;align-items:center;justify-content:center;min-width:1.15rem;height:1.15rem;
+  border-radius:999px;background:var(--brass);color:var(--rouge-deep);
+  font:700 .62rem/1 Montserrat,sans-serif;letter-spacing:0;margin-left:.35rem;padding:0 .28rem}
+.tab-badge:empty{display:none}
+nav.tabs a[aria-current] .tab-badge{background:var(--rouge-deep);color:var(--cream)}
+
+/* --- My Events: its own screen state (#myevents), not a filter toggle --- */
+body.myevents .hero-ask,body.myevents .controls,body.myevents .controls-extra,
+body.myevents .loc-section,body.myevents #picks{display:none}
+
+/* --- new-build toast: tappable, above the tab bar --- */
+.update-toast{position:fixed;left:50%;bottom:calc(4.8rem + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:1500;
+  background:var(--brass);color:var(--rouge-deep);border:1px solid var(--brass);border-radius:999px;
+  font:700 .85rem Montserrat,sans-serif;padding:.8rem 1.3rem;min-height:44px;cursor:pointer;
+  box-shadow:0 4px 14px rgba(0,0,0,.35)}
+
+section{margin-top:var(--sp-section)}
+#results{margin-top:var(--sp-block);min-height:220px}
+section > * + *{margin-top:var(--sp-block)}
+section > h2 + *{margin-top:var(--sp-tight)}
+section:first-of-type{margin-top:var(--sp-block)}
+.doc section > h2{padding-top:var(--sp-block);border-top:1px solid var(--line)}
+.doc section:first-of-type > h2{border-top:none;padding-top:0}
+h2{font:400 1.5rem/1.2 Italiana,Georgia,serif;margin:0;color:var(--rouge)}
+h3{font:600 1.15rem/1.3 Montserrat,sans-serif;letter-spacing:.02em;
+  color:var(--smoke);margin:0 0 .5rem}
+p{margin:0}
+.lede{font:600 italic 1.05rem/1.5 "Cormorant Garamond",Georgia,serif;color:var(--smoke)}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem}
+.steps{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.8rem}
+.step b{display:block;font:400 1.5rem/1 Italiana,serif;color:var(--brass);margin-bottom:.2rem}
+
+/* --- controls --- */
+/* the ONE sticky element: a compact bar of interactive controls only.
+   Solid paper background, hairline bottom edge, above content. */
+.controls{position:sticky;top:0;z-index:90;background:var(--paper);
+  margin-top:var(--sp-block);padding:.45rem 0;border-bottom:1px solid var(--line)}
+.controls-extra{margin-top:.6rem}
+/* checkbox + legend toggle share one line even though base .row stacks */
+.controls-extra .filter-subrow{flex-direction:row;flex-wrap:nowrap;justify-content:space-between;align-items:center}
+.row{display:flex;flex-direction:column;gap:.5rem;flex-wrap:wrap}
+input,select,button{font:400 1rem Montserrat,sans-serif;padding:.7rem .75rem;
+  border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);min-height:44px}
+input,select{flex:1;min-width:100%}
+/* the ask row and the sticky filter row stay horizontal even on phones */
+.ask-row{flex-direction:row;flex-wrap:wrap}
+#ask-q{flex:1 1 0;min-width:0}
+#ask-btn{flex-shrink:0}
+/* the hint drops to its own full line under input + button */
+.ask-row .ask-hint{flex:1 1 100%;order:3}
+/* one-row sticky bar: search/ask + day + filter button + sort share the line */
+.controls .row{flex-direction:row;flex-wrap:nowrap;gap:.4rem;align-items:center}
+.controls #ask-form{flex:1 1 45%;min-width:0;margin:0}
+.controls #ask-form .ask-row{flex-wrap:nowrap;gap:.3rem;margin:0}
+.controls #day,.controls #sort,.controls .filter-btn{flex:0 1 auto;min-width:0;font-size:.85rem;padding:.7rem .4rem}
+input:focus,select:focus,button:focus-visible{outline:2px solid var(--brass);outline-offset:1px}
+.chips{display:flex;gap:.35rem;margin-top:.5rem;flex-wrap:nowrap;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{font:600 .66rem/1 Montserrat,sans-serif;letter-spacing:.07em;text-transform:uppercase;
+  padding:.5rem .65rem;border-radius:999px;border:1px solid var(--line);background:#fff;
+  color:var(--smoke);cursor:pointer;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.chip{flex-shrink:0;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--rouge);border-color:var(--rouge);color:var(--cream)}
+.count{font:600 .72rem/1 Montserrat,sans-serif;letter-spacing:.06em;color:var(--smoke);margin-top:.5rem;min-height:1.4rem}
+
+/* --- ask section (hero) --- */
+.hero-ask{background:var(--card);border:none;border-bottom:2px solid var(--brass);
+  border-radius:0 0 14px 14px;margin-left:-.85rem;margin-right:-.85rem;
+  padding:.9rem .85rem 1rem;box-shadow:0 2px 10px rgba(25,13,11,.05)}
+main > section.ask-section{margin-top:0}
+.ask-row{display:flex;gap:.5rem;align-items:center}
+#ask-q{min-height:48px;height:48px;font-size:1rem;font-weight:500;border:1px solid var(--line);border-radius:8px;padding:.7rem .9rem}
+#ask-btn{min-height:48px;height:48px;min-width:70px;padding:0 1.2rem;font-weight:700;border-radius:8px}
+.ask-chips{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.6rem}
+.ask-chip{cursor:pointer;min-height:44px}
+.ask-reply{background:var(--card);border:1px solid var(--brass);border-radius:8px;padding:.85rem 1.1rem;font-weight:500;color:var(--ink)}
+
+/* --- location section & live confirmation --- */
+.loc-section{margin-top:var(--sp-block)}
+.loc-bar{display:flex;flex-direction:row;gap:.5rem;align-items:center}
+.loc-btn{flex:1 1 auto;min-width:0;text-align:left;justify-content:space-between;font-weight:600;min-height:44px}
+.loc-bar #mode{flex:0 0 auto;min-width:105px}
+.loc-confirm{font-size:.88rem;font-weight:600;color:var(--smoke);margin-top:.4rem;min-height:1.25rem}
+.loc-confirm.valid{color:var(--rouge-bright)}
+.loc-confirm.invalid{color:#900}
+.loc-chips{margin-top:.5rem}
+.loc-chip{min-height:44px;display:inline-flex;align-items:center;cursor:pointer}
+.filter-group-title{display:block;font:600 .75rem/1 Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--smoke);margin-bottom:.4rem}
+.day-chips{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.4rem}
+.day-chip{min-height:44px;cursor:pointer}
+
+/* --- cards & list items --- */
+ul.ev{list-style:none;margin:.8rem 0 0;padding:0;display:flex;flex-direction:column;gap:.6rem}
+ul.ev li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);
+  border-radius:8px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.25rem;
+  transition:transform .12s ease,background-color .12s ease;cursor:default}
+ul.ev li:active{transform:scale(.985);background-color:var(--cream)}
+li.near{border-left-color:var(--rouge)}
+li.pin{border-left-color:var(--brass);background:#fff8ec}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.ti{font:600 1.05rem/1.3 Montserrat,sans-serif;color:var(--ink);flex:1}
+.meta{font:600 .78rem/1.4 Montserrat,sans-serif;color:var(--rouge-bright);font-variant-numeric:tabular-nums;margin-top:.1rem}
+.who{font:600 .86rem/1.3 Montserrat,sans-serif;color:var(--rouge);margin-top:.15rem}
+.de{font-size:.86rem;color:var(--smoke);margin-top:.15rem;line-height:1.4}
+.card-actions{display:flex;align-items:center;gap:.35rem;flex-shrink:0}
+.nav-btn{background:rgba(216,165,75,.15);border:1px solid rgba(216,165,75,.4);
+  font:600 .75rem/1 Montserrat,sans-serif;cursor:pointer;min-width:44px;min-height:44px;display:inline-flex;
+  align-items:center;justify-content:center;padding:0 .5rem;border-radius:8px;color:var(--rouge);
+  gap:.2rem;flex-shrink:0;transition:background .15s ease,color .15s ease,border-color .15s ease}
+.nav-btn:hover{background:rgba(216,165,75,.3);border-color:var(--brass)}
+.nav-btn:active{transform:scale(.96)}
+.star-btn{background:rgba(216,165,75,.15);border:1px solid rgba(216,165,75,.4);
+  font-size:1.25rem;cursor:pointer;min-width:44px;min-height:44px;display:inline-flex;
+  align-items:center;justify-content:center;padding:0;border-radius:8px;color:var(--smoke);
+  flex-shrink:0;transition:background .15s ease,color .15s ease,border-color .15s ease}
+.star-btn[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:var(--rouge-deep)}
+
+/* --- buttons --- */
+.btn{display:inline-flex;align-items:center;justify-content:center;font:600 .72rem/1 Montserrat,sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;border-radius:999px;padding:.75rem 1.1rem;
+  border:1px solid var(--brass);color:var(--rouge);background:transparent;cursor:pointer;
+  min-height:44px;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:active,.chip:active,.masthead-help-btn:active,.star-btn:active{transform:scale(.96)}
+.btn.solid{background:var(--rouge);border-color:var(--rouge);color:var(--cream)}
+.btnrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem}
+
+/* --- modal --- */
+.modal-backdrop{position:fixed;top:0;left:0;right:0;bottom:0;z-index:2000;
+  background:rgba(25,13,11,.75);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;padding:1rem}
+.modal-card{background:var(--paper);border:2px solid var(--brass);border-radius:12px;
+  max-width:500px;width:100%;max-height:88vh;overflow-y:auto;
+  box-shadow:0 12px 36px rgba(0,0,0,.45);padding:1.25rem;display:flex;flex-direction:column;gap:.85rem}
+body.modal-open{overflow:hidden}
+.modal-header{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.modal-header h3{font:400 1.35rem/1.2 Italiana,Georgia,serif;color:var(--rouge);margin:0}
+.btn-dismiss{background:transparent;border:none;font-size:1.3rem;cursor:pointer;color:var(--smoke);
+  min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0}
+.modal-lead{font-weight:600;font-size:.95rem;color:var(--ink)}
+.modal-steps{margin:.4rem 0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;font-weight:500}
+.modal-emphasized{font-weight:700;color:var(--rouge);background:var(--cream);padding:.6rem .75rem;
+  border-radius:6px;border-left:3px solid var(--rouge);font-size:.88rem}
+.modal-quiet{font-size:.8rem;color:var(--smoke);font-style:italic}
+.modal-examples{border-top:1px solid var(--line);padding-top:.75rem}
+.modal-ex-title{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--smoke);margin-bottom:.4rem}
+.modal-chips{display:flex;gap:.35rem;flex-wrap:wrap}
+.modal-chip{min-height:44px;cursor:pointer;background:#fff;border:1px solid var(--line)}
+.modal-footer{border-top:1px solid var(--line);padding-top:.6rem;font-size:.82rem;color:var(--smoke);font-weight:600}
+
+/* --- onboarding steps --- */
+.ob-dots{display:flex;gap:.4rem;justify-content:center}
+.ob-dot{width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .15s ease}
+.ob-dot.on{background:var(--brass)}
+.ob-step{display:flex;flex-direction:column;gap:.7rem}
+.ob-why{font-weight:600;font-size:.95rem;color:var(--ink);margin:0}
+.ob-step input[type="text"]{width:100%;min-height:48px;font-size:1rem}
+.ob-btnrow{margin-top:.2rem}
+.ob-btnrow .btn{flex:1}
+.ob-camp-list{display:flex;flex-direction:column;gap:.3rem}
+.ob-camp-list:empty{display:none}
+.ob-camp-item{text-align:left;justify-content:flex-start;font:500 .9rem Montserrat,sans-serif;
+  text-transform:none;letter-spacing:0;border-radius:8px;border:1px solid var(--line);
+  background:#fff;color:var(--ink);min-height:44px;cursor:pointer;padding:.6rem .8rem;
+  display:flex;align-items:center}
+.ob-camp-item:active{background:var(--cream)}
+.ob-camp-item .ob-camp-addr{margin-left:auto;color:var(--smoke);font-size:.78rem;font-weight:600;padding-left:.6rem;white-space:nowrap}
+.ob-offer{background:var(--cream);border-left:3px solid var(--brass);border-radius:0 6px 6px 0;
+  padding:.6rem .75rem;font-size:.9rem;font-weight:500}
+.ob-how{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem;font-size:.92rem;line-height:1.45}
+.ob-positioning{font-size:.85rem;line-height:1.5;color:var(--smoke);font-weight:500}
+.ob-how li strong{color:var(--rouge)}
+.greet{font:600 italic 1.08rem/1.4 "Cormorant Garamond",Georgia,serif;color:var(--rouge);margin:0 0 .3rem}
+
+footer{margin-top:var(--sp-section);border-top:1px solid var(--line);
+  padding:calc(var(--sp-section) * 1.5) 0 calc(var(--sp-section) * 2 + env(safe-area-inset-bottom));
+  font-size:.84rem;color:var(--smoke);line-height:1.6}
+footer p + p{margin-top:var(--sp-block)}
+footer a{color:var(--rouge);font-weight:600}
+kbd{font:600 .8rem Montserrat,monospace;background:var(--cream);border:1px solid var(--line);
+  border-radius:3px;padding:.1rem .35rem}
+.toast{position:fixed;left:50%;bottom:calc(4.8rem + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--rouge-deep);
+  color:var(--cream);padding:.7rem 1.1rem;border-radius:999px;font-size:.85rem;opacity:0;
+  pointer-events:none;transition:opacity .25s ease;z-index:2050}
+.toast.on{opacity:1}
+
+/* --- provenance badges & legend --- */
+.prov-badge{display:inline-flex;align-items:center;gap:.25rem;font:600 .6rem/1 Montserrat,sans-serif;
+  letter-spacing:.06em;text-transform:uppercase;padding:.2rem .4rem;border-radius:3px;margin-left:.35rem;
+  vertical-align:middle;white-space:nowrap}
+.prov-badge.tier-confirmed{background:var(--brass);color:var(--rouge-deep);border:1px solid var(--brass)}
+.prov-badge.tier-reported{background:var(--cream);color:var(--smoke);border:1px solid var(--brass)}
+.prov-badge.tier-unverified{background:transparent;color:var(--smoke);border:1px dashed var(--smoke)}
+
+.confirmed-filter-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:600;
+  color:var(--smoke);cursor:pointer;user-select:none;min-height:44px}
+.confirmed-filter-label input[type="checkbox"]{width:20px;height:20px;min-width:20px;min-height:20px;
+  cursor:pointer;accent-color:var(--rouge);flex-shrink:0;margin:0}
+
+.prov-legend-details{font-size:.78rem;color:var(--smoke);position:relative}
+.prov-legend-summary{cursor:pointer;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  font-size:.72rem;color:var(--rouge);user-select:none;padding:.3rem 0;list-style-position:inside;min-height:44px;display:inline-flex;align-items:center}
+.prov-legend-content{margin-top:.4rem;padding:.5rem .7rem;background:var(--card);border:1px solid var(--line);
+  border-radius:6px;display:flex;flex-direction:column;gap:.35rem;font-size:.78rem;line-height:1.35}
+.prov-legend-content div{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+
+/* --- mobile app feel (under 768px) --- */
+
+
+
+@media(prefers-reduced-motion:reduce){
+  *,::before,::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  ul.ev li:active,.btn:hover,.masthead-help-btn:hover{
+    transform:none !important;
+  }
+}
+
+/* --- ask: conversation --- */
+.chat-turn{display:flex;flex-direction:column;gap:.5rem}
+.chat-you{align-self:flex-end;max-width:88%;background:var(--rouge);color:var(--cream);
+  border-radius:14px 14px 3px 14px;padding:.5rem .8rem;font-size:.9rem;line-height:1.4}
+.chat-me{align-self:flex-start;max-width:100%;background:transparent;color:inherit;
+  font-size:.95rem;line-height:1.55}
+.chat-me p{margin:0 0 .55rem}
+.chat-me p:last-child{margin-bottom:0}
+.chat-note{align-self:flex-start;font:500 .7rem/1.3 Montserrat,sans-serif;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--smoke);opacity:.85}
+.chat-thinking{display:flex;align-items:center;gap:.15rem;color:var(--smoke);font-style:italic}
+.chat-thinking .dot{width:5px;height:5px;border-radius:50%;background:currentColor;
+  display:inline-block;animation:bpgdot 1.2s infinite ease-in-out}
+.chat-thinking .dot:nth-child(2){animation-delay:.18s}
+.chat-thinking .dot:nth-child(3){animation-delay:.36s;margin-right:.35rem}
+@keyframes bpgdot{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.chat-thinking .dot{animation:none;opacity:.6}}
+
+/* --- cards inside an answer --- */
+.ask-cards{margin:.7rem 0 0}
+.ask-reply .btnrow{margin-top:.6rem}
+.ask-more-btn{width:100%}
+
+/* --- itinerary --- */
+.itin-panel{background:var(--card);border:1px solid var(--brass);border-radius:10px;
+  padding:.9rem 1rem;margin-bottom:var(--sp-block)}
+.itin-panel-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}
+.itin-panel-top h3{margin:0}
+.itin-panel-top .btn{flex-shrink:0}
+.itin-save-story{font-size:.84rem;line-height:1.5;color:var(--smoke);margin-top:.6rem}
+.itin-save-story strong{color:var(--rouge)}
+.save-story-title{font:600 .68rem/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--rouge);margin:0 0 .4rem}
+.save-story-list{list-style:disc;margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.3rem}
+
+ul.ev li.itin-day{background:transparent;border:none;border-left:none;border-bottom:1px solid var(--line);
+  border-radius:0;padding:.85rem .1rem .4rem;flex-direction:row;justify-content:space-between;
+  align-items:baseline;gap:.5rem;margin-top:var(--sp-block)}
+ul.ev li.itin-day:active{transform:none;background:transparent}
+.itin-day-name{font:400 1.25rem/1.2 Italiana,Georgia,serif;color:var(--rouge);letter-spacing:.01em}
+.itin-day-count{font:600 .68rem/1 Montserrat,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--smoke)}
+ul.ev li.itin-notime-hint{background:transparent;border:none;border-left:none;border-radius:0;
+  padding:.2rem .1rem .1rem;font-size:.78rem;line-height:1.4;color:var(--smoke);font-style:italic}
+ul.ev li.itin-notime-hint:active{transform:none;background:transparent}
+ul.ev li.itin-empty{padding:1.1rem;text-align:center;color:var(--smoke);font-size:.9rem;line-height:1.5}
+.itin-note{font:600 .74rem/1.35 Montserrat,sans-serif;color:var(--rouge-bright);margin-top:.35rem;
+  padding:.3rem .5rem;background:var(--cream);border-left:3px solid var(--brass);border-radius:0 4px 4px 0}
+
+.itin-panel-top{flex-direction:column;align-items:stretch}
+.itin-panel-top .btn{width:100%}
+@media(min-width:521px){
+  .itin-panel-top{flex-direction:row;align-items:center}
+  .itin-panel-top .btn{width:auto}
+}
+
+/* --- map zoom chrome --- */
+.map-panel{position:relative}
+/* sits just inside the bottom-right corner of the square #mapbox above it */
+.map-zoom{display:flex;justify-content:flex-end;gap:.45rem;margin:-3.6rem .5rem .8rem 0;
+  position:relative;z-index:5;pointer-events:none}
+.map-zoom-btn{pointer-events:auto}
+.map-zoom-btn{min-width:44px;min-height:44px;width:44px;height:44px;border-radius:10px;
+  border:1px solid var(--brass);background:var(--paper);color:var(--rouge);
+  font:700 1.3rem/1 Montserrat,sans-serif;cursor:pointer;padding:0;
+  display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(25,13,11,.18)}
+.map-zoom-btn:active{transform:scale(.94);background:var(--cream)}
+
+/* --- add to home screen --- */
+.install-block{margin-top:.7rem}
+.install-btn{width:100%;min-height:48px}
+.install-hint{font-size:.82rem;line-height:1.5;color:var(--smoke);margin:0;
+  padding:.55rem .7rem;background:var(--cream);border-left:3px solid var(--brass);border-radius:0 5px 5px 0}
+.itin-panel .install-hint{font-size:.8rem}
+ul.ev li.itin-subhead{background:transparent;border:none;border-left:none;border-radius:0;
+  padding:.65rem .1rem .2rem;font:400 1.15rem/1.2 Italiana,Georgia,serif;color:var(--rouge);
+  letter-spacing:.01em;margin-top:var(--sp-tight)}
+ul.ev li.itin-subhead:active{transform:none;background:transparent}
+.itin-cal-note{font-size:.82rem;line-height:1.5;color:var(--smoke);margin-top:.6rem;
+  padding:.55rem .7rem;background:var(--cream);border-left:3px solid var(--brass);border-radius:0 5px 5px 0}
+.ask-hint{font-size:.78rem;color:var(--smoke);opacity:.75;margin-top:.35rem;line-height:1.35}
+
+/* --- desktop (min-width:768px): the phone layout with more breathing room.
+   Same chrome philosophy: no header, bottom tab bar, sticky controls. --- */
+@media(min-width:768px){
+  :root{--sp-section:3rem;--sp-block:1.25rem}
+  .wrap{padding:0 1.1rem}
+  .row{flex-direction:row}
+  input,select{min-width:140px}
+  .chips{flex-wrap:wrap;overflow-x:visible}
+  .hero-ask{border:2px solid var(--brass);border-radius:12px;margin-left:0;margin-right:0;
+    padding:1.1rem;box-shadow:0 4px 16px rgba(25,13,11,.06)}
+  main > section.ask-section{margin-top:var(--sp-block)}
+  nav.tabs{left:50%;right:auto;transform:translateX(-50%);width:100%;max-width:780px;
+    border-radius:14px 14px 0 0;border-left:1px solid var(--brass);border-right:1px solid var(--brass)}
+  nav.tabs a{font-size:.68rem;letter-spacing:.06em}
+}
+
+/* --- move-to-another-device (email my list) --- */
+.move-device{margin-top:.4rem;border-top:none;padding-top:0}
+.move-device .btn{width:100%}
+.move-device-why{font-size:.84rem;line-height:1.5;color:var(--smoke);margin:.6rem 0 .5rem}
+.move-device-note{font-size:.8rem;font-weight:600;color:var(--rouge-bright);min-height:1.1rem;margin:.35rem 0 0}
+#move-device-email{min-width:0;flex:1}
+
+/* --- My Events 3-button action row --- */
+.myevents-action-row{display:flex;gap:.35rem;width:100%}
+.myevents-action-btn{flex:1 1 0;min-width:0;min-height:44px;padding:6px 4px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;background:var(--paper);border:1px solid var(--brass);
+  border-radius:8px;color:var(--rouge);font:600 .72rem/1.15 Montserrat,sans-serif;text-align:center;
+  cursor:pointer;transition:background .15s ease,border-color .15s ease,color .15s ease,transform .15s ease}
+.myevents-action-btn:hover{background:var(--cream)}
+.myevents-action-btn:active{transform:scale(.97)}
+.myevents-action-btn[aria-expanded="true"]{background:var(--brass);color:var(--rouge-deep);border-color:var(--brass)}
+.myevents-action-icon{font-size:.95rem;line-height:1;margin-bottom:2px}
+.myevents-action-label{white-space:normal;word-break:break-word}
+.myevents-panel{margin-top:.75rem;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.85rem}
+.myevents-panel-desc{font-size:.84rem;line-height:1.45;color:var(--smoke);margin-bottom:.6rem}
+.myevents-panel-empty-hint{font-size:.82rem;line-height:1.45;color:var(--rouge-bright);font-weight:500;margin-bottom:.6rem}
+.move-device-steps{font-size:.82rem;line-height:1.45;color:var(--smoke);margin:0 0 .6rem;padding-left:1.2rem}
+.move-device-steps li + li{margin-top:.4rem}
+.btn-inline{background:none;border:none;padding:0;color:var(--rouge-bright);font:inherit;font-weight:600;text-decoration:underline;cursor:pointer}
+.save-story-note{margin-top:.8rem;padding-top:.6rem;border-top:1px solid var(--line);font-size:.8rem;line-height:1.45;color:var(--smoke)}
+.save-story-note .save-story-title{font:600 .68rem/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--rouge);margin:0 0 .3rem}
+.install-status-installed{font-size:.84rem;font-weight:600;color:var(--rouge);margin:0;padding:.5rem 0}
+

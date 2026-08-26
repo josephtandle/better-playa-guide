@@ -1,8 +1,8 @@
-/* Service worker — caches everything so the guide works with no signal. MIT. */
-var CACHE = 'bpg-v5';
+/* Service worker: caches everything so the guide works with no signal. MIT. */
+var CACHE = 'bpg-v31';
 var FALLBACK = '/guide/';
 var ASSETS = ['/guide/','/guide','/guide/map','/guide/how-it-was-made',
-  '/guide/contribute','/guide/guide.css','/guide/guide.js','/guide/map.js',
+  '/guide/guide.css','/guide/guide.js','/guide/map.js',
   '/guide/data.js','/guide/manifest.webmanifest'];
 self.addEventListener('install', function(e){
   self.skipWaiting();
@@ -19,6 +19,9 @@ self.addEventListener('install', function(e){
       }
     })
   );
+});
+self.addEventListener('message', function(e){
+  if (e.data && e.data.type === 'SKIP_WAITING') self.skipWaiting();
 });
 self.addEventListener('activate', function(e){
   e.waitUntil(caches.keys().then(function(ks){

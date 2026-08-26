@@ -1,0 +1,64 @@
+#!/bin/bash
+# Better Playa Guide deploy gate. THE documented way to ship this site.
+#
+#   ./scripts/deploy.sh
+#
+# 1. Runs the full website test suite (client + api contract + retrieval).
+# 2. REFUSES to deploy on any failure.
+# 3. On green, bumps the service worker cache version (bpg-vNN -> bpg-vNN+1)
+#    so every phone that already installed the guide picks up the new build.
+# 4. Deploys with: vercel --prod --yes
+#
+# Bypassing this script is for emergencies only. If you must, you own the
+# cache-version bump and the untested deploy yourself.
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$REPO_ROOT"
+
+echo "== Better Playa Guide deploy gate =="
+
+# 0. Dependencies for the test rig (jsdom).
+if [ ! -d node_modules/jsdom ]; then
+  echo "-- installing test dependencies"
+  npm install --no-audit --no-fund
+fi
+
+# 1. Full test suite. Any failure stops the deploy right here.
+echo "-- running full test suite"
+if ! npm test; then
+  echo ""
+  echo "DEPLOY REFUSED: tests failed. Fix the failures above, then rerun ./scripts/deploy.sh"
+  echo "(Emergency bypass: run vercel --prod yourself, but you ship untested.)"
+  exit 1
+fi
+
+# 2. Bump the service worker cache version so installed clients refresh.
+SW="$REPO_ROOT/guide/sw.js"
+CUR=$(grep -oE "bpg-v[0-9]+" "$SW" | head -1 | grep -oE "[0-9]+")
+if [ -z "$CUR" ]; then
+  echo "DEPLOY REFUSED: could not read the bpg-vNN cache version from guide/sw.js"
+  exit 1
+fi
+NEXT=$((CUR + 1))
+sed -i '' "s/bpg-v${CUR}/bpg-v${NEXT}/" "$SW"
+echo "-- service worker cache bumped: bpg-v${CUR} -> bpg-v${NEXT}"
+
+# 3. Vercel token from the workspace .env (never hardcoded here).
+ENV_FILE="$HOME/.myos/workspace/.env"
+if [ -z "${VERCEL_TOKEN:-}" ] && [ -f "$ENV_FILE" ]; then
+  VERCEL_TOKEN=$(grep -E '^VERCEL_TOKEN=' "$ENV_FILE" | head -1 | cut -d= -f2-)
+fi
+if [ -z "${VERCEL_TOKEN:-}" ]; then
+  echo "DEPLOY REFUSED: VERCEL_TOKEN not set and not found in $ENV_FILE"
+  echo "(guide/sw.js was already bumped to bpg-v${NEXT}; revert it or deploy manually.)"
+  exit 1
+fi
+
+# 4. Ship it.
+echo "-- deploying to production"
+vercel --prod --yes --token "$VERCEL_TOKEN"
+
+echo ""
+echo "Deployed. sw cache is bpg-v${NEXT}. Commit the sw.js bump:"
+echo "  git add guide/sw.js && git commit -m 'chore: bump sw cache to bpg-v${NEXT} (deploy)'"

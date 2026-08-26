@@ -1,0 +1,127 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/container",
+      "destination": "https://container-app-tau.vercel.app/container"
+    },
+    {
+      "source": "/container/(.*)",
+      "destination": "https://container-app-tau.vercel.app/container/$1"
+    },
+    {
+      "source": "/_next/(.*)",
+      "destination": "https://container-app-tau.vercel.app/_next/$1"
+    },
+    {
+      "source": "/api/((?!ask$|ask/|list-sync$|list-sync/).*)",
+      "destination": "https://container-app-tau.vercel.app/api/$1"
+    },
+    {
+      "source": "/rainbow-container-bg.png",
+      "destination": "https://container-app-tau.vercel.app/rainbow-container-bg.png"
+    },
+    {
+      "source": "/flying-magic-container.png",
+      "destination": "https://container-app-tau.vercel.app/flying-magic-container.png"
+    },
+    {
+      "source": "/rainbow-container-bg.webp",
+      "destination": "https://container-app-tau.vercel.app/rainbow-container-bg.webp"
+    },
+    {
+      "source": "/flying-magic-container.webp",
+      "destination": "https://container-app-tau.vercel.app/flying-magic-container.webp"
+    }
+  ],
+  "functions": {
+    "api/ask.js": {
+      "includeFiles": "guide/data.js",
+      "maxDuration": 20
+    }
+  },
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterplayaguideai.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "betterguide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "guide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "playaguide.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/guide/$1",
+      "permanent": false
+    },
+    {
+      "source": "/guide",
+      "destination": "/guide/",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "musecafe.joe-che.com"
+        }
+      ],
+      "destination": "https://musecafe.vip/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.musecafe.vip"
+        }
+      ],
+      "destination": "https://musecafe.vip/$1",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
