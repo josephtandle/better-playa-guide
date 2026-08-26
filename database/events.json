@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3962,
+  "count": 3965,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -108701,6 +108701,84 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Desert Blues Opening (Chapter 1)",
+   "camp": "SAHARAA CAMP",
+   "address": "9:15 & J",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Kel Assouf, Santiago Bartolome, Monolink, Gallivanter, Chafic, John Woods",
+   "description": "Chapter 1: From the desert to the desert. Sahar Camp opening night: desert blues, Kel Assouf live, Monolink, then A Goat Passing Through until 3:30am.",
+   "schedule": [
+    {
+     "start": "08-31 19:30",
+     "end": "20:30"
+    },
+    {
+     "start": "08-31 21:00",
+     "end": "22:00"
+    },
+    {
+     "start": "08-31 22:15",
+     "end": "00:00"
+    },
+    {
+     "start": "09-01 00:00",
+     "end": "03:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Saharaa Sahar art camp Honoring the",
+   "grounded_score": null
+  },
+  {
+   "title": "Your Vibe Attracts Your Tribe (Chapter 2)",
+   "camp": "SAHARAA CAMP",
+   "address": "9:15 & J",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "AMEME, ANNA, Ines Rau, JAMIIE, Jojo Abot, Pego, Rockin Moroccin, Tom & Collin's, Yung OMZ",
+   "description": "Chapter 2: One vibe, one tribe. Tuesday 6pm to 3:30am. Lineup A-Z: AMEME, ANNA, Ines Rau, JAMIIE, Jojo Abot, Pego, Rockin Moroccin, Tom & Collin's, Yung OMZ.",
+   "schedule": [
+    {
+     "start": "09-01 18:00",
+     "end": "03:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Saharaa Sahar art camp Honoring the",
+   "grounded_score": null
+  },
+  {
+   "title": "I Am You (Chapter 3)",
+   "camp": "SAHARAA CAMP",
+   "address": "9:15 & J",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "ANNA, Deer Jade, JAMIIE, Kotoe, LaserLaura, Maxi Meraki, Philou, Sam Shure",
+   "description": "Chapter 3: I am you, you are me. Friday 11am to sunset. Lineup A-Z: ANNA, Deer Jade, JAMIIE, Kotoe, LaserLaura, Maxi Meraki, Philou, Sam Shure.",
+   "schedule": [
+    {
+     "start": "09-04 11:00",
+     "end": "19:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Saharaa Sahar art camp Honoring the",
    "grounded_score": null
   }
  ]
