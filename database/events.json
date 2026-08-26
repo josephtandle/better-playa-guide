@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3992,
+  "count": 4091,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -1033,7 +1033,7 @@
     "lineup"
    ],
    "fine_tags": [],
-   "presenter": "Locxito, I.S.H, Chris Tower",
+   "presenter": "Locxito, I.S.H, Chris Tower, LocXito, I.S.H., S.A.B.R.I",
    "description": "Pop-up circus experience w/ Goth, Victorian vibes. Come perform or spectate! Pop-up circus experience w/ Goth, Victorian vibes. Come perform or spectate!",
    "schedule": [
     {
@@ -4150,7 +4150,7 @@
     "lineup"
    ],
    "fine_tags": [],
-   "presenter": "Cheeks, Swingline, Mai Tai B2B Yeshua",
+   "presenter": "Cheeks, Swingline, Mai Tai B2B Yeshua, Mai Tai, Yeshua",
    "description": "Best Butt Camp takes over the Mad Tea(se) Stage! Prepare to wiggle. Best Butt Camp takes over the Mad Tea(se) Stage! Prepare to wiggle.",
    "schedule": [
     {
@@ -23355,10 +23355,11 @@
    "address": null,
    "tags": [
     "art",
-    "music"
+    "music",
+    "lineup"
    ],
    "fine_tags": [],
-   "presenter": null,
+   "presenter": "Double Touch, Spencer Brown, Reza, Etta",
    "description": "Gather in unity, song & music. Leave inspired to create more peace in the world. Gather in unity, song & music. Leave inspired to create more peace in the world.",
    "schedule": [
     {
@@ -26213,7 +26214,7 @@
     "lineup"
    ],
    "fine_tags": [],
-   "presenter": "Serapher, Brett David, Raw Safari, Danger Foley, Puddles, Golden, YOU&I, Lovecraft, Rodriguez Jr",
+   "presenter": "Serapher, Brett David, Raw Safari, Danger Foley, Puddles, Golden, YOU&I, Lovecraft, Rodriguez Jr, Bhaskar, You&I",
    "description": "An extra-colorful celebration of nonstop beats where the rip never stops. An extra-colorful celebration of nonstop beats where the rip never stops.",
    "schedule": [
     {
@@ -30082,7 +30083,9 @@
    "camp": "Celestial Bodies",
    "address": "7:30 & G",
    "tags": [
-    "drink"
+    "drink",
+    "wellness",
+    "lineup"
    ],
    "fine_tags": [
     63
@@ -57714,7 +57717,9 @@
    "address": "8:45 & E",
    "tags": [
     "ritual",
-    "workshop"
+    "workshop",
+    "wellness",
+    "lineup"
    ],
    "fine_tags": [
     42
@@ -57779,7 +57784,9 @@
    "camp": "Celestial Tea Garden",
    "address": "8:45 & E",
    "tags": [
-    "drink"
+    "drink",
+    "wellness",
+    "lineup"
    ],
    "fine_tags": [],
    "presenter": null,
@@ -60493,7 +60500,8 @@
    "address": "8:45 & E",
    "tags": [
     "wellness",
-    "workshop"
+    "workshop",
+    "lineup"
    ],
    "fine_tags": [
     0,
@@ -107460,32 +107468,56 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "JUNGLHAUS, Little Dinosaur, AndreasOne, OVEOUS, Dr Chaii, Emily Apollo",
-   "description": "Wednesday-night FMLY BZNS takeover at The Swerge, secret location. Dante sitting in on drums. Emily Apollo's own flyer lists her slot as 3:00 AM; the FMLY grid says 3:30 AM.",
+   "presenter": "JUNGLHAUS, Little Dinosaur, AndreasOne, OVEOUS, Dr Chaii, Emily Apollo, Jungle Haus, Dante",
+   "description": "Wednesday-night FMLY BZNS takeover at The Swerge, secret location. Dante sitting in on drums. Emily Apollo's own flyer lists her slot as 3:00 AM; the FMLY grid says 3:30 AM. FMLY BZNS all-nighter at The Swerge (secret location): Jungle Haus, Little Dinosaur, AndreasOne, OVEOUS on the mic, Dr Chaii, Emily Apollo. Dante sitting in on drums.",
    "schedule": [
     {
      "start": "09-02 22:00",
      "end": null
     },
     {
+     "start": "09-02 22:00",
+     "end": "23:00"
+    },
+    {
      "start": "09-02 23:00",
      "end": null
+    },
+    {
+     "start": "09-02 23:00",
+     "end": "00:00"
     },
     {
      "start": "09-03 00:00",
      "end": null
     },
     {
+     "start": "09-03 00:00",
+     "end": "01:00"
+    },
+    {
      "start": "09-03 01:00",
      "end": null
+    },
+    {
+     "start": "09-03 01:00",
+     "end": "02:30"
     },
     {
      "start": "09-03 02:30",
      "end": null
     },
     {
+     "start": "09-03 02:30",
+     "end": "03:30"
+    },
+    {
      "start": "09-03 03:30",
      "end": null
+    },
+    {
+     "start": "09-03 03:30",
+     "end": "05:00"
     }
    ],
    "source": "instagram-flyer-ocr",
@@ -107502,11 +107534,15 @@
    ],
    "fine_tags": [],
    "presenter": "AndreasOne, DanniG",
-   "description": "Tuesday: AndreasOne 7 PM. Friday late: DanniG 2-4 AM Afromantis takeover.",
+   "description": "Tuesday: AndreasOne 7 PM. Friday late: DanniG 2-4 AM Afromantis takeover. FMLY BZNS at Spose: AndreasOne, Tuesday 7pm.",
    "schedule": [
     {
      "start": "09-01 19:00",
      "end": null
+    },
+    {
+     "start": "09-01 19:00",
+     "end": "21:00"
     },
     {
      "start": "09-04 02:00",
@@ -107527,19 +107563,31 @@
    ],
    "fine_tags": [],
    "presenter": "Christafari, AndreasOne, DJ Soules",
-   "description": "Wednesday afternoon FMLY BZNS takeover.",
+   "description": "FMLY BZNS afternoon takeover at Shantitown: Christafari, AndreasOne, DJ Soules. Wednesday afternoon FMLY BZNS takeover.",
    "schedule": [
     {
      "start": "09-02 16:00",
      "end": null
     },
     {
+     "start": "09-02 16:00",
+     "end": "17:00"
+    },
+    {
      "start": "09-02 17:00",
      "end": null
     },
     {
+     "start": "09-02 17:00",
+     "end": "18:00"
+    },
+    {
      "start": "09-02 18:00",
      "end": null
+    },
+    {
+     "start": "09-02 18:00",
+     "end": "19:00"
     }
    ],
    "source": "instagram-flyer-ocr",
@@ -107556,7 +107604,7 @@
    ],
    "fine_tags": [],
    "presenter": "AndreasOne, DanniG",
-   "description": "Thursday at the Foam Dome: AndreasOne 1-2 PM (FMLY BZNS), DanniG 3-4:20 PM.",
+   "description": "Thursday at the Foam Dome: AndreasOne 1-2 PM (FMLY BZNS), DanniG 3-4:20 PM. AndreasOne at the Foam Dome, Thursday 1 to 2pm.",
    "schedule": [
     {
      "start": "09-03 13:00",
@@ -107580,8 +107628,8 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "Dreeemy, JUNGLHAUS, AndreasOne, SANCTUM, Dr Chaii B2B Emily Apollo, Danni G, DJ Soules & FMLY",
-   "description": "Thursday sunset-til-late at Sakenoma. Dr Chaii B2B Emily Apollo 11 PM (both artists' own flyers agree).",
+   "presenter": "Dreeemy, JUNGLHAUS, AndreasOne, SANCTUM, Dr Chaii B2B Emily Apollo, Danni G, DJ Soules & FMLY, Jungle Haus, Dr Chaii, Emily Apollo, DJ Soules",
+   "description": "FMLY BZNS at Sakenoma, sunset until late: Dreeemy, Jungle Haus, AndreasOne, SANCTUM, Dr Chaii b2b Emily Apollo, Danni G, then DJ Soules and the whole FMLY. Thursday sunset-til-late at Sakenoma. Dr Chaii B2B Emily Apollo 11 PM (both artists' own flyers agree).",
    "schedule": [
     {
      "start": "09-03 18:30",
@@ -107610,6 +107658,10 @@
     {
      "start": "09-04 01:00",
      "end": null
+    },
+    {
+     "start": "09-04 01:00",
+     "end": "03:00"
     }
    ],
    "source": "instagram-flyer-ocr",
@@ -107675,12 +107727,16 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "AndreasOne x Little Dinosaur x FMLY",
-   "description": "Friday midnight art-car takeover departing from Bloom: AndreasOne x Little Dinosaur x FMLY.",
+   "presenter": "AndreasOne x Little Dinosaur x FMLY, AndreasOne, Little Dinosaur",
+   "description": "Cuttlefish art car takeover departing midnight from Camp Bloom: AndreasOne x Little Dinosaur x FMLY. Friday midnight art-car takeover departing from Bloom: AndreasOne x Little Dinosaur x FMLY.",
    "schedule": [
     {
      "start": "09-05 00:00",
      "end": null
+    },
+    {
+     "start": "09-05 00:00",
+     "end": "03:00"
     }
    ],
    "source": "instagram-flyer-ocr",
@@ -107780,8 +107836,8 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "DanniG",
-   "description": "Saturday sunset set at the Solar Station.",
+   "presenter": "DanniG, AfroMantis, Danni G",
+   "description": "Solar Station sunset session: Solarpunks x Grandartique, AfroMantis on the decks. Saturday sunset set at the Solar Station.",
    "schedule": [
     {
      "start": "09-05 17:30",
@@ -109344,6 +109400,2272 @@
     {
      "start": "09-03 22:00",
      "end": "23:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "AfroMantis at FoamDome",
+   "camp": "FoamDome",
+   "address": "9:30 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AfroMantis, Danni G",
+   "description": "AfroMantis (Danni G) afternoon set at FoamDome.",
+   "schedule": [
+    {
+     "start": "09-03 15:00",
+     "end": "16:20"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "AfroMantis at Sakenoma",
+   "camp": "Sakenoma",
+   "address": "4:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AfroMantis, Danni G",
+   "description": "AfroMantis late set at Sakenoma, Thursday midnight into Friday.",
+   "schedule": [
+    {
+     "start": "09-04 00:00",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Sakenoma",
+   "grounded_score": null
+  },
+  {
+   "title": "AfroMantis takeover at Spose",
+   "camp": "Spose",
+   "address": "2:30 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AfroMantis, Danni G",
+   "description": "AfroMantis takeover at Spose, 2 to 4am Thursday night.",
+   "schedule": [
+    {
+     "start": "09-04 02:00",
+     "end": "04:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "AfroMantis at Camp Bloom",
+   "camp": "Camp Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AfroMantis, Danni G",
+   "description": "AfroMantis Friday evening set at Camp Bloom.",
+   "schedule": [
+    {
+     "start": "09-04 20:30",
+     "end": "22:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "AfroMantis sunrise at The Sound Garden",
+   "camp": "The Sound Garden",
+   "address": "2:00 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AfroMantis, Danni G",
+   "description": "AfroMantis Saturday sunrise set at The Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-05 07:00",
+     "end": "08:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp The Sound Garden thesoundgardenevents",
+   "grounded_score": null
+  },
+  {
+   "title": "AfroMantis at TAADAA Coffee (Fish art car)",
+   "camp": "Fish art car",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AfroMantis, Danni G",
+   "description": "AfroMantis midday set with TAADAA Coffee on the Fish art car.",
+   "schedule": [
+    {
+     "start": "09-05 12:00",
+     "end": "14:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Golden b2b Isabeau Fort at The Bunny",
+   "camp": "The Folly (deep playa)",
+   "address": "11:30 deep playa",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Golden, Isabeau Fort",
+   "description": "Golden b2b Isabeau Fort, Monday night at The Bunny, The Folly in deep playa.",
+   "schedule": [
+    {
+     "start": "09-01 00:00",
+     "end": "02:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Golden b2b Isabeau Fort at Amma",
+   "camp": "Amma",
+   "address": "2:00 & I",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Golden, Isabeau Fort",
+   "description": "Golden b2b Isabeau Fort, Tuesday afternoon at Amma.",
+   "schedule": [
+    {
+     "start": "09-01 14:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Amma",
+   "grounded_score": null
+  },
+  {
+   "title": "Golden at Rippers Row",
+   "camp": "RIPPERS ROW",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Golden",
+   "description": "Golden Wednesday night set at Rippers Row. (Card said 3&A; official placement is 3:00 & Esplanade.)",
+   "schedule": [
+    {
+     "start": "09-02 21:00",
+     "end": "22:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "Golden at Ashram Galactica",
+   "camp": "Ashram Galactica",
+   "address": "9:00 & J",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Golden",
+   "description": "Golden late Wednesday night set at Ashram Galactica.",
+   "schedule": [
+    {
+     "start": "09-03 00:30",
+     "end": "02:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Ashram Galactica ashramgalactica",
+   "grounded_score": null
+  },
+  {
+   "title": "Golden at Forest House (Titanic's End)",
+   "camp": "Titanic's End",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Golden",
+   "description": "Golden Thursday night set at Forest House on Titanic's End.",
+   "schedule": [
+    {
+     "start": "09-03 23:00",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Titanic's End titanicsend",
+   "grounded_score": null
+  },
+  {
+   "title": "Calligraphy Tattoo by 706 Tribe",
+   "camp": "706 Tribe",
+   "address": "6:15 & G",
+   "tags": [
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Calligraphy tattoos by 706 Tribe, hosted at Center Camp, Monday and Wednesday mornings.",
+   "schedule": [
+    {
+     "start": "08-31 11:00",
+     "end": "12:30"
+    },
+    {
+     "start": "09-02 11:00",
+     "end": "12:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp 706 Tribe",
+   "grounded_score": null
+  },
+  {
+   "title": "Abyssal Breathing Meditation",
+   "camp": "706 Tribe",
+   "address": "6:15 & G",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Abyssal breathing meditation at 706 Tribe.",
+   "schedule": [
+    {
+     "start": "09-01 09:00",
+     "end": "10:00"
+    },
+    {
+     "start": "09-03 09:00",
+     "end": "10:00"
+    },
+    {
+     "start": "09-05 09:00",
+     "end": "10:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp 706 Tribe",
+   "grounded_score": null
+  },
+  {
+   "title": "Goa Trance DJ Night",
+   "camp": "706 Tribe",
+   "address": "6:15 & G",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Goa trance DJ night at 706 Tribe, part of the Global Hub Block Party.",
+   "schedule": [
+    {
+     "start": "09-01 20:00",
+     "end": "22:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp 706 Tribe",
+   "grounded_score": null
+  },
+  {
+   "title": "Music Jam",
+   "camp": "706 Tribe",
+   "address": "6:15 & G",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Open music jam at 706 Tribe.",
+   "schedule": [
+    {
+     "start": "09-03 20:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp 706 Tribe",
+   "grounded_score": null
+  },
+  {
+   "title": "Tutu Tattoo",
+   "camp": "Celestial Bodies",
+   "address": "7:30 & G",
+   "tags": [
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Tutu tattoos at Celestial Bodies.",
+   "schedule": [
+    {
+     "start": "09-01 14:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Bodies campcelestialbodies celestialbodies",
+   "grounded_score": null
+  },
+  {
+   "title": "Jewelry Making Workshop",
+   "camp": "Celestial Bodies",
+   "address": "7:30 & G",
+   "tags": [
+    "workshop",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Make your own jewelry at Celestial Bodies.",
+   "schedule": [
+    {
+     "start": "09-01 12:00",
+     "end": "14:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Bodies campcelestialbodies celestialbodies",
+   "grounded_score": null
+  },
+  {
+   "title": "Naked Pub Crawl stop at Celestial Bodies",
+   "camp": "Celestial Bodies",
+   "address": "7:30 & G",
+   "tags": [
+    "party",
+    "adult"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The Naked Pub Crawl stops at the Celestial Bodies bar.",
+   "schedule": [
+    {
+     "start": "09-02 13:05",
+     "end": "13:35"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Bodies campcelestialbodies celestialbodies",
+   "grounded_score": null
+  },
+  {
+   "title": "Tarot Card Readings (Thursday)",
+   "camp": "Celestial Bodies",
+   "address": "7:30 & G",
+   "tags": [
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Tarot card readings at Celestial Bodies.",
+   "schedule": [
+    {
+     "start": "09-03 15:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Bodies campcelestialbodies celestialbodies",
+   "grounded_score": null
+  },
+  {
+   "title": "&ILY at Waffles & House",
+   "camp": "Waffles & House",
+   "address": "8:30 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "&ILY",
+   "description": "&ILY morning house set at Waffles & House.",
+   "schedule": [
+    {
+     "start": "09-03 10:30",
+     "end": "12:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Waffles & House wafflecamp",
+   "grounded_score": null
+  },
+  {
+   "title": "The Waffolympics",
+   "camp": "Waffles & House",
+   "address": "8:30 & C",
+   "tags": [
+    "game",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "illich Mujica",
+   "description": "The Waffolympics: games and house music with illich Mujica on the decks.",
+   "schedule": [
+    {
+     "start": "09-04 11:30",
+     "end": "13:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Waffles & House wafflecamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Bug2Bug Sets",
+   "camp": "Cicadia",
+   "address": "7:15 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Bug2Bug (b2b) DJ sets opening night at Cicadia. Home is where the bugs are.",
+   "schedule": [
+    {
+     "start": "08-30 17:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cicadia cicadiaut",
+   "grounded_score": null
+  },
+  {
+   "title": "REDFEET Bachelor/ette Party",
+   "camp": "Cicadia",
+   "address": "7:15 & E",
+   "tags": [
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Bachelor/ette party for the REDFEET couple at Cicadia.",
+   "schedule": [
+    {
+     "start": "08-31 19:00",
+     "end": "22:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cicadia cicadiaut",
+   "grounded_score": null
+  },
+  {
+   "title": "Bug Ball",
+   "camp": "Cicadia",
+   "address": "7:15 & E",
+   "tags": [
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The Bug Ball at Cicadia.",
+   "schedule": [
+    {
+     "start": "09-01 17:00",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cicadia cicadiaut",
+   "grounded_score": null
+  },
+  {
+   "title": "REDFEET Wedding",
+   "camp": "Cicadia",
+   "address": "7:15 & E",
+   "tags": [
+    "ritual",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The REDFEET wedding at Cicadia. All bugs welcome.",
+   "schedule": [
+    {
+     "start": "09-02 17:00",
+     "end": "19:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cicadia cicadiaut",
+   "grounded_score": null
+  },
+  {
+   "title": "SuzieBug B-Day Bash",
+   "camp": "Cicadia",
+   "address": "7:15 & E",
+   "tags": [
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "SuzieBug birthday bash at Cicadia.",
+   "schedule": [
+    {
+     "start": "09-03 17:00",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cicadia cicadiaut",
+   "grounded_score": null
+  },
+  {
+   "title": "Bass, Bacon & Butts",
+   "camp": "Cicadia",
+   "address": "7:15 & E",
+   "tags": [
+    "party",
+    "food"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Bass, bacon and butts at Cicadia. Friday, time TBA.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cicadia cicadiaut",
+   "grounded_score": null
+  },
+  {
+   "title": "Handz at Hookahdome (sunrise)",
+   "camp": "Hookahdome",
+   "address": "4:15 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Handz",
+   "description": "Handz sunrise set at the Hookahdome.",
+   "schedule": [
+    {
+     "start": "09-03 05:00",
+     "end": "06:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Hookahdome",
+   "grounded_score": null
+  },
+  {
+   "title": "Handz at The Sound Garden",
+   "camp": "The Sound Garden",
+   "address": "2:00 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Handz",
+   "description": "Handz evening set at The Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-03 20:30",
+     "end": "22:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp The Sound Garden thesoundgardenevents",
+   "grounded_score": null
+  },
+  {
+   "title": "Handz at ADHZ",
+   "camp": "ADHZ",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Handz",
+   "description": "Handz late-night set at ADHZ, 2 to 3am Thursday night.",
+   "schedule": [
+    {
+     "start": "09-04 02:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp ADHz",
+   "grounded_score": null
+  },
+  {
+   "title": "Simba Sax at Lake on Playa",
+   "camp": "Lake on Playa",
+   "address": "3:30 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Simba Sax",
+   "description": "Simba Sax live saxophone, Monday night at Lake on Playa.",
+   "schedule": [
+    {
+     "start": "08-31 21:00",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Simba Sax at SophistaPirates",
+   "camp": "SophistaPirates",
+   "address": "3:15 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Simba Sax",
+   "description": "Simba Sax late set at SophistaPirates.",
+   "schedule": [
+    {
+     "start": "09-01 23:00",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Simba Sax at Nudibranch",
+   "camp": "Nudibranch (deep playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Simba Sax",
+   "description": "Simba Sax sunset set at the Nudibranch art car in deep playa.",
+   "schedule": [
+    {
+     "start": "09-02 19:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Simba Sax sunrise at Caterpillar",
+   "camp": "Caterpillar (deep playa)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Simba Sax",
+   "description": "Simba Sax sunrise set on the Caterpillar in deep playa.",
+   "schedule": [
+    {
+     "start": "09-03 05:00",
+     "end": "06:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Simba Sax at Elementum",
+   "camp": "Elementum",
+   "address": "9:30 & B",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Simba Sax",
+   "description": "Simba Sax late set at Elementum.",
+   "schedule": [
+    {
+     "start": "09-03 23:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Elementum elementumcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Uldall at Rippers Row",
+   "camp": "RIPPERS ROW",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Uldall",
+   "description": "Uldall Monday evening set at Rippers Row.",
+   "schedule": [
+    {
+     "start": "08-31 18:30",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "Uldall at Golden Gate Project",
+   "camp": "Golden Gate Project",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Uldall",
+   "description": "Uldall Wednesday evening set at the Golden Gate Project.",
+   "schedule": [
+    {
+     "start": "09-02 19:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Golden Gate Project GGP goldengateproject",
+   "grounded_score": null
+  },
+  {
+   "title": "FMLY BZNS at Camp Bloom",
+   "camp": "Camp Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "AndreasOne",
+   "description": "AndreasOne sunset set at Camp Bloom for FMLY BZNS.",
+   "schedule": [
+    {
+     "start": "09-04 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Never Sleep Again 2026 lineup",
+   "camp": "Never Sleep Again",
+   "address": "8:30 & F",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Adaamar, Akira, Andy Shaw, Anschi, Anton Tumas, Augustine, Baach, Catori, Christian Voldstad, Dave DK, David Hohme, DJ Strangelove, Enamour, Fear The Youth, Goldcap, Holmar, Jo.Ke, Kawas, Lovecraft, Madmotormiquel, Mario Lui, M*linss, Oba, Flip Rameff, Rampue, Rebolledo, Stephan May, The Golden One, Theia, Usman, Zach Walker",
+   "description": "The Never Sleep Again 2026 resident lineup. Set times posted at camp.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Never Sleep Again NSA",
+   "grounded_score": null
+  },
+  {
+   "title": "Colibria at I Love Elephants",
+   "camp": "I Love Elephants",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Colibria",
+   "description": "Colibria live electric violin at I Love Elephants. (Card said 4:30 & Esplanade; official placement is 3:00 & Esplanade.)",
+   "schedule": [
+    {
+     "start": "09-01 23:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp I Love Elephants ILE iloveelephantscamp iloveelephants",
+   "grounded_score": null
+  },
+  {
+   "title": "Colibria at Amma",
+   "camp": "Amma",
+   "address": "2:00 & I",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Colibria",
+   "description": "Colibria live violin, Wednesday afternoon at Amma.",
+   "schedule": [
+    {
+     "start": "09-02 15:30",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Amma",
+   "grounded_score": null
+  },
+  {
+   "title": "Colibria on the Abraxas art car",
+   "camp": "Abraxas art car",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Colibria",
+   "description": "Colibria sunset set on the Abraxas dragon art car at the airport.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": "20:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Colibria at PlayAlchemist",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Colibria",
+   "description": "Colibria live violin at the PlayAlchemist pyramid.",
+   "schedule": [
+    {
+     "start": "09-03 22:00",
+     "end": "23:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Colibria sunrise at The Sound Garden",
+   "camp": "The Sound Garden",
+   "address": "2:00 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Colibria",
+   "description": "Colibria pre-dawn set at The Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-04 04:00",
+     "end": "05:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp The Sound Garden thesoundgardenevents",
+   "grounded_score": null
+  },
+  {
+   "title": "Colibria at Hookahdome",
+   "camp": "Hookahdome",
+   "address": "4:15 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Colibria",
+   "description": "Colibria Saturday night set at the Hookahdome.",
+   "schedule": [
+    {
+     "start": "09-05 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Hookahdome",
+   "grounded_score": null
+  },
+  {
+   "title": "Playa Peace Project: Tuesday lineup",
+   "camp": "Playa Peace Project art car",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "REO & Hooolia, Von Davis, MONI, Baloo, Greg Eversoul, Darina Chuz, Kaeli Renae",
+   "description": "Tuesday on the Playa Peace Project art car. Times posted on the car.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Playa Peace Project: Thursday lineup",
+   "camp": "Playa Peace Project art car",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Blue Dietrich, GRU.DI, KISA, Mansion, Aldous, Mozes",
+   "description": "Thursday on the Playa Peace Project art car.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Playa Peace Project: Saturday lineup",
+   "camp": "Playa Peace Project art car",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Alkemiss Erika, Double Touch & Friends, Dubdogz, Dancetronauts",
+   "description": "Saturday on the Playa Peace Project art car.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Luch b2b Darco sunrise at Nova",
+   "camp": "Nova",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch, Darco",
+   "description": "Luch b2b Darco, Tuesday sunrise at Nova.",
+   "schedule": [
+    {
+     "start": "09-01 06:00",
+     "end": "08:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Luch at PlayAlchemist",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch",
+   "description": "Luch midday set at the PlayAlchemist pyramid.",
+   "schedule": [
+    {
+     "start": "09-02 11:40",
+     "end": "13:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Luch at Phantasmagoria",
+   "camp": "Phantasmagoria Camp",
+   "address": "4:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch",
+   "description": "Luch evening set at Phantasmagoria.",
+   "schedule": [
+    {
+     "start": "09-02 21:30",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Phantasmagoria phantasmagoriacamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Luch at Long Feng",
+   "camp": "Long Feng Camp",
+   "address": "10:00 & K",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch",
+   "description": "Luch late set at Long Feng, Wednesday midnight into Thursday.",
+   "schedule": [
+    {
+     "start": "09-03 00:00",
+     "end": "01:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "Luch: Maxa x Bipolar Express link up",
+   "camp": "Maxa",
+   "address": "8:30 & J",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch",
+   "description": "Luch on the Maxa x Bipolar Express link up, 3 to 5am.",
+   "schedule": [
+    {
+     "start": "09-03 03:00",
+     "end": "05:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "Luch sunrise at TRION",
+   "camp": "TRION",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch",
+   "description": "Luch Thursday sunrise set at TRION.",
+   "schedule": [
+    {
+     "start": "09-03 07:00",
+     "end": "09:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Luch at Symbio",
+   "camp": "SYMBIO",
+   "address": "2:30 & F",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Luch",
+   "description": "Luch midday set at Symbio.",
+   "schedule": [
+    {
+     "start": "09-03 12:00",
+     "end": "14:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Symbio",
+   "grounded_score": null
+  },
+  {
+   "title": "Sumia at BYTE Camp",
+   "camp": "BYTE Camp",
+   "address": "10:00 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Sumia",
+   "description": "Sumia set at BYTE Camp. Day and time TBA, follow @su.m.i.a. The Confusion Craft LOVE ME art exhibition runs at BYTE all festival.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Sumia at Shitty Glitter",
+   "camp": "Shitty Glitter",
+   "address": "8:30 & D",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Sumia",
+   "description": "Sumia set at Shitty Glitter. Time TBA. (Poster listed 2:00 & Great Oak; official placement is 8:30 & D.)",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Shitty Glitter shttyglitter",
+   "grounded_score": null
+  },
+  {
+   "title": "Sumia at MindShark",
+   "camp": "MindShark",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Sumia",
+   "description": "Sumia set at MindShark. Time TBA.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp MindShark",
+   "grounded_score": null
+  },
+  {
+   "title": "Sumia at PlovKraft",
+   "camp": "PlovKraft",
+   "address": "7:30 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Sumia",
+   "description": "Sumia set at PlovKraft (7:30 portal). Time TBA.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp PlovKraft plovkraftbm",
+   "grounded_score": null
+  },
+  {
+   "title": "Primal Moves",
+   "camp": "SYMBIO",
+   "address": "2:30 & F",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Steph Forbes",
+   "description": "Primal movement class with Captain (Steph Forbes) at Symbio.",
+   "schedule": [
+    {
+     "start": "08-31 11:00",
+     "end": "12:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Symbio",
+   "grounded_score": null
+  },
+  {
+   "title": "Magical Mondays Sound Bath",
+   "camp": "SYMBIO",
+   "address": "2:30 & F",
+   "tags": [
+    "wellness",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": "Amanda Haze, Inna",
+   "description": "Sound bath with Amanda Haze and Inna at Symbio.",
+   "schedule": [
+    {
+     "start": "08-31 19:00",
+     "end": "20:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Symbio",
+   "grounded_score": null
+  },
+  {
+   "title": "Creative Movement",
+   "camp": "SYMBIO",
+   "address": "2:30 & F",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Ashli Katz",
+   "description": "Creative movement class with Ashli Katz at Symbio.",
+   "schedule": [
+    {
+     "start": "09-02 11:00",
+     "end": "12:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Symbio",
+   "grounded_score": null
+  },
+  {
+   "title": "Tantric Tune Up + Sound",
+   "camp": "SYMBIO",
+   "address": "2:30 & F",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Andrew Hague",
+   "description": "Tantric tune up and sound session with Andrew Hague at Symbio.",
+   "schedule": [
+    {
+     "start": "09-04 11:00",
+     "end": "12:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Symbio",
+   "grounded_score": null
+  },
+  {
+   "title": "Flow Arts Workshops (Thursday)",
+   "camp": "Camp Kinetic",
+   "address": "3:00 & E",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Vira Knight, Moonlit Empress, YourBuddyDuddy, Katie Fishface, Brady Shutt, Flow Mayhem, Dancing with Dragons",
+   "description": "A full day of flow-arts workshops at Camp Kinetic: foot care, poi, silk fans, clubs, rope dart, dragon staff.",
+   "schedule": [
+    {
+     "start": "09-03 11:00",
+     "end": "12:00"
+    },
+    {
+     "start": "09-03 12:00",
+     "end": "13:00"
+    },
+    {
+     "start": "09-03 13:00",
+     "end": "14:00"
+    },
+    {
+     "start": "09-03 14:00",
+     "end": "15:00"
+    },
+    {
+     "start": "09-03 15:00",
+     "end": "16:00"
+    },
+    {
+     "start": "09-03 16:00",
+     "end": "17:00"
+    },
+    {
+     "start": "09-03 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Kinetic campkinetic",
+   "grounded_score": null
+  },
+  {
+   "title": "Flow Arts Workshops (Friday)",
+   "camp": "Camp Kinetic",
+   "address": "3:00 & E",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Sandra Rossetter, Donny Vallejo, Tyler Spades, Otillia Hoops, Meredith Climer, Twisted Taay, Polescilla",
+   "description": "Friday flow-arts workshops at Camp Kinetic: yoga, contact staff, hoops, poi, fans, floor play.",
+   "schedule": [
+    {
+     "start": "09-04 11:00",
+     "end": "12:00"
+    },
+    {
+     "start": "09-04 12:00",
+     "end": "13:00"
+    },
+    {
+     "start": "09-04 13:00",
+     "end": "14:00"
+    },
+    {
+     "start": "09-04 14:00",
+     "end": "15:00"
+    },
+    {
+     "start": "09-04 15:00",
+     "end": "16:00"
+    },
+    {
+     "start": "09-04 16:00",
+     "end": "17:00"
+    },
+    {
+     "start": "09-04 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Kinetic campkinetic",
+   "grounded_score": null
+  },
+  {
+   "title": "Flow Arts Workshops (Monday)",
+   "camp": "Camp Kinetic",
+   "address": "3:00 & E",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Sarah Flutters, Danimal, Seadragon Flow, Angel & Glo, Josh, Foxy Roxy, Riya Boyington",
+   "description": "Monday flow-arts workshops at Camp Kinetic: yoga and sound healing, poi, fans, partner poi, contact staff, hooping, bellydance.",
+   "schedule": [
+    {
+     "start": "08-31 11:00",
+     "end": "12:00"
+    },
+    {
+     "start": "08-31 12:00",
+     "end": "13:00"
+    },
+    {
+     "start": "08-31 13:00",
+     "end": "14:00"
+    },
+    {
+     "start": "08-31 14:00",
+     "end": "15:00"
+    },
+    {
+     "start": "08-31 15:00",
+     "end": "16:00"
+    },
+    {
+     "start": "08-31 16:00",
+     "end": "17:00"
+    },
+    {
+     "start": "08-31 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Kinetic campkinetic",
+   "grounded_score": null
+  },
+  {
+   "title": "Flow Arts Workshops (Tuesday)",
+   "camp": "Camp Kinetic",
+   "address": "3:00 & E",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Radi Flows, Jeremy Gonzalez, Skyelosophy, Victor Vaden, Flowthang",
+   "description": "Tuesday flow-arts workshops at Camp Kinetic: rope dart, double contact staff, poi basics, fan tech, renegade daytime astronomy, dragon staff.",
+   "schedule": [
+    {
+     "start": "09-01 12:00",
+     "end": "13:00"
+    },
+    {
+     "start": "09-01 13:00",
+     "end": "14:00"
+    },
+    {
+     "start": "09-01 14:00",
+     "end": "15:00"
+    },
+    {
+     "start": "09-01 15:00",
+     "end": "16:00"
+    },
+    {
+     "start": "09-01 16:00",
+     "end": "17:00"
+    },
+    {
+     "start": "09-01 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Kinetic campkinetic",
+   "grounded_score": null
+  },
+  {
+   "title": "Flow Arts Workshops (Wednesday)",
+   "camp": "Camp Kinetic",
+   "address": "3:00 & E",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Riya Boyington, Pyrolatrous Panda, Gregoriium, Kit Cat Katelyn, Rager Rabbit, Matthew Sosticky, Otillia Hoops",
+   "description": "Wednesday flow-arts workshops at Camp Kinetic: yoga, poi, rope dart wraps, double hoop, dragon staff, double staff, all-props flow hacking.",
+   "schedule": [
+    {
+     "start": "09-02 11:00",
+     "end": "12:00"
+    },
+    {
+     "start": "09-02 12:00",
+     "end": "13:00"
+    },
+    {
+     "start": "09-02 13:00",
+     "end": "14:00"
+    },
+    {
+     "start": "09-02 14:00",
+     "end": "15:00"
+    },
+    {
+     "start": "09-02 15:00",
+     "end": "16:00"
+    },
+    {
+     "start": "09-02 16:00",
+     "end": "17:00"
+    },
+    {
+     "start": "09-02 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Kinetic campkinetic",
+   "grounded_score": null
+  },
+  {
+   "title": "Naked Pub Crawl 2026",
+   "camp": "Black Rock City",
+   "address": null,
+   "tags": [
+    "party",
+    "adult"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The Naked Pub Crawl: 11 stops across the city, starting 11am at The Man. Route: Comfort & Joy, Sharkey's, fruitPOP, Celestial Bodies, Patsy's Hangout, Bad Asstronauts, Barbie Death Village, Pink Ponies, Mission Country Club, Mudskippers, BRC Municipal Pool. Times and route subject to change on playa.",
+   "schedule": [
+    {
+     "start": "09-02 11:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Rippers Row opening night",
+   "camp": "RIPPERS ROW",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Socket, Witch Doctor, Bobby Poppers",
+   "description": "Rippers Row opening night lineup.",
+   "schedule": [
+    {
+     "start": "08-30 20:00",
+     "end": "21:30"
+    },
+    {
+     "start": "08-30 21:30",
+     "end": "23:00"
+    },
+    {
+     "start": "08-30 23:00",
+     "end": "00:30"
+    },
+    {
+     "start": "08-31 00:30",
+     "end": "02:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "Rippers Row Monday night",
+   "camp": "RIPPERS ROW",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Bandi, Micha, PETTY, Kon Faber",
+   "description": "Rippers Row Monday lineup.",
+   "schedule": [
+    {
+     "start": "08-31 20:00",
+     "end": "21:30"
+    },
+    {
+     "start": "08-31 21:30",
+     "end": "23:00"
+    },
+    {
+     "start": "08-31 23:00",
+     "end": "00:30"
+    },
+    {
+     "start": "09-01 00:30",
+     "end": "02:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "Rippers Row Wednesday night",
+   "camp": "RIPPERS ROW",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Seraphiel, Don Rage, Golden, L'Core",
+   "description": "Rippers Row Wednesday lineup.",
+   "schedule": [
+    {
+     "start": "09-02 18:00",
+     "end": "19:30"
+    },
+    {
+     "start": "09-02 19:30",
+     "end": "21:00"
+    },
+    {
+     "start": "09-02 21:00",
+     "end": "22:30"
+    },
+    {
+     "start": "09-02 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "Rippers Row Thursday night",
+   "camp": "RIPPERS ROW",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Ringo, Tropic Bomba, Jean Jaque, Tripps, KREAM",
+   "description": "Rippers Row Thursday lineup.",
+   "schedule": [
+    {
+     "start": "09-03 18:00",
+     "end": "19:30"
+    },
+    {
+     "start": "09-03 19:30",
+     "end": "21:00"
+    },
+    {
+     "start": "09-03 21:00",
+     "end": "22:30"
+    },
+    {
+     "start": "09-03 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi live at Above the Noise",
+   "camp": "Above the Noise (art installation)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi, Rodriguez Jr.",
+   "description": "LP Giobbi live set improvising on grand piano with Rodriguez Jr., at the Above the Noise installation near the Temple.",
+   "schedule": [
+    {
+     "start": "08-31 19:00",
+     "end": "19:45"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at Camp Mystic",
+   "camp": "Mystic",
+   "address": "2:00 & F",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi at Camp Mystic.",
+   "schedule": [
+    {
+     "start": "08-31 22:00",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Mystic",
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at Playground",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi at Playground: solo 11:30pm to 1am, then back to back until 2.",
+   "schedule": [
+    {
+     "start": "08-31 23:30",
+     "end": "02:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi sunrise on Axolotl",
+   "camp": "¡AXOLOTL! The Earth Guardian",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi sunrise set on the Axolotl in deep playa.",
+   "schedule": [
+    {
+     "start": "09-01 05:00",
+     "end": "06:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at Maison PHI",
+   "camp": "Maison PHI",
+   "address": "10:00 & B",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi sunset set at Maison PHI.",
+   "schedule": [
+    {
+     "start": "09-01 19:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maison Phi",
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at Long Feng",
+   "camp": "Long Feng Camp",
+   "address": "10:00 & K",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi late set at Long Feng.",
+   "schedule": [
+    {
+     "start": "09-01 23:00",
+     "end": "00:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at TRION",
+   "camp": "TRION",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi late night at TRION in deep playa.",
+   "schedule": [
+    {
+     "start": "09-02 02:30",
+     "end": "04:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi sunrise on Robot Heart",
+   "camp": "Robot Heart",
+   "address": "9:45 & K",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi, Deer Jade",
+   "description": "LP Giobbi on Robot Heart: b2b with Deer Jade and a live string quartet 5 to 7am, then solo with the quartet premiering new music until 7:30.",
+   "schedule": [
+    {
+     "start": "09-02 05:00",
+     "end": "07:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at Symbio Club Tent",
+   "camp": "SYMBIO",
+   "address": "2:30 & F",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi afternoon set in the Symbio club tent.",
+   "schedule": [
+    {
+     "start": "09-03 14:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Symbio",
+   "grounded_score": null
+  },
+  {
+   "title": "Double Touch: Bipolar Express x Apotheneum link up",
+   "camp": "Apotheneum (art installation)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Double Touch",
+   "description": "Double Touch on the Bipolar Express x Apotheneum link up at the Apotheneum art installation.",
+   "schedule": [
+    {
+     "start": "09-01 20:00",
+     "end": "21:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Double Touch at Long Feng: Phoenix Rising",
+   "camp": "Long Feng Camp",
+   "address": "10:00 & K",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Double Touch",
+   "description": "Double Touch sunset set at Long Feng, Phoenix Rising.",
+   "schedule": [
+    {
+     "start": "09-02 18:00",
+     "end": "19:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "Double Touch sunrise at Above the Noise",
+   "camp": "Above the Noise (art installation)",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Double Touch",
+   "description": "Double Touch sunrise solo piano set at the Above the Noise installation.",
+   "schedule": [
+    {
+     "start": "09-03 06:00",
+     "end": "07:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Double Touch at Pink Mammoth",
+   "camp": "Pink Mammoth",
+   "address": "9:30 & G",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Double Touch",
+   "description": "Double Touch afternoon set at Pink Mammoth.",
+   "schedule": [
+    {
+     "start": "09-03 15:30",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Pink Mammoth pinkmammothsf",
+   "grounded_score": null
+  },
+  {
+   "title": "Double Touch at Playground",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Double Touch",
+   "description": "Double Touch at Playground, Friday night.",
+   "schedule": [
+    {
+     "start": "09-04 22:00",
+     "end": "23:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "Double Touch at Robot Heart",
+   "camp": "Robot Heart",
+   "address": "9:45 & K",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Double Touch",
+   "description": "Double Touch late night on Robot Heart, Friday night into Saturday.",
+   "schedule": [
+    {
+     "start": "09-05 02:00",
+     "end": "03:15"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Cosmic Breathwork",
+   "camp": "Celestial Tea Garden",
+   "address": "8:45 & E",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Cosmic breathwork session at Celestial Tea Garden.",
+   "schedule": [
+    {
+     "start": "08-31 16:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Tea Garden CTG",
+   "grounded_score": null
+  },
+  {
+   "title": "Creative Ignition",
+   "camp": "Celestial Tea Garden",
+   "address": "8:45 & E",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Creative ignition workshop at Celestial Tea Garden.",
+   "schedule": [
+    {
+     "start": "09-01 12:00",
+     "end": "13:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Tea Garden CTG",
+   "grounded_score": null
+  },
+  {
+   "title": "Jade Boiler Room",
+   "camp": "Celestial Tea Garden",
+   "address": "8:45 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Jade Boiler Room set at Celestial Tea Garden, Wednesday 6pm.",
+   "schedule": [
+    {
+     "start": "09-02 18:00",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Tea Garden CTG",
+   "grounded_score": null
+  },
+  {
+   "title": "Mad Tease 'n' Frandz!",
+   "camp": "Mad Tea(se) Party",
+   "address": "7:15 & Esp",
+   "tags": [
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "MNTRA, I.S.H.",
+   "description": "Saturday night after the Man burns: Mad Tease and friends until late.",
+   "schedule": [
+    {
+     "start": "09-06 00:00",
+     "end": "02:00"
+    },
+    {
+     "start": "09-06 02:00",
+     "end": "04:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Mad Tea Party se Mad TeaseParty Camp Mad Tea(se) Party Camp Mad Tea Party MTSP madteaseparty",
+   "grounded_score": null
+  },
+  {
+   "title": "Elan Schnider at Cuddle Oasis",
+   "camp": "Cuddle Oasis",
+   "address": "2:30 & Esp",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Elan Schnider",
+   "description": "Elan Schnider sunset set at Cuddle Oasis.",
+   "schedule": [
+    {
+     "start": "09-01 18:00",
+     "end": "19:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Cuddle Oasis",
+   "grounded_score": null
+  },
+  {
+   "title": "Elan Schnider at Melon Hotel",
+   "camp": "Melon Hotel",
+   "address": "2:00 & I",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Elan Schnider, OMRI.",
+   "description": "Elan Schnider with OMRI. and friends, Tuesday night into Wednesday sunrise at Melon Hotel.",
+   "schedule": [
+    {
+     "start": "09-02 03:00",
+     "end": "08:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Elan Schnider on the Smile High art car",
+   "camp": "Smile High",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Elan Schnider",
+   "description": "Elan Schnider pre-dawn set on the Smile High art car, Wednesday night into Thursday.",
+   "schedule": [
+    {
+     "start": "09-03 04:00",
+     "end": "05:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Elan Schnider: Bipolar Express PULSE Orchestra",
+   "camp": "Titanic's End",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Elan Schnider, Black Rock Philharmonic, Meir Briskman",
+   "description": "Elan Schnider with the PULSE Orchestra (Black Rock Philharmonic and Meir Briskman) on the Bipolar Express at Titanic's End in deep playa.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": "20:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Titanic's End titanicsend",
+   "grounded_score": null
+  },
+  {
+   "title": "John Woods at Whomp Wagon",
+   "camp": "Whomp Wagon",
+   "address": "9:45 & I",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "John Woods",
+   "description": "John Woods late set at Whomp Wagon Camp.",
+   "schedule": [
+    {
+     "start": "09-01 23:00",
+     "end": "00:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Whomp Wagon whompwagon",
+   "grounded_score": null
+  },
+  {
+   "title": "John Woods on the Lucy Escargot art car",
+   "camp": "Lucy Escargot art car",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "John Woods",
+   "description": "John Woods afternoon set on the Lucy Escargot art car, inner playa between 3 and 6.",
+   "schedule": [
+    {
+     "start": "09-02 15:00",
+     "end": "16:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "John Woods sunrise on Axolotl",
+   "camp": "¡AXOLOTL! The Earth Guardian",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "John Woods",
+   "description": "John Woods Saturday sunrise set on the Axolotl art car in open playa.",
+   "schedule": [
+    {
+     "start": "09-05 04:00",
+     "end": "05:30"
     }
    ],
    "source": "instagram-flyer-ocr",

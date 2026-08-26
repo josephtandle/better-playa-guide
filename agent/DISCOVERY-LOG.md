@@ -25,6 +25,40 @@ Format: date logged | source (handle/site/person) | how it surfaced | what it yi
 - 2026-08-27 | @lostdesertmusic (via @porangui) | Joe's IG feed screenshot | 6 Lost Desert sets incl. Robot Heart Sat 3:15am + new venue Pink Mammoth (9:30 & G) | YES; poster had stale address for Deoxidized (2&H vs official 2:00 & D)
 - 2026-08-27 | DJ Kalamari via @marishten | Joe's IG feed screenshot | 3 sets: Ashram Galactica Mon, Illuminaughty Tue midnight, Camp Bloom Thu | YES
 - 2026-08-27 | @vintagebkdj Shabbat Social Schvitz | Joe's IG feed screenshot | SKIPPED: Sept 18 at Othership = not a Burning Man event | note: verify date+venue before ingesting anything from feed
+- 2026-08-27 | @dannig / AfroMantis | Joe's IG feed screenshot | AfroMantis full week (12 sets; 6 new: FoamDome, Sakenoma late, Spose, Bloom, Sound Garden sunrise, Fish art car) | YES: duo accounts cross-post; half was already in via WA flyers = good cross-confirmation
+- 2026-08-27 | @alexgoldenbeats (via @helenus_l) | Joe's IG feed screenshot | Golden 5 sets incl. The Bunny/The Folly deep playa + Forest House on Titanic's End | YES; card had stale Rippers Row address (3&A vs official 3:00 & Esp)
+- 2026-08-27 | @helenus_l / @thekatyalee (706 Tribe) | Joe's IG feed screenshot | 706 Tribe full week timeline; officials only had 3 of ~10 items | YES: camp timeline posters fill official gaps; flyer weekday labels were WRONG (9/3 marked TUE) so trust dates not day names
+- 2026-08-27 | @camp_celestial_bodies (via @maxacamp) | Joe's IG feed screenshot | full week schedule 7:30 & G Plaza; officials had 8 of ~14 items (added sober hours, tutu tattoo, pub crawl stop, Thu tarot) | YES
+- 2026-08-27 | @wafflesandhouse (via @simbasax) | Joe's IG feed screenshot | Thu/Fri morning lineup; RSL already had 3 of 5 (added &ILY + Waffolympics) | YES
+- 2026-08-27 | @cicadia_ut (via @handzmusic) | Joe's IG feed screenshot | Cicadia (7:15 & E) full week: zero was in any source = whole camp was invisible | YES: small camps only publish on IG
+- 2026-08-27 | @handzmusic | Joe's IG feed screenshot | Handz: Hookahdome sunrise, Sound Garden, ADHZ | YES
+- 2026-08-27 | @simbasax | Joe's IG feed screenshot | Simba Sax 7 sets; 2 already covered via RSL/Hookahdome = cross-confirmation; new venues Lake on Playa, Nudibranch, Caterpillar | YES
+- 2026-08-27 | @its.uldall (via @ml_docphotography) | Joe's IG feed screenshot | Uldall: Rippers Row Mon, Golden Gate Project Wed | YES
+- 2026-08-27 | @fmlybzns_ | Joe's IG feed screenshot | full FMLY BZNS takeover lineups; WA harvest had the shells, flyer filled per-slot DJs (Shantitown, Swerge, Sakenoma, Cuttlefish) | YES: collective accounts publish the most complete grids
+- 2026-08-27 | @camp_neversleepagain | Joe's IG feed screenshot | 31-artist resident lineup at 8:30 & F | YES; also resolves the registry collision: Never Sleep Again IS the 8:30 & F camp
+- 2026-08-27 | @theislanddestinations (Himalayan sound bath) | Joe's IG feed screenshot | duplicate of @kalden.kho Cuddle Oasis flyer = cross-confirmation, skipped | note: same event circulates under Tibetan AND Himalayan wording
+- 2026-08-27 | Colibria via @brianadimara | Joe's IG feed screenshot | 6 live-violin sets incl. Abraxas art car at the airport | YES; card had stale I Love Elephants address
+- 2026-08-27 | @playapeaceproject (via @danielduganart) | Joe's IG feed screenshot | art car day rosters Tue-Sat + Friday Sunset Peace Gathering lineup | YES
+- 2026-08-27 | @thetwilightlanguage | Joe's IG feed screenshot | full 4-night grid already 100% in from WA harvest = pure cross-confirmation | YES: only camp so far fully covered before the IG drop
+- 2026-08-27 | @luchmusic | Joe's IG feed screenshot | Luch 7 sets (Nova sunrise b2b Darco, PlayAlchemist, Phantasmagoria, Long Feng, Maxa x Bipolar, TRION sunrise, Symbio) | YES
+- 2026-08-27 | @su.m.i.a (via @danicayoga) | Joe's IG feed screenshot | Sumia at BYTE, Shitty Glitter, MindShark, PlovKraft (no times) + LOVE ME exhibition at BYTE | YES; same stale-address pattern as @dustmelissa (2:00 Great Oak)
+- 2026-08-27 | @campcontact | Joe's IG feed screenshot | full week grid; officials ALREADY carry 41 Camp Contact events at 3:45 & C = watchlist item resolved, address confirmed | YES for cross-check only
+- 2026-08-27 | Symbio via @stephanieforbes | Joe's IG feed screenshot | wellness program (4 classes) + venue for Luch Thursday | YES
+- 2026-08-27 | @nobohouse | Joe's IG feed screenshot | full week; officials already carry 25 Nobo House events = skip, cross-confirmation | YES for cross-check
+- 2026-08-27 | @campkinetic | Joe's IG feed screenshot (slide 2/2) | Thu+Fri flow-arts workshops with teachers; slide 1 (Mon-Wed) not captured: grab it next sweep | YES
+- 2026-08-27 | @campkinetic slide 1/2 | Joe's IG feed screenshot | Mon-Wed flow-arts workshops (20 more classes w/ teachers); closes the gap flagged earlier today | YES
+- 2026-08-27 | @camp_celestial_bodies (Naked Pub Crawl map, Aug 8) | Joe's IG feed screenshot | full 11-stop Wednesday route from The Man; individual stops were scattered in officials, master route now one event | YES: route maps beat per-stop listings
+- 2026-08-27 | @rippers_row | Joe's IG feed screenshot (7-slide) | full Sun-Thu lineups (25 sets); Tuesday merges with the official Three-to-Three shell; camp footer says 3:00 & A vs official 3:00 & Esp, kept official | YES
+- 2026-08-27 | @lpgiobbi | Joe's IG feed screenshot | LP Giobbi 9 sets incl. grand-piano live near Temple + Robot Heart w/ string quartet + new venue Maison PHI (10 & B) | YES: big-name artists post the most precise cards
+- 2026-08-27 | @doubletouchofficial (via @maxacamp) | Joe's IG feed screenshot | 7 sets incl. Apotheneum + Above the Noise installations; Fri PEACE slot cross-confirms PPP flyer | YES
+- 2026-08-27 | @saandmusic CRSSD poster | Joe's IG feed screenshot | SKIPPED: CRSSD is San Diego Sept 26-27, not Burning Man | note: artist accounts mix festival posters, check event+venue
+- 2026-08-27 | @celestialteagarden (via Johanna story) | Joe's IG screenshot | Mon-Wed program at 8:45 & E; officials had Monday, flyer added Tue/Wed recurrence + breathwork, dream yoga, Jade Boiler Room | YES: stories carry programs that never hit the grid
+- 2026-08-27 | @mad_tease_party (via @elementumcamp) | Joe's IG feed screenshot | Domestic Feline Dance Party already fully in (slot + all 3 DJs) = cross-confirmation only | YES for cross-check
+- 2026-08-27 | @mad_tease_party carousel (slides 2-3) | Joe's IG screenshots | Victorian Circus DJs added (LocXito, I.S.H., Chris Tower, S.A.B.R.I); Best-Mad-Butts already matched exactly | YES
+- 2026-08-27 | @mad_tease_party slide 1 (master grid) | Joe's IG screenshot | per-set times for all 4 parties + NEW Saturday Mad Tease n Frandz (MNTRA, I.S.H.) | YES: carousel slide 1 is the master grid, later slides are per-party art
+- 2026-08-27 | @elanschnider | Joe's IG screenshot | 4 sets: Cuddle Oasis, Melon Hotel all-nighter w/ OMRI., Smile High art car, PULSE Orchestra on Bipolar Express at Titanic's End | YES: cross-links three other flyers
+- 2026-08-27 | @johnwoodsmusic | Joe's IG screenshot | 3 new sets (Whomp Wagon, Lucy Escargot art car, Axolotl sunrise); his Sahar Monday slot cross-confirms the Chafic b2b from the Sahar carousel | YES
+- 2026-08-27 | @itsdrchaii (Tommy grid slide) | Joe's IG screenshot | identical Tommy art car grid to @koray.ozsoy = second full cross-confirmation of all 36 sets | YES for cross-check
 - 2026-08-26 | word of mouth (Joe) | direct tip | Shalman & Sheila Demoura at Gaian Airship Fri 12am before Mel Semé & OVEOUS | YES: Joe's own network beats every scraper for late additions
 - 2026-08-25 | heebeegeebeehealers.org | Joe link | 2026 page live but schedule image still 2024 ("stay tuned") | YES but verify year on the image itself before ingesting (2024 poster shows old F-street address)
 
