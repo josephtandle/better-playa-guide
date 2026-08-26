@@ -4,7 +4,7 @@
 JSON any language can read. MIT licensed. Take it, build on it, improve it.
 
 ## What is in it
-3,943 events. It starts from the official Who What Where listings and merges in what
+3,998 events. It starts from the official Who What Where listings and merges in what
 camps actually published: DJ and speaker lineups from the Rock Star Librarian guide,
 the Playa Set Library, camp websites, and camp Instagram (some read by OCR from
 schedule images). The official listings strip performer names; this puts them back.
@@ -12,7 +12,7 @@ schedule images). The official listings strip performer names; this puts them ba
 ## Shape
 ```json
 {
-  "meta":     { "year": 2026, "theme": "Axis Mundi", "count": 3943, "license": "MIT" },
+  "meta":     { "year": 2026, "theme": "Axis Mundi", "count": 3998, "license": "MIT" },
   "geometry": { "man": [lat,lon], "rings": [["ESP",2492.7],["A",2926.0], ...],
                 "streets": {"E":"Eternal", ...}, "feet_per_degree_lat": ... },
   "events":   [ Event, ... ]
