@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 3965,
+  "count": 3968,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -21356,12 +21356,13 @@
    "address": "9:45 & E",
    "tags": [
     "music",
-    "party"
+    "party",
+    "lineup"
    ],
    "fine_tags": [
     19
    ],
-   "presenter": null,
+   "presenter": "Black Rock Philharmonic, Playa Choir",
    "description": "Our annual deep playa epic, supported by Bipolar Express and Playa Choir Our annual deep playa epic, supported by Bipolar Express and Playa Choir",
    "schedule": [
     {
@@ -108690,8 +108691,8 @@
     "music"
    ],
    "fine_tags": [],
-   "presenter": "PULSE, Mosko, OI",
-   "description": "Sunset DJ set right after the Black Rock Philharmonic classical concert at the Titanic in deep playa. Bipolar Express art car on site.",
+   "presenter": "PULSE, Mosko, OI, Meir Briskman",
+   "description": "Sunset DJ set right after the Black Rock Philharmonic classical concert at the Titanic in deep playa. Bipolar Express art car on site. Sunset DJ set after the Philharmonic concert at the Titanic. PULSE with Meir Briskman; Bipolar Express art car on site.",
    "schedule": [
     {
      "start": "09-03 19:00",
@@ -108779,6 +108780,69 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": "Saharaa Sahar art camp Honoring the",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Legendary Playground of the Gods",
+   "address": "4:30 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Equanimous",
+   "description": "Equanimous live set at Legendary Playground of the Gods.",
+   "schedule": [
+    {
+     "start": "09-01 20:30",
+     "end": "22:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp LEGENDARY Playground of the Gods LPG",
+   "grounded_score": null
+  },
+  {
+   "title": "Equanimous sunrise set",
+   "camp": "The Sound Garden",
+   "address": "2:00 & E",
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Equanimous",
+   "description": "Sunrise set the morning after the Man burns, 6 to 8am at The Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-06 06:00",
+     "end": "08:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp The Sound Garden thesoundgardenevents",
+   "grounded_score": null
+  },
+  {
+   "title": "PULSE Preview",
+   "camp": "The Gothic Folly",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "PULSE, Meir Briskman",
+   "description": "PULSE preview set right after the Black Rock Philharmonic opening concert at the Gothic Folly.",
+   "schedule": [
+    {
+     "start": "09-02 18:00",
+     "end": "19:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
    "grounded_score": null
   }
  ]
