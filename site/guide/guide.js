@@ -62,12 +62,48 @@
 
   var HASH_TO_ID = {};
   var ID_TO_HASH = {};
+  /* title|camp -> id, for migrating stars saved against an older data vintage
+     (slot times shift between data updates, changing the full id). */
+  var TC_TO_ID = {};
+  var tcCollisions = {};
   for (var hi = 0; hi < EV.length; hi++) {
     var eid = EV[hi].id;
     var h = hashId(eid);
     HASH_TO_ID[h] = eid;
     ID_TO_HASH[eid] = h;
+    var tcKey = EV[hi].t + '|' + EV[hi].c;
+    if (TC_TO_ID.hasOwnProperty(tcKey)) tcCollisions[tcKey] = true;
+    else TC_TO_ID[tcKey] = eid;
   }
+  /* Durable alias hashes: hashId(title|camp) also resolves, so share links
+     survive slot-time churn between data updates. Unique title|camp only. */
+  for (var tk in TC_TO_ID) {
+    if (tcCollisions[tk]) continue;
+    var ah = hashId(tk);
+    if (!HASH_TO_ID[ah]) HASH_TO_ID[ah] = TC_TO_ID[tk];
+  }
+
+  /* ---- Migrate stale star ids to the current data vintage ----
+     A star saved when an event's first slot was different no longer matches
+     any current id. Re-match by title|camp; drop only what truly vanished.
+     Without this, getShareableLink() used to hash the stale raw id into a
+     garbage hash no version of the guide could ever resolve. */
+  (function migrateStars(){
+    var changed = false;
+    var next = new Set();
+    starred.forEach(function(sid){
+      if (ID_TO_HASH[sid]) { next.add(sid); return; }
+      var parts = String(sid).split('|');
+      var tc = parts.slice(0, 2).join('|');
+      if (TC_TO_ID[tc] && !tcCollisions[tc]) { next.add(TC_TO_ID[tc]); changed = true; return; }
+      /* keep the stale id: a future data update may bring the event back */
+      next.add(sid);
+    });
+    if (changed) {
+      starred = next;
+      try { localStorage.setItem(STAR_PREF, JSON.stringify(Array.from(starred))); } catch(e){}
+    }
+  })();
 
   /* ---- RENDER-LAYER DEDUPLICATION ---- */
   var GROUPS = [];
@@ -580,7 +616,14 @@
     var arr = Array.from(starred);
     var hashes = [];
     for (var k = 0; k < arr.length; k++) {
-      var h = ID_TO_HASH[arr[k]] || hashId(arr[k]);
+      /* Prefer the durable title|camp hash (survives slot churn); fall back
+         to the full-id hash. Never hash a stale id the receiver can't
+         resolve: that produced dead links that merged zero events. */
+      var id = arr[k];
+      if (!ID_TO_HASH[id]) continue;
+      var parts = String(id).split('|');
+      var tc = parts.slice(0, 2).join('|');
+      var h = (!tcCollisions[tc] && TC_TO_ID[tc] === id) ? hashId(tc) : ID_TO_HASH[id];
       if (h && hashes.indexOf(h) === -1) hashes.push(h);
     }
     var loc = window.location || {};
@@ -610,6 +653,23 @@
           missingCount++;
         }
       }
+    }
+
+    /* Fresh device (no stars yet): merge automatically. On a new phone the
+       onboarding modal covers the banner, and people read "nothing came
+       over" instead of finding the Merge button. Additive, nothing to lose. */
+    if (starred.size === 0 && validIds.length > 0) {
+      for (var am = 0; am < validIds.length; am++) starred.add(validIds[am]);
+      saveStars();
+      updateStarCount();
+      toast(validIds.length + (validIds.length === 1 ? ' event' : ' events') + ' added to My Events.');
+      if (banner) banner.style.display = 'none';
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', loc.pathname + (loc.search || ''));
+      }
+      window.location.hash = '#myevents';
+      applyHashMode();
+      return;
     }
 
     if (banner) {

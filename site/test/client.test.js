@@ -178,7 +178,10 @@ function pendingOk(cond, name) {
 /* =====================================================================
  * 4. Stars: persist, survive a full page reload, share round-trip
  * ===================================================================== */
-const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
+/* star target needs a unique title|camp so the alias-hash tests are stable */
+const tcCounts = {};
+EV.forEach(e => { const k = e.t + '|' + e.c; tcCounts[k] = (tcCounts[k] || 0) + 1; });
+const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcCounts[e.t + '|' + e.c] === 1);
 (function () {
   BPG.stars.add(starTarget.id);
   BPG.saveStars();
@@ -199,26 +202,63 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0]);
 /* share fragment encodes, and decodes in a fresh session */
 (function () {
   const link = BPG.getShareableLink();
-  const h = BPG.hashId(starTarget.id);
-  ok(link.indexOf('#l=') !== -1 && link.indexOf(h) !== -1,
-    'share link carries #l= fragment with the 8-char hash');
-  const env3 = boot({ url: 'https://musecafe.vip/guide/#l=' + h });
-  const banner = env3.document.getElementById('shared-list-banner');
-  const title = env3.document.getElementById('shared-title');
-  ok(banner && banner.style.display !== 'none', 'shared banner shows on a hash URL');
+  const hFull = BPG.hashId(starTarget.id);
+  const hTC = BPG.hashId(starTarget.t + '|' + starTarget.c);
+  ok(link.indexOf('#l=') !== -1 && (link.indexOf(hFull) !== -1 || link.indexOf(hTC) !== -1),
+    'share link carries #l= fragment with an 8-char hash (full-id or title|camp alias)');
+
+  /* FRESH device (no stars yet): a share link auto-merges — no button hunt.
+   * This is the laptop -> new phone email-migration path; requiring a tap
+   * under the onboarding modal read as "nothing came over". */
+  const env3 = boot({ url: 'https://musecafe.vip/guide/#l=' + hFull });
+  ok(env3.BPG.stars.has(starTarget.id), 'fresh device: share link auto-merges the star, no tap needed');
+  ok(env3.document.body.classList.contains('myevents'), 'fresh device: auto-merge lands in My Events');
+  const banner3 = env3.document.getElementById('shared-list-banner');
+  ok(banner3 && banner3.style.display === 'none', 'fresh device: no banner after auto-merge');
+  const toast3 = env3.document.getElementById('toast');
+  ok(toast3 && /1 event added to My Events\./.test(toast3.textContent),
+    'auto-merge confirms "1 event added to My Events." (got ' + (toast3 && toast3.textContent) + ')');
+
+  /* the durable title|camp alias hash resolves too (survives slot churn) */
+  const envA = boot({ url: 'https://musecafe.vip/guide/#l=' + hTC });
+  ok(envA.BPG.stars.has(starTarget.id), 'title|camp alias hash resolves and merges the same event');
+
+  /* device WITH existing stars: banner asks before merging (never overwrite) */
+  const other = EV.find(e => e.id && e.id !== starTarget.id);
+  const env4 = boot({
+    url: 'https://musecafe.vip/guide/#l=' + hFull,
+    localStorage: { 'bpg.stars': JSON.stringify([other.id]) }
+  });
+  const banner = env4.document.getElementById('shared-list-banner');
+  const title = env4.document.getElementById('shared-title');
+  ok(banner && banner.style.display !== 'none', 'existing stars: shared banner shows on a hash URL');
   ok(title && /This link carries 1 starred event/.test(title.textContent),
     'shared banner speaks in migration terms with the count (got ' + (title && title.textContent) + ')');
   ok(title && /Merge it into yours\?/.test(title.textContent), 'shared banner asks to merge');
-  const note3 = env3.document.getElementById('shared-note');
-  ok(note3 && /comes across into your own My Events list/.test(note3.textContent),
-    'shared banner note explains the migration (got ' + (note3 && note3.textContent) + ')');
-  /* merging migrates the stars over and lands the receiver in My Events */
-  env3.document.getElementById('merge-stars-btn').click();
-  ok(env3.BPG.stars.has(starTarget.id), 'Merge migrates the shared star into local stars');
-  ok(env3.document.body.classList.contains('myevents'), 'after Merge the receiver lands in My Events');
-  const toast3 = env3.document.getElementById('toast');
-  ok(toast3 && /1 event added to My Events\./.test(toast3.textContent),
-    'merge confirms "1 event added to My Events." (got ' + (toast3 && toast3.textContent) + ')');
+  const note4 = env4.document.getElementById('shared-note');
+  ok(note4 && /comes across into your own My Events list/.test(note4.textContent),
+    'shared banner note explains the migration (got ' + (note4 && note4.textContent) + ')');
+  env4.document.getElementById('merge-stars-btn').click();
+  ok(env4.BPG.stars.has(starTarget.id) && env4.BPG.stars.has(other.id),
+    'Merge adds the shared star and keeps the existing one');
+  ok(env4.document.body.classList.contains('myevents'), 'after Merge the receiver lands in My Events');
+})();
+
+/* stale star ids (older data vintage) migrate by title|camp and never
+ * poison the share link with unresolvable hashes */
+(function () {
+  const staleId = starTarget.t + '|' + starTarget.c + '|13-31 25:99';
+  const envM = boot({ localStorage: { 'bpg.stars': JSON.stringify([staleId, 'Gone Event|camp_gone|09-01 12:00']) } });
+  ok(envM.BPG.stars.has(starTarget.id), 'stale star id re-matches current event by title|camp');
+  const storedM = JSON.parse(envM.window.localStorage.getItem('bpg.stars') || '[]');
+  ok(storedM.indexOf(starTarget.id) !== -1, 'migrated star id is written back to localStorage');
+  const linkM = envM.BPG.getShareableLink();
+  const badHash = envM.BPG.hashId('Gone Event|camp_gone|09-01 12:00');
+  ok(linkM.indexOf(badHash) === -1, 'share link never carries a hash of an unresolvable id');
+  const goodTC = envM.BPG.hashId(starTarget.t + '|' + starTarget.c);
+  const goodFull = envM.BPG.hashId(starTarget.id);
+  ok(linkM.indexOf(goodTC) !== -1 || linkM.indexOf(goodFull) !== -1,
+    'share link still carries the migrated star');
 })();
 
 /* 8-char id hash: zero collisions across the whole payload */
