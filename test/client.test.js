@@ -635,8 +635,8 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   for (const page of ['index.html', 'map.html', 'how-it-was-made.html']) {
     const html = fs.readFileSync(path.join(repoRoot, 'guide', page), 'utf8');
     const tabs = (html.match(/data-tab="([a-z]+)"/g) || []).map(s => s.replace(/.*"([a-z]+)"/, '$1'));
-    ok(tabs.join(',') === 'finder,myevents,map,made',
-      page + ' has the four tabs Find/My Events/Map/About in order (got ' + tabs.join(',') + ')');
+    ok(tabs.join(',') === 'finder,myevents,map,submit',
+      page + ' has the four tabs Find/My Events/Map/Add events in order (got ' + tabs.join(',') + ')');
     ok(/tab-star/.test(html) && /id="star-count"/.test(html),
       page + ' My Events tab carries the star icon and the count badge');
     ok(!/mylist-btn/.test(html), page + ' has no My-list filter toggle anywhere');
