@@ -6,6 +6,8 @@
   var RING = {}; ((D.ev && D.ev.rings) || []).forEach(function(r){ RING[r[0]] = r[1]; });
   var MAN = (D.ev && D.ev.man) || [0,0], FLAT = (D.ev && D.ev.flat) || 364000, FLON = (D.ev && D.ev.flon) || 275000;
   var $ = function(id){ return document.getElementById(id); };
+  /* accent-fold both sides of every text match, so "muse cafe" finds "MUSE Café" */
+  var FOLD_RE=/[\u0300-\u036f]/g;
   var TAGS = ['workshop','talk','party','music','food','drink','adult','wellness','art','ritual','game'];
   var active = new Set(), shown = 60, here = null, speed = 12;
 
@@ -264,14 +266,14 @@
     if (!raw) return null;
 
     var clean = raw.replace(/^(?:i['’]?m\s+at|we\s+are\s+at|located\s+at|currently\s+at|at)\s+/i, '').trim();
-    var cleanLower = clean.toLowerCase();
+    var cleanLower = clean.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var cleanNoThe = cleanLower.replace(/^the\s+/, '');
 
     /* 1. Landmark check */
     var landmarks = (MAP && MAP.landmarks) || [];
     for (var lmIdx = 0; lmIdx < landmarks.length; lmIdx++) {
       var lm = landmarks[lmIdx];
-      var lmNameLower = lm.n.toLowerCase();
+      var lmNameLower = lm.n.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
       var lmNameNoThe = lmNameLower.replace(/^the\s+/, '').replace(/\s*\(.*\)/, '');
       if (cleanLower === lmNameLower || cleanNoThe === lmNameNoThe || cleanLower === lmNameNoThe) {
         var cx = lm.c[0], cy = lm.c[1];
@@ -288,9 +290,9 @@
     for (var evIdx = 0; evIdx < EV.length; evIdx++) {
       var evItem = EV[evIdx];
       if (evItem.c && evItem.a) {
-        var campLower = evItem.c.toLowerCase();
+        var campLower = evItem.c.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
         var campNoThe = campLower.replace(/^the\s+/, '');
-        var akaMatch = evItem.k && (cleanLower === evItem.k.toLowerCase() || cleanNoThe === evItem.k.toLowerCase().replace(/^the\s+/, ''));
+        var akaMatch = evItem.k && (cleanLower === evItem.k.toLowerCase().normalize('NFD').replace(FOLD_RE,'') || cleanNoThe === evItem.k.toLowerCase().normalize('NFD').replace(FOLD_RE,'').replace(/^the\s+/, ''));
         if (cleanLower === campLower || cleanNoThe === campNoThe || akaMatch) {
           var campRes = parseWhere(evItem.a);
           if (campRes && !campRes.error) {
@@ -326,7 +328,7 @@
       var keys = Object.keys(streets);
       for (var i = 0; i < keys.length; i++) {
         var k = keys[i];
-        var name = streets[k].toLowerCase();
+        var name = streets[k].toLowerCase().normalize('NFD').replace(FOLD_RE,'');
         if (tok === name) return k;
         if (tok.length >= 2 && name.indexOf(tok) === 0 && tok !== 'es') return k;
       }
@@ -666,7 +668,7 @@
     var validIds = [];
     var missingCount = 0;
     for (var i = 0; i < rawHashes.length; i++) {
-      var h = rawHashes[i].trim().toLowerCase();
+      var h = rawHashes[i].trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
       if (h) {
         if (HASH_TO_ID[h]) {
           if (validIds.indexOf(HASH_TO_ID[h]) === -1) validIds.push(HASH_TO_ID[h]);
@@ -1496,7 +1498,7 @@
   function render(){
     if (!$('list')) return;
     var qEl = $('ask-q') || $('q');
-    var q = (qEl ? qEl.value : '').trim().toLowerCase();
+    var q = (qEl ? qEl.value : '').trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var day = $('day') ? $('day').value : '', sort = $('sort') ? $('sort').value : 'near';
     var confirmedOnly = $('confirmed-only') ? $('confirmed-only').checked : false;
     var locVal = $('loc') ? $('loc').value : '';
@@ -1510,7 +1512,7 @@
       if (mylistOnly && !isStarred) continue;
       if (confirmedOnly && provenance(e).tier !== 'confirmed') continue;
       if (active.size && !e.g.some(function(t){ return active.has(t); })) continue;
-      if (q && (e.t + ' ' + e.c + ' ' + (e.k ? e.k + ' ' : '') + e.p + ' ' + e.d).toLowerCase().indexOf(q) === -1) continue;
+      if (q && (e.t + ' ' + e.c + ' ' + (e.k ? e.k + ' ' : '') + e.p + ' ' + e.d).toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(q) === -1) continue;
       var slot = null;
       if (day){
         for (var j=0; j<e.s.length; j++){
@@ -1609,11 +1611,11 @@
   function fvIndicesFor(term) {
     if (FV_TERM_CACHE[term]) return FV_TERM_CACHE[term];
     var out = [];
-    var tLow = term.toLowerCase();
+    var tLow = term.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var tStem = tLow.charAt(tLow.length - 1) === 's' ? tLow.slice(0, -1) : tLow;
     var syn = FV_SYN[tLow] || FV_SYN[tStem] || null;
     for (var i = 0; i < FV.length; i++) {
-      var entry = (FV[i] || '').toLowerCase();
+      var entry = (FV[i] || '').toLowerCase().normalize('NFD').replace(FOLD_RE,'');
       if (entry === tLow || entry === tStem || entry === tLow + 's' || entry === tLow + 'es') { out.push(i); continue; }
       if (syn && syn.indexOf(entry) !== -1) { out.push(i); continue; }
       var segs = entry.split('-');
@@ -1633,7 +1635,7 @@
   var STEM_RE_CACHE = {};
   function stemRe(term) {
     if (STEM_RE_CACHE[term]) return STEM_RE_CACHE[term];
-    var tLow = term.toLowerCase();
+    var tLow = term.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var stems = [tLow];
     if (tLow === 'film') stems.push('movie', 'movies');
     if (tLow === 'movie') stems.push('film', 'films');
@@ -1703,7 +1705,7 @@
 
   function getCategoryNoun(word, count) {
     if (!word) return count === 1 ? 'event' : 'events';
-    var w = word.toLowerCase();
+    var w = word.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     if (w === 'sauna') return count === 1 ? 'sauna' : 'saunas';
     if (w === 'massage') return count === 1 ? 'massage' : 'massages';
     if (w === 'party') return count === 1 ? 'party' : 'parties';
@@ -1730,7 +1732,7 @@
     if (!raw) {
       return { reply: "Try asking something like 'whats on near me now' or 'coffee tomorrow morning'.", results: [] };
     }
-    var qLower = applyAskSynonyms(raw.toLowerCase());
+    var qLower = applyAskSynonyms(raw.toLowerCase().normalize('NFD').replace(FOLD_RE,''));
 
     var isConvLoc = /^(?:i['’]?m\s+at|we\s+are\s+at|located\s+at|currently\s+at|at)\s+/i.test(raw);
     var pLocDirect = parseWhere(raw);
@@ -1775,13 +1777,13 @@
     var intentMatch = /^(?:where\s+is|where's|how\s+(?:do\s+i|to)\s+get\s+to)\s+(.+)/i.exec(raw);
     if (intentMatch) {
       var target = intentMatch[1].replace(/\?$/, '').trim();
-      var targetLower = target.toLowerCase();
+      var targetLower = target.toLowerCase().normalize('NFD').replace(FOLD_RE,'');
       var foundAddr = null, foundName = target;
 
       if (MAP.landmarks) {
         var lkeys = Object.keys(MAP.landmarks);
         for (var l = 0; l < lkeys.length; l++) {
-          if (lkeys[l].toLowerCase().indexOf(targetLower) !== -1) {
+          if (lkeys[l].toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(targetLower) !== -1) {
             foundName = lkeys[l];
             foundAddr = MAP.landmarks[lkeys[l]];
             break;
@@ -1791,8 +1793,8 @@
 
       if (!foundAddr) {
         for (var c = 0; c < GROUPS.length; c++) {
-          if ((GROUPS[c].c && GROUPS[c].c.toLowerCase().indexOf(targetLower) !== -1) ||
-              (GROUPS[c].k && GROUPS[c].k.toLowerCase().indexOf(targetLower) !== -1)) {
+          if ((GROUPS[c].c && GROUPS[c].c.toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(targetLower) !== -1) ||
+              (GROUPS[c].k && GROUPS[c].k.toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(targetLower) !== -1)) {
             foundName = GROUPS[c].c;
             foundAddr = GROUPS[c].a;
             break;
@@ -1814,9 +1816,9 @@
         replyText += '.';
 
         var matchingEvs = GROUPS.filter(function(e){
-          return (e.c && e.c.toLowerCase().indexOf(targetLower) !== -1) ||
-                 (e.k && e.k.toLowerCase().indexOf(targetLower) !== -1) ||
-                 (e.t && e.t.toLowerCase().indexOf(targetLower) !== -1);
+          return (e.c && e.c.toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(targetLower) !== -1) ||
+                 (e.k && e.k.toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(targetLower) !== -1) ||
+                 (e.t && e.t.toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(targetLower) !== -1);
         }).map(function(e){
           var slot = e.s[0] || ['?','?'];
           return { id:e.id, allIds:e.allIds, t:e.t, c:e.c, a:e.a, p:e.p, d:e.d, src:e.src, g:e.g, s:e.s, w: slot[0] + '-' + slot[1], key: slot[0], d: minsTo(e.a) };
@@ -2032,7 +2034,7 @@
         var evItem = GROUPS[eidx];
 
         if (catType === 'literal') {
-          var evText = (evItem.t + ' ' + evItem.c + ' ' + (evItem.k ? evItem.k + ' ' : '') + evItem.p + ' ' + evItem.d).toLowerCase();
+          var evText = (evItem.t + ' ' + evItem.c + ' ' + (evItem.k ? evItem.k + ' ' : '') + evItem.p + ' ' + evItem.d).toLowerCase().normalize('NFD').replace(FOLD_RE,'');
           /* word-boundary stem match so "set" stops hitting "sunset" */
           if (!stemRe(catVal).test(evText)) continue;
         } else if (catType === 'tag') {
@@ -2042,7 +2044,7 @@
         }
 
         if (searchTokens.length > 0) {
-          var fullText = (evItem.t + ' ' + evItem.c + ' ' + (evItem.k ? evItem.k + ' ' : '') + evItem.p + ' ' + evItem.d).toLowerCase();
+          var fullText = (evItem.t + ' ' + evItem.c + ' ' + (evItem.k ? evItem.k + ' ' : '') + evItem.p + ' ' + evItem.d).toLowerCase().normalize('NFD').replace(FOLD_RE,'');
           var matchesText = searchTokens.every(function(st){
             /* word-boundary stem match: plurals both ways, parties<->party */
             if (stemRe(st).test(fullText)) return true;
@@ -2232,7 +2234,7 @@
     }
 
     var replyParts = [];
-    var sameWordAndTag = (matchedCatWord && tagUsed && matchedCatWord.toLowerCase() === tagUsed.toLowerCase());
+    var sameWordAndTag = (matchedCatWord && tagUsed && matchedCatWord.toLowerCase().normalize('NFD').replace(FOLD_RE,'') === tagUsed.toLowerCase().normalize('NFD').replace(FOLD_RE,''));
 
     if (catMode === 'widened' && !sameWordAndTag) {
       if (timeRelaxed || distRelaxed) {
@@ -2578,7 +2580,7 @@
 
   function normStr(s) {
     if (!s) return '';
-    var str = String(s).toLowerCase();
+    var str = String(s).toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     if (str.normalize) {
       try {
         str = str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');

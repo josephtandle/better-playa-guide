@@ -1179,6 +1179,16 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   ok(listText.indexOf('pizza') !== -1 || listText.indexOf('Pizza') !== -1,
     'typing into ask-q live-filters the event list');
 
+  /* accent folding: "muse cafe" must find camp "MUSE Café" (Joe hit this live) */
+  askInput.value = 'muse cafe';
+  askInput.dispatchEvent(new e.window.Event('input', { bubbles: true }));
+  askInput.dispatchEvent(new e.window.Event('change', { bubbles: true }));
+  const museText = d.getElementById('list').textContent;
+  ok(/MUSE Caf/i.test(museText),
+    'accent-insensitive search: "muse cafe" finds MUSE Café events');
+  askInput.value = '';
+  askInput.dispatchEvent(new e.window.Event('change', { bubbles: true }));
+
   /* Enter asks: submitting ask-form triggers runAsk */
   let askSubmitted = false;
   const form = d.getElementById('ask-form');

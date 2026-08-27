@@ -26,7 +26,7 @@
 
 <h2>How it works</h2>
 <div class="panel">
-  <p style="margin:0 0 .5rem;font-size:.92rem">This guide is crowdsourced. Paste <strong>everything at once</strong> in the box below: type out a flyer, paste a lineup, drop your whole camp schedule. One block of text, as many events as you like. It gets read and checked automatically and lands in the guide for everyone, usually <strong>within the hour</strong>. Needs signal to send, so do it before you roll through the gate or when you catch wifi.</p>
+  <p style="margin:0 0 .5rem;font-size:.92rem">This guide is crowdsourced. Paste <strong>everything at once</strong> in the box below: type out a flyer, paste a lineup, drop your whole camp schedule. One block of text, as many events as you like. Or snap a photo of the flyer itself and attach it. It gets read and checked automatically and lands in the guide for everyone, usually <strong>within the hour</strong>. Needs signal to send, so do it before you roll through the gate or when you catch wifi.</p>
 </div>
 
 <h2>What to include</h2>
@@ -54,6 +54,13 @@ Camp Foo (@campfoo on IG), 7:30 & C
 
 Baz art car: sunset set Thursday 6pm near the Temple
 ...or type out everything on a flyer, exactly as written."></textarea></div>
+    <div class="row" style="margin-top:.5rem;align-items:center;gap:.5rem;flex-wrap:wrap">
+      <label class="btn" for="sub-photo" style="cursor:pointer">Attach a flyer photo</label>
+      <input type="file" id="sub-photo" accept="image/*" style="display:none">
+      <span id="sub-photo-name" style="font-size:.82rem;color:var(--smoke)"></span>
+      <button type="button" id="sub-photo-clear" class="btn" style="display:none;min-height:34px;padding:.2rem .6rem">Remove</button>
+    </div>
+    <img id="sub-photo-preview" alt="" style="display:none;max-width:160px;max-height:160px;border-radius:8px;margin:.4rem 0 0;border:1px solid var(--brass)">
     <div class="btnrow"><button type="submit" id="sub-send" class="btn solid">Send it all in</button></div>
     <p id="sub-note-msg" class="move-device-note"></p>
   </form>
@@ -67,20 +74,57 @@ Baz art car: sunset set Thursday 6pm near the Temple
 (function(){
   var form = document.getElementById('submit-event-form');
   var msg = document.getElementById('sub-note-msg');
+  var photoData = null;
+  var photoInput = document.getElementById('sub-photo');
+  var photoName = document.getElementById('sub-photo-name');
+  var photoClear = document.getElementById('sub-photo-clear');
+  var photoPrev = document.getElementById('sub-photo-preview');
+  function clearPhoto(){
+    photoData = null; photoInput.value = '';
+    photoName.textContent = ''; photoClear.style.display = 'none';
+    photoPrev.style.display = 'none'; photoPrev.src = '';
+  }
+  photoClear.addEventListener('click', clearPhoto);
+  photoInput.addEventListener('change', function(){
+    var f = photoInput.files && photoInput.files[0];
+    if (!f) { clearPhoto(); return; }
+    var img = new Image();
+    var url = URL.createObjectURL(f);
+    img.onload = function(){
+      try {
+        var MAX = 1400;
+        var s = Math.min(1, MAX / Math.max(img.width, img.height));
+        var c = document.createElement('canvas');
+        c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        photoData = c.toDataURL('image/jpeg', 0.8);
+        if (photoData.length > 2600000) photoData = c.toDataURL('image/jpeg', 0.6);
+        if (photoData.length > 2600000) { clearPhoto(); msg.textContent = 'That photo is too large even after shrinking. Try a screenshot of it.'; return; }
+        photoName.textContent = f.name || 'photo attached';
+        photoClear.style.display = '';
+        photoPrev.src = photoData; photoPrev.style.display = '';
+        msg.textContent = '';
+      } catch(e){ clearPhoto(); msg.textContent = 'Could not read that image. Try a different one.'; }
+      URL.revokeObjectURL(url);
+    };
+    img.onerror = function(){ clearPhoto(); msg.textContent = 'Could not read that image. Try a different one.'; URL.revokeObjectURL(url); };
+    img.src = url;
+  });
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
     var text = (document.getElementById('sub-text').value || '').trim();
-    if (!text) { msg.textContent = 'Paste something first.'; return; }
+    if (!text && !photoData) { msg.textContent = 'Paste some text or attach a flyer photo first.'; return; }
     var btn = document.getElementById('sub-send');
     btn.disabled = true; btn.textContent = 'Sending…';
     var cid = null;
     try { cid = localStorage.getItem('bpg.cid'); } catch(e){}
-    fetch('/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ text: text, id: cid }) })
+    fetch('/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ text: text, image: photoData, id: cid }) })
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok: r.ok, j: j }; }); })
       .then(function(res){
         if (res.ok) {
           msg.textContent = 'Got it. It gets checked and added automatically, usually within the hour. Thank you for making the guide better.';
           document.getElementById('sub-text').value = '';
+          clearPhoto();
         } else {
           msg.textContent = (res.j && res.j.error) || 'Could not send. Try again when you have signal.';
         }

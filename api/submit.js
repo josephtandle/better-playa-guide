@@ -40,7 +40,18 @@ module.exports = async function handler(req, res) {
   }
 
   const rawBlock = clean(body.text, 6000);
+  /* optional flyer photo: small data-URL jpeg/png/webp, downscaled client-side */
+  let image = null;
+  if (typeof body.image === 'string') {
+    const m = body.image.match(/^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+/=]+)$/);
+    if (!m || m[2].length > 3500000) {
+      res.statusCode = 400;
+      return res.end(JSON.stringify({ error: 'bad_image' }));
+    }
+    image = body.image;
+  }
   const row = {
+    image: image,
     raw: rawBlock,
     title: clean(body.title, 120) || (rawBlock ? rawBlock.slice(0, 120) : null),
     camp: clean(body.camp, 80),
@@ -53,10 +64,11 @@ module.exports = async function handler(req, res) {
     contact: clean(body.contact, 120),
     client_id: clean(body.id, 32)
   };
-  if (!row.title && !row.raw) {
+  if (!row.title && !row.raw && !row.image) {
     res.statusCode = 400;
     return res.end(JSON.stringify({ error: 'text_required' }));
   }
+  if (!row.title && row.image) row.title = '(flyer photo)';
 
   const ip = clientIp(req);
   const ipKey = 'gs:ip:' + sha(ip);
