@@ -8,6 +8,75 @@
   var $ = function(id){ return document.getElementById(id); };
   /* accent-fold both sides of every text match, so "muse cafe" finds "MUSE Café" */
   var FOLD_RE=/[\u0300-\u036f]/g;
+  function fold(s){ return String(s||'').toLowerCase().normalize('NFD').replace(FOLD_RE,''); }
+  /* ---- smart search: tokens, filler words dropped, squashed-space and
+     typo-tolerant matching ("rhymewave camp events" finds RhythmWave) ---- */
+  var STOPW = new Set(['camp','camps','event','events','the','a','an','at','is','are','was','when','what','where','who','how','in','on','of','for','to','and','or','me','my','their','there','show','find','all','any','list','playing','play','happening','schedule','stuff','things','going']);
+  var VOCAB = null, CORPUS = '';
+  function buildVocab(){
+    if (VOCAB) return;
+    VOCAB = [];
+    var seen = new Set();
+    for (var i = 0; i < EV.length; i++){
+      var words = fold((EV[i].t||'') + ' ' + (EV[i].c||'') + ' ' + (EV[i].k||'') + ' ' + (EV[i].p||'')).split(/[^a-z0-9]+/);
+      /* squashed camp and aka names too, so a one-word guess like "rhymewave"
+         can land on a camp however it spaces its name */
+      words.push(fold(EV[i].c||'').replace(/[^a-z0-9]+/g,''), fold(EV[i].k||'').replace(/[^a-z0-9]+/g,''));
+      for (var j = 0; j < words.length; j++){
+        var w = words[j];
+        if (w.length >= 3 && !seen.has(w)){ seen.add(w); VOCAB.push(w); }
+      }
+    }
+    CORPUS = ' ' + VOCAB.join(' ') + ' ';
+  }
+  function editDist(a, b, cap){
+    if (Math.abs(a.length - b.length) > cap) return cap + 1;
+    var prev = [], cur = [], i, j;
+    for (j = 0; j <= b.length; j++) prev[j] = j;
+    for (i = 1; i <= a.length; i++){
+      cur[0] = i;
+      var rowMin = i;
+      for (j = 1; j <= b.length; j++){
+        cur[j] = Math.min(prev[j] + 1, cur[j-1] + 1, prev[j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+        if (cur[j] < rowMin) rowMin = cur[j];
+      }
+      if (rowMin > cap) return cap + 1;
+      var tmp = prev; prev = cur; cur = tmp;
+    }
+    return prev[b.length];
+  }
+  function fuzzyRemap(tok){
+    /* token appears nowhere in the data: swap it for the closest real word */
+    buildVocab();
+    if (CORPUS.indexOf(tok) !== -1) return tok;
+    var cap = tok.length >= 9 ? 3 : (tok.length >= 7 ? 2 : (tok.length >= 4 ? 1 : 0));
+    if (!cap) return tok;
+    var best = null, bestD = cap + 1;
+    for (var i = 0; i < VOCAB.length; i++){
+      var d = editDist(tok, VOCAB[i], cap);
+      if (d < bestD || (d === bestD && best && VOCAB[i][0] === tok[0] && best[0] !== tok[0])){ bestD = d; best = VOCAB[i]; }
+      if (bestD === 0) break;
+    }
+    return (best && bestD <= cap) ? best : tok;
+  }
+  function queryTokens(q){
+    var words = q.split(/[^a-z0-9]+/).filter(function(w){ return w && !STOPW.has(w); });
+    if (!words.length && q.trim()) words = q.split(/[^a-z0-9]+/).filter(Boolean); /* all-filler query: keep as typed */
+    return words.map(fuzzyRemap);
+  }
+  var HAYS = [];
+  function eventHay(e, i){
+    if (HAYS[i]) return HAYS[i];
+    var hay = fold(e.t + ' ' + e.c + ' ' + (e.k ? e.k + ' ' : '') + e.p + ' ' + e.d);
+    HAYS[i] = [hay, hay.replace(/[^a-z0-9]+/g, '')];
+    return HAYS[i];
+  }
+  function matchTokens(tokens, hayPair){
+    for (var i = 0; i < tokens.length; i++){
+      if (hayPair[0].indexOf(tokens[i]) === -1 && hayPair[1].indexOf(tokens[i]) === -1) return false;
+    }
+    return true;
+  }
   var TAGS = ['workshop','talk','party','music','food','drink','adult','wellness','art','ritual','game'];
   var active = new Set(), shown = 60, here = null, speed = 12;
 
@@ -1499,6 +1568,8 @@
     if (!$('list')) return;
     var qEl = $('ask-q') || $('q');
     var q = (qEl ? qEl.value : '').trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
+    var qTokens = q ? queryTokens(q) : null;
+    if (qTokens && !qTokens.length) qTokens = null;
     var day = $('day') ? $('day').value : '', sort = $('sort') ? $('sort').value : 'near';
     var confirmedOnly = $('confirmed-only') ? $('confirmed-only').checked : false;
     var locVal = $('loc') ? $('loc').value : '';
@@ -1512,7 +1583,7 @@
       if (mylistOnly && !isStarred) continue;
       if (confirmedOnly && provenance(e).tier !== 'confirmed') continue;
       if (active.size && !e.g.some(function(t){ return active.has(t); })) continue;
-      if (q && (e.t + ' ' + e.c + ' ' + (e.k ? e.k + ' ' : '') + e.p + ' ' + e.d).toLowerCase().normalize('NFD').replace(FOLD_RE,'').indexOf(q) === -1) continue;
+      if (qTokens && !matchTokens(qTokens, eventHay(e, i))) continue;
       var slot = null;
       if (day){
         for (var j=0; j<e.s.length; j++){
