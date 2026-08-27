@@ -3959,9 +3959,11 @@
        At most 3 reports per device per day; sends nothing personal. */
     (function errorBeacon(){
       var sent = 0;
+      var NOISE = /__firefox__|__gCrWeb|safari-extension|chrome-extension|moz-extension|webkit-masked-url|ResizeObserver loop|window\.ethereum|solana/i;
       function report(msg, src, line){
         try {
           if (sent >= 3 || typeof fetch !== 'function') return;
+          if (NOISE.test(String(msg)) || NOISE.test(String(src || ''))) return; /* browser/extension-injected, not our code */
           if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
           sent++;
           fetch('/api/error', {

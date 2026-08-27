@@ -40,6 +40,10 @@ code{overflow-wrap:anywhere;word-break:break-word}
 .top{padding:0;background:transparent}
 .top .wrap{display:flex;flex-direction:column;gap:0}
 .top .top-row,.top .kicker,.top .gift,.top .mvp{display:none}
+/* tiny top-right About link, the masthead identity lives behind it */
+.top-about{margin:.5rem 0 -.4rem;text-align:right;font:600 .68rem/1 Montserrat,sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.top-about a{color:var(--smoke);text-decoration:none;border:1px solid rgba(216,165,75,.5);border-radius:999px;padding:.32rem .6rem;display:inline-block}
+.top-about a:active{background:var(--brass);color:var(--rouge-deep)}
 /* "?" lives in the ask region now (light card background), always >= 44px */
 .masthead-help-btn{background:rgba(216,165,75,.15);border:1px solid var(--brass);color:var(--rouge);
   min-width:44px;min-height:44px;width:44px;height:44px;border-radius:50%;font:700 1.05rem Montserrat,sans-serif;
