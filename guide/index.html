@@ -1,0 +1,427 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Better Playa Guide: Gift from Muse Cafe</title>
+<meta name="description" content="Every Burning Man 2026 event, searchable by where you're standing. Works with no signal. A playa gift from Joe Che at Muse Cafe.">
+<meta property="og:title" content="Better Playa Guide">
+<meta property="og:description" content="3,962 Burning Man 2026 events. Type where you are, see what's near. Works offline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guide.musecafe.vip">
+<meta name="theme-color" content="#fffaf2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/guide/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="top-row">
+    <h1>Playa Guide</h1>
+  </div>
+  <p class="kicker">Black Rock City · 30 Aug – 7 Sep 2026</p>
+  <p class="gift">A playa gift from Joe Che at Muse Cafe · 8:15 &amp; E</p>
+  <p class="value-stat" id="value-stat"></p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find</a>
+    <a href="#myevents" data-tab="myevents"><span class="tab-star" aria-hidden="true">★</span> My Events<span id="star-count" class="tab-badge" aria-label="starred events"></span></a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/how-it-was-made" data-tab="made">About</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+<section class="ask-section hero-ask">
+  <form id="ask-form" autocomplete="off" onsubmit="return false;">
+    <div class="row ask-row">
+      <input id="ask-q" type="search" placeholder="Ask or search events, camps, people" aria-label="Ask or search the guide" autocomplete="off">
+      <button type="submit" id="ask-btn" class="btn solid">Ask</button>
+      <button type="button" id="show-intro" class="masthead-help-btn" aria-label="How it works" title="How it works">?</button>
+      <div class="ask-hint">Try: when is pizza being served? Or when is Shalman's DJ sets?</div>
+    </div>
+  </form>
+  <div id="ask-reply" class="panel ask-reply" style="display:none;margin-top:.75rem"></div>
+</section>
+
+<section class="loc-section">
+  <div class="row loc-bar">
+    <button type="button" id="loc-open-btn" class="btn loc-btn">Set your location</button>
+    <select id="mode" aria-label="Travel mode">
+      <option value="3">walking</option>
+      <option value="8">bike</option>
+      <option value="12" selected>ebike</option>
+    </select>
+  </div>
+</section>
+
+<section class="controls">
+  <div class="row">
+    <select id="day" aria-label="Filter by day">
+      <option value="">any day</option>
+      <option value="08-30">Sun 30 Aug</option><option value="08-31">Mon 31 Aug</option>
+      <option value="09-01">Tue 1 Sep</option><option value="09-02">Wed 2 Sep</option>
+      <option value="09-03">Thu 3 Sep</option><option value="09-04">Fri 4 Sep</option>
+      <option value="09-05">Sat 5 Sep</option><option value="09-06">Sun 6 Sep</option>
+    </select>
+    <button type="button" id="filter-btn" class="btn filter-btn">Filters</button>
+    <select id="sort" aria-label="Sort order"><option value="near">nearest</option><option value="time">by time</option></select>
+  </div>
+</section>
+
+<section class="controls-extra">
+  <div class="row filter-subrow" style="margin-top:.4rem;align-items:center;justify-content:flex-end">
+    <details class="prov-legend-details">
+      <summary class="prov-legend-summary">Badge legend</summary>
+      <div class="prov-legend-content">
+        <div><span class="tagline src prov-badge tier-confirmed"><span aria-hidden="true">●</span> Confirmed</span> Published by the source that runs the event.</div>
+        <div><span class="tagline src prov-badge tier-reported"><span aria-hidden="true">○</span> Reported</span> Someone saw it and passed it on.</div>
+        <div><span class="tagline src prov-badge tier-unverified"><span aria-hidden="true">◌</span> Unverified</span> No source recorded or running order with no clock time.</div>
+        <p class="prov-legend-sources"><strong>Where an event comes from:</strong>
+          <strong>WWW Guide</strong> is the official Who What Where guide from Burning Man.
+          <strong>Camp Official</strong> is the camp's own announcement channel, and <strong>Camp Website</strong> / <strong>Camp IG</strong> are the camp's own site and Instagram.
+          <strong>RSL</strong> is Rock Star Librarian, the long-running DJ set list.
+          <strong>Flyer</strong> / <strong>IG Flyer</strong> are set-time flyers, transcribed or read from the camp's own posts.
+          <strong>Telegram</strong> and <strong>Community Cal</strong> are community-shared.
+          <strong>Yours</strong> is an event you added yourself, private to this phone.</p>
+      </div>
+    </details>
+  </div>
+  <div class="count" id="count"></div>
+</section>
+
+
+
+
+<div id="shared-list-banner" class="panel shared-banner" style="display:none;margin-top:1.5rem;border-color:var(--brass);background:#fff8ec">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem">
+    <h3 id="shared-title" style="color:var(--rouge);margin:0">A list shared with you</h3>
+  </div>
+  <p id="shared-note" style="margin-top:.4rem;font-weight:500;color:var(--ink)"></p>
+  <div class="btnrow" style="margin-top:.6rem">
+    <button id="merge-stars-btn" class="btn solid">Merge into my stars</button>
+    <button id="dismiss-shared-btn" class="btn">View full guide</button>
+  </div>
+</div>
+
+
+<section id="results" aria-label="Results">
+  <p id="greet" class="greet" style="display:none"></p>
+  <div id="itin-panel" class="itin-panel" style="display:none">
+    <div class="myevents-action-row" id="myevents-action-row" role="tablist">
+      <button type="button" class="myevents-action-btn" id="myevents-btn-cal" aria-expanded="false" aria-controls="myevents-panel-cal">
+        <span class="myevents-action-icon" aria-hidden="true">📅</span>
+        <span class="myevents-action-label">Add to calendar</span>
+      </button>
+      <button type="button" class="myevents-action-btn" id="myevents-btn-pdf" aria-expanded="false" aria-controls="myevents-panel-pdf">
+        <span class="myevents-action-icon" aria-hidden="true">🖨</span>
+        <span class="myevents-action-label">Printable PDF</span>
+      </button>
+      <button type="button" class="myevents-action-btn" id="myevents-btn-move" aria-expanded="false" aria-controls="myevents-panel-move">
+        <span class="myevents-action-icon" aria-hidden="true">📱</span>
+        <span class="myevents-action-label">Move to another device</span>
+      </button>
+      <button type="button" class="myevents-action-btn" id="myevents-btn-own" aria-expanded="false" aria-controls="myevents-panel-own">
+        <span class="myevents-action-icon" aria-hidden="true">✎</span>
+        <span class="myevents-action-label">Add your own event</span>
+      </button>
+      <button type="button" class="myevents-action-btn" id="myevents-btn-install" aria-expanded="false" aria-controls="myevents-panel-install">
+        <span class="myevents-action-icon" aria-hidden="true">⌂</span>
+        <span class="myevents-action-label">Add to Home Screen</span>
+      </button>
+    </div>
+
+    <div class="myevents-panels">
+      <div class="myevents-panel" id="myevents-panel-cal" style="display:none">
+        <p class="myevents-panel-desc">One tap adds a "My Playa Guide" calendar with all your starred events and 30-minute reminders.</p>
+        <p class="myevents-panel-empty-hint" id="myevents-cal-empty-hint" style="display:none">Your list is empty right now. Star events in the guide first, then add them to your calendar.</p>
+        <div class="btnrow">
+          <button type="button" id="gcal-btn" class="btn solid">Google Calendar</button>
+          <button type="button" id="iphone-cal-btn" class="btn solid">iPhone Calendar</button>
+        </div>
+        <p class="myevents-panel-desc" style="margin-top:.6rem">Something else? <button type="button" id="ics-btn" class="btn-inline">Download the .ics file</button> and open it in any calendar app.</p>
+        <p class="itin-cal-note" id="itin-cal-note" style="display:none"></p>
+      </div>
+
+      <div class="myevents-panel" id="myevents-panel-pdf" style="display:none">
+        <p class="myevents-panel-desc">Your starred events as a clean printable PDF, day by day: for the paper crowd.</p>
+        <p class="myevents-panel-empty-hint" id="myevents-pdf-empty-hint" style="display:none">Your list is empty right now. Star events in the guide first.</p>
+        <div class="btnrow">
+          <button type="button" id="pdf-open-btn" class="btn solid">Open the PDF</button>
+        </div>
+        <form id="pdf-email-form" autocomplete="off" style="margin-top:.6rem">
+          <p class="move-device-why">Or email it to yourself to print later:</p>
+          <div class="row">
+            <input id="pdf-email-input" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+            <button type="submit" id="pdf-email-send" class="btn solid">Email me the PDF</button>
+          </div>
+          <p id="pdf-email-note" class="move-device-note"></p>
+        </form>
+      </div>
+
+      <div class="myevents-panel" id="myevents-panel-move" style="display:none">
+        <p class="myevents-panel-desc">Moving to another phone or computer? Choose one of these options:</p>
+        <ol class="move-device-steps">
+          <li><strong>Option 1 (Share link):</strong> Tap <button type="button" id="myevents-share-btn" class="btn-inline">Share guide link</button> or <button type="button" id="myevents-copy-btn" class="btn-inline">Copy link</button> and send it to your other device. Open it there and tap <strong>Merge</strong>.</li>
+          <li><strong>Option 2 (Email):</strong> Type your email below to send yourself the link:</li>
+        </ol>
+        <form id="move-device-form" autocomplete="off">
+          <p class="move-device-why">Type your email and I will send you a link that carries your whole list. Open it on the other phone and tap Merge. Your email is kept so I can send it.</p>
+          <div class="row">
+            <input id="move-device-email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+            <button type="submit" id="move-device-send" class="btn solid">Email my list</button>
+          </div>
+          <p id="move-device-note" class="move-device-note"></p>
+        </form>
+        <div class="save-story-note" id="save-story">
+          <p class="save-story-title">How saving works</p>
+          <p>Saved on this phone automatically with no account, and works with no signal. Move to another device? Tap Share or Email above. Want it forever? Add to calendar. Clearing browser data erases the list, so send yourself the Share link as a backup.</p>
+        </div>
+      </div>
+
+      <div class="myevents-panel" id="myevents-panel-own" style="display:none">
+        <p class="myevents-panel-desc">A camp shift, a private wedding, a sunrise date. It lands in your list next to everything else, marked Yours. Private: it lives only on this phone and never leaves it.</p>
+        <form id="own-event-form" autocomplete="off">
+          <div class="row"><input id="own-title" type="text" maxlength="80" placeholder="What is it? e.g. Kitchen shift"></div>
+          <div class="row">
+            <select id="own-day" aria-label="Day">
+              <option value="">Pick a day</option>
+              <option value="08-30">Sunday Opening Day 30 Aug</option>
+              <option value="08-31">Monday 31 Aug</option>
+              <option value="09-01">Tuesday 1 Sep</option>
+              <option value="09-02">Wednesday 2 Sep</option>
+              <option value="09-03">Thursday 3 Sep</option>
+              <option value="09-04">Friday 4 Sep</option>
+              <option value="09-05">Saturday 5 Sep</option>
+              <option value="09-06">Sunday Temple Burn 6 Sep</option>
+              <option value="09-07">Monday 7 Sep</option>
+            </select>
+            <input id="own-start" type="time" aria-label="Start time">
+            <input id="own-end" type="time" aria-label="End time (optional)">
+          </div>
+          <div class="row"><input id="own-addr" type="text" maxlength="40" placeholder="Where? e.g. 8:15 &amp; E (optional)"></div>
+          <div class="row"><input id="own-note" type="text" maxlength="140" placeholder="Note to self (optional)"></div>
+          <div class="btnrow"><button type="submit" id="own-save" class="btn solid">Add to My Events</button></div>
+          <p id="own-note-msg" class="move-device-note"></p>
+        </form>
+      </div>
+
+      <div class="myevents-panel" id="myevents-panel-install" style="display:none">
+        <div id="install-block-itin" class="install-block" style="display:none">
+          <button type="button" id="install-btn-itin" class="btn install-btn" style="display:none">Add to Home Screen</button>
+          <p class="install-hint" id="install-hint-itin" style="display:none"></p>
+        </div>
+        <p id="install-status-installed" class="install-status-installed" style="display:none">Already installed on your home screen.</p>
+      </div>
+    </div>
+  </div>
+  <ul class="ev" id="list"></ul>
+  <div class="btnrow"><button class="btn" id="more">Show more</button></div>
+</section>
+
+<section id="picks">
+  <h2>Joe's picks</h2>
+  <p style="font-size:.88rem;color:var(--smoke)">What I'm actually going to. Mostly talks: the speakers here are
+  genuinely good, and most of them aren't named anywhere in the official guide.</p>
+  <ul class="ev" id="picklist"></ul>
+</section>
+
+<section>
+  <h2>Know something we don't?</h2>
+<div class="panel" id="submit-panel">
+  <p style="margin:0 0 .5rem;font-size:.9rem">This guide is crowdsourced: anyone can add events. A set, a party, your whole camp schedule. Paste it all in one go, it gets checked automatically and lands in the guide for everyone, usually within the hour.</p>
+  <div class="btnrow"><a class="btn solid" href="/guide/submit">Add events to the guide</a></div>
+</div>
+
+<h2>Take it with you</h2>
+  <div class="panel">
+    <p style="margin:0;font-size:.9rem">There is <strong>no signal on playa</strong>. All the data lives inside this page, so from your home screen it works with no bars, no wifi, no battery drain.</p>
+    <p style="margin:.5rem 0 0;font-size:.85rem;color:var(--smoke)"><strong>iPhone:</strong> Share icon, then <em>Add to Home Screen</em>. <strong>Android:</strong> the <strong>⋮</strong> menu, then <em>Add to Home Screen</em>.</p>
+    <div id="install-block-save" class="install-block" style="display:none">
+      <button type="button" id="install-btn-save" class="btn solid install-btn" style="display:none">Add to Home Screen</button>
+      <p class="install-hint" id="install-hint-save" style="display:none"></p>
+    </div>
+    <p style="margin:.6rem 0 0;font-size:.82rem;color:var(--smoke)">The buttons below send the link to someone else. They do not install anything on your own phone.</p>
+    <div class="btnrow">
+      <button class="btn solid" id="share">Share this guide</button>
+      <button class="btn" id="copylink">Copy link</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Data sources</h2>
+  <p>Ingested from official Burning Man 2026 listings and GIS data, PlayaMap camp locations, Rock Star Librarian Music Guide 2026 by Kate Houston (pipeline by Damian Tarnawsky and Avi Flombaum), Playa Set Library, camp websites, and camp Instagram posts.</p>
+  <p><a href="/guide/how-it-was-made">Read the full list of sources and contributors on the How It Was Made page</a>.</p>
+</section>
+</main>
+
+<footer class="wrap">
+  <p><a href="https://github.com/josephtandle/better-playa-guide" rel="noopener">Open source</a>. Made by Joe Che in one day, on the plane to Burning Man. There are probably mistakes and things that could be way better. This is an MVP: I started making it for my friends and myself, and I am happy to share it and cover the token costs as my playa gift. Come out Thursday night and visit: <a href="#ask=a muse us" id="footer-event-link">A Muse Us</a> at MUSE Cafe, 8:15 &amp; E, Thursday 3 Sep, 22:00.</p>
+</footer>
+<div class="toast" id="toast"></div>
+
+<div id="filter-modal" class="modal-backdrop" style="display:none" role="dialog" aria-modal="true" aria-labelledby="filter-modal-title">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="filter-modal-title">Filters</h3>
+      <button type="button" id="filter-modal-close" class="btn-dismiss" aria-label="Close filters">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="filter-group">
+        <span class="filter-group-title">Day</span>
+        <div class="chips day-chips" id="day-chips">
+          <button type="button" class="chip day-chip" data-day="">All days</button>
+          <button type="button" class="chip day-chip" data-day="08-30">Sun 30</button>
+          <button type="button" class="chip day-chip" data-day="08-31">Mon 31</button>
+          <button type="button" class="chip day-chip" data-day="09-01">Tue 1</button>
+          <button type="button" class="chip day-chip" data-day="09-02">Wed 2</button>
+          <button type="button" class="chip day-chip" data-day="09-03">Thu 3</button>
+          <button type="button" class="chip day-chip" data-day="09-04">Fri 4</button>
+          <button type="button" class="chip day-chip" data-day="09-05">Sat 5</button>
+          <button type="button" class="chip day-chip" data-day="09-06">Sun 6</button>
+          <button type="button" class="chip day-chip" data-day="09-07">Mon 7</button>
+        </div>
+      </div>
+      <div class="filter-group" style="margin-top:1rem">
+        <label class="confirmed-filter-label">
+          <input type="checkbox" id="confirmed-only"> Only show confirmed
+        </label>
+      </div>
+      <div class="filter-group" style="margin-top:1rem">
+        <span class="filter-group-title">Categories</span>
+        <div class="chips" id="chips"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="loc-modal" class="modal-backdrop" style="display:none" role="dialog" aria-modal="true" aria-labelledby="loc-modal-title">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="loc-modal-title">Set your location</h3>
+      <button type="button" id="loc-modal-close" class="btn-dismiss" aria-label="Close location picker">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <input id="loc" type="text" placeholder="Where are you? e.g. 7:30 &amp; E" autocomplete="off">
+      </div>
+      <div id="loc-confirm" class="loc-confirm"></div>
+      <p class="filter-group-title" style="margin-top:1rem">or pick a spot</p>
+      <div class="chips loc-chips" id="loc-quick-picks">
+        <button type="button" class="chip loc-chip" data-loc="Center Camp">Center Camp</button>
+        <button type="button" class="chip loc-chip" data-loc="The Man">The Man</button>
+        <button type="button" class="chip loc-chip" data-loc="The Temple">The Temple</button>
+        <button type="button" class="chip loc-chip" data-loc="Esplanade">Esplanade</button>
+      </div>
+      <div class="btnrow" style="margin-top:1rem">
+        <button type="button" id="loc-save-btn" class="btn solid" style="flex:1">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="nav-modal" class="modal-backdrop" style="display:none" role="dialog" aria-modal="true" aria-labelledby="nav-modal-title">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="nav-modal-title">Directions</h3>
+      <button type="button" id="nav-modal-close" class="btn-dismiss" aria-label="Close directions">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="filter-group">
+        <label for="nav-from" style="display:block;font-size:.85rem;font-weight:600;margin-bottom:.25rem">From (where you are)</label>
+        <div class="row" style="gap:.4rem">
+          <input id="nav-from" type="text" placeholder="e.g. 7:30 &amp; E or Center Camp" autocomplete="off" style="flex:1">
+          <button type="button" id="nav-gps-btn" class="btn" style="min-height:44px;padding:0 .6rem;font-size:.82rem">Use my GPS</button>
+        </div>
+        <div id="nav-gps-msg" class="loc-confirm" style="margin-top:.25rem"></div>
+      </div>
+      <div class="filter-group" style="margin-top:.8rem">
+        <label for="nav-to" style="display:block;font-size:.85rem;font-weight:600;margin-bottom:.25rem">To (where you are going)</label>
+        <input id="nav-to" type="text" placeholder="e.g. 8:15 &amp; E" autocomplete="off">
+      </div>
+      <div id="nav-output" class="panel" style="display:none;margin-top:1rem;background:#fff8ec">
+        <div id="nav-instructions" style="font-size:.9rem;line-height:1.4"></div>
+        <div id="nav-meta" style="font-size:.82rem;color:var(--smoke);margin-top:.4rem"></div>
+        <div class="btnrow" style="margin-top:.75rem">
+          <button type="button" id="nav-map-btn" class="btn solid" style="flex:1">View route on map</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="intro-modal" class="modal-backdrop" style="display:none" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="modal-title">Welcome to Better Playa Guide</h3>
+      <button id="modal-close" class="btn-dismiss" aria-label="Close modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="ob-dots" aria-hidden="true"><span class="ob-dot" id="ob-dot-1"></span><span class="ob-dot" id="ob-dot-2"></span><span class="ob-dot" id="ob-dot-3"></span></div>
+
+      <div id="ob-step-1" class="ob-step">
+        <p class="modal-lead">Welcome to the Better Playa Guide: the ultimate who what where guide, plus more than 500 entries taken directly from official lineups on Instagram, Telegram and WhatsApp channels, so it is actually up to date.</p>
+        <p class="ob-why">So it can say hi properly: what's your first name?</p>
+        <input id="ob-name" type="text" autocomplete="given-name" maxlength="40" placeholder="First name">
+        <div class="btnrow ob-btnrow">
+          <button type="button" id="ob-skip-1" class="btn">Skip</button>
+          <button type="button" id="ob-next-1" class="btn solid">Next</button>
+        </div>
+      </div>
+
+      <div id="ob-step-2" class="ob-step" style="display:none">
+        <p class="ob-why">What camp are you in? So we can calculate distance to the events.</p>
+        <input id="ob-camp" type="text" autocomplete="off" placeholder="Start typing a camp name">
+        <div id="ob-camp-list" class="ob-camp-list"></div>
+        <div id="ob-camp-offer" class="ob-offer" style="display:none">
+          <p id="ob-camp-offer-text" style="margin:0"></p>
+          <button type="button" id="ob-camp-use" class="btn solid" style="margin-top:.5rem"></button>
+        </div>
+        <div class="btnrow ob-btnrow">
+          <button type="button" id="ob-skip-2" class="btn">Skip</button>
+          <button type="button" id="ob-next-2" class="btn solid">Next</button>
+        </div>
+      </div>
+
+      <div id="ob-step-3" class="ob-step" style="display:none">
+        <ul class="ob-how">
+          <li><strong>Ask it anything.</strong> "whats on near me now", "coffee tomorrow morning", anything you would type.</li>
+          <li><strong>Star what you like.</strong> Stars land in My Events, and they can go in your calendar.</li>
+          <li><strong>Your list saves on this phone by itself.</strong> Share it to move it to another device.</li>
+          <li><strong>It works with no signal.</strong> Everything lives inside the page itself.</li>
+        </ul>
+        <p class="modal-emphasized">One thing worth doing now: put this on your home screen. There is no signal out there, and from your home screen the guide runs with none.</p>
+        <div id="install-block-modal" class="install-block" style="display:none">
+          <button type="button" id="install-btn-modal" class="btn solid install-btn" style="display:none">Add to Home Screen</button>
+          <p class="install-hint" id="install-hint-modal" style="display:none"></p>
+        </div>
+        <p class="ob-positioning">This carries what camps actually published in the last few days: lineups and schedules from their official Instagram, Telegram and WhatsApp channels and their own sites, with the source marked on every event. The official guide does not have them.</p>
+        <div class="modal-examples">
+          <p class="modal-ex-title">Try asking:</p>
+          <div class="modal-chips">
+            <button type="button" class="chip modal-chip" data-q="Where can I get espresso martinis tomorrow morning?">Where can I get espresso martinis tomorrow morning?</button>
+            <button type="button" class="chip modal-chip" data-q="When is Jan Blomqvist playing?">When is Jan Blomqvist playing?</button>
+            <button type="button" class="chip modal-chip" data-q="When and where is Calussa playing?">When and where is Calussa playing?</button>
+            <button type="button" class="chip modal-chip" data-q="Is there grilled cheese being served now?">Is there grilled cheese being served now?</button>
+          </div>
+        </div>
+        <div class="btnrow ob-btnrow">
+          <button type="button" id="ob-start" class="btn solid" style="flex:1">Start</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p>A playa gift from Joe Che at Muse Cafe, 8:15 &amp; E. A quick experimental MVP, open source, times change on playa.</p>
+    </div>
+  </div>
+</div>
+
+<script src="/guide/data.js"></script>
+<script src="/guide/guide.js"></script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){
+  navigator.serviceWorker.register('/guide/sw.js',{scope:'/guide/'}).catch(function(){});
+});}
+</script>
+</body></html>

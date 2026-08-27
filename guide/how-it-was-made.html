@@ -1,0 +1,205 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About: Better Playa Guide</title>
+<meta name="description" content="Every Burning Man 2026 event, searchable by where you're standing. Works with no signal. A playa gift from Joe Che at Muse Cafe.">
+<meta property="og:title" content="Better Playa Guide">
+<meta property="og:description" content="3,962 Burning Man 2026 events. Type where you are, see what's near. Works offline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guide.musecafe.vip">
+<meta name="theme-color" content="#fff3e5">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/guide/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="top-row">
+    <h1>Playa Guide</h1>
+  </div>
+  <p class="kicker">Black Rock City · 30 Aug – 7 Sep 2026</p>
+  <p class="gift">A playa gift from Joe Che at Muse Cafe · 8:15 &amp; E</p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find</a>
+    <a href="/guide/#myevents" data-tab="myevents"><span class="tab-star" aria-hidden="true">★</span> My Events<span id="star-count" class="tab-badge" aria-label="starred events"></span></a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/how-it-was-made" data-tab="made">About</a>
+  </nav>
+</div></header>
+<main class="wrap about">
+
+<!-- ============ 1. HERO ============ -->
+<section class="about-hero" aria-labelledby="about-hero-h">
+  <p class="about-hero-kicker">Better Playa Guide</p>
+  <h2 id="about-hero-h">Every event.<br>No signal needed.</h2>
+  <p class="about-hero-lede">A playa gift from Joe Che at Muse Cafe, 8:15 &amp; E.</p>
+  <p class="about-hero-body">All 3,962 Burning Man 2026 events, searchable from wherever you are standing, with the lineups the official book leaves out. It works with no signal at all. Built fast, given away, open source.</p>
+  <div class="about-stats">
+    <div class="about-stat"><b>3,962</b><span>events</span></div>
+    <div class="about-stat"><b>1,555</b><span>named performers</span></div>
+    <div class="about-stat"><b>569</b><span>beyond the official book</span></div>
+    <div class="about-stat"><b>0</b><span>bars of signal required</span></div>
+  </div>
+</section>
+
+<!-- ============ 2. TWO WAYS ============ -->
+<section aria-labelledby="ways-h">
+  <p class="about-kicker">How to get the most out of it</p>
+  <h2 id="ways-h">Two ways to use it</h2>
+  <div class="about-ways">
+    <div class="about-card about-way">
+      <p class="about-way-kicker">Way 1 · Before the burn</p>
+      <h3>Star your week from home</h3>
+      <p>Look through it, run some searches, and star everything worth keeping an eye on, so you land with a list of options instead of a plan you will abandon by Tuesday.</p>
+      <p>Add it to your calendar and save it to your home screen before you leave. Once it has loaded, it is yours for the week.</p>
+    </div>
+    <div class="about-card about-way">
+      <p class="about-way-kicker">Way 2 · Download offline</p>
+      <h3>Ask it anything, sort by near you</h3>
+      <p>The whole guide works with zero signal, which beats flipping through an outdated book. Ask it anything, sort by what is near you, and follow your starred list day by day.</p>
+      <ul class="about-minilist">
+        <li>Tell it where you are: your camp, or wherever you stand. BRC addresses like <kbd>7:30 &amp; E</kbd>.</li>
+        <li>Pick walking, bike or ebike. Distances recalculate for your speed.</li>
+        <li>Search or filter by day and category, then sort by distance. Nearest first.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="about-card about-way-alt">
+    <p class="about-way-kicker">Or: install the agent into your own AI</p>
+    <p>The same database ships as an agent for Claude, Codex or Antigravity. Your AI already knows your tastes, your Spotify playlists, the talks you save, so it can hold an actual conversation about your burn and build a personal itinerary: "plan my Tuesday, I like grounded talks and deep house, I ride an ebike" answered from the same 3,962 events, ranked for you.</p>
+    <p>You run it yourself, your data stays with you, and this page pays for none of it. Clone the repo and run <code>install.sh</code>: <a href="https://github.com/josephtandle/better-playa-guide" rel="noopener">github.com/josephtandle/better-playa-guide</a>.</p>
+  </div>
+</section>
+
+<!-- ============ 3. WHY THIS EXISTS ============ -->
+<section aria-labelledby="why-h">
+  <p class="about-kicker">The problem with the official book</p>
+  <h2 id="why-h">Why this exists</h2>
+  <div class="about-card">
+    <p>The official Who What Where is chaos. It is overwhelming, goes out of date, does not know your taste, and it strips out the lineups that camps actually publish on their own sites and Instagram.</p>
+    <p>Two concrete examples. The official listing for Camp Mystic's psychedelic session says only "Psychedelic Healing &amp; Transformation / With MDMA". The camp's own site names the speaker: Rick Doblin, who founded MAPS. Camp Mystic publishes 38 named speakers and DJs on its own site, campmystic.org, across its 49 events here; none of those names appear in the official listing.</p>
+    <p>And Opulent Temple's "Still Burning" appears in the official listings with no lineup; here it carries Emanate, Vanjee, Alex Amaro and Richard Mixon. Opulent Temple's DJ sets, Syd Gris and all, reached us through the Rock Star Librarian guide and the Playa Set Library, both published in the last few days. We fold those in and mark where each came from, so every event shows its source.</p>
+    <div class="about-numbers">
+      <div class="about-num"><b>3,962</b><span>events here vs 3,465 official</span></div>
+      <div class="about-num"><b>1,555</b><span>named performers, the official listings name almost none</span></div>
+      <div class="about-num"><b>569</b><span>entries beyond the official book</span></div>
+      <div class="about-num"><b>410</b><span>music sets from outside the official listings</span></div>
+      <div class="about-num"><b>38</b><span>official listings enriched with a lineup the entry did not carry</span></div>
+      <div class="about-num"><b>3,620</b><span>events resolved to a real BRC address, distances from official 2026 city geometry</span></div>
+    </div>
+    <p class="about-fine"><strong>What we learned building it:</strong> the official listings strip the speaker's name (Rick Doblin becomes "With MDMA"). Whole series can be invisible: Palenque Norte runs 31 sessions at Camp Soft Landing and not one appears in the official 2026 data. Schedules hide on subpages: crawling camp homepages found 2 schedules; crawling <code>/events</code> and <code>/schedule</code> found 11. And camps post schedules as pictures: the caption says "pick your portal", the whole week's grid is in the image.</p>
+  </div>
+</section>
+
+<!-- ============ 4. WHERE THE DATA COMES FROM ============ -->
+<section aria-labelledby="sources-h">
+  <p class="about-kicker">Gathered and cross-referenced</p>
+  <h2 id="sources-h">Where the data comes from</h2>
+  <div class="src-grid">
+    <div class="src-card">
+      <span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span>
+      <b class="src-name">Official 2026 listings</b>
+      <p class="src-desc">Burning Man's event and camp data: the base 3,465 events.</p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span>
+      <b class="src-name">Official GIS data</b>
+      <p class="src-desc">The 2026 city geometry every distance is computed from. <a href="https://github.com/burningmantech/innovate-GIS-data" rel="noopener">innovate-GIS-data</a></p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span>
+      <b class="src-name">PlayaMap</b>
+      <p class="src-desc">Current 2026 camp addresses. <a href="https://playamap.org" rel="noopener">playamap.org</a></p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span>
+      <b class="src-name">Camp websites</b>
+      <p class="src-desc">Where speaker names actually live, including the <code>/events</code> and <code>/schedule</code> subpages.</p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-reported"><i class="src-dot"></i>Reported</span>
+      <b class="src-name">Camp Instagram</b>
+      <p class="src-desc">Schedules posted as images, read with OCR from the flyer grids.</p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-reported"><i class="src-dot"></i>Reported</span>
+      <b class="src-name">Telegram channels</b>
+      <p class="src-desc">Set times and lineups published in the final days before the burn.</p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-reported"><i class="src-dot"></i>Reported</span>
+      <b class="src-name">WhatsApp channels</b>
+      <p class="src-desc">Camp announcements tracked the same way.</p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span>
+      <b class="src-name">Rock Star Librarian</b>
+      <p class="src-desc">Kate Houston's music guide: 400 events and 1,604 DJ sets with real set times. <a href="https://rslmusicguide.com" rel="noopener">rslmusicguide.com</a></p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span>
+      <b class="src-name">Playa Set Library</b>
+      <p class="src-desc">9 venues and 236 sets, hand transcribed from Instagram flyers by its author. <a href="https://playasetlibrary.com" rel="noopener">playasetlibrary.com</a></p>
+    </div>
+    <div class="src-card">
+      <span class="src-tier src-tier-reported"><i class="src-dot"></i>Reported</span>
+      <b class="src-name">Community calendar</b>
+      <p class="src-desc">Community-submitted events, cross-checked against the rest.</p>
+    </div>
+  </div>
+  <div class="about-card about-tiers">
+    <h3>How to read the badges</h3>
+    <p>Every event in the guide carries the same visible provenance badge, so you can see where a listing came from and how much to trust it:</p>
+    <ul class="about-minilist">
+      <li><span class="src-tier src-tier-confirmed"><i class="src-dot"></i>Confirmed</span> the source that runs the event published it: official listings, the camp's own website, or Rock Star Librarian.</li>
+      <li><span class="src-tier src-tier-reported"><i class="src-dot"></i>Reported</span> someone else saw it and passed it on: a camp Instagram post or a handwritten flyer.</li>
+      <li><span class="src-tier src-tier-unverified">Unverified</span> no source was recorded, or it is a running-order entry with no clock time.</li>
+    </ul>
+    <p class="about-fine">Times change on playa regardless of tier, so verify on the day. Anything tagged camp-site-only or from-instagram is the most useful information here and the least verified.</p>
+  </div>
+  <p class="about-fine about-credits"><strong>Standing on other people's work:</strong> Burning Man Project for publishing the GIS and event data openly; PlayaMap for camp placements; Kate Houston for the Rock Star Librarian guide, with the data pipeline by Damian Tarnawsky, who builds the open source Dust app (<a href="https://dust.events" rel="noopener">dust.events</a>), and Avi Flombaum; the author of the Playa Set Library; Camp Mystic and Palenque Norte for publishing real schedules with real names. Kate asks only that people print copies of her guide and gift them on playa, and supports a GoFundMe for clean water wells in Ghana. These are other people's work, gathered and cross-referenced. If you maintain one of these and want it changed or removed, say so and it will be.</p>
+</section>
+
+<!-- ============ 5. HOW IT WORKS ============ -->
+<section aria-labelledby="works-h">
+  <p class="about-kicker">Under the hood</p>
+  <h2 id="works-h">How it works</h2>
+  <div class="about-card">
+    <p class="lede">No server, no app store, no account. Everything you see is inside the page you are reading.</p>
+    <p>When you load this guide, all 3,962 events, 1,217 camps and the city's street geometry come down with it: about 900KB, roughly one photo. After that it never needs to talk to the internet again. Type an address and the distance is worked out on your phone, from real survey data, instantly. That is why it still works in deep playa with no bars.</p>
+    <p>When you are online, the ask box answers with an LLM. Offline, the same box falls back to a built-in script, so it keeps answering with zero signal. Your camp and how you get around are stored in your browser: no account, no server, nothing sent anywhere, no analytics watching what you search. To be honest, that is location preference, not deep personalisation; for taste, install the agent into your own AI above.</p>
+    <p>It also means it costs nothing to run and nothing to give away. There is no backend to pay for and no API to rate-limit you.</p>
+  </div>
+  <div class="about-card about-limits">
+    <h3>Honest limitations</h3>
+    <ul class="about-minilist">
+      <li>About 4% of events have no resolvable address, usually art cars and roaming things.</li>
+      <li>Camp-authored times change on playa. Constantly.</li>
+      <li>Distances are straight lines. The playa is mostly flat and open, so it is close, but deep playa at night with a headwind is its own thing.</li>
+      <li>This was built in a few days as an experiment. It will have mistakes.</li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="wrap">
+  <p><strong>Made by Joe Che</strong> at MUSE Café (8:15 &amp; E) · say hi on Instagram
+     <a href="https://instagram.com/joe.che.official" rel="noopener">@joe.che.official</a>,
+     or come by camp for the Thursday cabaret.</p>
+  <p>Open source, MIT. Fork it, fix it, make it better:
+     <a href="https://github.com/josephtandle/better-playa-guide" rel="noopener">github.com/josephtandle/better-playa-guide</a></p>
+  <p>Event data from Burning Man's public listings, plus camp websites and Instagram posts the official
+     listings leave out. Camp-authored times change on playa: verify on the day. Not affiliated with
+     Burning Man Project.</p>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="/guide/data.js"></script>
+<script src="/guide/guide.js"></script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){
+  navigator.serviceWorker.register('/guide/sw.js',{scope:'/guide/'}).catch(function(){});
+});}
+</script>
+</body></html>

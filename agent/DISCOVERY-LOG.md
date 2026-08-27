@@ -85,6 +85,7 @@ Format: date logged | source (handle/site/person) | how it surfaced | what it yi
 - 2026-08-27 | @nataschapolke.ch | Joe's IG screenshot | 4 sets incl. Robot Heart at TEMPLE BURN Sunday 9pm (first Sunday-night event) | YES
 - 2026-08-27 | Playground Arrival Stage poster (via @goldfishlive, 19-slide carousel) | Joe's IG screenshot | FULL week: Carlita, Vintage Culture, Ahmed Spins, Gordo, Mahmut Orhan, Lee Burridge, Jan Blomqvist live | YES: stage-poster carousels are the richest single source
 - 2026-08-27 | @goldfishlive | Joe's IG screenshot | Goldfish acoustic at Above the Noise Wed + Playground slots covered by stage poster | YES
+- 2026-08-27 | @opulentchill (via @denizreno) | Joe's IG screenshots (5-slide) | Opulent Chill Wed-Sat full programs: Rick Doblin, ALEX GREY + Allyson Grey, Zendo Project, Opulent Klub nights; officials only had yoga | YES: chill-space programs are separate accounts from main stages
 - 2026-08-26 | word of mouth (Joe) | direct tip | Shalman & Sheila Demoura at Gaian Airship Fri 12am before Mel Semé & OVEOUS | YES: Joe's own network beats every scraper for late additions
 - 2026-08-25 | heebeegeebeehealers.org | Joe link | 2026 page live but schedule image still 2024 ("stay tuned") | YES but verify year on the image itself before ingesting (2024 poster shows old F-street address)
 

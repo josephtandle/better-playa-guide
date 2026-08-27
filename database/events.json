@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 4190,
+  "count": 4209,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -113755,6 +113755,454 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Yoga and Sound Bath (Opulent Chill)",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Gonze Music",
+   "description": "Yoga and sound bath with Gonze Music at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-02 11:00",
+     "end": "12:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Zendo Project: Principles of Psychedelic Care",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The Zendo Project on psychedelic peer support and care for Black Rock City, at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-02 14:00",
+     "end": "15:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Sound is the Substance: fireside chat",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "A fireside chat with artists on music, expanded states and mental health, at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-02 16:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Opulent Klub (Wednesday night)",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "DJ 2 Fresh, Cascino, Agent Provocateur, Zula",
+   "description": "Opulent Klub Wednesday night at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-02 22:00",
+     "end": "23:00"
+    },
+    {
+     "start": "09-03 00:00",
+     "end": "01:00"
+    },
+    {
+     "start": "09-03 01:00",
+     "end": "02:00"
+    },
+    {
+     "start": "09-03 02:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Rise & Reset Yoga",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "ENMI",
+   "description": "Rise and reset yoga with ENMI at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-03 11:00",
+     "end": "12:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Body Temple Dance (somatic trance dance)",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Somatic trance dance at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-03 14:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "The Tantra Practice",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Palak",
+   "description": "An energetic journey through the elements with Palak, at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-03 15:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Microdosing: Benefits for Every Generation",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Alli Schaper, Kat Shuler, Rob Hildreth",
+   "description": "Panel with Alli Schaper, Kat Shuler and Rob Hildreth at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-03 16:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Opulent Klub (Thursday night)",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Augustine, Alexander, JustCJ, TallGuyJordan, DJ Dragonfly",
+   "description": "Opulent Klub Thursday night at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-03 17:00",
+     "end": "18:00"
+    },
+    {
+     "start": "09-03 22:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-04 00:00",
+     "end": "01:00"
+    },
+    {
+     "start": "09-04 01:00",
+     "end": "02:00"
+    },
+    {
+     "start": "09-04 02:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Meditative Vinyasa Flow with Pranayama",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Joon, Gonze Music",
+   "description": "Meditative vinyasa with pranayama, with Joon and Gonze Music, at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-04 11:00",
+     "end": "12:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "What We Build Outlasts Us",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Rick Doblin, Peter Vitale, Kat Shuler",
+   "description": "Rick Doblin, Peter Vitale and Kat Shuler in conversation at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-04 14:00",
+     "end": "15:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Cuddle Puddle Sound Bath",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Cam Steen, Gonze Music",
+   "description": "Cuddle puddle sound bath with Cam Steen and Gonze Music at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-04 16:00",
+     "end": "17:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Dare to Dream: Alex Grey & Allyson Grey",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "talk",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": "Alex Grey, Allyson Grey, Kat Shuler",
+   "description": "Dare to Dream with visionary artists Alex Grey and Allyson Grey, with Kat Shuler, at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-04 18:00",
+     "end": "19:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Opulent Klub (Friday night)",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "WONX, LEXSHE, ESTIOKO",
+   "description": "Opulent Klub Friday night at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-04 23:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-05 00:00",
+     "end": "01:00"
+    },
+    {
+     "start": "09-05 01:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Namaste in the Dust Vinyasa Yoga",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Cassidy",
+   "description": "Vinyasa yoga with Cassidy at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-05 11:00",
+     "end": "12:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Somatic Awareness Through Bellydance",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": "Rachel",
+   "description": "Bellydance somatics with Rachel at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-05 14:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Find Your Flow: Flow Art Workshop",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Calvin",
+   "description": "Flow arts workshop with Calvin at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-05 15:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "No Lost Connections",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Logina Mostafa, Kat Shuler, Rob Hildreth",
+   "description": "Cultivating community for the unconventional: Logina Mostafa, Kat Shuler and Rob Hildreth at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-05 16:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Opulent Klub (Saturday night)",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "ENMI, LYSS, Kosmic Lovers, Pink Leopard",
+   "description": "Opulent Klub burn night at Opulent Chill.",
+   "schedule": [
+    {
+     "start": "09-05 23:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-06 00:00",
+     "end": "01:00"
+    },
+    {
+     "start": "09-06 01:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
    "grounded_score": null
   }
  ]

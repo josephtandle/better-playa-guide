@@ -1,0 +1,93 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Add events: Better Playa Guide</title>
+<meta name="description" content="Crowdsource the Better Playa Guide. Paste a flyer, a lineup, or your whole camp schedule and it lands in the guide for everyone.">
+<meta name="theme-color" content="#fffaf2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="top-row"><h1>Add events</h1></div>
+  <p class="kicker">Crowdsource the Better Playa Guide</p>
+  <p class="gift">Anyone can add. Your camp, your art car, a party you heard about.</p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find</a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/submit" class="active" data-tab="submit">Add events</a>
+    <a href="/guide/how-it-was-made" data-tab="made">About</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<h2>How it works</h2>
+<div class="panel">
+  <p style="margin:0 0 .5rem;font-size:.92rem">This guide is crowdsourced. Paste <strong>everything at once</strong> in the box below: type out a flyer, paste a lineup, drop your whole camp schedule. One block of text, as many events as you like. It gets read and checked automatically and lands in the guide for everyone, usually <strong>within the hour</strong>. Needs signal to send, so do it before you roll through the gate or when you catch wifi.</p>
+</div>
+
+<h2>What to include</h2>
+<div class="panel">
+  <p style="margin:0 0 .35rem;font-size:.9rem">For each event, as much of this as you have:</p>
+  <ul style="margin:0 0 .6rem 1.1rem;font-size:.9rem;line-height:1.55">
+    <li><strong>Event name</strong> and what happens there</li>
+    <li><strong>Camp or art car</strong> hosting it</li>
+    <li><strong>Address</strong>, like <em>8:15 &amp; E</em> or <em>3:00 &amp; Esplanade</em></li>
+    <li><strong>Day and time</strong>, like <em>Wednesday 10pm to 2am</em></li>
+    <li><strong>Who's playing or leading it</strong> (DJ names, teachers, speakers)</li>
+    <li><strong>Camp website or Instagram handle</strong>, like <em>@yourcamp</em>. This helps verify it's real and gets your camp credited as the source.</li>
+  </ul>
+  <p style="margin:0;font-size:.85rem;color:var(--smoke)">Don't worry about format. Write it how a flyer would say it. Missing a detail? Send it anyway.</p>
+</div>
+
+<h2>Paste it all here</h2>
+<div class="panel">
+  <form id="submit-event-form" autocomplete="off">
+    <div class="row"><textarea id="sub-text" maxlength="6000" rows="10" placeholder="Example:
+
+Camp Foo (@campfoo on IG), 7:30 & C
+- Sunrise yoga, Tue-Fri 7am, with Maya
+- Dust & Bass party, Wednesday 10pm-2am, DJs Bar and Baz
+
+Baz art car: sunset set Thursday 6pm near the Temple
+...or type out everything on a flyer, exactly as written."></textarea></div>
+    <div class="btnrow"><button type="submit" id="sub-send" class="btn solid">Send it all in</button></div>
+    <p id="sub-note-msg" class="move-device-note"></p>
+  </form>
+  <p style="margin:.6rem 0 0;font-size:.82rem;color:var(--smoke)">No account, no email needed. Submissions are checked automatically; anything that isn't a real playa event gets filtered out. Events show a "Community" badge so people know the source tier.</p>
+</div>
+
+<p style="margin:1.2rem 0 2rem"><a class="btn" href="/guide/">&larr; Back to the guide</a></p>
+
+</main>
+<script>
+(function(){
+  var form = document.getElementById('submit-event-form');
+  var msg = document.getElementById('sub-note-msg');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var text = (document.getElementById('sub-text').value || '').trim();
+    if (!text) { msg.textContent = 'Paste something first.'; return; }
+    var btn = document.getElementById('sub-send');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    var cid = null;
+    try { cid = localStorage.getItem('bpg.cid'); } catch(e){}
+    fetch('/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ text: text, id: cid }) })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok: r.ok, j: j }; }); })
+      .then(function(res){
+        if (res.ok) {
+          msg.textContent = 'Got it. It gets checked and added automatically, usually within the hour. Thank you for making the guide better.';
+          document.getElementById('sub-text').value = '';
+        } else {
+          msg.textContent = (res.j && res.j.error) || 'Could not send. Try again when you have signal.';
+        }
+      })
+      .catch(function(){ msg.textContent = 'No connection. Try again when you have signal.'; })
+      .finally(function(){ btn.disabled = false; btn.textContent = 'Send it all in'; });
+  });
+})();
+</script>
+</body></html>
