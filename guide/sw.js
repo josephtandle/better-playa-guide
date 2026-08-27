@@ -1,22 +1,22 @@
 /* Service worker: caches everything so the guide works with no signal. MIT. */
-var CACHE = 'bpg-v74';
+var CACHE = 'bpg-v76';
 var FALLBACK = '/guide/';
 var ASSETS = ['/guide/','/guide','/guide/map','/guide/how-it-was-made','/guide/submit',
   '/guide/guide.css','/guide/guide.js','/guide/map.js',
   '/guide/data.js','/guide/manifest.webmanifest'];
+var CORE = ['/guide/','/guide/guide.css','/guide/guide.js','/guide/data.js'];
 self.addEventListener('install', function(e){
   self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE).then(function(c){
-      return Promise.all(ASSETS.map(function(u){
-        return c.add(u).catch(function(){});   // a missing alias must not fail the whole install
-      }));
-    }).then(function(){
-      return caches.open(CACHE).then(function(c){ return c.match(FALLBACK); });
-    }).then(function(res){
-      if (!res) {
-        return Promise.reject(new Error('FALLBACK asset missing from cache'));
-      }
+      // core assets are all-or-nothing: a failed install keeps the old cache
+      // alive (activate never runs), so a flaky playa connection can never
+      // strand a phone with a shell but no data.
+      return Promise.all(CORE.map(function(u){ return c.add(u); })).then(function(){
+        return Promise.all(ASSETS.map(function(u){
+          return CORE.indexOf(u) !== -1 ? null : c.add(u).catch(function(){});
+        }));
+      });
     })
   );
 });
@@ -31,6 +31,8 @@ self.addEventListener('activate', function(e){
 });
 self.addEventListener('fetch', function(e){
   if (e.request.method !== 'GET') return;
+  var u = new URL(e.request.url);
+  if (u.pathname.indexOf('/api/') === 0) return;   // never cache API responses (private exports, live stats)
   e.respondWith(
     caches.match(e.request).then(function(hit){
       var net = fetch(e.request).then(function(res){

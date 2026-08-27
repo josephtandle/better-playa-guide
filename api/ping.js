@@ -5,6 +5,8 @@
  * The guide works fully offline; this fires only when there is signal.
  */
 'use strict';
+const crypto = require('crypto');
+const store = require('./_store.js');
 
 function validId(s) {
   return typeof s === 'string' && /^[a-z0-9]{8,32}$/.test(s);
@@ -21,6 +23,16 @@ module.exports = async function handler(req, res) {
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch (e) { body = null; } }
   const id = body && body.id;
   if (!validId(id)) { res.statusCode = 204; return res.end(); }
+
+  /* per-IP daily cap: a device pings once a day, so allow a family of phones
+     on one hotspot but stop scripted count-inflation */
+  try {
+    const xf = String((req.headers && (req.headers['x-real-ip'] || req.headers['x-forwarded-for'])) || 'unknown');
+    const ipKey = 'gp:ip:' + crypto.createHash('sha256').update(xf).digest('hex').slice(0, 24);
+    const n = Number(await store.get(ipKey)) || 0;
+    if (n >= 25) { res.statusCode = 204; return res.end(); }
+    await store.incrBy(ipKey, 1, 86400);
+  } catch (e) { /* the counter must never break the guide */ }
 
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;

@@ -44,7 +44,16 @@ module.exports = async function handler(req, res) {
   let image = null;
   if (typeof body.image === 'string') {
     const m = body.image.match(/^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+/=]+)$/);
-    if (!m || m[2].length > 3500000) {
+    let buf = null;
+    if (m && m[2].length <= 3500000) {
+      try { buf = Buffer.from(m[2], 'base64'); } catch (e) { buf = null; }
+    }
+    const magicOk = buf && buf.length > 16 && buf.length <= 2600000 && (
+      (buf[0] === 0xFF && buf[1] === 0xD8 && buf[2] === 0xFF) ||                       /* jpeg */
+      (buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4E && buf[3] === 0x47) ||    /* png */
+      (buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP')
+    );
+    if (!magicOk) {
       res.statusCode = 400;
       return res.end(JSON.stringify({ error: 'bad_image' }));
     }

@@ -52,9 +52,9 @@ function nextDay(mmdd) {
 /* end <= start means it wrapped past midnight */
 function endStamp(mmdd, startHm, endHm) {
   if (!endHm) {
-    /* default 1 hour */
+    /* default 2 hours, matching the client-side export (guide.js) */
     var h = Number(startHm.slice(0, 2)), m = Number(startHm.slice(3, 5));
-    h += 1;
+    h += 2;
     if (h >= 24) return stampOf(nextDay(mmdd), p2(h - 24) + ':' + p2(m));
     return stampOf(mmdd, p2(h) + ':' + p2(m));
   }

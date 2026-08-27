@@ -27,7 +27,16 @@
         if (w.length >= 3 && !seen.has(w)){ seen.add(w); VOCAB.push(w); }
       }
     }
-    CORPUS = ' ' + VOCAB.join(' ') + ' ';
+    /* membership corpus also includes description words: a word that exists
+       anywhere in the data must never be "corrected" away */
+    var descSeen = [];
+    for (var k = 0; k < EV.length; k++){
+      var dw = fold(EV[k].d || '').split(/[^a-z0-9]+/);
+      for (var m2 = 0; m2 < dw.length; m2++){
+        if (dw[m2].length >= 3 && !seen.has(dw[m2])){ seen.add(dw[m2]); descSeen.push(dw[m2]); }
+      }
+    }
+    CORPUS = ' ' + VOCAB.join(' ') + ' ' + descSeen.join(' ') + ' ';
   }
   function editDist(a, b, cap){
     if (Math.abs(a.length - b.length) > cap) return cap + 1;
@@ -45,10 +54,12 @@
     }
     return prev[b.length];
   }
+  var REMAP_CACHE = {};
   function fuzzyRemap(tok){
     /* token appears nowhere in the data: swap it for the closest real word */
+    if (REMAP_CACHE.hasOwnProperty(tok)) return REMAP_CACHE[tok];
     buildVocab();
-    if (CORPUS.indexOf(tok) !== -1) return tok;
+    if (CORPUS.indexOf(tok) !== -1) { REMAP_CACHE[tok] = tok; return tok; }
     var cap = tok.length >= 9 ? 3 : (tok.length >= 7 ? 2 : (tok.length >= 4 ? 1 : 0));
     if (!cap) return tok;
     var best = null, bestD = cap + 1;
@@ -57,7 +68,9 @@
       if (d < bestD || (d === bestD && best && VOCAB[i][0] === tok[0] && best[0] !== tok[0])){ bestD = d; best = VOCAB[i]; }
       if (bestD === 0) break;
     }
-    return (best && bestD <= cap) ? best : tok;
+    var out = (best && bestD <= cap) ? best : tok;
+    REMAP_CACHE[tok] = out;
+    return out;
   }
   function queryTokens(q){
     var words = q.split(/[^a-z0-9]+/).filter(function(w){ return w && !STOPW.has(w); });
@@ -71,9 +84,25 @@
     HAYS[i] = [hay, hay.replace(/[^a-z0-9]+/g, '')];
     return HAYS[i];
   }
+  var BOUND_CACHE = {};
   function matchTokens(tokens, hayPair){
+    var joined = null;
     for (var i = 0; i < tokens.length; i++){
-      if (hayPair[0].indexOf(tokens[i]) === -1 && hayPair[1].indexOf(tokens[i]) === -1) return false;
+      var tok = tokens[i];
+      var hit;
+      if (tok.length <= 4){
+        /* short tokens match whole words only, so "art" stops matching "party" */
+        var re = BOUND_CACHE[tok] || (BOUND_CACHE[tok] = new RegExp('(^|[^a-z0-9])' + tok.replace(/[^a-z0-9]/g, ''), 'i'));
+        hit = re.test(hayPair[0]);
+      } else {
+        hit = hayPair[0].indexOf(tok) !== -1 || hayPair[1].indexOf(tok) !== -1;
+      }
+      if (!hit){
+        /* "rhythm wave" typed as two words still matches the squashed camp name */
+        if (joined === null) joined = tokens.join('');
+        if (tokens.length > 1 && joined.length >= 6 && hayPair[1].indexOf(joined) !== -1) return true;
+        return false;
+      }
     }
     return true;
   }
@@ -649,6 +678,37 @@
     if (!p || !q) return null;
     var dn = (q.lat-p.lat)*FLAT, de = (q.lon-p.lon)*FLON;
     return Math.round(Math.hypot(dn, de) / speed / 60);
+  }
+  /* ---- porta potties: official 2026 GIS toilet-bank centroids ---- */
+var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.196484],[40.77658,-119.192323],[40.776114,-119.197809],[40.773186,-119.19443],[40.774709,-119.20122],[40.773689,-119.204354],[40.771548,-119.198817],[40.770162,-119.203115],[40.77332,-119.207729],[40.768901,-119.207727],[40.770102,-119.21236],[40.773628,-119.211114],[40.774591,-119.214279],[40.77143,-119.216682],[40.776699,-119.217293],[40.773019,-119.221118],[40.776575,-119.223441],[40.778403,-119.219284],[40.780811,-119.220545],[40.779863,-119.225183],[40.783386,-119.226758],[40.783385,-119.220944],[40.78595,-119.220452],[40.786891,-119.225093],[40.78833,-119.219104],[40.793489,-119.221103],[40.790936,-119.217227],[40.781122,-119.195576],[40.780245,-119.190896],[40.792625,-119.210585],[40.796147,-119.211823],[40.780674,-119.204158],[40.783238,-119.20582],[40.786073,-119.211263],[40.787711,-119.198913],[40.796769,-119.194341],[40.791705,-119.188491],[40.798651,-119.206697],[40.800281,-119.203537],[40.797871,-119.20141],[40.777736,-119.185546],[40.777305,-119.183859],[40.789769,-119.22239]];
+  function nearestPotty(p){
+    if (!p) return null;
+    var best = null, bestFt = Infinity;
+    for (var i = 0; i < TOILETS.length; i++){
+      var dn = (TOILETS[i][0] - p.lat) * FLAT, de = (TOILETS[i][1] - p.lon) * FLON;
+      var ft = Math.hypot(dn, de);
+      if (ft < bestFt){ bestFt = ft; best = TOILETS[i]; }
+    }
+    if (!best) return null;
+    /* compass bearing user -> potty, translated to the city's clock face */
+    var brg = Math.atan2((best[1] - p.lon) * FLON, (best[0] - p.lat) * FLAT) * 180 / Math.PI;
+    var clock = ((brg / 30) + 10.5) % 12; if (clock < 0) clock += 12;
+    var h = Math.round(clock * 2) / 2; if (h === 0) h = 12;
+    var hh = Math.floor(h), mm = (h % 1) ? ':30' : ':00';
+    return { ft: Math.round(bestFt), min: Math.max(1, Math.round(bestFt / 3 / 60)), clock: hh + mm };
+  }
+  function initPotty(){
+    var btn = $('potty-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var note = $('potty-note');
+      if (!note) return;
+      if (!here){ note.textContent = 'Set your location first, then I can point you.'; note.style.display = ''; return; }
+      var n = nearestPotty(here);
+      if (!n){ note.textContent = 'No potty data. That should not happen; go by the smell.'; note.style.display = ''; return; }
+      note.textContent = '🚽 Nearest bank: about ' + n.min + ' min walk (' + n.ft + ' ft), head toward the ' + n.clock + ' direction on the clock.';
+      note.style.display = '';
+    });
   }
   /* Every generated attribute in this file is double-quoted, but escape the
      single quote too so one future data-x='...' cannot become an XSS hole. */
@@ -1804,6 +1864,13 @@
       return { reply: "Try asking something like 'whats on near me now' or 'coffee tomorrow morning'.", results: [] };
     }
     var qLower = applyAskSynonyms(raw.toLowerCase().normalize('NFD').replace(FOLD_RE,''));
+    /* typo-correct words that match nothing in the data ("opulant" -> "opulent"),
+       so the ask path fuzzes the same way the live filter does */
+    qLower = qLower.split(/(\s+)/).map(function(part){
+      var w = part.trim();
+      if (!w || w.length < 4 || STOPW.has(w) || !/^[a-z0-9]+$/.test(w)) return part;
+      return part.replace(w, fuzzyRemap(w));
+    }).join('');
 
     var isConvLoc = /^(?:i['’]?m\s+at|we\s+are\s+at|located\s+at|currently\s+at|at)\s+/i.test(raw);
     var pLocDirect = parseWhere(raw);
@@ -3884,6 +3951,7 @@
     initPdfPanel();
     initOwnEvents();
     initSubmitEvent();
+    initPotty();
     initFilterModal();
     initLocModal();
     initNavModal();
@@ -4146,6 +4214,7 @@
     campSuggest: campSuggest,
     resolveCamp: resolveCamp,
     calcRoute: calcRoute,
+    nearestPotty: nearestPotty,
     applyHashMode: applyHashMode,
     syncTabBar: syncTabBar,
     showUpdateToast: showUpdateToast,

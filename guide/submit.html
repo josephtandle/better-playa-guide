@@ -88,6 +88,7 @@ Baz art car: sunset set Thursday 6pm near the Temple
   photoInput.addEventListener('change', function(){
     var f = photoInput.files && photoInput.files[0];
     if (!f) { clearPhoto(); return; }
+    if (f.size > 25000000) { clearPhoto(); msg.textContent = 'That photo is too large. Take a screenshot of it and attach that instead.'; return; }
     var img = new Image();
     var url = URL.createObjectURL(f);
     img.onload = function(){
@@ -133,5 +134,6 @@ Baz art car: sunset set Thursday 6pm near the Temple
       .finally(function(){ btn.disabled = false; btn.textContent = 'Send it all in'; });
   });
 })();
+if ('serviceWorker' in navigator) { try { navigator.serviceWorker.register('/guide/sw.js'); } catch(e){} }
 </script>
 </body></html>

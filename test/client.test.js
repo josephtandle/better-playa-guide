@@ -121,7 +121,7 @@ function pendingOk(cond, name) {
 }
 (function () {
   const r = BPG.answer('opulant temple');
-  pendingOk(r && Array.isArray(r.results) && r.results.length > 0,
+  ok(r && Array.isArray(r.results) && r.results.length > 0,
     'answer("opulant temple") fuzzy-resolves to results (' + (r && r.results && r.results.length) + ')');
 })();
 
@@ -1195,6 +1195,18 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   form.addEventListener('submit', () => { askSubmitted = true; });
   form.dispatchEvent(new e.window.Event('submit', { bubbles: true, cancelable: true }));
   ok(askSubmitted === true, 'submitting ask-q triggers full ask');
+})();
+
+/* nearest porta potty: 45 official banks, sane answer from anywhere */
+(function () {
+  const BPG = env.BPG;
+  const n = BPG.nearestPotty({ lat: 40.783247, lon: -119.207884 }); /* the Man */
+  ok(!!n && n.ft > 100 && n.ft < 8000, 'nearestPotty from the Man returns a plausible distance (' + (n && n.ft) + ' ft)');
+  ok(!!n && n.min >= 1 && n.min <= 45, 'nearestPotty walk time is sane (' + (n && n.min) + ' min)');
+  ok(!!n && /^([1-9]|1[0-2]):(00|30)$/.test(n.clock), 'nearestPotty gives a clock direction (' + (n && n.clock) + ')');
+  ok(BPG.nearestPotty(null) === null, 'nearestPotty(null) fails soft');
+  const btn = env.document.getElementById('potty-btn');
+  ok(!!btn, 'the 🚽 Potty button is on the page');
 })();
 
 /* =====================================================================
