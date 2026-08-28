@@ -1,5 +1,5 @@
 /* Service worker: caches everything so the guide works with no signal. MIT. */
-var CACHE = 'bpg-v94';
+var CACHE = 'bpg-v95';
 var FALLBACK = '/guide/';
 var ASSETS = ['/guide/','/guide','/guide/map','/guide/how-it-was-made','/guide/submit','/guide/offline',
   '/guide/guide.css','/guide/guide.js','/guide/map.js',

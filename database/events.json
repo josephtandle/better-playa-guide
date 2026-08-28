@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 4298,
+  "count": 4318,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -93432,13 +93432,14 @@
    "camp": "Ashram Galactica",
    "address": "9:00 & J",
    "tags": [
-    "music"
+    "music",
+    "party"
    ],
    "fine_tags": [
     10
    ],
    "presenter": "Sky So Young, KalaMari, DJ Dane, Lovecraft",
-   "description": null,
+   "description": "Sky So Young plays Ashram Galactica, Monday night.",
    "schedule": [
     {
      "start": "08-31 21:00",
@@ -114229,6 +114230,529 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Art Car Sunday Night",
+   "camp": "Maxa",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Hicham, Badaoui, Dark Wave, David Hohme",
+   "description": "Maxa Art Car opening-night lineup.",
+   "schedule": [
+    {
+     "start": "08-30 22:30",
+     "end": "23:30"
+    },
+    {
+     "start": "08-30 23:30",
+     "end": "01:00"
+    },
+    {
+     "start": "08-31 01:00",
+     "end": "02:30"
+    },
+    {
+     "start": "08-31 02:30",
+     "end": "04:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Art Car Monday Night",
+   "camp": "Maxa",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Tebby Gonzalez, Tansen, Rod Brito, Talon & Luciano, Jinga, Rafael, Aline Umber, David Triana",
+   "description": "Maxa Art Car Monday lineup through sunrise.",
+   "schedule": [
+    {
+     "start": "08-31 21:00",
+     "end": "23:00"
+    },
+    {
+     "start": "08-31 23:00",
+     "end": "01:00"
+    },
+    {
+     "start": "09-01 01:00",
+     "end": "02:00"
+    },
+    {
+     "start": "09-01 02:00",
+     "end": "04:00"
+    },
+    {
+     "start": "09-01 04:00",
+     "end": "06:00"
+    },
+    {
+     "start": "09-01 06:00",
+     "end": "08:00"
+    },
+    {
+     "start": "09-01 08:00",
+     "end": "10:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Art Car Tuesday: Jan Blomqvist sunset + Alok",
+   "camp": "Maxa",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Jan Blomqvist, Alok, Max Styler, Deer Jade, LP Giobbi, Michael Bibi, Franky Rizardo, Bhaskar",
+   "description": "Maxa Art Car Tuesday: Jan Blomqvist at sunset, then Alok, Max Styler, Deer Jade & LP Giobbi, Michael Bibi b2b Franky Rizardo.",
+   "schedule": [
+    {
+     "start": "09-01 19:00",
+     "end": "20:30"
+    },
+    {
+     "start": "09-01 23:30",
+     "end": "01:00"
+    },
+    {
+     "start": "09-02 01:00",
+     "end": "03:00"
+    },
+    {
+     "start": "09-02 03:00",
+     "end": "05:00"
+    },
+    {
+     "start": "09-02 05:00",
+     "end": "07:00"
+    },
+    {
+     "start": "09-02 07:00",
+     "end": "09:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Art Car Wednesday: fashion show + Carlita b2b Vintage Culture",
+   "camp": "Maxa",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "JKAM, Darco, Riche, Carlita, Vintage Culture, Beltran, Jamyn Phoenix, Musighi",
+   "description": "Maxa Art Car Wednesday: sunset fashion show, then JKAM, Darco, Riche, Carlita b2b Vintage Culture at sunrise, Beltran.",
+   "schedule": [
+    {
+     "start": "09-02 17:30",
+     "end": "20:30"
+    },
+    {
+     "start": "09-02 22:30",
+     "end": "01:00"
+    },
+    {
+     "start": "09-03 01:00",
+     "end": "03:00"
+    },
+    {
+     "start": "09-03 03:00",
+     "end": "05:00"
+    },
+    {
+     "start": "09-03 05:00",
+     "end": "07:00"
+    },
+    {
+     "start": "09-03 07:00",
+     "end": "09:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Art Car Thursday Night",
+   "camp": "Maxa",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Rampue, Philou",
+   "description": "Maxa Art Car Thursday: Rampue 8pm, Philou 11pm; later slots continue (full list was cut off in the source post).",
+   "schedule": [
+    {
+     "start": "09-03 20:00",
+     "end": "22:00"
+    },
+    {
+     "start": "09-03 23:00",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "TITANIC Party with Maxa",
+   "camp": "TITANIC",
+   "address": null,
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "All-night party at the TITANIC art piece with the Maxa art car, midnight to sunrise, Wednesday night.",
+   "schedule": [
+    {
+     "start": "09-03 00:00",
+     "end": "06:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "TITANIC Burns",
+   "camp": "TITANIC",
+   "address": null,
+   "tags": [
+    "art",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The TITANIC art piece burns. 9,000 build hours, 200 participants.",
+   "schedule": [
+    {
+     "start": "09-04 18:30",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Kalypso DJ set (after the Man burns)",
+   "camp": "Rippers Row",
+   "address": "3:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Kalypso",
+   "description": "Kalypso plays Saturday after the Man burns, at 3:00 & Esplanade.",
+   "schedule": [
+    {
+     "start": "09-05 22:00",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Rippers Row rippersrow",
+   "grounded_score": null
+  },
+  {
+   "title": "Ice Cream Burlesque Performance",
+   "camp": "METAL MIMI Camp",
+   "address": "2:30 & A",
+   "tags": [
+    "adult",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Ice cream burlesque performance Tuesday night at Camp Metal Mimi.",
+   "schedule": [
+    {
+     "start": "09-01 22:30",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "METAL MIMI MMC",
+   "grounded_score": null
+  },
+  {
+   "title": "ShibarTEA Show",
+   "camp": "Bisous",
+   "address": "8:45 & E",
+   "tags": [
+    "adult",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "ShibarTEA rope show at camp Bisous, late Wednesday night and late Friday night.",
+   "schedule": [
+    {
+     "start": "09-03 01:00",
+     "end": "01:45"
+    },
+    {
+     "start": "09-05 00:15",
+     "end": "01:15"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Bisous",
+   "grounded_score": null
+  },
+  {
+   "title": "Sunrise Shibari Suspension at the Trash Fence",
+   "camp": "Bisous",
+   "address": "trash fence",
+   "tags": [
+    "adult",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Shibari suspension performance at the trash fence, Thursday 6am.",
+   "schedule": [
+    {
+     "start": "09-03 06:00",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Bisous",
+   "grounded_score": null
+  },
+  {
+   "title": "Late Night Tea Service & Ceremony",
+   "camp": "Bisous",
+   "address": "8:45 & E",
+   "tags": [
+    "drink",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Tea service and tea ceremony, late Saturday night at Bisous.",
+   "schedule": [
+    {
+     "start": "09-05 02:00",
+     "end": "04:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Bisous",
+   "grounded_score": null
+  },
+  {
+   "title": "Fire Flow Workshop",
+   "camp": "Wild Tribe",
+   "address": "9:00 & G",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Fire flow workshop at Wild Tribe, Monday morning.",
+   "schedule": [
+    {
+     "start": "08-31 11:00",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Wild Tribe wildtribecamp",
+   "grounded_score": null
+  },
+  {
+   "title": "LP Giobbi at Camp Mystic",
+   "camp": "Camp Mystic",
+   "address": "2:00 & F",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "LP Giobbi",
+   "description": "LP Giobbi plays Camp Mystic, Monday night.",
+   "schedule": [
+    {
+     "start": "08-31 22:00",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Drweski at Opulent Temple",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Drweski",
+   "description": "Drweski at Opulent Temple, Tuesday night.",
+   "schedule": [
+    {
+     "start": "09-01 21:00",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Samita + Tomcat Workshop",
+   "camp": "Elementum",
+   "address": "9:30 & B",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": "Samita, Tomcat",
+   "description": "Samita and Tomcat workshop at Elementum, Thursday afternoon.",
+   "schedule": [
+    {
+     "start": "09-03 14:30",
+     "end": "16:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Elementum elementumcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Marques Wyatt at Pink Mammoth",
+   "camp": "Pink Mammoth",
+   "address": "9:00 & G",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Marques Wyatt",
+   "description": "Marques Wyatt plays Pink Mammoth before the Man burns, Saturday evening.",
+   "schedule": [
+    {
+     "start": "09-05 18:00",
+     "end": "20:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": "Camp Pink Mammoth pinkmammothsf",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxi Meraki on Tommy Art Car",
+   "camp": "Tommy (art car)",
+   "address": "at the Man",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Maxi Meraki",
+   "description": "Maxi Meraki plays the Tommy art car near the Man, right after the burn.",
+   "schedule": [
+    {
+     "start": "09-05 21:30",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Roniit at Sound Garden",
+   "camp": "Sound Garden",
+   "address": "2:00 & Ellison",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Roniit",
+   "description": "Roniit plays Sound Garden before Temple burn, Sunday evening.",
+   "schedule": [
+    {
+     "start": "09-06 17:30",
+     "end": "19:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Unders at Sahar Camp",
+   "camp": "Sahar Camp",
+   "address": "9:15 & J",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Unders",
+   "description": "Unders plays Sahar Camp after the Temple burn, Sunday night into the last late night.",
+   "schedule": [
+    {
+     "start": "09-06 23:00",
+     "end": null
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
    "grounded_score": null
   },
   {
