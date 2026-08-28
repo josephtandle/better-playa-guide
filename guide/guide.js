@@ -4100,11 +4100,12 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
        At most 3 reports per device per day; sends nothing personal. */
     (function errorBeacon(){
       var sent = 0;
-      var NOISE = /__firefox__|__gCrWeb|safari-extension|chrome-extension|moz-extension|webkit-masked-url|ResizeObserver loop|window\.ethereum|solana/i;
+      var NOISE = /__firefox__|__gCrWeb|safari-extension|chrome-extension|moz-extension|webkit-masked-url|ResizeObserver loop|window\.ethereum|solana|metamask|darkreader|webkit\.messageHandlers|zaloJSV2|instantSearchSDK/i;
       function report(msg, src, line){
         try {
           if (sent >= 3 || typeof fetch !== 'function') return;
           if (NOISE.test(String(msg)) || NOISE.test(String(src || ''))) return; /* browser/extension-injected, not our code */
+          if (String(msg) === 'Script error.' && !src) return; /* cross-origin scripts (extensions, in-app webviews): opaque, unactionable */
           if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
           sent++;
           fetch('/api/error', {

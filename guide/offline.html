@@ -1,0 +1,94 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Take it offline: Better Playa Guide</title>
+<meta name="description" content="Step-by-step: put the Better Playa Guide on your phone so it works with zero signal at Burning Man.">
+<meta name="theme-color" content="#fffaf2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/guide/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+<style>
+.step{display:flex;gap:.7rem;align-items:flex-start;margin:.7rem 0}
+.step-n{flex-shrink:0;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brass);color:var(--rouge-deep);font:700 .95rem/1.8rem Montserrat,sans-serif;text-align:center}
+.step p{margin:.15rem 0 0;font-size:.92rem}
+.ok-banner{border:1px solid var(--brass);border-radius:10px;padding:.7rem .9rem;font-size:.92rem;margin:.6rem 0}
+</style>
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="top-row"><h1>Take it offline</h1></div>
+  <p class="kicker">2 minutes now, works all week with zero signal</p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find</a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/submit" data-tab="submit">Add events</a>
+    <a href="/guide/offline" class="active" data-tab="offline">Offline</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<div class="ok-banner" id="offline-status">Checking whether this phone is ready…</div>
+
+<h2>How it works</h2>
+<div class="panel">
+  <p style="margin:0;font-size:.92rem">Every event, the map, and search live <strong>inside this page</strong>. Once you add it to your home screen and open it once with signal, your phone keeps a full copy. After that it needs <strong>no bars, no wifi, no data</strong>: it is not "loading a website", it is opening the copy already on your phone.</p>
+</div>
+
+<h2>iPhone (Safari)</h2>
+<div class="panel">
+  <div class="step"><span class="step-n">1</span><p>Open <strong>playaguide.musecafe.vip</strong> in <strong>Safari</strong> (not Instagram's built-in browser: if you got here from IG, tap <strong>⋯</strong> and choose <em>Open in external browser</em> first).</p></div>
+  <div class="step"><span class="step-n">2</span><p>Tap the <strong>Share</strong> button: the square with the arrow pointing up, bottom-middle of the screen.</p></div>
+  <div class="step"><span class="step-n">3</span><p>Scroll down the share sheet and tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>.</p></div>
+  <div class="step"><span class="step-n">4</span><p>Find the new <strong>Playa Guide</strong> icon on your home screen and <strong>open it once while you still have signal</strong>. Scroll around for a few seconds: that saves everything.</p></div>
+</div>
+
+<h2>Android (Chrome)</h2>
+<div class="panel">
+  <div class="step"><span class="step-n">1</span><p>Open <strong>playaguide.musecafe.vip</strong> in <strong>Chrome</strong> (same trick if you're inside Instagram: <strong>⋮</strong> then <em>Open in Chrome</em>).</p></div>
+  <div class="step"><span class="step-n">2</span><p>Tap the <strong>⋮</strong> menu, top right.</p></div>
+  <div class="step"><span class="step-n">3</span><p>Tap <strong>Add to Home screen</strong> (some phones say <em>Install app</em>), then confirm.</p></div>
+  <div class="step"><span class="step-n">4</span><p>Open the new icon once with signal and scroll around. Done.</p></div>
+</div>
+
+<h2>Prove it to yourself</h2>
+<div class="panel">
+  <div class="step"><span class="step-n">1</span><p>Turn on <strong>Airplane Mode</strong>.</p></div>
+  <div class="step"><span class="step-n">2</span><p>Open the guide <strong>from the home screen icon</strong>.</p></div>
+  <div class="step"><span class="step-n">3</span><p>Search something. If results come up, you're playa-proof. If not, turn airplane mode off, open it once more with signal, and test again.</p></div>
+</div>
+
+<h2>If it doesn't work</h2>
+<div class="panel">
+  <ul style="margin:0 0 0 1.1rem;font-size:.9rem;line-height:1.6">
+    <li><strong>Always open from the home screen icon</strong>, not from a link in a chat or Instagram: those open a fresh browser that may need signal.</li>
+    <li>The first open ever needs signal. If you added the icon but never opened it, it has nothing saved yet.</li>
+    <li>Private/incognito mode can't save anything. Use a normal tab.</li>
+    <li>"Low data mode" or nearly-full storage can stop the save. Free a little space and open it once more.</li>
+    <li>Events added after you go offline obviously won't appear until you next catch signal (Center Camp wifi works): just open the icon again and it updates itself.</li>
+  </ul>
+</div>
+
+<p style="margin:1.2rem 0 2rem"><a class="btn solid" href="/guide/">&larr; Back to the guide</a></p>
+
+</main>
+<script>
+(function(){
+  var el = document.getElementById('offline-status');
+  function set(t){ el.innerHTML = t; }
+  var standalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (standalone) { set('✅ <strong>You are opening this from your home screen: this phone is playa-ready.</strong> Airplane-mode test below if you want proof.'); return; }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/guide/sw.js');
+    navigator.serviceWorker.getRegistration('/guide/').then(function(reg){
+      if (reg && reg.active) set('🟡 The data is saved on this phone, but <strong>add it to your home screen</strong> (steps below) so it opens reliably offline.');
+      else set('🔴 <strong>Not saved yet.</strong> Follow the steps below now, while you have signal.');
+    }).catch(function(){ set('Follow the steps below while you have signal.'); });
+  } else {
+    set('This browser cannot save the guide. Open the link in Safari (iPhone) or Chrome (Android) and follow the steps below.');
+  }
+})();
+</script>
+</body></html>
