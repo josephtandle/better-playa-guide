@@ -112,4 +112,75 @@ async function incrBy(key, delta, ttlSec) {
   return next;
 }
 
-module.exports = { get, set, incrBy, backendName };
+/* Atomic rate limiter. Priority: Supabase Postgres RPC (globally atomic, no
+ * extra infra) -> Upstash incr -> local counter (per-instance, last resort).
+ * Returns true when the hit is ALLOWED. failMode 'closed' denies when no
+ * global backend answered (for costly actions: email sends); default 'open'
+ * falls back to the local counter (availability first). */
+async function rateHit(key, cap, ttlSec, failMode) {
+  const su = process.env.SUPABASE_URL;
+  const sk = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (su && sk) {
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), 3500);
+    try {
+      const r = await fetch(su.replace(/\/$/, '') + '/rest/v1/rpc/guide_rate_hit', {
+        method: 'POST',
+        signal: ac.signal,
+        headers: { apikey: sk, Authorization: 'Bearer ' + sk, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_key: key, p_cap: cap, p_ttl_s: ttlSec })
+      });
+      if (r.ok) {
+        const txt = (await r.text()).trim();
+        clearTimeout(timer);
+        if (txt === 'true' || txt === 'false') return txt === 'true';
+        console.error('rateHit: unexpected rpc body "' + txt.slice(0, 40) + '"');
+      } else {
+        console.error('rateHit: rpc status ' + r.status);
+      }
+    } catch (e) { console.error('rateHit: rpc unreachable: ' + e.message); } finally { clearTimeout(timer); }
+  }
+  if (backendName === 'upstash') {
+    try {
+      const n = await up('/incr/' + encodeURIComponent(key), { method: 'POST' });
+      try { await up('/expire/' + encodeURIComponent(key) + '/' + (ttlSec || 3600) + '/NX', { method: 'POST' }); } catch (e) {}
+      return Number(n) <= cap;
+    } catch (e) { logUpFail(e); }
+  }
+  /* fail-closed applies only when a global backend IS configured but did not
+     answer (suspicious infra state on a costly action). With none configured
+     (local dev, tests) the local counter is the honest limiter. */
+  if (failMode === 'closed' && (su && sk || backendName === 'upstash')) return false;
+  const n2 = (Number(localGet(key)) || 0);
+  if (n2 >= cap) return false;
+  localSet(key, n2 + 1, ttlSec);
+  return true;
+}
+
+/* undo one reserved hit after a failed downstream action (failed email etc.) */
+async function rateRefund(key) {
+  const su = process.env.SUPABASE_URL;
+  const sk = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (su && sk) {
+    try {
+      const r = await fetch(su.replace(/\/$/, '') + '/rest/v1/rpc/guide_rate_refund', {
+        method: 'POST',
+        headers: { apikey: sk, Authorization: 'Bearer ' + sk, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_key: key })
+      });
+      if (r.ok) return;
+      console.error('rateRefund: rpc status ' + r.status);
+    } catch (e) { console.error('rateRefund: rpc unreachable: ' + e.message); }
+  }
+  if (backendName === 'upstash') {
+    try {
+      const n = await up('/decrby/' + encodeURIComponent(key) + '/1', { method: 'POST' });
+      if (Number(n) < 0) { try { await up('/incrby/' + encodeURIComponent(key) + '/1', { method: 'POST' }); } catch (e2) {} }
+      return;
+    } catch (e) { logUpFail(e); }
+  }
+  const n = Number(localGet(key)) || 0;
+  if (n > 0) localSet(key, n - 1, 86400);
+}
+
+module.exports = { get, set, incrBy, rateHit, rateRefund, backendName };

@@ -11,7 +11,7 @@
   function fold(s){ return String(s||'').toLowerCase().normalize('NFD').replace(FOLD_RE,''); }
   /* ---- smart search: tokens, filler words dropped, squashed-space and
      typo-tolerant matching ("rhymewave camp events" finds RhythmWave) ---- */
-  var STOPW = new Set(['camp','camps','event','events','the','a','an','at','is','are','was','when','whens','what','whats','where','wheres','who','whos','how','hows','im','id','ill','in','on','of','for','to','and','or','me','my','their','there','show','find','all','any','list','playing','play','happening','schedule','stuff','things','going','does','do','can','get','near','around']);
+  var STOPW = new Set(['camp','camps','event','events','the','a','an','at','is','are','was','when','whens','what','whats','where','wheres','who','whos','how','hows','im','id','ill','in','on','of','for','to','and','or','me','my','their','there','show','find','all','any','list','playing','play','happening','schedule','stuff','things','going','does','do','can','get','near','around','tonight','tonite','today','tomorrow','now']);
   var VOCAB = null, CORPUS = '';
   function buildVocab(){
     if (VOCAB) return;
@@ -77,6 +77,64 @@
     var words = q.split(/[^a-z0-9]+/).filter(function(w){ return w && !STOPW.has(w); });
     if (!words.length && q.trim()) words = q.split(/[^a-z0-9]+/).filter(Boolean); /* all-filler query: keep as typed */
     return words.map(fuzzyRemap);
+  }
+  /* ---- clock-time expressions: "coffee at 8am", "after 10 tonight" ----
+     Returns {q: cleanedQuery, from: minutes|null, to: minutes|null} where
+     minutes are minutes-of-day. "at X" makes a window X-30min..X+2h30. */
+  function parseTimeExpr(q){
+    var from = null, to = null;
+    /* "8:15 & E" / "3:00 and C" is an ADDRESS, not a time */
+    if (/\d{1,2}(?::\d{2})?\s*(?:&|and)\s*(?:esplanade|esp\b|[a-l]\b(?!\s+\w))/i.test(q)) return { q: q, from: null, to: null };
+    var morningish = /\bmorning\b|\bsunrise\b|\bbreakfast\b|\bbrunch\b|\bdawn\b|\byoga\b|\bcoffee\b|\bkids?\b|\bfamily\b|\bchildren\b|\bam\b/.test(q);
+    var nightish = !morningish; /* at a festival a bare "party at 10" means 22:00 */
+    function toMin(h, m, ap){
+      h = +h; m = +(m || 0);
+      if (ap === 'pm' && h < 12) h += 12;
+      if (ap === 'am' && h === 12) h = 0;
+      if (!ap && h <= 11 && nightish) h += 12;
+      return h * 60 + m;
+    }
+    var re = /\b(at|after|before|from)?\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b|\b(at|after|before|from)\s+(\d{1,2})(?::(\d{2}))?\b/;
+    var m = re.exec(q);
+    if (!m) return { q: q, from: null, to: null };
+    var word = (m[1] || m[5] || 'at').toLowerCase();
+    var rawH = +(m[4] !== undefined ? m[2] : m[6]);
+    if (!(rawH >= 0 && rawH <= 23)) return { q: q, from: null, to: null }; /* "Tower 69" is not 69 o'clock */
+    var mins = m[4] !== undefined ? toMin(m[2], m[3], m[4]) : toMin(m[6], m[7], null);
+    if (word === 'after' || word === 'from') { from = mins; to = (mins + 480) % 1440; /* "after 10pm" runs into the sunrise hours */ }
+    else if (word === 'before') { to = mins; }
+    else { from = ((mins - 30) + 1440) % 1440; to = (mins + 150) % 1440; }
+    var cleaned = q.replace(re, ' ').replace(/\s+/g, ' ').trim();
+    return { q: cleaned, from: from, to: to };
+  }
+  function minsOf(hmStr){
+    var hm = /(\d{2}):(\d{2})$/.exec(String(hmStr || ''));
+    return hm ? (+hm[1]) * 60 + (+hm[2]) : null;
+  }
+  function inWin(mins, from, to){
+    if (mins === null) return false;
+    if (from !== null && to !== null && from > to) return mins >= from || mins <= to; /* window over midnight */
+    if (from !== null && mins < from) return false;
+    if (to !== null && mins > to) return false;
+    return true;
+  }
+  function slotInWindow(slot, from, to){
+    /* slot ["MM-DD HH:MM","HH:MM"]: match if the RUNNING event overlaps the
+       window, so a 23:30-02:00 set is found by "at 1am" (interval overlap,
+       midnight-aware on both sides) */
+    if (!slot || typeof slot[0] !== 'string') return false;
+    var s = minsOf(slot[0]);
+    if (s === null) return false;
+    if (inWin(s, from, to)) return true;
+    var e2 = minsOf(slot[1]);
+    if (e2 === null) return false;
+    if (inWin(e2, from, to)) return true;
+    /* window fully inside the running span */
+    var probe = from !== null ? from : to;
+    if (probe === null) return false;
+    if (e2 <= s) e2 += 1440; /* set wraps midnight */
+    var pp = probe < s ? probe + 1440 : probe;
+    return pp >= s && pp <= e2;
   }
   var HAYS = [];
   function eventHay(e, i){
@@ -1633,8 +1691,13 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     if (!$('list')) return;
     var qEl = $('ask-q') || $('q');
     var q = (qEl ? qEl.value : '').trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
+    var tw = q ? parseTimeExpr(q) : { q: q, from: null, to: null };
+    q = tw.q;
     var qTokens = q ? queryTokens(q) : null;
     if (qTokens && !qTokens.length) qTokens = null;
+    /* multi-intent: "coffee and a sauna" or "party or workshop" means EITHER.
+       Used only when the strict all-words match finds nothing. */
+    var orClauses = null;
     /* recall fallback: if the full token set matches nothing, drop tokens from
        the end (users put the throwaway words last: "costume making", "climate
        talks", "set time") until something matches */
@@ -1643,10 +1706,21 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
         for (var hi = 0; hi < GROUPS.length; hi++){ if (matchTokens(toks, eventHay(GROUPS[hi], hi))) return true; }
         return false;
       };
-      if (!anyHit(qTokens)){
-        for (var di = qTokens.length - 1; di >= 0 && qTokens.length > 1; di--){
-          var sub = qTokens.slice(0, di).concat(qTokens.slice(di + 1));
-          if (anyHit(sub)){ qTokens = sub; break; }
+      var addressish = /\d{1,2}(?::\d{2})?\s*(?:&|and)\s*(?:esplanade|esp\b|[a-l]\b(?!\s+\w))/i.test(q);
+      if (!anyHit(qTokens) && !addressish){
+        /* first try splitting on and/or into independent clauses */
+        var parts = q.split(/\b(?:and|or)\b|[,+]/).map(function(s){ return queryTokens(s.trim()); }).filter(function(a){ return a && a.length; });
+        if (parts.length > 1){
+          var live = parts.filter(anyHit);
+          if (live.length) orClauses = live;
+        }
+      }
+      if (qTokens && qTokens.length > 1 && !orClauses && !anyHit(qTokens)){
+        {
+          for (var di = qTokens.length - 1; di >= 0 && qTokens.length > 1; di--){
+            var sub = qTokens.slice(0, di).concat(qTokens.slice(di + 1));
+            if (anyHit(sub)){ qTokens = sub; break; }
+          }
         }
       }
     }
@@ -1663,8 +1737,19 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       if (mylistOnly && !isStarred) continue;
       if (confirmedOnly && provenance(e).tier !== 'confirmed') continue;
       if (active.size && !e.g.some(function(t){ return active.has(t); })) continue;
-      if (qTokens && !matchTokens(qTokens, eventHay(e, i))) continue;
-      var slot = null;
+      if (orClauses){
+        var hayOr = eventHay(e, i), hitOr = false;
+        for (var oc = 0; oc < orClauses.length; oc++){ if (matchTokens(orClauses[oc], hayOr)){ hitOr = true; break; } }
+        if (!hitOr) continue;
+      } else if (qTokens && !matchTokens(qTokens, eventHay(e, i))) continue;
+      var twSlot = null;
+      if ((tw.from !== null || tw.to !== null)){
+        for (var si2 = 0; si2 < e.s.length; si2++){ if (slotInWindow(e.s[si2], tw.from, tw.to)){ twSlot = e.s[si2]; break; } }
+        if (!twSlot) continue;
+      }
+      /* with a day selected, the day loop alone may pick the slot: an event
+         whose only in-window slot is on ANOTHER day must not leak in */
+      var slot = day ? null : twSlot;
       if (day){
         for (var j=0; j<e.s.length; j++){
           var slotStart = e.s[j][0];

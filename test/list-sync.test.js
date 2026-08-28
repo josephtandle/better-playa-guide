@@ -29,12 +29,26 @@ function ok(cond, name) {
 /* ---- fetch stub: records every outbound call ---- */
 let calls = [];
 let failResend = false;
+const rateBuckets = new Map(); /* faithful in-memory model of guide_rate_hit */
 global.fetch = async function (url, init) {
   calls.push({ url: String(url), init: init || {} });
-  if (String(url).indexOf('resend.com') !== -1 && failResend) {
-    return { ok: false, status: 500, json: async () => ({}) };
+  const u = String(url);
+  if (u.indexOf('/rpc/guide_rate_hit') !== -1) {
+    const b = JSON.parse(init.body);
+    const cur = rateBuckets.get(b.p_key) || 0;
+    const allowed = cur < b.p_cap;
+    if (allowed) rateBuckets.set(b.p_key, cur + 1);
+    return { ok: true, status: 200, text: async () => String(allowed), json: async () => allowed };
   }
-  return { ok: true, status: 200, json: async () => ({}) };
+  if (u.indexOf('/rpc/guide_rate_refund') !== -1) {
+    const b = JSON.parse(init.body);
+    rateBuckets.set(b.p_key, Math.max(0, (rateBuckets.get(b.p_key) || 0) - 1));
+    return { ok: true, status: 200, text: async () => '', json: async () => null };
+  }
+  if (u.indexOf('resend.com') !== -1 && failResend) {
+    return { ok: false, status: 500, text: async () => '', json: async () => ({}) };
+  }
+  return { ok: true, status: 200, text: async () => '', json: async () => ({}) };
 };
 
 function fakeReq(body, ip, method) {
@@ -88,7 +102,7 @@ const GOOD = { email: 'test@example.com', hashes: ['0a1b2c3d', 'deadbeef'], name
   r = await run(GOOD, '203.0.113.3');
   ok(r.res.statusCode === 200 && r.json && r.json.ok === true, 'valid payload -> 200 {ok:true}');
   ok(r.res.body === JSON.stringify({ ok: true }), 'response body carries NOTHING but ok:true (no echo of stored data)');
-  const supa = calls.find(c => c.url.indexOf('supabase.co') !== -1);
+  const supa = calls.find(c => c.url.indexOf('guide_list_backups') !== -1);
   const resend = calls.find(c => c.url.indexOf('resend.com') !== -1);
   ok(!!supa && supa.url.indexOf('/rest/v1/guide_list_backups') !== -1 && supa.url.indexOf('on_conflict=email') !== -1,
     'row upserts into guide_list_backups on email');

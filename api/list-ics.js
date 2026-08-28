@@ -50,8 +50,7 @@ module.exports = async function handler(req, res) {
 
   const ip = clientIp(req);
   const ipKey = 'li:ip:' + sha(ip);
-  const nIp = Number(await store.get(ipKey)) || 0;
-  if (nIp >= PER_IP_CAP) {
+  if (!(await store.rateHit(ipKey, PER_IP_CAP, DAY))) {
     res.statusCode = 429;
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     return res.end(JSON.stringify({ error: 'rate_limited' }));
@@ -72,7 +71,6 @@ module.exports = async function handler(req, res) {
   }
 
   const ics = buildListIcs(events);
-  await store.incrBy(ipKey, 1, DAY);
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/calendar; charset=utf-8');

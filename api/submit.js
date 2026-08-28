@@ -81,17 +81,16 @@ module.exports = async function handler(req, res) {
 
   const ip = clientIp(req);
   const ipKey = 'gs:ip:' + sha(ip);
-  const n = Number(await store.get(ipKey)) || 0;
-  if (n >= PER_IP_CAP) {
-    res.statusCode = 429;
-    return res.end(JSON.stringify({ error: 'rate_limited' }));
-  }
-
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
     res.statusCode = 503;
     return res.end(JSON.stringify({ error: 'not_configured' }));
+  }
+  /* atomic reserve (Postgres) so parallel posts cannot slip past the cap */
+  if (!(await store.rateHit(ipKey, PER_IP_CAP, DAY))) {
+    res.statusCode = 429;
+    return res.end(JSON.stringify({ error: 'rate_limited' }));
   }
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 6000);
@@ -104,13 +103,14 @@ module.exports = async function handler(req, res) {
     });
     if (!r.ok) {
       console.error('submit: store failed ' + r.status);
+      try { await store.rateRefund(ipKey); } catch (e) {}
       res.statusCode = 502;
       return res.end(JSON.stringify({ error: 'store_failed' }));
     }
-    await store.incrBy(ipKey, 1, DAY);
     res.statusCode = 200;
     return res.end(JSON.stringify({ ok: true }));
   } catch (e) {
+    try { await store.rateRefund(ipKey); } catch (e2) {}
     res.statusCode = 502;
     return res.end(JSON.stringify({ error: 'store_failed' }));
   } finally { clearTimeout(timer); }

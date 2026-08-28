@@ -192,9 +192,13 @@ module.exports = async function handler(req, res) {
   const ip = clientIp(req);
   const emailKey = 'ls:e:' + sha(email);
   const ipKey = 'ls:ip:' + sha(ip);
-  const nEmail = Number(await store.get(emailKey)) || 0;
-  const nIp = Number(await store.get(ipKey)) || 0;
-  if (nEmail >= PER_EMAIL_CAP || nIp >= PER_IP_CAP) {
+  /* atomic reserve BEFORE the send; email costs money, so with no global
+     limiter reachable this fails closed rather than open */
+  const okEmail = await store.rateHit(emailKey, PER_EMAIL_CAP, DAY, 'closed');
+  const okIp = okEmail && await store.rateHit(ipKey, PER_IP_CAP, DAY, 'closed');
+  if (!okEmail || !okIp) {
+    /* a shared camp-wifi IP at cap must not silently eat personal email quota */
+    if (okEmail && !okIp) { try { await store.rateRefund(emailKey); } catch (e) {} }
     res.statusCode = 429;
     return res.end(JSON.stringify({ error: 'rate_limited' }));
   }
@@ -222,11 +226,12 @@ module.exports = async function handler(req, res) {
 
   const sent = await sendMail(email, link, name, mode, pdfBuf);
   if (!sent.ok) {
+    /* the send failed: give the reserved quota back */
+    try { await store.rateRefund(emailKey); await store.rateRefund(ipKey); } catch (e) {}
     res.statusCode = sent.reason === 'not_configured' ? 503 : 502;
     return res.end(JSON.stringify({ error: sent.reason }));
   }
-  await store.incrBy(emailKey, 1, DAY);
-  await store.incrBy(ipKey, 1, DAY);
+  /* quota was reserved atomically before the send; nothing to add here */
   const saved = await saveRow(email, name, camp, body.hashes);
   /* a failed store with a successful send is still a success for the user;
      log it (status only) and move on. */

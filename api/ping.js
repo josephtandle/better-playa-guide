@@ -29,9 +29,7 @@ module.exports = async function handler(req, res) {
   try {
     const xf = String((req.headers && (req.headers['x-real-ip'] || req.headers['x-forwarded-for'])) || 'unknown');
     const ipKey = 'gp:ip:' + crypto.createHash('sha256').update(xf).digest('hex').slice(0, 24);
-    const n = Number(await store.get(ipKey)) || 0;
-    if (n >= 25) { res.statusCode = 204; return res.end(); }
-    await store.incrBy(ipKey, 1, 86400);
+    if (!(await store.rateHit(ipKey, 25, 86400))) { res.statusCode = 204; return res.end(); }
   } catch (e) { /* the counter must never break the guide */ }
 
   const url = process.env.SUPABASE_URL;

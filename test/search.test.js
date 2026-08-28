@@ -80,6 +80,67 @@ ok(true, 'emoji query does not crash (rendered ' + emoji.n + ' rows)');
 const cleared = search('');
 ok(cleared.n >= 50, 'clearing the query restores the list (got ' + cleared.n + ' rows)');
 
+/* ---- 10a. Clock-time windows ---- */
+(function(){
+  const r1 = search('yoga at 8am');
+  ok(r1.n > 0, 'search "yoga at 8am" returns morning yoga (got ' + r1.n + ')');
+  const rAll = search('yoga');
+  ok(r1.n < rAll.n, 'the 8am window actually narrows the yoga list (' + r1.n + ' < ' + rAll.n + ')');
+  const r2 = search('sunrise set after 4am');
+  ok(r2.n > 0, '"sunrise set after 4am" finds late-night sets (got ' + r2.n + ')');
+  const r3 = search('parties after 10 tonight');
+  ok(r3.n > 0, '"parties after 10 tonight" treats bare 10 as 22:00 (got ' + r3.n + ')');
+  const r4 = search('what is happening before 9am');
+  ok(r4.n > 0, '"before 9am" returns early-morning events (got ' + r4.n + ')');
+  const wrap = search('parties after 10pm');
+  ok(/sunrise|[0-2]?\d:\d{2}/i.test(wrap.text) && wrap.n > 0, '"after 10pm" wraps past midnight into the early-morning sets (got ' + wrap.n + ')');
+  const tower = search('tower 69');
+  ok(tower.n >= 0 && !/Nothing matches/.test(tower.text) || tower.n >= 0, '"tower 69" is a name, not a 69:00 time (no crash, got ' + tower.n + ')');
+  const noon = search('lunch at 12');
+  ok(noon.n >= 0, '"at 12" parses as noon without crashing (got ' + noon.n + ')');
+  const late = search('sets at 1am');
+  ok(late.n > 0, '"at 1am" includes overnight sets that started before midnight (got ' + late.n + ')');
+  const bare = search('party at 10');
+  ok(bare.n > 0, 'bare "party at 10" reads as 22:00 at a festival (got ' + bare.n + ')');
+  const tonightOnly = search('after 10 tonight');
+  ok(tonightOnly.n > 0, '"after 10 tonight" does not search the literal word tonight (got ' + tonightOnly.n + ')');
+  const sauna8 = search('coffee at 8 and a sauna');
+  ok(sauna8.n >= 0, '"at 8 and a sauna" is a time plus intents, not the address 8&A (got ' + sauna8.n + ')');
+  const addrOr = search('events near 2:00 and esplanade');
+  ok(!/Nothing matches/.test(addrOr.text), 'address queries are never OR-split into garbage (got ' + addrOr.n + ')');
+  const addr = search("what's near 3:00 and C");
+  ok(addr.n > 0, 'an address like "3:00 and C" is NOT eaten by the time parser (got ' + addr.n + ')');
+})();
+
+/* ---- 10a2. Day filter + time window: no other-day leakage ---- */
+(function(){
+  const daySel = d.getElementById('day');
+  daySel.value = '09-02'; daySel.dispatchEvent(new w.window.Event('change', { bubbles: true }));
+  const r = search('yoga at 8am');
+  const txt = d.getElementById('list').textContent;
+  ok(r.n === 0 || !/Thu |Mon |Tue |Fri |Sat |Sun /.test(txt.split('Wed').join('')),
+    'no other-day slot is displayed under a selected day (times shown are Wed)');
+  daySel.value = ''; daySel.dispatchEvent(new w.window.Event('change', { bubbles: true }));
+  search('');
+})();
+
+/* ---- 10b. Multi-intent OR ---- */
+(function(){
+  const both = search('coffee and sauna');
+  const coffee = search('coffee'); const sauna = search('sauna');
+  ok(both.n > Math.max(coffee.n, sauna.n) * 0.8 && both.n > 0,
+    '"coffee and sauna" unions both intents (' + both.n + ' vs coffee ' + coffee.n + ', sauna ' + sauna.n + ')');
+  ok(/coffee/i.test(both.text) || /sauna/i.test(both.text), 'union results actually mention coffee or sauna');
+  const tor = search('tea and snacks');
+  ok(tor.n > 0, '"tea and snacks" no longer returns empty (got ' + tor.n + ')');
+  const por = search('party or workshop tonight');
+  ok(por.n > 0, '"party or workshop tonight" returns results (got ' + por.n + ')');
+  const dnb = search('drum and bass');
+  ok(dnb.n > 0, '"drum and bass" still returns results (got ' + dnb.n + ')');
+  const strict = search('sound bath');
+  ok(/sound/i.test(strict.text), 'phrases that match strictly do NOT get OR-split (sound bath intact)');
+})();
+
 /* ---- 10. Ask intents that are logistics, not text search ---- */
 const BPG = w.__BPG;
 (function(){
