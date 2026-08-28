@@ -25,14 +25,16 @@ module.exports = async function handler(req, res) {
     const ac = new AbortController();
     const timer = setTimeout(() => ac.abort(), 4000);
     try {
-      const r = await fetch(url.replace(/\/$/, '') + '/rest/v1/guide_pings?select=client_id', {
+      /* distinct devices, not device-days: counted in SQL so the number
+         stays honest as people come back day after day */
+      const r = await fetch(url.replace(/\/$/, '') + '/rest/v1/rpc/guide_device_count', {
         signal: ac.signal,
-        method: 'HEAD',
-        headers: { apikey: key, Authorization: 'Bearer ' + key, Prefer: 'count=exact' }
+        method: 'POST',
+        headers: { apikey: key, Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' },
+        body: '{}'
       });
-      const range = r.headers.get('content-range') || '';
-      const m = /\/(\d+)$/.exec(range);
-      if (m) devices = Number(m[1]);
+      const n = Number(await r.text());
+      if (r.ok && isFinite(n) && n >= 0) devices = n;
     } catch (e) { /* stats are best-effort */ }
     finally { clearTimeout(timer); }
   }
