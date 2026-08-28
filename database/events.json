@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 4209,
+  "count": 4298,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -31641,7 +31641,8 @@
    "camp": "Camp Contact",
    "address": "3:45 & C",
    "tags": [
-    "workshop"
+    "workshop",
+    "lineup"
    ],
    "fine_tags": [
     69
@@ -44107,7 +44108,8 @@
    "camp": "Camp Contact",
    "address": "3:45 & C",
    "tags": [
-    "workshop"
+    "workshop",
+    "lineup"
    ],
    "fine_tags": [
     70,
@@ -44347,7 +44349,9 @@
    "address": "3:45 & C",
    "tags": [
     "ritual",
-    "workshop"
+    "workshop",
+    "talk",
+    "lineup"
    ],
    "fine_tags": [
     65
@@ -44427,7 +44431,9 @@
    "camp": "Camp Contact",
    "address": "3:45 & C",
    "tags": [
-    "workshop"
+    "workshop",
+    "talk",
+    "lineup"
    ],
    "fine_tags": [
     4,
@@ -44474,7 +44480,9 @@
    "camp": "Camp Contact",
    "address": "3:45 & C",
    "tags": [
-    "workshop"
+    "workshop",
+    "wellness",
+    "lineup"
    ],
    "fine_tags": [
     1,
@@ -45382,7 +45390,8 @@
    "address": "3:45 & C",
    "tags": [
     "wellness",
-    "workshop"
+    "workshop",
+    "lineup"
    ],
    "fine_tags": [
     0
@@ -74974,12 +74983,14 @@
    "address": "3:45 & C",
    "tags": [
     "drink",
-    "service"
+    "service",
+    "talk",
+    "lineup"
    ],
    "fine_tags": [
     13
    ],
-   "presenter": null,
+   "presenter": "Playa Dad",
    "description": "Dad hugs, advice, affirmation, coffee, and unconditional support on playa. Dad hugs, advice, affirmation, coffee, and unconditional support on playa.",
    "schedule": [
     {
@@ -75041,7 +75052,8 @@
    "tags": [
     "music",
     "party",
-    "wellness"
+    "wellness",
+    "lineup"
    ],
    "fine_tags": [
     5
@@ -75066,7 +75078,9 @@
    "tags": [
     "adult",
     "party",
-    "workshop"
+    "workshop",
+    "wellness",
+    "lineup"
    ],
    "fine_tags": [
     23,
@@ -75351,7 +75365,9 @@
    "camp": "Camp Contact",
    "address": "3:45 & C",
    "tags": [
-    "workshop"
+    "workshop",
+    "talk",
+    "lineup"
    ],
    "fine_tags": [
     69,
@@ -97303,13 +97319,14 @@
    "camp": "Disorient",
    "address": "8:00 & Esp",
    "tags": [
-    "music"
+    "music",
+    "party"
    ],
    "fine_tags": [
     10
    ],
-   "presenter": "DJ Jericho Fresco, HUMO BLANCO, Augustine, DJ Durry, Oba + Flip, Adaamar, Rampue / Orbit",
-   "description": null,
+   "presenter": "DJ Jericho Fresco, HUMO BLANCO, Augustine, DJ Durry, Oba + Flip, Adaamar, Rampue / Orbit, Orbit",
+   "description": "DJ set by Orbit at Disorient.",
    "schedule": [
     {
      "start": "09-01 14:30",
@@ -97338,6 +97355,10 @@
     {
      "start": "09-02 01:00",
      "end": "03:00"
+    },
+    {
+     "start": "09-02 01:00",
+     "end": null
     }
    ],
    "source": "rock-star-librarian",
@@ -111447,7 +111468,7 @@
    ],
    "fine_tags": [],
    "presenter": null,
-   "description": "Cosmic breathwork session at Celestial Tea Garden.",
+   "description": "Cosmic breathwork session at Celestial Tea Garden. Guided breathwork session.",
    "schedule": [
     {
      "start": "08-31 16:00",
@@ -111468,7 +111489,7 @@
    ],
    "fine_tags": [],
    "presenter": null,
-   "description": "Creative ignition workshop at Celestial Tea Garden.",
+   "description": "Creative ignition workshop at Celestial Tea Garden. Creativity-focused workshop.",
    "schedule": [
     {
      "start": "09-01 12:00",
@@ -111485,15 +111506,20 @@
    "camp": "Celestial Tea Garden",
    "address": "8:45 & E",
    "tags": [
-    "music"
+    "music",
+    "wellness"
    ],
    "fine_tags": [],
    "presenter": null,
-   "description": "Jade Boiler Room set at Celestial Tea Garden, Wednesday 6pm.",
+   "description": "Jade Boiler Room set at Celestial Tea Garden, Wednesday 6pm. Evening gathering at the Jade Boiler Room.",
    "schedule": [
     {
      "start": "09-02 18:00",
      "end": "20:00"
+    },
+    {
+     "start": "09-02 18:00",
+     "end": null
     }
    ],
    "source": "instagram-flyer-ocr",
@@ -114203,6 +114229,2070 @@
    "source": "instagram-flyer-ocr",
    "confidence": "reported",
    "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "Naked Blowjob Coal-Oven Pizza Night",
+   "camp": "Camp Doesn't Exist",
+   "address": "10:00 & F",
+   "tags": [
+    "food",
+    "adult"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Camp serving coal-oven pizza with naked/adult activity, Friday and Saturday nights 10pm to midnight.",
+   "schedule": [
+    {
+     "start": "09-04 22:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-05 22:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Fleetmac Wood",
+   "description": "DJ set by Fleetmac Wood at Opulent Temple.",
+   "schedule": [
+    {
+     "start": "09-03 18:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Lunars Camp",
+   "address": "3:30 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Fleetmac Wood",
+   "description": "DJ set by Fleetmac Wood at Lunars Camp.",
+   "schedule": [
+    {
+     "start": "09-04 06:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Lunars thelunarscamp",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Long Feng",
+   "address": "10:00 & K",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Natascha Polke",
+   "description": "DJ set by Natascha Polke at Long Feng.",
+   "schedule": [
+    {
+     "start": "09-01 18:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Sound Garden",
+   "address": "02:00 & Ellison",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Natascha Polke",
+   "description": "DJ set by Natascha Polke at Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-03 00:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Natascha Polke",
+   "description": "DJ set by Natascha Polke at Playground.",
+   "schedule": [
+    {
+     "start": "09-05 00:15",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Robot Heart",
+   "address": null,
+   "tags": [
+    "music",
+    "party",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": "Natascha Polke",
+   "description": "DJ set by Natascha Polke with Robot Heart at the Temple Burn.",
+   "schedule": [
+    {
+     "start": "09-06 21:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Robot Heart",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Orbit, Parra for Cuva",
+   "description": "DJ set by Parra for Cuva with Robot Heart at the Apotheneum. DJ set by Orbit with Robot Heart at the Apotheneum.",
+   "schedule": [
+    {
+     "start": "09-02 19:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Orbit",
+   "description": "DJ set by Orbit at Playground.",
+   "schedule": [
+    {
+     "start": "09-04 23:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Favela ArtCar",
+   "address": null,
+   "tags": [
+    "music",
+    "party",
+    "ritual"
+   ],
+   "fine_tags": [],
+   "presenter": "Orbit",
+   "description": "DJ set by Orbit aboard Favela ArtCar at the Man Burn.",
+   "schedule": [
+    {
+     "start": "09-05 21:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Favela ArtCar",
+   "address": "9:45 & I",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Parra for Cuva",
+   "description": "DJ set by Parra for Cuva aboard Favela ArtCar.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Parra for Cuva",
+   "description": "DJ set by Parra for Cuva at Playground.",
+   "schedule": [
+    {
+     "start": "09-05 05:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Axolotl",
+   "address": "4:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Tonic Walter",
+   "description": "DJ set by Tonic Walter at Axolotl.",
+   "schedule": [
+    {
+     "start": "09-01 02:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Lunars Camp",
+   "address": "3:30 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Tonic Walter",
+   "description": "DJ set by Tonic Walter at Lunars Camp.",
+   "schedule": [
+    {
+     "start": "09-01 22:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Lunars thelunarscamp",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Sound Garden",
+   "address": "02:00 & Ellison",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Tonic Walter",
+   "description": "DJ set by Tonic Walter at Sound Garden.",
+   "schedule": [
+    {
+     "start": "09-02 20:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "The (AI)xis Mundi: What is Intelligence?",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Peter Wang, Chief AI & Innovation Officer; Liv Boeree, Strategist/Creator; Aza O'Leary, Producer",
+   "description": "Grounding AI between Utopia and Dystopia to build Protopia in the real world.",
+   "schedule": [
+    {
+     "start": "09-04 11:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Cooperation as Operating System of Life",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Athena Aktipis, Cooperative Futures Institute",
+   "description": "What bio & human cooperation can teach about building AI for a positive future.",
+   "schedule": [
+    {
+     "start": "09-04 12:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Machine Subjectivity",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Primavera De Filippi, Alien Intelligence",
+   "description": "What changes when we stop treating AI as a tool.",
+   "schedule": [
+    {
+     "start": "09-04 12:20",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Toward Robot Bodhisattva",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Leonardo Christov-Moore, Institute for Advanced Consciousness Studies",
+   "description": "How physical embodiment can make for smarter, kinder, more trustworthy AI.",
+   "schedule": [
+    {
+     "start": "09-04 12:40",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "AI Art: Mentor, Mirror, or Monster?",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": "Charles Lindsay, Kim Carson, Can Bal, Jacob Hanshaw, Undefined, Marcus Wanner",
+   "description": "Playa artists panel: Portal of Collective Imagination, Confessional Alter, AI AM.",
+   "schedule": [
+    {
+     "start": "09-04 13:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "What Are Burners Creating with AI?",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Gina Levy, AI Founder, with a gaggle of innovative Burners",
+   "description": "Lightning talks with Burners using AI to build their dreams.",
+   "schedule": [
+    {
+     "start": "09-04 14:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Is a Flourishing World Possible with AI?",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Founders Adora Li, Rebecca Avalina East, Vincent Alessi",
+   "description": "3 serial founders building in quantum, bio-sciences & sovereign AI explore.",
+   "schedule": [
+    {
+     "start": "09-04 15:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "From Scarcity to Abundance",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk"
+   ],
+   "fine_tags": [],
+   "presenter": "Alex Azzi, Playa AI; Alvin Wang Graylin, Human-Centered AI; Richard Rothernberg, Global AI; Peter Wang, Chief AI & Innovation Officer",
+   "description": "What Burning Man can teach a Post-AGI economy.",
+   "schedule": [
+    {
+     "start": "09-04 16:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "AI Day 'Rap Up'!",
+   "camp": "PlayAlchemist",
+   "address": "3:30 & D",
+   "tags": [
+    "talk",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Rappers Baba Brinkman, Dex McBean",
+   "description": "Event Rap (NYC) performs a comedic musical purely-human hip-hop recap of the day.",
+   "schedule": [
+    {
+     "start": "09-04 17:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Horizon Opening Party",
+   "camp": "Horizon",
+   "address": "8:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Natipitch, Archila x Kike Roldan, Peter Guzman, Igor Marijuan, Avi Snow x L'Core, Andrea Castells, ShuShu",
+   "description": "Opening party at Horizon camp, part of their Burning Man 2026: Axis Mundi theme. DJ lineup runs through the afternoon and evening. Tuesday opening party lineup at Horizon Camp with back-to-back DJ sets from afternoon into midnight.",
+   "schedule": [
+    {
+     "start": "09-01 14:00",
+     "end": "00:00"
+    },
+    {
+     "start": "09-01 14:00",
+     "end": "15:30"
+    },
+    {
+     "start": "09-01 15:30",
+     "end": "17:00"
+    },
+    {
+     "start": "09-01 17:00",
+     "end": "18:30"
+    },
+    {
+     "start": "09-01 18:30",
+     "end": "20:00"
+    },
+    {
+     "start": "09-01 20:00",
+     "end": "21:30"
+    },
+    {
+     "start": "09-01 21:30",
+     "end": "23:00"
+    },
+    {
+     "start": "09-01 23:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Horizon horizoncamp",
+   "grounded_score": null
+  },
+  {
+   "title": "David on David Party",
+   "camp": "Horizon",
+   "address": "8:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Benjamin, Tom & Collins, Joezi & Rafael, Darco & Nevos, Mishell, Mosko & Oi, Ariel Zadok",
+   "description": "Daytime DJ set party at Horizon camp, part of their Burning Man 2026: Axis Mundi theme.",
+   "schedule": [
+    {
+     "start": "09-02 11:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Horizon horizoncamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Zanzibar Party",
+   "camp": "Horizon",
+   "address": "8:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Matony x Sagmo, Deiv Schön, Vivi Santana x Melissa Dust, Jason Rault x Nadav Gaeb x Sam Baroni, Calussa x Diego Teran, Special Guest",
+   "description": "Overnight dance party at Horizon camp running until close, part of their Burning Man 2026: Axis Mundi theme. Friday overnight Zanzibar-themed party at Horizon Camp, DJ lineup running until close.",
+   "schedule": [
+    {
+     "start": "09-04 21:00",
+     "end": null
+    },
+    {
+     "start": "09-04 21:00",
+     "end": "22:30"
+    },
+    {
+     "start": "09-04 22:30",
+     "end": "00:00"
+    },
+    {
+     "start": "09-05 00:00",
+     "end": "01:30"
+    },
+    {
+     "start": "09-05 01:30",
+     "end": "03:00"
+    },
+    {
+     "start": "09-05 03:00",
+     "end": "04:30"
+    },
+    {
+     "start": "09-05 04:30",
+     "end": "06:00"
+    },
+    {
+     "start": "09-05 06:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Horizon horizoncamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Illuminaughty Sunset Set",
+   "camp": "Danger Foley",
+   "address": "9:00 & G",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Illuminaughty b2b Ofier",
+   "description": "Sunset DJ set by Illuminaughty, b2b with Ofier.",
+   "schedule": [
+    {
+     "start": "08-31 19:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Ripper's Row Sunset Set",
+   "camp": "Danger Foley",
+   "address": "3:00 & A",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sunset DJ set by Ripper's Row.",
+   "schedule": [
+    {
+     "start": "09-01 19:00",
+     "end": "21:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "TOMMY Art Car",
+   "camp": "Danger Foley",
+   "address": null,
+   "tags": [
+    "art",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Late-night TOMMY art car appearance, location TBA.",
+   "schedule": [
+    {
+     "start": "09-01 23:00",
+     "end": "00:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Playa Alchemist",
+   "camp": "Danger Foley",
+   "address": "3:30 & D",
+   "tags": [
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Early-morning Playa Alchemist set.",
+   "schedule": [
+    {
+     "start": "09-02 02:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Bubbles & Bass",
+   "camp": "Danger Foley",
+   "address": "8:15 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Bubbles & Bass morning party featuring a surprise guest.",
+   "schedule": [
+    {
+     "start": "09-02 10:00",
+     "end": "11:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Zazen (Bunny Art Car)",
+   "camp": "Danger Foley",
+   "address": "4:00 & E",
+   "tags": [
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Zazen aboard the Bunny Art Car.",
+   "schedule": [
+    {
+     "start": "09-02 15:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Bisous Tea House",
+   "camp": "Danger Foley",
+   "address": "8:45 & E",
+   "tags": [
+    "drink"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Evening tea house gathering.",
+   "schedule": [
+    {
+     "start": "09-03 21:30",
+     "end": "23:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Long Feng Coffee Party",
+   "camp": "Danger Foley",
+   "address": "10:00 & K",
+   "tags": [
+    "drink",
+    "food"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Daytime coffee party at Long Feng.",
+   "schedule": [
+    {
+     "start": "09-04 09:00",
+     "end": "14:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "First Favela Artcar Outing",
+   "camp": "Favela",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Mary Mesk b2b Du Serena, Ines Rau, Ruback, Gabe, Greggio",
+   "description": "Opening outing of the Favela art car, lineup of DJs playing throughout the day.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Favela Artcar + Nova Heaven + Bipolar Express",
+   "camp": "Favela",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Mary Mesk b2b Du Serena, Doozie, Vintage Culture b2b Omri., Anna, Infected Mushroom, Wrecked Machines b2b Vermont",
+   "description": "Joint outing of the Favela art car with Nova Heaven and Bipolar Express, full DJ lineup.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Favela Baile",
+   "camp": "Favela",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Xinobi, Parra for Cuva (Live), Jackson b2b Anna, Joezi, Rod Brito",
+   "description": "Favela Baile party with a full DJ lineup.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Ascension, 6:29 Memorian Celebration (Nova Heaven)",
+   "camp": "Favela",
+   "address": null,
+   "tags": [
+    "ritual",
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Yøu&I, Nevos, Club De Combat, Kimonos, Rafael, 06:29 Ceremony, Sasi b2b Captain Hook",
+   "description": "Memorian celebration and 6:29 ceremony hosted with Nova Heaven, with DJ lineup.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Man Burn",
+   "camp": "Favela",
+   "address": null,
+   "tags": [
+    "ritual",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Orbit (Live)",
+   "description": "Man Burn night with live music.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Ride or Die Party",
+   "camp": "Norse Code",
+   "address": "8:45 & Eternal",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Hedda Stenberg, Julia Sandstorm, Mia Twin, Philou",
+   "description": "Tuesday night dance party with A-Z DJ's.",
+   "schedule": [
+    {
+     "start": "09-01 22:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Norse Code",
+   "grounded_score": null
+  },
+  {
+   "title": "Man Burn After Party",
+   "camp": "Norse Code",
+   "address": "8:45 & Eternal",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Ameme, Hedda Stenberg, Marques Wyatt, Santiago Garcia, Slim Soul, Todd",
+   "description": "Saturday night Man Burn after party with A-Z DJ's.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Norse Code",
+   "grounded_score": null
+  },
+  {
+   "title": "MO at Trion Art Car",
+   "camp": "Trion",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "MO",
+   "description": "DJ set by MO on the Trion art car.",
+   "schedule": [
+    {
+     "start": "09-03 05:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "MO b2b Francis Mercier at Playground",
+   "camp": "Playground",
+   "address": "2:00 & C",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "MO b2b Francis Mercier",
+   "description": "DJ set by MO back to back with Francis Mercier at Playground.",
+   "schedule": [
+    {
+     "start": "09-04 03:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Playground playgroundfoundation",
+   "grounded_score": null
+  },
+  {
+   "title": "MO b2b Arodes at Opulent Temple",
+   "camp": "Opulent Temple",
+   "address": "10:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "MO b2b Arodes",
+   "description": "DJ set by MO back to back with Arodes at Opulent Temple.",
+   "schedule": [
+    {
+     "start": "09-05 01:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Opulent Temple opulenttemple",
+   "grounded_score": null
+  },
+  {
+   "title": "MO at Long Feng Camp",
+   "camp": "Long Feng Camp",
+   "address": "10:00 & K",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "MO",
+   "description": "DJ set by MO at Long Feng Camp.",
+   "schedule": [
+    {
+     "start": "09-05 07:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Phantasmagoria",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Patrick & Micha",
+   "description": "DJ set at Phantasmagoria camp.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Phantasmagoria phantasmagoriacamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Daily Breakfast Sandwiches",
+   "camp": "NYC Deli",
+   "address": "8:45 & D",
+   "tags": [
+    "food"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Breakfast sandwiches served daily, 10am-2pm.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp NYC Deli",
+   "grounded_score": null
+  },
+  {
+   "title": "Taco Tuesday",
+   "camp": "Teddies",
+   "address": "4:30 & B",
+   "tags": [
+    "food",
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Livi Eva",
+   "description": "Taco Tuesday with Livi Eva.",
+   "schedule": [
+    {
+     "start": "09-01 14:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Teddies",
+   "grounded_score": null
+  },
+  {
+   "title": "Monolink Sunrise Set",
+   "camp": "Long Feng x Bipolar",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Monolink",
+   "description": "Sunrise music set.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Meir Briskman +",
+   "camp": "Titanic",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Meir Briskman",
+   "description": "Evening set.",
+   "schedule": [
+    {
+     "start": "09-03 18:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Ten Principles Yoga with Sparkle Bubbe",
+   "camp": "Miki Beach",
+   "address": "10:00 & F",
+   "tags": [
+    "wellness",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Sparkle Bubbe",
+   "description": "Exploring the principles of Burning Man through the prism of vinyasa yoga practice. This year's principle is radical self reliance. Music by David Hohme.",
+   "schedule": [
+    {
+     "start": "09-02 10:00",
+     "end": "11:10"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Miki Beach mikibeachcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Naked Heart Ceremony",
+   "camp": "Rootist Lounge",
+   "address": "3:15 & D",
+   "tags": [
+    "ritual",
+    "wellness",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sacred ceremonial experience with cacao, hape and sananga plant medicine, live music, shamanic sound healing, and guided breathwork in a Bell Tent.",
+   "schedule": [
+    {
+     "start": "09-01 16:30",
+     "end": "19:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Rootist Lounge",
+   "grounded_score": null
+  },
+  {
+   "title": "Rootist Lounge Ceremony",
+   "camp": "Rootist Lounge",
+   "address": "3:15 & D",
+   "tags": [
+    "ritual",
+    "wellness",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sacred ceremonial experience with cacao, hape and sananga plant medicine, live music, shamanic sound healing, and guided breathwork in a Bell Tent.",
+   "schedule": [
+    {
+     "start": "09-03 11:30",
+     "end": "14:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Rootist Lounge",
+   "grounded_score": null
+  },
+  {
+   "title": "Robot Heart",
+   "camp": "Robot Heart",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Early morning stop at the Robot Heart art car, from a submitted personal schedule flyer.",
+   "schedule": [
+    {
+     "start": "09-01 02:30",
+     "end": "04:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "G-Camp Takeover",
+   "camp": "G-Camp",
+   "address": "9:45 & F",
+   "tags": [
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Morning stop at G-Camp, from a submitted personal schedule flyer. End time not listed.",
+   "schedule": [
+    {
+     "start": "09-01 07:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Miki Beach",
+   "camp": "Miki Beach",
+   "address": "10:00 & F",
+   "tags": [
+    "party",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Evening stop at Miki Beach, from a submitted personal schedule flyer.",
+   "schedule": [
+    {
+     "start": "09-04 18:00",
+     "end": "19:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Miki Beach mikibeachcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa",
+   "camp": "Maxa",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Early morning stop at the Maxa art car, from a submitted personal schedule flyer.",
+   "schedule": [
+    {
+     "start": "09-06 03:30",
+     "end": "05:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "Horizon Wednesday Party",
+   "camp": "Horizon Camp",
+   "address": "8:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Wednesday DJ lineup at Horizon Camp running late morning through evening.",
+   "schedule": [
+    {
+     "start": "09-02 11:00",
+     "end": "11:30"
+    },
+    {
+     "start": "09-02 11:30",
+     "end": "13:15"
+    },
+    {
+     "start": "09-02 13:15",
+     "end": "15:00"
+    },
+    {
+     "start": "09-02 15:00",
+     "end": "16:45"
+    },
+    {
+     "start": "09-02 16:45",
+     "end": "18:15"
+    },
+    {
+     "start": "09-02 18:15",
+     "end": "19:45"
+    },
+    {
+     "start": "09-02 19:45",
+     "end": "21:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Horizon horizoncamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Lucid Dreaming 101",
+   "camp": "Celestial Tea Garden",
+   "address": "8:45 & E",
+   "tags": [
+    "workshop",
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Workshop on lucid dreaming techniques.",
+   "schedule": [
+    {
+     "start": "08-31 17:00",
+     "end": "18:00"
+    },
+    {
+     "start": "09-02 17:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Tea Garden CTG",
+   "grounded_score": null
+  },
+  {
+   "title": "Tarot Readings",
+   "camp": "Celestial Tea Garden",
+   "address": "8:45 & E",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Tarot card readings during the tea house session.",
+   "schedule": [
+    {
+     "start": "09-02 14:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Tea Garden CTG",
+   "grounded_score": null
+  },
+  {
+   "title": "6 Month Post Cards",
+   "camp": "Celestial Tea Garden",
+   "address": "8:45 & E",
+   "tags": [
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Write postcards to your future self, six months out.",
+   "schedule": [
+    {
+     "start": "09-02 14:00",
+     "end": "16:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Celestial Tea Garden CTG",
+   "grounded_score": null
+  },
+  {
+   "title": "Epic Cinematic Ecstatic Fire Dance",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Fire dance performance to open the camp's event schedule.",
+   "schedule": [
+    {
+     "start": "08-30 17:00",
+     "end": "19:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Massage Sessions",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Daily massage sessions at Camp Contact.",
+   "schedule": [
+    {
+     "start": "08-31 12:30",
+     "end": "13:30"
+    },
+    {
+     "start": "09-01 12:30",
+     "end": "13:30"
+    },
+    {
+     "start": "09-02 12:30",
+     "end": "13:30"
+    },
+    {
+     "start": "09-03 12:30",
+     "end": "13:30"
+    },
+    {
+     "start": "09-04 12:30",
+     "end": "13:30"
+    },
+    {
+     "start": "09-05 12:30",
+     "end": "13:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Movement Practice / Contact Improvisation",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "workshop",
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Movement and contact improvisation practice.",
+   "schedule": [
+    {
+     "start": "08-31 13:30",
+     "end": "15:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Intro to Swedish Massage",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "workshop",
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Introductory Swedish massage workshop.",
+   "schedule": [
+    {
+     "start": "08-31 14:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Acroyoga JAM",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "workshop",
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Open acroyoga jam session.",
+   "schedule": [
+    {
+     "start": "08-31 15:00",
+     "end": "17:00"
+    },
+    {
+     "start": "09-02 15:00",
+     "end": "17:00"
+    },
+    {
+     "start": "09-03 15:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Yoga -- Ashtanga Primary Series",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "wellness"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Ashtanga primary series yoga class.",
+   "schedule": [
+    {
+     "start": "09-01 08:00",
+     "end": "09:00"
+    },
+    {
+     "start": "09-03 08:00",
+     "end": "09:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Tutu Tuesday Ballet Class",
+   "camp": "Camp Contact",
+   "address": "3:45 & Chomolungma",
+   "tags": [
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Ballet class, tutus encouraged.",
+   "schedule": [
+    {
+     "start": "09-01 09:00",
+     "end": "10:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Contact campcontact",
+   "grounded_score": null
+  },
+  {
+   "title": "Best Pickles on the Playa",
+   "camp": "Community submission",
+   "address": "4:30 & H",
+   "tags": [
+    "food"
+   ],
+   "fine_tags": [],
+   "presenter": "Rory (pickle master)",
+   "description": "Free pickles anytime - ask for Rory or the pickle master for the best pickles on the playa.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Never Sleep Again",
+   "camp": "Community submission",
+   "address": "8:30 & F",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "The Golden One",
+   "description": "DJ set by The Golden One.",
+   "schedule": [
+    {
+     "start": "09-01 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Draft Punk",
+   "camp": "Community submission",
+   "address": "9:00 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "The Golden One with Fear The Youth",
+   "description": "DJ set by The Golden One with Fear The Youth.",
+   "schedule": [
+    {
+     "start": "09-02 16:00",
+     "end": "17:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Camp Byte on Peta Byte",
+   "camp": "Community submission",
+   "address": "10:00 & C",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "The Golden One with Fear The Youth",
+   "description": "DJ set by The Golden One with Fear The Youth.",
+   "schedule": [
+    {
+     "start": "09-02 21:00",
+     "end": "22:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "The Crystal Ship",
+   "camp": "Community submission",
+   "address": "2:00 & G",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "The Golden One with Fear The Youth",
+   "description": "DJ set by The Golden One with Fear The Youth.",
+   "schedule": [
+    {
+     "start": "09-04 19:30",
+     "end": "21:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "DJ sets",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Alborz",
+   "description": "DJ set listed on camp schedule flyer; time shown as 00:30-03:00 but date not legible in image.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Amma",
+   "camp": "Community submission",
+   "address": "2 & L",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Amma with Madmotormiquel",
+   "description": "Tuesday afternoon DJ set with Madmotormiquel at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-01 16:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Bangers Only",
+   "camp": "Community submission",
+   "address": "10:00 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Madmotormiquel",
+   "description": "Wednesday night DJ set with Madmotormiquel at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-02 22:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Disorient",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Wednesday early-morning DJ set at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-02 01:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Car x Bipolar",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Nacho Isa, Madmotormiquel",
+   "description": "Friday morning B2B DJ set with Nacho Isa and Madmotormiquel at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-04 09:00",
+     "end": "11:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Sahar (I Am You)",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Sahar with Deer Jade",
+   "description": "Friday midday DJ set with Deer Jade at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-04 12:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Miki Beach",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Madmotormiquel",
+   "description": "Friday evening DJ set with Madmotormiquel at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-04 19:30",
+     "end": "21:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "G Camp x Discosmos",
+   "camp": "G Camp",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Nacho Isa, Madmotormiquel",
+   "description": "Saturday morning open-ended B2B set with Nacho Isa and Madmotormiquel at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-05 08:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp G",
+   "grounded_score": null
+  },
+  {
+   "title": "Soundgarden",
+   "camp": "Catori",
+   "address": "2:00 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Tuesday night set at Catori camp during Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-01 20:30",
+     "end": "22:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Disorient (Live Jam)",
+   "camp": "Catori",
+   "address": "8:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Rampue & Adaamar",
+   "description": "Wednesday early-morning live jam set with Rampue and Adaamar at Catori camp during Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-02 01:00",
+     "end": "03:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Disorient",
+   "camp": "Catori",
+   "address": "8:00 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Wednesday afternoon DJ set at Catori camp during Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-02 16:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Caravan of Light",
+   "camp": "Catori",
+   "address": "8:15 & E",
+   "tags": [
+    "music",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Thursday evening set at Catori camp during Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-03 19:00",
+     "end": "20:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Bubbles & Bass",
+   "camp": "Catori",
+   "address": "8:15 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Friday sunrise DJ set at Catori camp during Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-04 05:30",
+     "end": "07:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Never Sleep Again",
+   "camp": "Catori",
+   "address": "8:30 & F",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Friday night closing set at Catori camp during Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-04 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Diplo & Friends Sunrise Set",
+   "camp": "Sub Zero Art Car",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Diplo, Kaz James, Ape Drums, AMEME, Walshy Fire, It's Murph, Riche, Francis Mercier, Carlita",
+   "description": "3 AM - 10 AM sunrise DJ set at the Sub Zero Art Car in Deep Playa.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
    "grounded_score": null
   }
  ]
