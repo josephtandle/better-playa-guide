@@ -266,7 +266,7 @@ module.exports = async function handler(req, res) {
   const t0 = Date.now();
   const ORIGINS = ['https://musecafe.vip', 'https://www.musecafe.vip', 'https://playaguide.musecafe.vip', 'https://guide.musecafe.vip'];
   const reqOrigin = String((req.headers && req.headers.origin) || '');
-  res.setHeader('Access-Control-Allow-Origin', ORIGINS.indexOf(reqOrigin) !== -1 ? reqOrigin : ORIGINS[0]);
+  if (ORIGINS.indexOf(reqOrigin) !== -1 || !reqOrigin) res.setHeader('Access-Control-Allow-Origin', reqOrigin || ORIGINS[0]);
   res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');

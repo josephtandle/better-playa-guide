@@ -1,0 +1,687 @@
+[
+{
+"q": "where can I get coffee in the morning",
+"expect": "coffee",
+"kind": "activity"
+},
+{
+"q": "coffee",
+"expect": "coffee",
+"kind": "activity"
+},
+{
+"q": "where is free pizza",
+"expect": "pizza",
+"kind": "food"
+},
+{
+"q": "grilled cheese",
+"expect": "cheese",
+"kind": "food"
+},
+{
+"q": "pancakes",
+"expect": "pancake",
+"kind": "food"
+},
+{
+"q": "free breakfast",
+"expect": "breakfast",
+"kind": "food"
+},
+{
+"q": "bacon",
+"expect": "bacon",
+"kind": "food"
+},
+{
+"q": "sushi",
+"expect": null,
+"kind": "food"
+},
+{
+"q": "ice cream",
+"expect": "ice cream",
+"kind": "food"
+},
+{
+"q": "where can I get a drink",
+"expect": null,
+"kind": "drink"
+},
+{
+"q": "whiskey bar",
+"expect": "whisk",
+"kind": "drink"
+},
+{
+"q": "margaritas",
+"expect": "margarita",
+"kind": "drink"
+},
+{
+"q": "sake bar",
+"expect": "sake",
+"kind": "drink"
+},
+{
+"q": "tea house",
+"expect": "tea",
+"kind": "drink"
+},
+{
+"q": "kava",
+"expect": null,
+"kind": "drink"
+},
+{
+"q": "yoga tomorrow morning",
+"expect": "yoga",
+"kind": "wellness"
+},
+{
+"q": "morning yoga",
+"expect": "yoga",
+"kind": "wellness"
+},
+{
+"q": "sound bath",
+"expect": "sound bath",
+"kind": "wellness"
+},
+{
+"q": "sauna",
+"expect": "sauna",
+"kind": "wellness"
+},
+{
+"q": "massage",
+"expect": "massage",
+"kind": "wellness"
+},
+{
+"q": "breathwork",
+"expect": "breathwork",
+"kind": "wellness"
+},
+{
+"q": "ice bath",
+"expect": "ice",
+"kind": "wellness"
+},
+{
+"q": "cold plunge",
+"expect": null,
+"kind": "wellness"
+},
+{
+"q": "meditation",
+"expect": "meditat",
+"kind": "wellness"
+},
+{
+"q": "cacao ceremony",
+"expect": "cacao",
+"kind": "wellness"
+},
+{
+"q": "ecstatic dance",
+"expect": "ecstatic",
+"kind": "wellness"
+},
+{
+"q": "reiki",
+"expect": "reiki",
+"kind": "wellness"
+},
+{
+"q": "acro yoga",
+"expect": "acro",
+"kind": "wellness"
+},
+{
+"q": "contact improv",
+"expect": "contact",
+"kind": "wellness"
+},
+{
+"q": "tantra workshop",
+"expect": "tantra",
+"kind": "workshop"
+},
+{
+"q": "rope bondage class",
+"expect": "rope",
+"kind": "workshop"
+},
+{
+"q": "shibari",
+"expect": "shibari",
+"kind": "workshop"
+},
+{
+"q": "pole dancing",
+"expect": "pole",
+"kind": "workshop"
+},
+{
+"q": "twerk class",
+"expect": "twerk",
+"kind": "workshop"
+},
+{
+"q": "burlesque show",
+"expect": "burlesque",
+"kind": "adult"
+},
+{
+"q": "naked pub crawl",
+"expect": "pub crawl",
+"kind": "adult"
+},
+{
+"q": "orgy dome",
+"expect": null,
+"kind": "adult"
+},
+{
+"q": "foam party",
+"expect": "foam",
+"kind": "party"
+},
+{
+"q": "welding workshop",
+"expect": "weld",
+"kind": "workshop"
+},
+{
+"q": "fire spinning",
+"expect": "fire",
+"kind": "workshop"
+},
+{
+"q": "flow arts",
+"expect": "flow",
+"kind": "workshop"
+},
+{
+"q": "drum circle",
+"expect": "drum",
+"kind": "music"
+},
+{
+"q": "live music not djs",
+"expect": null,
+"kind": "music"
+},
+{
+"q": "jazz",
+"expect": "jazz",
+"kind": "music"
+},
+{
+"q": "piano",
+"expect": "piano",
+"kind": "music"
+},
+{
+"q": "karaoke",
+"expect": "karaoke",
+"kind": "music"
+},
+{
+"q": "silent disco",
+"expect": "silent",
+"kind": "party"
+},
+{
+"q": "disco",
+"expect": "disco",
+"kind": "party"
+},
+{
+"q": "techno all night",
+"expect": "techno",
+"kind": "party"
+},
+{
+"q": "house music",
+"expect": "house",
+"kind": "party"
+},
+{
+"q": "drum and bass",
+"expect": null,
+"kind": "party"
+},
+{
+"q": "psytrance",
+"expect": null,
+"kind": "party"
+},
+{
+"q": "sunrise set",
+"expect": "sunrise",
+"kind": "party"
+},
+{
+"q": "sunset set",
+"expect": "sunset",
+"kind": "party"
+},
+{
+"q": "what should I do for sunrise",
+"expect": null,
+"kind": "time"
+},
+{
+"q": "parties tonight",
+"expect": null,
+"kind": "time"
+},
+{
+"q": "what is happening right now",
+"expect": null,
+"kind": "time"
+},
+{
+"q": "what's on tuesday night",
+"expect": null,
+"kind": "time"
+},
+{
+"q": "events on burn night",
+"expect": null,
+"kind": "time"
+},
+{
+"q": "temple burn sunday",
+"expect": "Temple",
+"kind": "time"
+},
+{
+"q": "when does the man burn",
+"expect": "Man",
+"kind": "logistics"
+},
+{
+"q": "man burn",
+"expect": "Man",
+"kind": "logistics"
+},
+{
+"q": "temple",
+"expect": "Temple",
+"kind": "place"
+},
+{
+"q": "center camp",
+"expect": "Center Camp",
+"kind": "place"
+},
+{
+"q": "deep playa art",
+"expect": null,
+"kind": "place"
+},
+{
+"q": "trash fence",
+"expect": "fence",
+"kind": "place"
+},
+{
+"q": "esplanade parties",
+"expect": null,
+"kind": "place"
+},
+{
+"q": "events near 9 and K",
+"expect": null,
+"kind": "place"
+},
+{
+"q": "what's near 3:00 and C",
+"expect": null,
+"kind": "place"
+},
+{
+"q": "airport",
+"expect": "airport",
+"kind": "place"
+},
+{
+"q": "where do I get ice",
+"expect": "ice",
+"kind": "logistics"
+},
+{
+"q": "medic",
+"expect": null,
+"kind": "logistics"
+},
+{
+"q": "rangers",
+"expect": "ranger",
+"kind": "logistics"
+},
+{
+"q": "bike repair",
+"expect": "bike",
+"kind": "logistics"
+},
+{
+"q": "phone charging",
+"expect": "charg",
+"kind": "logistics"
+},
+{
+"q": "wifi",
+"expect": null,
+"kind": "logistics"
+},
+{
+"q": "post office",
+"expect": "post",
+"kind": "logistics"
+},
+{
+"q": "lost and found",
+"expect": null,
+"kind": "logistics"
+},
+{
+"q": "portapotty",
+"expect": null,
+"kind": "logistics"
+},
+{
+"q": "where are the toilets",
+"expect": null,
+"kind": "logistics"
+},
+{
+"q": "kids activities",
+"expect": "kid",
+"kind": "family"
+},
+{
+"q": "stuff for children",
+"expect": null,
+"kind": "family"
+},
+{
+"q": "first burner orientation",
+"expect": null,
+"kind": "newbie"
+},
+{
+"q": "virgin burner",
+"expect": null,
+"kind": "newbie"
+},
+{
+"q": "how do the ten principles work",
+"expect": "principle",
+"kind": "newbie"
+},
+{
+"q": "talks about psychedelics",
+"expect": "psychedelic",
+"kind": "talk"
+},
+{
+"q": "zendo",
+"expect": "Zendo",
+"kind": "talk"
+},
+{
+"q": "talks on consciousness",
+"expect": null,
+"kind": "talk"
+},
+{
+"q": "ted style talks",
+"expect": null,
+"kind": "talk"
+},
+{
+"q": "science talks",
+"expect": "science",
+"kind": "talk"
+},
+{
+"q": "ai talks",
+"expect": null,
+"kind": "talk"
+},
+{
+"q": "climate talks",
+"expect": "climate",
+"kind": "talk"
+},
+{
+"q": "poetry",
+"expect": "poetry",
+"kind": "art"
+},
+{
+"q": "figure drawing",
+"expect": "draw",
+"kind": "art"
+},
+{
+"q": "art tour",
+"expect": "art",
+"kind": "art"
+},
+{
+"q": "tie dye",
+"expect": "tie",
+"kind": "art"
+},
+{
+"q": "costume making",
+"expect": "costume",
+"kind": "art"
+},
+{
+"q": "leather working",
+"expect": "leather",
+"kind": "art"
+},
+{
+"q": "wedding",
+"expect": "wedding",
+"kind": "ritual"
+},
+{
+"q": "get married on playa",
+"expect": null,
+"kind": "ritual"
+},
+{
+"q": "grief ritual",
+"expect": "grief",
+"kind": "ritual"
+},
+{
+"q": "shabbat dinner",
+"expect": "shabbat",
+"kind": "ritual"
+},
+{
+"q": "gospel",
+"expect": null,
+"kind": "ritual-datagap-or-extreme-typo"
+},
+{
+"q": "games",
+"expect": "game",
+"kind": "game"
+},
+{
+"q": "trivia night",
+"expect": "trivia",
+"kind": "game"
+},
+{
+"q": "bingo",
+"expect": "bingo",
+"kind": "game"
+},
+{
+"q": "dodgeball",
+"expect": "dodgeball",
+"kind": "game"
+},
+{
+"q": "roller skating",
+"expect": null,
+"kind": "game-datagap-or-extreme-typo"
+},
+{
+"q": "climbing",
+"expect": "climb",
+"kind": "game"
+},
+{
+"q": "queer parties",
+"expect": "queer",
+"kind": "community"
+},
+{
+"q": "lgbtq events",
+"expect": null,
+"kind": "community"
+},
+{
+"q": "women's circle",
+"expect": "women",
+"kind": "community"
+},
+{
+"q": "men's circle",
+"expect": "men",
+"kind": "community"
+},
+{
+"q": "sober events",
+"expect": "sober",
+"kind": "community"
+},
+{
+"q": "12 step meeting",
+"expect": null,
+"kind": "community"
+},
+{
+"q": "speed dating",
+"expect": "dating",
+"kind": "community"
+},
+{
+"q": "singles mixer",
+"expect": null,
+"kind": "community"
+},
+{
+"q": "dusty nerds",
+"expect": null,
+"kind": "community"
+},
+{
+"q": "where is muse cafe",
+"expect": "MUSE",
+"kind": "camp"
+},
+{
+"q": "a muse us",
+"expect": "Muse",
+"kind": "camp"
+},
+{
+"q": "robot heart sunrise",
+"expect": "Robot Heart",
+"kind": "camp"
+},
+{
+"q": "mayan warrior",
+"expect": null,
+"kind": "camp"
+},
+{
+"q": "distrikt",
+"expect": null,
+"kind": "camp"
+},
+{
+"q": "opulent temple lineup",
+"expect": "Opulent",
+"kind": "camp"
+},
+{
+"q": "whos playing at playground",
+"expect": "Playground",
+"kind": "camp"
+},
+{
+"q": "sound garden schedule",
+"expect": "Sound Garden",
+"kind": "camp"
+},
+{
+"q": "dusty rhino",
+"expect": null,
+"kind": "camp"
+},
+{
+"q": "maxa art car",
+"expect": "Maxa",
+"kind": "camp"
+},
+{
+"q": "titanic burn",
+"expect": "TITANIC",
+"kind": "art"
+},
+{
+"q": "tokimosta",
+"expect": "TOKiMONSTA",
+"kind": "artist-typo"
+},
+{
+"q": "jan blomquist",
+"expect": "Blomqvist",
+"kind": "artist-typo"
+},
+{
+"q": "dipl0",
+"expect": null,
+"kind": "artist-typo"
+},
+{
+"q": "carlitta",
+"expect": "Carlita",
+"kind": "artist-typo"
+},
+{
+"q": "monolink sunrise",
+"expect": "Monolink",
+"kind": "artist"
+},
+{
+"q": "tycho",
+"expect": "Tycho",
+"kind": "artist"
+},
+{
+"q": "lee burridge",
+"expect": "Lee Burridge",
+"kind": "artist"
+},
+{
+"q": "alok",
+"expect": "Alok",
+"kind": "artist"
+}
+]

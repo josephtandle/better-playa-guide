@@ -11,7 +11,7 @@
   function fold(s){ return String(s||'').toLowerCase().normalize('NFD').replace(FOLD_RE,''); }
   /* ---- smart search: tokens, filler words dropped, squashed-space and
      typo-tolerant matching ("rhymewave camp events" finds RhythmWave) ---- */
-  var STOPW = new Set(['camp','camps','event','events','the','a','an','at','is','are','was','when','what','where','who','how','in','on','of','for','to','and','or','me','my','their','there','show','find','all','any','list','playing','play','happening','schedule','stuff','things','going']);
+  var STOPW = new Set(['camp','camps','event','events','the','a','an','at','is','are','was','when','whens','what','whats','where','wheres','who','whos','how','hows','im','id','ill','in','on','of','for','to','and','or','me','my','their','there','show','find','all','any','list','playing','play','happening','schedule','stuff','things','going','does','do','can','get','near','around']);
   var VOCAB = null, CORPUS = '';
   function buildVocab(){
     if (VOCAB) return;
@@ -59,7 +59,8 @@
     /* token appears nowhere in the data: swap it for the closest real word */
     if (REMAP_CACHE.hasOwnProperty(tok)) return REMAP_CACHE[tok];
     buildVocab();
-    if (CORPUS.indexOf(tok) !== -1) { REMAP_CACHE[tok] = tok; return tok; }
+    /* whole-word membership: "izza" hiding inside "pizza" is not the word "izza" */
+    if (CORPUS.indexOf(' ' + tok + ' ') !== -1) { REMAP_CACHE[tok] = tok; return tok; }
     var cap = tok.length >= 9 ? 3 : (tok.length >= 7 ? 2 : (tok.length >= 4 ? 1 : 0));
     if (!cap) return tok;
     var best = null, bestD = cap + 1;
@@ -244,6 +245,10 @@
     }
     var targetGroup = groupMap[gKey];
     if (!targetGroup.k && item.k) targetGroup.k = item.k;
+    /* different days of the same listing carry different lineups: merge every
+       distinct presenter/description so search sees the whole week */
+    if (item.p && targetGroup.p.indexOf(item.p) === -1) targetGroup.p = targetGroup.p ? targetGroup.p + ', ' + item.p : item.p;
+    if (item.d && targetGroup.d.indexOf(item.d) === -1) targetGroup.d = targetGroup.d ? targetGroup.d + ' ' + item.d : item.d;
     if (targetGroup.allIds.indexOf(item.id) === -1) {
       targetGroup.allIds.push(item.id);
     }
@@ -1630,6 +1635,21 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     var q = (qEl ? qEl.value : '').trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var qTokens = q ? queryTokens(q) : null;
     if (qTokens && !qTokens.length) qTokens = null;
+    /* recall fallback: if the full token set matches nothing, drop tokens from
+       the end (users put the throwaway words last: "costume making", "climate
+       talks", "set time") until something matches */
+    if (qTokens && qTokens.length > 1){
+      var anyHit = function(toks){
+        for (var hi = 0; hi < GROUPS.length; hi++){ if (matchTokens(toks, eventHay(GROUPS[hi], hi))) return true; }
+        return false;
+      };
+      if (!anyHit(qTokens)){
+        for (var di = qTokens.length - 1; di >= 0 && qTokens.length > 1; di--){
+          var sub = qTokens.slice(0, di).concat(qTokens.slice(di + 1));
+          if (anyHit(sub)){ qTokens = sub; break; }
+        }
+      }
+    }
     var day = $('day') ? $('day').value : '', sort = $('sort') ? $('sort').value : 'near';
     var confirmedOnly = $('confirmed-only') ? $('confirmed-only').checked : false;
     var locVal = $('loc') ? $('loc').value : '';
@@ -1798,6 +1818,10 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     s = s.replace(/\bdjs\b/g, 'dj');
     s = s.replace(/\bsaunas\b/g, 'sauna').replace(/\bsteam\b/g, 'sauna');
     s = s.replace(/\bmassages\b/g, 'massage');
+    s = s.replace(/\b(i'?m looking for|i am looking for|i want|show me|give me|looking for)\b/g, ' ');
+    s = s.replace(/\baround here\b|\bnear here\b|\baround me\b/g, 'near me');
+    s = s.replace(/\b(closest|nearest)\b/g, ' ');
+    s = s.replace(/\b(bathrooms?|restrooms?|porta\s*-?\s*pott(y|ies)|portapott(y|ies)|loos?)\b/g, 'toilet');
     return s;
   }
 
@@ -1864,6 +1888,19 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       return { reply: "Try asking something like 'whats on near me now' or 'coffee tomorrow morning'.", results: [] };
     }
     var qLower = applyAskSynonyms(raw.toLowerCase().normalize('NFD').replace(FOLD_RE,''));
+    /* sanitation intent: route toilet questions to the GIS potty finder */
+    if (/\btoilets?\b|\bpotty\b|\bpotties\b/.test(qLower)) {
+      if (here) {
+        var np = nearestPotty(here);
+        if (np) return { reply: '🚽 Nearest porta potty bank: about ' + np.min + ' min walk (' + np.ft + ' ft), head toward the ' + np.clock + ' direction on the clock face. Banks sit along most streets; this is the closest of the 45 official ones.', results: [] };
+      }
+      return { reply: '🚽 Set your location first (the button up top), then ask again or tap the Potty button and I will point you to the nearest of the 45 official porta potty banks.', results: [] };
+    }
+    /* burn-night logistics: "when does the man burn" is a date, not a DJ */
+    if (/\b(man|temple)\b.*\bburns?\b|\bburn\b.*\b(man|temple)\b/.test(qLower) && !/burn barrel|burn night party/.test(qLower)) {
+      if (/temple/.test(qLower)) return { reply: 'The Temple burns Sunday 6 September, after dark (typically around 8pm, in silence). The Man burns the night before, Saturday 5 September around 9pm.', results: [] };
+      return { reply: 'The Man burns Saturday 5 September around 9pm (fire conclave first, then the burn). The Temple burns Sunday 6 September after dark, in silence.', results: [] };
+    }
     /* typo-correct words that match nothing in the data ("opulant" -> "opulent"),
        so the ask path fuzzes the same way the live filter does */
     qLower = qLower.split(/(\s+)/).map(function(part){

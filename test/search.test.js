@@ -80,6 +80,19 @@ ok(true, 'emoji query does not crash (rendered ' + emoji.n + ' rows)');
 const cleared = search('');
 ok(cleared.n >= 50, 'clearing the query restores the list (got ' + cleared.n + ' rows)');
 
+/* ---- 10. Ask intents that are logistics, not text search ---- */
+const BPG = w.__BPG;
+(function(){
+  const burn = BPG.answer('When is the Man burn?');
+  ok(/Saturday 5 September/.test(burn.reply), 'ask "When is the Man burn?" answers the date, not a DJ lookup');
+  const tb = BPG.answer('temple burn');
+  ok(/Sunday 6 September/.test(tb.reply), 'ask "temple burn" answers the Temple date');
+  const toilet = BPG.answer('where is the nearest toilet');
+  ok(/🚽/.test(toilet.reply), 'toilet questions route to the potty finder');
+  const bath = BPG.answer('bathroom near me');
+  ok(/🚽/.test(bath.reply), 'bathroom synonym routes to the potty finder');
+})();
+
 /* ---- Summary ---- */
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {

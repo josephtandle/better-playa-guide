@@ -1,0 +1,402 @@
+[
+{
+"q": "when is Locxito playing",
+"expect": "Locxito",
+"kind": "artist"
+},
+{
+"q": "when is Dalfin playing",
+"expect": "Dalfin",
+"kind": "artist"
+},
+{
+"q": "when is Siren Gliss playing",
+"expect": "Siren",
+"kind": "artist"
+},
+{
+"q": "when is Reza x Grudi playing",
+"expect": "Reza",
+"kind": "artist"
+},
+{
+"q": "when is Jaymie playing",
+"expect": "Jaymie",
+"kind": "artist"
+},
+{
+"q": "when is Mona Pirzad playing",
+"expect": "Mona",
+"kind": "artist"
+},
+{
+"q": "when is MASSIO playing",
+"expect": "MASSIO",
+"kind": "artist"
+},
+{
+"q": "when is Wolverine playing",
+"expect": "Wolverine",
+"kind": "artist"
+},
+{
+"q": "when is Alaska playing",
+"expect": "Alaska",
+"kind": "artist"
+},
+{
+"q": "when is Fiendi playing",
+"expect": "Fiendi",
+"kind": "artist"
+},
+{
+"q": "when is Infinight playing",
+"expect": "Infinight",
+"kind": "artist"
+},
+{
+"q": "when is Justin Rich playing",
+"expect": "Justin",
+"kind": "artist"
+},
+{
+"q": "when is Eaty Beatz playing",
+"expect": "Eaty",
+"kind": "artist"
+},
+{
+"q": "when is L'core playing",
+"expect": "L'core",
+"kind": "artist"
+},
+{
+"q": "when is Liquid Gold playing",
+"expect": "Liquid",
+"kind": "artist"
+},
+{
+"q": "when is Dom Dolla playing",
+"expect": "Dom",
+"kind": "artist"
+},
+{
+"q": "when is Leandro Silva playing",
+"expect": "Leandro",
+"kind": "artist"
+},
+{
+"q": "when is Silver Steph playing",
+"expect": "Silver",
+"kind": "artist"
+},
+{
+"q": "when is Hunter playing",
+"expect": "Hunter",
+"kind": "artist"
+},
+{
+"q": "when is sachiko playing",
+"expect": "sachiko",
+"kind": "artist"
+},
+{
+"q": "when is Archila playing",
+"expect": "Archila",
+"kind": "artist"
+},
+{
+"q": "when is YANA SKY playing",
+"expect": "YANA",
+"kind": "artist"
+},
+{
+"q": "when is Sonder playing",
+"expect": "Sonder",
+"kind": "artist"
+},
+{
+"q": "when is Dancing with Dragons playing",
+"expect": "Dancing",
+"kind": "artist"
+},
+{
+"q": "when is Alexander playing",
+"expect": "Alexander",
+"kind": "artist"
+},
+{
+"q": "mai tai set time",
+"expect": "Mai",
+"kind": "artist-typo"
+},
+{
+"q": "captain set time",
+"expect": "Captain",
+"kind": "artist-typo"
+},
+{
+"q": "chris krywulak set time",
+"expect": "Chris",
+"kind": "artist-typo"
+},
+{
+"q": "compass and pink set time",
+"expect": "Compass",
+"kind": "artist-typo"
+},
+{
+"q": "aaion solars set time",
+"expect": "Aeion",
+"kind": "artist-typo"
+},
+{
+"q": "todd sparo set time",
+"expect": "Todd",
+"kind": "artist-typo"
+},
+{
+"q": "dr. botox set time",
+"expect": "Dr.",
+"kind": "artist-typo"
+},
+{
+"q": "dazy duka set time",
+"expect": "Dazy",
+"kind": "artist-typo"
+},
+{
+"q": "ksanyeah set time",
+"expect": "Ksenyeah",
+"kind": "artist-typo"
+},
+{
+"q": "izza azalea set time",
+"expect": null,
+"kind": "artist-typo-datagap-or-extreme-typo"
+},
+{
+"q": "danni g set time",
+"expect": "Danni",
+"kind": "artist-typo"
+},
+{
+"q": "alina brooklyn set time",
+"expect": null,
+"kind": "artist-typo-datagap-or-extreme-typo"
+},
+{
+"q": "lat there be light set time",
+"expect": null,
+"kind": "artist-typo-datagap-or-extreme-typo"
+},
+{
+"q": "purpla set time",
+"expect": "Purple",
+"kind": "artist-typo"
+},
+{
+"q": "david block set time",
+"expect": "David",
+"kind": "artist-typo"
+},
+{
+"q": "mission country club events",
+"expect": "Missio",
+"kind": "camp"
+},
+{
+"q": "send noods events",
+"expect": "Send N",
+"kind": "camp"
+},
+{
+"q": "bad health advice events",
+"expect": "BAD HE",
+"kind": "camp"
+},
+{
+"q": "amazone events",
+"expect": "AMAZON",
+"kind": "camp"
+},
+{
+"q": "barbots: baby needs a break events",
+"expect": "Barbot",
+"kind": "camp"
+},
+{
+"q": "rumi's tea house events",
+"expect": "Rumi's",
+"kind": "camp"
+},
+{
+"q": "ebb & glow village events",
+"expect": "EBB & ",
+"kind": "camp"
+},
+{
+"q": "dustfish events",
+"expect": "DUSTFI",
+"kind": "camp"
+},
+{
+"q": "reverbia events",
+"expect": "Reverb",
+"kind": "camp"
+},
+{
+"q": "camp shutterbuggy events",
+"expect": "Camp S",
+"kind": "camp"
+},
+{
+"q": "shuttlecocks events",
+"expect": "Shuttl",
+"kind": "camp"
+},
+{
+"q": "half baked events",
+"expect": "Half B",
+"kind": "camp"
+},
+{
+"q": "temple grounds events",
+"expect": "Temple",
+"kind": "camp"
+},
+{
+"q": "bike gods events",
+"expect": "Bike G",
+"kind": "camp"
+},
+{
+"q": "blood & sugar events",
+"expect": "Blood ",
+"kind": "camp"
+},
+{
+"q": "bad asstronauts events",
+"expect": "Bad As",
+"kind": "camp"
+},
+{
+"q": "art for art's sake events",
+"expect": "Art fo",
+"kind": "camp"
+},
+{
+"q": "the den events",
+"expect": "The De",
+"kind": "camp"
+},
+{
+"q": "unicorner events",
+"expect": "Unicor",
+"kind": "camp"
+},
+{
+"q": "backfire events",
+"expect": "Backfi",
+"kind": "camp"
+},
+{
+"q": "playa glass events",
+"expect": "Playa ",
+"kind": "camp"
+},
+{
+"q": "tree of exhaustion events",
+"expect": "Tree o",
+"kind": "camp"
+},
+{
+"q": "hookahdome events",
+"expect": "Hookah",
+"kind": "camp"
+},
+{
+"q": "gaian airship events",
+"expect": "Gaian ",
+"kind": "camp"
+},
+{
+"q": "black rock city events",
+"expect": "Black ",
+"kind": "camp"
+},
+{
+"q": "what is happening at french maid brigade",
+"expect": "French",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at bad health advice",
+"expect": "BAD HE",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at x marks the spot",
+"expect": "X mark",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at bearwhalea",
+"expect": "Bearwh",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at hodge podge",
+"expect": "Hodge ",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at hobo camp",
+"expect": "Hobo C",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at bubbles and bass",
+"expect": "Bubble",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at it's only natural",
+"expect": "It's O",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at above and below",
+"expect": "Above ",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at mindshark",
+"expect": "MindSh",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at sharkey's bar and lounge",
+"expect": "Sharke",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at the sound garden",
+"expect": "The So",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at we the sheeple",
+"expect": "We The",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at christina: queen of the brc",
+"expect": "Christ",
+"kind": "camp-question"
+},
+{
+"q": "what is happening at behind closed eyes",
+"expect": "Behind",
+"kind": "camp-question"
+}
+]
