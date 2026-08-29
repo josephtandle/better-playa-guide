@@ -3,7 +3,7 @@
   "year": 2026,
   "event": "Burning Man",
   "theme": "Axis Mundi",
-  "count": 4318,
+  "count": 4357,
   "generated": "see git history",
   "license": "MIT",
   "note": "Merged from official listings, Rock Star Librarian, Playa Set Library, camp sites and camp Instagram, Telegram and WhatsApp flyer harvests. Every event carries its source and confidence. Times are playa local, UTC-07:00."
@@ -114756,6 +114756,167 @@
    "grounded_score": null
   },
   {
+   "title": "Axolotl + Bubbles and Bass at The Gothic Folly",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Axolotl and Bubbles and Bass take over The Gothic Folly, Tuesday night at the deep-playa cathedral of light.",
+   "schedule": [
+    {
+     "start": "09-01 21:30",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Eden Art Car at The Gothic Folly",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Eden art car ties up at The Gothic Folly for Wednesday night.",
+   "schedule": [
+    {
+     "start": "09-02 21:30",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "The Gothic Folly Sound Healing",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "wellness",
+    "ritual",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sunset sound healing inside The Gothic Folly (listed officially as The Folly's Breath).",
+   "schedule": [
+    {
+     "start": "09-03 19:30",
+     "end": "20:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "BAAHS at The Gothic Folly",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The BAAHS art car (Big Ass Amazingly Awesome Homosexual Sheep) plays The Gothic Folly, Thursday night.",
+   "schedule": [
+    {
+     "start": "09-03 21:30",
+     "end": "23:30"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Robot Heart at The Gothic Folly",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Robot Heart ties up at The Gothic Folly late Thursday night into Friday morning.",
+   "schedule": [
+    {
+     "start": "09-04 00:00",
+     "end": "04:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "The Gothic Folly Sunrise Takeover",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "The Gothic Folly crew's own sunrise takeover, Saturday morning before the Man burns.",
+   "schedule": [
+    {
+     "start": "09-05 05:30",
+     "end": "09:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Don't Panic Art Car at The Gothic Folly",
+   "camp": "The Gothic Folly",
+   "address": "11:30 & deep playa",
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Don't Panic art car at The Gothic Folly for burn night.",
+   "schedule": [
+    {
+     "start": "09-05 21:30",
+     "end": "01:00"
+    }
+   ],
+   "source": "instagram-flyer-ocr",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
    "title": "Naked Blowjob Coal-Oven Pizza Night",
    "camp": "Camp Doesn't Exist",
    "address": "10:00 & F",
@@ -116811,6 +116972,711 @@
    "schedule": [
     {
      "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Venice Red Light x Axolotl x Polaris",
+   "camp": "Axis Mundi",
+   "address": "2:00 & B",
+   "tags": [
+    "party",
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Collaboration event with Venice Red Light, Axolotl, and Polaris camps at Burning Man 2026.",
+   "schedule": [
+    {
+     "start": "09-02 08:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Eden Art Car - Man Burn",
+   "camp": "Axis Mundi",
+   "address": null,
+   "tags": [
+    "art",
+    "ritual",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Eden art car featured Saturday night for the Man Burn.",
+   "schedule": [
+    {
+     "start": null,
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Camp",
+   "camp": "Maxa Camp",
+   "address": "8:30 & J",
+   "tags": [
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Event at Maxa Camp Friday afternoon.",
+   "schedule": [
+    {
+     "start": "09-04 16:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Maxa",
+   "grounded_score": null
+  },
+  {
+   "title": "All Clowns On Deck",
+   "camp": "SideQuest",
+   "address": null,
+   "tags": [
+    "party",
+    "game"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sideshow event: all clowns on deck.",
+   "schedule": [
+    {
+     "start": "09-01 21:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Hippie Fishing",
+   "camp": "SideQuest",
+   "address": null,
+   "tags": [
+    "game"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sideshow game event: hippie fishing.",
+   "schedule": [
+    {
+     "start": "09-02 15:00",
+     "end": "18:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Blunder Dome",
+   "camp": "SideQuest",
+   "address": null,
+   "tags": [
+    "game",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Sideshow event: Blunder Dome.",
+   "schedule": [
+    {
+     "start": "09-03 23:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Behind Closed Eyes",
+   "camp": "Community submission",
+   "address": "1:00 & Deep Playa",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set at Behind Closed Eyes.",
+   "schedule": [
+    {
+     "start": "09-01 20:30",
+     "end": "22:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Soundgarden",
+   "camp": "Soundgarden",
+   "address": "2:00 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set at Soundgarden.",
+   "schedule": [
+    {
+     "start": "09-02 04:00",
+     "end": "05:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Fins of Fortune at Long Feng (Hues Takeover)",
+   "camp": "Long Feng",
+   "address": "10:00 & K",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set, part of the Hues takeover.",
+   "schedule": [
+    {
+     "start": "09-02 14:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "Swerge",
+   "camp": "Swerge",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set at Swerge, secret location.",
+   "schedule": [
+    {
+     "start": "09-02 23:00",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Foam Dome",
+   "camp": "Foam Dome",
+   "address": "9:30 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set at Foam Dome.",
+   "schedule": [
+    {
+     "start": "09-03 14:00",
+     "end": "15:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Hues \"Global Night\" @ Bloom",
+   "camp": "Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set during Bloom's Global Night (party runs 3pm-12am).",
+   "schedule": [
+    {
+     "start": "09-04 22:30",
+     "end": "00:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Bloom bloomcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Cuddlefish Art Car @ Ancient Future Portal",
+   "camp": "Ancient Future Portal",
+   "address": "1:00ish & Deep Playa",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Little Dinosaur",
+   "description": "Little Dinosaur DJ set aboard the Cuddlefish art car.",
+   "schedule": [
+    {
+     "start": "09-05 00:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Bisous Sunrise",
+   "camp": "Tea House",
+   "address": "9:45 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Earthtones",
+   "description": "Earthtones sunrise DJ set at the Tea House.",
+   "schedule": [
+    {
+     "start": "09-02 03:00",
+     "end": "06:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Amma - The Boogie Brunch",
+   "camp": "Community submission",
+   "address": "2:00 & I",
+   "tags": [
+    "music",
+    "party",
+    "food"
+   ],
+   "fine_tags": [],
+   "presenter": "Earthtones",
+   "description": "Earthtones DJ set at The Boogie Brunch.",
+   "schedule": [
+    {
+     "start": "09-03 11:11",
+     "end": "15:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Playa Alchemist",
+   "camp": "Tea House",
+   "address": "3:30 & D",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Earthtones",
+   "description": "Earthtones DJ set at the Tea House.",
+   "schedule": [
+    {
+     "start": "09-04 00:00",
+     "end": "02:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Bangers Only w/ Unders",
+   "camp": "Community submission",
+   "address": "10:00 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Earthtones",
+   "description": "Earthtones DJ set, Bangers Only.",
+   "schedule": [
+    {
+     "start": "09-04 07:00",
+     "end": "13:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Lotus Art Install",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party",
+    "art"
+   ],
+   "fine_tags": [],
+   "presenter": "Earthtones",
+   "description": "Earthtones DJ set at a lotus art installation on the playa.",
+   "schedule": [
+    {
+     "start": "09-05 00:30",
+     "end": "02:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Maxa Sunrise",
+   "camp": "Community submission",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Earthtones",
+   "description": "Earthtones sunrise DJ set - look for the deer.",
+   "schedule": [
+    {
+     "start": "09-06 05:30",
+     "end": "07:30"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Acoustic Concert",
+   "camp": "Black Rock Philharmonic",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Black Rock Philharmonic",
+   "description": "Black Rock Philharmonic acoustic concert at the Temple.",
+   "schedule": [
+    {
+     "start": "09-04 09:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Sunset Concert: Dies Irae with Playa Choir & PULSE",
+   "camp": "Black Rock Philharmonic",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Meir Briskman",
+   "description": "Black Rock Philharmonic sunset concert performing Dies Irae with the Playa Choir, plus PULSE with Meir Briskman, at the Titanic in Deep Playa.",
+   "schedule": [
+    {
+     "start": "09-03 18:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Opening Concert",
+   "camp": "Black Rock Philharmonic",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Black Rock Philharmonic",
+   "description": "Black Rock Philharmonic opening concert at Gothic Folly, Deep Playa.",
+   "schedule": [
+    {
+     "start": "09-02 17:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "PULSE Preview",
+   "camp": "Black Rock Philharmonic",
+   "address": null,
+   "tags": [
+    "music"
+   ],
+   "fine_tags": [],
+   "presenter": "Black Rock Philharmonic",
+   "description": "Black Rock Philharmonic PULSE preview performance at Gothic Folly, Deep Playa.",
+   "schedule": [
+    {
+     "start": "09-02 18:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Swerge",
+   "camp": "Swerge",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii",
+   "description": "Dr. Chaii DJ set at Swerge, secret location.",
+   "schedule": [
+    {
+     "start": "09-02 02:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Elementum // Tower 69 - Inferno Party",
+   "camp": "Elementum",
+   "address": "9:30 & B",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii",
+   "description": "Dr. Chaii DJ set at Elementum's Tower 69 Inferno Party.",
+   "schedule": [
+    {
+     "start": "09-03 21:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Elementum elementumcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Sakenoma",
+   "camp": "Sakenoma",
+   "address": "4:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii",
+   "description": "Dr. Chaii b2b Emily Apollo DJ set at Sakenoma.",
+   "schedule": [
+    {
+     "start": "09-03 23:00",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Camp Sakenoma",
+   "grounded_score": null
+  },
+  {
+   "title": "Bloom",
+   "camp": "Bloom",
+   "address": "9:45 & Esp",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii",
+   "description": "Dr. Chaii DJ set at Bloom.",
+   "schedule": [
+    {
+     "start": "09-04 21:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Bloom bloomcamp",
+   "grounded_score": null
+  },
+  {
+   "title": "Tommy Art Car",
+   "camp": "Tommy Art Car",
+   "address": null,
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Dr. Chaii",
+   "description": "Dr. Chaii DJ set aboard the Tommy art car, Deep Playa.",
+   "schedule": [
+    {
+     "start": "09-04 00:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Longfeng",
+   "camp": "Long Feng",
+   "address": "10:00 & K",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Danni G",
+   "description": "Danni G DJ set at Long Feng.",
+   "schedule": [
+    {
+     "start": "08-31 01:00",
+     "end": "02:00"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": "Long Feng LFC",
+   "grounded_score": null
+  },
+  {
+   "title": "Blamo",
+   "camp": "Blamo",
+   "address": "3:15 & G",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Danni G",
+   "description": "Danni G DJ set at Blamo.",
+   "schedule": [
+    {
+     "start": "09-01 18:30",
+     "end": null
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "Foam Dome",
+   "camp": "Foam Dome",
+   "address": "9:30 & E",
+   "tags": [
+    "music",
+    "party"
+   ],
+   "fine_tags": [],
+   "presenter": "Danni G",
+   "description": "Danni G DJ set at Foam Dome.",
+   "schedule": [
+    {
+     "start": "09-03 15:00",
+     "end": "16:20"
+    }
+   ],
+   "source": "community-submission",
+   "confidence": "reported",
+   "aliases": null,
+   "grounded_score": null
+  },
+  {
+   "title": "WE HOLD THESE TRUTHS: E Pluribus Playa - Story Circle",
+   "camp": "Community submission",
+   "address": "6:15 & Esp",
+   "tags": [
+    "wellness",
+    "workshop"
+   ],
+   "fine_tags": [],
+   "presenter": null,
+   "description": "Meet at the ARTery for a gentle mindfulness walk followed by a one-hour story circle. An invitation to slow down, share, listen, and witness the small moments that make us feel most alive.",
+   "schedule": [
+    {
+     "start": "08-31 17:30",
+     "end": null
+    },
+    {
+     "start": "09-02 09:00",
      "end": null
     }
    ],
