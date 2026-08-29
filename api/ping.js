@@ -46,9 +46,14 @@ module.exports = async function handler(req, res) {
           apikey: key,
           Authorization: 'Bearer ' + key,
           'Content-Type': 'application/json',
-          Prefer: 'resolution=ignore-duplicates,return=minimal'
+          Prefer: 'resolution=merge-duplicates,return=minimal'
         },
-        body: JSON.stringify([{ day: day, client_id: id }])
+        body: JSON.stringify([{
+          day: day, client_id: id,
+          queries: Math.min(2000, Math.max(0, Number(body.q) || 0)),
+          install_clicks: Math.min(50, Math.max(0, Number(body.ic) || 0)),
+          standalone: body.sa === true
+        }])
       });
     } catch (e) { /* counting must never break anything */ }
     finally { clearTimeout(timer); }

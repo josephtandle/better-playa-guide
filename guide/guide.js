@@ -1693,6 +1693,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     var q = (qEl ? qEl.value : '').trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var tw = q ? parseTimeExpr(q) : { q: q, from: null, to: null };
     q = tw.q;
+    if (q) { try { var qc = (+localStorage.getItem('bpg.qn') || 0) + 1; localStorage.setItem('bpg.qn', String(qc)); } catch (e) {} }
     var qTokens = q ? queryTokens(q) : null;
     if (qTokens && !qTokens.length) qTokens = null;
     /* multi-intent: "coffee and a sauna" or "party or workshop" means EITHER.
@@ -4267,15 +4268,31 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
           cid = Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 8);
           localStorage.setItem('bpg.cid', cid);
         }
+        var sa = false;
+        try { sa = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true; } catch(e){}
+        var qn = 0, ic = 0;
+        try { qn = +localStorage.getItem('bpg.qn') || 0; ic = +localStorage.getItem('bpg.ic') || 0; } catch(e){}
         fetch('/api/ping', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id: cid }),
+          body: JSON.stringify({ id: cid, q: qn, ic: ic, sa: sa }),
           keepalive: true
-        }).then(function(){ try { localStorage.setItem('bpg.pinged', day); } catch(e){} })
+        }).then(function(){ try { localStorage.setItem('bpg.pinged', day); localStorage.setItem('bpg.qn', '0'); localStorage.setItem('bpg.ic', '0'); } catch(e){} })
           .catch(function(){});
       } catch(e){}
     })();
+
+    /* count taps on any Add-to-Home-Screen button (offline-install intent) */
+    document.addEventListener('click', function(ev2){
+      var t2 = ev2.target;
+      while (t2 && t2 !== document) {
+        if (t2.classList && t2.classList.contains('install-btn')) {
+          try { localStorage.setItem('bpg.ic', String((+localStorage.getItem('bpg.ic') || 0) + 1)); } catch(e){}
+          break;
+        }
+        t2 = t2.parentNode;
+      }
+    }, true);
 
     /* Find tab: on the finder page itself it exits My Events instead of reloading */
     document.addEventListener('click', function(e){
