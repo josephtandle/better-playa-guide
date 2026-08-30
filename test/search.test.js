@@ -146,8 +146,12 @@ const BPG = w.__BPG;
 (function(){
   const burn = BPG.answer('When is the Man burn?');
   ok(/Saturday 5 September/.test(burn.reply), 'ask "When is the Man burn?" answers the date, not a DJ lookup');
+  ok(/center|radial/.test(burn.reply), 'Man burn answer says WHERE and how to get there');
   const tb = BPG.answer('temple burn');
   ok(/Sunday 6 September/.test(tb.reply), 'ask "temple burn" answers the Temple date');
+  ok(/12:00|past the Man/.test(tb.reply), 'Temple answer says WHERE and how to get there');
+  const noloc = BPG.answer('sound bath');
+  ok(noloc.results.length === 0 || /Set your location/i.test(noloc.reply), 'event answers without a location prompt for one (so distances appear)');
   const toilet = BPG.answer('where is the nearest toilet');
   ok(/🚽/.test(toilet.reply), 'toilet questions route to the potty finder');
   const bath = BPG.answer('bathroom near me');

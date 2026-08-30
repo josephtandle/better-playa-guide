@@ -1984,9 +1984,10 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     }
     /* burn-night logistics: "when does the man burn" is a date, not a DJ */
     if (/\b(man|temple)\b.*\bburns?\b|\bburn\b.*\b(man|temple)\b/.test(qLower) && !/burn barrel|burn night party/.test(qLower)) {
-      if (/temple/.test(qLower)) return { reply: 'The Temple burns Sunday 6 September, after dark (typically around 8pm, in silence). The Man burns the night before, Saturday 5 September around 9pm.', results: [] };
-      return { reply: 'The Man burns Saturday 5 September around 9pm (fire conclave first, then the burn). The Temple burns Sunday 6 September after dark, in silence.', results: [] };
+      if (/temple/.test(qLower)) return { reply: 'The Temple burns Sunday 6 September, after dark (typically around 8pm, in silence). Where: the Temple sits in open playa straight out past the Man at 12:00, roughly a 20-30 min walk from Esplanade, 10 min by bike. Ride any radial street toward the center and keep going past the Man.', results: [] };
+      return { reply: 'The Man burns Saturday 5 September around 9pm (fire conclave first, then the burn). Where: the Man is the dead center of the city, every radial street points straight at him. From the 8:00 side Esplanade it is about a 15-20 min walk or 5-8 min bike. Go early, the whole city rings him.', results: [] };
     }
+    var NOLOC_HINT = ' Tip: tap Set your location up top and every result shows the address plus walk and bike time from where you stand.';
     /* typo-correct words that match nothing in the data ("opulant" -> "opulent"),
        so the ask path fuzzes the same way the live filter does */
     qLower = qLower.split(/(\s+)/).map(function(part){
@@ -2087,7 +2088,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
         if (here) {
           matchingEvs.sort(function(a,b){ return (a.d == null ? 999 : a.d) - (b.d == null ? 999 : b.d); });
         }
-        return { reply: replyText, results: matchingEvs.slice(0, 60) };
+        return { reply: replyText + (here ? '' : NOLOC_HINT), results: matchingEvs.slice(0, 60) };
       }
     }
 
@@ -2558,7 +2559,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       mainReply += ' (Showing Sun 30 Aug, the first day of the burn.)';
     }
 
-    return { reply: mainReply, results: matchedEvs.slice(0, 60) };
+    return { reply: mainReply + (here ? '' : NOLOC_HINT), results: matchedEvs.slice(0, 60) };
   }
 
   /* ---- Ask: conversational, with a hard offline fallback ---- */
