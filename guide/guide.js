@@ -1693,7 +1693,22 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     var q = (qEl ? qEl.value : '').trim().toLowerCase().normalize('NFD').replace(FOLD_RE,'');
     var tw = q ? parseTimeExpr(q) : { q: q, from: null, to: null };
     q = tw.q;
-    if (q) { try { var qc = (+localStorage.getItem('bpg.qn') || 0) + 1; localStorage.setItem('bpg.qn', String(qc)); } catch (e) {} }
+    if (q) {
+      try { var qc = (+localStorage.getItem('bpg.qn') || 0) + 1; localStorage.setItem('bpg.qn', String(qc)); } catch (e) {}
+      /* anonymous query log (no id, no location), throttled to 1 per 4s so
+         keystroke-by-keystroke refinement sends only the settled query */
+      try {
+        if (typeof fetch === 'function' && (!window.__bpgQT || Date.now() - window.__bpgQT > 4000) && (typeof navigator === 'undefined' || navigator.onLine !== false)) {
+          window.__bpgQT = Date.now();
+          clearTimeout(window.__bpgQTimer);
+          window.__bpgQTimer = setTimeout(function(){
+            var el2 = $('ask-q');
+            var settled = (el2 && el2.value || '').trim();
+            if (settled.length >= 2) fetch('/api/query', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: settled.slice(0, 120), n: (document.querySelectorAll('#list li').length || 0) }), keepalive: true }).catch(function(){});
+          }, 2500);
+        }
+      } catch (e) {}
+    }
     var qTokens = q ? queryTokens(q) : null;
     if (qTokens && !qTokens.length) qTokens = null;
     /* multi-intent: "coffee and a sauna" or "party or workshop" means EITHER.
@@ -2371,7 +2386,16 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     var timeRelaxed = null;
     var distRelaxed = null;
 
+    /* generic music words: "sets"/"dj" must not lock out named lineups whose
+       text lacks the literal word (Maxa's sunrise run is a "set" too) */
+    var GENERIC_CAT = { set: 1, sets: 1, dj: 1, djs: 1 };
     var litHitsInitial = matchedCatWord ? runFilter('literal', matchedCatWord, initialDistLimit, initialTimeRange) : [];
+    if (matchedCatWord && GENERIC_CAT[matchedCatWord] && mappedTags) {
+      var tagAlso = runFilter('tag', mappedTags, initialDistLimit, initialTimeRange);
+      var seenIds = {};
+      litHitsInitial.forEach(function(r){ seenIds[r.id] = 1; });
+      tagAlso.forEach(function(r){ if (!seenIds[r.id]) { seenIds[r.id] = 1; litHitsInitial.push(r); } });
+    }
     if (matchedCatWord && litHitsInitial.length >= 3) {
       matchedEvs = litHitsInitial;
       catMode = 'literal';
