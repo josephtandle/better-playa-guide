@@ -683,5 +683,130 @@
 "q": "alok",
 "expect": "Alok",
 "kind": "artist"
+},
+{
+"q": "yoga at 8am",
+"expect": "yoga",
+"kind": "time-window"
+},
+{
+"q": "party at 10",
+"expect": null,
+"kind": "time-window"
+},
+{
+"q": "sets after midnight",
+"expect": null,
+"kind": "time-window"
+},
+{
+"q": "before 9am breakfast",
+"expect": null,
+"kind": "time-window"
+},
+{
+"q": "sunrise sets tomorrow",
+"expect": "sunrise",
+"kind": "time-window"
+},
+{
+"q": "coffee and sauna",
+"expect": null,
+"kind": "multi-intent"
+},
+{
+"q": "yoga or meditation",
+"expect": null,
+"kind": "multi-intent"
+},
+{
+"q": "food and music",
+"expect": null,
+"kind": "multi-intent"
+},
+{
+"q": "when is the man burn",
+"expect": "Saturday 5 September",
+"kind": "logistics-intent"
+},
+{
+"q": "temple burn time",
+"expect": "Sunday 6 September",
+"kind": "logistics-intent"
+},
+{
+"q": "nearest toilet",
+"expect": "\ud83d\udebd",
+"kind": "logistics-intent"
+},
+{
+"q": "where are porta potties",
+"expect": "\ud83d\udebd",
+"kind": "logistics-intent"
+},
+{
+"q": "bathroom",
+"expect": "\ud83d\udebd",
+"kind": "logistics-intent"
+},
+{
+"q": "dj sets tomorrow night",
+"expect": null,
+"kind": "generic-cat"
+},
+{
+"q": "live sets at robot heart",
+"expect": "Robot Heart",
+"kind": "generic-cat"
+},
+{
+"q": "maxa sunrise",
+"expect": "Maxa",
+"kind": "generic-cat"
+},
+{
+"q": "gothic folly",
+"expect": "Folly",
+"kind": "camp"
+},
+{
+"q": "axolotl bubbles",
+"expect": "AXOLOTL|Bubbles",
+"kind": "camp"
+},
+{
+"q": "baahs",
+"expect": "BAAHS",
+"kind": "camp"
+},
+{
+"q": "pickles",
+"expect": "pickle",
+"kind": "community-sourced"
+},
+{
+"q": "what should i do on burn night",
+"expect": null,
+"kind": "day"
+},
+{
+"q": "events on day 3",
+"expect": null,
+"kind": "day"
+},
+{
+"q": "wednesday workshops",
+"expect": null,
+"kind": "day"
+},
+{
+"q": "shalman",
+"expect": "Shalman",
+"kind": "artist"
+},
+{
+"q": "carlita vintage culture",
+"expect": "Carlita",
+"kind": "artist"
 }
 ]
