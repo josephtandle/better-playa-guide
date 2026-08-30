@@ -154,6 +154,8 @@ const BPG = w.__BPG;
   ok(noloc.results.length === 0 || /Set your location/i.test(noloc.reply), 'event answers without a location prompt for one (so distances appear)');
   const toilet = BPG.answer('where is the nearest toilet');
   ok(/🚽/.test(toilet.reply), 'toilet questions route to the potty finder');
+  const arc = BPG.answer('what time does arctica open');
+  ok(arc.results.length > 0 && /Arctica/i.test(JSON.stringify(arc.results.slice(0,3))), '"what time does arctica open" returns Arctica ice hours');
   const bath = BPG.answer('bathroom near me');
   ok(/🚽/.test(bath.reply), 'bathroom synonym routes to the potty finder');
 })();

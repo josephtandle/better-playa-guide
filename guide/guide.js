@@ -1922,6 +1922,8 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     s = s.replace(/\b(i'?m looking for|i am looking for|i want|show me|give me|looking for)\b/g, ' ');
     s = s.replace(/\baround here\b|\bnear here\b|\baround me\b/g, 'near me');
     s = s.replace(/\b(closest|nearest)\b/g, ' ');
+    /* "what time does X open/close/start" is a schedule lookup for X */
+    s = s.replace(/^\s*(?:what time|when)\s+(?:does|do|is|are|did|will)\s+(.+?)\s+(?:open|opens|close|closes|start|starts|end|ends|begin|begins)\??\s*$/, '$1');
     s = s.replace(/\b(bathrooms?|restrooms?|porta\s*-?\s*pott(y|ies)|portapott(y|ies)|loos?)\b/g, 'toilet');
     return s;
   }
