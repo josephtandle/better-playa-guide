@@ -120,7 +120,7 @@ module.exports = async function handler(req, res) {
     /* a code only lives within the season it was minted in */
     const cy = new Date().getUTCFullYear();
     if (new Date(inv[0].created).getTime() < Date.UTC(cy, 7, 1)) { res.statusCode = 410; return res.end(JSON.stringify({ error: 'expired_code' })); }
-    if (!(await store.rateHit('gfa:code:' + cy + ':' + code, 50, 60 * DAY))) { res.statusCode = 429; return res.end(JSON.stringify({ error: 'code_maxed' })); }
+    if (!(await store.rateHit('gfa:code:' + cy + ':' + code, 75, 60 * DAY))) { res.statusCode = 429; return res.end(JSON.stringify({ error: 'code_maxed' })); }
     const other = inv[0].cid;
     if (other === id) { res.statusCode = 400; return res.end(JSON.stringify({ error: 'own_code' })); }
     const pk = pairKey(id, other);

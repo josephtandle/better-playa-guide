@@ -193,7 +193,7 @@
     return true;
   }
   var TAGS = ['workshop','talk','party','music','food','drink','adult','wellness','art','ritual','game'];
-  var active = new Set(), shown = 60, here = null, speed = 12;
+  var active = new Set(), shown = 60, here = null, speed = 12, showPast = false;
 
   /* ---- Stars preference store ---- */
   var STAR_PREF = 'bpg.stars';
@@ -1834,6 +1834,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     here = parseAddr(locVal);
     speed = +($('mode') ? $('mode').value : 12) || 12;
     var rows = [];
+    var hiddenPast = 0;
 
     for (var i = 0; i < GROUPS.length; i++){
       var e = GROUPS[i];
@@ -1846,6 +1847,35 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
         for (var oc = 0; oc < orClauses.length; oc++){ if (matchTokens(orClauses[oc], hayOr)){ hitOr = true; break; } }
         if (!hitOr) continue;
       } else if (qTokens && !matchTokens(qTokens, eventHay(e, i))) continue;
+      /* hide events that are completely over (every slot ended before now,
+         playa time) unless the user asked for them */
+      if (!showPast && !isStarred){
+        var pastOnly = true;
+        var nowP = Date.now() - 7 * 3600 * 1000;
+        for (var ps = 0; ps < e.s.length; ps++){
+          var st0 = e.s[ps][0];
+          if (typeof st0 !== 'string'){ pastOnly = false; break; }
+          var mmv = +st0.slice(0,2), ddv = +st0.slice(3,5);
+          if (!(mmv >= 1)){ pastOnly = false; break; }
+          var dayStart = Date.UTC(2026, mmv - 1, ddv, 0, 0, 0);
+          if (st0.indexOf(' ') === -1){ if (dayStart + 24*3600*1000 > nowP){ pastOnly = false; break; } continue; }
+          var hhv = +st0.slice(6,8), miv = +st0.slice(9,11);
+          var sMs = Date.UTC(2026, mmv - 1, ddv, hhv, miv, 0);
+          var endStr = e.s[ps][1];
+          var eMs = sMs + 2 * 3600 * 1000;
+          if (typeof endStr === 'string' && /^\d{2}:\d{2}$/.test(endStr)){
+            eMs = Date.UTC(2026, mmv - 1, ddv, +endStr.slice(0,2), +endStr.slice(3,5), 0);
+            if (eMs <= sMs) eMs += 24 * 3600 * 1000;
+          }
+          if (eMs > nowP){ pastOnly = false; break; }
+        }
+        /* an explicitly selected past day means the user WANTS that day */
+        if (pastOnly && day){
+          var selDay = Date.UTC(2026, +day.slice(0,2) - 1, +day.slice(3,5), 0, 0, 0);
+          if (selDay + 24*3600*1000 <= Date.now() - 7*3600*1000) pastOnly = false;
+        }
+        if (pastOnly){ hiddenPast++; continue; }
+      }
       var twSlot = null;
       if ((tw.from !== null || tw.to !== null)){
         for (var si2 = 0; si2 < e.s.length; si2++){ if (slotInWindow(e.s[si2], tw.from, tw.to)){ twSlot = e.s[si2]; break; } }
@@ -1891,6 +1921,18 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     }
     /* Honest count: cards after grouping repeat days, so it never silently
        contradicts the 3,875-events claim (which counts occurrences). */
+    var spBtn = $('show-past');
+    if (spBtn){
+      if (showPast){
+        spBtn.style.display = '';
+        spBtn.textContent = 'Hide past events';
+      } else if (hiddenPast > 0){
+        spBtn.style.display = '';
+        spBtn.textContent = 'Show ' + hiddenPast + ' past event' + (hiddenPast === 1 ? '' : 's');
+      } else {
+        spBtn.style.display = 'none';
+      }
+    }
     var countText = mylistOnly
       ? rows.length + ' starred events'
       : rows.length + ' cards (repeat days grouped)' + (here ? ' · distances from ' + locVal : ' · set your location for distances');
@@ -4195,6 +4237,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     initOwnEvents();
     initSubmitEvent();
     initPotty();
+    if ($('show-past')) $('show-past').addEventListener('click', function(){ showPast = !showPast; render(); });
     initStarAlerts();
     initFilterModal();
     initLocModal();

@@ -173,6 +173,25 @@ const BPG = w.__BPG;
   ok(!!sortSel.querySelector('option[value="foryou"]'), 'the "for you" sort option is on the page');
 })();
 
+/* ---- 13. Past events hidden by default, one tap to show ---- */
+(function(){
+  const r = search('friday bbq feast'); /* only slot was opening Sunday, long past */
+  ok(/Nothing matches/.test(r.text) || r.n === 0, 'a fully past event is hidden from default browsing');
+  const sp = d.getElementById('show-past');
+  ok(sp && sp.style.display !== 'none' && /past event/.test(sp.textContent), 'the Show past events button appears with a count');
+  sp.click();
+  const r2 = d.getElementById('list').textContent;
+  ok(/BBQ/i.test(r2), 'toggling shows the past event');
+  ok(/Hide past events/.test(sp.textContent), 'button flips to Hide past events');
+  sp.click();
+  const daySel = d.getElementById('day');
+  daySel.value = '08-30'; daySel.dispatchEvent(new w.window.Event('change', { bubbles: true }));
+  search('');
+  ok(d.querySelectorAll('#list li').length > 1, 'explicitly browsing a past day still shows that day');
+  daySel.value = ''; daySel.dispatchEvent(new w.window.Event('change', { bubbles: true }));
+  search('');
+})();
+
 /* ---- Summary ---- */
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {
