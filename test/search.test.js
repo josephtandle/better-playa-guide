@@ -200,6 +200,15 @@ const BPG = w.__BPG;
   search('');
 })();
 
+/* ---- 14. location auto-shares with friends (consent-gated) ---- */
+(function(){
+  const src = require('fs').readFileSync(require('path').join(__dirname, '..', 'guide', 'guide.js'), 'utf8');
+  ok(/autoFriendLoc/.test(src) && /bpg\.f\.consent/.test(src) && /bpg\.f\.sharing/.test(src),
+    'main page auto-pushes location to friends only with consent AND sharing on');
+  ok(/addEventListener\('change', function\(\)\{ setTimeout\(push, 500\)/.test(src),
+    'location-box changes trigger the auto-push');
+})();
+
 /* ---- Summary ---- */
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {

@@ -4397,6 +4397,31 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       } catch(e){}
     })();
 
+    /* auto-share location with friends: whenever the location box changes (or
+       on open), and the user consented + sharing is ON + there is signal, the
+       friend system gets the new address without any extra tap */
+    (function autoFriendLoc(){
+      var lastPushed = '';
+      function push(){
+        try {
+          if (localStorage.getItem('bpg.f.consent') !== '1') return;
+          if (localStorage.getItem('bpg.f.sharing') !== 'on') return;
+          if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+          var fid = localStorage.getItem('bpg.fid'), fsec = localStorage.getItem('bpg.f.secret');
+          if (!fid || !fsec) return;
+          var addr = ($('loc') && $('loc').value || '').trim();
+          if (!addr || addr === lastPushed) return;
+          lastPushed = addr;
+          fetch('/api/friend', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ op: 'loc', id: fid, secret: fsec, addr: addr.slice(0, 60), sharing: true, name: localStorage.getItem('bpg.f.name') || undefined }),
+            keepalive: true }).catch(function(){ lastPushed = ''; });
+        } catch(e){}
+      }
+      if ($('loc')) $('loc').addEventListener('change', function(){ setTimeout(push, 500); });
+      setTimeout(push, 6000);
+      try { window.addEventListener('online', function(){ setTimeout(push, 2000); }); } catch(e){}
+    })();
+
     /* live burner count, when online; cached for offline reopens */
       function showUsers(u){
         if (u > 0) el.textContent = base + ' · used by ' + u.toLocaleString('en-US') + ' burners';
