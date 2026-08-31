@@ -163,6 +163,11 @@ const C = { id: 'cccccccc3333', secret: 'secretCCCCsecretCCCC', name: 'Moop C' }
   await call({ op: 'peek', id: 'zzzzzzzz9999', secret: 'peekerSecretPeekerSec', code: 'NOPE1234' });
   ok(db.profiles.size === before, 'peek never creates a profile for the viewer');
 
+  /* friendly links: name slug travels in the URL, code parsing tolerates it */
+  ok(/~' : ''\) \+ j\.code|slug \+ '~'/.test(cljs), 'invite links carry a readable name slug');
+  ok(String("#add=dusty-dave~aB3xY9kQ2f").match(/[#?&]add=(?:([a-z0-9-]{1,24})~)?([A-Za-z0-9]{6,12})\b/)[2] === 'aB3xY9kQ2f', 'slugged link still yields the raw code');
+  ok(String("#add=aB3xY9kQ2f").match(/[#?&]add=(?:([a-z0-9-]{1,24})~)?([A-Za-z0-9]{6,12})\b/)[2] === 'aB3xY9kQ2f', 'old-format links keep working');
+
   console.log('friends: ' + passed + ' passed, ' + failures.length + ' failed');
   if (failures.length) { failures.forEach(f => console.error('  FAILED: ' + f)); process.exit(1); }
 })();

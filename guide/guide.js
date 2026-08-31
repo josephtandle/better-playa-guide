@@ -1851,7 +1851,9 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
          playa time) unless the user asked for them */
       if (!showPast && !isStarred){
         var pastOnly = true;
-        var nowP = Date.now() - 7 * 3600 * 1000;
+        /* 30-min grace: an event stays visible until well after it truly ends,
+           so stragglers and run-late sets don't vanish mid-party */
+        var nowP = Date.now() - 7 * 3600 * 1000 - 30 * 60 * 1000;
         for (var ps = 0; ps < e.s.length; ps++){
           var st0 = e.s[ps][0];
           if (typeof st0 !== 'string'){ pastOnly = false; break; }

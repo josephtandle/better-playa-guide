@@ -173,6 +173,14 @@ const BPG = w.__BPG;
   ok(!!sortSel.querySelector('option[value="foryou"]'), 'the "for you" sort option is on the page');
 })();
 
+/* ---- 13a. Grace period: events hide only 30+ min AFTER they end ---- */
+(function(){
+  /* the hide cutoff in source must subtract a 30-minute grace from now */
+  const src = require('fs').readFileSync(require('path').join(__dirname, '..', 'guide', 'guide.js'), 'utf8');
+  ok(/nowP = Date\.now\(\) - 7 \* 3600 \* 1000 - 30 \* 60 \* 1000/.test(src),
+    'past-hiding waits 30 minutes after an event fully ends');
+})();
+
 /* ---- 13. Past events hidden by default, one tap to show ---- */
 (function(){
   const r = search('friday bbq feast'); /* only slot was opening Sunday, long past */

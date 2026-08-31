@@ -119,15 +119,19 @@
   function boot(){
     var consent = null;
     try { consent = localStorage.getItem(LS.consent); } catch(e){}
-    var addMatch = /[#?&]add=([A-Za-z0-9]{6,12})/.exec(location.hash || location.search || '');
+    var addMatch = /[#?&]add=(?:([a-z0-9-]{1,24})~)?([A-Za-z0-9]{6,12})\b/.exec(location.hash || location.search || '');
 
     if (addMatch) {
       $('accept-box').style.display = '';
       $('consent').style.display = 'none';
+      if (addMatch[1]) {
+        var slugName = addMatch[1].replace(/-+/g, ' ').replace(/\b[a-z]/g, function(c){ return c.toUpperCase(); });
+        $('accept-text').textContent = 'Add ' + slugName + ' as a friend?';
+      }
       var nameEl = $('accept-name');
       try { nameEl.value = localStorage.getItem(LS.name) || ''; } catch(e){}
       if (online()) {
-        api({ op: 'peek', code: addMatch[1] }).then(function(j){
+        api({ op: 'peek', code: addMatch[2] }).then(function(j){
           if (j && j.ok) $('accept-text').textContent = 'Add ' + j.name + ' as a friend?';
           if (j && j.error === 'no_such_code') { $('accept-text').textContent = 'That invite code does not exist (or was mistyped).'; $('accept-yes').style.display = 'none'; }
         }).catch(function(){});
@@ -138,7 +142,7 @@
         var nm = (nameEl.value || '').trim().slice(0, 40);
         if (nm) try { localStorage.setItem(LS.name, nm); } catch(e){}
         try { localStorage.setItem(LS.consent, '1'); } catch(e){}
-        api({ op: 'accept', code: addMatch[1] }).then(function(j){
+        api({ op: 'accept', code: addMatch[2] }).then(function(j){
           if (j && j.ok) {
             note('You and ' + j.name + ' are now playa friends. Sharing is OFF until you turn it on above.');
             location.hash = '';
@@ -175,7 +179,10 @@
       if (!online()) { note('Creating an invite needs a moment of signal.'); return; }
       api({ op: 'invite' }).then(function(j){
         if (j && j.ok) {
-          var link = 'https://playaguide.musecafe.vip/guide/friends#add=' + j.code;
+          var slug = String(localStorage.getItem(LS.name) || j.name || '')
+            .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 20);
+          var link = 'https://playaguide.musecafe.vip/guide/friends#add=' + (slug ? slug + '~' : '') + j.code;
           $('invite-out').textContent = link;
           note('Heads up: ANYONE who taps this link and accepts becomes a friend and can see your shared address. Send it only to people you want.');
           if (navigator.share) { navigator.share({ title: 'Find me on playa', text: 'Add me on the Playa Guide so we can find each other:', url: link }).catch(function(){}); }
