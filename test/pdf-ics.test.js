@@ -100,7 +100,7 @@ const EV = G.ev.e;
   ok(ics.indexOf('X-WR-CALNAME:My Playa Guide') !== -1, 'calendar is named My Playa Guide');
   ok(ics.indexOf('BEGIN:VTIMEZONE') !== -1 && ics.indexOf('TZID:America/Los_Angeles') !== -1, 'Pacific VTIMEZONE present');
   ok((ics.match(/BEGIN:VEVENT/g) || []).length > 0, 'events present');
-  ok(ics.indexOf('TRIGGER:-PT30M') !== -1, 'timed events carry a 30-minute alarm');
+  ok(ics.indexOf('TRIGGER:-PT60M') !== -1, 'timed events carry a 1-hour offline alarm');
   ok(ics.split('\r\n').every(l => Buffer.byteLength(l, 'utf8') <= 77), 'no line exceeds the RFC fold width');
   /* date-only slot becomes an all-day event with no alarm */
   const dOnly = buildListIcs([{ t: 'Running order', c: 'Camp', a: '8:00 & C', s: [['09-02', null]] }], '2026-08-26T00:00:00.000Z');

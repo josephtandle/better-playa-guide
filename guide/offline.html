@@ -37,20 +37,20 @@
   <p style="margin:0;font-size:.92rem">Every event, the map, and search live <strong>inside this page</strong>. Once you add it to your home screen and open it once with signal, your phone keeps a full copy. After that it needs <strong>no bars, no wifi, no data</strong>: it is not "loading a website", it is opening the copy already on your phone.</p>
 </div>
 
-<h2>iPhone (Safari)</h2>
+<h2 id="sec-ios">iPhone (Safari)</h2>
 <div class="panel">
   <div class="step"><span class="step-n">1</span><p>Open <strong>playaguide.musecafe.vip</strong> in <strong>Safari</strong> (not Instagram's built-in browser: if you got here from IG, tap <strong>⋯</strong> and choose <em>Open in external browser</em> first).</p></div>
   <div class="step"><span class="step-n">2</span><p>Tap the <strong>Share</strong> button: the square with the arrow pointing up, bottom-middle of the screen.</p></div>
   <div class="step"><span class="step-n">3</span><p>Scroll down the share sheet and tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>.</p></div>
-  <div class="step"><span class="step-n">4</span><p>Find the new <strong>Playa Guide</strong> icon on your home screen and <strong>open it once while you still have signal</strong>. Scroll around for a few seconds: that saves everything.</p></div>
+  <div class="step"><span class="step-n">4</span><p><strong>THE STEP EVERYONE MISSES:</strong> find the new <strong>Playa Guide</strong> icon on your home screen and <strong>open it from the icon once, right now, while you still have signal</strong>. iPhones keep a separate copy for the icon: if you never open the icon online, it has nothing saved and will fail on playa. Open it, scroll for a few seconds, done forever.</p></div>
 </div>
 
-<h2>Android (Chrome)</h2>
+<h2 id="sec-android">Android (Chrome)</h2>
 <div class="panel">
   <div class="step"><span class="step-n">1</span><p>Open <strong>playaguide.musecafe.vip</strong> in <strong>Chrome</strong> (same trick if you're inside Instagram: <strong>⋮</strong> then <em>Open in Chrome</em>).</p></div>
   <div class="step"><span class="step-n">2</span><p>Tap the <strong>⋮</strong> menu, top right.</p></div>
   <div class="step"><span class="step-n">3</span><p>Tap <strong>Add to Home screen</strong> (some phones say <em>Install app</em>), then confirm.</p></div>
-  <div class="step"><span class="step-n">4</span><p>Open the new icon once with signal and scroll around. Done.</p></div>
+  <div class="step"><span class="step-n">4</span><p><strong>Then open the new icon once while you still have signal</strong> and scroll around. The icon keeps its own copy: this step is what makes it work with zero bars.</p></div>
 </div>
 
 <h2>Prove it to yourself</h2>
@@ -74,8 +74,29 @@
 <p style="margin:1.2rem 0 2rem"><a class="btn solid" href="/guide/">&larr; Back to the guide</a></p>
 
 </main>
+<style>.your-os{outline:2px solid var(--brass);border-radius:10px;position:relative}
+.your-os::before{content:"YOUR PHONE";position:absolute;top:-0.7rem;right:.8rem;background:var(--brass);color:var(--rouge-deep);font:700 .6rem/1.4 Montserrat,sans-serif;letter-spacing:.06em;padding:.1rem .5rem;border-radius:999px}</style>
 <script>
 (function(){
+  /* show people THEIR steps: detect the OS and badge the matching section */
+  try {
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPhone|iPad|iPod/.test(ua);
+    var isAndroid = /Android/.test(ua);
+    var secId = isIOS ? 'sec-ios' : (isAndroid ? 'sec-android' : null);
+    if (secId) {
+      var h = document.getElementById(secId);
+      var panel = h && h.nextElementSibling;
+      if (panel) panel.classList.add('your-os');
+      if (isIOS && !/Safari/.test(ua.replace(/CriOS|FxiOS|EdgiOS/g, ''))) {} /* in-app browsers keep the IG warning in step 1 */
+      if (isIOS && /CriOS|FxiOS/.test(ua)) {
+        var note = document.createElement('p');
+        note.style.cssText = 'font-size:.85rem;margin:.4rem 0 0';
+        note.innerHTML = '<strong>You are in Chrome/Firefox on iPhone:</strong> the share button is at the TOP right; tap it, then Add to Home Screen. Everything else is the same.';
+        panel.appendChild(note);
+      }
+    }
+  } catch (e) {}
   var el = document.getElementById('offline-status');
   function set(t){ el.innerHTML = t; }
   var standalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;

@@ -210,20 +210,16 @@ const sha = s => crypto.createHash('sha256').update(String(s)).digest('hex');
     const fs = require('fs');
     const cfg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'vercel.json'), 'utf8'));
     const hosts = ['betterplayaguideai.musecafe.vip', 'betterguide.musecafe.vip', 'guide.musecafe.vip', 'playaguide.musecafe.vip'];
+    /* CONTRACT CHANGE 2026-08-31: guide subdomains must serve DIRECTLY.
+       Redirects require the network, which broke offline home-screen icons
+       installed against playaguide.musecafe.vip. Each guide host gets zero
+       redirects and a root rewrite into /guide/. */
     for (const h of hosts) {
-      const rules = cfg.redirects.filter(r => r.has && r.has[0] && r.has[0].value === h);
-      ok(rules.length >= 3, h + ' has specific redirect rules');
-      const apiRule = rules.find(r => r.source === '/api/(.*)');
-      ok(!!apiRule && apiRule.destination === 'https://musecafe.vip/api/$1',
-        h + ' passes /api through, never under /guide/');
-      const guideRule = rules.find(r => r.source === '/guide/(.*)');
-      ok(!!guideRule && guideRule.destination === 'https://musecafe.vip/guide/$1',
-        h + ' does not double-prefix /guide paths');
-      const catchAll = rules.find(r => r.source === '/(.*)');
-      ok(!!catchAll && catchAll.destination === 'https://musecafe.vip/guide/$1',
-        h + ' catch-all lands in the guide');
-      ok(rules.indexOf(apiRule) < rules.indexOf(catchAll) && rules.indexOf(guideRule) < rules.indexOf(catchAll),
-        h + ' specific rules come before the catch-all');
+      const redirRules = (cfg.redirects || []).filter(r => r.has && r.has[0] && r.has[0].value === h);
+      ok(redirRules.length === 0, h + ' has NO redirects (offline icons must never need the network)');
+      const rw = (cfg.rewrites || []).filter(r => r.has && r.has[0] && r.has[0].value === h);
+      const rootRw = rw.find(r => r.source === '/' && r.destination === '/guide/');
+      ok(!!rootRw, h + ' rewrites its root into the guide');
     }
     const swHdr = (cfg.headers || []).find(x => x.source === '/guide/sw.js');
     ok(!!swHdr && /no-cache/.test(swHdr.headers[0].value), 'sw.js is served no-cache so updates propagate');

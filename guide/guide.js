@@ -760,6 +760,66 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     var hh = Math.floor(h), mm = (h % 1) ? ':30' : ':00';
     return { ft: Math.round(bestFt), min: Math.max(1, Math.round(bestFt / 3 / 60)), clock: hh + mm };
   }
+  /* ---- offline in-app reminders: while the guide is open, watch starred
+     events and alert about an hour before start. Works with zero signal. ---- */
+  function checkStarAlerts(nowMsOverride){
+    var out = [];
+    try {
+      if (!starred || !starred.size) return out;
+      var starSet = starred;
+      var nowP = nowMsOverride != null ? nowMsOverride : (Date.now() - 7 * 3600 * 1000);
+      var alerted = {};
+      try { alerted = JSON.parse(localStorage.getItem('bpg.alerted') || '{}'); } catch(e){}
+      for (var i = 0; i < GROUPS.length; i++){
+        var e = GROUPS[i];
+        var starredHere = e.allIds.some(function(id){ return starSet.has(id); });
+        if (!starredHere) continue;
+        for (var j = 0; j < e.s.length; j++){
+          var st = e.s[j][0];
+          if (typeof st !== 'string' || st.indexOf(' ') === -1) continue;
+          var mm = +st.slice(0,2), dd = +st.slice(3,5), hh = +st.slice(6,8), mi = +st.slice(9,11);
+          var startMs = Date.UTC(2026, mm - 1, dd, hh, mi, 0);
+          var mins = Math.round((startMs - nowP) / 60000);
+          var akey = e.id + '|' + st;
+          if (mins > 0 && mins <= 65 && !alerted[akey]){
+            alerted[akey] = 1;
+            out.push({ t: e.t, c: e.c, a: e.a, mins: mins });
+          }
+        }
+      }
+      try { localStorage.setItem('bpg.alerted', JSON.stringify(alerted)); } catch(e){}
+    } catch(e){}
+    return out;
+  }
+  function initStarAlerts(){
+    /* the repeating timer would hold test processes open forever */
+    if (/jsdom/i.test((typeof navigator !== 'undefined' && navigator.userAgent) || '')) return;
+    function tick(){
+      var hits = checkStarAlerts(null);
+      hits.forEach(function(h){
+        var msg = '⏰ ' + h.t + ' starts in about ' + h.mins + ' min' + (h.a ? ' at ' + h.a : '') + (h.c ? ' (' + h.c + ')' : '');
+        if (typeof toast === 'function') toast(msg);
+        try {
+          if (typeof Notification !== 'undefined' && Notification.permission === 'granted'){
+            new Notification('Playa Guide reminder', { body: msg.replace('⏰ ', '') });
+          }
+        } catch(e){}
+      });
+    }
+    setInterval(tick, 60 * 1000);
+    setTimeout(tick, 5000);
+    /* ask for notification permission once, on a star action (a user gesture) */
+    document.addEventListener('click', function(ev2){
+      try {
+        var el2 = ev2.target && ev2.target.closest && ev2.target.closest('.star,[data-star],.star-btn');
+        if (el2 && typeof Notification !== 'undefined' && Notification.permission === 'default' && !localStorage.getItem('bpg.notifasked')){
+          localStorage.setItem('bpg.notifasked', '1');
+          Notification.requestPermission().catch(function(){});
+        }
+      } catch(e){}
+    }, true);
+  }
+
   function initPotty(){
     var btn = $('potty-btn');
     if (!btn) return;
@@ -1509,8 +1569,8 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
         lines.push('DESCRIPTION:' + icsEscape(describe(row, icsExtra.join('\n'))));
         lines.push('BEGIN:VALARM');
         lines.push('ACTION:DISPLAY');
-        lines.push('DESCRIPTION:' + icsEscape(row.t + ' starts in 30 minutes'));
-        lines.push('TRIGGER:-PT30M');
+        lines.push('DESCRIPTION:' + icsEscape(row.t + ' starts in 1 hour'));
+        lines.push('TRIGGER:-PT60M');
         lines.push('END:VALARM');
         lines.push('END:VEVENT');
       }
@@ -4102,6 +4162,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     initOwnEvents();
     initSubmitEvent();
     initPotty();
+    initStarAlerts();
     initFilterModal();
     initLocModal();
     initNavModal();
@@ -4382,6 +4443,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     resolveCamp: resolveCamp,
     calcRoute: calcRoute,
     nearestPotty: nearestPotty,
+    checkStarAlerts: checkStarAlerts,
     applyHashMode: applyHashMode,
     syncTabBar: syncTabBar,
     showUpdateToast: showUpdateToast,

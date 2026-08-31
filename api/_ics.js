@@ -145,8 +145,8 @@ function buildListIcs(events, nowIso) {
       if (!d.dateOnly && d.first) {
         lines.push('BEGIN:VALARM');
         lines.push('ACTION:DISPLAY');
-        lines.push('DESCRIPTION:' + icsEscape(e.t + ' starts in 30 minutes'));
-        lines.push('TRIGGER:-PT30M');
+        lines.push('DESCRIPTION:' + icsEscape(e.t + ' starts in 1 hour'));
+        lines.push('TRIGGER:-PT60M');
         lines.push('END:VALARM');
       }
       lines.push('END:VEVENT');
