@@ -136,6 +136,33 @@
     var pp = probe < s ? probe + 1440 : probe;
     return pp >= s && pp <= e2;
   }
+  /* ---- "for you": rank big lists by affinity with what YOU starred.
+     Stars never leave the phone; this is computed locally. ---- */
+  var AFF = null;
+  function buildAffinity(){
+    AFF = { tags: {}, camps: {}, perf: {} };
+    var n = 0;
+    for (var i = 0; i < GROUPS.length; i++){
+      var e = GROUPS[i];
+      if (!e.allIds.some(function(id){ return starred.has(id); })) continue;
+      n++;
+      (e.g || []).forEach(function(g){ AFF.tags[g] = (AFF.tags[g] || 0) + 1; });
+      if (e.c) AFF.camps[fold(e.c)] = 1;
+      fold(e.p || '').split(/[^a-z0-9]+/).forEach(function(w){ if (w.length > 3) AFF.perf[w] = 1; });
+    }
+    AFF.n = n;
+    return AFF;
+  }
+  function affinityScore(e){
+    if (!AFF) buildAffinity();
+    if (!AFF.n) return 0;
+    var s = 0;
+    (e.g || []).forEach(function(g){ s += (AFF.tags[g] || 0); });
+    if (e.c && AFF.camps[fold(e.c)]) s += 3;
+    var hit = false;
+    fold(e.p || '').split(/[^a-z0-9]+/).forEach(function(w){ if (!hit && AFF.perf[w]) { s += 4; hit = true; } });
+    return s;
+  }
   var HAYS = [];
   function eventHay(e, i){
     if (HAYS[i]) return HAYS[i];
@@ -1801,6 +1828,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       }
     }
     var day = $('day') ? $('day').value : '', sort = $('sort') ? $('sort').value : 'near';
+    AFF = null; /* stars may have changed since last render */
     var confirmedOnly = $('confirmed-only') ? $('confirmed-only').checked : false;
     var locVal = $('loc') ? $('loc').value : '';
     here = parseAddr(locVal);
@@ -1845,7 +1873,11 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       });
     }
 
-    if (sort === 'near' && here) rows.sort(function(a,b){
+    if (sort === 'foryou'){
+      /* likely-favorites first (scored from YOUR stars, locally), soonest as tiebreak */
+      rows.forEach(function(r){ r.aff = affinityScore(r); });
+      rows.sort(function(a,b){ return (b.aff - a.aff) || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0); });
+    } else if (sort === 'near' && here) rows.sort(function(a,b){
       return (a.d==null?999:a.d) - (b.d==null?999:b.d); });
     else rows.sort(function(a,b){ return a.key < b.key ? -1 : a.key > b.key ? 1 : 0; });
 
@@ -2360,11 +2392,11 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     here = parseAddr(refAddr || ($('loc') ? $('loc').value : ''));
     speed = +($('mode') ? $('mode').value : 12) || 12;
 
-    if (isNearMeRequested && !($('loc') ? $('loc').value.trim() : '')) {
-      return {
-        reply: "You have not told me where you are. Tap the location box or ask 'I am at 7:30 and F'.",
-        results: []
-      };
+    var noLocForNearMe = isNearMeRequested && !($('loc') ? $('loc').value.trim() : '');
+    if (noLocForNearMe) {
+      /* never come back empty-handed: drop the proximity filter, keep the
+         time window, and say how to get distances */
+      isNearMeRequested = false;
     }
 
     function runFilter(catType, catVal, distLimit, timeRange) {
@@ -2645,6 +2677,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       mainReply += ' (Showing Sun 30 Aug, the first day of the burn.)';
     }
 
+    if (noLocForNearMe) mainReply = mainReply.replace(/\.$/, '') + ', city-wide (no location set).';
     return { reply: mainReply + (here ? '' : NOLOC_HINT), results: matchedEvs.slice(0, 60) };
   }
 
@@ -4283,7 +4316,43 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
         added.toLocaleString('en-US') + ' added + ' +
         enriched.toLocaleString('en-US') + ' enriched beyond the official book';
       el.textContent = base;
-      /* live burner count, when online; cached for offline reopens */
+      /* data freshness: show when this phone last synced, auto-nudge updates */
+    (function freshness(){
+      function fmtAgo(ms){
+        var m = Math.round((Date.now() - ms) / 60000);
+        if (m < 2) return 'just now';
+        if (m < 60) return m + ' min ago';
+        var h = Math.round(m / 60);
+        if (h < 36) return h + 'h ago';
+        return Math.round(h / 24) + ' days ago';
+      }
+      function render(){
+        try {
+          var st = JSON.parse(localStorage.getItem('bpg.synced') || 'null');
+          var el = $('value-stat');
+          if (st && el && el.textContent && el.textContent.indexOf('synced') === -1){
+            el.textContent = el.textContent + ' · events checked ' + fmtAgo(st.checkedAt);
+          }
+        } catch(e){}
+      }
+      try {
+        if (typeof fetch === 'function' && (typeof navigator === 'undefined' || navigator.onLine !== false)){
+          fetch('/guide/version.json', { cache: 'no-store' }).then(function(r){ return r.json(); }).then(function(v){
+            var prev = null;
+            try { prev = JSON.parse(localStorage.getItem('bpg.synced') || 'null'); } catch(e){}
+            localStorage.setItem('bpg.synced', JSON.stringify({ built: v.built, checkedAt: Date.now() }));
+            if (prev && prev.built && v.built !== prev.built && 'serviceWorker' in navigator){
+              /* newer build online: nudge the worker so the update toast fires */
+              navigator.serviceWorker.getRegistration('/guide/').then(function(reg){ if (reg) reg.update(); }).catch(function(){});
+            }
+            render();
+          }).catch(render);
+        } else { render(); }
+        setTimeout(render, 2500); /* after valueStat fills in */
+      } catch(e){}
+    })();
+
+    /* live burner count, when online; cached for offline reopens */
       function showUsers(u){
         if (u > 0) el.textContent = base + ' · used by ' + u.toLocaleString('en-US') + ' burners';
       }

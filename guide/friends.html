@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Friends: Better Playa Guide</title>
+<meta name="description" content="Find your people on playa. Share your last-known location with the friends you choose, works whenever either of you catches signal.">
+<meta name="theme-color" content="#fffaf2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/guide/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/guide/guide.css">
+<style>
+.friend{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.6rem .2rem;border-bottom:1px solid rgba(216,165,75,.25)}
+.friend-name{font-weight:600}
+.friend-loc{font-size:.85rem;color:var(--smoke)}
+.friend-actions button{min-height:34px;padding:.2rem .55rem;font-size:.72rem}
+.toggle-row{display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin:.4rem 0}
+.consent-box{border:2px solid var(--brass);border-radius:10px;padding:.8rem .9rem;margin:.6rem 0}
+</style>
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="top-row"><h1>Friends</h1></div>
+  <p class="kicker">Find your people on playa</p>
+  <nav class="tabs">
+    <a href="/guide/" data-tab="finder">Find</a>
+    <a href="/guide/#myevents" data-tab="myevents"><span class="tab-star" aria-hidden="true">★</span> My Events</a>
+    <a href="/guide/map" data-tab="map">Map</a>
+    <a href="/guide/friends" class="active" data-tab="friends">Friends</a>
+    <a href="/guide/submit" data-tab="submit">Add events</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<div class="panel" id="how-panel">
+  <p style="margin:0;font-size:.9rem"><strong>How it works:</strong> invite a close friend with a link. When you both accept, you see each other's <strong>last known playa address</strong>. There is no live GPS out here: locations update whenever either phone catches signal (Center Camp wifi works), so it's a rendezvous tool, not a tracker. Friends stay on your list for next year. Sharing is off until you turn it on, and you can mute anyone, or everyone, any time.</p>
+</div>
+
+<div id="consent" class="consent-box" style="display:none">
+  <p style="margin:0 0 .5rem;font-size:.92rem"><strong>Before anything is shared:</strong> turning this on stores your burner name and the playa address you set in the guide, and shows them ONLY to friends you explicitly add. Nothing else, no GPS history, no phone number, no account. Off-playa this all goes dark automatically.</p>
+  <div class="row"><input id="my-name" maxlength="40" placeholder="Your playa name (what friends see)"></div>
+  <div class="btnrow"><button class="btn solid" id="consent-yes">I agree, set up Friends</button></div>
+</div>
+
+<div id="friends-ui" style="display:none">
+  <div class="panel">
+    <div class="toggle-row">
+      <span style="font-size:.9rem"><strong>Share my location with friends</strong><br><span style="font-size:.8rem;color:var(--smoke)" id="share-status"></span></span>
+      <button class="btn" id="share-toggle">…</button>
+    </div>
+    <div class="btnrow" style="margin-top:.4rem">
+      <button class="btn solid" id="invite-btn">Invite a friend</button>
+      <button class="btn" id="update-loc-btn">Update my location now</button>
+    </div>
+    <p id="invite-out" class="move-device-note" style="user-select:all"></p>
+  </div>
+
+  <h2>Your friends</h2>
+  <div class="panel">
+    <div id="friend-list"><p style="font-size:.88rem;color:var(--smoke)">No friends yet. Tap Invite a friend and send them the link any way you like: text, WhatsApp, write it on their arm.</p></div>
+    <p id="friends-note" class="move-device-note"></p>
+    <p style="font-size:.78rem;color:var(--smoke);margin:.6rem 0 0" id="last-refresh"></p>
+  </div>
+</div>
+
+<div id="accept-box" class="consent-box" style="display:none">
+  <p style="margin:0 0 .5rem;font-size:.95rem" id="accept-text">Add this burner as a friend?</p>
+  <p style="margin:0 0 .5rem;font-size:.82rem;color:var(--smoke)">You'll see each other's last known playa address while you both share. You can mute or remove them any time.</p>
+  <div class="row"><input id="accept-name" maxlength="40" placeholder="Your playa name (what they see)"></div>
+  <div class="btnrow"><button class="btn solid" id="accept-yes">Add friend</button> <button class="btn" id="accept-no">No thanks</button></div>
+</div>
+
+<p style="margin:1.2rem 0 2rem"><a class="btn" href="/guide/">&larr; Back to the guide</a></p>
+</main>
+
+<script src="/guide/friends.js"></script>
+<script>if ('serviceWorker' in navigator) { try { navigator.serviceWorker.register('/guide/sw.js'); } catch(e){} }</script>
+</body></html>

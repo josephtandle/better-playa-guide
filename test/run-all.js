@@ -18,7 +18,8 @@ const suites = [
   path.join(repoRoot, 'test', 'pdf-ics.test.js'),
   path.join(repoRoot, 'test', 'search.test.js'),
   path.join(repoRoot, 'test', 'rate-limit.test.js'),
-  path.join(repoRoot, 'test', 'eval-questions.js')
+  path.join(repoRoot, 'test', 'eval-questions.js'),
+  path.join(repoRoot, 'test', 'friends.test.js')
 ];
 const retrieval = path.join(repoRoot, 'api', '_retrieval.test.js');
 if (fs.existsSync(retrieval)) suites.push(retrieval);

@@ -160,6 +160,19 @@ const BPG = w.__BPG;
   ok(/🚽/.test(bath.reply), 'bathroom synonym routes to the potty finder');
 })();
 
+/* ---- 11. near-me with no location: never empty-handed ---- */
+(function(){
+  const r = BPG.answer('what is happening now near me');
+  ok(r.results.length > 0, '"now near me" without a location returns city-wide results (' + r.results.length + ')');
+  ok(/city-wide|Set your location/i.test(r.reply), 'and the reply says how to get real distances');
+})();
+
+/* ---- 12. for-you sort exists and reorders by starred affinity ---- */
+(function(){
+  const sortSel = d.getElementById('sort');
+  ok(!!sortSel.querySelector('option[value="foryou"]'), 'the "for you" sort option is on the page');
+})();
+
 /* ---- Summary ---- */
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {

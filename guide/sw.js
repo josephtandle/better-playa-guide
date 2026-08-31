@@ -1,7 +1,7 @@
 /* Service worker: caches everything so the guide works with no signal. MIT. */
-var CACHE = 'bpg-v110';
+var CACHE = 'bpg-v111';
 var FALLBACK = '/guide/';
-var ASSETS = ['/guide/','/guide','/guide/map','/guide/how-it-was-made','/guide/submit','/guide/offline',
+var ASSETS = ['/guide/','/guide','/guide/map','/guide/how-it-was-made','/guide/submit','/guide/offline','/guide/friends','/guide/friends.js',
   '/guide/guide.css','/guide/guide.js','/guide/map.js',
   '/guide/data.js','/guide/manifest.webmanifest'];
 var CORE = ['/guide/','/guide/guide.css','/guide/guide.js','/guide/data.js'];
@@ -33,6 +33,7 @@ self.addEventListener('fetch', function(e){
   if (e.request.method !== 'GET') return;
   var u = new URL(e.request.url);
   if (u.pathname.indexOf('/api/') === 0) return;   // never cache API responses (private exports, live stats)
+  if (u.pathname === '/guide/version.json') return; // freshness marker must always hit the network
   e.respondWith(
     caches.match(e.request).then(function(hit){
       var net = fetch(e.request).then(function(res){

@@ -221,6 +221,12 @@ const sha = s => crypto.createHash('sha256').update(String(s)).digest('hex');
       const rootRw = rw.find(r => r.source === '/' && r.destination === '/guide/');
       ok(!!rootRw, h + ' rewrites its root into the guide');
     }
+    /* every first-party API function must be excepted from the container proxy */
+    const apiRw = (cfg.rewrites || []).find(r => String(r.source || '').startsWith('/api/((?!'));
+    ok(!!apiRw, 'the container API proxy rewrite exists');
+    for (const fn of ['friend', 'query', 'submit', 'ping', 'stats', 'error', 'list-pdf', 'list-ics', 'ask', 'list-sync']) {
+      ok(!!apiRw && apiRw.source.indexOf(fn + '$') !== -1, '/api/' + fn + ' is excepted from the container proxy');
+    }
     const swHdr = (cfg.headers || []).find(x => x.source === '/guide/sw.js');
     ok(!!swHdr && /no-cache/.test(swHdr.headers[0].value), 'sw.js is served no-cache so updates propagate');
   })();

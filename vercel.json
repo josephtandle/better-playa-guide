@@ -14,7 +14,7 @@
       "destination": "https://container-app-tau.vercel.app/_next/$1"
     },
     {
-      "source": "/api/((?!ask$|ask/|list-sync$|list-sync/).*)",
+      "source": "/api/((?!ask$|ask/|list-sync$|list-sync/|friend$|friend/|query$|query/|submit$|submit/|ping$|ping/|stats$|stats/|error$|error/|list-pdf$|list-pdf/|list-ics$|list-ics/).*)",
       "destination": "https://container-app-tau.vercel.app/api/$1"
     },
     {

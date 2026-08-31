@@ -51,6 +51,9 @@ if ! node scripts/smoke-rate-limit.js; then
   exit 1
 fi
 
+# 1c. Stamp the data-freshness marker the client shows as "synced X ago".
+echo "{\"built\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > "$REPO_ROOT/guide/version.json"
+
 # 2. Bump the service worker cache version so installed clients refresh.
 SW="$REPO_ROOT/guide/sw.js"
 CUR=$(grep -oE "bpg-v[0-9]+" "$SW" | head -1 | grep -oE "[0-9]+")
