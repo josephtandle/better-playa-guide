@@ -239,11 +239,12 @@ const BPG = w.__BPG;
   ok(!!btn, 'the GPS button exists on the Find page');
   btn.click();
   ok(d.getElementById('loc').value === '9:30 & C', 'tapping GPS fills the location box with the converted address (got "' + d.getElementById('loc').value + '")');
-  /* and internal state followed: the potty button must now give a real answer,
-     not "Set your location first" (the box listens on 'input', not 'change') */
-  d.getElementById('potty-btn').click();
-  var pn = d.getElementById('potty-note').textContent;
-  ok(/min walk/.test(pn), 'after a GPS fix the potty button answers with a distance (got "' + pn.slice(0, 60) + '")');
+  /* internal state followed too: ask-intent potty answer works off the GPS fix */
+  var np = BPG.nearestPotty(BPG.parseAddr(d.getElementById('loc').value));
+  ok(!!np && np.min >= 1, 'after a GPS fix the nearest-potty answer has a real distance');
+  var pb = d.getElementById('potty-btn');
+  ok(pb && pb.tagName === 'A' && pb.getAttribute('href') === '/guide/map#potty',
+    'the potty button goes straight to the map way-there view');
 })();
 
 /* ---- 15c. friends page has a working GPS lane of its own (geo.js) ---- */

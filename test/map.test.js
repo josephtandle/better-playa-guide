@@ -54,6 +54,22 @@ function bootMap(url){
 })();
 
 (function(){
+  /* the way-there guide: potty mode + a placed location draws a line to the
+     nearest bank and says how far */
+  const { w, d } = bootMap();
+  w.__BPG_MAP.setPotty(true);
+  const li = d.getElementById('loc');
+  li.value = '8:15 & E';
+  li.dispatchEvent(new w.Event('input', { bubbles: true }));
+  const line = d.querySelector('svg line[stroke-dasharray]');
+  ok(!!line, 'a dashed way-there line is drawn to the nearest bank');
+  const toast = d.getElementById('toast');
+  ok(toast && /min walk/.test(toast.textContent), 'the map says how many minutes the walk is (' + (toast ? toast.textContent.slice(0, 50) : 'no toast') + ')');
+  w.__BPG_MAP.setPotty(false);
+  ok(!d.querySelector('svg line[stroke-dasharray]'), 'leaving potty mode removes the guide line');
+})();
+
+(function(){
   /* #potty deep link turns the layer on at load without crashing (vb init order) */
   const { w, d } = bootMap('https://musecafe.vip/guide/map#potty');
   ok(!!w.__BPG_MAP, 'map boots with #potty hash');

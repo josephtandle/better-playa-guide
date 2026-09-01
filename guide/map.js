@@ -125,6 +125,11 @@ window.initMap = function(MAP, parseAddr, esc, extras){
     pottyOn = on;
     pottyG.setAttribute('display', on ? '' : 'none');
     anchorG.setAttribute('display', on ? '' : 'none');
+    if (!on){
+      if (guideLine && guideLine.parentNode) guideLine.parentNode.removeChild(guideLine);
+      if (guideRing && guideRing.parentNode) guideRing.parentNode.removeChild(guideRing);
+      guideLine = guideRing = null;
+    }
     var pb = document.getElementById('map-potty-btn');
     if (pb) pb.classList.toggle('solid', on);
     if (on) zoomToYou();
@@ -135,7 +140,28 @@ window.initMap = function(MAP, parseAddr, esc, extras){
       var side = 3600; /* ~0.7 mile square around you: your block + nearest banks */
       vb[0] = cx - side / 2; vb[1] = cy - side / 2; vb[2] = side; vb[3] = side;
       apply();
+      drawPottyGuide(cx, cy);
     }
+  }
+  /* the way there: straight line to the nearest bank + a ring on it + minutes */
+  var guideLine = null, guideRing = null;
+  function drawPottyGuide(cx, cy){
+    if (!pottyOn || !(extras.toilets || []).length) return;
+    var best = null, bestD = 1e12;
+    (extras.toilets).forEach(function(c){
+      var xy = toXY(c[0], c[1]);
+      var d2 = (xy[0] - cx) * (xy[0] - cx) + (xy[1] - cy) * (xy[1] - cy);
+      if (d2 < bestD){ bestD = d2; best = xy; }
+    });
+    if (!best) return;
+    if (guideLine && guideLine.parentNode) guideLine.parentNode.removeChild(guideLine);
+    if (guideRing && guideRing.parentNode) guideRing.parentNode.removeChild(guideRing);
+    guideLine = el('line', { x1: cx, y1: cy, x2: best[0], y2: best[1],
+      stroke: '#2563a8', 'stroke-width': 55, 'stroke-dasharray': '110 90', 'stroke-linecap': 'round', opacity: .85 });
+    guideRing = el('circle', { cx: best[0], cy: best[1], r: 230, fill: 'none', stroke: '#2563a8', 'stroke-width': 45, opacity: .9 });
+    g.appendChild(guideLine); g.appendChild(guideRing);
+    var ft = Math.round(Math.sqrt(bestD));
+    mapNote('🚽 Nearest bank: ~' + Math.max(1, Math.round(ft / 3 / 60)) + ' min walk (' + ft + ' ft). Follow the dashed line.');
   }
   function mapNote(msg){
     var el = document.getElementById('toast');
@@ -165,9 +191,12 @@ window.initMap = function(MAP, parseAddr, esc, extras){
         mapNote(err);
       }
       if (pos){
-        you.setAttribute('cx', (pos.coords.longitude - MAN[1]) * FLON);
-        you.setAttribute('cy', -(pos.coords.latitude - MAN[0]) * FLAT);
+        var gx = (pos.coords.longitude - MAN[1]) * FLON;
+        var gy = -(pos.coords.latitude - MAN[0]) * FLAT;
+        you.setAttribute('cx', gx);
+        you.setAttribute('cy', gy);
         you.setAttribute('r', 150);
+        drawPottyGuide(gx, gy);
       }
       if (pottyOn) zoomToYou();
     });
@@ -177,9 +206,11 @@ window.initMap = function(MAP, parseAddr, esc, extras){
     var v = document.getElementById('loc');
     var p = parseAddr(v ? v.value : '');
     if (!p){ you.setAttribute('r', 0); return; }
-    you.setAttribute('cx', (p.lon - MAN[1]) * FLON);
-    you.setAttribute('cy', -(p.lat - MAN[0]) * FLAT);
+    var px = (p.lon - MAN[1]) * FLON, py = -(p.lat - MAN[0]) * FLAT;
+    you.setAttribute('cx', px);
+    you.setAttribute('cy', py);
     you.setAttribute('r', 150);
+    drawPottyGuide(px, py);
   }
   var li = document.getElementById('loc');
   if (li){ li.addEventListener('input', place); place(); }

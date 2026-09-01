@@ -1207,6 +1207,8 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
   ok(BPG.nearestPotty(null) === null, 'nearestPotty(null) fails soft');
   const btn = env.document.getElementById('potty-btn');
   ok(!!btn, 'the 🚽 Potty button is on the page');
+  ok(btn.tagName === 'A' && btn.getAttribute('href') === '/guide/map#potty',
+    'the potty button is a direct link into the potty map (auto-opens the way-there view)');
 })();
 
 /* =====================================================================

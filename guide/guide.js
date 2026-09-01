@@ -925,19 +925,10 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
   }
   window.__bpgGps = gpsLocate; /* friends page reuses it */
 
-  function initPotty(){
-    var btn = $('potty-btn');
-    if (!btn) return;
-    btn.addEventListener('click', function(){
-      var note = $('potty-note');
-      if (!note) return;
-      if (!here){ note.textContent = 'Set your location first, then I can point you.'; note.style.display = ''; return; }
-      var n = nearestPotty(here);
-      if (!n){ note.textContent = 'No potty data. That should not happen; go by the smell.'; note.style.display = ''; return; }
-      note.innerHTML = '🚽 Nearest bank: about ' + n.min + ' min walk (' + n.ft + ' ft), head toward the ' + n.clock + ' direction on the clock. <a href="/guide/map#potty">See it on the map</a>';
-      note.style.display = '';
-    });
-  }
+  /* the potty button is now a plain link to /guide/map#potty (the map takes a
+     GPS fix, shows every bank, and draws the way to the nearest one).
+     nearestPotty() still powers the ask-intent text answer. */
+
   /* Every generated attribute in this file is double-quoted, but escape the
      single quote too so one future data-x='...' cannot become an XSS hole. */
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
@@ -4324,7 +4315,6 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     initPdfPanel();
     initOwnEvents();
     initSubmitEvent();
-    initPotty();
     initGps();
     if ($('show-past')) $('show-past').addEventListener('click', function(){ showPast = !showPast; render(); });
     initStarAlerts();
