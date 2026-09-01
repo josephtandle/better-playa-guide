@@ -1925,8 +1925,10 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
         if (!hitOr) continue;
       } else if (qTokens && !matchTokens(qTokens, eventHay(e, i))) continue;
       /* hide events that are completely over (every slot ended before now,
-         playa time) unless the user asked for them */
-      if (!showPast && !isStarred){
+         playa time) unless the user asked for them. Starred events hide too
+         (Joe 2026-09-02: My Events must only show what hasn't ended); the
+         Show-past button brings them back. */
+      if (!showPast){
         var pastOnly = true;
         /* 30-min grace: an event stays visible until well after it truly ends,
            so stragglers and run-late sets don't vanish mid-party */

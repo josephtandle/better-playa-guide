@@ -1331,7 +1331,13 @@ const starTarget = EV.find(e => e.id && e.t && e.s && e.s[0] && e.s[0][0] && tcC
 (function () {
   /* a star saved under the pick-style id (t|c|w) must render as starred on the
      GROUPS card for the same event (id ends in the slot start instead) */
-  const target = EV.find(ev => ev.id && ev.t && ev.s && ev.s[0] && ev.s[0][0] && ev.s[0][1]);
+  /* must be an event that has NOT ended: ended events now hide even when
+     starred (My Events shows only unended, Joe 2026-09-02) */
+  const nowP = new Date(Date.now() - 7 * 3600 * 1000);
+  const todayKey = String(nowP.getUTCMonth() + 1).padStart(2, '0') + '-' + String(nowP.getUTCDate()).padStart(2, '0');
+  const target = EV.find(ev => ev.id && ev.t && ev.s && ev.s[0] && ev.s[0][0] && ev.s[0][1]
+    && ev.s.some(sl => typeof sl[0] === 'string' && sl[0].slice(0, 5) > todayKey))
+    || EV.find(ev => ev.id && ev.t && ev.s && ev.s[0] && ev.s[0][0] && ev.s[0][1]);
   const pickStyleId = target.t + '|' + target.c + '|' + (target.s[0][0] + '-' + target.s[0][1]);
   const e = boot({ localStorage: {
     'bpg.seen.intro': '1',

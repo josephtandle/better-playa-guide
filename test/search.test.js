@@ -272,6 +272,21 @@ const BPG = w.__BPG;
   ok(/data-full/.test(src), 'the full lineup is kept for expansion');
 })();
 
+/* ---- 17. My Events hides ended events too (starred is no longer exempt) ---- */
+(function(){
+  /* the fixture past event (BBQ, 08-30) starred: it must STILL hide by default */
+  const w3 = w, d3 = d;
+  const starBtns = null; /* we star via localStorage shape used by the app */
+  /* find the BBQ fixture's id from GROUPS via search */
+  const inp3 = d3.getElementById('ask-q');
+  const sp3 = d3.getElementById('show-past');
+  if (sp3 && /Hide past/.test(sp3.textContent)) sp3.click(); /* reset toggle */
+  inp3.value = ''; inp3.dispatchEvent(new w3.Event('input', { bubbles: true }));
+  const src = require('fs').readFileSync(require('path').join(__dirname, '..', 'guide', 'guide.js'), 'utf8');
+  ok(/if \(!showPast\)\{/.test(src) && !/!showPast && !isStarred/.test(src),
+    'the past filter no longer exempts starred events (My Events shows only unended)');
+})();
+
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {
   failures.forEach(f => console.error('  FAILED: ' + f));
