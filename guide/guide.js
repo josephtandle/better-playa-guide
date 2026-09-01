@@ -9,6 +9,18 @@
   /* accent-fold both sides of every text match, so "muse cafe" finds "MUSE Café" */
   var FOLD_RE=/[\u0300-\u036f]/g;
   function fold(s){ return String(s||'').toLowerCase().normalize('NFD').replace(FOLD_RE,''); }
+  /* merge two text variants of the same listing: keep whichever covers the
+     other (compared case/space/punct-insensitively), append only when both
+     carry genuinely different content */
+  function mergeGroupText(oldT, newT, sep){
+    if (!newT) return oldT || '';
+    if (!oldT) return newT;
+    var squash = function(s){ return fold(s).replace(/[^a-z0-9]+/g, ''); };
+    var so = squash(oldT), sn = squash(newT);
+    if (!sn || so.indexOf(sn) !== -1) return oldT;   /* new adds nothing */
+    if (so && sn.indexOf(so) !== -1) return newT;    /* new supersedes old */
+    return oldT + sep + newT;
+  }
   /* ---- smart search: tokens, filler words dropped, squashed-space and
      typo-tolerant matching ("rhymewave camp events" finds RhythmWave) ---- */
   var STOPW = new Set(['camp','camps','event','events','the','a','an','at','is','are','was','when','whens','what','whats','where','wheres','who','whos','how','hows','im','id','ill','in','on','of','for','to','and','or','me','my','their','there','show','find','all','any','list','playing','play','happening','schedule','stuff','things','going','does','do','can','get','near','around','tonight','tonite','today','tomorrow','now']);
@@ -331,9 +343,12 @@
     var targetGroup = groupMap[gKey];
     if (!targetGroup.k && item.k) targetGroup.k = item.k;
     /* different days of the same listing carry different lineups: merge every
-       distinct presenter/description so search sees the whole week */
-    if (item.p && targetGroup.p.indexOf(item.p) === -1) targetGroup.p = targetGroup.p ? targetGroup.p + ', ' + item.p : item.p;
-    if (item.d && targetGroup.d.indexOf(item.d) === -1) targetGroup.d = targetGroup.d ? targetGroup.d + ' ' + item.d : item.d;
+       distinct presenter/description so search sees the whole week.
+       Near-duplicates (extra punctuation, a day name, whitespace) must ABSORB,
+       not append: exact-substring checks let "Desc." + "Desc" print a card's
+       description twice (Joe, live report 2026-09-02). */
+    targetGroup.p = mergeGroupText(targetGroup.p, item.p, ', ');
+    targetGroup.d = mergeGroupText(targetGroup.d, item.d, ' ');
     if (targetGroup.allIds.indexOf(item.id) === -1) {
       targetGroup.allIds.push(item.id);
     }

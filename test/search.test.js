@@ -287,6 +287,39 @@ const BPG = w.__BPG;
     'the past filter no longer exempts starred events (My Events shows only unended)');
 })();
 
+/* ---- 18. same-card description duplication (near-dupe merge) ---- */
+(function(){
+  const env4 = (function(){
+    const { JSDOM } = require('jsdom');
+    const fs4 = require('fs'), path4 = require('path');
+    const R = path4.join(__dirname, '..');
+    const dom4 = new JSDOM(fs4.readFileSync(path4.join(R, 'guide', 'index.html'), 'utf8'),
+      { runScripts: 'outside-only', url: 'https://guide.test/guide/', pretendToBeVisual: true });
+    const w4 = dom4.window;
+    w4.eval(fs4.readFileSync(path4.join(R, 'guide', 'data.js'), 'utf8'));
+    /* inject the exact failure: two days of one listing, description differing
+       only by punctuation, plus a third day whose text is a superstring */
+    w4.__GUIDE__.ev.e.push(
+      { t: 'Dupe Test Party', c: 'Camp Dupe', a: '4:00 & C', d: 'Come dance with us in the dome.', s: [['09-04 10:00', '12:00']], g: ['music'], src: 0 },
+      { t: 'Dupe Test Party', c: 'Camp Dupe', a: '4:00 & C', d: 'Come dance with us in the dome', s: [['09-05 10:00', '12:00']], g: ['music'], src: 0 },
+      { t: 'Dupe Test Party', c: 'Camp Dupe', a: '4:00 & C', d: 'Come dance with us in the dome. Free drinks Saturday!', s: [['09-06 10:00', '12:00']], g: ['music'], src: 0 }
+    );
+    w4.eval(fs4.readFileSync(path4.join(R, 'guide', 'guide.js'), 'utf8'));
+    if (w4.document.readyState === 'loading') w4.document.dispatchEvent(new w4.Event('DOMContentLoaded', { bubbles: true }));
+    return w4;
+  })();
+  const d4 = env4.document;
+  const q4 = d4.getElementById('ask-q');
+  q4.value = 'dupe test party';
+  q4.dispatchEvent(new env4.Event('change', { bubbles: true }));
+  const card4 = Array.from(d4.querySelectorAll('#list li')).find(li => /Dupe Test Party/.test(li.textContent));
+  ok(!!card4, 'the injected multi-day listing renders one grouped card');
+  const txt4 = card4 ? card4.textContent : '';
+  const hits = (txt4.match(/Come dance with us in the dome/g) || []).length;
+  ok(hits === 1, 'the description appears exactly once on the card (got ' + hits + 'x)');
+  ok(/Free drinks Saturday/.test(txt4), 'the superstring variant supersedes, extra info kept');
+})();
+
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {
   failures.forEach(f => console.error('  FAILED: ' + f));
