@@ -1,5 +1,6 @@
 /* Interactive BRC map: inline SVG from Burning Man's 2026 GIS. No tiles, works offline. MIT. */
-window.initMap = function(MAP, parseAddr, esc){
+window.initMap = function(MAP, parseAddr, esc, extras){
+  extras = extras || {};
   var box = document.getElementById('mapbox');
   if (!box || !MAP.streets) return;
   var MAN = MAP.man, FLAT = MAP.flat, FLON = MAP.flon;
@@ -68,10 +69,109 @@ window.initMap = function(MAP, parseAddr, esc){
     }
     g.appendChild(t);
   });
+  /* porta potties: blue dots from the official GIS toilet-bank centroids.
+     Hidden until Potty mode so the base map stays clean. */
+  function toXY(lat, lon){ return [(lon - MAN[1]) * FLON, -(lat - MAN[0]) * FLAT]; }
+  var pottyG = el('g', { display: 'none' });
+  (extras.toilets || []).forEach(function(c){
+    var xy = toXY(c[0], c[1]);
+    pottyG.appendChild(el('circle', { cx: xy[0], cy: xy[1], r: 130, fill: '#2563a8', stroke: '#fff3e5', 'stroke-width': 30 }));
+  });
+  g.appendChild(pottyG);
+
+  /* recognizable anchors so you can orient: corner camps and majors, drawn in
+     Potty mode. Greedy declutter: a label whose box would overlap an already
+     placed one is dropped (dot stays). */
+  var ANCHORS = [
+    { n: 'Muse Cafe', a: '8:15 & E' },
+    { n: 'Opulent Temple', a: '10:00 & Esplanade' },
+    { n: '3 & G Plaza', a: '3:00 & G' },
+    { n: '9 & G Plaza', a: '9:00 & G' },
+    { n: '4:30 Plaza', a: '4:30 & G' },
+    { n: '7:30 Plaza', a: '7:30 & G' },
+    { n: 'Camp Mystic', a: '3:45 & C' },
+    { n: 'PlayAlchemist', a: '9:00 & Esplanade' },
+  ];
+  var anchorG = el('g', { display: 'none' });
+  var placedBoxes = [];
+  ANCHORS.forEach(function(an){
+    var pt = parseAddr(an.a);
+    if (!pt) return;
+    var xy = toXY(pt.lat, pt.lon);
+    anchorG.appendChild(el('circle', { cx: xy[0], cy: xy[1], r: 70, fill: '#6d0813', opacity: .8 }));
+    /* estimated label box: 165 units/char wide at font-size 300 */
+    var wBox = an.n.length * 165, hBox = 340;
+    var bx = { x: xy[0] - wBox / 2, y: xy[1] - 120 - hBox, w: wBox, h: hBox };
+    var hit = placedBoxes.some(function(b){
+      return bx.x < b.x + b.w && bx.x + bx.w > b.x && bx.y < b.y + b.h && bx.y + bx.h > b.y;
+    });
+    if (hit) return;
+    placedBoxes.push(bx);
+    var tt = el('text', { x: xy[0], y: xy[1] - 160, 'text-anchor': 'middle',
+      'font-size': 300, 'font-weight': 700, fill: '#6d0813', stroke: '#fff3e5', 'stroke-width': 55,
+      'paint-order': 'stroke', 'font-family': 'Montserrat,sans-serif' });
+    tt.textContent = an.n;
+    anchorG.appendChild(tt);
+  });
+  g.appendChild(anchorG);
+
   // you
   var you = el('circle', { cx:0, cy:0, r:0, fill:'#6d0813', stroke:'#fff3e5', 'stroke-width':40 });
   g.appendChild(you);
   box.appendChild(svg);
+
+  var pottyOn = false;
+  function setPotty(on){
+    pottyOn = on;
+    pottyG.setAttribute('display', on ? '' : 'none');
+    anchorG.setAttribute('display', on ? '' : 'none');
+    var pb = document.getElementById('map-potty-btn');
+    if (pb) pb.classList.toggle('solid', on);
+    if (on) zoomToYou();
+  }
+  function zoomToYou(){
+    var cx = +you.getAttribute('cx') || 0, cy = +you.getAttribute('cy') || 0;
+    if (+you.getAttribute('r') > 0){
+      var side = 3600; /* ~0.7 mile square around you: your block + nearest banks */
+      vb[0] = cx - side / 2; vb[1] = cy - side / 2; vb[2] = side; vb[3] = side;
+      apply();
+    }
+  }
+  function mapNote(msg){
+    var el = document.getElementById('toast');
+    if (!el) return;
+    el.textContent = msg; el.classList.add('on');
+    setTimeout(function(){ el.classList.remove('on'); }, 3500);
+  }
+  function gpsToMap(){
+    if (!extras.gps) return;
+    extras.gps(function(addr, err, pos){
+      if (addr && addr.indexOf('open playa') === -1){
+        var li2 = document.getElementById('loc');
+        if (li2){
+          li2.value = addr;
+          /* the 'input' dispatch runs place() synchronously, which snaps the
+             dot to the street corner; the raw fix below then overwrites it,
+             so the dot shows where you actually stand */
+          try {
+            li2.dispatchEvent(new Event('input', { bubbles: true }));
+            li2.dispatchEvent(new Event('change', { bubbles: true }));
+          } catch(e){}
+        }
+        mapNote('You are at ' + addr);
+      } else if (addr){
+        mapNote('You are in open playa (' + addr.replace(' & open playa', '') + ' side)');
+      } else if (err){
+        mapNote(err);
+      }
+      if (pos){
+        you.setAttribute('cx', (pos.coords.longitude - MAN[1]) * FLON);
+        you.setAttribute('cy', -(pos.coords.latitude - MAN[0]) * FLAT);
+        you.setAttribute('r', 150);
+      }
+      if (pottyOn) zoomToYou();
+    });
+  }
 
   function place(){
     var v = document.getElementById('loc');
@@ -83,6 +183,13 @@ window.initMap = function(MAP, parseAddr, esc){
   }
   var li = document.getElementById('loc');
   if (li){ li.addEventListener('input', place); place(); }
+  var pbtn = document.getElementById('map-potty-btn');
+  if (pbtn) pbtn.addEventListener('click', function(){
+    if (!pottyOn && extras.gps && navigator.geolocation) gpsToMap();
+    setPotty(!pottyOn);
+  });
+  var gbtn = document.getElementById('map-gps-btn');
+  if (gbtn) gbtn.addEventListener('click', gpsToMap);
 
   /* pan + zoom: one-finger drag pans, two-finger pinch zooms, wheel zooms,
      +/- buttons zoom about the centre. Zoom clamped to 0.5x - 8x of the full
@@ -255,6 +362,13 @@ window.initMap = function(MAP, parseAddr, esc){
   checkNavHash();
   window.addEventListener('hashchange', checkNavHash);
 
+  /* #potty deep link (from the Find page's potty note): runs after vb/apply
+     exist so the zoom-to-you actually works */
+  if (/#potty/.test((window.location && window.location.hash) || '')){
+    setPotty(true);
+    if (extras.gps && navigator.geolocation) gpsToMap();
+  }
+
   /* test surface */
-  window.__BPG_MAP = { zoomAt: zoomAt, zoomLevel: zoomLevel, getViewBox: function(){ return vb.slice(); }, drawRoute: drawRoute };
+  window.__BPG_MAP = { zoomAt: zoomAt, zoomLevel: zoomLevel, getViewBox: function(){ return vb.slice(); }, drawRoute: drawRoute, setPotty: setPotty, pottyCount: function(){ return pottyG.childNodes.length; }, anchorLabels: function(){ var out=[]; anchorG.querySelectorAll('text').forEach(function(n){ out.push(n.textContent); }); return out; } };
 };

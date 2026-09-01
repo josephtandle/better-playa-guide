@@ -847,6 +847,84 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     }, true);
   }
 
+  /* expand a clamped lineup in place */
+  document.addEventListener('click', function(ev3){
+    var b3 = ev3.target && ev3.target.closest && ev3.target.closest('.who-more');
+    if (!b3) return;
+    var who = b3.closest('.who-clamped');
+    if (who && who.getAttribute('data-full')){
+      who.textContent = who.getAttribute('data-full');
+      who.classList.remove('who-clamped');
+    }
+  }, true);
+
+  /* ---- GPS to playa address: GPS works with ZERO signal. Convert the fix
+     to clock & street using the official city geometry. ---- */
+  function latLonToAddr(lat, lon){
+    var cy = (MAN[0] - lat) * FLAT;      /* ft north(+)/south of the Man, inverted */
+    var cx = (lon - MAN[1]) * FLON;      /* ft east/west of the Man */
+    var r = Math.hypot(cx, cy);
+    if (r > 9000) return null;           /* not in Black Rock City */
+    var compass = Math.atan2(cx, -cy) * 180 / Math.PI;  /* cy inverted above */
+    var clock = ((compass / 30) + 10.5) % 12;
+    if (clock < 0) clock += 12;
+    var q = Math.round(clock * 4) / 4;   /* nearest :15 */
+    if (q === 0) q = 12;
+    var hh = Math.floor(q);
+    var mmMap = { 0: '00', 0.25: '15', 0.5: '30', 0.75: '45' };
+    var addrClock = hh + ':' + mmMap[q - hh];
+    var rings = (D.map && D.map.rings) || (D.ev && D.ev.rings) || [];
+    var best = null, bestDiff = 1e9;
+    for (var i = 0; i < rings.length; i++){
+      var diff = Math.abs(r - rings[i][1]);
+      if (diff < bestDiff){ bestDiff = diff; best = rings[i][0]; }
+    }
+    if (!best) return null;
+    /* the city only spans 2:00-10:00; the Temple/deep-playa arc has no streets.
+       Return a descriptive "open playa" string there: it must NEVER look like a
+       parseable address, or it would erase the user's map dot (parseAddr rejects
+       hours outside 2-10). */
+    if (r < 2100 || q < 2 || q > 10) return addrClock + ' & open playa';
+    var street = best === 'ESP' ? 'Esplanade' : best;
+    return addrClock + ' & ' + street;
+  }
+  function gpsLocate(cb){
+    if (!navigator.geolocation){ cb(null, 'This phone has no GPS access in the browser.'); return; }
+    navigator.geolocation.getCurrentPosition(function(pos){
+      var addr = latLonToAddr(pos.coords.latitude, pos.coords.longitude);
+      if (!addr){ cb(null, 'GPS fix is outside Black Rock City.', pos); return; }
+      cb(addr, null, pos);
+    }, function(err){
+      cb(null, err && err.code === 1 ? 'Location permission denied. Allow it in your browser settings.' : 'No GPS fix yet. Step away from metal and try again.');
+    }, { enableHighAccuracy: true, timeout: 12000, maximumAge: 30000 });
+  }
+  function initGps(){
+    var b = $('gps-btn');
+    if (!b) return;
+    b.addEventListener('click', function(){
+      b.textContent = 'Locating…'; b.disabled = true;
+      gpsLocate(function(addr, err){
+        b.disabled = false; b.textContent = '📍 GPS';
+        if (addr && addr.indexOf('open playa') === -1){
+          if ($('loc')){
+            $('loc').value = addr;
+            /* the box's own 'input' handler debounces 150ms; render() reads
+               the box synchronously and sets `here`, so distances and the
+               potty button are correct the instant the toast shows */
+            $('loc').dispatchEvent(new Event('input', { bubbles: true }));
+            $('loc').dispatchEvent(new Event('change', { bubbles: true }));
+            try { shown = 60; render(); renderPicks(); } catch(e){}
+          }
+          toast('You are at ' + addr + ' (GPS, no signal needed)');
+          try { savePrefs(); } catch(e){}
+        } else if (addr){
+          toast('You are out at ' + addr.replace(' & open playa', '') + ' in open playa. Distances stay from your last street address.');
+        } else toast(err || 'Could not locate.');
+      });
+    });
+  }
+  window.__bpgGps = gpsLocate; /* friends page reuses it */
+
   function initPotty(){
     var btn = $('potty-btn');
     if (!btn) return;
@@ -856,7 +934,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       if (!here){ note.textContent = 'Set your location first, then I can point you.'; note.style.display = ''; return; }
       var n = nearestPotty(here);
       if (!n){ note.textContent = 'No potty data. That should not happen; go by the smell.'; note.style.display = ''; return; }
-      note.textContent = '🚽 Nearest bank: about ' + n.min + ' min walk (' + n.ft + ' ft), head toward the ' + n.clock + ' direction on the clock.';
+      note.innerHTML = '🚽 Nearest bank: about ' + n.min + ' min walk (' + n.ft + ' ft), head toward the ' + n.clock + ' direction on the clock. <a href="/guide/map#potty">See it on the map</a>';
       note.style.display = '';
     });
   }
@@ -1767,7 +1845,15 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
       + '<div class="ti">' + esc(o.t) + ' ' + badge + '</div>'
       + '<div class="meta">' + esc(schedStr) + dist + '</div>'
       + '<div class="addr">' + esc(o.a || 'Address TBA: ask at camp') + '</div>'
-      + (o.p ? '<div class="who">' + esc(o.p) + '</div>' : '')
+      + (o.p ? (function(){
+        /* radio-station style lineups run to hundreds of names; clamp so one
+           card cannot swallow the whole list view. Tap to expand. */
+        var pTxt = String(o.p);
+        if (pTxt.length <= 220) return '<div class="who">' + esc(pTxt) + '</div>';
+        var cut = pTxt.slice(0, 200).replace(/,[^,]*$/, '');
+        return '<div class="who who-clamped" data-full="' + esc(pTxt) + '">' + esc(cut)
+          + '&hellip; <button type="button" class="who-more">show all</button></div>';
+      })() : '')
       + '<div class="de"><strong>' + esc(o.c) + '</strong>' + (o.desc ? ': ' + esc(o.desc) : (o.n ? ': ' + esc(o.n) : '')) + '</div>'
       + (o.note ? '<div class="itin-note">' + esc(o.note) + '</div>' : '')
       + '<div class="card-actions card-foot">' + navBtn + starBtn + '</div>'
@@ -4239,6 +4325,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     initOwnEvents();
     initSubmitEvent();
     initPotty();
+    initGps();
     if ($('show-past')) $('show-past').addEventListener('click', function(){ showPast = !showPast; render(); });
     initStarAlerts();
     initFilterModal();
@@ -4547,7 +4634,9 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     applyHashMode();
     renderPicks(); renderGreet();
     initSwUpdate();
-    if (window.initMap) window.initMap(MAP, parseAddr, esc);
+    if (window.initMap) window.initMap(MAP, parseAddr, esc, {
+      toilets: TOILETS, latLonToAddr: latLonToAddr, gps: gpsLocate
+    });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
@@ -4582,6 +4671,7 @@ var TOILETS = [[40.791913,-119.214257],[40.795076,-119.216656],[40.778403,-119.1
     resolveCamp: resolveCamp,
     calcRoute: calcRoute,
     nearestPotty: nearestPotty,
+    latLonToAddr: latLonToAddr,
     checkStarAlerts: checkStarAlerts,
     applyHashMode: applyHashMode,
     syncTabBar: syncTabBar,

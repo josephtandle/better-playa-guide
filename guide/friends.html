@@ -34,7 +34,7 @@
 <main class="wrap">
 
 <div class="panel" id="how-panel">
-  <p style="margin:0;font-size:.9rem"><strong>How it works:</strong> invite a close friend with a link. When you both accept, you see each other's <strong>last known playa address</strong>. There is no live GPS out here: locations update whenever either phone catches signal (Center Camp wifi works), so it's a rendezvous tool, not a tracker. Friends stay on your list for next year. Sharing is off until you turn it on, and you can mute anyone, or everyone, any time.</p>
+  <p style="margin:0;font-size:.9rem"><strong>How it works:</strong> invite a close friend with a link. When you both accept, you see each other's <strong>last known playa address</strong>. Your phone's GPS works with zero signal, so your playa address stays accurate; SENDING it to friends still needs a moment of signal (Center Camp wifi works). It's a rendezvous tool, not a tracker. Friends stay on your list for next year. Sharing is off until you turn it on, and you can mute anyone, or everyone, any time.</p>
 </div>
 
 <div id="consent" class="consent-box" style="display:none">
@@ -74,6 +74,7 @@
 <p style="margin:1.2rem 0 2rem"><a class="btn" href="/guide/">&larr; Back to the guide</a></p>
 </main>
 
+<script src="/guide/geo.js"></script>
 <script src="/guide/friends.js"></script>
 <script>if ('serviceWorker' in navigator) { try { navigator.serviceWorker.register('/guide/sw.js'); } catch(e){} }</script>
 </body></html>

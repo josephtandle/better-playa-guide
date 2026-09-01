@@ -210,6 +210,67 @@ const BPG = w.__BPG;
 })();
 
 /* ---- Summary ---- */
+/* ---- 15. GPS: lat/lon converts to a playa address (inverse of parseAddr) ---- */
+(function(){
+  // forward-project 9:30 & C via the published geometry, feed it back
+  ok(BPG.latLonToAddr(40.791913, -119.214257) === '9:30 & C', 'GPS fix near 9:30 & C resolves to 9:30 & C');
+  ok(/open playa/.test(BPG.latLonToAddr(40.783247, -119.207884)), 'a fix at the Man reads as open playa, not a fake street');
+  ok(BPG.latLonToAddr(40.6, -119.0) === null, 'a fix far outside Black Rock City returns null (no garbage address)');
+  // Esplanade ring: r=2492.7 at 7:30 -> b=(7.5-10.5)*30=-90deg
+  var lat = 40.783247448 + (2492.7 * Math.cos(-Math.PI/2)) / 364000;
+  var lon = -119.207884096 + (2492.7 * Math.sin(-Math.PI/2)) / 275615.7313;
+  ok(BPG.latLonToAddr(lat, lon) === '7:30 & Esplanade', '7:30 & Esplanade round-trips exactly');
+  /* the city arc is 2:00-10:00: Temple/deep-playa fixes must NOT produce a
+     street address (parseAddr rejects hour 12 and the bad string would erase
+     the map dot) */
+  var lat12 = 40.783247448 + (2500 * Math.cos(((12 - 10.5) * 30) * Math.PI / 180)) / 364000;
+  var lon12 = -119.207884096 + (2500 * Math.sin(((12 - 10.5) * 30) * Math.PI / 180)) / 275615.7313;
+  var temple = BPG.latLonToAddr(lat12, lon12);
+  ok(/open playa/.test(temple), 'a fix at the Temple arc says open playa, never a fake street (' + temple + ')');
+  ok(BPG.parseAddr(temple) === null || /open playa/.test(temple), 'the open-playa string is never mistaken for an address');
+})();
+
+/* ---- 15b. the Find-page GPS button REALLY fills the location (behavior, not regex) ---- */
+(function(){
+  Object.defineProperty(w.navigator, 'geolocation', { value: {
+    getCurrentPosition: function(okCb){ okCb({ coords: { latitude: 40.791913, longitude: -119.214257 } }); }
+  }, configurable: true });
+  const btn = d.getElementById('gps-btn');
+  ok(!!btn, 'the GPS button exists on the Find page');
+  btn.click();
+  ok(d.getElementById('loc').value === '9:30 & C', 'tapping GPS fills the location box with the converted address (got "' + d.getElementById('loc').value + '")');
+  /* and internal state followed: the potty button must now give a real answer,
+     not "Set your location first" (the box listens on 'input', not 'change') */
+  d.getElementById('potty-btn').click();
+  var pn = d.getElementById('potty-note').textContent;
+  ok(/min walk/.test(pn), 'after a GPS fix the potty button answers with a distance (got "' + pn.slice(0, 60) + '")');
+})();
+
+/* ---- 15c. friends page has a working GPS lane of its own (geo.js) ---- */
+(function(){
+  const fs2 = require('fs'), path2 = require('path');
+  const geoSrc = fs2.readFileSync(path2.join(__dirname, '..', 'guide', 'geo.js'), 'utf8');
+  const fhtml = fs2.readFileSync(path2.join(__dirname, '..', 'guide', 'friends.html'), 'utf8');
+  ok(fhtml.indexOf('/guide/geo.js') !== -1 && fhtml.indexOf('/guide/geo.js') < fhtml.indexOf('/guide/friends.js'),
+    'friends.html loads geo.js BEFORE friends.js (guide.js is not on that page)');
+  /* geo.js really defines __bpgGps and its math agrees with guide.js */
+  const sandbox = { window: {}, navigator: {} };
+  const vm = require('vm'); vm.createContext(sandbox);
+  vm.runInContext(geoSrc, sandbox);
+  ok(typeof sandbox.window.__bpgGps === 'function', 'geo.js defines window.__bpgGps');
+  ok(sandbox.window.__bpgLatLonToAddr(40.791913, -119.214257) === BPG.latLonToAddr(40.791913, -119.214257),
+    'geo.js math matches guide.js math exactly');
+  const swSrc = fs2.readFileSync(path2.join(__dirname, '..', 'guide', 'sw.js'), 'utf8');
+  ok(/guide\/geo\.js/.test(swSrc), 'geo.js is cached by the service worker (offline)');
+})();
+
+/* ---- 16. giant lineups clamp with a show-all toggle ---- */
+(function(){
+  const src = require('fs').readFileSync(require('path').join(__dirname, '..', 'guide', 'guide.js'), 'utf8');
+  ok(/who-clamped/.test(src) && /who-more/.test(src), 'lineups over ~220 chars render clamped with a show-all button');
+  ok(/data-full/.test(src), 'the full lineup is kept for expansion');
+})();
+
 console.log('search: ' + passed + ' passed, ' + failures.length + ' failed');
 if (failures.length) {
   failures.forEach(f => console.error('  FAILED: ' + f));

@@ -104,9 +104,26 @@
     }
     try { localStorage.removeItem('bpg.f.pending'); } catch(e){}
     var sharing = localStorage.getItem(LS.sharing) === 'on';
-    api({ op: 'loc', addr: myAddr(), sharing: sharing }).then(function(j){
-      if (j && j.ok) note(sharing ? ('Location shared' + (myAddr() ? ': ' + myAddr() : ' (set your location on the Find page for a real address)')) : 'Sharing is OFF; your location was cleared.');
+    var manual = myAddr();
+    if (sharing && typeof navigator !== 'undefined' && navigator.geolocation && window.__bpgGps){
+      /* GPS FIRST: the typed address is often the camp you set days ago, not
+         where you are standing. GPS works with zero signal; only the SEND
+         needs a moment of coverage. Falls back to the typed address. */
+      window.__bpgGps(function(addr){
+        if (addr && addr.indexOf('open playa') !== -1) addr = null; /* deep playa: no street address */
+        doPush(addr || manual || null);
+      });
+      return;
+    }
+    doPush(manual);
+    function doPush(addrVal){
+    /* re-read at post time: the GPS callback is async and the user may have
+       toggled sharing off while the fix was in flight */
+    var sharingNow = localStorage.getItem(LS.sharing) === 'on';
+    api({ op: 'loc', addr: addrVal, sharing: sharingNow }).then(function(j){
+      if (j && j.ok) note(sharingNow ? ('Location shared' + (addrVal ? ': ' + addrVal : ' (set your location on the Find page, or allow GPS, for a real address)')) : 'Sharing is OFF; your location was cleared.');
     }).catch(function(){ note('Could not reach the playa mothership. Try when you have better signal.'); });
+    }
   }
 
   function setShareUI(){

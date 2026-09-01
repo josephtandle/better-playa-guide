@@ -221,6 +221,14 @@ const sha = s => crypto.createHash('sha256').update(String(s)).digest('hex');
       const rootRw = rw.find(r => r.source === '/' && r.destination === '/guide/');
       ok(!!rootRw, h + ' rewrites its root into the guide');
     }
+    /* PROVEN LIVE 2026-09-01: the root rewrite alone does NOT work: Vercel's
+       filesystem match serves index.html before host rewrites run, so the bare
+       guide domains showed the cafe homepage. The root page must carry the
+       client-side host router. */
+    const rootHtml = fs.readFileSync(path.join(repoRoot, 'index.html'), 'utf8');
+    ok(rootHtml.indexOf('bpg-host-route') !== -1, 'index.html carries the guide-host client-side router');
+    ok(/playaguide\|guide\|betterguide\|betterplayaguideai/.test(rootHtml), 'the host router covers all four guide subdomains');
+    ok(rootHtml.indexOf("location.replace('/guide/'") !== -1, 'the host router lands on /guide/');
     /* every first-party API function must be excepted from the container proxy */
     const apiRw = (cfg.rewrites || []).find(r => String(r.source || '').startsWith('/api/((?!'));
     ok(!!apiRw, 'the container API proxy rewrite exists');
